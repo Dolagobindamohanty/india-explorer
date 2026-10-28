@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover India's states, districts, heritage, beaches, mountains, culture and local festivals.">
+  <meta name="description" content="Explore Incredible India: discover states, districts, heritage, beaches, mountains, culture, festivals and detailed travel places.">
+  <meta property="og:title" content="India Explorer — Discover somewhere new">
+  <meta property="og:description" content="Discover India's states, districts, heritage, beaches, mountains, culture and local festivals.">
+  <meta property="og:type" content="website">
   <meta name="theme-color" content="#ff7a00">
   <title>India Explorer — Discover somewhere new</title>
   <link rel="stylesheet" href="/style.css">
@@ -23,12 +26,32 @@
     </nav>
   </header>
   <main id="app" tabindex="-1">
-    <section class="loading-shell" aria-live="polite">
-      <div class="skeleton skeleton-kicker"></div>
-      <div class="skeleton skeleton-title"></div>
-      <div class="skeleton skeleton-copy"></div>
-      <div class="skeleton-grid"><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div></div>
+    <!-- Meaningful HTML is delivered before app.js hydrates the interactive experience. -->
+    <section class="prerender-home" aria-live="polite">
+      <p class="eyebrow">Your next Indian story starts here</p>
+      <h1>Explore <span>Incredible India.</span></h1>
+      <p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>
       <p class="loading-message">Connecting to the travel database…</p>
+      <div class="prerender-links">
+        <a href="#/explore">Explore destinations</a>
+        <a href="#/month/8">Browse the festival calendar</a>
+        <a href="#/saved">View saved places</a>
+      </div>
+      <div class="prerender-summary">
+        <div><strong>28</strong><span>States</span></div>
+        <div><strong>8</strong><span>Union territories</span></div>
+        <div><strong>809</strong><span>District entries</span></div>
+        <div><strong>20</strong><span>Detailed places</span></div>
+      </div>
+      <h2>Popular ways to explore</h2>
+      <div class="category-chips">
+        <a class="category-chip" href="#/explore?category=heritage">🏛 Heritage</a>
+        <a class="category-chip" href="#/explore?category=beach">🏖 Beaches</a>
+        <a class="category-chip" href="#/explore?category=nature">🏔 Mountains</a>
+        <a class="category-chip" href="#/explore?category=spiritual">🙏 Spiritual</a>
+      </div>
+      <h2>Featured regions</h2>
+      <p>Explore Kerala, Rajasthan, Goa, Himachal Pradesh, Tamil Nadu and every state in the directory. Detailed destination pages include practical context, seasonal guidance, nearby places and official reference links.</p>
     </section>
   </main>
   <footer>
