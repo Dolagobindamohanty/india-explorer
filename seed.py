@@ -1,8 +1,8 @@
 """Editorial pilot data and a growing India region/district directory.
 
 The records are intentionally marked as needs_review. Place cards use local,
-destination-labelled illustrations until individually licensed photographs are
-editorially verified; state covers remain separate landscape/heritage images.
+destination-specific photographs sourced from Wikimedia Commons; state covers
+remain separate landscape/heritage images.
 """
 
 import json
@@ -47,26 +47,26 @@ STATE_COVER_IMAGES = {
     'ladakh': 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=82',
 }
 PLACE_IMAGE_PATHS = {
-    'fort-kochi': '/assets/places/fort-kochi.svg',
-    'mattancherry-palace': '/assets/places/mattancherry-palace.svg',
-    'alappuzha-backwaters': '/assets/places/alappuzha-backwaters.svg',
-    'alappuzha-beach': '/assets/places/alappuzha-beach.svg',
-    'amber-fort': '/assets/places/amber-fort.svg',
-    'jantar-mantar': '/assets/places/jantar-mantar.svg',
-    'jaisalmer-fort': '/assets/places/jaisalmer-fort.svg',
-    'gadisar-lake': '/assets/places/gadisar-lake.svg',
-    'basilica-bom-jesus': '/assets/places/basilica-bom-jesus.svg',
-    'fontainhas': '/assets/places/fontainhas.svg',
-    'palolem-beach': '/assets/places/palolem-beach.svg',
-    'dudhsagar-falls': '/assets/places/dudhsagar-falls.svg',
-    'shimla-ridge': '/assets/places/shimla-ridge.svg',
-    'jakhu-temple': '/assets/places/jakhu-temple.svg',
-    'dharamshala': '/assets/places/dharamshala.svg',
-    'masroor-temple': '/assets/places/masroor-temple.svg',
-    'marina-beach': '/assets/places/marina-beach.svg',
-    'kapaleeshwarar-temple': '/assets/places/kapaleeshwarar-temple.svg',
-    'meenakshi-temple': '/assets/places/meenakshi-temple.svg',
-    'thirumalai-nayak-palace': '/assets/places/thirumalai-nayak-palace.svg',
+    'fort-kochi': '/assets/places/fort-kochi.jpg',
+    'mattancherry-palace': '/assets/places/mattancherry-palace.jpg',
+    'alappuzha-backwaters': '/assets/places/alappuzha-backwaters.jpg',
+    'alappuzha-beach': '/assets/places/alappuzha-beach.jpg',
+    'amber-fort': '/assets/places/amber-fort.jpg',
+    'jantar-mantar': '/assets/places/jantar-mantar.jpg',
+    'jaisalmer-fort': '/assets/places/jaisalmer-fort.jpg',
+    'gadisar-lake': '/assets/places/gadisar-lake.jpg',
+    'basilica-bom-jesus': '/assets/places/basilica-bom-jesus.jpg',
+    'fontainhas': '/assets/places/fontainhas.jpg',
+    'palolem-beach': '/assets/places/palolem-beach.jpg',
+    'dudhsagar-falls': '/assets/places/dudhsagar-falls.jpg',
+    'shimla-ridge': '/assets/places/shimla-ridge.jpg',
+    'jakhu-temple': '/assets/places/jakhu-temple.jpg',
+    'dharamshala': '/assets/places/dharamshala.jpg',
+    'masroor-temple': '/assets/places/masroor-temple.jpg',
+    'marina-beach': '/assets/places/marina-beach.jpg',
+    'kapaleeshwarar-temple': '/assets/places/kapaleeshwarar-temple.jpg',
+    'meenakshi-temple': '/assets/places/meenakshi-temple.jpg',
+    'thirumalai-nayak-palace': '/assets/places/thirumalai-nayak-palace.jpg',
 }
 
 

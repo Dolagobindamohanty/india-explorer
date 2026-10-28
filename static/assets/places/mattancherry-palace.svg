@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8d4d3a"/><stop offset="1" stop-color="#d6935b"/></linearGradient></defs>
-<rect width="1200" height="800" fill="url(#bg)"/><rect width="1200" height="800" fill="#10221d" opacity=".12"/><circle cx="930" cy="180" r="90" fill="#f5dfb8" opacity=".7"/><path d="M200 650 V390 L600 170 1000 390 V650Z" fill="#d6935b"/><path d="M120 390 L600 100 1080 390" fill="none" stroke="#f5dfb8" stroke-width="30"/><path d="M490 650 V420 Q600 340 710 420 V650Z" fill="#8d4d3a"/><path d="M600 110 V25 M550 65 H650" stroke="#f5dfb8" stroke-width="17"/>
-<rect x="60" y="60" width="1080" height="680" rx="28" fill="none" stroke="#f5dfb8" stroke-opacity=".3" stroke-width="3"/>
-<text x="92" y="125" fill="#f5dfb8" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5">INDIA EXPLORER</text>
-<text x="92" y="177" fill="white" font-family="Arial,sans-serif" font-size="18" letter-spacing="3">HERITAGE</text>
-<text id="title" x="92" y="705" fill="white" font-family="Georgia,serif" font-size="48" font-weight="600">Mattancherry Palace</text>
-<desc id="desc">Illustrated destination artwork for Mattancherry Palace.</desc></svg>

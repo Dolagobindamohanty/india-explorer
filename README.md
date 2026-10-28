@@ -101,12 +101,12 @@ deliberately not invented. Add confirmed information with sources before publish
 
 The website stores a destination-specific image URL for every place and a
 separate heritage-oriented cover image for every state; it no longer assigns
-generic search photos to detailed destinations. The 20 pilot place cards now
-use local, clearly labelled illustrations so a beach, mountain or heritage
-image cannot be shown for the wrong destination. Replace those illustrations
-with individually verified, locally licensed photographs before publication.
-Google Fonts is optional; system-font fallbacks and coloured backgrounds remain
-usable offline.
+generic search photos to detailed destinations. The 20 pilot place cards use
+locally stored Wikimedia Commons photographs selected for the named destination
+and category. Attribution/source records are in `static/assets/places/sources.json`;
+verify each file's current license and attribution requirements before a public
+commercial launch. Google Fonts is optional; system-font fallbacks and
+coloured backgrounds remain usable offline.
 
 ## APIs
 

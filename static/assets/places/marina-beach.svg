@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28677a"/><stop offset="1" stop-color="#62b7bd"/></linearGradient></defs>
-<rect width="1200" height="800" fill="url(#bg)"/><rect width="1200" height="800" fill="#10221d" opacity=".12"/><circle cx="930" cy="180" r="90" fill="#e5f3e8" opacity=".8"/><path d="M0 520 Q180 450 360 520 T720 520 T1200 520 V800 H0Z" fill="#62b7bd"/><path d="M0 610 Q180 550 360 610 T720 610 T1200 610" fill="none" stroke="#e5f3e8" stroke-width="18" opacity=".8"/><path d="M0 700 Q180 640 360 700 T720 700 T1200 700" fill="none" stroke="#28677a" stroke-width="12" opacity=".7"/>
-<rect x="60" y="60" width="1080" height="680" rx="28" fill="none" stroke="#e5f3e8" stroke-opacity=".3" stroke-width="3"/>
-<text x="92" y="125" fill="#e5f3e8" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5">INDIA EXPLORER</text>
-<text x="92" y="177" fill="white" font-family="Arial,sans-serif" font-size="18" letter-spacing="3">COASTAL</text>
-<text id="title" x="92" y="705" fill="white" font-family="Georgia,serif" font-size="48" font-weight="600">Marina Beach</text>
-<desc id="desc">Illustrated destination artwork for Marina Beach.</desc></svg>
