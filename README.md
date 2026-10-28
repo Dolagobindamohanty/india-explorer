@@ -99,16 +99,14 @@ All place records are marked `needs_review`; annual festival dates are unpopulat
 Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
-The website now stores a destination-specific, tagged image URL for every place
-and a separate heritage-oriented cover image for every state; it no longer
-assigns one generic state image to every destination. The pilot uses the
-Unsplash image URLs selected for the covered state's landscape or heritage,
-with a deterministic Picsum
-fallback for the larger region directory, so image identity and licensing must
-be checked by an editor before publication. Broken images fall back to a
-regional illustration. Google Fonts is optional; system-font fallbacks and
-coloured image backgrounds remain usable offline. Replace remote images with
-locally stored, licensed destination photos before publication.
+The website stores a destination-specific image URL for every place and a
+separate heritage-oriented cover image for every state; it no longer assigns
+generic search photos to detailed destinations. The 20 pilot place cards now
+use local, clearly labelled illustrations so a beach, mountain or heritage
+image cannot be shown for the wrong destination. Replace those illustrations
+with individually verified, locally licensed photographs before publication.
+Google Fonts is optional; system-font fallbacks and coloured backgrounds remain
+usable offline.
 
 ## APIs
 

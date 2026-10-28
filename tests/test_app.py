@@ -38,8 +38,10 @@ def test_full_destination_journey(client):
     assert place['nearby'][0]['slug'] == 'alappuzha-backwaters'
     assert place['verification_status'] == 'needs_review'
     assert place['last_verified_at'] is None
-    assert place['image_url'].startswith(('https://images.unsplash.com/', 'https://picsum.photos/'))
-    place_images = [item['image_url'] for item in client.get('/api/places').json()]
+    assert place['image_url'] == '/assets/places/alappuzha-beach.svg'
+    all_places = client.get('/api/places').json()
+    assert all(item['image_url'] == f"/assets/places/{item['slug']}.svg" for item in all_places)
+    place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
     assert client.get('/api/districts/bengaluru-urban').json()['places'] == []
 

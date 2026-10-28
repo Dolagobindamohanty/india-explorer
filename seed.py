@@ -1,8 +1,8 @@
 """Editorial pilot data and a growing India region/district directory.
 
-The records are intentionally marked as needs_review. The image URLs are
-destination-specific placeholders; replace them with locally licensed assets
-before production launch.
+The records are intentionally marked as needs_review. Place cards use local,
+destination-labelled illustrations until individually licensed photographs are
+editorially verified; state covers remain separate landscape/heritage images.
 """
 
 import json
@@ -46,6 +46,28 @@ STATE_COVER_IMAGES = {
     'jammu-and-kashmir': 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=82',
     'ladakh': 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=82',
 }
+PLACE_IMAGE_PATHS = {
+    'fort-kochi': '/assets/places/fort-kochi.svg',
+    'mattancherry-palace': '/assets/places/mattancherry-palace.svg',
+    'alappuzha-backwaters': '/assets/places/alappuzha-backwaters.svg',
+    'alappuzha-beach': '/assets/places/alappuzha-beach.svg',
+    'amber-fort': '/assets/places/amber-fort.svg',
+    'jantar-mantar': '/assets/places/jantar-mantar.svg',
+    'jaisalmer-fort': '/assets/places/jaisalmer-fort.svg',
+    'gadisar-lake': '/assets/places/gadisar-lake.svg',
+    'basilica-bom-jesus': '/assets/places/basilica-bom-jesus.svg',
+    'fontainhas': '/assets/places/fontainhas.svg',
+    'palolem-beach': '/assets/places/palolem-beach.svg',
+    'dudhsagar-falls': '/assets/places/dudhsagar-falls.svg',
+    'shimla-ridge': '/assets/places/shimla-ridge.svg',
+    'jakhu-temple': '/assets/places/jakhu-temple.svg',
+    'dharamshala': '/assets/places/dharamshala.svg',
+    'masroor-temple': '/assets/places/masroor-temple.svg',
+    'marina-beach': '/assets/places/marina-beach.svg',
+    'kapaleeshwarar-temple': '/assets/places/kapaleeshwarar-temple.svg',
+    'meenakshi-temple': '/assets/places/meenakshi-temple.svg',
+    'thirumalai-nayak-palace': '/assets/places/thirumalai-nayak-palace.svg',
+}
 
 
 def image(filename):
@@ -70,6 +92,10 @@ def image(filename):
 
 def state_image(slug, filename):
     return STATE_COVER_IMAGES.get(slug) or image(filename)
+
+
+def place_image(slug):
+    return PLACE_IMAGE_PATHS[slug]
 
 
 def seed(db):
@@ -240,26 +266,26 @@ def seed(db):
     db.executemany('INSERT OR IGNORE INTO heritage_sites VALUES (?,?,?)', heritage)
 
     places = [
-        (1, 1, 'fort-kochi', 'Fort Kochi', 'Walk through a coastal neighbourhood shaped by maritime trade, historic streets and public waterfront spaces.', 'culture', 9.9658, 76.2421, 'Reach Kochi by rail or air, then continue by local bus, taxi or ferry where available.', 'This is a neighbourhood, not a single ticketed attraction. Check individual venues separately.', None, 'https://www.keralatourism.org/', image('Chinese fishing nets, Fort Kochi.jpg')),
-        (2, 1, 'mattancherry-palace', 'Mattancherry Palace', 'Discover Kerala murals and the history of Kochi’s royal household.', 'heritage', 9.9583, 76.2594, 'Continue from central Kochi to Mattancherry by local transport.', 'Museum opening days and ticket rates should be checked before visiting.', None, 'https://www.keralatourism.org/', image('Mattancherry Palace.jpg')),
-        (3, 2, 'alappuzha-backwaters', 'Alappuzha Backwaters', 'Explore the canals and waterways around Alappuzha with a locally operated boat trip.', 'nature', 9.5010, 76.3500, 'Alappuzha railway station connects to the town; boat departure points vary by operator.', 'Coordinate is an approximate town-area starting point. Agree on route and price before booking.', None, 'https://www.keralatourism.org/', image('Houseboat in Kerala.jpg')),
-        (4, 2, 'alappuzha-beach', 'Alappuzha Beach', 'Spend an evening on the coast near Alappuzha town.', 'beach', 9.4929, 76.3177, 'Take local transport from Alappuzha town or railway station.', 'Follow local swimming restrictions and sea-condition advice.', None, 'https://www.keralatourism.org/', image('Alappuzha beach.jpg')),
-        (5, 3, 'amber-fort', 'Amber Fort', 'Explore courtyards, gateways and hilltop architecture at a component of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9855, 75.8513, 'Travel from Jaipur to Amer by bus or taxi.', 'Allow time for walking and steps; check current tickets and opening hours.', 1, 'https://www.tourism.rajasthan.gov.in/jaipur.html', image('Amer Fort.jpg')),
-        (6, 3, 'jantar-mantar', 'Jantar Mantar, Jaipur', 'Explore monumental astronomical instruments at this UNESCO World Heritage Site.', 'heritage', 26.9248, 75.8246, 'Located in Jaipur’s old city near City Palace.', 'A guide can help explain the instruments. Confirm current entry arrangements.', 2, 'https://whc.unesco.org/en/list/1338/', image('Jantar Mantar Jaipur.jpg')),
-        (7, 4, 'jaisalmer-fort', 'Jaisalmer Fort', 'Walk through a living sandstone fort that forms part of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9124, 70.9120, 'Reach Jaisalmer by rail or road, then continue to the old town.', 'Respect residents and check entry rules for individual monuments.', 1, 'https://www.tourism.rajasthan.gov.in/jaisalmer.html', image('Jaisalmer Fort.jpg')),
-        (8, 4, 'gadisar-lake', 'Gadisar Lake', 'Visit a historic water body framed by gateways and small shrines near Jaisalmer.', 'nature', 26.9083, 70.9232, 'A short local journey from Jaisalmer’s old town.', 'Visit early or late in the day; boat services depend on local conditions.', None, 'https://www.tourism.rajasthan.gov.in/jaisalmer.html', image('Gadisar Lake.jpg')),
-        (9, 5, 'basilica-bom-jesus', 'Basilica of Bom Jesus', 'Visit the historic basilica in Old Goa, part of the Churches and Convents of Goa World Heritage property.', 'heritage', 15.5009, 73.9116, 'Reach Old Goa from Panaji by bus, taxi or other local transport.', 'Respect the active religious setting and check visitor arrangements.', 3, 'https://www.goa-tourism.com/', image('Basilica of Bom Jesus.jpg')),
-        (10, 5, 'fontainhas', 'Fontainhas', 'Walk through Panaji’s Latin Quarter, known for colourful façades and old streets.', 'culture', 15.4958, 73.8278, 'Located in central Panaji and accessible by local transport.', 'Use a quiet walking route and respect residential streets.', None, 'https://www.goa-tourism.com/', image('Fontainhas Goa.jpg')),
-        (11, 6, 'palolem-beach', 'Palolem Beach', 'A curved South Goa beach with a relaxed coastal atmosphere and seasonal activities.', 'beach', 15.0100, 74.0232, 'Reach Canacona by rail or road, then continue locally to the beach.', 'Beach conditions and seasonal businesses change; follow local safety advice.', None, 'https://www.goa-tourism.com/', image('Palolem beach.jpg')),
-        (12, 6, 'dudhsagar-falls', 'Dudhsagar Falls', 'A dramatic waterfall landscape in the Western Ghats, best planned with current access information.', 'nature', 15.3144, 74.3144, 'Access rules and permitted routes vary; check the official forest/tourism guidance first.', 'Do not enter restricted areas. Monsoon access and water conditions can change quickly.', None, 'https://www.goa-tourism.com/', image('Dudhsagar Falls.jpg')),
-        (13, 7, 'shimla-ridge', 'The Ridge, Shimla', 'A broad hilltop promenade with mountain views and a close connection to Shimla’s public life.', 'culture', 31.1048, 77.1734, 'Shimla is connected by road; the historic railway route reaches nearby areas.', 'Walking in the hill town involves slopes and steps. Check weather before travel.', None, 'https://himachaltourism.gov.in/destination/shimla/', image('Shimla Ridge.jpg')),
-        (14, 7, 'jakhu-temple', 'Jakhu Temple', 'A hilltop temple reached through Shimla’s wooded slopes, with broad views over the town.', 'spiritual', 31.1046, 77.1820, 'Continue from Shimla by local taxi or on foot where appropriate.', 'Follow temple customs and take care around steep paths and local wildlife.', None, 'https://himachaltourism.gov.in/destination/shimla/', image('Jakhu Temple.jpg')),
-        (15, 8, 'dharamshala', 'Dharamshala', 'A mountain destination connecting Tibetan cultural life, hillside walks and Dhauladhar views.', 'nature', 32.2190, 76.3234, 'Reach by road or via Kangra airport, then use local transport between settlements.', 'The area spans different elevations; allow time for weather and road changes.', None, 'https://himachaltourism.gov.in/', image('Dharamshala.jpg')),
-        (16, 8, 'masroor-temple', 'Masroor Rock-Cut Temples', 'Explore a remarkable group of temples carved from rock in the Kangra landscape.', 'heritage', 32.0108, 76.0907, 'Plan a road journey from Kangra or Dharamshala and check local access.', 'Treat this as a heritage site; avoid climbing or touching carved surfaces.', None, 'https://himachaltourism.gov.in/', image('Masroor Temples.jpg')),
-        (17, 9, 'marina-beach', 'Marina Beach', 'See Chennai’s long urban shoreline and the city’s evening public life.', 'beach', 13.0500, 80.2824, 'Accessible from central Chennai by local bus, rail or taxi.', 'The sea can be dangerous; follow local warnings and do not assume swimming is safe.', None, 'https://www.tamilnadutourism.com/', image('Marina Beach Chennai.jpg')),
-        (18, 9, 'kapaleeshwarar-temple', 'Kapaleeshwarar Temple', 'Visit a major Chennai temple surrounded by the streets and food culture of Mylapore.', 'spiritual', 13.0338, 80.2697, 'Reach Mylapore by local bus, rail or taxi.', 'Check temple visitor customs and opening hours before visiting.', None, 'https://www.tamilnadutourism.com/', image('Kapaleeshwarar Temple.jpg')),
-        (19, 10, 'meenakshi-temple', 'Meenakshi Amman Temple', 'Explore the temple complex and living streets of Madurai’s historic centre.', 'spiritual', 9.9195, 78.1193, 'Madurai is connected by air, rail and road; the temple is in the city centre.', 'Follow photography and dress guidance issued at the temple.', None, 'https://www.tamilnadutourism.com/', image('Meenakshi Amman Temple.jpg')),
-        (20, 10, 'thirumalai-nayak-palace', 'Thirumalai Nayak Palace', 'See the monumental court architecture of a seventeenth-century palace in Madurai.', 'heritage', 9.9145, 78.1193, 'A short local journey from Meenakshi Temple and central Madurai.', 'Check current light-and-sound schedules separately from daytime access.', None, 'https://www.tamilnadutourism.com/', image('Thirumalai Nayak Palace.jpg')),
+        (1, 1, 'fort-kochi', 'Fort Kochi', 'Walk through a coastal neighbourhood shaped by maritime trade, historic streets and public waterfront spaces.', 'culture', 9.9658, 76.2421, 'Reach Kochi by rail or air, then continue by local bus, taxi or ferry where available.', 'This is a neighbourhood, not a single ticketed attraction. Check individual venues separately.', None, 'https://www.keralatourism.org/', place_image('fort-kochi')),
+        (2, 1, 'mattancherry-palace', 'Mattancherry Palace', 'Discover Kerala murals and the history of Kochi’s royal household.', 'heritage', 9.9583, 76.2594, 'Continue from central Kochi to Mattancherry by local transport.', 'Museum opening days and ticket rates should be checked before visiting.', None, 'https://www.keralatourism.org/', place_image('mattancherry-palace')),
+        (3, 2, 'alappuzha-backwaters', 'Alappuzha Backwaters', 'Explore the canals and waterways around Alappuzha with a locally operated boat trip.', 'nature', 9.5010, 76.3500, 'Alappuzha railway station connects to the town; boat departure points vary by operator.', 'Coordinate is an approximate town-area starting point. Agree on route and price before booking.', None, 'https://www.keralatourism.org/', place_image('alappuzha-backwaters')),
+        (4, 2, 'alappuzha-beach', 'Alappuzha Beach', 'Spend an evening on the coast near Alappuzha town.', 'beach', 9.4929, 76.3177, 'Take local transport from Alappuzha town or railway station.', 'Follow local swimming restrictions and sea-condition advice.', None, 'https://www.keralatourism.org/', place_image('alappuzha-beach')),
+        (5, 3, 'amber-fort', 'Amber Fort', 'Explore courtyards, gateways and hilltop architecture at a component of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9855, 75.8513, 'Travel from Jaipur to Amer by bus or taxi.', 'Allow time for walking and steps; check current tickets and opening hours.', 1, 'https://www.tourism.rajasthan.gov.in/jaipur.html', place_image('amber-fort')),
+        (6, 3, 'jantar-mantar', 'Jantar Mantar, Jaipur', 'Explore monumental astronomical instruments at this UNESCO World Heritage Site.', 'heritage', 26.9248, 75.8246, 'Located in Jaipur’s old city near City Palace.', 'A guide can help explain the instruments. Confirm current entry arrangements.', 2, 'https://whc.unesco.org/en/list/1338/', place_image('jantar-mantar')),
+        (7, 4, 'jaisalmer-fort', 'Jaisalmer Fort', 'Walk through a living sandstone fort that forms part of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9124, 70.9120, 'Reach Jaisalmer by rail or road, then continue to the old town.', 'Respect residents and check entry rules for individual monuments.', 1, 'https://www.tourism.rajasthan.gov.in/jaisalmer.html', place_image('jaisalmer-fort')),
+        (8, 4, 'gadisar-lake', 'Gadisar Lake', 'Visit a historic water body framed by gateways and small shrines near Jaisalmer.', 'nature', 26.9083, 70.9232, 'A short local journey from Jaisalmer’s old town.', 'Visit early or late in the day; boat services depend on local conditions.', None, 'https://www.tourism.rajasthan.gov.in/jaisalmer.html', place_image('gadisar-lake')),
+        (9, 5, 'basilica-bom-jesus', 'Basilica of Bom Jesus', 'Visit the historic basilica in Old Goa, part of the Churches and Convents of Goa World Heritage property.', 'heritage', 15.5009, 73.9116, 'Reach Old Goa from Panaji by bus, taxi or other local transport.', 'Respect the active religious setting and check visitor arrangements.', 3, 'https://www.goa-tourism.com/', place_image('basilica-bom-jesus')),
+        (10, 5, 'fontainhas', 'Fontainhas', 'Walk through Panaji’s Latin Quarter, known for colourful façades and old streets.', 'culture', 15.4958, 73.8278, 'Located in central Panaji and accessible by local transport.', 'Use a quiet walking route and respect residential streets.', None, 'https://www.goa-tourism.com/', place_image('fontainhas')),
+        (11, 6, 'palolem-beach', 'Palolem Beach', 'A curved South Goa beach with a relaxed coastal atmosphere and seasonal activities.', 'beach', 15.0100, 74.0232, 'Reach Canacona by rail or road, then continue locally to the beach.', 'Beach conditions and seasonal businesses change; follow local safety advice.', None, 'https://www.goa-tourism.com/', place_image('palolem-beach')),
+        (12, 6, 'dudhsagar-falls', 'Dudhsagar Falls', 'A dramatic waterfall landscape in the Western Ghats, best planned with current access information.', 'nature', 15.3144, 74.3144, 'Access rules and permitted routes vary; check the official forest/tourism guidance first.', 'Do not enter restricted areas. Monsoon access and water conditions can change quickly.', None, 'https://www.goa-tourism.com/', place_image('dudhsagar-falls')),
+        (13, 7, 'shimla-ridge', 'The Ridge, Shimla', 'A broad hilltop promenade with mountain views and a close connection to Shimla’s public life.', 'culture', 31.1048, 77.1734, 'Shimla is connected by road; the historic railway route reaches nearby areas.', 'Walking in the hill town involves slopes and steps. Check weather before travel.', None, 'https://himachaltourism.gov.in/destination/shimla/', place_image('shimla-ridge')),
+        (14, 7, 'jakhu-temple', 'Jakhu Temple', 'A hilltop temple reached through Shimla’s wooded slopes, with broad views over the town.', 'spiritual', 31.1046, 77.1820, 'Continue from Shimla by local taxi or on foot where appropriate.', 'Follow temple customs and take care around steep paths and local wildlife.', None, 'https://himachaltourism.gov.in/destination/shimla/', place_image('jakhu-temple')),
+        (15, 8, 'dharamshala', 'Dharamshala', 'A mountain destination connecting Tibetan cultural life, hillside walks and Dhauladhar views.', 'nature', 32.2190, 76.3234, 'Reach by road or via Kangra airport, then use local transport between settlements.', 'The area spans different elevations; allow time for weather and road changes.', None, 'https://himachaltourism.gov.in/', place_image('dharamshala')),
+        (16, 8, 'masroor-temple', 'Masroor Rock-Cut Temples', 'Explore a remarkable group of temples carved from rock in the Kangra landscape.', 'heritage', 32.0108, 76.0907, 'Plan a road journey from Kangra or Dharamshala and check local access.', 'Treat this as a heritage site; avoid climbing or touching carved surfaces.', None, 'https://himachaltourism.gov.in/', place_image('masroor-temple')),
+        (17, 9, 'marina-beach', 'Marina Beach', 'See Chennai’s long urban shoreline and the city’s evening public life.', 'beach', 13.0500, 80.2824, 'Accessible from central Chennai by local bus, rail or taxi.', 'The sea can be dangerous; follow local warnings and do not assume swimming is safe.', None, 'https://www.tamilnadutourism.com/', place_image('marina-beach')),
+        (18, 9, 'kapaleeshwarar-temple', 'Kapaleeshwarar Temple', 'Visit a major Chennai temple surrounded by the streets and food culture of Mylapore.', 'spiritual', 13.0338, 80.2697, 'Reach Mylapore by local bus, rail or taxi.', 'Check temple visitor customs and opening hours before visiting.', None, 'https://www.tamilnadutourism.com/', place_image('kapaleeshwarar-temple')),
+        (19, 10, 'meenakshi-temple', 'Meenakshi Amman Temple', 'Explore the temple complex and living streets of Madurai’s historic centre.', 'spiritual', 9.9195, 78.1193, 'Madurai is connected by air, rail and road; the temple is in the city centre.', 'Follow photography and dress guidance issued at the temple.', None, 'https://www.tamilnadutourism.com/', place_image('meenakshi-temple')),
+        (20, 10, 'thirumalai-nayak-palace', 'Thirumalai Nayak Palace', 'See the monumental court architecture of a seventeenth-century palace in Madurai.', 'heritage', 9.9145, 78.1193, 'A short local journey from Meenakshi Temple and central Madurai.', 'Check current light-and-sound schedules separately from daytime access.', None, 'https://www.tamilnadutourism.com/', place_image('thirumalai-nayak-palace')),
     ]
     db.executemany('''INSERT OR IGNORE INTO places
         (id,district_id,slug,name,description,category,latitude,longitude,how_to_reach,practical_notes,heritage_id,source_url,image_url)
