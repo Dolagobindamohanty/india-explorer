@@ -1,4 +1,4 @@
-# India, locally
+# India Explorer
 
 A runnable tourism-directory MVP for travellers and new residents. Browse
 State → District → Place, discover typical festival months, filter by interest
@@ -46,7 +46,9 @@ FastAPI deployment, so no CORS configuration is needed.
 
 ## What is included
 
-- Home with **Plan a trip** and **Explore my area** entry points.
+- Search-first homepage with popular categories, trending destinations, skeleton loading states and responsive mobile navigation.
+- Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
+- Home with **Explore** and region directory entry points.
 - 28 state pages and 8 union-territory pages, a growing district directory, and 20 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
@@ -73,8 +75,8 @@ districts ── festival_districts ── festivals
                                   └─ festival_occurrences
 ```
 
-The region model accommodates all 28 states and 8 union territories. Only two
-states are seeded. District boundaries and names need editorial maintenance;
+The region model accommodates all 28 states and 8 union territories. District
+boundaries and names need editorial maintenance;
 The district directory is imported from `data/india-states-districts.json` and
 is displayed as administrative navigation; detailed place content remains
 editorial and is intentionally smaller.

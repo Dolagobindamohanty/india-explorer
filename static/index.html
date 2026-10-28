@@ -3,14 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore Kerala and Rajasthan by district, season, heritage and local festivals. A pilot India travel directory.">
-  <title>India, locally — A little closer to somewhere new</title>
+  <meta name="description" content="Discover India's states, districts, heritage, beaches, mountains, culture and local festivals.">
+  <meta name="theme-color" content="#ff7a00">
+  <title>India Explorer — Discover somewhere new</title>
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-  <header class="nav"><a class="brand" href="#/">india<span>, locally</span><i>✳</i></a><nav aria-label="Main"><a href="#/explore">Destinations</a><a href="#/month/1">Festival calendar</a><a href="#/saved">Saved places <span id="saved-count">0</span></a></nav></header>
-  <main id="app" tabindex="-1"><p>Loading your next discovery…</p></main>
-  <footer><a class="brand" href="#/">india<span>, locally</span></a><p>A place to visit. A place to belong.</p><small>28 states · 8 union territories · 809 district entries · 20 detailed places<br>Editorial sample: verify schedules and practical details with official sources. Place coverage is being expanded district by district.</small></footer>
+<body data-app="india-explorer">
+  <header class="nav">
+    <a class="brand" href="#/" aria-label="India Explorer home">India<span>Explorer</span><i>✳</i></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+      <a href="#/explore">Explore</a>
+      <a href="#/area">States</a>
+      <a href="#/explore">Destinations</a>
+      <a href="#/about">About</a>
+      <a class="nav-search-link" href="#/explore" aria-label="Search destinations">⌕ <span>Search</span></a>
+      <a href="#/saved">♡ Favorites <span id="saved-count">0</span></a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button>
+    </nav>
+  </header>
+  <main id="app" tabindex="-1">
+    <section class="loading-shell" aria-live="polite">
+      <div class="skeleton skeleton-kicker"></div>
+      <div class="skeleton skeleton-title"></div>
+      <div class="skeleton skeleton-copy"></div>
+      <div class="skeleton-grid"><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div></div>
+      <p class="loading-message">Connecting to the travel database…</p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div><a class="brand" href="#/">India<span>Explorer</span></a><p>Find a place to visit. Find a place to belong.</p></div>
+      <small>28 states · 8 union territories · 809 district entries · 20 detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small>
+    </div>
+  </footer>
   <script src="/app.js"></script>
 </body>
 </html>
