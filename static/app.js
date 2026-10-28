@@ -124,11 +124,11 @@ root.addEventListener('click', event => {
   const button = event.target.closest('[data-save]');
   if (button) { const slug = button.dataset.save; saved.has(slug) ? saved.delete(slug) : saved.add(slug); try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { button.textContent = 'Storage unavailable'; return; } button.textContent = saved.has(slug) ? '♥ Saved' : '♡ Save'; button.setAttribute('aria-pressed', saved.has(slug)); updateCount(); if (location.hash === '#/saved') route(); }
 });
-document.querySelector('#theme-toggle').addEventListener('click', () => { const dark = document.body.dataset.theme !== 'dark'; document.body.dataset.theme = dark ? 'dark' : 'light'; localStorage.setItem('india-locally-theme', dark ? 'dark' : 'light'); document.querySelector('#theme-toggle').innerHTML = dark ? '☾ <span>Dark</span>' : '☀ <span>Light</span>'; });
+document.querySelector('#theme-toggle').addEventListener('click', () => { const dark = document.body.dataset.theme !== 'dark'; document.body.dataset.theme = dark ? 'dark' : 'light'; localStorage.setItem('india-locally-theme', dark ? 'dark' : 'light'); document.querySelector('#theme-toggle').innerHTML = dark ? '☀ <span>Light</span>' : '☾ <span>Dark</span>'; });
 document.querySelector('#menu-toggle').addEventListener('click', () => { const nav = document.querySelector('#nav-links'); const open = nav.classList.toggle('open'); document.querySelector('#menu-toggle').setAttribute('aria-expanded', open); });
 document.querySelector('#nav-links').addEventListener('click', event => { if (event.target.closest('a')) document.querySelector('#nav-links').classList.remove('open'); });
 document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'light';
-if (document.body.dataset.theme === 'dark') document.querySelector('#theme-toggle').innerHTML = '☾ <span>Dark</span>';
+if (document.body.dataset.theme === 'dark') document.querySelector('#theme-toggle').innerHTML = '☀ <span>Light</span>';
 updateCount();
 window.addEventListener('hashchange', route);
 route();
