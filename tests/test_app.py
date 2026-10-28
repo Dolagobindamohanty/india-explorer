@@ -54,6 +54,8 @@ def test_filters_combine_and_heritage_links(client):
     assert client.get('/api/places?month=6').json() == []
     assert len(client.get('/api/places?q=Kochi').json()) == 2
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
+    assert client.get('/api/places', params={'q': '%'}).json() == []
+    assert client.get('/api/places', params={'q': '_'}).json() == []
 
 
 def test_month_calendar_does_not_invent_annual_dates(client):
@@ -92,7 +94,7 @@ def test_website_and_health(client):
     assert 'india' in homepage
     assert 'Explore Incredible India' in homepage
     assert '28' in homepage and '809' in homepage
-    assert 'Trending destinations' in homepage
+    assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
     assert client.get('/app.js').status_code == 200
@@ -110,7 +112,15 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Alappuzha' in client.get('/district/alappuzha').text
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
     assert 'Festival calendar' in client.get('/month/8').text
+    assert 'India in August' in client.get('/month/8').text
+    assert 'Typical months: August' in client.get('/district/alappuzha').text
+    assert 'Typical months: January, February, March, October' in client.get('/place/alappuzha-beach').text
     assert 'Saved places' in client.get('/saved').text
     area = client.get('/area').text
     assert 'Choose a state' in area
     assert 'Kerala' in area and 'Puducherry' in area
+    assert '<link rel="canonical" href="https://india-explorer-hazel.vercel.app/explore">' in explore
+    sitemap = client.get('/sitemap.xml')
+    assert sitemap.status_code == 200
+    assert '/state/kerala' in sitemap.text
+    assert 'Sitemap:' in client.get('/robots.txt').text

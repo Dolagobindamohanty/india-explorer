@@ -12,6 +12,8 @@ python -m pip install -r requirements.txt
 python -m uvicorn app:app --host 127.0.0.1 --port 8010 --reload
 ```
 
+For local development and tests, install `requirements-dev.txt` instead.
+
 Open http://127.0.0.1:8010. Port 8010 keeps this separate from the SQL Analyst
 application. Keep the terminal open; Ctrl+C stops the server.
 
@@ -117,6 +119,7 @@ coloured backgrounds remain usable offline.
 - `GET /api/places/{slug}`
 - `GET /api/festivals?month=8&district=alappuzha`
 - `GET /healthz`; interactive API docs at `/docs`
+- `GET /sitemap.xml` and `/robots.txt` for crawlable server-rendered pages
 
 Run `python verify_data.py` to check the region counts, district foreign keys,
 place image uniqueness and missing cover images. The bundled administrative

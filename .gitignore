@@ -4,5 +4,3 @@ data/*.sqlite3
 data/verification_report.json
 .env
 .vercel/
-
-.vercel
