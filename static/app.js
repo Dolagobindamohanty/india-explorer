@@ -1,7 +1,7 @@
 const root = document.querySelector('#app');
 const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const categories = [
-  ['heritage', '🏛', 'Heritage'], ['beach', '🏖', 'Beaches'], ['nature', '🏔', 'Mountains'],
+  ['heritage', '🏛', 'Heritage'], ['beach', '🏖', 'Beaches'], ['nature', '🌿', 'Nature'],
   ['spiritual', '🙏', 'Spiritual'], ['culture', '🎨', 'Culture']
 ];
 const shortMonth = n => months[n - 1].slice(0, 3);
@@ -27,7 +27,7 @@ function saveButton(p) { return `<button class="save" data-save="${esc(p.slug)}"
 function placeCard(p) {
   const badge = p.heritage_id ? 'UNESCO heritage' : categoryLabel(p.category);
   const placeArtwork = p.image_url || `/assets/places/${p.slug}.jpg`;
-  return `<article class="card place-card"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><span class="badge">${esc(badge)}</span></a><div class="card-body"><div class="meta">${esc(p.district)} · ${esc(p.state)}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${p.distance_km != null ? `${p.distance_km} km straight-line` : p.best_months.map(shortMonth).join(' · ')}</span>${saveButton(p)}</div></div></article>`;
+  return `<article class="card place-card"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><strong class="art-title">${esc(p.name)}</strong><span class="badge">${esc(badge)}</span></a><div class="card-body"><div class="meta">${esc(p.district)} · ${esc(p.state)}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${p.distance_km != null ? `${p.distance_km} km straight-line` : p.best_months.map(shortMonth).join(' · ')}</span>${saveButton(p)}</div></div></article>`;
 }
 function regionCard(r, kind) {
   const initials = r.name.split(/\s+/).map(word => word[0]).slice(0, 2).join('');

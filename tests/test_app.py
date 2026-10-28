@@ -102,7 +102,10 @@ def test_website_and_health(client):
 
 
 def test_server_rendered_routes_are_crawlable(client):
-    assert 'Find your kind of place' in client.get('/explore').text
+    explore = client.get('/explore').text
+    assert 'Find your kind of place' in explore
+    assert 'class="art-title"' in explore
+    assert 'Alappuzha Backwaters' in explore
     assert 'Kerala' in client.get('/state/kerala').text
     assert 'Alappuzha' in client.get('/district/alappuzha').text
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
