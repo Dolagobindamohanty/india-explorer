@@ -89,9 +89,20 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert 'Explore Incredible India' in homepage
-    assert 'Connecting to the travel database' in homepage
     assert '28' in homepage and '809' in homepage
+    assert 'Trending destinations' in homepage
+    assert 'href="/explore"' in homepage
+    assert 'href="/state/' in homepage
     assert client.get('/app.js').status_code == 200
     assert client.get('/style.css').status_code == 200
     assert client.get('/healthz').json() == {'status': 'ok', 'places': 20}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
+
+
+def test_server_rendered_routes_are_crawlable(client):
+    assert 'Find your kind of place' in client.get('/explore').text
+    assert 'Kerala' in client.get('/state/kerala').text
+    assert 'Alappuzha' in client.get('/district/alappuzha').text
+    assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
+    assert 'Festival calendar' in client.get('/month/8').text
+    assert 'Saved places' in client.get('/saved').text

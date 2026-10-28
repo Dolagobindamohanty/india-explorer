@@ -48,6 +48,7 @@ FastAPI deployment, so no CORS configuration is needed.
 
 - Search-first homepage with popular categories, trending destinations, skeleton loading states and responsive mobile navigation.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
+- Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript enhances those pages in the browser.
 - Home with **Explore** and region directory entry points.
 - 28 state pages and 8 union-territory pages, a growing district directory, and 20 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
