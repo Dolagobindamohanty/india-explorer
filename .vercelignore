@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+tests/
+tmp-images/
+data/*.sqlite3
+*.pyc
