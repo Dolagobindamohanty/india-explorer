@@ -111,3 +111,6 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
     assert 'Festival calendar' in client.get('/month/8').text
     assert 'Saved places' in client.get('/saved').text
+    area = client.get('/area').text
+    assert 'Choose a state' in area
+    assert 'Kerala' in area and 'Puducherry' in area

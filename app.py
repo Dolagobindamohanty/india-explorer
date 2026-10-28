@@ -253,6 +253,15 @@ def create_app(database_path=None):
         content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">For another day</p><h1>Your little collection.</h1><p>Favorites are saved privately in your browser when JavaScript is enabled. Browse the destinations and choose <strong>Save</strong> to build your list.</p><a class="button" href="/explore">Explore destinations</a>'''
         return page_document('Saved places', content)
 
+    @app.get('/area', response_class=HTMLResponse)
+    def rendered_area():
+        regions = states()
+        territories = union_territories()
+        state_links = ''.join(server_region_link(region) for region in regions)
+        territory_links = ''.join(server_region_link(region) for region in territories)
+        content = f'''{breadcrumb_html('Explore by region')}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p><section class="section"><p class="eyebrow">States</p><h2>Choose a state</h2><div class="cards">{state_links}</div></section><section class="section"><p class="eyebrow">Union territories</p><h2>Choose a union territory</h2><div class="cards">{territory_links}</div></section>'''
+        return page_document('Explore states and union territories', content)
+
     @app.get('/about', response_class=HTMLResponse)
     def rendered_about():
         content = f'''{breadcrumb_html('About')}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p>'''
