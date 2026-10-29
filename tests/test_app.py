@@ -43,7 +43,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 31
+    assert len(all_places) == 38
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -56,6 +56,13 @@ def test_full_destination_journey(client):
     assert len(south_goa['places']) == 6
     assert {p['slug'] for p in south_goa['places']} >= {'palolem-beach', 'dudhsagar-falls', 'mangueshi-temple', 'cabo-de-rama-fort', 'shanta-durga-temple', 'agonda-beach'}
     assert len(client.get('/api/states/goa').json()['places']) == 11
+    sikkim = client.get('/api/states/sikkim').json()
+    assert len(sikkim['districts']) == 6
+    assert len(sikkim['places']) == 7
+    gangtok = client.get('/api/districts/gangtok').json()
+    assert any(p['slug'] == 'tsomgo-lake' for p in gangtok['places'])
+    mangan = client.get('/api/districts/mangan').json()
+    assert {p['slug'] for p in mangan['places']} >= {'gurudongmar-lake', 'yumthang-valley', 'khangchendzonga-national-park'}
 
 
 def test_filters_combine_and_heritage_links(client):
@@ -95,7 +102,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 31
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 38
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -119,7 +126,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 31}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 38}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -152,8 +159,8 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 31,
+        'detailed_places': 38,
         'reviewed_places': 0,
-        'unreviewed_places': 31,
+        'unreviewed_places': 38,
         'confirmed_festival_dates': 0,
     }
