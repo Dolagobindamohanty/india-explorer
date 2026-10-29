@@ -37,10 +37,13 @@ def create_app(database_path=None):
         db.executescript((ROOT / 'schema.sql').read_text(encoding='utf-8'))
         region_columns = {row[1] for row in db.execute('PRAGMA table_info(regions)')}
         place_columns = {row[1] for row in db.execute('PRAGMA table_info(places)')}
+        heritage_columns = {row[1] for row in db.execute('PRAGMA table_info(heritage_sites)')}
         if 'cover_image_url' not in region_columns:
             db.execute("ALTER TABLE regions ADD COLUMN cover_image_url TEXT NOT NULL DEFAULT ''")
         if 'image_url' not in place_columns:
             db.execute("ALTER TABLE places ADD COLUMN image_url TEXT NOT NULL DEFAULT ''")
+        if 'designation' not in heritage_columns:
+            db.execute("ALTER TABLE heritage_sites ADD COLUMN designation TEXT NOT NULL DEFAULT 'world_heritage_site'")
         with db:
             # INSERT OR IGNORE makes this safe for the original two-state DB:
             # existing records are retained while new states and image metadata
@@ -85,7 +88,8 @@ def create_app(database_path=None):
         return items
 
     place_select = '''SELECT p.*, d.name AS district, d.slug AS district_slug,
-        r.name AS state, r.slug AS state_slug, h.name AS heritage_name, h.unesco_url
+        r.name AS state, r.slug AS state_slug, h.name AS heritage_name, h.unesco_url,
+        h.designation AS heritage_designation
         FROM places p JOIN districts d ON d.id=p.district_id
         JOIN regions r ON r.id=d.region_id LEFT JOIN heritage_sites h ON h.id=p.heritage_id'''
 
@@ -268,7 +272,15 @@ def create_app(database_path=None):
         image_url = escape(item.get('image_url') or fallback_image(item.get('state_slug')), quote=True)
         category = escape(item.get('category') or 'Destination')
         labels = {'heritage': 'Heritage', 'beach': 'Beaches', 'nature': 'Nature', 'spiritual': 'Spiritual', 'culture': 'Culture'}
-        badge = 'UNESCO heritage' if item.get('heritage_id') else labels.get(item.get('category'), category)
+        desig = item.get('heritage_designation')
+        if desig == 'world_heritage_site':
+            badge = 'UNESCO World Heritage'
+        elif desig == 'component_site':
+            badge = 'UNESCO Component'
+        elif desig == 'tentative_list':
+            badge = 'UNESCO Tentative List'
+        else:
+            badge = labels.get(item.get('category'), category)
         months = ', '.join(MONTH_NAMES[month - 1] for month in item.get('best_months', []))
         timing = f'Best in {escape(months)}' if months else 'Seasonal details pending'
         return f'''<article class="card place-card"><a href="/place/{escape(item['slug'])}" class="art"><img src="{image_url}" alt="{escape(item['name'])} destination photo"><strong class="art-title">{escape(item['name'])}</strong><span class="badge">{escape(badge)}</span></a><div class="card-body"><div class="meta">{escape(item['district'])} · {escape(item['state'])}</div><h3><a href="/place/{escape(item['slug'])}">{escape(item['name'])}</a></h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{timing}</span><button class="save" data-save="{escape(item['slug'])}" aria-label="Save {escape(item['name'])}">♡ Save</button></div></div></article>'''
@@ -398,7 +410,16 @@ def create_app(database_path=None):
         }
         tip = cat_tips.get(cat, 'Check weather updates and confirm entry schedules with official tourism authorities.')
 
-        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}<p class="eyebrow">{escape(result['category'].title())} · {escape(result['district'])} · {escape(result['state'])}</p><h1>{escape(result['name'])}</h1><div class="detail"><div><p class="lead">{escape(result['description'])}</p><h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside><div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
+        unesco_badge = ''
+        desig = result.get('heritage_designation')
+        if desig == 'world_heritage_site':
+            unesco_badge = f'''<div class="unesco-detail-box"><span class="badge">UNESCO World Heritage Site</span><p>Officially inscribed World Heritage property: <a class="source" href="{escape(result['unesco_url'], quote=True)}" target="_blank" rel="noopener noreferrer">{escape(result['heritage_name'])} ↗</a></p></div>'''
+        elif desig == 'component_site':
+            unesco_badge = f'''<div class="unesco-detail-box"><span class="badge">UNESCO Component Site</span><p>Component of serial World Heritage property: <a class="source" href="{escape(result['unesco_url'], quote=True)}" target="_blank" rel="noopener noreferrer">{escape(result['heritage_name'])} ↗</a></p></div>'''
+        elif desig == 'tentative_list':
+            unesco_badge = f'''<div class="unesco-detail-box"><span class="badge">UNESCO Tentative List</span><p>Nominated on UNESCO’s Tentative List: <a class="source" href="{escape(result['unesco_url'], quote=True)}" target="_blank" rel="noopener noreferrer">{escape(result['heritage_name'])} ↗</a></p></div>'''
+
+        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}<p class="eyebrow">{escape(result['category'].title())} · {escape(result['district'])} · {escape(result['state'])}</p><h1>{escape(result['name'])}</h1><div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside><div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}')
 
     @app.get('/circuits', response_class=HTMLResponse)
@@ -454,7 +475,7 @@ def create_app(database_path=None):
 
     @app.get('/about', response_class=HTMLResponse)
     def rendered_about():
-        content = f'''{breadcrumb_html('About')}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p>'''
+        content = f'''{breadcrumb_html('About')}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p><div class="about-grid"><div><h3>Explore with context</h3><p>Browse India’s states and union territories, then follow the directory into districts and detailed places.</p></div><div><h3>Save your ideas</h3><p>Favorites and recently viewed places stay on this device, so planning feels personal without an account.</p></div><div><h3>Travel responsibly</h3><p>Tourism details and festival dates can change. Use the linked official sources to confirm plans before you go.</p></div></div>'''
         return page_document('About India Explorer', content, canonical_path='/about')
 
     @app.get('/sitemap.xml', response_class=Response)

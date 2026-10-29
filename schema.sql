@@ -22,7 +22,9 @@ CREATE TABLE IF NOT EXISTS districts (
 CREATE TABLE IF NOT EXISTS heritage_sites (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    unesco_url TEXT NOT NULL UNIQUE
+    unesco_url TEXT NOT NULL UNIQUE,
+    designation TEXT NOT NULL DEFAULT 'world_heritage_site'
+        CHECK(designation IN ('world_heritage_site', 'component_site', 'tentative_list'))
 );
 CREATE TABLE IF NOT EXISTS places (
     id INTEGER PRIMARY KEY,

@@ -43,7 +43,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 53
+    assert len(all_places) == 56
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -81,6 +81,20 @@ def test_full_destination_journey(client):
     assert {p['slug'] for p in kullu['places']} >= {'hidimba-devi-temple', 'rohtang-pass'}
     spiti = client.get('/api/districts/spiti').json()
     assert {p['slug'] for p in spiti['places']} >= {'key-monastery', 'chandratal-lake', 'tabo-monastery'}
+    # Explicit UNESCO distinction test:
+    # 1. Standalone World Heritage Site
+    konark = client.get('/api/places/konark-sun-temple').json()
+    assert konark['heritage_designation'] == 'world_heritage_site'
+    # 2. Component of larger serial site
+    amber = client.get('/api/places/amber-fort').json()
+    assert amber['heritage_designation'] == 'component_site'
+    # 3. Tentative list site
+    tabo = client.get('/api/places/tabo-monastery').json()
+    assert tabo['heritage_designation'] == 'tentative_list'
+    # 4. Non-UNESCO landmark (Shimla Ridge is not UNESCO)
+    ridge = client.get('/api/places/shimla-ridge').json()
+    assert ridge['heritage_id'] is None
+    assert ridge['heritage_designation'] is None
 
 
 def test_filters_combine_and_heritage_links(client):
@@ -88,7 +102,7 @@ def test_filters_combine_and_heritage_links(client):
     assert {p['slug'] for p in result} == {'amber-fort', 'jantar-mantar', 'jaisalmer-fort'}
     assert all(p['unesco_url'].startswith('https://whc.unesco.org/en/list/') for p in result)
     assert client.get('/api/places?state=kerala&unesco=true').json() == []
-    assert client.get('/api/places?month=7').json() == []
+    assert {p['slug'] for p in client.get('/api/places?month=7').json()} == {'chandratal-lake', 'rohtang-pass'}
     assert len(client.get('/api/places?month=6').json()) == 11
     assert len(client.get('/api/places?q=Kochi').json()) == 2
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
@@ -121,7 +135,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 53
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 56
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -145,7 +159,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 53}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 56}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -180,13 +194,15 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'The Golden Triangle' in circuits_page
     gt_page = client.get('/circuit/golden-triangle').text
     assert 'Stop 1' in gt_page
+    assert 'Qutb Minar' in gt_page
+    assert 'Taj Mahal' in gt_page
     assert 'Amber Fort' in gt_page
 
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 53,
+        'detailed_places': 56,
         'reviewed_places': 0,
-        'unreviewed_places': 53,
+        'unreviewed_places': 56,
         'confirmed_festival_dates': 0,
     }

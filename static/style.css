@@ -1703,6 +1703,27 @@ body[data-theme="dark"] .day-badge {
   font-size: 14px;
 }
 
+.unesco-detail-box {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0 20px;
+}
+
+.unesco-detail-box p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+body[data-theme="dark"] .unesco-detail-box {
+  background: var(--surface);
+  border-color: var(--line);
+  border-left-color: var(--green);
+}
+
 /* Print Styles */
 @media print {
   .nav, footer, .view-toggles, .theme-toggle, .save, .menu-toggle, .hero-search, .filters, .itinerary-actions {
