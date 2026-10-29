@@ -23,12 +23,10 @@
       "Kakinada",
       "Krishna",
       "Kurnool",
-      "Markapuram",
       "Nandyal",
       "Ntr",
       "Palnadu",
       "Parvathipuram Manyam",
-      "Polavaram",
       "Prakasam",
       "Sri Potti Sriramulu Nellore",
       "Sri Sathya Sai",
@@ -44,7 +42,6 @@
     "state": "Arunachal Pradesh",
     "districts": [
       "Anjaw",
-      "Bichom",
       "Changlang",
       "Dibang Valley",
       "East Kameng",
@@ -129,25 +126,22 @@
   {
     "state": "Delhi",
     "districts": [
-      "Central",
-      "Central North",
-      "East",
+      "Central Delhi",
+      "East Delhi",
       "New Delhi",
-      "North",
-      "North East",
-      "North West",
-      "Old Delhi",
-      "Outer North",
-      "South",
-      "South East",
-      "South West",
-      "West"
+      "North Delhi",
+      "North East Delhi",
+      "North West Delhi",
+      "Shahdara",
+      "South Delhi",
+      "South East Delhi",
+      "South West Delhi",
+      "West Delhi"
     ]
   },
   {
     "state": "Goa",
     "districts": [
-      "Kushavati",
       "North Goa",
       "South Goa"
     ]
@@ -242,7 +236,6 @@
       "Faridabad",
       "Fatehabad",
       "Gurugram",
-      "Hansi",
       "Hisar",
       "Jhajjar",
       "Jind",
@@ -321,8 +314,7 @@
       "Surendranagar",
       "Tapi",
       "Vadodara",
-      "Valsad",
-      "Vav-Tharad"
+      "Valsad"
     ]
   },
   {
@@ -377,7 +369,9 @@
     "state": "Ladakh",
     "districts": [
       "Kargil",
-      "Leh Ladakh"
+      "Leh",
+      "Nubra",
+      "Zanskar"
     ]
   },
   {
@@ -436,6 +430,7 @@
       "Shimla",
       "Sirmaur",
       "Solan",
+      "Spiti",
       "Una"
     ]
   },
@@ -542,7 +537,6 @@
       "Kiphire",
       "Kohima",
       "Longleng",
-      "Meluri",
       "Mokokchung",
       "Mon",
       "Niuland",
@@ -560,7 +554,9 @@
     "state": "Puducherry",
     "districts": [
       "Karaikal",
-      "Puducherry"
+      "Mahe",
+      "Puducherry",
+      "Yanam"
     ]
   },
   {
@@ -625,12 +621,14 @@
       "Mandla",
       "Mandsaur",
       "Morena",
+      "Nagda",
       "Narmadapuram",
       "Narsimhapur",
       "Neemuch",
       "Niwari",
       "Pandhurna",
       "Panna",
+      "Pichhore",
       "Raisen",
       "Rajgarh",
       "Ratlam",
@@ -753,6 +751,7 @@
     "districts": [
       "Ajmer",
       "Alwar",
+      "Anupgarh",
       "Balotra",
       "Banswara",
       "Baran",
@@ -768,28 +767,41 @@
       "Deeg",
       "Dholpur",
       "Didwana-Kuchaman",
+      "Dudu",
       "Dungarpur",
       "Ganganagar",
+      "Gangapur City",
       "Hanumangarh",
       "Jaipur",
+      "Jaipur Rural",
       "Jaisalmer",
       "Jalore",
       "Jhalawar",
       "Jhunjhunu",
       "Jodhpur",
+      "Jodhpur Rural",
       "Karauli",
+      "Kekri",
       "Khairthal-Tijara",
       "Kota",
       "Kotputli-Behror",
+      "Kuchaman City",
+      "Malpura",
       "Nagaur",
+      "Neem Ka Thana",
       "Pali",
       "Phalodi",
       "Pratapgarh",
       "Rajsamand",
       "Salumbar",
+      "Sambhar Lake",
+      "Sanchore",
       "Sawai Madhopur",
+      "Shahpura",
       "Sikar",
       "Sirohi",
+      "Sujangarh",
+      "Suratgarh",
       "Tonk",
       "Udaipur"
     ]
@@ -802,14 +814,18 @@
       "Chamoli",
       "Champawat",
       "Dehradun",
+      "Didihat",
       "Haridwar",
+      "Kotdwar",
       "Nainital",
       "Pauri Garhwal",
       "Pithoragarh",
+      "Ranikhet",
       "Rudraprayag",
       "Tehri Garhwal",
       "Udham Singh Nagar",
-      "Uttarkashi"
+      "Uttarkashi",
+      "Yamunotri"
     ]
   },
   {
@@ -860,13 +876,18 @@
     "districts": [
       "Alipurduar",
       "Bankura",
+      "Basirhat",
+      "Berhampore",
       "Birbhum",
+      "Bishnupur",
       "Cooch Behar",
       "Dakshin Dinajpur",
       "Darjeeling",
       "Hooghly",
       "Howrah",
+      "Ichhamati",
       "Jalpaiguri",
+      "Jangipur",
       "Jhargram",
       "Kalimpong",
       "Kolkata",
@@ -879,7 +900,9 @@
       "Purba Bardhaman",
       "Purba Medinipur",
       "Purulia",
+      "Ranaghat",
       "South 24 Parganas",
+      "Sundarban",
       "Uttar Dinajpur"
     ]
   },

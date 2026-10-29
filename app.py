@@ -203,6 +203,24 @@ def create_app(database_path=None):
                 'places': db.execute('SELECT COUNT(*) FROM places').fetchone()[0],
             }
 
+    def editorial_status():
+        with connection() as db:
+            detailed_places = db.execute('SELECT COUNT(*) FROM places').fetchone()[0]
+            reviewed_places = db.execute(
+                "SELECT COUNT(*) FROM places WHERE verification_status='verified'"
+            ).fetchone()[0]
+            confirmed_festival_dates = db.execute('SELECT COUNT(*) FROM festival_occurrences').fetchone()[0]
+            return {
+                'detailed_places': detailed_places,
+                'reviewed_places': reviewed_places,
+                'unreviewed_places': detailed_places - reviewed_places,
+                'confirmed_festival_dates': confirmed_festival_dates,
+            }
+
+    @app.get('/api/editorial-status')
+    def editorial_status_api():
+        return editorial_status()
+
     def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/'):
         counts = directory_counts()
         canonical_url = SITE_URL + canonical_path
@@ -210,7 +228,7 @@ def create_app(database_path=None):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="canonical" href="{escape(canonical_url, quote=True)}">
 <title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css"></head>
-<body data-app="india-explorer"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home">India<span>Explorer</span><i>✳</i></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home">India<span>Explorer</span><i>✳</i></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/month/8">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" aria-label="Search destinations">⌕ <span>Search</span></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
 <main id="app" tabindex="-1">{content}</main><footer><div class="footer-inner"><div><a class="brand" href="/">India<span>Explorer</span></a><p>Find a place to visit. Find a place to belong.</p></div><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="/app.js"></script></body></html>'''
 
@@ -227,11 +245,7 @@ def create_app(database_path=None):
         return '<div class="cards">' + ''.join(server_place_card(item) for item in items) + '</div>' if items else '<p class="empty">No detailed places match this selection yet.</p>'
 
     def fallback_image(state):
-        if state == 'kerala':
-            return 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80'
-        if state == 'rajasthan':
-            return 'https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=80'
-        return 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80'
+        return '/assets/state-cover.svg'
 
     def server_region_link(region):
         return f'''<a class="card region-card" href="/state/{escape(region['slug'])}"><div class="art"><img src="{escape(region.get('cover_image_url') or fallback_image(region['slug']), quote=True)}" alt="{escape(region['name'])} destination image"></div><div class="card-body"><div class="meta">{escape(region['kind'].replace('_', ' ').title())} · {region['district_count']} districts</div><h3>{escape(region['name'])} <span class="arrow">↗</span></h3><p>{escape(region['description'])}</p></div></a>'''
@@ -295,7 +309,10 @@ def create_app(database_path=None):
         result = places(q='', state='', district='', month=value, category='', unesco=False)
         festivals_result = festivals(month=value)
         festival_html = ''.join(f'<article class="festival"><h3>{escape(item["name"])}</h3><p>{escape(item["description"])}</p><small>Typical seasonal window: {", ".join(MONTH_NAMES[month - 1] for month in item["months"])}</small></article>' for item in festivals_result) or '<p class="empty">No festivals recorded for this month yet.</p>'
-        content = f'''{breadcrumb_html('Festival calendar')}<p class="eyebrow">Let the calendar be your compass</p><h1>India in {MONTH_NAMES[value - 1]}.</h1><p>Seasonal inspiration and typical festival months from our pilot districts.</p><section class="section"><h2>Celebrations to discover</h2><div class="cards two">{festival_html}</div></section><section class="section"><h2>A good season for…</h2>{server_cards(result)}</section>'''
+        status = editorial_status()
+        date_note = ('No confirmed annual festival dates have been published yet.' if not status['confirmed_festival_dates']
+                     else f"{status['confirmed_festival_dates']} confirmed festival date entries are available.")
+        content = f'''{breadcrumb_html('Festival calendar')}<p class="eyebrow">Let the calendar be your compass</p><h1>India in {MONTH_NAMES[value - 1]}.</h1><p>Seasonal inspiration and typical festival months from our pilot districts.</p><p class="notice">Festival months are recurring seasonal guidance, not event bookings. {date_note} Confirm dates with the linked organiser or tourism authority.</p><section class="section"><h2>Celebrations to discover</h2><div class="cards two">{festival_html}</div></section><section class="section"><h2>A good season for…</h2>{server_cards(result)}</section>'''
         return page_document('Festival calendar', content, canonical_path=f'/month/{value}')
 
     @app.get('/saved', response_class=HTMLResponse)

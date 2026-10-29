@@ -16,12 +16,11 @@ def test_full_destination_journey(client):
     states = client.get('/api/states').json()
     assert len(states) == 28
     assert {s['name'] for s in states} >= {'Kerala', 'Rajasthan', 'Goa', 'Himachal Pradesh', 'Tamil Nadu', 'Karnataka'}
-    assert all(s['cover_image_url'].startswith(('https://images.unsplash.com/', 'https://picsum.photos/')) for s in states)
+    assert all(s['cover_image_url'] == '/assets/state-cover.svg' for s in states)
     covers = {s['slug']: s['cover_image_url'] for s in states}
-    assert 'photo-1722915767859-08a59870d70b' in covers['himachal-pradesh']
-    assert 'photo-1733805569204-41768c7d8c0f' in covers['andhra-pradesh']
-    assert 'photo-1563715493579-e0b3e0493b60' in covers['tamil-nadu']
-    assert len(set(covers.values())) == len(covers)
+    assert covers['himachal-pradesh'] == '/assets/state-cover.svg'
+    assert covers['andhra-pradesh'] == '/assets/state-cover.svg'
+    assert covers['tamil-nadu'] == '/assets/state-cover.svg'
     territories = client.get('/api/union-territories').json()
     assert len(territories) == 8
     assert {t['name'] for t in territories} == {'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'}
@@ -93,12 +92,13 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert 'Explore Incredible India' in homepage
-    assert '28' in homepage and '809' in homepage
+    assert '28' in homepage and '807' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
     assert client.get('/app.js').status_code == 200
     assert client.get('/style.css').status_code == 200
+    assert client.get('/assets/state-cover.svg').status_code == 200
     assert client.get('/healthz').json() == {'status': 'ok', 'places': 20}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
@@ -124,3 +124,14 @@ def test_server_rendered_routes_are_crawlable(client):
     assert sitemap.status_code == 200
     assert '/state/kerala' in sitemap.text
     assert 'Sitemap:' in client.get('/robots.txt').text
+    assert 'data-server-rendered="true"' in explore
+    assert 'recurring seasonal guidance, not event bookings' in client.get('/month/8').text
+
+
+def test_editorial_status(client):
+    assert client.get('/api/editorial-status').json() == {
+        'detailed_places': 20,
+        'reviewed_places': 0,
+        'unreviewed_places': 20,
+        'confirmed_festival_dates': 0,
+    }

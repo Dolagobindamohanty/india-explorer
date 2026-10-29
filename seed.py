@@ -1,51 +1,14 @@
 """Editorial pilot data and a growing India region/district directory.
 
 The records are intentionally marked as needs_review. Place cards use local,
-destination-specific photographs sourced from Wikimedia Commons; state covers
-remain separate landscape/heritage images.
+destination-specific photographs sourced from Wikimedia Commons. Region covers
+use a local visual fallback so rendered pages do not depend on third parties.
 """
 
 import json
 from pathlib import Path
-from urllib.parse import quote
-UNSPLASH_IDS = [
-    '1602216056096-3b40cc0c9944', '1599661046827-dacff0c0f09a',
-    '1512343879784-a960bf40e7f2', '1548013146-72479768bada',
-    '1564507592333-c60657eea523', '1477587458883-47145ed94245',
-    '1524492412937-b28074a5d7da', '1582510003544-4d00b7f74220',
-    '1500530855697-b586d89ba3ee', '1464822759023-fed622ff2c3b',
-    '1500534623283-312aade485b7', '1469854523086-cc02fe5d8800',
-    '1501785888041-af3ef285b470', '1507525428034-b723cf961d3e',
-    '1518548419970-58e3b4079ab2', '1524498250077-390f9e378fc0',
-    '1470770841072-f978cf4d019e', '1441974231531-c6227db76b6e',
-    '1497250681960-ef046c08a56e', '1470071459604-3b5ec3a7fe05',
-    '1465146344425-f00d5f5c8f07', '1519681393784-d120267933ba',
-    '1511497584788-876760111969', '1482192596544-9eb780fc7f66',
-    '1480714378408-67cf0d13bc1b', '1501854140801-50d01698950b',
-    '1518005020951-eccb494ad742', '1472396961693-142e6e269027',
-    '1497436072909-60f360e1d4b1', '1493246507139-91e8fad9978e',
-    '1524231757912-21f4fe3a7200',
-]
-_assigned_images = {}
-_image_cursor = 0
-STATE_COVER_IMAGES = {
-    # These are selected for the state's own landscape/heritage, not from a
-    # generic India search. The three reported as incorrect are explicit here.
-    'kerala': 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=82',
-    'rajasthan': 'https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=1200&q=82',
-    'goa': 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=82',
-    'himachal-pradesh': 'https://images.unsplash.com/photo-1722915767859-08a59870d70b?auto=format&fit=crop&w=1200&q=82',
-    'tamil-nadu': 'https://images.unsplash.com/photo-1563715493579-e0b3e0493b60?auto=format&fit=crop&w=1200&q=82',
-    'andhra-pradesh': 'https://images.unsplash.com/photo-1733805569204-41768c7d8c0f?auto=format&fit=crop&w=1200&q=82',
-    'karnataka': 'https://images.unsplash.com/photo-1722934804353-0d9f6a55ab5e?auto=format&fit=crop&w=1200&q=82',
-    'uttar-pradesh': 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=82',
-    'west-bengal': 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=82',
-    'uttarakhand': 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=82',
-    'maharashtra': 'https://images.unsplash.com/photo-1524498250077-390f9e378fc0?auto=format&fit=crop&w=1200&q=82',
-    'delhi': 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=82',
-    'jammu-and-kashmir': 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=82',
-    'ladakh': 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=82',
-}
+
+STATE_COVER_IMAGE = '/assets/state-cover.svg'
 PLACE_IMAGE_PATHS = {
     'fort-kochi': '/assets/places/fort-kochi.jpg',
     'mattancherry-palace': '/assets/places/mattancherry-palace.jpg',
@@ -70,28 +33,8 @@ PLACE_IMAGE_PATHS = {
 }
 
 
-def image(filename):
-    global _image_cursor
-    if filename in _assigned_images:
-        return _assigned_images[filename]
-    reserved = set(STATE_COVER_IMAGES.values())
-    used = set(_assigned_images.values())
-    while True:
-        if _image_cursor < len(UNSPLASH_IDS):
-            photo_id = UNSPLASH_IDS[_image_cursor]
-            url = f'https://images.unsplash.com/photo-{photo_id}?auto=format&fit=crop&w=1200&q=82'
-        else:
-            stem = quote(filename.rsplit('.', 1)[0].replace(' ', '-'), safe='')
-            url = f'https://picsum.photos/seed/india-{stem}-{_image_cursor}/1200/800'
-        _image_cursor += 1
-        if url not in reserved and url not in used:
-            break
-    _assigned_images[filename] = url
-    return url
-
-
 def state_image(slug, filename):
-    return STATE_COVER_IMAGES.get(slug) or image(filename)
+    return STATE_COVER_IMAGE
 
 
 def place_image(slug):
@@ -111,7 +54,7 @@ def seed(db):
         (9, 'Bihar', 'bihar', 'state', 'Ancient learning centres, Buddhist heritage and river plains.', 'https://tourism.bihar.gov.in/', ''),
         (10, 'Chhattisgarh', 'chhattisgarh', 'state', 'Forests, waterfalls, tribal arts and archaeological landscapes.', 'https://tourism.cgstate.gov.in/', ''),
         (11, 'Gujarat', 'gujarat', 'state', 'Craft traditions, historic cities, coastlines and wildlife landscapes.', 'https://www.gujarattourism.com/', ''),
-        (12, 'Haryana', 'haryana', 'state', 'Historic pilgrimage routes, wetlands and a landscape close to Delhi.', 'https://haryanatourism.gov.in/', image('Kurukshetra Haryana heritage.jpg')),
+        (12, 'Haryana', 'haryana', 'state', 'Historic pilgrimage routes, wetlands and a landscape close to Delhi.', 'https://haryanatourism.gov.in/', STATE_COVER_IMAGE),
         (13, 'Jharkhand', 'jharkhand', 'state', 'Waterfalls, forests, plateau landscapes and living cultural traditions.', 'https://tourism.jharkhand.gov.in/', ''),
         (14, 'Karnataka', 'karnataka', 'state', 'Heritage cities, coffee country, coastlines and diverse landscapes.', 'https://karnatakatourism.org/', ''),
         (15, 'Madhya Pradesh', 'madhya-pradesh', 'state', 'Wildlife, historic cities, temples and central Indian heritage.', 'https://www.mptourism.com/', ''),
@@ -120,7 +63,7 @@ def seed(db):
         (18, 'Meghalaya', 'meghalaya', 'state', 'Living root bridges, waterfalls, caves and highland villages.', 'https://www.meghalayatourism.in/', ''),
         (19, 'Mizoram', 'mizoram', 'state', 'Hills, bamboo craft, community traditions and scenic roads.', 'https://tourism.mizoram.gov.in/', ''),
         (20, 'Nagaland', 'nagaland', 'state', 'Hill communities, craft traditions and seasonal cultural gatherings.', 'https://tourism.nagaland.gov.in/', ''),
-        (21, 'Odisha', 'odisha', 'state', 'Temple architecture, coastal wetlands, crafts and classical dance traditions.', 'https://odishatourism.gov.in/', ''),
+        (21, 'Odisha', 'odisha', 'state', 'Land of temples, classical Odissi dance, tribal crafts, coastal wetlands and one of the world\'s largest annual pilgrimages at Puri.', 'https://odishatourism.gov.in/', STATE_COVER_IMAGE),
         (22, 'Punjab', 'punjab', 'state', 'Living Sikh heritage, farms, food traditions and historic cities.', 'https://punjabtourism.punjab.gov.in/', ''),
         (23, 'Sikkim', 'sikkim', 'state', 'Mountain monasteries, high valleys and carefully paced journeys.', 'https://www.sikkimtourism.gov.in/', ''),
         (24, 'Telangana', 'telangana', 'state', 'Deccan history, food, lakes and the layered city of Hyderabad.', 'https://tourism.telangana.gov.in/', ''),
@@ -139,7 +82,7 @@ def seed(db):
     ]
     db.executemany('''INSERT OR IGNORE INTO regions
         (id,name,slug,kind,description,source_url,cover_image_url) VALUES (?,?,?,?,?,?,?)''', regions)
-    db.executemany('UPDATE regions SET cover_image_url=?, source_url=? WHERE id=?', [(STATE_COVER_IMAGES.get(r[2]) or r[6] or image(r[1] + ' heritage.jpg'), r[5], r[0]) for r in regions])
+    db.executemany('UPDATE regions SET cover_image_url=?, source_url=? WHERE id=?', [(STATE_COVER_IMAGE, r[5], r[0]) for r in regions])
 
     districts = [
         (1, 1, 'Ernakulam', 'ernakulam', 'A starting point for Kochi’s maritime heritage and coastal communities.', 'Try puttu with kadala curry and Kerala-style meals.', 'https://ernakulam.nic.in/'),
@@ -154,7 +97,7 @@ def seed(db):
         (10, 5, 'Madurai', 'madurai', 'A temple city shaped by ritual, markets, architecture and long food traditions.', 'Try jigarthanda, parotta and a Madurai-style meal.', 'https://www.tamilnadutourism.com/'),
         (11, 14, 'Bengaluru Urban', 'bengaluru-urban', 'A city district where technology, public parks, food and layered neighbourhoods meet.', 'Try local darshini breakfasts, filter coffee and regional meals.', 'https://karnatakatourism.org/'),
         (12, 14, 'Mysuru', 'mysuru', 'A palace city with markets, gardens and a strong cultural calendar.', 'Try Mysuru pak, dosas and local Karnataka meals.', 'https://karnatakatourism.org/'),
-        (13, 16, 'Mumbai City', 'mumbai-city', 'A dense island-city district of waterfronts, markets, food and historic architecture.', 'Try vada pav, coastal seafood and Irani café traditions.', 'https://aai-portal.maharashtratourism.gov.in/'),
+        (13, 16, 'Mumbai', 'mumbai', 'A dense island-city district of waterfronts, markets, food and historic architecture. The city blends Koli fishing traditions, Victorian gothic buildings, art deco boulevards and Irani café culture.', 'Try vada pav, coastal seafood and Irani café traditions.', 'https://aai-portal.maharashtratourism.gov.in/'),
         (14, 16, 'Pune', 'pune', 'A cultural and educational city with forts and food traditions nearby.', 'Try misal, bhakri and seasonal Maharashtrian dishes.', 'https://aai-portal.maharashtratourism.gov.in/'),
         (15, 26, 'Agra', 'agra', 'A historic city shaped by Mughal architecture, river landscapes and craft markets.', 'Try petha, Mughlai dishes and local street food.', 'https://www.uptourism.gov.in/'),
         (16, 26, 'Varanasi', 'varanasi', 'A river city of ghats, music, craft and pilgrimage traditions.', 'Try kachori-sabzi, local sweets and seasonal drinks.', 'https://www.uptourism.gov.in/'),
@@ -165,49 +108,17 @@ def seed(db):
         (21, 32, 'New Delhi', 'new-delhi', 'A planned capital district with museums, gardens, memorials and public avenues.', 'Explore regional food from across India in its markets and restaurants.', 'https://delhitourism.gov.in/'),
         (22, 33, 'Srinagar', 'srinagar', 'A lake city known for gardens, houseboats and Kashmiri craft traditions.', 'Try wazwan traditions, kahwa and seasonal Kashmiri dishes.', 'https://jammutourism.jk.gov.in/'),
         (23, 33, 'Jammu', 'jammu', 'A gateway city with temples, markets and routes toward the hills.', 'Try rajma, kaladi cheese and Dogra food traditions.', 'https://jammutourism.jk.gov.in/'),
-        (24, 34, 'Leh', 'leh', 'A high-altitude town and base for monastery, valley and mountain journeys.', 'Try skyu, thukpa and locally grown apricots in season.', 'https://ladakh.gov.in/tourism/'),
+        (24, 34, 'Leh', 'leh', 'A high-altitude town and base for monastery, valley and mountain journeys. Leh sits at 3500 m and is the gateway to Pangong Lake, Nubra Valley and the Khardung La pass.', 'Try skyu, thukpa and locally grown apricots in season.', 'https://ladakh.gov.in/tourism/'),
         (25, 36, 'Puducherry', 'puducherry-district', 'A coastal district of Tamil streets, cafés, heritage buildings and beaches.', 'Try Tamil coastal food alongside the city’s café traditions.', 'https://tourism.py.gov.in/'),
         (26, 30, 'Chandigarh', 'chandigarh-district', 'A union territory and planned city of gardens, architecture and public art.', 'Try Punjabi and North Indian food across the city’s sectors.', 'https://chandigarhtourism.gov.in/'),
     ]
     db.executemany('''INSERT OR IGNORE INTO districts
         (id,region_id,name,slug,description,food_notes,source_url) VALUES (?,?,?,?,?,?,?)''', districts)
 
-    # Directory coverage for every region. These are navigation records; a
-    # district becomes a full editorial destination only after places,
-    # festivals and sources are added and reviewed.
-    directory = {
-        6: ['Visakhapatnam', 'Tirupati', 'Vijayawada', 'Guntur', 'Kurnool'],
-        7: ['Tawang', 'West Kameng', 'Papum Pare', 'East Siang', 'Lower Subansiri'],
-        8: ['Kamrup Metropolitan', 'Dibrugarh', 'Jorhat', 'Sonitpur', 'Cachar', 'Tinsukia'],
-        9: ['Patna', 'Gaya', 'Nalanda', 'Muzaffarpur', 'Bhagalpur'],
-        10: ['Raipur', 'Bastar', 'Bilaspur', 'Korba', 'Durg'],
-        11: ['Ahmedabad', 'Kutch', 'Gir Somnath', 'Vadodara', 'Surat', 'Rajkot'],
-        12: ['Gurugram', 'Faridabad', 'Panipat', 'Kurukshetra', 'Hisar'],
-        13: ['Ranchi', 'East Singhbhum', 'Deoghar', 'Hazaribagh', 'Dhanbad'],
-        14: ['Kodagu', 'Vijayanagara', 'Dakshina Kannada', 'Udupi'],
-        15: ['Bhopal', 'Indore', 'Ujjain', 'Chhatarpur', 'Gwalior', 'Jabalpur'],
-        16: ['Mumbai Suburban', 'Nashik', 'Chhatrapati Sambhajinagar', 'Ratnagiri', 'Nagpur'],
-        17: ['Imphal West', 'Bishnupur', 'Churachandpur', 'Ukhrul'],
-        18: ['East Khasi Hills', 'West Garo Hills', 'Jaintia Hills', 'Ri-Bhoi'],
-        19: ['Aizawl', 'Champhai', 'Lunglei', 'Serchhip'],
-        20: ['Kohima', 'Dimapur', 'Mon', 'Mokokchung'],
-        21: ['Khordha', 'Puri', 'Cuttack', 'Koraput', 'Ganjam', 'Mayurbhanj'],
-        22: ['Amritsar', 'Ludhiana', 'Patiala', 'Rupnagar', 'Bathinda'],
-        23: ['East Sikkim', 'West Sikkim', 'North Sikkim', 'South Sikkim'],
-        24: ['Hyderabad', 'Hanumakonda', 'Nalgonda', 'Nizamabad', 'Adilabad'],
-        25: ['West Tripura', 'Gomati', 'North Tripura', 'Dhalai'],
-        26: ['Lucknow', 'Prayagraj', 'Mathura', 'Ayodhya', 'Gorakhpur'],
-        27: ['Haridwar', 'Chamoli', 'Pauri Garhwal', 'Almora', 'Rudraprayag'],
-        28: ['Hooghly', 'South 24 Parganas', 'Kalimpong', 'Murshidabad', 'Jalpaiguri'],
-        29: ['South Andaman', 'North and Middle Andaman', 'Nicobar'],
-        30: ['Chandigarh'],
-        31: ['Dadra and Nagar Haveli', 'Daman', 'Diu'],
-        32: ['New Delhi', 'Central Delhi', 'South Delhi', 'North Delhi', 'East Delhi', 'West Delhi'],
-        33: ['Srinagar', 'Jammu', 'Anantnag', 'Baramulla', 'Kupwara', 'Kathua'],
-        34: ['Leh', 'Kargil'],
-        35: ['Kavaratti', 'Agatti', 'Minicoy'],
-        36: ['Puducherry', 'Karaikal', 'Mahe', 'Yanam'],
-    }
+    # Additional directory coverage overrides if needed.
+    # The complete state/UT district index is imported from
+    # data/india-states-districts.json below.
+    directory = {}
     existing_slugs = {row[0] for row in db.execute('SELECT slug FROM districts')}
     existing_names = {(row[0], row[1].lower()) for row in db.execute('SELECT region_id, name FROM districts')}
     next_id = db.execute('SELECT COALESCE(MAX(id), 0) + 1 FROM districts').fetchone()[0]

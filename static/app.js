@@ -6,11 +6,7 @@ const categories = [
 ];
 const shortMonth = n => months[n - 1].slice(0, 3);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fallbackImage = state => state === 'kerala'
-  ? 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80'
-  : state === 'rajasthan'
-    ? 'https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=80'
-    : 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80';
+const fallbackImage = () => '/assets/state-cover.svg';
 const image = (url, state) => url || fallbackImage(state);
 const readList = key => { try { const data = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(data) ? data.filter(x => typeof x === 'string') : []; } catch { return []; } };
 let saved = new Set(readList('india-locally-saved'));
@@ -59,7 +55,7 @@ async function home() {
   const [states, territories, places] = await Promise.all([api('states'), api('union-territories'), api('places')]);
   const trending = places.slice(0, 5);
   const recentPlaces = recent.length ? recent.map(slug => places.find(place => place.slug === slug)).filter(Boolean) : [];
-  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Kerala”, “heritage”, or “beaches”</p></div><div class="hero-art" role="img" aria-label="Indian landscape collage"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section directory-preview"><div class="section-head"><div><p class="eyebrow">The full directory</p><h2>Every corner has a story.</h2><p>Browse all ${states.length} states and ${territories.length} union territories, then go district by district.</p></div><a class="button secondary" href="/area">Browse the map of places</a></div><div class="mini-stats"><div><strong>${states.length}</strong><span>States</span></div><div><strong>${territories.length}</strong><span>Union territories</span></div><div><strong>809</strong><span>District entries</span></div><div><strong>${places.length}</strong><span>Detailed places</span></div></div></section>`;
+  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Kerala”, “heritage”, or “beaches”</p></div><div class="hero-art" role="img" aria-label="Indian landscape collage"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section directory-preview"><div class="section-head"><div><p class="eyebrow">The full directory</p><h2>Every corner has a story.</h2><p>Browse all ${states.length} states and ${territories.length} union territories, then go district by district.</p></div><a class="button secondary" href="/area">Browse the map of places</a></div><div class="mini-stats"><div><strong>${states.length}</strong><span>States</span></div><div><strong>${territories.length}</strong><span>Union territories</span></div><div><strong>807</strong><span>District entries</span></div><div><strong>${places.length}</strong><span>Detailed places</span></div></div></section>`;
 }
 async function statePage(slug) {
   const s = await api('states/' + encodeURIComponent(slug));
@@ -132,5 +128,7 @@ document.querySelector('#nav-links').addEventListener('click', event => { if (ev
 document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'light';
 if (document.body.dataset.theme === 'dark') document.querySelector('#theme-toggle').innerHTML = '☀ <span>Light</span>';
 updateCount();
-window.addEventListener('hashchange', route);
-route();
+if (document.body.dataset.serverRendered !== 'true') {
+  window.addEventListener('hashchange', route);
+  route();
+}

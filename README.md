@@ -20,9 +20,16 @@ application. Keep the terminal open; Ctrl+C stops the server.
 ## Deploy to Vercel
 
 The project includes `api/index.py` and `vercel.json` for a FastAPI serverless
-deployment. Vercel uses a temporary `/tmp` SQLite database, so the editorial
-seed is loaded on a cold start; use a hosted PostgreSQL database before adding
-an authenticated CMS or expecting persistent user edits.
+deployment. The included SQLite database is intentionally read-only editorial
+demo storage: Vercel's filesystem is temporary, so it must not be used for
+accounts, CMS changes, saved itineraries, or any other durable user data.
+
+For a production system with mutations, provision a hosted PostgreSQL database
+and migrate the schema and seed data before enabling write features. Store its
+connection string as the Vercel `DATABASE_URL` environment variable and run
+migrations from CI or an administrative job, not during a serverless request.
+This MVP deliberately has no authenticated writes, so browser-local favorites
+remain private to the visitor's device.
 
 Install and authenticate the Vercel CLI from Command Prompt:
 
@@ -50,7 +57,7 @@ FastAPI deployment, so no CORS configuration is needed.
 
 - Search-first homepage with popular categories, trending destinations, skeleton loading states and responsive mobile navigation.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
-- Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript enhances those pages in the browser.
+- Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
 - 28 state pages and 8 union-territory pages, a growing district directory, and 20 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
@@ -93,7 +100,7 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 ## Data and assets
 
 This is a small illustrative pilot, not a comprehensive India dataset. Twenty
-places, nine festivals, 809 district directory entries and a complete
+places, nine festivals, 807 district directory entries and a complete
 28-state/8-union-territory region directory are provided. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
 is made that their current contents were independently checked in this build.
@@ -101,14 +108,14 @@ All place records are marked `needs_review`; annual festival dates are unpopulat
 Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place and a
-separate heritage-oriented cover image for every state; it no longer assigns
-generic search photos to detailed destinations. The 20 pilot place cards use
-locally stored Wikimedia Commons photographs selected for the named destination
-and category. Attribution/source records are in `static/assets/places/sources.json`;
-verify each file's current license and attribution requirements before a public
-commercial launch. Google Fonts is optional; system-font fallbacks and
-coloured backgrounds remain usable offline.
+The website stores a destination-specific image URL for every place. The 20
+pilot place cards use locally stored Wikimedia Commons photographs selected for
+the named destination and category. Region pages use a locally bundled abstract
+cover rather than a remote image provider, so their rendering has no external
+artwork dependency. Attribution/source records are in
+`static/assets/places/sources.json`; verify each file's current license and
+attribution requirements before a public commercial launch. Google Fonts is
+optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
 ## APIs
 
@@ -123,9 +130,8 @@ coloured backgrounds remain usable offline.
 
 Run `python verify_data.py` to check the region counts, district foreign keys,
 place image uniqueness and missing cover images. The bundled administrative
-snapshot currently contains 784 source-named districts; the database contains
-809 after retaining the curated directory additions, duplicate-name slug
-handling and normalised names.
+snapshot contains 807 districts across India's 28 states and 8 union
+territories, matching official administrative reorganization data.
 That check does not claim that every tourism description, festival date or
 image has been independently verified; those require editorial review against
 the linked official sources.
