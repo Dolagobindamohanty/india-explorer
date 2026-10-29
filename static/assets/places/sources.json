@@ -98,5 +98,25 @@
     "file": "Tirumalai Nayak.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Tirumalai_Nayak.jpg",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirumalai%20Nayak.jpg?width=960"
+  },
+  "konark-sun-temple": {
+    "file": "Konark Sun Temple wheel.jpg",
+    "source_page": "https://odishatourism.gov.in/",
+    "download_url": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=960&q=80"
+  },
+  "puri-jagannath-temple": {
+    "file": "Puri Shree Jagannath Temple.jpg",
+    "source_page": "https://odishatourism.gov.in/",
+    "download_url": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=960&q=80"
+  },
+  "chilika-lake": {
+    "file": "Chilika Lake Lagoon.jpg",
+    "source_page": "https://odishatourism.gov.in/",
+    "download_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=960&q=80"
+  },
+  "lingaraj-temple": {
+    "file": "Bhubaneswar Lingaraj Temple.jpg",
+    "source_page": "https://odishatourism.gov.in/",
+    "download_url": "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=960&q=80"
   }
 }

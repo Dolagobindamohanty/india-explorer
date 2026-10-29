@@ -15,12 +15,13 @@ def client(tmp_path):
 def test_full_destination_journey(client):
     states = client.get('/api/states').json()
     assert len(states) == 28
-    assert {s['name'] for s in states} >= {'Kerala', 'Rajasthan', 'Goa', 'Himachal Pradesh', 'Tamil Nadu', 'Karnataka'}
-    assert all(s['cover_image_url'] == '/assets/state-cover.svg' for s in states)
+    assert {s['name'] for s in states} >= {'Kerala', 'Rajasthan', 'Goa', 'Himachal Pradesh', 'Tamil Nadu', 'Karnataka', 'Odisha'}
     covers = {s['slug']: s['cover_image_url'] for s in states}
-    assert covers['himachal-pradesh'] == '/assets/state-cover.svg'
-    assert covers['andhra-pradesh'] == '/assets/state-cover.svg'
-    assert covers['tamil-nadu'] == '/assets/state-cover.svg'
+    assert all(url.startswith(('https://', '/assets/')) for url in covers.values())
+    assert 'unsplash.com' in covers['odisha']
+    assert 'unsplash.com' in covers['himachal-pradesh']
+    assert 'unsplash.com' in covers['andhra-pradesh']
+    assert 'unsplash.com' in covers['tamil-nadu']
     territories = client.get('/api/union-territories').json()
     assert len(territories) == 8
     assert {t['name'] for t in territories} == {'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'}
@@ -39,10 +40,12 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
+    assert len(all_places) == 24
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
     assert client.get('/api/districts/bengaluru-urban').json()['places'] == []
+    assert len(client.get('/api/districts/puri').json()['places']) == 3
 
 
 def test_filters_combine_and_heritage_links(client):
@@ -61,7 +64,10 @@ def test_month_calendar_does_not_invent_annual_dates(client):
     result = client.get('/api/festivals?month=8&district=alappuzha').json()
     assert len(result) == 2
     assert all(f['occurrences'] == [] for f in result)
-    assert client.get('/api/festivals?month=12').json() == []
+    dec_festivals = client.get('/api/festivals?month=12').json()
+    assert len(dec_festivals) >= 2
+    assert any(f['name'] == 'Hornbill Festival' for f in dec_festivals)
+    assert any(f['name'] == 'Konark Dance & Sand Art Festival' for f in dec_festivals)
 
 
 @pytest.mark.parametrize('url', ['/api/places?month=13', '/api/festivals?month=0'])
@@ -79,7 +85,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 20
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 24
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -96,10 +102,11 @@ def test_website_and_health(client):
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
+    assert 'Featured States' in homepage
     assert client.get('/app.js').status_code == 200
     assert client.get('/style.css').status_code == 200
     assert client.get('/assets/state-cover.svg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 20}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 24}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -112,8 +119,8 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Alappuzha' in client.get('/district/alappuzha').text
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
     assert 'Festival calendar' in client.get('/month/8').text
-    assert 'India in August' in client.get('/month/8').text
-    assert 'Typical months: August' in client.get('/district/alappuzha').text
+    assert 'Festivals in August' in client.get('/month/8').text
+    assert 'Typically in August' in client.get('/district/alappuzha').text
     assert 'Typical months: January, February, March, October' in client.get('/place/alappuzha-beach').text
     assert 'Saved places' in client.get('/saved').text
     area = client.get('/area').text
@@ -125,13 +132,15 @@ def test_server_rendered_routes_are_crawlable(client):
     assert '/state/kerala' in sitemap.text
     assert 'Sitemap:' in client.get('/robots.txt').text
     assert 'data-server-rendered="true"' in explore
-    assert 'recurring seasonal guidance, not event bookings' in client.get('/month/8').text
+    festivals_page = client.get('/festivals').text
+    assert 'Celebrations across India' in festivals_page
+    assert 'month-selector-tabs' in festivals_page
 
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 20,
+        'detailed_places': 24,
         'reviewed_places': 0,
-        'unreviewed_places': 20,
+        'unreviewed_places': 24,
         'confirmed_festival_dates': 0,
     }

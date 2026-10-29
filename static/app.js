@@ -37,7 +37,12 @@ function cards(items) { return items.length ? `<div class="cards">${items.map(pl
 function skeletonCards(count = 3) { return `<div class="cards skeleton-cards">${Array.from({length: count}, () => '<div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line short"></div></div>').join('')}</div>`; }
 function categoryChips() { return categories.map(([value, icon, label]) => `<a class="category-chip" href="/explore?category=${value}"><span>${icon}</span>${label}</a>`).join(''); }
 function festivalCards(items) {
-  return items.length ? `<div class="cards two">${items.map(f => `<article class="festival"><span class="badge">Typically ${f.months.map(shortMonth).join(' / ')}</span><h3>${esc(f.name)}</h3><p>${esc(f.description)}</p><p>${f.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)}</a>`).join(' · ')}</p><small>${f.occurrences.length ? f.occurrences.map(o => `${esc(o.starts_on)} – ${esc(o.ends_on)}`).join(', ') : 'Annual dates not confirmed in this directory.'}</small><p><a href="${esc(f.source_url)}" target="_blank" rel="noopener noreferrer">Check the tourism authority ↗</a></p></article>`).join('')}</div>` : '<p class="empty">No festivals recorded for this selection yet. This does not mean there are no local celebrations.</p>';
+  return items.length ? `<div class="cards two">${items.map(f => {
+    const locations = (f.districts || []).map(d => `<span class="festival-location">📍 <strong>${esc(d.state || '')}</strong>: <a href="/district/${esc(d.slug)}">${esc(d.name)}</a></span>`).join(' ');
+    const sourceLink = f.source_url ? `<a class="source" href="${esc(f.source_url)}" target="_blank" rel="noopener noreferrer">Official tourism reference ↗</a>` : '';
+    const monthsStr = (f.months || []).map(shortMonth).join(' / ');
+    return `<article class="card festival-card"><div class="card-body"><div class="meta">${locations || '<span class="festival-location">📍 Pan-India</span>'}</div><h3>${esc(f.name)}</h3><p>${esc(f.description)}</p><div class="card-bottom"><span>🗓 Typically in ${esc(monthsStr)}</span>${sourceLink}</div></div></article>`;
+  }).join('')}</div>` : '<p class="empty">No festivals recorded for this selection yet.</p>';
 }
 function breadcrumb(items) { return `<div class="breadcrumb"><a href="/">Home</a>${items.map(([label, link]) => ` / ${link ? `<a href="${link}">${esc(label)}</a>` : esc(label)}`).join('')}</div>`; }
 function homeSearch() { return `<form id="home-search" class="hero-search"><span aria-hidden="true">⌕</span><input name="q" placeholder="Search destinations, states or districts…" aria-label="Search destinations"><button type="submit">Search</button></form>`; }
@@ -53,9 +58,10 @@ async function api(path) {
 
 async function home() {
   const [states, territories, places] = await Promise.all([api('states'), api('union-territories'), api('places')]);
-  const trending = places.slice(0, 5);
+  const trending = places.slice(0, 6);
   const recentPlaces = recent.length ? recent.map(slug => places.find(place => place.slug === slug)).filter(Boolean) : [];
-  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Kerala”, “heritage”, or “beaches”</p></div><div class="hero-art" role="img" aria-label="Indian landscape collage"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section directory-preview"><div class="section-head"><div><p class="eyebrow">The full directory</p><h2>Every corner has a story.</h2><p>Browse all ${states.length} states and ${territories.length} union territories, then go district by district.</p></div><a class="button secondary" href="/area">Browse the map of places</a></div><div class="mini-stats"><div><strong>${states.length}</strong><span>States</span></div><div><strong>${territories.length}</strong><span>Union territories</span></div><div><strong>807</strong><span>District entries</span></div><div><strong>${places.length}</strong><span>Detailed places</span></div></div></section>`;
+  const featuredStates = states.filter(s => ['odisha', 'rajasthan', 'kerala', 'goa', 'himachal-pradesh', 'tamil-nadu'].includes(s.slug)).slice(0, 6);
+  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Odisha”, “Kerala”, “heritage”, or “beaches”</p></div><div class="hero-art" role="img" aria-label="Indian landscape collage"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all ${states.length} states & ${territories.length} UTs ↗</a></div><div class="cards">${featuredStates.map(s => regionCard(s, 'State')).join('')}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All ${states.length} States & ${territories.length} Union Territories ↗</a></div></section>`;
 }
 async function statePage(slug) {
   const s = await api('states/' + encodeURIComponent(slug));
@@ -76,11 +82,19 @@ async function explorePage(query) {
   const [states, places] = await Promise.all([api('states'), api('places?' + params)]);
   return `${breadcrumb([['Destinations']])}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p><form id="filters" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" aria-label="Search places" value="${esc(params.get('q') || '')}"></div><select name="state" aria-label="State"><option value="">All states and UTs</option>${states.map(s => `<option value="${esc(s.slug)}" ${params.get('state') === s.slug ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select><select name="month" aria-label="Best travel month"><option value="">Any month</option>${months.map((m,i) => `<option value="${i+1}" ${params.get('month') === String(i+1) ? 'selected' : ''}>${m}</option>`).join('')}</select><select name="category" aria-label="Interest"><option value="">Any interest</option>${categories.map(([value,, label]) => `<option value="${value}" ${params.get('category') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><label class="check"><input type="checkbox" name="unesco" value="true" ${params.get('unesco') === 'true' ? 'checked' : ''}> UNESCO only</label><button class="button">Find places</button></form><div class="results-heading"><p>${places.length} detailed places found</p><div class="category-chips compact">${categoryChips()}</div></div>${cards(places)}`;
 }
+async function festivalsPage(selectedMonth) {
+  const monthNum = selectedMonth ? Number(selectedMonth) : null;
+  const url = (monthNum && monthNum >= 1 && monthNum <= 12) ? 'festivals?month=' + monthNum : 'festivals';
+  const festList = await api(url);
+  const activeTitle = (monthNum && monthNum >= 1 && monthNum <= 12) ? `Festivals in ${months[monthNum - 1]}` : 'Festivals Across India';
+  const activeHeading = (monthNum && monthNum >= 1 && monthNum <= 12) ? `Festivals in ${months[monthNum - 1]}.` : 'Celebrations across India.';
+  const tabs = `<nav class="month-selector-tabs" aria-label="Filter festivals by month"><a href="/festivals" class="month-tab ${!monthNum ? 'active' : ''}">All Months</a>${months.map((m, i) => `<a href="/festivals?month=${i + 1}" class="month-tab ${monthNum === (i + 1) ? 'active' : ''}">${m.slice(0, 3)}</a>`).join('')}</nav>`;
+  const notice = '<p class="notice">Festival months represent recurring seasonal windows. Always verify exact dates, venues and schedules with official state tourism authorities.</p>';
+  return `${breadcrumb([['Festival calendar']])}<p class="eyebrow">${activeTitle}</p><h1>${activeHeading}</h1><p class="lead">Select a month to explore vibrant traditional festivals, fairs and celebrations across Indian states and districts.</p>${tabs}${notice}<p><strong>${festList.length}</strong> celebrations found across India</p>${festivalCards(festList)}`;
+}
+
 async function monthPage(value) {
-  const month = Number(value);
-  if (!Number.isInteger(month) || month < 1 || month > 12) throw new Error('Choose a month from January to December.');
-  const [festivals, places] = await Promise.all([api('festivals?month='+month),api('places?month='+month)]);
-  return `${breadcrumb([['By month']])}<p class="eyebrow">Let the calendar be your compass</p><h1>India in ${months[month-1]}.</h1><p>Seasonal inspiration and typical festival months from our pilot districts.</p><div class="month-grid">${months.map((m,i) => `<a href="/month/${i+1}" class="${i+1===month?'active':''}">${m.slice(0,3)}</a>`).join('')}</div><section class="section"><h2>Celebrations to discover</h2><p>These are recurring seasonal windows, not confirmed dates for a specific year.</p>${festivalCards(festivals)}</section><section class="section"><h2>A good season for…</h2>${cards(places)}</section>`;
+  return festivalsPage(value);
 }
 async function areaPage() {
   const [states, territories] = await Promise.all([api('states'), api('union-territories')]);
@@ -102,6 +116,10 @@ async function route() {
     else if (type === 'district') html = await districtPage(slug);
     else if (type === 'place') html = await placePage(slug);
     else if (type === 'explore') html = await explorePage(query);
+    else if (type === 'festivals') {
+      const params = new URLSearchParams(query || '');
+      html = await festivalsPage(params.get('month'));
+    }
     else if (type === 'month') html = await monthPage(slug);
     else if (type === 'area') html = await areaPage();
     else if (type === 'about') html = aboutPage();

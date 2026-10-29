@@ -9,7 +9,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 from fastapi.staticfiles import StaticFiles
 
-from seed import seed
+from seed import STATE_COVER_IMAGES, seed
 
 ROOT = Path(__file__).resolve().parent
 MONTH_NAMES = ('January', 'February', 'March', 'April', 'May', 'June',
@@ -186,7 +186,10 @@ def create_app(database_path=None):
         result = rows('SELECT f.* FROM festivals f WHERE ' + ' AND '.join(clauses) + ' ORDER BY name', params)
         for item in result:
             item['months'] = [r['month'] for r in rows('SELECT month FROM festival_months WHERE festival_id=? ORDER BY month', (item['id'],))]
-            item['districts'] = rows('SELECT d.name, d.slug FROM districts d JOIN festival_districts fd ON fd.district_id=d.id WHERE fd.festival_id=?', (item['id'],))
+            item['districts'] = rows('''SELECT d.name, d.slug, r.name AS state, r.slug AS state_slug
+                FROM districts d JOIN regions r ON r.id=d.region_id
+                JOIN festival_districts fd ON fd.district_id=d.id
+                WHERE fd.festival_id=? ORDER BY r.name, d.name''', (item['id'],))
             item['occurrences'] = rows('SELECT starts_on, ends_on, source_url, verified_at FROM festival_occurrences WHERE festival_id=? ORDER BY starts_on', (item['id'],))
         return result
 
@@ -229,7 +232,7 @@ def create_app(database_path=None):
 <meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="canonical" href="{escape(canonical_url, quote=True)}">
 <title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home">India<span>Explorer</span><i>✳</i></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-<nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/month/8">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" aria-label="Search destinations">⌕ <span>Search</span></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
+<nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/festivals">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" aria-label="Search destinations">⌕ <span>Search</span></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
 <main id="app" tabindex="-1">{content}</main><footer><div class="footer-inner"><div><a class="brand" href="/">India<span>Explorer</span></a><p>Find a place to visit. Find a place to belong.</p></div><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="/app.js"></script></body></html>'''
 
     def server_place_card(item):
@@ -245,10 +248,30 @@ def create_app(database_path=None):
         return '<div class="cards">' + ''.join(server_place_card(item) for item in items) + '</div>' if items else '<p class="empty">No detailed places match this selection yet.</p>'
 
     def fallback_image(state):
-        return '/assets/state-cover.svg'
+        return STATE_COVER_IMAGES.get(state) or '/assets/state-cover.svg'
 
     def server_region_link(region):
-        return f'''<a class="card region-card" href="/state/{escape(region['slug'])}"><div class="art"><img src="{escape(region.get('cover_image_url') or fallback_image(region['slug']), quote=True)}" alt="{escape(region['name'])} destination image"></div><div class="card-body"><div class="meta">{escape(region['kind'].replace('_', ' ').title())} · {region['district_count']} districts</div><h3>{escape(region['name'])} <span class="arrow">↗</span></h3><p>{escape(region['description'])}</p></div></a>'''
+        cover = escape(region.get('cover_image_url') or fallback_image(region.get('slug')), quote=True)
+        return f'''<a class="card region-card" href="/state/{escape(region['slug'])}"><div class="art"><img src="{cover}" alt="{escape(region['name'])} destination image" loading="lazy"></div><div class="card-body"><div class="meta">{escape(region['kind'].replace('_', ' ').title())} · {region['district_count']} districts</div><h3>{escape(region['name'])} <span class="arrow">↗</span></h3><p>{escape(region['description'])}</p></div></a>'''
+
+    def server_festival_card(item):
+        months_str = ', '.join(MONTH_NAMES[m - 1] for m in item.get('months', []))
+        locations = []
+        for d in item.get('districts', []):
+            st = d.get('state', '')
+            dt = d.get('name', '')
+            locations.append(f'<span class="festival-location">📍 <strong>{escape(st)}</strong>: <a href="/district/{escape(d["slug"])}">{escape(dt)}</a></span>')
+        locations_html = ' '.join(locations) if locations else '<span class="festival-location">📍 Pan-India</span>'
+        timing = f'Typically in {escape(months_str)}' if months_str else 'Seasonal timing varies'
+        source_link = f'<a class="source" href="{escape(item["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Official tourism reference ↗</a>' if item.get('source_url') else ''
+        return f'''<article class="card festival-card"><div class="card-body"><div class="meta">{locations_html}</div><h3>{escape(item['name'])}</h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>🗓 {escape(timing)}</span>{source_link}</div></div></article>'''
+
+    def month_tabs_html(active_month=None):
+        tabs = [f'<a href="/festivals" class="month-tab {"active" if active_month is None else ""}">All Months</a>']
+        for i, name in enumerate(MONTH_NAMES, 1):
+            is_act = active_month == i
+            tabs.append(f'<a href="/festivals?month={i}" class="month-tab {"active" if is_act else ""}">{name[:3]}</a>')
+        return f'<nav class="month-selector-tabs" aria-label="Filter festivals by month">{"".join(tabs)}</nav>'
 
     def server_filters(query):
         params = query.copy()
@@ -261,9 +284,10 @@ def create_app(database_path=None):
     @app.get('/', response_class=HTMLResponse)
     def rendered_home():
         regions = states()
-        territories = union_territories()
-        featured = enrich_places(rows(place_select + ' ORDER BY (p.heritage_id IS NOT NULL) DESC, p.id LIMIT 5'))
-        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section"><div class="section-head"><div><p class="eyebrow">The full directory</p><h2>Every corner has a story.</h2><p>Browse {len(regions)} states and {len(territories)} union territories, then go district by district.</p></div></div><div class="cards">{''.join(server_region_link(region) for region in regions)}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore separately</p><h2>Union territories.</h2></div><span class="meta">{len(territories)} territories in the directory</span></div><div class="cards">{''.join(server_region_link(region) for region in territories)}</div></section>'''
+        featured = enrich_places(rows(place_select + ' ORDER BY (p.heritage_id IS NOT NULL) DESC, p.id LIMIT 6'))
+        featured_states = [r for r in regions if r['slug'] in ('odisha', 'rajasthan', 'kerala', 'goa', 'himachal-pradesh', 'tamil-nadu')][:6]
+        state_cards = ''.join(server_region_link(r) for r in featured_states)
+        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
         return page_document('Explore Incredible India', content)
 
     @app.get('/explore', response_class=HTMLResponse)
@@ -291,7 +315,7 @@ def create_app(database_path=None):
         result = one('''SELECT d.*, r.name AS state, r.slug AS state_slug FROM districts d JOIN regions r ON r.id=d.region_id WHERE d.slug=?''', (slug,))
         result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? ORDER BY p.name', (result['id'],)))
         result['festivals'] = festivals(month=None, district=slug)
-        festival_html = ''.join(f'<article class="festival"><h3>{escape(item["name"])}</h3><p>{escape(item["description"])}</p><small>Typical months: {", ".join(MONTH_NAMES[month - 1] for month in item["months"])}</small></article>' for item in result['festivals']) or '<p class="empty">No festivals recorded for this district yet.</p>'
+        festival_html = ''.join(server_festival_card(item) for item in result['festivals']) or '<p class="empty">No festivals recorded for this district yet.</p>'
         content = f'''{breadcrumb_html(result['name'])}<p class="eyebrow">{escape(result['state'])} · Local field guide</p><h1>{escape(result['name'])}</h1><p class="lead">{escape(result['description'])}</p><div class="band"><div><h3>A taste of the district</h3><p>{escape(result['food_notes'])}</p></div><a class="source" href="{escape(result['source_url'], quote=True)}">Official information ↗</a></div><section class="section"><h2>Make a day of it</h2>{server_cards(result['places'])}</section><section class="section"><h2>Local celebrations</h2><div class="cards two">{festival_html}</div></section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/district/{slug}')
 
@@ -302,18 +326,25 @@ def create_app(database_path=None):
         content = f'''{breadcrumb_html(result['name'])}<p class="eyebrow">{escape(result['category'])} · {escape(result['district'])}</p><h1>{escape(result['name'])}</h1><div class="detail"><div><p class="lead">{escape(result['description'])}</p><h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go</h3><p>{escape(result['practical_notes'])}</p><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}">Official reference ↗</a></div><aside><h3>A good time to go</h3><p>Typical months: {escape(months_text)}</p><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}">Open location on map ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save</button></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}')
 
+    @app.get('/festivals', response_class=HTMLResponse)
+    def rendered_festivals(month: int | None = Query(None, ge=1, le=12)):
+        result = festivals(month=month)
+        month_name = MONTH_NAMES[month - 1] if month else ''
+        title = f'Festivals in {month_name}' if month else 'Festivals Across India'
+        eyebrow = f'India in {month_name}' if month else 'Cultural calendar'
+        heading = f'Festivals in {month_name}.' if month else 'Celebrations across India.'
+        lead = f'Explore traditional festivals, fairs and celebrations observed in {month_name} across Indian states and districts.' if month else 'Select a month to explore vibrant traditional festivals, fairs and celebrations across Indian states and districts.'
+        tabs = month_tabs_html(month)
+        cards_html = f'<div class="cards two">{"".join(server_festival_card(item) for item in result)}</div>' if result else '<p class="empty">No festivals recorded for this selection yet.</p>'
+        notice = '<p class="notice">Festival months represent recurring seasonal windows. Always verify exact dates, venues and schedules with official state tourism authorities.</p>'
+        content = f'''{breadcrumb_html('Festival calendar')}<p class="eyebrow">{eyebrow}</p><h1>{heading}</h1><p class="lead">{lead}</p>{tabs}{notice}<p><strong>{len(result)}</strong> celebrations found across India</p>{cards_html}'''
+        return page_document(title, content, canonical_path=f'/festivals{f"?month={month}" if month else ""}')
+
     @app.get('/month/{value}', response_class=HTMLResponse)
     def rendered_month(value: int):
         if value < 1 or value > 12:
             raise HTTPException(422, 'Choose a month from January to December.')
-        result = places(q='', state='', district='', month=value, category='', unesco=False)
-        festivals_result = festivals(month=value)
-        festival_html = ''.join(f'<article class="festival"><h3>{escape(item["name"])}</h3><p>{escape(item["description"])}</p><small>Typical seasonal window: {", ".join(MONTH_NAMES[month - 1] for month in item["months"])}</small></article>' for item in festivals_result) or '<p class="empty">No festivals recorded for this month yet.</p>'
-        status = editorial_status()
-        date_note = ('No confirmed annual festival dates have been published yet.' if not status['confirmed_festival_dates']
-                     else f"{status['confirmed_festival_dates']} confirmed festival date entries are available.")
-        content = f'''{breadcrumb_html('Festival calendar')}<p class="eyebrow">Let the calendar be your compass</p><h1>India in {MONTH_NAMES[value - 1]}.</h1><p>Seasonal inspiration and typical festival months from our pilot districts.</p><p class="notice">Festival months are recurring seasonal guidance, not event bookings. {date_note} Confirm dates with the linked organiser or tourism authority.</p><section class="section"><h2>Celebrations to discover</h2><div class="cards two">{festival_html}</div></section><section class="section"><h2>A good season for…</h2>{server_cards(result)}</section>'''
-        return page_document('Festival calendar', content, canonical_path=f'/month/{value}')
+        return rendered_festivals(month=value)
 
     @app.get('/saved', response_class=HTMLResponse)
     def rendered_saved():
@@ -336,7 +367,7 @@ def create_app(database_path=None):
 
     @app.get('/sitemap.xml', response_class=Response)
     def sitemap():
-        urls = ['/', '/explore', '/area', '/about', '/saved']
+        urls = ['/', '/explore', '/area', '/festivals', '/about', '/saved']
         urls.extend(f"/state/{item['slug']}" for item in rows('SELECT slug FROM regions'))
         urls.extend(f"/district/{item['slug']}" for item in rows('SELECT slug FROM districts'))
         urls.extend(f"/place/{item['slug']}" for item in rows('SELECT slug FROM places'))
