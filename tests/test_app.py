@@ -43,7 +43,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 38
+    assert len(all_places) == 46
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -63,6 +63,17 @@ def test_full_destination_journey(client):
     assert any(p['slug'] == 'tsomgo-lake' for p in gangtok['places'])
     mangan = client.get('/api/districts/mangan').json()
     assert {p['slug'] for p in mangan['places']} >= {'gurudongmar-lake', 'yumthang-valley', 'khangchendzonga-national-park'}
+    tripura = client.get('/api/states/tripura').json()
+    assert len(tripura['districts']) == 8
+    assert len(tripura['places']) == 8
+    west_tripura = client.get('/api/districts/west-tripura').json()
+    assert any(p['slug'] == 'ujjayanta-palace' for p in west_tripura['places'])
+    gomati = client.get('/api/districts/gomati').json()
+    assert {p['slug'] for p in gomati['places']} >= {'tripura-sundari-temple', 'chabimura-rock-carvings'}
+    sepahijala = client.get('/api/districts/sepahijala').json()
+    assert any(p['slug'] == 'neermahal-water-palace' for p in sepahijala['places'])
+    unakoti = client.get('/api/districts/unakoti').json()
+    assert any(p['slug'] == 'unakoti-rock-carvings' for p in unakoti['places'])
 
 
 def test_filters_combine_and_heritage_links(client):
@@ -102,7 +113,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 38
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 46
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -126,7 +137,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 38}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 46}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -159,8 +170,8 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 38,
+        'detailed_places': 46,
         'reviewed_places': 0,
-        'unreviewed_places': 38,
+        'unreviewed_places': 46,
         'confirmed_festival_dates': 0,
     }
