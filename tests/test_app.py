@@ -152,7 +152,7 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Festival calendar' in client.get('/month/8').text
     assert 'Festivals in August' in client.get('/month/8').text
     assert 'Typically in August' in client.get('/district/alappuzha').text
-    assert 'Typical months: January, February, March, October' in client.get('/place/alappuzha-beach').text
+    assert 'January, February, March, October' in client.get('/place/alappuzha-beach').text
     assert 'Saved places' in client.get('/saved').text
     area = client.get('/area').text
     assert 'Choose a state' in area
@@ -161,11 +161,18 @@ def test_server_rendered_routes_are_crawlable(client):
     sitemap = client.get('/sitemap.xml')
     assert sitemap.status_code == 200
     assert '/state/kerala' in sitemap.text
+    assert '/circuits' in sitemap.text
     assert 'Sitemap:' in client.get('/robots.txt').text
     assert 'data-server-rendered="true"' in explore
     festivals_page = client.get('/festivals').text
     assert 'Celebrations across India' in festivals_page
     assert 'month-selector-tabs' in festivals_page
+    circuits_page = client.get('/circuits').text
+    assert 'Curated travel trails' in circuits_page
+    assert 'The Golden Triangle' in circuits_page
+    gt_page = client.get('/circuit/golden-triangle').text
+    assert 'Stop 1' in gt_page
+    assert 'Amber Fort' in gt_page
 
 
 def test_editorial_status(client):

@@ -365,3 +365,67 @@ def seed(db):
         for m in f[6]:
             fest_month_rows.append((fid, m))
     db.executemany('INSERT OR IGNORE INTO festival_months (festival_id, month) VALUES (?,?)', fest_month_rows)
+
+    circuits_data = [
+        (1, 'golden-triangle', 'The Golden Triangle & Heritage Forts', 'Delhi, Agra & Jaipur: Emperors, Forts and Palaces',
+         'India’s celebrated classic cultural circuit linking the Mughal capital, the eternal white marble of the Taj Mahal, and the royal pink sandstone citadels of Rajasthan.',
+         '5–6 Days', 'October to March', '/assets/states/rajasthan.jpg',
+         [('amber-fort', 1, 'Majestic hilltop fort overlooking Maota Lake'),
+          ('jantar-mantar', 2, 'Astronomical stone observatory and UNESCO marvel'),
+          ('jaisalmer-fort', 3, 'Living golden fort rising from the Thar desert')]),
+        (2, 'kalinga-coastal-odisha', 'Kalinga Sacred Trail & Coastal Odyssey', 'Bhubaneswar, Konark, Puri & Chilika Lagoon',
+         'Follow ancient pilgrimage routes and coastal waterways across Odisha: 11th-century Kalinga temples, the colossal sun chariot at Konark, sacred Char Dham traditions in Puri, and tranquil dolphin cruises on Chilika lagoon.',
+         '4–5 Days', 'October to March', '/assets/places/konark-sun-temple.jpg',
+         [('lingaraj-temple', 1, 'The crown jewel of Kalinga architecture in Bhubaneswar'),
+          ('konark-sun-temple', 2, '13th-century monumental sun chariot on the coast'),
+          ('puri-jagannath-temple', 3, 'Holy Char Dham shrine and vibrant Ananda Bazar'),
+          ('chilika-lake', 4, 'Lagoon boat cruise to spot Irrawaddy dolphins and migratory birds')]),
+        (3, 'sikkim-himalayan-ascent', 'Sacred Lakes & Monasteries of Sikkim', 'Gangtok, Rumtek, Pelling, Yumthang & Gurudongmar',
+         'Ascend from sub-tropical river valleys to high Himalayan glacial waters under Kangchenjunga: centuries-old Buddhist gompas, sacred alpine lakes, and blooming rhododendron forests.',
+         '6–7 Days', 'March to May & October to December', '/assets/places/gurudongmar-lake.jpg',
+         [('tsomgo-lake', 1, 'Sacred alpine glacial lake at 3,753 metres'),
+          ('rumtek-monastery', 2, 'Seat of the Gyalwang Karmapa and monastic college'),
+          ('pemayangtse-monastery', 3, 'Ancient Nyingma gompa with Kangchenjunga panoramas'),
+          ('solophok-char-dham', 4, 'Colossal Shiva statue and Char Dham shrines on Solophok hill'),
+          ('yumthang-valley', 5, 'Subalpine meadow of wild rhododendrons and hot springs'),
+          ('gurudongmar-lake', 6, 'Pristine glacial lake at 5,430 metres near the Tibetan border')]),
+        (4, 'tripura-royal-rock-art', 'Royal Palaces & Mystical Rock Art of Tripura', 'Agartala, Neermahal, Udaipur, Chabimura & Unakoti',
+         'Uncover Northeast India’s best-kept secrets: the neoclassical white palace of the Manikya kings, Eastern India’s sole lake palace, river canyon bas-reliefs, and the Shaivite rock sculptures of Unakoti.',
+         '4–5 Days', 'October to March', '/assets/places/neermahal-water-palace.jpg',
+         [('ujjayanta-palace', 1, 'Neoclassical royal palace and state museum in Agartala'),
+          ('neermahal-water-palace', 2, 'Summer water palace in the middle of Rudrasagar Lake'),
+          ('tripura-sundari-temple', 3, '500-year-old sacred Shakti Peetha at Matabari'),
+          ('chabimura-rock-carvings', 4, 'Colossal 15th-century cliffside rock carvings along the river'),
+          ('unakoti-rock-carvings', 5, 'Mystical 7th-century rock-cut Shaivite sanctuary in the rainforest')]),
+        (5, 'goa-colonial-coastal', 'Portuguese Heritage & Coastal Goa Trail', 'Old Goa, Fontainhas, Clifftop Forts & Quiet Southern Coves',
+         'Experience 450 years of Indo-Portuguese cultural fusion: Latin Quarter streetscapes, UNESCO Renaissance cathedrals, 17th-century fortress ramparts, and tranquil palm-fringed sands.',
+         '4–5 Days', 'November to March', '/assets/places/aguada-fort.jpg',
+         [('fontainhas', 1, 'Latin Quarter walking trail with colourful Portuguese homes'),
+          ('basilica-bom-jesus', 2, 'UNESCO World Heritage Jesuit basilica in Old Goa'),
+          ('se-cathedral', 3, 'Magnificent Manueline cathedral with the Golden Bell'),
+          ('aguada-fort', 4, '1612 sea fortress with freshwater cistern and lighthouse'),
+          ('mangueshi-temple', 5, '450-year-old Shiva shrine with 7-story lamp tower'),
+          ('cabo-de-rama-fort', 6, 'Clifftop battlements with panoramic Arabian Sea sunsets'),
+          ('palolem-beach', 7, 'Crescent bay with calm waters and palm groves')]),
+        (6, 'kerala-backwaters-and-coast', 'Malabar Coast & Serene Backwaters', 'Fort Kochi to the Canals and Lagoons of Alappuzha',
+         'Slow down along the historic Malabar coast: centuries of spice trade in colonial Fort Kochi, cantilevered Chinese fishing nets, and tranquil houseboat voyages through the palm-fringed backwater canals.',
+         '3–4 Days', 'September to March', '/assets/places/alappuzha-backwaters.jpg',
+         [('fort-kochi', 1, 'Historic harbour neighbourhood with iconic Chinese fishing nets'),
+          ('mattancherry-palace', 2, 'Dutch Palace featuring historic Kerala murals'),
+          ('alappuzha-backwaters', 3, 'Canal cruise through village waterways and rice paddies'),
+          ('alappuzha-beach', 4, 'Evening sunset walk along the historic Arabian Sea pier')])
+    ]
+
+    db.executemany('INSERT OR IGNORE INTO circuits (id,slug,name,tagline,description,duration,best_season,cover_image_url) VALUES (?,?,?,?,?,?,?,?)',
+                   [(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7]) for c in circuits_data])
+
+    place_ids = {row[0]: row[1] for row in db.execute('SELECT slug, id FROM places')}
+    circuit_place_rows = []
+    for c in circuits_data:
+        cid = c[0]
+        for pslug, order, notes in c[8]:
+            pid = place_ids.get(pslug)
+            if pid:
+                circuit_place_rows.append((cid, pid, order, notes))
+    db.executemany('INSERT OR IGNORE INTO circuit_places (circuit_id, place_id, stop_order, notes) VALUES (?,?,?,?)', circuit_place_rows)
+

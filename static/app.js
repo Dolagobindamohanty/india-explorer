@@ -141,12 +141,190 @@ async function districtPage(slug) {
 async function placePage(slug) {
   const p = await api('places/' + encodeURIComponent(slug));
   saveRecent(p.slug);
-  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}<p class="eyebrow">${esc(categoryLabel(p.category))} · ${esc(p.district)}</p><h1>${esc(p.name)}</h1><div class="detail"><div><p class="lead">${esc(p.description)}</p>${p.heritage_id ? `<p class="badge">UNESCO World Heritage</p><p>Listed property: <a class="source" href="${esc(p.unesco_url)}" target="_blank" rel="noopener noreferrer">${esc(p.heritage_name)} ↗</a></p>` : ''}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go</h3><p>${esc(p.practical_notes)}</p><p class="notice">Pilot editorial entry · ${p.last_verified_at ? 'Last checked: '+esc(p.last_verified_at) : 'Not yet independently verified'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside><h3>A good time to go</h3><p>${p.best_months.map(n => months[n-1]).join(', ')}</p><p class="fine-print">Indicative seasonal guidance, not a weather forecast.</p><h3>Find your way</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open location on map ↗</a></p>${saveButton(p)}</aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
+  const monthPills = months.map((m, idx) => {
+    const isBest = (p.best_months || []).includes(idx + 1);
+    return `<span class="season-pill ${isBest ? 'pill-best' : 'pill-off'}" title="${m}: ${isBest ? 'Peak season' : 'Low/Monsoon'}">${m.slice(0, 3)}</span>`;
+  }).join('');
+  const catTips = {
+    heritage: 'Wear comfortable walking shoes with grip. A licensed monument guide helps unearth historical details.',
+    beach: 'Swim only in designated lifeguard-patrolled zones. High-SPF sunscreen and light cottons recommended.',
+    spiritual: 'Modest attire covering shoulders and knees is strictly required. Remove footwear and deposit electronics outside.',
+    nature: 'Eco-sensitive sanctuary. Carry reusable water bottles, insect repellent, and avoid plastic litter.',
+    culture: 'Support local artisan cooperatives and ask for permission before photographing people or private residences.'
+  };
+  const tip = catTips[p.category] || 'Check weather updates and confirm entry schedules with official tourism authorities.';
+
+  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}<p class="eyebrow">${esc(categoryLabel(p.category))} · ${esc(p.district)} · ${esc(p.state)}</p><h1>${esc(p.name)}</h1><div class="detail"><div><p class="lead">${esc(p.description)}</p>${p.heritage_id ? `<p class="badge">UNESCO World Heritage</p><p>Listed property: <a class="source" href="${esc(p.unesco_url)}" target="_blank" rel="noopener noreferrer">${esc(p.heritage_name)} ↗</a></p>` : ''}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.last_verified_at ? 'Last checked: '+esc(p.last_verified_at) : 'Not yet independently verified'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside><div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
 }
 async function explorePage(query) {
   const params = new URLSearchParams(query || '');
   const [states, places] = await Promise.all([api('states'), api('places?' + params)]);
-  return `${breadcrumb([['Destinations']])}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p><form id="filters" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" aria-label="Search places" value="${esc(params.get('q') || '')}"></div><select name="state" aria-label="State"><option value="">All states and UTs</option>${states.map(s => `<option value="${esc(s.slug)}" ${params.get('state') === s.slug ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select><select name="month" aria-label="Best travel month"><option value="">Any month</option>${months.map((m,i) => `<option value="${i+1}" ${params.get('month') === String(i+1) ? 'selected' : ''}>${m}</option>`).join('')}</select><select name="category" aria-label="Interest"><option value="">Any interest</option>${categories.map(([value,, label]) => `<option value="${value}" ${params.get('category') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><label class="check"><input type="checkbox" name="unesco" value="true" ${params.get('unesco') === 'true' ? 'checked' : ''}> UNESCO only</label><button class="button">Find places</button></form><div class="results-heading"><p>${places.length} detailed places found</p><div class="category-chips compact">${categoryChips()}</div></div>${cards(places)}`;
+  const placesJson = JSON.stringify(places.map(p => ({
+    slug: p.slug,
+    name: p.name,
+    category: p.category,
+    lat: p.latitude,
+    lon: p.longitude,
+    image_url: p.image_url || fallbackImage(p.state_slug),
+    district: p.district,
+    state: p.state
+  })));
+  return `${breadcrumb([['Destinations']])}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p><form id="filters" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" aria-label="Search places" value="${esc(params.get('q') || '')}"></div><select name="state" aria-label="State"><option value="">All states and UTs</option>${states.map(s => `<option value="${esc(s.slug)}" ${params.get('state') === s.slug ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select><select name="month" aria-label="Best travel month"><option value="">Any month</option>${months.map((m,i) => `<option value="${i+1}" ${params.get('month') === String(i+1) ? 'selected' : ''}>${m}</option>`).join('')}</select><select name="category" aria-label="Interest"><option value="">Any interest</option>${categories.map(([value,, label]) => `<option value="${value}" ${params.get('category') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><label class="check"><input type="checkbox" name="unesco" value="true" ${params.get('unesco') === 'true' ? 'checked' : ''}> UNESCO only</label><button class="button">Find places</button></form><div class="explore-toolbar"><p><strong>${places.length}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="${esc(placesJson)}"></div></div><div id="explore-grid-container">${cards(places)}</div>`;
+}
+
+async function circuitsPage() {
+  const circuits = await api('circuits');
+  return `${breadcrumb([['Curated travel circuits']])}<p class="eyebrow">Themed journeys</p><h1>Curated travel trails.</h1><p class="lead">Follow hand-crafted routes connecting iconic landmarks, sacred heritage, clifftop sea bastions, and high Himalayan valleys across India.</p><div class="cards two">${circuits.map(c => `
+    <article class="card circuit-card">
+      <a href="/circuit/${esc(c.slug)}" class="art">
+        <img src="${esc(c.cover_image_url)}" alt="${esc(c.name)} trail photo" loading="lazy">
+        <span class="badge">🧭 ${esc(c.duration)}</span>
+      </a>
+      <div class="card-body">
+        <div class="meta">Trail · ${c.stops.length} curated stops · ${esc(c.best_season)}</div>
+        <h3><a href="/circuit/${esc(c.slug)}">${esc(c.name)} <span class="arrow">↗</span></a></h3>
+        <p>${esc(c.description)}</p>
+        <div class="circuit-route-preview"><strong>Stops:</strong> ${c.stops.slice(0, 3).map(s => esc(s.name)).join(' → ')}${c.stops.length > 3 ? ` and ${c.stops.length - 3} more` : ''}</div>
+        <div class="card-bottom">
+          <span>🗓 Best: ${esc(c.best_season)}</span>
+          <a class="button secondary compact" href="/circuit/${esc(c.slug)}">Explore trail ↗</a>
+        </div>
+      </div>
+    </article>
+  `).join('')}</div>`;
+}
+
+async function circuitPage(slug) {
+  const c = await api('circuits/' + encodeURIComponent(slug));
+  return `${breadcrumb([['Travel trails', '/circuits'], [c.name]])}
+    <div class="state-hero" style="background-image:linear-gradient(90deg,rgba(30,58,95,.92),rgba(30,58,95,.28)),url('${esc(c.cover_image_url)}')">
+      <div>
+        <p class="eyebrow">Curated Trail · ${esc(c.duration)}</p>
+        <h1>${esc(c.name)}</h1>
+        <p>${esc(c.tagline)}</p>
+      </div>
+    </div>
+    <div class="circuit-detail-header">
+      <div class="circuit-meta-pill"><strong>Duration:</strong> ${esc(c.duration)}</div>
+      <div class="circuit-meta-pill"><strong>Best season:</strong> ${esc(c.best_season)}</div>
+      <div class="circuit-meta-pill"><strong>Stops:</strong> ${c.stops.length} destinations</div>
+    </div>
+    <p class="lead">${esc(c.description)}</p>
+    <section class="section">
+      <h2>Itinerary & stops</h2>
+      <div class="circuit-timeline">
+        ${c.stops.map(s => `
+          <div class="timeline-stop">
+            <div class="stop-badge">Stop ${s.stop_order}</div>
+            <div class="stop-content">
+              <h3><a href="/place/${esc(s.slug)}">${esc(s.name)} ↗</a></h3>
+              <div class="meta">${esc(s.district)} · ${esc(s.state)} · ${esc(s.category.toUpperCase())}</div>
+              <p>${esc(s.description)}</p>
+              <div class="stop-note">💡 <strong>Trail note:</strong> ${esc(s.notes)}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+    <section class="section">
+      <h2>Destinations on this trail</h2>
+      ${cards(c.stops)}
+    </section>`;
+}
+
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return Math.round(R * c);
+}
+
+function generateItineraryHtml(userPlaces) {
+  const remaining = [...userPlaces];
+  const ordered = [remaining.shift()];
+  while (remaining.length > 0) {
+    const current = ordered[ordered.length - 1];
+    let nearestIdx = 0;
+    let nearestDist = Infinity;
+    remaining.forEach((p, idx) => {
+      const d = haversineKm(current.latitude, current.longitude, p.latitude, p.longitude);
+      if (d < nearestDist) {
+        nearestDist = d;
+        nearestIdx = idx;
+      }
+    });
+    ordered.push(remaining.splice(nearestIdx, 1)[0]);
+  }
+
+  const days = [];
+  for (let i = 0; i < ordered.length; i += 2) {
+    days.push(ordered.slice(i, i + 2));
+  }
+
+  let shareText = `*My India Travel Itinerary*\nGenerated with India Explorer (https://india-explorer-hazel.vercel.app/saved)\n\n`;
+  days.forEach((dayPlaces, dayIdx) => {
+    shareText += `*Day ${dayIdx + 1}:*\n`;
+    dayPlaces.forEach(p => {
+      shareText += `• ${p.name} (${p.district}, ${p.state})\n`;
+    });
+    shareText += `\n`;
+  });
+  const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+
+  return `
+    <div class="itinerary-card">
+      <div class="itinerary-header">
+        <div>
+          <span class="eyebrow">Smart Route Planner</span>
+          <h2>Your Custom ${days.length}-Day Route</h2>
+          <p>${ordered.length} destinations sequenced by geographical proximity.</p>
+        </div>
+        <div class="itinerary-actions">
+          <a class="button" href="${waUrl}" target="_blank" rel="noopener noreferrer">💬 Share to WhatsApp</a>
+          <button class="button secondary" type="button" onclick="window.print()">🖨 Print / PDF</button>
+        </div>
+      </div>
+      <div class="itinerary-days">
+        ${days.map((dayPlaces, dIdx) => `
+          <div class="itinerary-day-block">
+            <div class="day-badge">Day ${dIdx + 1}</div>
+            <div class="day-places">
+              ${dayPlaces.map((p, pIdx) => {
+                let distNote = '';
+                if (pIdx > 0) {
+                  const prev = dayPlaces[pIdx - 1];
+                  const dist = haversineKm(prev.latitude, prev.longitude, p.latitude, p.longitude);
+                  distNote = `<span class="leg-distance">🚗 ~${dist} km from previous stop</span>`;
+                }
+                return `
+                  <div class="itinerary-stop">
+                    <img src="${p.image_url || fallbackImage(p.state_slug)}" alt="${p.name}" class="stop-thumb">
+                    <div>
+                      <strong><a href="/place/${p.slug}">${p.name} ↗</a></strong>
+                      <div class="meta">${p.district} · ${p.state} · ${p.category}</div>
+                      <p>${p.description}</p>
+                      ${distNote}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+async function savedPage() {
+  const allPlaces = await api('places');
+  const userPlaces = allPlaces.filter(p => saved.has(p.slug));
+  const itineraryHtml = userPlaces.length >= 2 ? generateItineraryHtml(userPlaces) : '';
+  return `${breadcrumb([['Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.</p>${itineraryHtml}<div class="section"><div class="section-head"><div><p class="eyebrow">All saved destinations</p><h2>Saved places (${userPlaces.length})</h2></div></div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>`;
 }
 async function festivalsPage(selectedMonth) {
   const monthNum = selectedMonth ? Number(selectedMonth) : null;
@@ -164,10 +342,107 @@ async function monthPage(value) {
 }
 async function areaPage() {
   const [states, territories] = await Promise.all([api('states'), api('union-territories')]);
-  const group = (items, label) => `<section class="section"><p class="eyebrow">${label}</p><h2>${label === 'States' ? 'Choose a state' : 'Choose a union territory'}</h2><div class="districts">${items.map(r => `<a href="/state/${esc(r.slug)}">${esc(r.name)} · ${r.district_count} districts ↗</a>`).join('')}</div></section>`;
-  return `${breadcrumb([['Explore by region']])}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p>${group(states, 'States')}${group(territories, 'Union territories')}`;
+  const group = (items, label) => `<section class="section"><p class="eyebrow">${label}</p><h2>${label === 'States' ? 'Choose a state' : 'Choose a union territory'}</h2><div class="cards">${items.map(r => regionCard(r, label === 'States' ? 'State' : 'Union territory')).join('')}</div></section>`;
+  return `${breadcrumb([['Explore by region']])}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p><div class="state-search-box"><span>⌕</span><input type="text" id="state-filter-input" placeholder="Quick find a state or territory (e.g. Odisha, Sikkim, Goa)..." aria-label="Filter states"></div><div id="states-group-wrap">${group(states, 'States')}${group(territories, 'Union territories')}</div>`;
 }
 function aboutPage() { return `${breadcrumb([['About']])}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p><div class="about-grid"><div><h3>Explore with context</h3><p>Browse India’s states and union territories, then follow the directory into districts and detailed places.</p></div><div><h3>Save your ideas</h3><p>Favorites and recently viewed places stay on this device, so planning feels personal without an account.</p></div><div><h3>Travel responsibly</h3><p>Tourism details and festival dates can change. Use the linked official sources to confirm plans before you go.</p></div></div>`; }
+
+let exploreMapInstance = null;
+
+function initExploreMap() {
+  const container = document.getElementById('explore-leaflet-map');
+  const mapWrap = document.getElementById('explore-map-container');
+  const gridWrap = document.getElementById('explore-grid-container');
+  const gridBtn = document.getElementById('view-grid-btn');
+  const mapBtn = document.getElementById('view-map-btn');
+
+  if (!container || !window.L) return;
+
+  const placesDataRaw = container.dataset.places;
+  let placesList = [];
+  try {
+    placesList = JSON.parse(placesDataRaw || '[]');
+  } catch (e) {
+    placesList = [];
+  }
+
+  function setupMap() {
+    if (exploreMapInstance) {
+      exploreMapInstance.remove();
+      exploreMapInstance = null;
+    }
+    exploreMapInstance = L.map('explore-leaflet-map').setView([22.5, 82.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(exploreMapInstance);
+
+    const bounds = [];
+    placesList.forEach(p => {
+      if (p.lat && p.lon) {
+        bounds.push([p.lat, p.lon]);
+        const marker = L.circleMarker([p.lat, p.lon], {
+          radius: 8,
+          fillColor: '#d46a3b',
+          color: '#ffffff',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.95
+        }).addTo(exploreMapInstance);
+
+        const popupContent = `
+          <div class="map-popup-card">
+            <img src="${p.image_url}" alt="${p.name}">
+            <div class="map-popup-body">
+              <span class="badge">${p.category.toUpperCase()}</span>
+              <h4>${p.name}</h4>
+              <p>${p.district}, ${p.state}</p>
+              <a href="/place/${p.slug}">View destination ↗</a>
+            </div>
+          </div>
+        `;
+        marker.bindPopup(popupContent);
+      }
+    });
+
+    if (bounds.length > 0) {
+      exploreMapInstance.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
+    }
+  }
+
+  if (gridBtn && mapBtn) {
+    gridBtn.onclick = () => {
+      gridBtn.classList.add('active');
+      mapBtn.classList.remove('active');
+      if (gridWrap) gridWrap.style.display = 'block';
+      if (mapWrap) mapWrap.style.display = 'none';
+    };
+
+    mapBtn.onclick = () => {
+      mapBtn.classList.add('active');
+      gridBtn.classList.remove('active');
+      if (gridWrap) gridWrap.style.display = 'none';
+      if (mapWrap) mapWrap.style.display = 'block';
+      setupMap();
+      setTimeout(() => {
+        if (exploreMapInstance) exploreMapInstance.invalidateSize();
+      }, 150);
+    };
+  }
+}
+
+function initAreaFilter() {
+  const input = document.getElementById('state-filter-input');
+  if (!input) return;
+  input.oninput = () => {
+    const term = input.value.trim().toLowerCase();
+    const cards = document.querySelectorAll('#states-group-wrap .region-card');
+    cards.forEach(card => {
+      const title = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
+      card.style.display = title.includes(term) ? '' : 'none';
+    });
+  };
+}
 
 async function route() {
   const version = ++routeVersion;
@@ -182,6 +457,8 @@ async function route() {
     else if (type === 'district') html = await districtPage(slug);
     else if (type === 'place') html = await placePage(slug);
     else if (type === 'explore') html = await explorePage(query);
+    else if (type === 'circuits') html = await circuitsPage();
+    else if (type === 'circuit') html = await circuitPage(slug);
     else if (type === 'festivals') {
       const params = new URLSearchParams(query || '');
       html = await festivalsPage(params.get('month'));
@@ -189,11 +466,13 @@ async function route() {
     else if (type === 'month') html = await monthPage(slug);
     else if (type === 'area') html = await areaPage();
     else if (type === 'about') html = aboutPage();
-    else if (type === 'saved') { const places = (await api('places')).filter(p => saved.has(p.slug)); html = `${breadcrumb([['Saved places']])}<p class="eyebrow">For another day</p><h1>Your little collection.</h1><p>Saved on this browser. No account needed.</p>${places.length ? cards(places) : '<p class="empty">Tap Save on a destination to keep it here.</p>'}`; }
+    else if (type === 'saved') html = await savedPage();
     else throw new Error('That page does not exist.');
     if (version !== routeVersion) return;
     root.innerHTML = html;
     if (!type) initHeroSlideshow();
+    if (type === 'explore') initExploreMap();
+    if (type === 'area') initAreaFilter();
   } catch (error) {
     if (version !== routeVersion) return;
     root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
@@ -214,6 +493,8 @@ document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'li
 if (document.body.dataset.theme === 'dark') document.querySelector('#theme-toggle').innerHTML = '☀ <span>Light</span>';
 updateCount();
 initHeroSlideshow();
+initExploreMap();
+initAreaFilter();
 if (document.body.dataset.serverRendered !== 'true') {
   window.addEventListener('hashchange', route);
   route();

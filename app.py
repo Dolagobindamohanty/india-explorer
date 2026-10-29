@@ -1,5 +1,6 @@
 from contextlib import contextmanager
 from html import escape
+import json
 import math
 import os
 from pathlib import Path
@@ -193,6 +194,34 @@ def create_app(database_path=None):
             item['occurrences'] = rows('SELECT starts_on, ends_on, source_url, verified_at FROM festival_occurrences WHERE festival_id=? ORDER BY starts_on', (item['id'],))
         return result
 
+    @app.get('/api/circuits')
+    def api_circuits():
+        circuits_list = rows('SELECT * FROM circuits ORDER BY id')
+        for c in circuits_list:
+            c['stops'] = rows('''SELECT cp.stop_order, cp.notes, p.name, p.slug, p.category, p.image_url,
+                d.name AS district, r.name AS state, r.slug AS state_slug, p.latitude, p.longitude
+                FROM circuit_places cp
+                JOIN places p ON p.id=cp.place_id
+                JOIN districts d ON d.id=p.district_id
+                JOIN regions r ON r.id=d.region_id
+                WHERE cp.circuit_id=?
+                ORDER BY cp.stop_order''', (c['id'],))
+        return circuits_list
+
+    @app.get('/api/circuits/{slug}')
+    def api_circuit(slug: str):
+        c = one('SELECT * FROM circuits WHERE slug=?', (slug,))
+        c['stops'] = rows('''SELECT cp.stop_order, cp.notes, p.name, p.slug, p.category, p.image_url,
+            p.description, p.how_to_reach, d.name AS district, r.name AS state, r.slug AS state_slug,
+            p.latitude, p.longitude
+            FROM circuit_places cp
+            JOIN places p ON p.id=cp.place_id
+            JOIN districts d ON d.id=p.district_id
+            JOIN regions r ON r.id=d.region_id
+            WHERE cp.circuit_id=?
+            ORDER BY cp.stop_order''', (c['id'],))
+        return c
+
     @app.get('/healthz')
     def health():
         return {'status': 'ok', 'places': rows('SELECT COUNT(*) AS n FROM places')[0]['n']}
@@ -230,10 +259,10 @@ def create_app(database_path=None):
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="canonical" href="{escape(canonical_url, quote=True)}">
-<title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css"></head>
+<title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home">India<span>Explorer</span><i>✳</i></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-<nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/festivals">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" aria-label="Search destinations">⌕ <span>Search</span></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
-<main id="app" tabindex="-1">{content}</main><footer><div class="footer-inner"><div><a class="brand" href="/">India<span>Explorer</span></a><p>Find a place to visit. Find a place to belong.</p></div><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="/app.js"></script></body></html>'''
+<nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" aria-label="Search destinations">⌕ <span>Search</span></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
+<main id="app" tabindex="-1">{content}</main><footer><div class="footer-inner"><div><a class="brand" href="/">India<span>Explorer</span></a><p>Find a place to visit. Find a place to belong.</p></div><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js"></script></body></html>'''
 
     def server_place_card(item):
         image_url = escape(item.get('image_url') or fallback_image(item.get('state_slug')), quote=True)
@@ -265,6 +294,14 @@ def create_app(database_path=None):
         timing = f'Typically in {escape(months_str)}' if months_str else 'Seasonal timing varies'
         source_link = f'<a class="source" href="{escape(item["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Official tourism reference ↗</a>' if item.get('source_url') else ''
         return f'''<article class="card festival-card"><div class="card-body"><div class="meta">{locations_html}</div><h3>{escape(item['name'])}</h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>🗓 {escape(timing)}</span>{source_link}</div></div></article>'''
+
+    def server_circuit_card(c):
+        cover = escape(c.get('cover_image_url') or '/assets/state-cover.svg', quote=True)
+        stops_count = len(c.get('stops', []))
+        stops_preview = ' → '.join(escape(s['name']) for s in c.get('stops', [])[:3])
+        if stops_count > 3:
+            stops_preview += f' and {stops_count - 3} more'
+        return f'''<article class="card circuit-card"><a href="/circuit/{escape(c['slug'])}" class="art"><img src="{cover}" alt="{escape(c['name'])} trail photo" loading="lazy"><span class="badge">🧭 {escape(c['duration'])}</span></a><div class="card-body"><div class="meta">Trail · {stops_count} curated stops · {escape(c['best_season'])}</div><h3><a href="/circuit/{escape(c['slug'])}">{escape(c['name'])} <span class="arrow">↗</span></a></h3><p>{escape(c['description'])}</p><div class="circuit-route-preview"><strong>Stops:</strong> {stops_preview}</div><div class="card-bottom"><span>🗓 Best: {escape(c['best_season'])}</span><a class="button secondary compact" href="/circuit/{escape(c['slug'])}">Explore trail ↗</a></div></div></article>'''
 
     def month_tabs_html(active_month=None):
         tabs = [f'<a href="/festivals" class="month-tab {"active" if active_month is None else ""}">All Months</a>']
@@ -311,10 +348,13 @@ def create_app(database_path=None):
     def rendered_explore(q: str = '', state: str = '', month: int | None = Query(None, ge=1, le=12), category: str = '', unesco: bool = False):
         query = {'q': q, 'state': state, 'month': str(month) if month else '', 'category': category, 'unesco': 'true' if unesco else ''}
         result = places(q=q, state=state, month=month, category=category, unesco=unesco)
-        content = f'''{breadcrumb_html('Destinations')}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p>{server_filters(query)}<p>{len(result)} detailed places found</p>{server_cards(result)}'''
+        places_json = json.dumps([{'slug': p['slug'], 'name': p['name'], 'category': p['category'], 'lat': p['latitude'], 'lon': p['longitude'], 'image_url': p.get('image_url') or fallback_image(p.get('state_slug')), 'district': p['district'], 'state': p['state']} for p in result])
+        content = f'''{breadcrumb_html('Destinations')}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p>{server_filters(query)}<div class="explore-toolbar"><p><strong>{len(result)}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="{escape(places_json, quote=True)}"></div></div><div id="explore-grid-container">{server_cards(result)}</div>'''
         return page_document('Explore destinations', content, canonical_path='/explore')
 
-    def breadcrumb_html(label):
+    def breadcrumb_html(label, parent_label=None, parent_url=None):
+        if parent_label and parent_url:
+            return f'<div class="breadcrumb"><a href="/">Home</a> / <a href="{escape(parent_url)}">{escape(parent_label)}</a> / {escape(label)}</div>'
         return f'<div class="breadcrumb"><a href="/">Home</a> / {escape(label)}</div>'
 
     @app.get('/state/{slug}', response_class=HTMLResponse)
@@ -324,7 +364,7 @@ def create_app(database_path=None):
         result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? ORDER BY p.name', (result['id'],)))
         cover = escape(result.get('cover_image_url') or fallback_image(result['slug']), quote=True)
         districts_html = ''.join(f'<a href="/district/{escape(d["slug"])}">{escape(d["name"])} <span>↗</span></a>' for d in result['districts'])
-        content = f'''{breadcrumb_html(result['name'])}<div class="state-hero" style="background-image:linear-gradient(90deg,rgba(30,58,95,.92),rgba(30,58,95,.28)),url('{cover}')"><div><p class="eyebrow">{escape(result['kind'].replace('_', ' ').title())} guide</p><h1>{escape(result['name'])}</h1><p>{escape(result['description'])}</p></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in {escape(result['name'])}</h2></div><span class="meta">{len(result['districts'])} district entries</span></div><div class="districts">{districts_html}</div><section class="section"><h2>Places with a story</h2>{server_cards(result['places'])}</section>'''
+        content = f'''{breadcrumb_html(result['name'], 'States', '/area')}<div class="state-hero" style="background-image:linear-gradient(90deg,rgba(30,58,95,.92),rgba(30,58,95,.28)),url('{cover}')"><div><p class="eyebrow">{escape(result['kind'].replace('_', ' ').title())} guide</p><h1>{escape(result['name'])}</h1><p>{escape(result['description'])}</p></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in {escape(result['name'])}</h2></div><span class="meta">{len(result['districts'])} district entries</span></div><div class="districts">{districts_html}</div><section class="section"><h2>Places with a story</h2>{server_cards(result['places'])}</section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/state/{slug}')
 
     @app.get('/district/{slug}', response_class=HTMLResponse)
@@ -333,15 +373,50 @@ def create_app(database_path=None):
         result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? ORDER BY p.name', (result['id'],)))
         result['festivals'] = festivals(month=None, district=slug)
         festival_html = ''.join(server_festival_card(item) for item in result['festivals']) or '<p class="empty">No festivals recorded for this district yet.</p>'
-        content = f'''{breadcrumb_html(result['name'])}<p class="eyebrow">{escape(result['state'])} · Local field guide</p><h1>{escape(result['name'])}</h1><p class="lead">{escape(result['description'])}</p><div class="band"><div><h3>A taste of the district</h3><p>{escape(result['food_notes'])}</p></div><a class="source" href="{escape(result['source_url'], quote=True)}">Official information ↗</a></div><section class="section"><h2>Make a day of it</h2>{server_cards(result['places'])}</section><section class="section"><h2>Local celebrations</h2><div class="cards two">{festival_html}</div></section>'''
+        content = f'''{breadcrumb_html(result['name'], result['state'], f'/state/{result["state_slug"]}')}<p class="eyebrow">{escape(result['state'])} · Local field guide</p><h1>{escape(result['name'])}</h1><p class="lead">{escape(result['description'])}</p><div class="band"><div><h3>A taste of the district</h3><p>{escape(result['food_notes'])}</p></div><a class="source" href="{escape(result['source_url'], quote=True)}">Official information ↗</a></div><section class="section"><h2>Make a day of it</h2>{server_cards(result['places'])}</section><section class="section"><h2>Local celebrations</h2><div class="cards two">{festival_html}</div></section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/district/{slug}')
 
     @app.get('/place/{slug}', response_class=HTMLResponse)
     def rendered_place(slug: str):
         result = place(slug)
         months_text = ', '.join(MONTH_NAMES[item - 1] for item in result['best_months'])
-        content = f'''{breadcrumb_html(result['name'])}<p class="eyebrow">{escape(result['category'])} · {escape(result['district'])}</p><h1>{escape(result['name'])}</h1><div class="detail"><div><p class="lead">{escape(result['description'])}</p><h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go</h3><p>{escape(result['practical_notes'])}</p><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}">Official reference ↗</a></div><aside><h3>A good time to go</h3><p>Typical months: {escape(months_text)}</p><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}">Open location on map ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save</button></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
+        month_pills = []
+        for m in range(1, 13):
+            is_best = m in result['best_months']
+            label = MONTH_NAMES[m - 1][:3]
+            cls = 'pill-best' if is_best else 'pill-off'
+            month_pills.append(f'<span class="season-pill {cls}" title="{MONTH_NAMES[m-1]}: {"Ideal time to visit" if is_best else "Low / off season"}">{label}</span>')
+        season_bar_html = f'<div class="season-pill-strip">{"".join(month_pills)}</div>'
+
+        cat = result.get('category')
+        cat_tips = {
+            'heritage': 'Wear comfortable walking shoes with grip. A licensed monument guide helps unearth historical details.',
+            'beach': 'Swim only in designated lifeguard-patrolled zones. High-SPF sunscreen and light cottons recommended.',
+            'spiritual': 'Modest attire covering shoulders and knees is strictly required. Remove footwear and deposit electronics outside.',
+            'nature': 'Eco-sensitive sanctuary. Carry reusable water bottles, insect repellent, and avoid plastic litter.',
+            'culture': 'Support local artisan cooperatives and ask for permission before photographing people or private residences.'
+        }
+        tip = cat_tips.get(cat, 'Check weather updates and confirm entry schedules with official tourism authorities.')
+
+        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}<p class="eyebrow">{escape(result['category'].title())} · {escape(result['district'])} · {escape(result['state'])}</p><h1>{escape(result['name'])}</h1><div class="detail"><div><p class="lead">{escape(result['description'])}</p><h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside><div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}')
+
+    @app.get('/circuits', response_class=HTMLResponse)
+    def rendered_circuits():
+        circuits_list = api_circuits()
+        cards_html = f'<div class="cards two">{"".join(server_circuit_card(c) for c in circuits_list)}</div>'
+        content = f'''{breadcrumb_html('Curated travel circuits')}<p class="eyebrow">Themed journeys</p><h1>Curated travel trails.</h1><p class="lead">Follow hand-crafted routes connecting iconic landmarks, sacred heritage, clifftop sea bastions, and high Himalayan valleys across India.</p>{cards_html}'''
+        return page_document('Curated travel trails', content, canonical_path='/circuits')
+
+    @app.get('/circuit/{slug}', response_class=HTMLResponse)
+    def rendered_circuit(slug: str):
+        c = api_circuit(slug)
+        cover = escape(c.get('cover_image_url') or '/assets/state-cover.svg', quote=True)
+        stops_html = []
+        for s in c['stops']:
+            stops_html.append(f'''<div class="timeline-stop"><div class="stop-badge">Stop {s['stop_order']}</div><div class="stop-content"><h3><a href="/place/{escape(s['slug'])}">{escape(s['name'])} ↗</a></h3><div class="meta">{escape(s['district'])} · {escape(s['state'])} · {escape(s['category'].title())}</div><p>{escape(s['description'])}</p><div class="stop-note">💡 <strong>Trail note:</strong> {escape(s['notes'])}</div></div></div>''')
+        content = f'''{breadcrumb_html(c['name'], 'Travel trails', '/circuits')}<div class="state-hero" style="background-image:linear-gradient(90deg,rgba(30,58,95,.92),rgba(30,58,95,.28)),url('{cover}')"><div><p class="eyebrow">Curated Trail · {escape(c['duration'])}</p><h1>{escape(c['name'])}</h1><p>{escape(c['tagline'])}</p></div></div><div class="circuit-detail-header"><div class="circuit-meta-pill"><strong>Duration:</strong> {escape(c['duration'])}</div><div class="circuit-meta-pill"><strong>Best season:</strong> {escape(c['best_season'])}</div><div class="circuit-meta-pill"><strong>Stops:</strong> {len(c['stops'])} destinations</div></div><p class="lead">{escape(c['description'])}</p><section class="section"><h2>Itinerary & stops</h2><div class="circuit-timeline">{''.join(stops_html)}</div></section><section class="section"><h2>Destinations on this trail</h2>{server_cards([dict(s, district_slug='', state_slug=s.get('state_slug','')) for s in c['stops']])}</section>'''
+        return page_document(c['name'], content, c['description'], canonical_path=f'/circuit/{slug}')
 
     @app.get('/festivals', response_class=HTMLResponse)
     def rendered_festivals(month: int | None = Query(None, ge=1, le=12)):
@@ -365,7 +440,7 @@ def create_app(database_path=None):
 
     @app.get('/saved', response_class=HTMLResponse)
     def rendered_saved():
-        content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">For another day</p><h1>Your little collection.</h1><p>Favorites are saved privately in your browser when JavaScript is enabled. Browse the destinations and choose <strong>Save</strong> to build your list.</p><a class="button" href="/explore">Explore destinations</a>'''
+        content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.</p><div id="saved-itinerary-builder"></div><div id="saved-cards-container"><a class="button" href="/explore">Explore destinations</a></div>'''
         return page_document('Saved places', content, canonical_path='/saved')
 
     @app.get('/area', response_class=HTMLResponse)
@@ -374,7 +449,7 @@ def create_app(database_path=None):
         territories = union_territories()
         state_links = ''.join(server_region_link(region) for region in regions)
         territory_links = ''.join(server_region_link(region) for region in territories)
-        content = f'''{breadcrumb_html('Explore by region')}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p><section class="section"><p class="eyebrow">States</p><h2>Choose a state</h2><div class="cards">{state_links}</div></section><section class="section"><p class="eyebrow">Union territories</p><h2>Choose a union territory</h2><div class="cards">{territory_links}</div></section>'''
+        content = f'''{breadcrumb_html('Explore by region')}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p><div class="state-search-box"><span>⌕</span><input type="text" id="state-filter-input" placeholder="Quick find a state or territory (e.g. Odisha, Sikkim, Goa)..." aria-label="Filter states"></div><div id="states-group-wrap"><section class="section"><p class="eyebrow">States</p><h2>Choose a state</h2><div class="cards">{state_links}</div></section><section class="section"><p class="eyebrow">Union territories</p><h2>Choose a union territory</h2><div class="cards">{territory_links}</div></section></div>'''
         return page_document('Explore states and union territories', content, canonical_path='/area')
 
     @app.get('/about', response_class=HTMLResponse)
@@ -384,7 +459,8 @@ def create_app(database_path=None):
 
     @app.get('/sitemap.xml', response_class=Response)
     def sitemap():
-        urls = ['/', '/explore', '/area', '/festivals', '/about', '/saved']
+        urls = ['/', '/explore', '/area', '/circuits', '/festivals', '/about', '/saved']
+        urls.extend(f"/circuit/{item['slug']}" for item in rows('SELECT slug FROM circuits'))
         urls.extend(f"/state/{item['slug']}" for item in rows('SELECT slug FROM regions'))
         urls.extend(f"/district/{item['slug']}" for item in rows('SELECT slug FROM districts'))
         urls.extend(f"/place/{item['slug']}" for item in rows('SELECT slug FROM places'))

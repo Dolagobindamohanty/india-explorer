@@ -78,13 +78,33 @@ CREATE TABLE IF NOT EXISTS festival_months (
 );
 CREATE TABLE IF NOT EXISTS festival_occurrences (
     id INTEGER PRIMARY KEY,
-    festival_id INTEGER NOT NULL REFERENCES festivals(id),
+    festival_id INTEGER NOT NULL REFERENCES festivals(id) ON DELETE CASCADE,
     starts_on TEXT NOT NULL,
     ends_on TEXT NOT NULL,
     source_url TEXT NOT NULL,
     verified_at TEXT NOT NULL,
-    CHECK(ends_on >= starts_on)
+    CHECK(starts_on <= ends_on)
 );
+
+CREATE TABLE IF NOT EXISTS circuits (
+    id INTEGER PRIMARY KEY,
+    slug TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    tagline TEXT NOT NULL,
+    description TEXT NOT NULL,
+    duration TEXT NOT NULL,
+    best_season TEXT NOT NULL,
+    cover_image_url TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS circuit_places (
+    circuit_id INTEGER NOT NULL REFERENCES circuits(id) ON DELETE CASCADE,
+    place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE CASCADE,
+    stop_order INTEGER NOT NULL,
+    notes TEXT NOT NULL DEFAULT '',
+    PRIMARY KEY(circuit_id, place_id)
+);
+
 CREATE INDEX IF NOT EXISTS idx_district_region ON districts(region_id);
 CREATE INDEX IF NOT EXISTS idx_place_district ON places(district_id);
 CREATE INDEX IF NOT EXISTS idx_month_places ON place_months(month);
