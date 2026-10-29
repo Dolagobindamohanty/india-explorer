@@ -56,12 +56,78 @@ async function api(path) {
   return response.json();
 }
 
+const HERO_SLIDES = [
+  { img: '/assets/places/konark-sun-temple.jpg', sub: 'Puri, Odisha', title: 'Konark Sun Temple' },
+  { img: '/assets/states/uttar-pradesh.jpg', sub: 'Agra, Uttar Pradesh', title: 'Taj Mahal' },
+  { img: '/assets/places/aguada-fort.jpg', sub: 'North Goa', title: 'Fort Aguada & Lighthouse' },
+  { img: '/assets/states/punjab.jpg', sub: 'Amritsar, Punjab', title: 'Harmandir Sahib (Golden Temple)' },
+  { img: '/assets/places/alappuzha-backwaters.jpg', sub: 'Alappuzha, Kerala', title: 'Backwaters of Kerala' },
+  { img: '/assets/states/rajasthan.jpg', sub: 'Jaipur, Rajasthan', title: 'Hawa Mahal (Pink City)' },
+  { img: '/assets/states/maharashtra.jpg', sub: 'Mumbai, Maharashtra', title: 'Gateway of India' },
+  { img: '/assets/states/west-bengal.jpg', sub: 'Kolkata, West Bengal', title: 'Victoria Memorial' },
+  { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple' },
+  { img: '/assets/states/jammu-and-kashmir.jpg', sub: 'Srinagar, Jammu & Kashmir', title: 'Dal Lake Shikaras' },
+  { img: '/assets/places/palolem-beach.jpg', sub: 'Canacona, South Goa', title: 'Palolem Beach' },
+  { img: '/assets/states/ladakh.jpg', sub: 'Ladakh', title: 'Thiksey Monastery' },
+];
+
+function heroSlidesHtml() {
+  const slidesHtml = HERO_SLIDES.map((s, i) => `<div class="hero-slide ${i === 0 ? 'active' : ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('${s.img}')" data-caption-sub="${esc(s.sub)}" data-caption-title="${esc(s.title)}"></div>`).join('');
+  const dotsHtml = HERO_SLIDES.map((s, i) => `<span class="hero-dot ${i === 0 ? 'active' : ''}" data-slide-index="${i}" role="button" aria-label="Slide ${i+1}: ${esc(s.title)}"></span>`).join('');
+  return `<div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">${slidesHtml}</div><div class="hero-art-caption"><span id="hero-art-sub">${esc(HERO_SLIDES[0].sub)}</span><strong id="hero-art-title">${esc(HERO_SLIDES[0].title)}</strong><div class="hero-dots" aria-label="Slideshow navigation">${dotsHtml}</div></div></div>`;
+}
+
+function initHeroSlideshow() {
+  const container = document.querySelector('#hero-slideshow');
+  if (!container) return;
+  const slides = container.querySelectorAll('.hero-slide');
+  if (slides.length <= 1) return;
+  const subEl = container.querySelector('#hero-art-sub');
+  const titleEl = container.querySelector('#hero-art-title');
+  const dots = container.querySelectorAll('.hero-dot');
+  let current = 0;
+  let timer = null;
+
+  function update(index) {
+    current = index;
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    const activeSlide = slides[current];
+    if (subEl && activeSlide.dataset.captionSub) subEl.textContent = activeSlide.dataset.captionSub;
+    if (titleEl && activeSlide.dataset.captionTitle) titleEl.textContent = activeSlide.dataset.captionTitle;
+  }
+
+  function next() {
+    update((current + 1) % slides.length);
+  }
+
+  function startTimer() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(next, 3600);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', e => {
+      e.preventDefault();
+      const idx = Number(dot.dataset.slideIndex);
+      if (!isNaN(idx)) {
+        update(idx);
+        startTimer();
+      }
+    });
+  });
+
+  container.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); });
+  container.addEventListener('mouseleave', () => startTimer());
+  startTimer();
+}
+
 async function home() {
   const [states, territories, places] = await Promise.all([api('states'), api('union-territories'), api('places')]);
   const trending = places.slice(0, 6);
   const recentPlaces = recent.length ? recent.map(slug => places.find(place => place.slug === slug)).filter(Boolean) : [];
   const featuredStates = states.filter(s => ['odisha', 'rajasthan', 'kerala', 'goa', 'himachal-pradesh', 'tamil-nadu'].includes(s.slug)).slice(0, 6);
-  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Odisha”, “Kerala”, “heritage”, or “beaches”</p></div><div class="hero-art" role="img" aria-label="Indian landscape collage"><div class="hero-art-caption"><span>Many places. One beautiful beginning.</span><strong>Go a little further.</strong></div></div></section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all ${states.length} states & ${territories.length} UTs ↗</a></div><div class="cards">${featuredStates.map(s => regionCard(s, 'State')).join('')}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All ${states.length} States & ${territories.length} Union Territories ↗</a></div></section>`;
+  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Odisha”, “Kerala”, “heritage”, or “beaches”</p></div>${heroSlidesHtml()}</section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all ${states.length} states & ${territories.length} UTs ↗</a></div><div class="cards">${featuredStates.map(s => regionCard(s, 'State')).join('')}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All ${states.length} States & ${territories.length} Union Territories ↗</a></div></section>`;
 }
 async function statePage(slug) {
   const s = await api('states/' + encodeURIComponent(slug));
@@ -127,6 +193,7 @@ async function route() {
     else throw new Error('That page does not exist.');
     if (version !== routeVersion) return;
     root.innerHTML = html;
+    if (!type) initHeroSlideshow();
   } catch (error) {
     if (version !== routeVersion) return;
     root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
@@ -146,6 +213,7 @@ document.querySelector('#nav-links').addEventListener('click', event => { if (ev
 document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'light';
 if (document.body.dataset.theme === 'dark') document.querySelector('#theme-toggle').innerHTML = '☀ <span>Light</span>';
 updateCount();
+initHeroSlideshow();
 if (document.body.dataset.serverRendered !== 'true') {
   window.addEventListener('hashchange', route);
   route();
