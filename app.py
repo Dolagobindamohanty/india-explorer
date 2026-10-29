@@ -248,7 +248,7 @@ def create_app(database_path=None):
         return '<div class="cards">' + ''.join(server_place_card(item) for item in items) + '</div>' if items else '<p class="empty">No detailed places match this selection yet.</p>'
 
     def fallback_image(state):
-        return STATE_COVER_IMAGES.get(state) or '/assets/state-cover.svg'
+        return STATE_COVER_IMAGES.get(state) or (f'/assets/states/{state}.jpg' if state else '/assets/state-cover.svg')
 
     def server_region_link(region):
         cover = escape(region.get('cover_image_url') or fallback_image(region.get('slug')), quote=True)

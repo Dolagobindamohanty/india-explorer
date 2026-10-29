@@ -17,11 +17,14 @@ def test_full_destination_journey(client):
     assert len(states) == 28
     assert {s['name'] for s in states} >= {'Kerala', 'Rajasthan', 'Goa', 'Himachal Pradesh', 'Tamil Nadu', 'Karnataka', 'Odisha'}
     covers = {s['slug']: s['cover_image_url'] for s in states}
-    assert all(url.startswith(('https://', '/assets/')) for url in covers.values())
-    assert 'unsplash.com' in covers['odisha']
-    assert 'unsplash.com' in covers['himachal-pradesh']
-    assert 'unsplash.com' in covers['andhra-pradesh']
-    assert 'unsplash.com' in covers['tamil-nadu']
+    assert all(url.startswith('/assets/states/') for url in covers.values())
+    assert covers['odisha'] == '/assets/states/odisha.jpg'
+    assert covers['haryana'] == '/assets/states/haryana.jpg'
+    assert covers['west-bengal'] == '/assets/states/west-bengal.jpg'
+    assert covers['maharashtra'] == '/assets/states/maharashtra.jpg'
+    assert covers['manipur'] == '/assets/states/manipur.jpg'
+    assert covers['nagaland'] == '/assets/states/nagaland.jpg'
+    assert covers['uttar-pradesh'] == '/assets/states/uttar-pradesh.jpg'
     territories = client.get('/api/union-territories').json()
     assert len(territories) == 8
     assert {t['name'] for t in territories} == {'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'}
@@ -106,6 +109,9 @@ def test_website_and_health(client):
     assert client.get('/app.js').status_code == 200
     assert client.get('/style.css').status_code == 200
     assert client.get('/assets/state-cover.svg').status_code == 200
+    assert client.get('/assets/states/odisha.jpg').status_code == 200
+    assert client.get('/assets/states/haryana.jpg').status_code == 200
+    assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
     assert client.get('/healthz').json() == {'status': 'ok', 'places': 24}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 

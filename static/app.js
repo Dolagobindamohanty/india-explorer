@@ -6,7 +6,7 @@ const categories = [
 ];
 const shortMonth = n => months[n - 1].slice(0, 3);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fallbackImage = () => '/assets/state-cover.svg';
+const fallbackImage = state => state ? `/assets/states/${state}.jpg` : '/assets/state-cover.svg';
 const image = (url, state) => url || fallbackImage(state);
 const readList = key => { try { const data = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(data) ? data.filter(x => typeof x === 'string') : []; } catch { return []; } };
 let saved = new Set(readList('india-locally-saved'));
