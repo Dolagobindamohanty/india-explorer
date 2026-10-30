@@ -43,12 +43,16 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 120
+    assert len(all_places) == 144
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
     assert client.get('/api/districts/bengaluru-urban').json()['places'] == []
-    assert len(client.get('/api/districts/puri').json()['places']) == 3
+    assert len(client.get('/api/districts/puri').json()['places']) == 7
+    assert len(client.get('/api/districts/khordha').json()['places']) == 6
+    odisha = client.get('/api/states/odisha').json()
+    assert len(odisha['districts']) == 30
+    assert len(odisha['places']) == 28
     north_goa = client.get('/api/districts/north-goa').json()
     assert len(north_goa['places']) == 5
     assert {p['slug'] for p in north_goa['places']} >= {'basilica-bom-jesus', 'fontainhas', 'aguada-fort', 'se-cathedral', 'anjuna-beach'}
@@ -139,7 +143,7 @@ def test_filters_combine_and_heritage_links(client):
     assert all(p['unesco_url'].startswith('https://whc.unesco.org/en/list/') for p in result)
     assert client.get('/api/places?state=kerala&unesco=true').json() == []
     assert len(client.get('/api/places?month=7').json()) == 14
-    assert len(client.get('/api/places?month=6').json()) == 25
+    assert len(client.get('/api/places?month=6').json()) == 26
     assert len(client.get('/api/places?q=Kochi').json()) == 2
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     assert client.get('/api/places', params={'q': '%'}).json() == []
@@ -175,7 +179,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 120
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 144
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -199,7 +203,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 120}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 144}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -249,12 +253,15 @@ def test_server_rendered_routes_are_crawlable(client):
     chd_page = client.get('/circuit/chandigarh-modernist-trail').text
     assert 'Le Corbusier' in chd_page
     assert 'Nek Chand' in chd_page
+    odisha_trail = client.get('/circuit/tribal-odisha-waterfalls').text
+    assert 'Deomali' in odisha_trail
+    assert 'Duduma' in odisha_trail
 
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 120,
+        'detailed_places': 144,
         'reviewed_places': 0,
-        'unreviewed_places': 120,
+        'unreviewed_places': 144,
         'confirmed_festival_dates': 0,
     }
