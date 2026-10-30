@@ -584,7 +584,8 @@ function renderSpotlightResults(query) {
   const q = query.trim().toLowerCase();
 
   if (!q) {
-    container.innerHTML = `<div class="spotlight-hint">Type to instantly search across 120 destinations, 807 districts, 36 regions, and 45 festivals...</div>`;
+    const totalPlaces = (cachedPlaces && cachedPlaces.length) ? cachedPlaces.length : 227;
+    container.innerHTML = `<div class="spotlight-hint">Type to instantly search across ${totalPlaces} destinations, 807 districts, 36 regions, and festivals...</div>`;
     return;
   }
 

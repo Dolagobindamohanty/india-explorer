@@ -8,6 +8,8 @@ Each state features its most iconic landmark photograph.
 import json
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent
+
 STATE_COVER_IMAGES = {
     'odisha': '/assets/states/odisha.jpg',
     'kerala': '/assets/states/kerala.jpg',
@@ -531,6 +533,17 @@ def seed(db):
         (143, 544, 'chandipur-beach', 'Chandipur Beach (The Vanishing Sea)', 'A unique coastal wonder on the Bay of Bengal in northern Odisha, where the sea recedes up to 5 kilometers during low tide twice every day, revealing a vast, flat expanse of the seabed where visitors can walk, ride bicycles, and spot red ghost crabs and horseshoe crabs. When high tide rolls in, the waters rush back to lap against the tranquil casuarina-lined shoreline.', 'beach', 21.4667, 87.0167, 'Located 16 km from Balasore city and railway station (connected to the Kolkata-Chennai mainline). Easily reachable by auto-rickshaw or taxi.', 'Open 24 hours. Free entry. Always observe local tide tables before venturing far out onto the exposed seabed, and return before high tide begins. Fresh fried coastal seafood and soft green coconuts sold by local beach vendors. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/chandipur-beach', place_image('chandipur-beach')),
         (144, 564, 'satkosia-gorge', 'Satkosia Gorge Sanctuary & Mahanadi Eco-Camps', 'A monumental natural spectacle where the mighty Mahanadi River carves a dramatic 22-kilometer-long gorge through the dense sal and teak forests of the Eastern Ghats. Sheltering the Satkosia Tiger Reserve, the gorge is one of India’s premier sanctuaries for the endangered freshwater gharial and mugger crocodiles, hornbills, and leopards. Visitors experience deep canyon boat safaris and tented riverbank eco-camps.', 'nature', 20.5833, 84.8667, 'Major access points are at Tikarpada (via Angul, 60 km) and Chhotkei / Badmul (via Nayagarh, 75 km from Bhubaneswar).', 'Sanctuary open 7:00 AM to 5:00 PM (safaris and camping operate October to May; boat safaris suspended during monsoon). Entry fee: ₹40 per person; boat safaris ₹1,500–₹2,500. Eco-resorts with Swiss luxury tents operated by Odisha Ecotourism at Badmul and Tikarpada. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/satkosia-gorge-tiger-reserve', place_image('satkosia-gorge')),
     ]
+    odisha_json_path = ROOT / 'data' / 'odisha-places.json'
+    odisha_extra = []
+    if odisha_json_path.exists():
+        odisha_extra = json.loads(odisha_json_path.read_text(encoding='utf-8'))
+        for op in odisha_extra:
+            places.append((
+                op['id'], op['district_id'], op['slug'], op['name'], op['description'],
+                op['category'], op['latitude'], op['longitude'], op['how_to_reach'],
+                op['practical_notes'], op['heritage_id'], op['source_url'],
+                place_image(op['slug'])
+            ))
     db.executemany('''INSERT OR IGNORE INTO places
         (id,district_id,slug,name,description,category,latitude,longitude,how_to_reach,practical_notes,heritage_id,source_url,image_url)
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)''', places)
@@ -602,6 +615,9 @@ def seed(db):
         'chandipur-beach': ('Free', 'Chandipur, Balasore District'),
         'satkosia-gorge': ('₹40 per person', 'Tikarpada / Badmul, Nayagarh & Angul Districts'),
     }
+    if odisha_extra:
+        for op in odisha_extra:
+            place_extra_data[op['slug']] = (op['entry_fee'], op['address'])
     for slug, (fee, addr) in place_extra_data.items():
         db.execute('UPDATE places SET entry_fee=?, address=? WHERE slug=?', (fee, addr, slug))
 
@@ -655,7 +671,7 @@ def seed(db):
             months = [4, 5, 6, 9, 10, 11]
         elif place[1] in (35, 36, 37, 38, 39, 40, 41, 42):
             months = [10, 11, 12, 1, 2, 3]
-        elif place[1] in (1, 2, 3, 4, 5, 6, 9, 10, 15, 21, 27, 28, 544, 550, 551, 553, 556, 557, 558, 560, 562, 564, 567):
+        elif place[1] in (1, 2, 3, 4, 5, 6, 9, 10, 15, 21, 27, 28) or (542 <= place[1] <= 569):
             months = [10, 11, 12, 1, 2, 3]
         else:
             months = [10, 11, 12, 1, 2]
