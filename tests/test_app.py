@@ -43,7 +43,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 101
+    assert len(all_places) == 120
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -103,8 +103,8 @@ def test_full_destination_journey(client):
     assert len(puducherry['places']) == 6
     assert {p['slug'] for p in puducherry['places']} >= {'auroville-matrimandir', 'promenade-beach-pondicherry', 'aurobindo-ashram', 'white-town-pondicherry', 'paradise-beach-pondicherry', 'sacred-heart-basilica-pondicherry'}
     chandigarh = client.get('/api/states/chandigarh').json()
-    assert len(chandigarh['places']) == 4
-    assert {p['slug'] for p in chandigarh['places']} >= {'rock-garden-chandigarh', 'sukhna-lake', 'rose-garden-chandigarh', 'capitol-complex-open-hand'}
+    assert len(chandigarh['places']) == 23
+    assert {p['slug'] for p in chandigarh['places']} >= {'rock-garden-chandigarh', 'sukhna-lake', 'rose-garden-chandigarh', 'capitol-complex-open-hand', 'leisure-valley-chandigarh', 'garden-of-fragrance', 'japanese-garden-chandigarh', 'sector-17-plaza'}
     dnh = client.get('/api/states/dadra-and-nagar-haveli-and-daman-and-diu').json()
     assert len(dnh['places']) == 5
     assert {p['slug'] for p in dnh['places']} >= {'diu-fort', 'moti-daman-fort', 'naida-caves-diu', 'nagoa-beach-diu', 'jampore-beach-daman'}
@@ -175,7 +175,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 101
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 120
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -199,14 +199,14 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 101}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 120}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
 def test_server_rendered_routes_are_crawlable(client):
     explore = client.get('/explore').text
     assert 'Find your kind of place' in explore
-    assert 'class="art-title"' in explore
+    assert 'class="art"' in explore
     assert 'Alappuzha Backwaters' in explore
     assert 'Kerala' in client.get('/state/kerala').text
     assert 'Alappuzha' in client.get('/district/alappuzha').text
@@ -246,12 +246,15 @@ def test_server_rendered_routes_are_crawlable(client):
     puducherry_page = client.get('/circuit/french-coastal-puducherry').text
     assert 'White Town' in puducherry_page
     assert 'Paradise Beach' in puducherry_page
+    chd_page = client.get('/circuit/chandigarh-modernist-trail').text
+    assert 'Le Corbusier' in chd_page
+    assert 'Nek Chand' in chd_page
 
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 101,
+        'detailed_places': 120,
         'reviewed_places': 0,
-        'unreviewed_places': 101,
+        'unreviewed_places': 120,
         'confirmed_festival_dates': 0,
     }

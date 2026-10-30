@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS places (
     heritage_id INTEGER REFERENCES heritage_sites(id),
     source_url TEXT NOT NULL,
     image_url TEXT NOT NULL DEFAULT '',
+    entry_fee TEXT NOT NULL DEFAULT '',
+    address TEXT NOT NULL DEFAULT '',
     verification_status TEXT NOT NULL DEFAULT 'needs_review'
         CHECK(verification_status IN ('needs_review', 'verified')),
     last_verified_at TEXT,

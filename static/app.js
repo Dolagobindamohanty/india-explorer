@@ -27,7 +27,9 @@ function placeCard(p) {
   else if (p.heritage_designation === 'tentative_list') badge = 'UNESCO Tentative List';
   const placeArtwork = p.image_url || `/assets/places/${p.slug}.jpg`;
   const timing = p.distance_km != null ? `${p.distance_km} km straight-line` : p.best_months.length ? `Best in ${p.best_months.map(shortMonth).join(' · ')}` : 'Seasonal details pending';
-  return `<article class="card place-card"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><strong class="art-title">${esc(p.name)}</strong><span class="badge">${esc(badge)}</span></a><div class="card-body"><div class="meta">${esc(p.district)} · ${esc(p.state)}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${timing}</span>${saveButton(p)}</div></div></article>`;
+  const feeBadge = p.entry_fee ? `<span class="badge fee-badge">🎟 ${esc(p.entry_fee)}</span>` : '';
+  const sectorDisplay = p.address ? `📍 ${esc(p.address)}` : `${esc(p.district)} · ${esc(p.state)}`;
+  return `<article class="card place-card" data-category="${esc(p.category)}"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><span class="badge">${esc(badge)}</span>${feeBadge}</a><div class="card-body"><div class="meta">${sectorDisplay}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${timing}</span>${saveButton(p)}</div></div></article>`;
 }
 function regionCard(r, kind) {
   const initials = r.name.split(/\s+/).map(word => word[0]).slice(0, 2).join('');
@@ -132,14 +134,45 @@ async function home() {
   const featuredStates = states.filter(s => ['odisha', 'rajasthan', 'kerala', 'goa', 'himachal-pradesh', 'tamil-nadu'].includes(s.slug)).slice(0, 6);
   return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Odisha”, “Kerala”, “heritage”, or “beaches”</p></div>${heroSlidesHtml()}</section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all ${states.length} states & ${territories.length} UTs ↗</a></div><div class="cards">${featuredStates.map(s => regionCard(s, 'State')).join('')}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All ${states.length} States & ${territories.length} Union Territories ↗</a></div></section>`;
 }
+function categoryFilterHtml(placesList) {
+  if (placesList.length < 4) return '';
+  const cats = [...new Set(placesList.map(p => p.category).filter(Boolean))].sort();
+  const catLabels = { heritage: '🏛 Heritage & Monuments', nature: '🌿 Nature & Gardens', culture: '🎨 Culture & City', spiritual: '🙏 Spiritual', beach: '🏖 Beaches' };
+  const pills = [`<button type="button" class="cat-pill active" data-filter="all">All (${placesList.length})</button>`];
+  cats.forEach(c => {
+    const cnt = placesList.filter(p => p.category === c).length;
+    pills.push(`<button type="button" class="cat-pill" data-filter="${c}">${catLabels[c] || c} (${cnt})</button>`);
+  });
+  return `<div class="category-filter-strip" id="category-filter-strip">${pills.join('')}</div>`;
+}
+
+function initCategoryFilterStrip() {
+  const strip = document.getElementById('category-filter-strip');
+  if (!strip) return;
+  const pills = strip.querySelectorAll('.cat-pill');
+  const cardElements = document.querySelectorAll('.card.place-card');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const filter = pill.dataset.filter;
+      cardElements.forEach(c => {
+        const cat = c.dataset.category;
+        c.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
+      });
+    });
+  });
+}
+
 async function statePage(slug) {
   const s = await api('states/' + encodeURIComponent(slug));
   const cover = image(s.cover_image_url, s.slug);
-  return `${breadcrumb([[s.name]])}<div class="state-hero" style="background-image:linear-gradient(90deg,rgba(30,58,95,.92),rgba(30,58,95,.28)),url('${esc(cover)}')"><div><p class="eyebrow">${s.kind === 'union_territory' ? 'Union territory' : 'State'} guide</p><h1>${esc(s.name)}</h1><p>${esc(s.description)}</p></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><p class="directory-note">Detailed tourist places are added district by district after editorial verification.</p><section class="section"><div class="section-head"><h2>Places with a story</h2></div>${cards(s.places)}</section>`;
+  return `${breadcrumb([['States', '/area'], [s.name]])}<div class="state-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><div class="state-hero-card"><span class="hero-badge-pill">${esc(s.kind === 'union_territory' ? 'Union territory' : 'State')} Guide</span><h1>${esc(s.name)}</h1><p>${esc(s.description)}</p><div class="hero-stats-strip"><span>🏛 <strong>${s.districts.length}</strong> districts</span><span>📍 <strong>${s.places.length}</strong> curated attractions</span><a href="#destinations" class="hero-cta-btn">View attractions ↓</a></div></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">${s.places.length} attractions</span></div>${categoryFilterHtml(s.places)}${cards(s.places)}</section>`;
 }
 async function districtPage(slug) {
   const d = await api('districts/' + encodeURIComponent(slug));
-  return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}<p class="eyebrow">Your local field guide</p><h1>${esc(d.name)}</h1><p class="lead">${esc(d.description)}</p><div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section"><h2>Make a day of it</h2>${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
+  const cover = fallbackImage(d.state_slug);
+  return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}<div class="state-hero district-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><div class="state-hero-card"><span class="hero-badge-pill">${esc(d.state)} · District Field Guide</span><h1>${esc(d.name)}</h1><p>${esc(d.description)}</p><div class="hero-stats-strip"><span>📍 <strong>${d.places.length}</strong> detailed attractions</span><span>🎉 <strong>${d.festivals.length}</strong> festivals</span><a href="#destinations" class="hero-cta-btn">View attractions ↓</a></div></div></div><div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">${d.places.length} attractions in ${esc(d.name)}</span></div>${categoryFilterHtml(d.places)}${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
 }
 async function placePage(slug) {
   const p = await api('places/' + encodeURIComponent(slug));
@@ -166,7 +199,10 @@ async function placePage(slug) {
     unescoBox = `<div class="unesco-detail-box"><span class="badge">UNESCO Tentative List</span><p>Nominated on UNESCO’s Tentative List: <a class="source" href="${esc(p.unesco_url)}" target="_blank" rel="noopener noreferrer">${esc(p.heritage_name)} ↗</a></p></div>`;
   }
 
-  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}<p class="eyebrow">${esc(categoryLabel(p.category))} · ${esc(p.district)} · ${esc(p.state)}</p><h1>${esc(p.name)}</h1><div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.last_verified_at ? 'Last checked: '+esc(p.last_verified_at) : 'Not yet independently verified'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside><div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
+  const feeBox = p.entry_fee ? `<div class="aside-box"><h3>Official Entry Fee</h3><p class="entry-fee-highlight">🎟 <strong>${esc(p.entry_fee)}</strong></p></div>` : '';
+  const addrBox = p.address ? `<div class="aside-box"><h3>Location / Address</h3><p>📍 ${esc(p.address)}</p></div>` : '';
+
+  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}<p class="eyebrow">${esc(categoryLabel(p.category))} · ${esc(p.district)} · ${esc(p.state)}</p><h1>${esc(p.name)}</h1><div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.last_verified_at ? 'Last checked: '+esc(p.last_verified_at) : 'Not yet independently verified'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
 }
 async function explorePage(query) {
   const params = new URLSearchParams(query || '');
@@ -485,6 +521,7 @@ async function route() {
     if (!type) initHeroSlideshow();
     if (type === 'explore') initExploreMap();
     if (type === 'area') initAreaFilter();
+    if (type === 'state' || type === 'district') initCategoryFilterStrip();
   } catch (error) {
     if (version !== routeVersion) return;
     root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
@@ -507,6 +544,7 @@ updateCount();
 initHeroSlideshow();
 initExploreMap();
 initAreaFilter();
+initCategoryFilterStrip();
 if (document.body.dataset.serverRendered !== 'true') {
   window.addEventListener('hashchange', route);
   route();
