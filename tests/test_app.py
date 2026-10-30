@@ -5,6 +5,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app import create_app, distance
+from data_pipeline import import_report, validate_all_state_data, validate_database
 
 
 @pytest.fixture
@@ -265,6 +266,39 @@ def test_startup_repairs_all_legacy_odisha_text_fields(tmp_path):
     assert place['entry_fee'] == 'No entry fee'
     assert place['address'] == 'Bhubaneswar, Khordha'
     assert re.search(r'(?:\u2013.){3,}', client.get('/state/odisha').text) is None
+
+
+def test_canonical_data_and_seeded_catalogue_validate(tmp_path):
+    errors, warnings = validate_all_state_data()
+    assert errors == []
+    assert warnings == []
+    path = tmp_path / 'quality.sqlite3'
+    create_app(path)
+    with sqlite3.connect(path) as db:
+        db.row_factory = sqlite3.Row
+        errors, warnings = validate_database(db)
+    assert errors == []
+    assert warnings
+    report = import_report()
+    assert report['errors'] == []
+    assert report['states'][0]['slug'] == 'odisha'
+    assert report['states'][0]['place_count'] == 83
+
+
+def test_every_state_and_union_territory_route_is_clean(client):
+    for region in client.get('/api/states').json() + client.get('/api/union-territories').json():
+        response = client.get(f"/api/states/{region['slug']}")
+        assert response.status_code == 200
+        data = response.json()
+        assert data['name'] and data['description']
+        assert data['districts']
+        assert re.search(r'(?:\u2013.){3,}', response.text) is None
+        assert all(district['name'] and district['description'] for district in data['districts'])
+        assert all(
+            place['name'] and place['description'] and place['source_url'].startswith('https://')
+            and place['image_url'].startswith('/assets/places/')
+            for place in data['places']
+        )
 
 
 def test_website_and_health(client):

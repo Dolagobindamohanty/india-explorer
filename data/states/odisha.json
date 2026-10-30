@@ -1,0 +1,7 @@
+{
+  "slug": "odisha",
+  "name": "Odisha",
+  "kind": "state",
+  "source_url": "https://odishatourism.gov.in/",
+  "places_file": "../odisha-places.json"
+}

@@ -12,6 +12,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 from fastapi.staticfiles import StaticFiles
 
+from data_pipeline import dataset_version_bytes
 from seed import STATE_COVER_IMAGES, seed
 
 ROOT = Path(__file__).resolve().parent
@@ -77,8 +78,7 @@ def create_app(database_path=None):
     # coexist with a stale database created by an older deployment.
     data_version = hashlib.sha256(
         (ROOT / 'seed.py').read_bytes()
-        + (ROOT / 'data' / 'india-states-districts.json').read_bytes()
-        + (ROOT / 'data' / 'odisha-places.json').read_bytes()
+        + dataset_version_bytes()
     ).hexdigest()[:12]
     default_path = (
         Path(f'/tmp/india-explorer-{data_version}.sqlite3')
