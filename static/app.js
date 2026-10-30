@@ -167,12 +167,12 @@ function initCategoryFilterStrip() {
 async function statePage(slug) {
   const s = await api('states/' + encodeURIComponent(slug));
   const cover = image(s.cover_image_url, s.slug);
-  return `${breadcrumb([['States', '/area'], [s.name]])}<div class="state-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><div class="state-hero-card"><span class="hero-badge-pill">${esc(s.kind === 'union_territory' ? 'Union territory' : 'State')} Guide</span><h1>${esc(s.name)}</h1><p>${esc(s.description)}</p><div class="hero-stats-strip"><span>🏛 <strong>${s.districts.length}</strong> districts</span><span>📍 <strong>${s.places.length}</strong> curated attractions</span><a href="#destinations" class="hero-cta-btn">View attractions ↓</a></div></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">${s.places.length} attractions</span></div>${categoryFilterHtml(s.places)}${cards(s.places)}</section>`;
+  return `${breadcrumb([['States', '/area'], [s.name]])}<div class="state-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><button type="button" class="hero-photo-toggle" aria-label="Toggle photo view" title="View unobstructed photo">👁 View Photo</button><div class="state-hero-card"><span class="hero-badge-pill">${esc(s.kind === 'union_territory' ? 'Union territory' : 'State')} Guide</span><h1>${esc(s.name)}</h1><p>${esc(s.description)}</p><div class="hero-stats-strip"><span>🏛 <strong>${s.districts.length}</strong> districts</span><span>📍 <strong>${s.places.length}</strong> curated attractions</span><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" title="View landmark photo">🖼 Fullscreen Photo ↗</a></div></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">${s.places.length} attractions</span></div>${categoryFilterHtml(s.places)}${cards(s.places)}</section>`;
 }
 async function districtPage(slug) {
   const d = await api('districts/' + encodeURIComponent(slug));
   const cover = fallbackImage(d.state_slug);
-  return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}<div class="state-hero district-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><div class="state-hero-card"><span class="hero-badge-pill">${esc(d.state)} · District Field Guide</span><h1>${esc(d.name)}</h1><p>${esc(d.description)}</p><div class="hero-stats-strip"><span>📍 <strong>${d.places.length}</strong> detailed attractions</span><span>🎉 <strong>${d.festivals.length}</strong> festivals</span><a href="#destinations" class="hero-cta-btn">View attractions ↓</a></div></div></div><div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">${d.places.length} attractions in ${esc(d.name)}</span></div>${categoryFilterHtml(d.places)}${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
+  return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}<div class="state-hero district-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><button type="button" class="hero-photo-toggle" aria-label="Toggle photo view" title="View unobstructed photo">👁 View Photo</button><div class="state-hero-card"><span class="hero-badge-pill">${esc(d.state)} · District Field Guide</span><h1>${esc(d.name)}</h1><p>${esc(d.description)}</p><div class="hero-stats-strip"><span>📍 <strong>${d.places.length}</strong> detailed attractions</span><span>🎉 <strong>${d.festivals.length}</strong> festivals</span><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" title="View landmark photo">🖼 Fullscreen Photo ↗</a></div></div></div><div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">${d.places.length} attractions in ${esc(d.name)}</span></div>${categoryFilterHtml(d.places)}${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
 }
 async function placePage(slug) {
   const p = await api('places/' + encodeURIComponent(slug));
@@ -201,8 +201,10 @@ async function placePage(slug) {
 
   const feeBox = p.entry_fee ? `<div class="aside-box"><h3>Official Entry Fee</h3><p class="entry-fee-highlight">🎟 <strong>${esc(p.entry_fee)}</strong></p></div>` : '';
   const addrBox = p.address ? `<div class="aside-box"><h3>Location / Address</h3><p>📍 ${esc(p.address)}</p></div>` : '';
+  const imgUrl = p.image_url || fallbackImage(p.state_slug);
+  const placeHero = `<div class="state-hero place-hero-banner" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.06) 0%,rgba(15,28,24,0.55) 60%,rgba(15,28,24,0.92) 100%),url('${esc(imgUrl)}')"><button type="button" class="hero-photo-toggle" aria-label="Toggle photo view" title="View unobstructed photo">👁 View Photo</button><div class="state-hero-card place-hero-card"><span class="hero-badge-pill">${esc(categoryLabel(p.category))} · ${esc(p.district)} · ${esc(p.state)}</span><h1>${esc(p.name)}</h1><div class="hero-stats-strip"><span>📍 ${esc(p.address || p.district + ', ' + p.state)}</span>${p.entry_fee ? `<span>🎟 <strong>${esc(p.entry_fee)}</strong></span>` : ''}<a href="${esc(imgUrl)}" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" title="View full resolution photo">🖼 Fullscreen Photo ↗</a></div></div></div>`;
 
-  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}<p class="eyebrow">${esc(categoryLabel(p.category))} · ${esc(p.district)} · ${esc(p.state)}</p><h1>${esc(p.name)}</h1><div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.last_verified_at ? 'Last checked: '+esc(p.last_verified_at) : 'Not yet independently verified'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
+  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}${placeHero}<div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.last_verified_at ? 'Last checked: '+esc(p.last_verified_at) : 'Not yet independently verified'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
 }
 async function explorePage(query) {
   const params = new URLSearchParams(query || '');
@@ -527,6 +529,194 @@ async function route() {
     root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
   }
   window.scrollTo(0,0);
+}
+
+// Spotlight Search Controller
+let cachedPlaces = null;
+let cachedStates = null;
+let cachedFestivals = null;
+
+async function loadSpotlightData() {
+  if (cachedPlaces) return;
+  try {
+    const [p, s, f] = await Promise.all([
+      api('places'),
+      api('states'),
+      api('festivals')
+    ]);
+    cachedPlaces = p;
+    cachedStates = s;
+    cachedFestivals = f;
+  } catch (err) {
+    console.error('Failed to preload spotlight data', err);
+  }
+}
+
+function openSpotlight(initialQuery = '') {
+  const overlay = document.getElementById('spotlight-overlay');
+  const input = document.getElementById('spotlight-input');
+  if (!overlay || !input) return;
+  overlay.style.display = 'flex';
+  overlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  loadSpotlightData();
+  if (initialQuery) {
+    input.value = initialQuery;
+    renderSpotlightResults(initialQuery);
+  } else {
+    input.value = '';
+    setTimeout(() => input.focus(), 50);
+    renderSpotlightResults('');
+  }
+}
+
+function closeSpotlight() {
+  const overlay = document.getElementById('spotlight-overlay');
+  if (!overlay) return;
+  overlay.style.display = 'none';
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function renderSpotlightResults(query) {
+  const container = document.getElementById('spotlight-results');
+  if (!container) return;
+  const q = query.trim().toLowerCase();
+
+  if (!q) {
+    container.innerHTML = `<div class="spotlight-hint">Type to instantly search across 120 destinations, 807 districts, 36 regions, and 45 festivals...</div>`;
+    return;
+  }
+
+  const matchedPlaces = (cachedPlaces || []).filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.district.toLowerCase().includes(q) ||
+    p.state.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q)
+  ).slice(0, 8);
+
+  const matchedStates = (cachedStates || []).filter(s =>
+    s.name.toLowerCase().includes(q) ||
+    s.description.toLowerCase().includes(q)
+  ).slice(0, 4);
+
+  const matchedFestivals = (cachedFestivals || []).filter(f =>
+    f.name.toLowerCase().includes(q) ||
+    f.description.toLowerCase().includes(q)
+  ).slice(0, 4);
+
+  let html = '';
+
+  if (matchedPlaces.length > 0) {
+    html += `<div class="spotlight-group-title">Destinations (${matchedPlaces.length})</div>`;
+    html += matchedPlaces.map(p => `
+      <a href="/place/${esc(p.slug)}" class="spotlight-item" onclick="closeSpotlight()">
+        <img src="${esc(p.image_url || fallbackImage(p.state_slug))}" alt="${esc(p.name)}" class="spotlight-thumb">
+        <div class="spotlight-info">
+          <div class="spotlight-name">${esc(p.name)} <span class="spotlight-cat-tag">${esc(p.category)}</span></div>
+          <div class="spotlight-sub">${esc(p.district)}, ${esc(p.state)} ${p.entry_fee ? `· 🎟 ${esc(p.entry_fee)}` : ''}</div>
+        </div>
+        <span class="spotlight-arrow">↗</span>
+      </a>
+    `).join('');
+  }
+
+  if (matchedStates.length > 0) {
+    html += `<div class="spotlight-group-title">States & Territories (${matchedStates.length})</div>`;
+    html += matchedStates.map(s => `
+      <a href="/state/${esc(s.slug)}" class="spotlight-item" onclick="closeSpotlight()">
+        <div class="spotlight-avatar">🏛</div>
+        <div class="spotlight-info">
+          <div class="spotlight-name">${esc(s.name)} <span class="spotlight-cat-tag">${esc(s.kind === 'union_territory' ? 'UT' : 'State')}</span></div>
+          <div class="spotlight-sub">${s.district_count} districts · ${esc(s.description.slice(0, 75))}...</div>
+        </div>
+        <span class="spotlight-arrow">↗</span>
+      </a>
+    `).join('');
+  }
+
+  if (matchedFestivals.length > 0) {
+    html += `<div class="spotlight-group-title">Festivals (${matchedFestivals.length})</div>`;
+    html += matchedFestivals.map(f => `
+      <a href="/festivals" class="spotlight-item" onclick="closeSpotlight()">
+        <div class="spotlight-avatar">🎉</div>
+        <div class="spotlight-info">
+          <div class="spotlight-name">${esc(f.name)}</div>
+          <div class="spotlight-sub">${esc(f.description.slice(0, 80))}...</div>
+        </div>
+        <span class="spotlight-arrow">↗</span>
+      </a>
+    `).join('');
+  }
+
+  if (!html) {
+    container.innerHTML = `<div class="spotlight-no-results">No destinations, states, or festivals found matching "<strong>${esc(query)}</strong>". Try searching for "Taj Mahal", "Chandigarh", "Puri", or "Monastery".</div>`;
+  } else {
+    container.innerHTML = html;
+  }
+}
+
+// Spotlight Keyboard & Click Events
+document.addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+    e.preventDefault();
+    openSpotlight();
+  } else if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+    e.preventDefault();
+    openSpotlight();
+  } else if (e.key === 'Escape') {
+    closeSpotlight();
+  }
+});
+
+document.addEventListener('click', e => {
+  const spotlightBtn = e.target.closest('#spotlight-btn');
+  if (spotlightBtn) {
+    e.preventDefault();
+    openSpotlight();
+    return;
+  }
+  const closeBtn = e.target.closest('#spotlight-close');
+  if (closeBtn) {
+    closeSpotlight();
+    return;
+  }
+  const tagBtn = e.target.closest('.spotlight-tag');
+  if (tagBtn) {
+    const q = tagBtn.dataset.q;
+    const input = document.getElementById('spotlight-input');
+    if (input) {
+      input.value = q;
+      renderSpotlightResults(q);
+    }
+    return;
+  }
+  const overlay = document.getElementById('spotlight-overlay');
+  if (e.target === overlay) {
+    closeSpotlight();
+    return;
+  }
+
+  // Hero Photo View Toggle
+  const photoToggle = e.target.closest('.hero-photo-toggle');
+  if (photoToggle) {
+    const hero = photoToggle.closest('.state-hero');
+    if (hero) {
+      const card = hero.querySelector('.state-hero-card');
+      if (card) {
+        const isCollapsed = card.classList.toggle('card-collapsed');
+        photoToggle.textContent = isCollapsed ? '✕ Show Guide' : '👁 View Photo';
+        photoToggle.classList.toggle('active', isCollapsed);
+      }
+    }
+  }
+});
+
+const spotlightInput = document.getElementById('spotlight-input');
+if (spotlightInput) {
+  spotlightInput.addEventListener('input', e => {
+    renderSpotlightResults(e.target.value);
+  });
 }
 
 function submitSearch(form) { const params = new URLSearchParams(); for (const [key, value] of new FormData(form)) if (value) params.set(key, value); location.hash = '/explore' + (params.toString() ? `?${params}` : ''); }
