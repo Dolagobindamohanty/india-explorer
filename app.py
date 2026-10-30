@@ -5,6 +5,7 @@ import json
 import math
 import os
 from pathlib import Path
+import re
 import sqlite3
 
 from fastapi import FastAPI, HTTPException, Query
@@ -82,6 +83,13 @@ def create_app(database_path=None):
     def enrich_places(items):
         if not items:
             return items
+        # A prior Odisha import stored a dash after every character in some
+        # records. Keep responses readable while old serverless databases drain.
+        for item in items:
+            for field in ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address'):
+                value = item.get(field)
+                if value:
+                    item[field] = re.sub(r'(?:–.){3,}–?', lambda match: match.group().replace('–', ''), value)
         ids = [item['id'] for item in items]
         placeholders = ','.join('?' for _ in ids)
         with connection() as db:

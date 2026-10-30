@@ -215,6 +215,21 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     assert response.json() == {'status': 'ok', 'places': 227}
 
 
+def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
+    path = tmp_path / 'legacy-odisha.sqlite3'
+    app = create_app(path)
+    with sqlite3.connect(path) as db:
+        db.execute(
+            "UPDATE places SET description=? WHERE slug='ananta-basudeva-temple'",
+            ('L–o–c–a–t–e–d– –n–e–a–r– –B–h–u–b–a–n–e–s–w–a–r–',),
+        )
+        db.commit()
+
+    client = TestClient(app)
+    assert 'L–o–c–a–t–e–d' not in client.get('/state/odisha').text
+    assert client.get('/api/places/ananta-basudeva-temple').json()['description'] == 'Located near Bhubaneswar'
+
+
 def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
