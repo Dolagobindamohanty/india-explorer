@@ -208,6 +208,13 @@ def test_seed_refreshes_corrected_odisha_records(tmp_path):
     assert '–' not in description
 
 
+def test_vercel_database_path_is_versioned(monkeypatch):
+    monkeypatch.setenv('VERCEL', '1')
+    app = create_app()
+    response = TestClient(app).get('/healthz')
+    assert response.json() == {'status': 'ok', 'places': 227}
+
+
 def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage

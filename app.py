@@ -1,4 +1,5 @@
 from contextlib import contextmanager
+import hashlib
 from html import escape
 import json
 import math
@@ -19,7 +20,19 @@ SITE_URL = os.getenv('SITE_URL', 'https://india-explorer-hazel.vercel.app').rstr
 
 
 def create_app(database_path=None):
-    default_path = Path('/tmp/india-explorer.sqlite3') if os.getenv('VERCEL') else ROOT / 'data' / 'explorer.sqlite3'
+    # Vercel preserves /tmp for warm instances across deployments. Version the
+    # temporary database from its seed inputs so corrected source data cannot
+    # coexist with a stale database created by an older deployment.
+    data_version = hashlib.sha256(
+        (ROOT / 'seed.py').read_bytes()
+        + (ROOT / 'data' / 'india-states-districts.json').read_bytes()
+        + (ROOT / 'data' / 'odisha-places.json').read_bytes()
+    ).hexdigest()[:12]
+    default_path = (
+        Path(f'/tmp/india-explorer-{data_version}.sqlite3')
+        if os.getenv('VERCEL')
+        else ROOT / 'data' / 'explorer.sqlite3'
+    )
     path = Path(database_path or os.getenv('INDIA_EXPLORER_DB_PATH', default_path))
     path.parent.mkdir(parents=True, exist_ok=True)
 
