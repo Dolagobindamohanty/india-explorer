@@ -548,6 +548,21 @@ def seed(db):
         (id,district_id,slug,name,description,category,latitude,longitude,how_to_reach,practical_notes,heritage_id,source_url,image_url)
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)''', places)
     db.executemany('UPDATE places SET image_url=? WHERE id=?', [(p[12], p[0]) for p in places])
+    # Odisha records are sourced from a maintained JSON dataset. Update existing
+    # rows too so corrections are applied to databases created by earlier releases.
+    if odisha_extra:
+        db.executemany('''UPDATE places SET
+                district_id=?, name=?, description=?, category=?, latitude=?, longitude=?,
+                how_to_reach=?, practical_notes=?, heritage_id=?, source_url=?, image_url=?
+            WHERE slug=?''', [
+                (
+                    op['district_id'], op['name'], op['description'], op['category'],
+                    op['latitude'], op['longitude'], op['how_to_reach'],
+                    op['practical_notes'], op['heritage_id'], op['source_url'],
+                    place_image(op['slug']), op['slug'],
+                )
+                for op in odisha_extra
+            ])
 
     place_extra_data = {
         'rock-garden-chandigarh': ('₹30 Adults, ₹10 Children', 'Sector 1, Chandigarh'),
@@ -913,4 +928,3 @@ def seed(db):
             if pid:
                 circuit_place_rows.append((cid, pid, order, notes))
     db.executemany('INSERT OR IGNORE INTO circuit_places (circuit_id, place_id, stop_order, notes) VALUES (?,?,?,?)', circuit_place_rows)
-

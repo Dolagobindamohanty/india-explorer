@@ -188,6 +188,26 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
             db.execute('INSERT INTO place_months VALUES (1, 13)')
 
 
+def test_seed_refreshes_corrected_odisha_records(tmp_path):
+    path = tmp_path / 'odisha-correction.sqlite3'
+    create_app(path)
+    with sqlite3.connect(path) as db:
+        db.execute(
+            "UPDATE places SET description=? WHERE slug='ananta-basudeva-temple'",
+            ('T–h–i–s– –i–s– –c–o–r–r–u–p–t–e–d',),
+        )
+        db.commit()
+
+    create_app(path)
+
+    with sqlite3.connect(path) as db:
+        description = db.execute(
+            "SELECT description FROM places WHERE slug='ananta-basudeva-temple'"
+        ).fetchone()[0]
+    assert description.startswith('Located near the sacred Bindusagar tank')
+    assert '–' not in description
+
+
 def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
