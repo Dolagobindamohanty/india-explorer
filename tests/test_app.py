@@ -43,7 +43,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 72
+    assert len(all_places) == 101
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -81,19 +81,36 @@ def test_full_destination_journey(client):
     assert {p['slug'] for p in kullu['places']} >= {'hidimba-devi-temple', 'rohtang-pass'}
     spiti = client.get('/api/districts/spiti').json()
     assert {p['slug'] for p in spiti['places']} >= {'key-monastery', 'chandratal-lake', 'tabo-monastery'}
-    # Union Territories verification
+    # Union Territories comprehensive verification
     andaman = client.get('/api/states/andaman-and-nicobar-islands').json()
     assert len(andaman['districts']) == 3
-    assert len(andaman['places']) == 2
+    assert len(andaman['places']) == 5
+    assert {p['slug'] for p in andaman['places']} >= {'cellular-jail', 'radhanagar-beach', 'ross-island-andaman', 'elephant-beach-havelock', 'baratang-island-caves'}
     delhi = client.get('/api/states/delhi').json()
     assert len(delhi['districts']) == 11
-    assert len(delhi['places']) == 4
+    assert len(delhi['places']) == 8
+    assert {p['slug'] for p in delhi['places']} >= {'red-fort-delhi', 'qutub-minar', 'humayuns-tomb', 'india-gate', 'akshardham-temple-delhi', 'lotus-temple-delhi', 'jama-masjid-delhi', 'bangla-sahib-delhi'}
     jk = client.get('/api/states/jammu-and-kashmir').json()
     assert len(jk['districts']) == 20
-    assert len(jk['places']) == 4
+    assert len(jk['places']) == 8
+    assert {p['slug'] for p in jk['places']} >= {'dal-lake', 'gulmarg-gondola', 'vaishno-devi', 'martand-sun-temple', 'pahalgam-betaab-valley', 'shankaracharya-temple', 'sonamarg-thajiwas', 'nishat-shalimar-gardens'}
     ladakh = client.get('/api/states/ladakh').json()
     assert len(ladakh['districts']) == 4
-    assert len(ladakh['places']) == 3
+    assert len(ladakh['places']) == 7
+    assert {p['slug'] for p in ladakh['places']} >= {'thiksey-monastery', 'pangong-tso', 'diskit-monastery', 'leh-palace-shanti-stupa', 'sangam-indus-zanskar', 'khardung-la-pass', 'hemis-monastery'}
+    puducherry = client.get('/api/states/puducherry').json()
+    assert len(puducherry['districts']) == 4
+    assert len(puducherry['places']) == 6
+    assert {p['slug'] for p in puducherry['places']} >= {'auroville-matrimandir', 'promenade-beach-pondicherry', 'aurobindo-ashram', 'white-town-pondicherry', 'paradise-beach-pondicherry', 'sacred-heart-basilica-pondicherry'}
+    chandigarh = client.get('/api/states/chandigarh').json()
+    assert len(chandigarh['places']) == 4
+    assert {p['slug'] for p in chandigarh['places']} >= {'rock-garden-chandigarh', 'sukhna-lake', 'rose-garden-chandigarh', 'capitol-complex-open-hand'}
+    dnh = client.get('/api/states/dadra-and-nagar-haveli-and-daman-and-diu').json()
+    assert len(dnh['places']) == 5
+    assert {p['slug'] for p in dnh['places']} >= {'diu-fort', 'moti-daman-fort', 'naida-caves-diu', 'nagoa-beach-diu', 'jampore-beach-daman'}
+    lakshadweep = client.get('/api/states/lakshadweep').json()
+    assert len(lakshadweep['places']) == 4
+    assert {p['slug'] for p in lakshadweep['places']} >= {'bangaram-atoll', 'agatti-island-lagoon', 'kavaratti-island', 'kadmat-island-diving'}
     # Explicit UNESCO distinction test:
     # 1. Standalone World Heritage Site
     konark = client.get('/api/places/konark-sun-temple').json()
@@ -103,6 +120,8 @@ def test_full_destination_journey(client):
     # 2. Component of larger serial site
     amber = client.get('/api/places/amber-fort').json()
     assert amber['heritage_designation'] == 'component_site'
+    capitol = client.get('/api/places/capitol-complex-open-hand').json()
+    assert capitol['heritage_designation'] == 'component_site'
     # 3. Tentative list site
     tabo = client.get('/api/places/tabo-monastery').json()
     assert tabo['heritage_designation'] == 'tentative_list'
@@ -119,10 +138,12 @@ def test_filters_combine_and_heritage_links(client):
     assert {p['slug'] for p in result} == {'amber-fort', 'jantar-mantar', 'jaisalmer-fort'}
     assert all(p['unesco_url'].startswith('https://whc.unesco.org/en/list/') for p in result)
     assert client.get('/api/places?state=kerala&unesco=true').json() == []
-    assert {p['slug'] for p in client.get('/api/places?month=7').json()} == {
-        'chandratal-lake', 'dal-lake', 'diskit-monastery', 'pangong-tso', 'rohtang-pass', 'thiksey-monastery'
-    }
-    assert len(client.get('/api/places?month=6').json()) == 17
+    assert len(client.get('/api/places?month=7').json()) == 14
+    assert len(client.get('/api/places?month=6').json()) == 25
+    assert len(client.get('/api/places?q=Kochi').json()) == 2
+    assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
+    assert client.get('/api/places', params={'q': '%'}).json() == []
+    assert client.get('/api/places', params={'q': '_'}).json() == []
     assert len(client.get('/api/places?q=Kochi').json()) == 2
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     assert client.get('/api/places', params={'q': '%'}).json() == []
@@ -154,7 +175,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 72
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 101
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -178,7 +199,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 72}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 101}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -222,13 +243,15 @@ def test_server_rendered_routes_are_crawlable(client):
     island_page = client.get('/circuit/tropical-island-corals').text
     assert 'Cellular Jail' in island_page
     assert 'Radhanagar Beach' in island_page
-    assert 'Bangaram' in island_page
+    puducherry_page = client.get('/circuit/french-coastal-puducherry').text
+    assert 'White Town' in puducherry_page
+    assert 'Paradise Beach' in puducherry_page
 
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 72,
+        'detailed_places': 101,
         'reviewed_places': 0,
-        'unreviewed_places': 72,
+        'unreviewed_places': 101,
         'confirmed_festival_dates': 0,
     }

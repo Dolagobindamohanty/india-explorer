@@ -134,7 +134,7 @@ def create_app(database_path=None):
         result['festivals'] = festivals(month=None, district=slug)
         return result
 
-    def query_places(q='', state='', district='', month=None, category='', unesco=False, limit=100):
+    def query_places(q='', state='', district='', month=None, category='', unesco=False, limit=500):
         clauses, params = ['1=1'], []
         if q.strip():
             search = q.strip().replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_')
