@@ -18,6 +18,57 @@ ROOT = Path(__file__).resolve().parent
 MONTH_NAMES = ('January', 'February', 'March', 'April', 'May', 'June',
                'July', 'August', 'September', 'October', 'November', 'December')
 SITE_URL = os.getenv('SITE_URL', 'https://india-explorer-hazel.vercel.app').rstrip('/')
+DASH_CORRUPTION = re.compile(r'(?:–.){3,}–?')
+
+
+def repair_dash_corruption(value):
+    """Remove en-dashes inserted between every character by the legacy import."""
+    return DASH_CORRUPTION.sub(lambda match: match.group().replace('–', ''), value) if value else value
+
+
+def repair_odisha_records(db):
+    """Persistently repair all display text in stale Odisha database records."""
+    for table, columns, where, params in (
+        ('regions', ('name', 'description'), 'id=?', (21,)),
+        ('districts', ('name', 'description', 'food_notes'), 'region_id=?', (21,)),
+        (
+            'places',
+            ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address'),
+            'district_id IN (SELECT id FROM districts WHERE region_id=?)',
+            (21,),
+        ),
+    ):
+        selected_columns = ', '.join(
+            ('id', 'region_id', *columns) if table == 'districts' else ('id', *columns)
+        )
+        records = db.execute(f'SELECT {selected_columns} FROM {table} WHERE {where}', params).fetchall()
+        for record in records:
+            corrected = {column: repair_dash_corruption(record[column]) for column in columns}
+            update_columns = [column for column in columns if corrected[column] != record[column]]
+            # Old imports can coexist with a correctly named district. Preserve
+            # the record in that case; its name is still normalized on response.
+            if table == 'districts' and 'name' in update_columns:
+                duplicate = db.execute(
+                    'SELECT 1 FROM districts WHERE region_id=? AND name=? AND id != ?',
+                    (record['region_id'], corrected['name'], record['id']),
+                ).fetchone()
+                if duplicate:
+                    update_columns.remove('name')
+            if update_columns:
+                assignments = ', '.join(f'{column}=?' for column in update_columns)
+                db.execute(
+                    f'UPDATE {table} SET {assignments} WHERE id=?',
+                    (*[corrected[column] for column in update_columns], record['id']),
+                )
+
+
+def repair_display_text(items, fields):
+    """Normalize legacy text before it reaches an API or rendered page."""
+    for item in items:
+        for field in fields:
+            if item.get(field):
+                item[field] = repair_dash_corruption(item[field])
+    return items
 
 
 def create_app(database_path=None):
@@ -67,6 +118,7 @@ def create_app(database_path=None):
             # existing records are retained while new states and image metadata
             # are added on the next app start.
             seed(db)
+            repair_odisha_records(db)
 
     app = FastAPI(title='India Explorer', version='0.1.0')
 
@@ -85,11 +137,7 @@ def create_app(database_path=None):
             return items
         # A prior Odisha import stored a dash after every character in some
         # records. Keep responses readable while old serverless databases drain.
-        for item in items:
-            for field in ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address'):
-                value = item.get(field)
-                if value:
-                    item[field] = re.sub(r'(?:–.){3,}–?', lambda match: match.group().replace('–', ''), value)
+        repair_display_text(items, ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address'))
         ids = [item['id'] for item in items]
         placeholders = ','.join('?' for _ in ids)
         with connection() as db:
@@ -135,7 +183,11 @@ def create_app(database_path=None):
     @app.get('/api/states/{slug}')
     def state(slug: str):
         result = one('SELECT * FROM regions WHERE slug=?', (slug,))
-        result['districts'] = rows('SELECT * FROM districts WHERE region_id=? ORDER BY name', (result['id'],))
+        repair_display_text([result], ('name', 'description'))
+        result['districts'] = repair_display_text(
+            rows('SELECT * FROM districts WHERE region_id=? ORDER BY name', (result['id'],)),
+            ('name', 'description', 'food_notes'),
+        )
         result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? ORDER BY p.name', (result['id'],)))
         return result
 
@@ -155,6 +207,7 @@ def create_app(database_path=None):
     def district(slug: str):
         result = one('''SELECT d.*, r.name AS state, r.slug AS state_slug
             FROM districts d JOIN regions r ON r.id=d.region_id WHERE d.slug=?''', (slug,))
+        repair_display_text([result], ('name', 'description', 'food_notes', 'state'))
         result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? ORDER BY p.name', (result['id'],)))
         result['festivals'] = festivals(month=None, district=slug)
         return result
@@ -411,7 +464,11 @@ def create_app(database_path=None):
     @app.get('/state/{slug}', response_class=HTMLResponse)
     def rendered_state(slug: str):
         result = one('SELECT * FROM regions WHERE slug=?', (slug,))
-        result['districts'] = rows('SELECT * FROM districts WHERE region_id=? ORDER BY name', (result['id'],))
+        repair_display_text([result], ('name', 'description'))
+        result['districts'] = repair_display_text(
+            rows('SELECT * FROM districts WHERE region_id=? ORDER BY name', (result['id'],)),
+            ('name', 'description', 'food_notes'),
+        )
         result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? ORDER BY p.name', (result['id'],)))
         cover = escape(result.get('cover_image_url') or fallback_image(result['slug']), quote=True)
         districts_html = ''.join(f'<a href="/district/{escape(d["slug"])}">{escape(d["name"])} <span>↗</span></a>' for d in result['districts'])
@@ -421,6 +478,7 @@ def create_app(database_path=None):
     @app.get('/district/{slug}', response_class=HTMLResponse)
     def rendered_district(slug: str):
         result = one('''SELECT d.*, r.name AS state, r.slug AS state_slug FROM districts d JOIN regions r ON r.id=d.region_id WHERE d.slug=?''', (slug,))
+        repair_display_text([result], ('name', 'description', 'food_notes', 'state'))
         result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? ORDER BY p.name', (result['id'],)))
         result['festivals'] = festivals(month=None, district=slug)
         cover = escape(fallback_image(result['state_slug']), quote=True)

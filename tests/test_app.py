@@ -1,4 +1,5 @@
 import sqlite3
+import re
 
 import pytest
 from fastapi.testclient import TestClient
@@ -228,6 +229,42 @@ def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
     client = TestClient(app)
     assert 'L–o–c–a–t–e–d' not in client.get('/state/odisha').text
     assert client.get('/api/places/ananta-basudeva-temple').json()['description'] == 'Located near Bhubaneswar'
+
+
+def test_startup_repairs_all_legacy_odisha_text_fields(tmp_path):
+    path = tmp_path / 'legacy-odisha-all-fields.sqlite3'
+    create_app(path)
+    dash = '\u2013'
+    corrupt = lambda value: dash + dash.join(value) + dash
+    with sqlite3.connect(path) as db:
+        db.execute("UPDATE regions SET description=? WHERE slug='odisha'", (corrupt('Temple state'),))
+        db.execute(
+            "UPDATE districts SET name=?, description=?, food_notes=? WHERE slug='khordha'",
+            (corrupt('Khordha'), corrupt('Temple district'), corrupt('Odia food'),),
+        )
+        db.execute(
+            '''UPDATE places SET name=?, description=?, how_to_reach=?, practical_notes=?, entry_fee=?, address=?
+               WHERE slug='ananta-basudeva-temple' ''',
+            (
+                corrupt('Ananta'), corrupt('Sacred temple'), corrupt('Bhubaneswar'),
+                corrupt('Open daily'), corrupt('No entry fee'), corrupt('Bhubaneswar'),
+            ),
+        )
+        db.commit()
+
+    client = TestClient(create_app(path))
+    odisha = client.get('/api/states/odisha').json()
+    khordha = next(district for district in odisha['districts'] if district['slug'] == 'khordha')
+    place = client.get('/api/places/ananta-basudeva-temple').json()
+
+    assert odisha['description'] == 'Temple state'
+    assert khordha['name'] == 'Khordha'
+    assert khordha['description'] == 'Temple district'
+    assert khordha['food_notes'] == 'Odia food'
+    assert place['name'] == 'Ananta Basudeva Temple'
+    assert place['entry_fee'] == 'No entry fee'
+    assert place['address'] == 'Bhubaneswar, Khordha'
+    assert re.search(r'(?:\u2013.){3,}', client.get('/state/odisha').text) is None
 
 
 def test_website_and_health(client):
