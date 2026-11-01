@@ -179,16 +179,18 @@ async function statePage(slug) {
     while (items.length < 10) {
       items = items.concat(placesWithImages.slice(0, 24));
     }
-    const cardsHtml = items.map(p => `
-      <a href="/place/${esc(p.slug)}" class="state-marquee-item" title="${esc(p.name)}">
+    const marqueeCard = (p, hidden) => `
+      <a href="/place/${esc(p.slug)}" class="state-marquee-item"${hidden ? ' aria-hidden="true" tabindex="-1"' : ''} title="${esc(p.name)}">
         <img src="${esc(p.image_url)}" alt="${esc(p.name)}" loading="lazy">
         <div class="state-marquee-meta">
           <span class="state-marquee-title">${esc(p.name)}</span>
           <span class="state-marquee-sub">${esc(p.district || '')} · ${esc(categoryLabel(p.category))}</span>
         </div>
       </a>
-    `).join('');
-    visualHtml = `<div class="state-marquee-wrap" aria-label="Attractions across ${esc(s.name)}"><div class="state-marquee-track">${cardsHtml}${cardsHtml}</div></div>`;
+    `;
+    const cardsHtml = items.map(p => marqueeCard(p, false)).join('');
+    const cardsDuplicate = items.map(p => marqueeCard(p, true)).join('');
+    visualHtml = `<div class="state-marquee-wrap" aria-label="Attractions across ${esc(s.name)}"><div class="state-marquee-track">${cardsHtml}${cardsDuplicate}</div></div>`;
   } else {
     visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(s.name)} scenic landmark" loading="eager"><span class="region-visual-caption">📍 ${esc(s.name)} · View Photo ↗</span></a></div>`;
   }
@@ -209,16 +211,18 @@ async function districtPage(slug) {
     while (items.length < 10) {
       items = items.concat(placesWithImages.slice(0, 24));
     }
-    const cardsHtml = items.map(p => `
-      <a href="/place/${esc(p.slug)}" class="state-marquee-item" title="${esc(p.name)}">
+    const districtCard = (p, hidden) => `
+      <a href="/place/${esc(p.slug)}" class="state-marquee-item"${hidden ? ' aria-hidden="true" tabindex="-1"' : ''} title="${esc(p.name)}">
         <img src="${esc(p.image_url)}" alt="${esc(p.name)}" loading="lazy">
         <div class="state-marquee-meta">
           <span class="state-marquee-title">${esc(p.name)}</span>
           <span class="state-marquee-sub">${esc(d.name)} · ${esc(categoryLabel(p.category))}</span>
         </div>
       </a>
-    `).join('');
-    visualHtml = `<div class="state-marquee-wrap" aria-label="Attractions in ${esc(d.name)}"><div class="state-marquee-track">${cardsHtml}${cardsHtml}</div></div>`;
+    `;
+    const cardsHtml = items.map(p => districtCard(p, false)).join('');
+    const cardsDuplicate = items.map(p => districtCard(p, true)).join('');
+    visualHtml = `<div class="state-marquee-wrap" aria-label="Attractions in ${esc(d.name)}"><div class="state-marquee-track">${cardsHtml}${cardsDuplicate}</div></div>`;
   } else {
     visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(d.name)} landmark photo" loading="eager"><span class="region-visual-caption">📍 ${esc(d.name)}, ${esc(d.state)} · View Photo ↗</span></a></div>`;
   }

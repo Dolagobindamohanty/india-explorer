@@ -985,5 +985,11 @@
       "Unnao",
       "Varanasi"
     ]
+  },
+  {
+    "state": "Goa",
+    "districts": [
+      "Kushavati"
+    ]
   }
 ]

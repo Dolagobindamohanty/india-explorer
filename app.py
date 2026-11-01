@@ -497,11 +497,19 @@ def create_app(database_path=None):
         items = list(sample)
         while len(items) < 10:
             items.extend(sample)
-        cards = ''.join(
-            f'''<a href="/place/{escape(p['slug'])}" class="state-marquee-item" title="{escape(p['name'])}"><img src="{escape(p['image_url'], quote=True)}" alt="{escape(p['name'])}" loading="lazy"><div class="state-marquee-meta"><span class="state-marquee-title">{escape(p['name'])}</span><span class="state-marquee-sub">{escape(p.get('district', ''))} · {escape(p.get('category', '').title())}</span></div></a>'''
-            for p in items
-        )
-        return f'''<div class="state-marquee-wrap" aria-label="Attractions across {escape(state_name)}"><div class="state-marquee-track">{cards}{cards}</div></div>'''
+        def marquee_card(p, hidden=False):
+            extra = ' aria-hidden="true" tabindex="-1"' if hidden else ''
+            return (
+                f'''<a href="/place/{escape(p['slug'])}" class="state-marquee-item"{extra} title="{escape(p['name'])}">'''
+                f'''<img src="{escape(p['image_url'], quote=True)}" alt="{escape(p['name'])}" loading="lazy">'''
+                f'''<div class="state-marquee-meta"><span class="state-marquee-title">{escape(p['name'])}</span>'''
+                f'''<span class="state-marquee-sub">{escape(p.get('district', ''))} · {escape(p.get('category', '').title())}</span></div></a>'''
+            )
+        # The track repeats the card set once so the CSS marquee can loop seamlessly;
+        # the duplicate copy is hidden from assistive tech and removed from tab order.
+        cards = ''.join(marquee_card(p) for p in items)
+        cards_duplicate = ''.join(marquee_card(p, hidden=True) for p in items)
+        return f'''<div class="state-marquee-wrap" aria-label="Attractions across {escape(state_name)}"><div class="state-marquee-track">{cards}{cards_duplicate}</div></div>'''
 
     @app.get('/state/{slug}', response_class=HTMLResponse)
     def rendered_state(slug: str):
