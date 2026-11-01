@@ -76,20 +76,42 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
-  font-size: 24px;
-  letter-spacing: -1px;
+  font-size: 22px;
+  letter-spacing: -0.5px;
   white-space: nowrap;
+  text-decoration: none !important;
+  color: var(--heading);
+  transition: opacity 0.2s ease;
 }
 
-.brand span {
+.brand:hover {
+  opacity: 0.92;
+}
+
+.brand-emblem {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+.brand:hover .brand-emblem {
+  transform: rotate(22.5deg);
+}
+
+.brand-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+
+.brand-highlight {
   font-weight: 400;
-}
-
-.brand i {
-  font-style: normal;
   color: var(--orange);
-  margin-left: 8px;
+  margin-left: 1px;
 }
 
 nav {
