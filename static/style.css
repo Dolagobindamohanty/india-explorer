@@ -1185,6 +1185,44 @@ body[data-theme="dark"] footer small {
   max-width: 800px;
 }
 
+.place-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(150px, .85fr);
+  gap: 10px;
+  margin: -14px 0 36px;
+}
+
+.place-gallery-main,
+.place-gallery-side {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--ink);
+}
+
+.place-gallery-main { min-height: 360px; }
+.place-gallery-side { display: grid; gap: 10px; grid-template-rows: 1fr 1fr; }
+.place-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.place-gallery-main img { min-height: 360px; }
+.place-gallery-side img { min-height: 175px; }
+.place-gallery-caption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(12, 24, 20, .78);
+  font-size: 12px;
+}
+
+@media (max-width: 680px) {
+  .place-gallery { grid-template-columns: 1fr; }
+  .place-gallery-main, .place-gallery-main img { min-height: 260px; }
+  .place-gallery-side { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
+  .place-gallery-side img { min-height: 130px; }
+}
+
 .hero-badge-pill {
   display: inline-block;
   padding: 4px 12px;

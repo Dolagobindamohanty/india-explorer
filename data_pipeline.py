@@ -127,6 +127,13 @@ def validate_state_dataset(dataset, static_dir=ROOT / 'static'):
             errors.append(f'{label}: image asset does not exist: {place["image_url"]}')
         if slug not in image_sources:
             warnings.append(f'{label}: image attribution is missing')
+        for g_img in place.get('gallery_images', []):
+            g_path = static_dir / g_img['image_url'].lstrip('/')
+            if not g_path.exists():
+                errors.append(f'{label}: gallery image asset does not exist: {g_img["image_url"]}')
+            g_key = g_img['image_url'].split('/')[-1].replace('.jpg', '')
+            if g_key not in image_sources:
+                warnings.append(f'{label}: gallery image attribution is missing for {g_key}')
     errors.extend(f'{state}: duplicate place slug: {slug}' for slug, count in slugs.items() if count > 1)
     warnings.extend(f'{state}: duplicated coordinates: {latitude}, {longitude}' for (latitude, longitude), count in coordinates.items() if count > 1)
     return errors, warnings
@@ -197,6 +204,10 @@ def validate_database(db, static_dir=ROOT / 'static'):
             warnings.append(f'{label}: image attribution is missing')
     errors.extend(f'duplicate place slug: {slug}' for slug, count in seen_slugs.items() if count > 1)
     warnings.extend(f'duplicated coordinates: {latitude}, {longitude}' for (latitude, longitude), count in coordinates.items() if count > 1)
+    gallery_rows = db.execute('SELECT place_id, image_url FROM place_images').fetchall()
+    for g in gallery_rows:
+        if not (static_dir / g['image_url'].lstrip('/')).exists():
+            errors.append(f"place {g['place_id']}: gallery image asset does not exist: {g['image_url']}")
     return errors, warnings
 
 

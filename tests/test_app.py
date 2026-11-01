@@ -58,6 +58,9 @@ def test_full_destination_journey(client):
     ap = client.get('/api/states/andhra-pradesh').json()
     assert len(ap['districts']) == 26
     assert len(ap['places']) == 69
+    tirumala = client.get('/api/places/tirumala-venkateswara-temple').json()
+    assert len(tirumala['images']) == 3
+    assert tirumala['images'][0]['image_url'] == tirumala['image_url']
     north_goa = client.get('/api/districts/north-goa').json()
     assert len(north_goa['places']) == 5
     assert {p['slug'] for p in north_goa['places']} >= {'basilica-bom-jesus', 'fontainhas', 'aguada-fort', 'se-cathedral', 'anjuna-beach'}
@@ -334,6 +337,9 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Kerala' in client.get('/state/kerala').text
     assert 'Alappuzha' in client.get('/district/alappuzha').text
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
+    tirumala_page = client.get('/place/tirumala-venkateswara-temple').text
+    assert 'place-gallery' in tirumala_page
+    assert 'Photo 1 of 3' in tirumala_page
     assert 'Festival calendar' in client.get('/month/8').text
     assert 'Festivals in August' in client.get('/month/8').text
     assert 'Typically in August' in client.get('/district/alappuzha').text

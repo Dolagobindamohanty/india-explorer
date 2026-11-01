@@ -15,7 +15,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/tirumala-venkateswara-temple.jpg",
     "entry_fee": "Free general darshan (Special Entry ₹300)",
-    "address": "Tirumala Hill, Tirupati, Andhra Pradesh 517504"
+    "address": "Tirumala Hill, Tirupati, Andhra Pradesh 517504",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/tirumala-venkateswara-temple-gallery-2.jpg",
+        "alt_text": "Tirumala Venkateswara Temple detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AEast_Gopuram_of_Dwaraka_Tirumala_Temple.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/tirumala-venkateswara-temple-gallery-3.jpg",
+        "alt_text": "Tirumala Venkateswara Temple detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AMaha_Dwaram_of_Venkateswara_temples%2C_Tirupati.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 229,
@@ -87,7 +101,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/gandikota-fort-gorge.jpg",
     "entry_fee": "Free",
-    "address": "Gandikota, Jammalamadugu Mandal, Y.S.R. Kadapa District, Andhra Pradesh 516434"
+    "address": "Gandikota, Jammalamadugu Mandal, Y.S.R. Kadapa District, Andhra Pradesh 516434",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/gandikota-fort-gorge-gallery-2.jpg",
+        "alt_text": "Gandikota Fort & Pennar River Gorge detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AGandikota_gorge.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/gandikota-fort-gorge-gallery-3.jpg",
+        "alt_text": "Gandikota Fort & Pennar River Gorge detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ASunrise_at_Gandikota_Gorge_01.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 233,
@@ -123,7 +151,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/srisailam-mallikarjuna-temple.jpg",
     "entry_fee": "Free general darshan (Special queue ₹150–₹300)",
-    "address": "Srisailam, Nandyal District, Andhra Pradesh 518101"
+    "address": "Srisailam, Nandyal District, Andhra Pradesh 518101",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/srisailam-mallikarjuna-temple-gallery-2.jpg",
+        "alt_text": "Srisailam Sri Bhramaramba Mallikarjuna Swamy Temple detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3A2025_West_Gopuram_behind_Bhramaramba_temple_in_Srisailam.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/srisailam-mallikarjuna-temple-gallery-3.jpg",
+        "alt_text": "Srisailam Sri Bhramaramba Mallikarjuna Swamy Temple detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AAPSS303_Srisailam_town_zoom_view_from_welcome_center2.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 235,
@@ -159,7 +201,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/borra-caves.jpg",
     "entry_fee": "₹80 Adults, ₹60 Children",
-    "address": "Ananthagiri Hills, Araku Valley, Alluri Sitharama Raju District, Andhra Pradesh 535145"
+    "address": "Ananthagiri Hills, Araku Valley, Alluri Sitharama Raju District, Andhra Pradesh 535145",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/borra-caves-gallery-2.jpg",
+        "alt_text": "Borra Caves detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AThe_Borra_Caves_or_Borra_Guhalu%2C_at_Ananthagiri_hills_of_the_Araku_Valley_in_Andhra_Pradesh_01.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/borra-caves-gallery-3.jpg",
+        "alt_text": "Borra Caves detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AThe_Borra_Caves_or_Borra_Guhalu%2C_at_Ananthagiri_hills_of_the_Araku_Valley_in_Andhra_Pradesh_02.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 237,
@@ -177,7 +233,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/araku-valley.jpg",
     "entry_fee": "Free (Tribal Museum ₹40)",
-    "address": "Araku Valley, Alluri Sitharama Raju District, Andhra Pradesh 531149"
+    "address": "Araku Valley, Alluri Sitharama Raju District, Andhra Pradesh 531149",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/araku-valley-gallery-2.jpg",
+        "alt_text": "Araku Valley Hill Station & Tribal Museum detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AAraku-valley-4_big.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/araku-valley-gallery-3.jpg",
+        "alt_text": "Araku Valley Hill Station & Tribal Museum detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ATree_houses_of_Araku_Valley.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 238,
@@ -231,7 +301,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/rushikonda-beach.jpg",
     "entry_fee": "Free",
-    "address": "Rushikonda, Bheemunipatnam Road, Visakhapatnam, Andhra Pradesh 530045"
+    "address": "Rushikonda, Bheemunipatnam Road, Visakhapatnam, Andhra Pradesh 530045",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/rushikonda-beach-gallery-2.jpg",
+        "alt_text": "Rushikonda Beach detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_Rushikonda_beach_02.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/rushikonda-beach-gallery-3.jpg",
+        "alt_text": "Rushikonda Beach detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ABeach_road_near_Rushikonda%2C_Vizag.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 241,
@@ -554,7 +638,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/talakona-waterfalls.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Sri Venkateswara National Park, Tirupati District, Andhra Pradesh 517581"
+    "address": "Sri Venkateswara National Park, Tirupati District, Andhra Pradesh 517581",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/talakona-waterfalls-gallery-2.jpg",
+        "alt_text": "Talakona Waterfalls detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AManasa_Teertham_Talakona.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/talakona-waterfalls-gallery-3.jpg",
+        "alt_text": "Talakona Waterfalls detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AManasa_Teertham_Waterfalls_Near_Talakona.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 259,
@@ -571,7 +669,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/padmavathi-ammavari-temple.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Tiruchanur, Tirupati District, Andhra Pradesh 517503"
+    "address": "Tiruchanur, Tirupati District, Andhra Pradesh 517503",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/padmavathi-ammavari-temple-gallery-2.jpg",
+        "alt_text": "Sri Padmavathi Ammavari Temple detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ALotus_for_sele_in_front_of_padmavati_temple%2C_tirucanur.JPG",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/padmavathi-ammavari-temple-gallery-3.jpg",
+        "alt_text": "Sri Padmavathi Ammavari Temple detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AThe_President%2C_Shri_Ram_Nath_Kovind_visiting_Sri_Padmavathi_Ammavaru%2C_at_Tiruchanur%2C_Andhra_Pradesh_on_September_01%2C_2017.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 260,
@@ -588,7 +700,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/raghavendra-swamy-matha-mantralayam.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Mantralayam, Kurnool District, Andhra Pradesh 518345"
+    "address": "Mantralayam, Kurnool District, Andhra Pradesh 518345",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/raghavendra-swamy-matha-mantralayam-gallery-2.jpg",
+        "alt_text": "Sri Raghavendra Swamy Matha, Mantralayam detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AShri_Raghavendra_Math_02.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/raghavendra-swamy-matha-mantralayam-gallery-3.jpg",
+        "alt_text": "Sri Raghavendra Swamy Matha, Mantralayam detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AShri_Raghavendra_Math_04.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 261,
@@ -656,7 +782,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/annavaram-satyanarayana-temple.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Ratnagiri Hill, Annavaram, Kakinada District, Andhra Pradesh 533406"
+    "address": "Ratnagiri Hill, Annavaram, Kakinada District, Andhra Pradesh 533406",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/annavaram-satyanarayana-temple-gallery-2.jpg",
+        "alt_text": "Sri Veera Venkata Satyanarayana Swamy Temple, Annavaram detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AEast_gopuram_at_Annavaram_Temple_01.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/annavaram-satyanarayana-temple-gallery-3.jpg",
+        "alt_text": "Sri Veera Venkata Satyanarayana Swamy Temple, Annavaram detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AEast_gopuram_at_Annavaram_Temple_02.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 265,
@@ -724,7 +864,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/prasanthi-nilayam-puttaparthi.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Puttaparthi, Sri Sathya Sai District, Andhra Pradesh 515134"
+    "address": "Puttaparthi, Sri Sathya Sai District, Andhra Pradesh 515134",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/prasanthi-nilayam-puttaparthi-gallery-2.jpg",
+        "alt_text": "Prasanthi Nilayam & Chaitanya Jyoti Museum detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ABabas_85_birth_day.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/prasanthi-nilayam-puttaparthi-gallery-3.jpg",
+        "alt_text": "Prasanthi Nilayam & Chaitanya Jyoti Museum detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ACaitanyajyoti.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 269,
@@ -758,7 +912,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/maredumilli-eco-tourism.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Maredumilli, East Godavari District, Andhra Pradesh 533295"
+    "address": "Maredumilli, East Godavari District, Andhra Pradesh 533295",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/maredumilli-eco-tourism-gallery-2.jpg",
+        "alt_text": "Maredumilli Forest Eco-Tourism detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AMAREDUMILLI_-_river_from_the_falls.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/maredumilli-eco-tourism-gallery-3.jpg",
+        "alt_text": "Maredumilli Forest Eco-Tourism detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AMAREDUMILLI_-_waterfalls.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 271,
@@ -1064,7 +1232,21 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/thotlakonda-buddhist-complex.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Bheemili Road, Visakhapatnam District, Andhra Pradesh 530048"
+    "address": "Bheemili Road, Visakhapatnam District, Andhra Pradesh 530048",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/thotlakonda-buddhist-complex-gallery-2.jpg",
+        "alt_text": "Thotlakonda Buddhist Complex detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AThotlakonda_Buddhist_Complex_in_Visakhapatnam_in_2024%2C_March_02.jpg",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/thotlakonda-buddhist-complex-gallery-3.jpg",
+        "alt_text": "Thotlakonda Buddhist Complex detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AThotlakonda_Buddhist_Complex_in_Visakhapatnam_in_2024%2C_March_03.jpg",
+        "sort_order": 2
+      }
+    ]
   },
   {
     "id": 289,
@@ -1081,7 +1263,8 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/kanaka-mahalakshmi-temple.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Burujupeta, Visakhapatnam, Andhra Pradesh 530003"
+    "address": "Burujupeta, Visakhapatnam, Andhra Pradesh 530003",
+    "gallery_images": []
   },
   {
     "id": 290,
@@ -1200,6 +1383,20 @@
     "source_url": "https://tourism.ap.gov.in/",
     "image_url": "/assets/places/mypadu-beach.jpg",
     "entry_fee": "See current operator or temple authority schedule",
-    "address": "Mypadu, Sri Potti Sriramulu Nellore District, Andhra Pradesh 524313"
+    "address": "Mypadu, Sri Potti Sriramulu Nellore District, Andhra Pradesh 524313",
+    "gallery_images": [
+      {
+        "image_url": "/assets/places/mypadu-beach-gallery-2.jpg",
+        "alt_text": "Mypadu Beach detail photograph 2",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ABeach-nellore-india.JPG",
+        "sort_order": 1
+      },
+      {
+        "image_url": "/assets/places/mypadu-beach-gallery-3.jpg",
+        "alt_text": "Mypadu Beach detail photograph 3",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ABeachMusic.jpg",
+        "sort_order": 2
+      }
+    ]
   }
 ]

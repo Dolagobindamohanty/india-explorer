@@ -52,6 +52,15 @@ CREATE TABLE IF NOT EXISTS place_months (
     month INTEGER NOT NULL CHECK(month BETWEEN 1 AND 12),
     PRIMARY KEY(place_id, month)
 );
+CREATE TABLE IF NOT EXISTS place_images (
+    id INTEGER PRIMARY KEY,
+    place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE CASCADE,
+    image_url TEXT NOT NULL,
+    alt_text TEXT NOT NULL,
+    source_page TEXT NOT NULL,
+    sort_order INTEGER NOT NULL DEFAULT 0,
+    UNIQUE(place_id, image_url)
+);
 CREATE TABLE IF NOT EXISTS tags (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE
@@ -111,4 +120,5 @@ CREATE TABLE IF NOT EXISTS circuit_places (
 
 CREATE INDEX IF NOT EXISTS idx_district_region ON districts(region_id);
 CREATE INDEX IF NOT EXISTS idx_place_district ON places(district_id);
+CREATE INDEX IF NOT EXISTS idx_place_images_place ON place_images(place_id, sort_order);
 CREATE INDEX IF NOT EXISTS idx_month_places ON place_months(month);

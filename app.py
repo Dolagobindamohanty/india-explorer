@@ -111,6 +111,15 @@ def create_app(database_path=None):
             db.execute("ALTER TABLE places ADD COLUMN entry_fee TEXT NOT NULL DEFAULT ''")
         if 'address' not in place_columns:
             db.execute("ALTER TABLE places ADD COLUMN address TEXT NOT NULL DEFAULT ''")
+        db.execute('''CREATE TABLE IF NOT EXISTS place_images (
+            id INTEGER PRIMARY KEY,
+            place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE CASCADE,
+            image_url TEXT NOT NULL,
+            alt_text TEXT NOT NULL,
+            source_page TEXT NOT NULL,
+            sort_order INTEGER NOT NULL DEFAULT 0,
+            UNIQUE(place_id, image_url)
+        )''')
         if 'designation' not in heritage_columns:
             db.execute("ALTER TABLE heritage_sites ADD COLUMN designation TEXT NOT NULL DEFAULT 'world_heritage_site'")
         with db:
@@ -158,6 +167,25 @@ def create_app(database_path=None):
         for item in items:
             item['best_months'] = months_by_place[item['id']]
             item['tags'] = tags_by_place[item['id']]
+        with connection() as db:
+            image_rows = db.execute(
+                f'''SELECT place_id, image_url, alt_text, source_page, sort_order FROM place_images
+                    WHERE place_id IN ({placeholders}) ORDER BY sort_order, id''', ids
+            ).fetchall()
+        images_by_place = {place_id: [] for place_id in ids}
+        for image in image_rows:
+            images_by_place[image['place_id']].append(dict(image))
+        for item in items:
+            primary = item.get('image_url')
+            gallery = images_by_place[item['id']]
+            if primary and not any(image['image_url'] == primary for image in gallery):
+                gallery.insert(0, {
+                    'image_url': primary,
+                    'alt_text': f"{item['name']} destination photo",
+                    'source_page': '',
+                    'sort_order': 0,
+                })
+            item['images'] = gallery
         return items
 
     place_select = '''SELECT p.*, d.name AS district, d.slug AS district_slug,
@@ -524,8 +552,19 @@ def create_app(database_path=None):
         addr_pill = f'<span>📍 {escape(result["address"] or result["district"] + ", " + result["state"])}</span>'
 
         place_hero = f'''<div class="state-hero place-hero-banner" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.06) 0%,rgba(15,28,24,0.55) 60%,rgba(15,28,24,0.92) 100%),url('{image_url}')"><button type="button" class="hero-photo-toggle" aria-label="Toggle photo view" title="View unobstructed photo">👁 View Photo</button><div class="state-hero-card place-hero-card"><span class="hero-badge-pill">{escape(result['category'].title())} · {escape(result['district'])} · {escape(result['state'])}</span><h1>{escape(result['name'])}</h1><div class="hero-stats-strip">{addr_pill}{fee_pill}<a href="{image_url}" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" title="View full resolution photo">🖼 Fullscreen Photo ↗</a></div></div></div>'''
+        gallery_images = result.get('images', [])
+        if len(gallery_images) > 1:
+            main_image = gallery_images[0]
+            side_images = gallery_images[1:3]
+            side_html = ''.join(
+                f'''<a href="{escape(image['image_url'], quote=True)}" target="_blank" rel="noopener noreferrer"><img src="{escape(image['image_url'], quote=True)}" alt="{escape(image['alt_text'])}" loading="lazy"><span class="place-gallery-caption">Photo {index + 2}</span></a>'''
+                for index, image in enumerate(side_images)
+            )
+            gallery_html = f'''<section class="place-gallery" aria-label="Photo gallery for {escape(result['name'])}"><a class="place-gallery-main" href="{escape(main_image['image_url'], quote=True)}" target="_blank" rel="noopener noreferrer"><img src="{escape(main_image['image_url'], quote=True)}" alt="{escape(main_image['alt_text'])}"><span class="place-gallery-caption">Photo 1 of {len(gallery_images)}</span></a><div class="place-gallery-side">{side_html}</div></section>'''
+        else:
+            gallery_html = ''
 
-        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{place_hero}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
+        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{place_hero}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}')
 
     @app.get('/circuits', response_class=HTMLResponse)

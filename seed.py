@@ -637,6 +637,17 @@ def seed(db):
             place_extra_data[op['slug']] = (op.get('entry_fee', ''), op.get('address', ''))
     for slug, (fee, addr) in place_extra_data.items():
         db.execute('UPDATE places SET entry_fee=?, address=? WHERE slug=?', (fee, addr, slug))
+    for op in canonical_extra:
+        for image in op.get('gallery_images', []):
+            db.execute(
+                '''INSERT OR IGNORE INTO place_images
+                    (place_id, image_url, alt_text, source_page, sort_order)
+                    VALUES (?, ?, ?, ?, ?)''',
+                (
+                    op['id'], image['image_url'], image['alt_text'],
+                    image['source_page'], image.get('sort_order', 1),
+                ),
+            )
 
     custom_months = {
         50: [7, 8, 9],  # Chandratal Lake: strictly late June/July to mid-September
