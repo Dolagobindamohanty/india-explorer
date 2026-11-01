@@ -31,6 +31,13 @@ body[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+html {
+  /* Prevents the sticky nav's full-bleed glass background (100vw includes the
+     scrollbar width) from creating a horizontal scroll region that makes the
+     header jitter while scrolling. `clip` (not `hidden`) keeps sticky working. */
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -94,12 +101,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   z-index: -1;
   transition: opacity 0.3s ease;
   pointer-events: none;
-}
-
-.nav.scrolled {
-  padding-top: 14px;
-  padding-bottom: 14px;
-  transition: padding 0.3s ease;
 }
 
 .nav.scrolled::before {
