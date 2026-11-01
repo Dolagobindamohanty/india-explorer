@@ -167,12 +167,25 @@ function initCategoryFilterStrip() {
 async function statePage(slug) {
   const s = await api('states/' + encodeURIComponent(slug));
   const cover = image(s.cover_image_url, s.slug);
-  return `${breadcrumb([['States', '/area'], [s.name]])}<div class="state-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><button type="button" class="hero-photo-toggle" aria-label="Toggle photo view" title="View unobstructed photo">👁 View Photo</button><div class="state-hero-card"><span class="hero-badge-pill">${esc(s.kind === 'union_territory' ? 'Union territory' : 'State')} Guide</span><h1>${esc(s.name)}</h1><p>${esc(s.description)}</p><div class="hero-stats-strip"><span>🏛 <strong>${s.districts.length}</strong> districts</span><span>📍 <strong>${s.places.length}</strong> curated attractions</span><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" title="View landmark photo">🖼 Fullscreen Photo ↗</a></div></div></div><div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">${s.places.length} attractions</span></div>${categoryFilterHtml(s.places)}${cards(s.places)}</section>`;
+  const kindLabel = s.kind === 'union_territory' ? 'Union Territory' : 'State';
+  const sourceLink = s.source_url ? `<a href="${esc(s.source_url)}" target="_blank" rel="noopener noreferrer" class="region-source-link">Official Tourism Portal ↗</a>` : '';
+
+  const headerHtml = `<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">🏛 ${esc(kindLabel)} Guide</span></div><h1 class="region-title">${esc(s.name)}</h1><p class="region-lead">${esc(s.description)}</p><div class="region-meta-bar"><span class="region-meta-item">🏛 <strong>${s.districts.length}</strong> administrative districts</span><span class="region-meta-item">📍 <strong>${s.places.length}</strong> curated attractions</span>${sourceLink}<a href="#destinations" class="region-jump-link">Explore Attractions ↓</a></div></header>`;
+
+  const visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(s.name)} scenic landmark" loading="eager"><span class="region-visual-caption">📍 ${esc(s.name)} · View Photo ↗</span></a></div>`;
+
+  return `${breadcrumb([['States', '/area'], [s.name]])}${headerHtml}${visualHtml}<div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">${s.places.length} attractions</span></div>${categoryFilterHtml(s.places)}${cards(s.places)}</section>`;
 }
 async function districtPage(slug) {
   const d = await api('districts/' + encodeURIComponent(slug));
   const cover = fallbackImage(d.state_slug);
-  return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}<div class="state-hero district-hero" style="background-image:linear-gradient(180deg,rgba(15,28,24,0.08) 0%,rgba(15,28,24,0.65) 60%,rgba(15,28,24,0.92) 100%),url('${esc(cover)}')"><button type="button" class="hero-photo-toggle" aria-label="Toggle photo view" title="View unobstructed photo">👁 View Photo</button><div class="state-hero-card"><span class="hero-badge-pill">${esc(d.state)} · District Field Guide</span><h1>${esc(d.name)}</h1><p>${esc(d.description)}</p><div class="hero-stats-strip"><span>📍 <strong>${d.places.length}</strong> detailed attractions</span><span>🎉 <strong>${d.festivals.length}</strong> festivals</span><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" title="View landmark photo">🖼 Fullscreen Photo ↗</a></div></div></div><div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">${d.places.length} attractions in ${esc(d.name)}</span></div>${categoryFilterHtml(d.places)}${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
+  const sourceLink = d.source_url ? `<a href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer" class="region-source-link">Official information ↗</a>` : '';
+
+  const headerHtml = `<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">District Field Guide</span><span class="place-region-text"><a href="/state/${esc(d.state_slug)}">${esc(d.state)}</a></span></div><h1 class="region-title">${esc(d.name)}</h1><p class="region-lead">${esc(d.description)}</p><div class="region-meta-bar"><span class="region-meta-item">📍 <strong>${d.places.length}</strong> detailed attractions</span><span class="region-meta-item">🎉 <strong>${d.festivals.length}</strong> festivals</span>${sourceLink}<a href="#destinations" class="region-jump-link">Explore Attractions ↓</a></div></header>`;
+
+  const visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(d.name)} landmark photo" loading="eager"><span class="region-visual-caption">📍 ${esc(d.name)}, ${esc(d.state)} · View Photo ↗</span></a></div>`;
+
+  return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}${headerHtml}${visualHtml}<div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">${d.places.length} attractions in ${esc(d.name)}</span></div>${categoryFilterHtml(d.places)}${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
 }
 async function placePage(slug) {
   const p = await api('places/' + encodeURIComponent(slug));
@@ -261,14 +274,10 @@ async function circuitsPage() {
 
 async function circuitPage(slug) {
   const c = await api('circuits/' + encodeURIComponent(slug));
-  return `${breadcrumb([['Travel trails', '/circuits'], [c.name]])}
-    <div class="state-hero" style="background-image:linear-gradient(90deg,rgba(30,58,95,.92),rgba(30,58,95,.28)),url('${esc(c.cover_image_url)}')">
-      <div>
-        <p class="eyebrow">Curated Trail · ${esc(c.duration)}</p>
-        <h1>${esc(c.name)}</h1>
-        <p>${esc(c.tagline)}</p>
-      </div>
-    </div>
+  const cover = esc(c.cover_image_url || '/assets/state-cover.svg');
+  const headerHtml = `<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">Curated Trail · ${esc(c.duration)}</span></div><h1 class="region-title">${esc(c.name)}</h1><p class="region-lead">${esc(c.tagline)}</p><div class="region-meta-bar"><span class="region-meta-item">🗓 Best season: <strong>${esc(c.best_season)}</strong></span><span class="region-meta-item">🧭 <strong>${c.stops.length}</strong> curated stops</span><span class="region-meta-item">⏱ <strong>${esc(c.duration)}</strong></span></div></header>`;
+  const visualHtml = `<div class="region-visual"><img src="${cover}" alt="${esc(c.name)} trail cover" loading="eager"><span class="region-visual-caption">📍 ${esc(c.name)}</span></div>`;
+  return `${breadcrumb([['Travel trails', '/circuits'], [c.name]])}${headerHtml}${visualHtml}
     <div class="circuit-detail-header">
       <div class="circuit-meta-pill"><strong>Duration:</strong> ${esc(c.duration)}</div>
       <div class="circuit-meta-pill"><strong>Best season:</strong> ${esc(c.best_season)}</div>
@@ -293,7 +302,7 @@ async function circuitPage(slug) {
     </section>
     <section class="section">
       <h2>Destinations on this trail</h2>
-      ${cards(c.stops)}
+      ${cards(c.stops.map(s => ({ ...s, district_slug: '', state_slug: s.state_slug || '' })))}
     </section>`;
 }
 
@@ -711,20 +720,6 @@ document.addEventListener('click', e => {
   if (e.target === overlay) {
     closeSpotlight();
     return;
-  }
-
-  // Hero Photo View Toggle
-  const photoToggle = e.target.closest('.hero-photo-toggle');
-  if (photoToggle) {
-    const hero = photoToggle.closest('.state-hero');
-    if (hero) {
-      const card = hero.querySelector('.state-hero-card');
-      if (card) {
-        const isCollapsed = card.classList.toggle('card-collapsed');
-        photoToggle.textContent = isCollapsed ? '✕ Show Guide' : '👁 View Photo';
-        photoToggle.classList.toggle('active', isCollapsed);
-      }
-    }
   }
 });
 

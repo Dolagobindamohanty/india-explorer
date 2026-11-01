@@ -1110,69 +1110,162 @@ body[data-theme="dark"] footer small {
   background: linear-gradient(135deg, #244c3c, #b85b3a);
 }
 
-.state-hero {
-  min-height: 480px;
-  border-radius: 20px;
-  background-color: #14241e;
-  background-size: cover;
-  background-position: center 35%;
-  display: flex;
-  align-items: flex-end;
-  padding: 34px;
-  color: white;
-  margin-bottom: 34px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+/* Region (State / UT / District / Circuit) Header & Visual Showcase */
+.region-header {
+  margin-top: 14px;
+  margin-bottom: 22px;
 }
 
-.hero-photo-toggle {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 5;
-  background: rgba(18, 30, 25, 0.72);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.region-header-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.region-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
   border-radius: 20px;
-  padding: 8px 16px;
+  background: var(--surface-2);
+  color: var(--green);
+  border: 1px solid var(--line);
   font-size: 12px;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
-.hero-photo-toggle:hover {
-  background: rgba(18, 30, 25, 0.95);
-  border-color: rgba(255, 255, 255, 0.6);
+body[data-theme="dark"] .region-badge-pill {
+  color: var(--orange);
 }
 
-.hero-photo-toggle.active {
-  background: var(--orange);
-  border-color: var(--orange);
+.region-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(32px, 4.5vw, 52px);
+  color: var(--heading);
+  margin: 0 0 14px;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
 }
 
-.state-hero-card {
+.region-lead {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 820px;
+  margin: 0 0 18px;
+}
+
+.region-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--muted);
+  padding-bottom: 4px;
+}
+
+.region-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.region-meta-bar strong {
+  color: var(--heading);
+}
+
+.region-source-link,
+.region-jump-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.region-source-link:hover,
+.region-jump-link:hover {
+  text-decoration: underline;
+}
+
+body[data-theme="dark"] .region-source-link,
+body[data-theme="dark"] .region-jump-link {
+  color: var(--orange);
+}
+
+.region-jump-link {
+  margin-left: auto;
+  padding: 5px 14px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+/* Region Landscape Showcase Frame */
+.region-visual {
   position: relative;
-  z-index: 2;
-  background: rgba(18, 30, 25, 0.76);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
   border-radius: 18px;
-  padding: 26px 32px;
-  max-width: 740px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  background: var(--surface-2);
+  margin-bottom: 38px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: clamp(320px, 42vw, 480px);
 }
 
-.state-hero-card.card-collapsed {
-  opacity: 0;
-  transform: translateY(30px);
-  visibility: hidden;
+.region-visual a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.region-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.region-visual a:hover img {
+  transform: scale(1.015);
+}
+
+.region-visual-caption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(18, 30, 25, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   pointer-events: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .region-visual {
+    height: 240px;
+  }
+  .region-jump-link {
+    margin-left: 0;
+  }
 }
 
 /* Place Page Header & Photo Showcase */
@@ -1344,66 +1437,6 @@ body[data-theme="dark"] .place-region-text a:hover {
     margin-left: 0;
     width: 100%;
   }
-}
-
-.hero-badge-pill {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  background: rgba(240, 154, 115, 0.2);
-  color: #f5bfa4;
-  border: 1px solid rgba(240, 154, 115, 0.4);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.state-hero h1 {
-  font-size: clamp(32px, 4.5vw, 52px);
-  margin-bottom: 10px;
-  line-height: 1.12;
-  color: #ffffff;
-}
-
-.state-hero p:not(.eyebrow) {
-  color: #dce7df;
-  max-width: 650px;
-  margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.hero-stats-strip {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 13px;
-  color: #f7f6f0;
-}
-
-.hero-stats-strip strong {
-  color: #ffffff;
-}
-
-.hero-cta-btn {
-  margin-left: auto;
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: var(--orange);
-  color: #ffffff !important;
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none !important;
-  transition: opacity 0.2s;
-}
-
-.hero-cta-btn:hover {
-  opacity: 0.9;
 }
 
 .directory-preview {
