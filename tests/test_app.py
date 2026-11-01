@@ -338,6 +338,9 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Kerala' in kerala_page
     assert 'state-marquee-wrap' in kerala_page
     assert 'state-marquee-item' in kerala_page
+    assert 'back-to-top' in explore
+    assert 'footer-links' in explore
+    assert 'brand-emblem' in explore
     assert 'Alappuzha' in client.get('/district/alappuzha').text
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
     tirumala_page = client.get('/place/tirumala-venkateswara-temple').text

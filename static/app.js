@@ -784,6 +784,19 @@ initHeroSlideshow();
 initExploreMap();
 initAreaFilter();
 initCategoryFilterStrip();
+function initScrollChrome() {
+  const navEl = document.querySelector('.nav');
+  const backToTop = document.getElementById('back-to-top');
+  const onScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    if (navEl) navEl.classList.toggle('scrolled', y > 10);
+    if (backToTop) backToTop.classList.toggle('visible', y > 560);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if (backToTop) backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+initScrollChrome();
 if (document.body.dataset.serverRendered !== 'true') {
   window.addEventListener('hashchange', route);
   route();

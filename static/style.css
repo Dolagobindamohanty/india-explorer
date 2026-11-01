@@ -73,6 +73,112 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
   gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.nav.scrolled {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transition: padding 0.3s ease;
+}
+
+.nav.scrolled::before {
+  opacity: 1;
+}
+
+/* Floating Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  z-index: 45;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--green);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+}
+
+body[data-theme="dark"] .back-to-top {
+  color: var(--orange);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--green);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+body[data-theme="dark"] .back-to-top:hover {
+  background: var(--orange);
+  color: #16221e;
+}
+
+/* Footer Quick Links */
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--green);
+  text-decoration: none;
+}
+
+body[data-theme="dark"] .footer-links a:hover {
+  color: var(--orange);
 }
 
 .brand {
