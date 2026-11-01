@@ -8,7 +8,7 @@ Each state features its most iconic landmark photograph.
 import json
 from pathlib import Path
 
-from data_pipeline import load_state_dataset, normalize_place
+from data_pipeline import load_all_state_datasets, load_state_dataset, normalize_place
 
 ROOT = Path(__file__).resolve().parent
 
@@ -535,24 +535,24 @@ def seed(db):
         (143, 544, 'chandipur-beach', 'Chandipur Beach (The Vanishing Sea)', 'A unique coastal wonder on the Bay of Bengal in northern Odisha, where the sea recedes up to 5 kilometers during low tide twice every day, revealing a vast, flat expanse of the seabed where visitors can walk, ride bicycles, and spot red ghost crabs and horseshoe crabs. When high tide rolls in, the waters rush back to lap against the tranquil casuarina-lined shoreline.', 'beach', 21.4667, 87.0167, 'Located 16 km from Balasore city and railway station (connected to the Kolkata-Chennai mainline). Easily reachable by auto-rickshaw or taxi.', 'Open 24 hours. Free entry. Always observe local tide tables before venturing far out onto the exposed seabed, and return before high tide begins. Fresh fried coastal seafood and soft green coconuts sold by local beach vendors. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/chandipur-beach', place_image('chandipur-beach')),
         (144, 564, 'satkosia-gorge', 'Satkosia Gorge Sanctuary & Mahanadi Eco-Camps', 'A monumental natural spectacle where the mighty Mahanadi River carves a dramatic 22-kilometer-long gorge through the dense sal and teak forests of the Eastern Ghats. Sheltering the Satkosia Tiger Reserve, the gorge is one of India’s premier sanctuaries for the endangered freshwater gharial and mugger crocodiles, hornbills, and leopards. Visitors experience deep canyon boat safaris and tented riverbank eco-camps.', 'nature', 20.5833, 84.8667, 'Major access points are at Tikarpada (via Angul, 60 km) and Chhotkei / Badmul (via Nayagarh, 75 km from Bhubaneswar).', 'Sanctuary open 7:00 AM to 5:00 PM (safaris and camping operate October to May; boat safaris suspended during monsoon). Entry fee: ₹40 per person; boat safaris ₹1,500–₹2,500. Eco-resorts with Swiss luxury tents operated by Odisha Ecotourism at Badmul and Tikarpada. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/satkosia-gorge-tiger-reserve', place_image('satkosia-gorge')),
     ]
-    odisha_dataset = load_state_dataset('odisha')
-    odisha_extra = odisha_dataset['places'] if odisha_dataset else []
-    if odisha_extra:
-        for raw_place in odisha_extra:
-            op = normalize_place(raw_place)
+    canonical_extra = []
+    for dataset in load_all_state_datasets():
+        canonical_extra.extend(map(normalize_place, dataset.get('places', [])))
+    if canonical_extra:
+        for op in canonical_extra:
             places.append((
                 op['id'], op['district_id'], op['slug'], op['name'], op['description'],
                 op['category'], op['latitude'], op['longitude'], op['how_to_reach'],
-                op['practical_notes'], op['heritage_id'], op['source_url'],
+                op['practical_notes'], op.get('heritage_id'), op['source_url'],
                 place_image(op['slug'])
             ))
     db.executemany('''INSERT OR IGNORE INTO places
         (id,district_id,slug,name,description,category,latitude,longitude,how_to_reach,practical_notes,heritage_id,source_url,image_url)
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)''', places)
     db.executemany('UPDATE places SET image_url=? WHERE id=?', [(p[12], p[0]) for p in places])
-    # Odisha records are sourced from a maintained JSON dataset. Update existing
+    # State records sourced from maintained datasets. Update existing
     # rows too so corrections are applied to databases created by earlier releases.
-    if odisha_extra:
+    if canonical_extra:
         db.executemany('''UPDATE places SET
                 district_id=?, name=?, description=?, category=?, latitude=?, longitude=?,
                 how_to_reach=?, practical_notes=?, heritage_id=?, source_url=?, image_url=?
@@ -560,10 +560,10 @@ def seed(db):
                 (
                     op['district_id'], op['name'], op['description'], op['category'],
                     op['latitude'], op['longitude'], op['how_to_reach'],
-                    op['practical_notes'], op['heritage_id'], op['source_url'],
+                    op['practical_notes'], op.get('heritage_id'), op['source_url'],
                     place_image(op['slug']), op['slug'],
                 )
-                for op in map(normalize_place, odisha_extra)
+                for op in canonical_extra
             ])
 
     place_extra_data = {
@@ -632,9 +632,9 @@ def seed(db):
         'chandipur-beach': ('Free', 'Chandipur, Balasore District'),
         'satkosia-gorge': ('₹40 per person', 'Tikarpada / Badmul, Nayagarh & Angul Districts'),
     }
-    if odisha_extra:
-        for op in map(normalize_place, odisha_extra):
-            place_extra_data[op['slug']] = (op['entry_fee'], op['address'])
+    if canonical_extra:
+        for op in canonical_extra:
+            place_extra_data[op['slug']] = (op.get('entry_fee', ''), op.get('address', ''))
     for slug, (fee, addr) in place_extra_data.items():
         db.execute('UPDATE places SET entry_fee=?, address=? WHERE slug=?', (fee, addr, slug))
 
@@ -747,6 +747,9 @@ def seed(db):
         (47, 'Rajarani Music Festival', 'An extraordinary three-day festival of classical Hindustani and Carnatic music held in January amidst the lush emerald lawns of the 11th-century Rajarani Temple in Bhubaneswar.', 'fixed', 'https://odishatourism.gov.in/en/events', [('odisha', 'khordha')], [1]),
         (48, 'Dhauli-Kalinga Mahotsav', 'A national celebration of Indian classical and martial dance traditions held at the foothills of the historic Dhauli Shanti Stupa, commemorating peace, harmony, and non-violence.', 'fixed', 'https://odishatourism.gov.in/en/events', [('odisha', 'khordha')], [2]),
         (49, 'Magha Saptami & Chandrabhaga Mela', 'Hundreds of thousands of pilgrims congregate on the shores of Chandrabhaga Beach near Konark at dawn on Magha Saptami to take a holy dip in the sea and offer prayers to Surya at sunrise.', 'lunar', 'https://odishatourism.gov.in/en/events', [('odisha', 'puri')], [2]),
+        (50, 'Tirumala Srivari Brahmotsavam', 'The majestic nine-day celestial celebration of Lord Venkateswara at Tirumala during Navratri, featuring grand daily vahanam processions including Garuda Seva and Rathotsavam.', 'lunar', 'https://tourism.ap.gov.in/', [('andhra-pradesh', 'tirupati')], [9, 10]),
+        (51, 'Flamingo Festival', 'A premier annual eco-tourism and birdwatching festival held at Pulicat Lake and Nelapattu Bird Sanctuary, celebrating the arrival of thousands of migratory flamingos and pelicans.', 'fixed', 'https://tourism.ap.gov.in/', [('andhra-pradesh', 'sri-potti-sriramulu-nellore')], [1]),
+        (52, 'Visakha Utsav', 'A grand coastal cultural festival celebrated along Rama Krishna Beach in Visakhapatnam, featuring traditional Andhra music, classical Kuchipudi dance recitals, folk arts, and food festivals.', 'fixed', 'https://tourism.ap.gov.in/', [('andhra-pradesh', 'visakhapatnam')], [12, 1]),
         (50, 'National Chilika Bird Festival', 'An eco-tourism celebration at Mangalajodi and Satapada along Chilika Lake, bringing international birdwatchers, photographers, and boat safaris to celebrate over a million migratory birds.', 'fixed', 'https://odishatourism.gov.in/en/national-chilika-bird-festival', [('odisha', 'puri'), ('odisha', 'khordha')], [1]),
     ]
 

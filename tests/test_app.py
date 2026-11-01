@@ -45,7 +45,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 227
+    assert len(all_places) == 257
     assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -55,6 +55,9 @@ def test_full_destination_journey(client):
     odisha = client.get('/api/states/odisha').json()
     assert len(odisha['districts']) == 30
     assert len(odisha['places']) == 111
+    ap = client.get('/api/states/andhra-pradesh').json()
+    assert len(ap['districts']) == 26
+    assert len(ap['places']) == 30
     north_goa = client.get('/api/districts/north-goa').json()
     assert len(north_goa['places']) == 5
     assert {p['slug'] for p in north_goa['places']} >= {'basilica-bom-jesus', 'fontainhas', 'aguada-fort', 'se-cathedral', 'anjuna-beach'}
@@ -181,7 +184,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 227
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 257
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -214,7 +217,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 227}
+    assert response.json() == {'status': 'ok', 'places': 257}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -281,8 +284,11 @@ def test_canonical_data_and_seeded_catalogue_validate(tmp_path):
     assert warnings
     report = import_report()
     assert report['errors'] == []
-    assert report['states'][0]['slug'] == 'odisha'
-    assert report['states'][0]['place_count'] == 83
+    state_slugs = {s['slug']: s for s in report['states']}
+    assert 'odisha' in state_slugs
+    assert state_slugs['odisha']['place_count'] == 83
+    assert 'andhra-pradesh' in state_slugs
+    assert state_slugs['andhra-pradesh']['place_count'] == 30
 
 
 def test_every_state_and_union_territory_route_is_clean(client):
@@ -316,7 +322,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 227}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 257}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -373,8 +379,8 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 227,
+        'detailed_places': 257,
         'reviewed_places': 0,
-        'unreviewed_places': 227,
+        'unreviewed_places': 257,
         'confirmed_festival_dates': 0,
     }

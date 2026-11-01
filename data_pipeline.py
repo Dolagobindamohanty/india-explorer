@@ -35,8 +35,22 @@ def state_manifest_paths():
 
 def dataset_version_bytes():
     """Return all canonical data bytes so deployment DB versions change with data."""
-    paths = [DATA_DIR / 'india-states-districts.json', DATA_DIR / 'odisha-places.json']
-    paths.extend(state_manifest_paths())
+    paths = [DATA_DIR / 'india-states-districts.json']
+    for manifest_path in state_manifest_paths():
+        paths.append(manifest_path)
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+            places_file = manifest.get('places_file')
+            if places_file:
+                resolved_path = (manifest_path.parent / places_file).resolve()
+                if resolved_path.exists():
+                    paths.append(resolved_path)
+        except Exception:
+            pass
+    # Keep fallback for legacy odisha file if not in manifests
+    legacy_odisha = DATA_DIR / 'odisha-places.json'
+    if legacy_odisha.exists() and legacy_odisha not in paths:
+        paths.append(legacy_odisha)
     return b''.join(path.read_bytes() for path in paths if path.exists())
 
 
@@ -54,6 +68,16 @@ def load_state_dataset(state_slug):
         manifest['places'] = json.loads(resolved_path.read_text(encoding='utf-8'))
     manifest.setdefault('places', [])
     return manifest
+
+
+def load_all_state_datasets():
+    """Load all state manifests in alphabetical order."""
+    datasets = []
+    for path in state_manifest_paths():
+        dataset = load_state_dataset(path.stem)
+        if dataset:
+            datasets.append(dataset)
+    return datasets
 
 
 def normalize_place(place):

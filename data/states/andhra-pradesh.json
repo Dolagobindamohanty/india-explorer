@@ -1,0 +1,7 @@
+{
+  "slug": "andhra-pradesh",
+  "name": "Andhra Pradesh",
+  "kind": "state",
+  "source_url": "https://tourism.ap.gov.in/",
+  "places_file": "../andhra-pradesh-places.json"
+}
