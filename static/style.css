@@ -1268,6 +1268,121 @@ body[data-theme="dark"] .region-jump-link {
   }
 }
 
+/* Continuous State Destinations Photo Marquee */
+.state-marquee-wrap {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 34px;
+  border-radius: 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 12px 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+}
+
+.state-marquee-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: continuousMarquee 45s linear infinite;
+  will-change: transform;
+}
+
+.state-marquee-wrap:hover .state-marquee-track {
+  animation-play-state: paused;
+}
+
+.state-marquee-item {
+  position: relative;
+  display: block;
+  flex: 0 0 215px;
+  height: 138px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  text-decoration: none;
+}
+
+.state-marquee-item:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  border-color: var(--green);
+  text-decoration: none;
+}
+
+body[data-theme="dark"] .state-marquee-item:hover {
+  border-color: var(--orange);
+}
+
+.state-marquee-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.state-marquee-meta {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 16px 10px 8px;
+  background: linear-gradient(to top, rgba(14, 26, 21, 0.88) 0%, rgba(14, 26, 21, 0.5) 60%, transparent 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  pointer-events: none;
+}
+
+.state-marquee-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+
+.state-marquee-sub {
+  font-size: 10px;
+  color: #d2ded5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+@keyframes continuousMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .state-marquee-item {
+    flex: 0 0 175px;
+    height: 115px;
+  }
+  .state-marquee-track {
+    animation-duration: 32s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .state-marquee-track {
+    animation: none;
+    overflow-x: auto;
+  }
+}
+
 /* Place Page Header & Photo Showcase */
 .place-header {
   margin-top: 14px;

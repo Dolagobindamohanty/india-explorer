@@ -334,7 +334,10 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Find your kind of place' in explore
     assert 'class="art"' in explore
     assert 'Alappuzha Backwaters' in explore
-    assert 'Kerala' in client.get('/state/kerala').text
+    kerala_page = client.get('/state/kerala').text
+    assert 'Kerala' in kerala_page
+    assert 'state-marquee-wrap' in kerala_page
+    assert 'state-marquee-item' in kerala_page
     assert 'Alappuzha' in client.get('/district/alappuzha').text
     assert 'Alappuzha Beach' in client.get('/place/alappuzha-beach').text
     tirumala_page = client.get('/place/tirumala-venkateswara-temple').text

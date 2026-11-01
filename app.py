@@ -146,7 +146,7 @@ def create_app(database_path=None):
             return items
         # A prior Odisha import stored a dash after every character in some
         # records. Keep responses readable while old serverless databases drain.
-        repair_display_text(items, ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address'))
+        repair_display_text(items, ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address', 'district', 'state'))
         ids = [item['id'] for item in items]
         placeholders = ','.join('?' for _ in ids)
         with connection() as db:
@@ -489,6 +489,20 @@ def create_app(database_path=None):
             return f'<div class="breadcrumb"><a href="/">Home</a> / <a href="{escape(parent_url)}">{escape(parent_label)}</a> / {escape(label)}</div>'
         return f'<div class="breadcrumb"><a href="/">Home</a> / {escape(label)}</div>'
 
+    def state_marquee_html(places, state_name, fallback_cover):
+        with_img = [p for p in places if p.get('image_url')]
+        if not with_img:
+            return f'''<div class="region-visual"><a href="{fallback_cover}" target="_blank" rel="noopener noreferrer"><img src="{fallback_cover}" alt="{escape(state_name)} scenic landmark" loading="eager"><span class="region-visual-caption">📍 {escape(state_name)} · View Photo ↗</span></a></div>'''
+        sample = with_img[:24]
+        items = list(sample)
+        while len(items) < 10:
+            items.extend(sample)
+        cards = ''.join(
+            f'''<a href="/place/{escape(p['slug'])}" class="state-marquee-item" title="{escape(p['name'])}"><img src="{escape(p['image_url'], quote=True)}" alt="{escape(p['name'])}" loading="lazy"><div class="state-marquee-meta"><span class="state-marquee-title">{escape(p['name'])}</span><span class="state-marquee-sub">{escape(p.get('district', ''))} · {escape(p.get('category', '').title())}</span></div></a>'''
+            for p in items
+        )
+        return f'''<div class="state-marquee-wrap" aria-label="Attractions across {escape(state_name)}"><div class="state-marquee-track">{cards}{cards}</div></div>'''
+
     @app.get('/state/{slug}', response_class=HTMLResponse)
     def rendered_state(slug: str):
         result = one('SELECT * FROM regions WHERE slug=?', (slug,))
@@ -505,7 +519,7 @@ def create_app(database_path=None):
 
         header_html = f'''<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">🏛 {escape(kind_label)} Guide</span></div><h1 class="region-title">{escape(result['name'])}</h1><p class="region-lead">{escape(result['description'])}</p><div class="region-meta-bar"><span class="region-meta-item">🏛 <strong>{len(result['districts'])}</strong> administrative districts</span><span class="region-meta-item">📍 <strong>{len(result['places'])}</strong> curated attractions</span>{source_link}<a href="#destinations" class="region-jump-link">Explore Attractions ↓</a></div></header>'''
 
-        visual_html = f'''<div class="region-visual"><a href="{cover}" target="_blank" rel="noopener noreferrer"><img src="{cover}" alt="{escape(result['name'])} scenic landmark" loading="eager"><span class="region-visual-caption">📍 {escape(result['name'])} · View Photo ↗</span></a></div>'''
+        visual_html = state_marquee_html(result['places'], result['name'], cover)
 
         content = f'''{breadcrumb_html(result['name'], 'States', '/area')}{header_html}{visual_html}<div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in {escape(result['name'])}</h2></div><span class="meta">{len(result['districts'])} district entries</span></div><div class="districts">{districts_html}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">{len(result['places'])} attractions</span></div>{category_filter_strip(result['places'])}{server_cards(result['places'])}</section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/state/{slug}')
@@ -522,7 +536,7 @@ def create_app(database_path=None):
 
         header_html = f'''<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">District Field Guide</span><span class="place-region-text"><a href="/state/{escape(result['state_slug'])}">{escape(result['state'])}</a></span></div><h1 class="region-title">{escape(result['name'])}</h1><p class="region-lead">{escape(result['description'])}</p><div class="region-meta-bar"><span class="region-meta-item">📍 <strong>{len(result['places'])}</strong> detailed attractions</span><span class="region-meta-item">🎉 <strong>{len(result['festivals'])}</strong> festivals</span>{source_link}<a href="#destinations" class="region-jump-link">Explore Attractions ↓</a></div></header>'''
 
-        visual_html = f'''<div class="region-visual"><a href="{cover}" target="_blank" rel="noopener noreferrer"><img src="{cover}" alt="{escape(result['name'])} landmark photo" loading="eager"><span class="region-visual-caption">📍 {escape(result['name'])}, {escape(result['state'])} · View Photo ↗</span></a></div>'''
+        visual_html = state_marquee_html(result['places'], result['name'], cover)
 
         content = f'''{breadcrumb_html(result['name'], result['state'], f'/state/{result["state_slug"]}')}{header_html}{visual_html}<div class="band"><div><h3>A taste of the district</h3><p>{escape(result['food_notes'])}</p></div><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">{len(result['places'])} attractions in {escape(result['name'])}</span></div>{category_filter_strip(result['places'])}{server_cards(result['places'])}</section><section class="section"><h2>Local celebrations</h2><div class="cards two">{festival_html}</div></section>'''
         return page_document(result['name'], content, result['description'], canonical_path=f'/district/{slug}')

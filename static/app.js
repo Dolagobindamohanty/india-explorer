@@ -172,7 +172,26 @@ async function statePage(slug) {
 
   const headerHtml = `<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">🏛 ${esc(kindLabel)} Guide</span></div><h1 class="region-title">${esc(s.name)}</h1><p class="region-lead">${esc(s.description)}</p><div class="region-meta-bar"><span class="region-meta-item">🏛 <strong>${s.districts.length}</strong> administrative districts</span><span class="region-meta-item">📍 <strong>${s.places.length}</strong> curated attractions</span>${sourceLink}<a href="#destinations" class="region-jump-link">Explore Attractions ↓</a></div></header>`;
 
-  const visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(s.name)} scenic landmark" loading="eager"><span class="region-visual-caption">📍 ${esc(s.name)} · View Photo ↗</span></a></div>`;
+  const placesWithImages = (s.places || []).filter(p => p.image_url);
+  let visualHtml = '';
+  if (placesWithImages.length > 0) {
+    let items = placesWithImages.slice(0, 24);
+    while (items.length < 10) {
+      items = items.concat(placesWithImages.slice(0, 24));
+    }
+    const cardsHtml = items.map(p => `
+      <a href="/place/${esc(p.slug)}" class="state-marquee-item" title="${esc(p.name)}">
+        <img src="${esc(p.image_url)}" alt="${esc(p.name)}" loading="lazy">
+        <div class="state-marquee-meta">
+          <span class="state-marquee-title">${esc(p.name)}</span>
+          <span class="state-marquee-sub">${esc(p.district || '')} · ${esc(categoryLabel(p.category))}</span>
+        </div>
+      </a>
+    `).join('');
+    visualHtml = `<div class="state-marquee-wrap" aria-label="Attractions across ${esc(s.name)}"><div class="state-marquee-track">${cardsHtml}${cardsHtml}</div></div>`;
+  } else {
+    visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(s.name)} scenic landmark" loading="eager"><span class="region-visual-caption">📍 ${esc(s.name)} · View Photo ↗</span></a></div>`;
+  }
 
   return `${breadcrumb([['States', '/area'], [s.name]])}${headerHtml}${visualHtml}<div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in ${esc(s.name)}</h2></div><span class="meta">${s.districts.length} district entries</span></div><div class="districts">${s.districts.map(d => `<a href="/district/${esc(d.slug)}">${esc(d.name)} <span>↗</span></a>`).join('')}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">${s.places.length} attractions</span></div>${categoryFilterHtml(s.places)}${cards(s.places)}</section>`;
 }
@@ -183,7 +202,26 @@ async function districtPage(slug) {
 
   const headerHtml = `<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">District Field Guide</span><span class="place-region-text"><a href="/state/${esc(d.state_slug)}">${esc(d.state)}</a></span></div><h1 class="region-title">${esc(d.name)}</h1><p class="region-lead">${esc(d.description)}</p><div class="region-meta-bar"><span class="region-meta-item">📍 <strong>${d.places.length}</strong> detailed attractions</span><span class="region-meta-item">🎉 <strong>${d.festivals.length}</strong> festivals</span>${sourceLink}<a href="#destinations" class="region-jump-link">Explore Attractions ↓</a></div></header>`;
 
-  const visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(d.name)} landmark photo" loading="eager"><span class="region-visual-caption">📍 ${esc(d.name)}, ${esc(d.state)} · View Photo ↗</span></a></div>`;
+  const placesWithImages = (d.places || []).filter(p => p.image_url);
+  let visualHtml = '';
+  if (placesWithImages.length > 0) {
+    let items = placesWithImages.slice(0, 24);
+    while (items.length < 10) {
+      items = items.concat(placesWithImages.slice(0, 24));
+    }
+    const cardsHtml = items.map(p => `
+      <a href="/place/${esc(p.slug)}" class="state-marquee-item" title="${esc(p.name)}">
+        <img src="${esc(p.image_url)}" alt="${esc(p.name)}" loading="lazy">
+        <div class="state-marquee-meta">
+          <span class="state-marquee-title">${esc(p.name)}</span>
+          <span class="state-marquee-sub">${esc(d.name)} · ${esc(categoryLabel(p.category))}</span>
+        </div>
+      </a>
+    `).join('');
+    visualHtml = `<div class="state-marquee-wrap" aria-label="Attractions in ${esc(d.name)}"><div class="state-marquee-track">${cardsHtml}${cardsHtml}</div></div>`;
+  } else {
+    visualHtml = `<div class="region-visual"><a href="${esc(cover)}" target="_blank" rel="noopener noreferrer"><img src="${esc(cover)}" alt="${esc(d.name)} landmark photo" loading="eager"><span class="region-visual-caption">📍 ${esc(d.name)}, ${esc(d.state)} · View Photo ↗</span></a></div>`;
+  }
 
   return `${breadcrumb([[d.state, '/state/' + d.state_slug], [d.name]])}${headerHtml}${visualHtml}<div class="band"><div><h3>A taste of the district</h3><p>${esc(d.food_notes)}</p></div><a class="source" href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">${d.places.length} attractions in ${esc(d.name)}</span></div>${categoryFilterHtml(d.places)}${cards(d.places)}</section><section class="section"><h2>Local celebrations</h2><p>Typical months help with inspiration. Confirm the annual programme before making bookings.</p>${festivalCards(d.festivals)}</section>`;
 }
