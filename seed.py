@@ -347,25 +347,27 @@ def seed(db):
     db.executemany('''INSERT OR IGNORE INTO districts
         (id,region_id,name,slug,description,food_notes,source_url) VALUES (?,?,?,?,?,?,?)''', districts)
 
-    # Normalize Odisha district names and slugs from phonetic transliterations to official standard English
+    # Normalize legacy Odisha district rows (old phonetic transliterations) to
+    # official standard English names/slugs. Keyed by legacy slug so it is
+    # idempotent and immune to dynamic district-id renumbering.
     odisha_district_renames = [
-        (542, 'Angul', 'angul'),
-        (544, 'Balasore', 'balasore'),
-        (545, 'Bargarh', 'bargarh'),
-        (548, 'Deogarh', 'deogarh'),
-        (552, 'Jagatsinghpur', 'jagatsinghpur'),
-        (556, 'Kandhamal', 'kandhamal'),
-        (557, 'Cuttack', 'cuttack'),
-        (558, 'Kendrapara', 'kendrapara'),
-        (564, 'Nayagarh', 'nayagarh'),
-        (569, 'Sundargarh', 'sundargarh'),
+        ('anugola', 'Angul', 'angul'),
+        ('baleshwar', 'Balasore', 'balasore'),
+        ('baragada', 'Bargarh', 'bargarh'),
+        ('debagada', 'Deogarh', 'deogarh'),
+        ('jagatsinghapur', 'Jagatsinghpur', 'jagatsinghpur'),
+        ('kandhamala', 'Kandhamal', 'kandhamal'),
+        ('kataka', 'Cuttack', 'cuttack'),
+        ('kendrapada', 'Kendrapara', 'kendrapara'),
+        ('nayagada', 'Nayagarh', 'nayagarh'),
+        ('sundaragada', 'Sundargarh', 'sundargarh'),
     ]
-    for dist_id, dist_name, dist_slug in odisha_district_renames:
+    for legacy_slug, dist_name, dist_slug in odisha_district_renames:
         db.execute(
             '''UPDATE districts SET name=?, slug=?,
                description=? || ' district directory entry. Destination coverage is being expanded and reviewed.'
-               WHERE id=?''',
-            (dist_name, dist_slug, dist_name, dist_id)
+               WHERE slug=?''',
+            (dist_name, dist_slug, dist_name, legacy_slug)
         )
 
     source_file = Path(__file__).with_name('data') / 'india-states-districts.json'
@@ -570,8 +572,53 @@ def seed(db):
     ]
     canonical_extra = []
     for dataset in load_all_state_datasets():
-        canonical_extra.extend(map(normalize_place, dataset.get('places', [])))
+        state_slug = dataset.get('slug') or ''
+        for item in dataset.get('places', []):
+            op = normalize_place(item)
+            op['state_slug'] = state_slug
+            canonical_extra.append(op)
+
+    # Resolve districts by (state, district name) so newly inserted administrative
+    # districts never silently mis-parent places that store positional ids.
+    def district_slugify(name):
+        return name.lower().replace(' & ', '-').replace('&', '-').replace(' ', '-').replace("'", '')
+
+    district_ids_by_region_slug = {}
+    district_ids_by_slug = {}
+    for region_slug, did, dslug in db.execute(
+        'SELECT r.slug, d.id, d.slug FROM districts d JOIN regions r ON r.id = d.region_id'):
+        district_ids_by_region_slug[(region_slug, dslug)] = did
+        district_ids_by_slug.setdefault(dslug, did)
+
+    # Legacy positional district ids on hardcoded Odisha tuples; re-resolve by slug.
+    place_district_slugs = {
+        'bhitarkanika-national-park': 'kendrapara',
+        'similipal-national-park': 'mayurbhanj',
+        'barabati-fort': 'cuttack',
+        'ratnagiri-monastery': 'jajpur',
+        'deomali-hills': 'koraput',
+        'duduma-waterfall': 'koraput',
+        'gupteswar-cave': 'koraput',
+        'padma-sambhava-maha-vihara': 'gajapati',
+        'daringbadi-hill-station': 'kandhamal',
+        'gopalpur-sea-beach': 'ganjam',
+        'tara-tarini-temple': 'ganjam',
+        'hirakud-dam': 'sambalpur',
+        'maa-samaleswari-temple': 'sambalpur',
+        'chandipur-beach': 'balasore',
+        'satkosia-gorge': 'nayagarh',
+    }
+    places = [
+        (p[0], district_ids_by_slug.get(place_district_slugs.get(p[2], ''), p[1]), *p[2:])
+        for p in places
+    ]
     if canonical_extra:
+        for op in canonical_extra:
+            if op.get('district_name'):
+                op['district_id'] = district_ids_by_region_slug.get(
+                    (op.get('state_slug', ''), district_slugify(op['district_name'])),
+                    op['district_id'],
+                ) or op['district_id']
         for op in canonical_extra:
             places.append((
                 op['id'], op['district_id'], op['slug'], op['name'], op['description'],

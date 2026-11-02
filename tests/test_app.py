@@ -45,11 +45,14 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 335
+    assert len(all_places) == 478
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
-    assert {p['slug'] for p in client.get('/api/districts/bengaluru-urban').json()['places']} == {'vidhana-soudha'}
+    assert {p['slug'] for p in client.get('/api/districts/bengaluru-urban').json()['places']} == {
+        'vidhana-soudha', 'lalbagh-botanical-garden', 'cubbon-park', 'bangalore-palace',
+        'bannerghatta-biological-park', 'iskcon-temple-bengaluru',
+    }
     assert len(client.get('/api/districts/puri').json()['places']) == 12
     assert len(client.get('/api/districts/khordha').json()['places']) == 17
     odisha = client.get('/api/states/odisha').json()
@@ -66,8 +69,8 @@ def test_full_destination_journey(client):
     assert tawang['image_url'] == '/assets/places/tawang-monastery.svg'
     assert {1, 10}.issubset(tawang['best_months'])
     karnataka = client.get('/api/states/karnataka').json()
-    assert len(karnataka['districts']) == 31
-    assert len(karnataka['places']) == 21
+    assert len(karnataka['districts']) == 32
+    assert len(karnataka['places']) == 164
     hampi = client.get('/api/places/hampi-group-of-monuments').json()
     assert hampi['district'] == 'Vijayanagara'
     assert hampi['heritage_designation'] == 'world_heritage_site'
@@ -209,7 +212,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 335
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 478
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -238,11 +241,47 @@ def test_seed_refreshes_corrected_odisha_records(tmp_path):
     assert '–' not in description
 
 
+def test_places_reparent_by_name_when_district_ids_shift(tmp_path):
+    # Ramanagara was appended to the Karnataka source list, which renumbers every
+    # dynamically inserted district in a fresh database. Places must still land on
+    # their true (state, district) parent regardless of those positional ids.
+    path = tmp_path / 'district-shift.sqlite3'
+    create_app(path)
+    with sqlite3.connect(path) as db:
+        def district_of(slug):
+            row = db.execute(
+                'SELECT d.slug, r.slug FROM places p'
+                ' JOIN districts d ON d.id = p.district_id'
+                ' JOIN regions r ON r.id = d.region_id'
+                " WHERE p.slug = ?", (slug,),
+            ).fetchone()
+            return row
+
+        assert district_of('mekedatu') == ('ramanagara', 'karnataka')
+        assert district_of('savandurga') == ('ramanagara', 'karnataka')
+        assert district_of('hampi-group-of-monuments') == ('vijayanagara', 'karnataka')
+        assert district_of('gokarna-and-om-beach') == ('uttara-kannada', 'karnataka')
+        assert district_of('barabati-fort') == ('cuttack', 'odisha')
+        assert district_of('chandipur-beach') == ('balasore', 'odisha')
+        assert district_of('satkosia-gorge') == ('nayagarh', 'odisha')
+        assert district_of('tawang-monastery') == ('tawang', 'arunachal-pradesh')
+        assert db.execute(
+            'SELECT COUNT(*) FROM places p'
+            ' JOIN districts d ON d.id = p.district_id'
+            ' JOIN regions r ON r.id = d.region_id'
+            " WHERE r.slug = 'karnataka'"
+        ).fetchone()[0] == 164
+        assert db.execute(
+            'SELECT COUNT(*) FROM places p JOIN districts d ON d.id = p.district_id'
+            " WHERE d.slug = 'ramanagara'"
+        ).fetchone()[0] == 5
+
+
 def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 335}
+    assert response.json() == {'status': 'ok', 'places': 478}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -336,7 +375,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer · India Explorer</title>' in homepage
-    assert '28' in homepage and '808' in homepage
+    assert '28' in homepage and '809' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
@@ -347,7 +386,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 335}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 478}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -414,9 +453,9 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 335,
+        'detailed_places': 478,
         'reviewed_places': 0,
-        'unreviewed_places': 335,
+        'unreviewed_places': 478,
         'confirmed_festival_dates': 0,
     }
 

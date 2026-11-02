@@ -59,7 +59,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
-- 28 state pages and 8 union-territory pages, a growing district directory with 808 districts, and 335 detailed place pages.
+- 28 state pages and 8 union-territory pages, a growing district directory with 809 districts, and 478 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
 - District food notes, access guidance, official reference links and map links.
@@ -99,8 +99,8 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 335 destinations, 57
-traditional celebrations and festivals, 808 district directory entries across
+This is an expanding editorial pilot, covering 478 destinations, 57
+traditional celebrations and festivals, 809 district directory entries across
 all 28 states and 8 union territories. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
 is made that their current contents were independently checked in this build.
@@ -108,8 +108,8 @@ All place records are marked `needs_review`; annual festival dates are unpopulat
 Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place. The 335
-pilot place cards use locally stored Wikimedia Commons, Odisha Tourism, and Unsplash photographs selected for
+The website stores a destination-specific image URL for every place. The 478
+pilot place cards use locally stored Wikimedia Commons, Odisha Tourism, and Unsplash photographs (and original editorial vector artwork for Karnataka and Arunachal entries) selected for
 the named destination and category. Region pages use iconic landmark cover
 photographs representing each state and union territory. Attribution/source records are in
 `static/assets/places/sources.json`; verify each file's current license and
@@ -129,8 +129,9 @@ optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
 Run `python verify_data.py` to check the region counts, district foreign keys,
 place image uniqueness and missing cover images. The bundled administrative
-snapshot contains 808 districts across India's 28 states and 8 union
-territories (including Kushavati district in Goa, officially notified in Dec 2025),
+snapshot contains 809 districts across India's 28 states and 8 union
+territories (including Kushavati district in Goa, officially notified in Dec 2025,
+and Ramanagara district in Karnataka, carved from Bengaluru Rural in 2016),
 matching official administrative reorganization data.
 That check does not claim that every tourism description, festival date or
 image has been independently verified; those require editorial review against
