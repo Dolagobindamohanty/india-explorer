@@ -190,7 +190,12 @@ def state_image(slug, filename=None):
 
 
 def place_image(slug):
-    return PLACE_IMAGE_PATHS.get(slug, f'/assets/places/{slug}.jpg')
+    if slug in PLACE_IMAGE_PATHS:
+        return PLACE_IMAGE_PATHS[slug]
+    svg_path = ROOT / 'static' / 'assets' / 'places' / f'{slug}.svg'
+    if svg_path.exists():
+        return f'/assets/places/{slug}.svg'
+    return f'/assets/places/{slug}.jpg'
 
 
 def seed(db):
@@ -407,6 +412,8 @@ def seed(db):
         (13, 'The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement', 'https://whc.unesco.org/en/list/1321/', 'component_site'),
         (14, 'Bhitarkanika Conservation Area', 'https://whc.unesco.org/en/tentativelists/6020/', 'tentative_list'),
         (15, 'Edicts of Ashoka at Dhauli', 'https://whc.unesco.org/en/tentativelists/6630/', 'tentative_list'),
+        (16, 'Apatani Cultural Landscape', 'https://whc.unesco.org/en/tentativelists/5893/', 'tentative_list'),
+        (17, 'Namdapha National Park', 'https://whc.unesco.org/en/tentativelists/2097/', 'tentative_list'),
     ]
     db.executemany('INSERT OR IGNORE INTO heritage_sites (id, name, unesco_url, designation) VALUES (?,?,?,?)', heritage)
 
@@ -764,6 +771,8 @@ def seed(db):
             months = custom_months[pid]
         elif place[1] in (29, 30, 31, 32, 33, 34):
             months = [3, 4, 5, 10, 11, 12]
+        elif 121 <= place[1] <= 146:
+            months = [10, 11, 12, 1, 2, 3, 4]
         elif place[1] in (7, 8, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53):
             months = [4, 5, 6, 9, 10, 11]
         elif place[1] in (35, 36, 37, 38, 39, 40, 41, 42):
@@ -830,7 +839,9 @@ def seed(db):
         (50, 'Tirumala Srivari Brahmotsavam', 'The majestic nine-day celestial celebration of Lord Venkateswara at Tirumala during Navratri, featuring grand daily vahanam processions including Garuda Seva and Rathotsavam.', 'lunar', 'https://tourism.ap.gov.in/', [('andhra-pradesh', 'tirupati')], [9, 10]),
         (51, 'Flamingo Festival', 'A premier annual eco-tourism and birdwatching festival held at Pulicat Lake and Nelapattu Bird Sanctuary, celebrating the arrival of thousands of migratory flamingos and pelicans.', 'fixed', 'https://tourism.ap.gov.in/', [('andhra-pradesh', 'sri-potti-sriramulu-nellore')], [1]),
         (52, 'Visakha Utsav', 'A grand coastal cultural festival celebrated along Rama Krishna Beach in Visakhapatnam, featuring traditional Andhra music, classical Kuchipudi dance recitals, folk arts, and food festivals.', 'fixed', 'https://tourism.ap.gov.in/', [('andhra-pradesh', 'visakhapatnam')], [12, 1]),
-        (50, 'National Chilika Bird Festival', 'An eco-tourism celebration at Mangalajodi and Satapada along Chilika Lake, bringing international birdwatchers, photographers, and boat safaris to celebrate over a million migratory birds.', 'fixed', 'https://odishatourism.gov.in/en/national-chilika-bird-festival', [('odisha', 'puri'), ('odisha', 'khordha')], [1]),
+        (53, 'National Chilika Bird Festival', 'An eco-tourism celebration at Mangalajodi and Satapada along Chilika Lake, bringing international birdwatchers, photographers, and boat safaris to celebrate over a million migratory birds.', 'fixed', 'https://odishatourism.gov.in/en/national-chilika-bird-festival', [('odisha', 'puri'), ('odisha', 'khordha')], [1]),
+        (54, 'Torgya Festival', 'A recurring monastic festival at Tawang Monastery featuring sacred masked dances, prayer ceremonies and community observances in the Himalayan winter.', 'lunar', 'https://arunachaltourism.com/', [('arunachal-pradesh', 'tawang')], [1]),
+        (55, 'Ziro Music Festival', 'An annual outdoor music and cultural gathering in Ziro Valley. Dates, venues and access arrangements vary annually and must be confirmed with organisers and local authorities.', 'varies_annually', 'https://arunachaltourism.com/', [('arunachal-pradesh', 'lower-subansiri')], [9]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

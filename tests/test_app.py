@@ -45,8 +45,8 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 298
-    assert all(item['image_url'] == f"/assets/places/{item['slug']}.jpg" for item in all_places)
+    assert len(all_places) == 314
+    assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
     assert client.get('/api/districts/bengaluru-urban').json()['places'] == []
@@ -58,6 +58,13 @@ def test_full_destination_journey(client):
     ap = client.get('/api/states/andhra-pradesh').json()
     assert len(ap['districts']) == 26
     assert len(ap['places']) == 69
+    arunachal = client.get('/api/states/arunachal-pradesh').json()
+    assert len(arunachal['districts']) == 26
+    assert len(arunachal['places']) == 16
+    tawang = client.get('/api/places/tawang-monastery').json()
+    assert tawang['district'] == 'Tawang'
+    assert tawang['image_url'] == '/assets/places/tawang-monastery.svg'
+    assert {1, 10}.issubset(tawang['best_months'])
     tirumala = client.get('/api/places/tirumala-venkateswara-temple').json()
     assert len(tirumala['images']) == 3
     assert tirumala['images'][0]['image_url'] == tirumala['image_url']
@@ -190,7 +197,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 298
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 314
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -223,7 +230,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 298}
+    assert response.json() == {'status': 'ok', 'places': 314}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -328,7 +335,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 298}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 314}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -395,9 +402,9 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 298,
+        'detailed_places': 314,
         'reviewed_places': 0,
-        'unreviewed_places': 298,
+        'unreviewed_places': 314,
         'confirmed_festival_dates': 0,
     }
 

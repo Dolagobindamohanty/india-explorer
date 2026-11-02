@@ -59,7 +59,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
-- 28 state pages and 8 union-territory pages, a growing district directory with 808 districts, and 298 detailed place pages.
+- 28 state pages and 8 union-territory pages, a growing district directory with 808 districts, and 314 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
 - District food notes, access guidance, official reference links and map links.
@@ -99,7 +99,7 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 298 destinations, 52
+This is an expanding editorial pilot, covering 314 destinations, 55
 traditional celebrations and festivals, 808 district directory entries across
 all 28 states and 8 union territories. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
@@ -108,7 +108,7 @@ All place records are marked `needs_review`; annual festival dates are unpopulat
 Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place. The 298
+The website stores a destination-specific image URL for every place. The 314
 pilot place cards use locally stored Wikimedia Commons, Odisha Tourism, and Unsplash photographs selected for
 the named destination and category. Region pages use iconic landmark cover
 photographs representing each state and union territory. Attribution/source records are in
