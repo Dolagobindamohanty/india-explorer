@@ -1395,6 +1395,21 @@ body[data-theme="dark"] .region-jump-link {
   .region-jump-link {
     margin-left: 0;
   }
+  .hero-search {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 8px 10px 8px 14px;
+  }
+  .hero-search input {
+    font-size: 15px;
+  }
+  .area-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .area-sort-wrap {
+    justify-content: flex-end;
+  }
 }
 
 /* Continuous State Destinations Photo Marquee */
@@ -2291,6 +2306,83 @@ body[data-theme="dark"] .day-badge {
   font-size: 11px;
   font-weight: 600;
   color: var(--orange);
+}
+
+/* Area Filter & Sort Bar */
+.area-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 20px 0 32px;
+}
+
+.area-filter-bar .state-search-box {
+  margin: 0;
+  flex: 1 1 320px;
+  max-width: 500px;
+}
+
+.area-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.area-sort-wrap select {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Trail Logistics Bar */
+.trail-logistics-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0 28px;
+}
+
+.trail-logistics-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.trail-logistics-card .logistics-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.trail-logistics-card strong {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.trail-logistics-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
 }
 
 /* State Filter Box */

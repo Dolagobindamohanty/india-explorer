@@ -342,6 +342,27 @@ def seed(db):
     db.executemany('''INSERT OR IGNORE INTO districts
         (id,region_id,name,slug,description,food_notes,source_url) VALUES (?,?,?,?,?,?,?)''', districts)
 
+    # Normalize Odisha district names and slugs from phonetic transliterations to official standard English
+    odisha_district_renames = [
+        (542, 'Angul', 'angul'),
+        (544, 'Balasore', 'balasore'),
+        (545, 'Bargarh', 'bargarh'),
+        (548, 'Deogarh', 'deogarh'),
+        (552, 'Jagatsinghpur', 'jagatsinghpur'),
+        (556, 'Kandhamal', 'kandhamal'),
+        (557, 'Cuttack', 'cuttack'),
+        (558, 'Kendrapara', 'kendrapara'),
+        (564, 'Nayagarh', 'nayagarh'),
+        (569, 'Sundargarh', 'sundargarh'),
+    ]
+    for dist_id, dist_name, dist_slug in odisha_district_renames:
+        db.execute(
+            '''UPDATE districts SET name=?, slug=?,
+               description=? || ' district directory entry. Destination coverage is being expanded and reviewed.'
+               WHERE id=?''',
+            (dist_name, dist_slug, dist_name, dist_id)
+        )
+
     source_file = Path(__file__).with_name('data') / 'india-states-districts.json'
     if source_file.exists():
         existing_slugs = {row[0] for row in db.execute('SELECT slug FROM districts')}
@@ -521,7 +542,7 @@ def seed(db):
         (129, 27, 'chandrabhaga-beach', 'Chandrabhaga Beach, Konark', 'A sacred and breathtaking oceanfront beach located 3 km east of the Sun Temple at Konark along the Marine Drive. Revered in Hindu puranas as the place where Samba was cured of leprosy after worshipping Surya, it is famous for the auspicious Magha Saptami holy dip at dawn, tranquil golden sands, and hosting the grand International Sand Art Festival every December.', 'beach', 19.8650, 86.1083, 'Located 3 km from Konark Sun Temple and 32 km from Puri via the scenic Konark-Puri Marine Drive highway.', 'Open 24 hours daily. Free entry. The sunrise over the Bay of Bengal at Chandrabhaga is one of the most photographed seascapes in Eastern India. Swimming requires caution due to strong undercurrents. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/chandrabhaga-beach', place_image('chandrabhaga-beach')),
         (130, 558, 'bhitarkanika-national-park', 'Bhitarkanika National Park & Mangrove Wetland', 'India’s second-largest mangrove ecosystem and a premier Ramsar wetland sanctuary, crisscrossed by tidal rivers, creeks, and mudflats. Shelters over 1,700 endangered saltwater crocodiles (including record 20-foot specimens), king cobras, water monitor lizards, and over 215 species of birds. The adjacent Gahirmatha beach is the world’s largest rookery for mass nesting (Arribada) of Olive Ridley sea turtles.', 'nature', 20.7258, 86.8711, 'Boat entry points are at Khola and Gupti (near Rajnagar/Pattamundai). Reached by road from Cuttack (130 km) or Bhubaneswar (160 km). Nearest railhead is Bhadrak (70 km).', 'UNESCO Tentative List. Park open 7:00 AM to 5:00 PM. Entry fee: ₹40 per Indian, ₹500 foreign visitors; boat hire ₹2,500–₹4,000 per boat. Note: Annual closure from May 1 to July 31 for crocodile breeding season. Eco-resorts and forest department cottages available at Dangmal. Last verified: October 2026.', 14, 'https://odishatourism.gov.in/en/w/bhitarkanika-national-park', place_image('bhitarkanika-national-park')),
         (131, 562, 'similipal-national-park', 'Similipal National Park & Biosphere Reserve', 'A vast, densely forested UNESCO World Biosphere Reserve spanning 2,750 square kilometers of towering sal trees, undulating hill ranges, and pristine grasslands. Home to the Royal Bengal tiger, rare melanistic (black) tigers, wild elephants, leopards, and over 1,000 species of plants. Features two of Eastern India’s most dramatic waterfalls—Barehipani (399 m, two-tiered) and Joranda (181 m).', 'nature', 21.9333, 86.3500, 'Entry gates at Pithabata (22 km from Baripada) and Jashipur (along NH-49). Reachable by road from Bhubaneswar (250 km) or Kolkata (240 km).', 'Open seasonally from November 1 to mid-June (strictly closed during monsoon). Entry permit: ₹100 per Indian, ₹1,000 foreign visitors; vehicle entry fee ₹200. Only 4x4 high-clearance vehicles allowed inside. Nature camps operated by Odisha Ecotourism at Barehipani, Gurguria, and Jamuani. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/similipal-national-park', place_image('similipal-national-park')),
-        (132, 557, 'barabati-fort', 'Barabati Fort & Kataka Silver Filigree', 'A historic 14th-century fortress built by the Ganga dynasty on a deltaic promontory between the Mahanadi and Kathajodi rivers in the ancient Silver City of Cuttack. Encircled by a massive stone moat and defensive ramparts, it features an ornate carved stone gateway and the excavated foundation of a nine-story royal palace. Cuttack is celebrated globally for Tarakasi (exquisite fine silver filigree jewelry and miniature chariots).', 'heritage', 20.4853, 85.8647, 'Located in Bidanasi, Cuttack city center, 5 km from Cuttack Railway Station and 30 km from Bhubaneswar via NH-16.', 'Open daily sunrise to sunset. No entry fee. The adjacent Barabati Stadium hosts international cricket matches. Visit old bazaars in Nayasarak and Balu Bazaar to watch master Tarakasi silversmiths pull hair-thin silver wire into lace-like jewelry. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/barabati-fort', place_image('barabati-fort')),
+        (132, 557, 'barabati-fort', 'Barabati Fort & Cuttack Silver Filigree', 'A historic 14th-century fortress built by the Ganga dynasty on a deltaic promontory between the Mahanadi and Kathajodi rivers in the ancient Silver City of Cuttack. Encircled by a massive stone moat and defensive ramparts, it features an ornate carved stone gateway and the excavated foundation of a nine-story royal palace. Cuttack is celebrated globally for Tarakasi (exquisite fine silver filigree jewelry and miniature chariots).', 'heritage', 20.4853, 85.8647, 'Located in Bidanasi, Cuttack city center, 5 km from Cuttack Railway Station and 30 km from Bhubaneswar via NH-16.', 'Open daily sunrise to sunset. No entry fee. The adjacent Barabati Stadium hosts international cricket matches. Visit old bazaars in Nayasarak and Balu Bazaar to watch master Tarakasi silversmiths pull hair-thin silver wire into lace-like jewelry. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/barabati-fort', place_image('barabati-fort')),
         (133, 553, 'ratnagiri-monastery', 'Ratnagiri Buddhist Monastery (Diamond Triangle)', 'The most prominent gem of Odisha’s Buddhist "Diamond Triangle" (Ratnagiri, Udayagiri, and Lalitgiri). Flourishing between the 6th and 12th centuries as a premier center of Tantric Buddhism (Vajrayana), the site crowns an isolated hill overlooking the Birupa River, featuring a colossal sculpted monastery gateway carved with chlorite stone, a massive stone courtyard with a 12-foot seated Buddha, and hundreds of votive stupas.', 'heritage', 20.6408, 86.3353, 'Located in Jajpur district, 100 km northeast of Bhubaneswar and 70 km from Cuttack via NH-16. Accessible by taxi or private car.', 'ASI ticketed monument: ₹25 for Indian nationals, ₹300 for foreign visitors. Museum open 9:00 AM to 5:00 PM (closed Fridays). The green chlorite carved portal is widely considered one of the finest Buddhist architectural stone carvings in Asia. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/ratnagiri-monastery', place_image('ratnagiri-monastery')),
         (134, 560, 'deomali-hills', 'Deomali Hills & Highest Peak of Odisha', 'The highest mountain summit in Odisha, rising to an elevation of 1,672 metres (5,485 ft) in the Eastern Ghats near Semiliguda. Revered for rolling emerald-green hillocks, sweeping panoramic vistas of cloud-filled valleys, cool mountain breezes, indigenous tribal settlements (Kandha and Paraja), and developing adventure tourism including paragliding, trekking, and eco-cottage stays.', 'nature', 18.6667, 82.9833, 'Located 60 km from Koraput town and 35 km from Semiliguda. Accessible via winding scenic mountain roads by taxi, SUV, or rented vehicle.', 'Open all hours. Free entry. Eco-tourism cottages and glamping tents operated by Odisha Tourism are available atop the ridge. Best visited at dawn to witness sunrise over the sea of clouds and in winter when temperatures dip below 5°C. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/deomali-hills', place_image('deomali-hills')),
         (135, 560, 'duduma-waterfall', 'Duduma Waterfall & Machkund Gorge', 'One of India’s most spectacular horsetail waterfalls, plunging 175 metres (574 ft) down the sheer granite cliffs of the Eastern Ghats into the deep Machkund River gorge along the Odisha-Andhra Pradesh border. Surrounded by dense virgin subtropical forests, this thunderous cascade powers the Machkund Hydroelectric Project and is located near the homeland of the indigenous Bonda tribal community.', 'nature', 18.5167, 82.5333, 'Located near Onukudelli, 70 km southwest of Koraput town. Reached by road via Lamtaput.', 'Open daily sunrise to sunset. No entry fee. Viewing platforms provide panoramic angles of the roaring waterfall and gorge. Thursday is the famous weekly market (haat) at nearby Onukudelli where the Bonda and Gadaba tribal communities gather. Last verified: October 2026.', None, 'https://odishatourism.gov.in/en/w/duduma-waterfall', place_image('duduma-waterfall')),
@@ -674,6 +695,16 @@ def seed(db):
         db.execute(
             "UPDATE places SET district_id=? WHERE slug IN ('mangueshi-temple', 'shanta-durga-temple')",
             (north_goa[0],),
+        )
+    db.execute("UPDATE places SET name='Barabati Fort & Cuttack Silver Filigree' WHERE slug='barabati-fort'")
+    cuttack = db.execute("SELECT id FROM districts WHERE slug='cuttack'").fetchone()
+    if cuttack:
+        db.execute(
+            "UPDATE districts SET food_notes=? WHERE id=?",
+            (
+                'Renowned for authentic Cuttack Dahibara Aloo Dum (steamed lentil dumplings served in spiced yogurt broth with ghughuni and aloo dum), crispy Thunka Puri, Barabati Chaat, and traditional sweet Chenna Gaja.',
+                cuttack[0],
+            ),
         )
     for op in canonical_extra:
         for image in op.get('gallery_images', []):

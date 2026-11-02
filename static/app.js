@@ -2,7 +2,8 @@ const root = document.querySelector('#app');
 const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const categories = [
   ['heritage', '🏛', 'Heritage'], ['beach', '🏖', 'Beaches'], ['nature', '🌿', 'Nature'],
-  ['spiritual', '🙏', 'Spiritual'], ['culture', '🎨', 'Culture']
+  ['spiritual', '🙏', 'Spiritual'], ['culture', '🎨', 'Culture'], ['wildlife', '🦁', 'Wildlife'],
+  ['adventure', '🧗', 'Adventure'], ['landmark', '🏟', 'Landmarks']
 ];
 const shortMonth = n => months[n - 1].slice(0, 3);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -526,38 +527,142 @@ function initExploreMap() {
     }
   }
 
-  if (gridBtn && mapBtn) {
-    gridBtn.onclick = () => {
-      gridBtn.classList.add('active');
-      mapBtn.classList.remove('active');
-      if (gridWrap) gridWrap.style.display = 'block';
-      if (mapWrap) mapWrap.style.display = 'none';
-    };
+    if (gridBtn && mapBtn) {
+      gridBtn.onclick = () => {
+        gridBtn.classList.add('active');
+        mapBtn.classList.remove('active');
+        if (gridWrap) gridWrap.style.display = 'block';
+        if (mapWrap) mapWrap.style.display = 'none';
+      };
 
-    mapBtn.onclick = () => {
-      mapBtn.classList.add('active');
-      gridBtn.classList.remove('active');
-      if (gridWrap) gridWrap.style.display = 'none';
-      if (mapWrap) mapWrap.style.display = 'block';
-      setupMap();
-      setTimeout(() => {
-        if (exploreMapInstance) exploreMapInstance.invalidateSize();
-      }, 150);
-    };
+      mapBtn.onclick = () => {
+        mapBtn.classList.add('active');
+        gridBtn.classList.remove('active');
+        if (gridWrap) gridWrap.style.display = 'none';
+        if (mapWrap) mapWrap.style.display = 'block';
+        setupMap();
+        setTimeout(() => {
+          if (exploreMapInstance) exploreMapInstance.invalidateSize();
+        }, 150);
+      };
+    }
+}
+
+let circuitMapInstance = null;
+function initCircuitMap() {
+  const container = document.getElementById('circuit-leaflet-map');
+  if (!container || !window.L) return;
+
+  let stops = [];
+  try {
+    stops = JSON.parse(container.dataset.stops || '[]');
+  } catch (e) {
+    stops = [];
+  }
+  if (!stops.length) return;
+
+  if (circuitMapInstance) {
+    circuitMapInstance.remove();
+    circuitMapInstance = null;
+  }
+
+  circuitMapInstance = L.map('circuit-leaflet-map').setView([stops[0].lat, stops[0].lon], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(circuitMapInstance);
+
+  const latlngs = [];
+  stops.forEach(s => {
+    latlngs.push([s.lat, s.lon]);
+    const stopIcon = L.divIcon({
+      className: 'circuit-stop-marker',
+      html: `<div style="background:#a84524;color:#ffffff;font-weight:700;font-size:12px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #ffffff;box-shadow:0 2px 8px rgba(0,0,0,0.35);">${s.order}</div>`,
+      iconSize: [26, 26],
+      iconAnchor: [13, 13]
+    });
+    const marker = L.marker([s.lat, s.lon], { icon: stopIcon }).addTo(circuitMapInstance);
+    const popupContent = `
+      <div class="map-popup-card">
+        <img src="${s.image_url}" alt="${esc(s.name)}">
+        <div class="map-popup-body">
+          <span class="badge">STOP ${s.order} · ${esc(s.category).toUpperCase()}</span>
+          <h4>${esc(s.name)}</h4>
+          <p>${esc(s.district)}, ${esc(s.state)}</p>
+          <a href="/place/${esc(s.slug)}">Explore destination ↗</a>
+        </div>
+      </div>
+    `;
+    marker.bindPopup(popupContent);
+  });
+
+  if (latlngs.length > 1) {
+    L.polyline(latlngs, {
+      color: '#a84524',
+      weight: 4,
+      dashArray: '8, 8',
+      opacity: 0.85
+    }).addTo(circuitMapInstance);
+    circuitMapInstance.fitBounds(L.latLngBounds(latlngs), { padding: [40, 40] });
+  }
+}
+
+function initRecentTracker() {
+  const m = window.location.pathname.match(/^\/place\/([a-z0-9-]+)/);
+  if (m) {
+    saveRecent(m[1]);
+  }
+}
+
+async function initRecentPlacesHome() {
+  const section = document.getElementById('recent-places-section');
+  const cardsContainer = document.getElementById('recent-places-cards');
+  if (!section || !cardsContainer || !recent.length) return;
+
+  try {
+    const res = await fetch('/api/places');
+    if (!res.ok) return;
+    const allPlaces = await res.json();
+    const recentItems = recent.map(slug => allPlaces.find(p => p.slug === slug)).filter(Boolean);
+    if (!recentItems.length) return;
+
+    cardsContainer.innerHTML = recentItems.map(placeCard).join('');
+    section.style.display = '';
+  } catch (e) {
+    /* silent fallback */
   }
 }
 
 function initAreaFilter() {
   const input = document.getElementById('state-filter-input');
-  if (!input) return;
-  input.oninput = () => {
-    const term = input.value.trim().toLowerCase();
-    const cards = document.querySelectorAll('#states-group-wrap .region-card');
-    cards.forEach(card => {
-      const title = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
-      card.style.display = title.includes(term) ? '' : 'none';
+  const sortSelect = document.getElementById('state-sort-select');
+  if (!input && !sortSelect) return;
+
+  function applyFilterAndSort() {
+    const term = input ? input.value.trim().toLowerCase() : '';
+    const sortBy = sortSelect ? sortSelect.value : 'name';
+
+    document.querySelectorAll('#states-group-wrap .cards').forEach(container => {
+      const cards = Array.from(container.querySelectorAll('.region-card'));
+      cards.sort((a, b) => {
+        if (sortBy === 'places') {
+          return (Number(b.dataset.places) || 0) - (Number(a.dataset.places) || 0);
+        }
+        if (sortBy === 'districts') {
+          return (Number(b.dataset.districts) || 0) - (Number(a.dataset.districts) || 0);
+        }
+        return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+      });
+      cards.forEach(card => {
+        const text = (card.textContent || '').toLowerCase();
+        card.style.display = (!term || text.includes(term)) ? '' : 'none';
+        container.appendChild(card);
+      });
     });
-  };
+  }
+
+  if (input) input.oninput = applyFilterAndSort;
+  if (sortSelect) sortSelect.onchange = applyFilterAndSort;
 }
 
 async function route() {
@@ -801,6 +906,9 @@ function initScrollChrome() {
   if (backToTop) backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 initScrollChrome();
+initCircuitMap();
+initRecentTracker();
+initRecentPlacesHome();
 if (document.body.dataset.serverRendered !== 'true') {
   window.addEventListener('hashchange', route);
   route();

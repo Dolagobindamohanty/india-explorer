@@ -400,3 +400,47 @@ def test_editorial_status(client):
         'unreviewed_places': 298,
         'confirmed_festival_dates': 0,
     }
+
+
+def test_audit_fixes_and_structured_data(client):
+    stadium = client.get('/api/places/birsa-munda-international-hockey-stadium').json()
+    assert stadium['category'] == 'landmark'
+    assert 'beach' not in stadium['category'].lower()
+
+    astaranga = client.get('/api/places/astaranga-beach').json()
+    assert 'Puri Beach' not in astaranga['description']
+    assert 'twilight' in astaranga['description'].lower() or 'sunset' in astaranga['description'].lower()
+
+    odisha = client.get('/api/states/odisha').json()
+    district_names = {d['name']: d['slug'] for d in odisha['districts']}
+    assert 'Cuttack' in district_names and district_names['Cuttack'] == 'cuttack'
+    assert 'Angul' in district_names and district_names['Angul'] == 'angul'
+    assert 'Bargarh' in district_names and district_names['Bargarh'] == 'bargarh'
+    assert 'Kandhamal' in district_names and district_names['Kandhamal'] == 'kandhamal'
+    assert 'Balasore' in district_names and district_names['Balasore'] == 'balasore'
+    assert 'Sundargarh' in district_names and district_names['Sundargarh'] == 'sundargarh'
+    assert 'Kataka' not in district_names
+    assert 'Anugola' not in district_names
+
+    home = client.get('/').text
+    assert 'application/ld+json' in home
+    assert '"@type": "WebSite"' in home
+    assert 'SearchAction' in home
+
+    amber = client.get('/place/amber-fort').text
+    assert 'application/ld+json' in amber
+    assert '"@type": "TouristAttraction"' in amber
+    assert '"@type": "BreadcrumbList"' in amber
+
+    circuit = client.get('/circuit/golden-triangle').text
+    assert 'Suggested Transport' in circuit
+    assert 'Estimated Trip Budget' in circuit
+    assert 'circuit-leaflet-map' in circuit
+    assert '"@type": "TouristTrip"' in circuit
+
+    area = client.get('/area').text
+    assert 'state-sort-select' in area
+    assert 'destinations covered' in area
+
+    # Verify JSON-LD does not emit unescaped closing script tags
+    assert '</script>' not in home.split('<script type="application/ld+json">')[1].split('</script>')[0]

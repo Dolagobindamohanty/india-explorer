@@ -363,12 +363,22 @@ def create_app(database_path=None):
     def editorial_status_api():
         return editorial_status()
 
-    def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/'):
+    def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/', json_ld=None):
         counts = directory_counts()
         canonical_url = SITE_URL + canonical_path
+        json_ld_html = ''
+        if json_ld:
+            ld_items = json_ld if isinstance(json_ld, list) else [json_ld]
+            json_ld_scripts = []
+            for item in ld_items:
+                if item:
+                    raw_json = json.dumps(item, ensure_ascii=False).replace('</script>', '<\\/script>').replace('<!--', '<\\!--')
+                    json_ld_scripts.append(f'<script type="application/ld+json">{raw_json}</script>')
+            if json_ld_scripts:
+                json_ld_html = '\n' + '\n'.join(json_ld_scripts)
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="canonical" href="{escape(canonical_url, quote=True)}">
+<meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{json_ld_html}
 <title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGrad)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGrad" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" id="spotlight-btn" aria-label="Search destinations">⌕ <span>Search</span> <kbd class="kbd-hint">⌘K</kbd></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
@@ -377,7 +387,7 @@ def create_app(database_path=None):
     def server_place_card(item):
         image_url = escape(item.get('image_url') or fallback_image(item.get('state_slug')), quote=True)
         category = escape(item.get('category') or 'Destination')
-        labels = {'heritage': 'Heritage', 'beach': 'Beaches', 'nature': 'Nature', 'spiritual': 'Spiritual', 'culture': 'Culture'}
+        labels = {'heritage': 'Heritage', 'beach': 'Beaches', 'nature': 'Nature', 'spiritual': 'Spiritual', 'culture': 'Culture', 'wildlife': 'Wildlife', 'adventure': 'Adventure', 'landmark': 'Landmark'}
         desig = item.get('heritage_designation')
         if desig == 'world_heritage_site':
             badge = 'UNESCO World Heritage'
@@ -397,7 +407,16 @@ def create_app(database_path=None):
         if len(places_list) < 4:
             return ''
         cats = sorted(set(p.get('category', '') for p in places_list if p.get('category')))
-        cat_labels = {'heritage': '🏛 Heritage & Monuments', 'nature': '🌿 Nature & Gardens', 'culture': '🎨 Culture & City', 'spiritual': '🙏 Spiritual', 'beach': '🏖 Beaches'}
+        cat_labels = {
+            'heritage': '🏛 Heritage & Monuments',
+            'nature': '🌿 Nature & Gardens',
+            'culture': '🎨 Culture & City',
+            'spiritual': '🙏 Spiritual',
+            'beach': '🏖 Beaches',
+            'wildlife': '🦁 Wildlife',
+            'adventure': '🧗 Adventure',
+            'landmark': '🏟 Landmarks',
+        }
         pills = [f'<button type="button" class="cat-pill active" data-filter="all">All ({len(places_list)})</button>']
         for c in cats:
             cnt = sum(1 for p in places_list if p.get('category') == c)
@@ -413,7 +432,9 @@ def create_app(database_path=None):
 
     def server_region_link(region):
         cover = escape(region.get('cover_image_url') or fallback_image(region.get('slug')), quote=True)
-        return f'''<a class="card region-card" href="/state/{escape(region['slug'])}"><div class="art"><img src="{cover}" alt="{escape(region['name'])} destination image" loading="lazy"></div><div class="card-body"><div class="meta">{escape(region['kind'].replace('_', ' ').title())} · {region['district_count']} districts</div><h3>{escape(region['name'])} <span class="arrow">↗</span></h3><p>{escape(region['description'])}</p></div></a>'''
+        kind = escape(region['kind'].replace('_', ' ').title())
+        places_badge = f"{region['place_count']} destinations covered" if region.get('place_count') else "Directory coverage"
+        return f'''<a class="card region-card" href="/state/{escape(region['slug'])}" data-name="{escape(region['name'].lower(), quote=True)}" data-places="{region.get('place_count', 0)}" data-districts="{region.get('district_count', 0)}"><div class="art"><img src="{cover}" alt="{escape(region['name'])} destination image" loading="lazy"></div><div class="card-body"><div class="meta">{kind} · {region['district_count']} administrative districts</div><h3>{escape(region['name'])} <span class="arrow">↗</span></h3><p>{escape(region['description'])}</p><div class="card-bottom"><span>📍 {places_badge}</span><span class="source">Explore ↗</span></div></div></a>'''
 
     def server_festival_card(item):
         months_str = ', '.join(MONTH_NAMES[m - 1] for m in item.get('months', []))
@@ -423,9 +444,27 @@ def create_app(database_path=None):
             dt = d.get('name', '')
             locations.append(f'<span class="festival-location">📍 <strong>{escape(st)}</strong>: <a href="/district/{escape(d["slug"])}">{escape(dt)}</a></span>')
         locations_html = ' '.join(locations) if locations else '<span class="festival-location">📍 Pan-India</span>'
-        timing = f'Typically in {escape(months_str)}' if months_str else 'Seasonal timing varies'
-        source_link = f'<a class="source" href="{escape(item["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Official tourism reference ↗</a>' if item.get('source_url') else ''
-        return f'''<article class="card festival-card"><div class="card-body"><div class="meta">{locations_html}</div><h3>{escape(item['name'])}</h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>🗓 {escape(timing)}</span>{source_link}</div></div></article>'''
+
+        kind_labels = {
+            'lunar': 'Lunar Calendar',
+            'fixed': 'Solar / Fixed Date',
+            'varies_annually': 'Annual Cultural Fair',
+        }
+        kind_badge = f'<span class="badge" style="font-size:11px;padding:2px 8px;">{escape(kind_labels.get(item.get("kind"), "Traditional Celebration"))}</span>'
+
+        occurrences = item.get('occurrences', [])
+        if occurrences:
+            latest = occurrences[-1]
+            date_info = f'🗓 <strong>Confirmed:</strong> {escape(latest["starts_on"])} to {escape(latest["ends_on"])}'
+        elif item.get('kind') == 'lunar':
+            date_info = f'🗓 <strong>Typically in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Lunar calendar shifts annually</span>'
+        elif item.get('kind') == 'fixed':
+            date_info = f'🗓 <strong>Observed in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Fixed season</span>'
+        else:
+            date_info = f'🗓 <strong>Typically in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Check state tourism for confirmed dates</span>'
+
+        source_link = f'<a class="source" href="{escape(item["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Official tourism schedule ↗</a>' if item.get('source_url') else ''
+        return f'''<article class="card festival-card"><div class="card-body"><div class="meta" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">{locations_html}{kind_badge}</div><h3>{escape(item['name'])}</h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{date_info}</span>{source_link}</div></div></article>'''
 
     def server_circuit_card(c):
         cover = escape(c.get('cover_image_url') or '/assets/state-cover.svg', quote=True)
@@ -445,7 +484,7 @@ def create_app(database_path=None):
     def server_filters(query):
         params = query.copy()
         options = '<option value="">All states and UTs</option>' + ''.join(f'''<option value="{escape(region['slug'])}" {'selected' if params.get('state') == region['slug'] else ''}>{escape(region['name'])}</option>''' for region in states())
-        categories = ['heritage', 'beach', 'nature', 'spiritual', 'culture']
+        categories = ['heritage', 'beach', 'nature', 'spiritual', 'culture', 'wildlife', 'adventure', 'landmark']
         category_options = '<option value="">Any interest</option>' + ''.join(f'''<option value="{item}" {'selected' if params.get('category') == item else ''}>{item.title()}</option>''' for item in categories)
         month_options = '<option value="">Any month</option>' + ''.join(f'''<option value="{n}" {'selected' if params.get('month') == str(n) else ''}>{name}</option>''' for n, name in enumerate(MONTH_NAMES, 1))
         return f'''<form method="get" action="/explore" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" value="{escape(params.get('q', ''), quote=True)}"></div><select name="state">{options}</select><select name="month">{month_options}</select><select name="category">{category_options}</select><label class="check"><input type="checkbox" name="unesco" value="true" {'checked' if params.get('unesco') == 'true' else ''}> UNESCO only</label><button class="button">Find places</button></form>'''
@@ -473,8 +512,20 @@ def create_app(database_path=None):
         slides_html = ''.join(f'''<div class="hero-slide {'active' if i == 0 else ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('{img}')" data-caption-sub="{escape(sub)}" data-caption-title="{escape(title)}"></div>''' for i, (img, sub, title) in enumerate(hero_slides_data))
         dots_html = ''.join(f'''<span class="hero-dot {'active' if i == 0 else ''}" data-slide-index="{i}" role="button" aria-label="Slide {i+1}: {escape(title)}"></span>''' for i, (_, _, title) in enumerate(hero_slides_data))
 
-        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">{slides_html}</div><div class="hero-art-caption"><span id="hero-art-sub">{hero_slides_data[0][1]}</span><strong id="hero-art-title">{hero_slides_data[0][2]}</strong><div class="hero-dots" aria-label="Slideshow navigation">{dots_html}</div></div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
-        return page_document('Explore Incredible India', content)
+        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">{slides_html}</div><div class="hero-art-caption"><span id="hero-art-sub">{hero_slides_data[0][1]}</span><strong id="hero-art-title">{hero_slides_data[0][2]}</strong><div class="hero-dots" aria-label="Slideshow navigation">{dots_html}</div></div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section recent-section" id="recent-places-section" style="display:none;"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Recently viewed destinations</h2></div></div><div class="cards" id="recent-places-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
+        website_schema = {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "India Explorer",
+            "url": SITE_URL,
+            "description": "Discover states, cities, monuments, festivals and travel trails across India.",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": f"{SITE_URL}/explore?q={{search_term_string}}",
+                "query-input": "required name=search_term_string",
+            },
+        }
+        return page_document('Explore Incredible India', content, json_ld=website_schema)
 
     @app.get('/explore', response_class=HTMLResponse)
     def rendered_explore(q: str = '', state: str = '', month: int | None = Query(None, ge=1, le=12), category: str = '', unesco: bool = False):
@@ -530,7 +581,24 @@ def create_app(database_path=None):
         visual_html = state_marquee_html(result['places'], result['name'], cover)
 
         content = f'''{breadcrumb_html(result['name'], 'States', '/area')}{header_html}{visual_html}<div class="section-head"><div><p class="eyebrow">Administrative directory</p><h2>All districts in {escape(result['name'])}</h2></div><span class="meta">{len(result['districts'])} district entries</span></div><div class="districts">{districts_html}</div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated field guide</p><h2>Places with a story</h2></div><span class="meta">{len(result['places'])} attractions</span></div>{category_filter_strip(result['places'])}{server_cards(result['places'])}</section>'''
-        return page_document(result['name'], content, result['description'], canonical_path=f'/state/{slug}')
+        state_schema = {
+            "@context": "https://schema.org",
+            "@type": "AdministrativeArea",
+            "name": result['name'],
+            "description": result['description'],
+            "url": f"{SITE_URL}/state/{slug}",
+            "image": f"{SITE_URL}{result['cover_image_url']}" if result.get('cover_image_url') else None,
+        }
+        breadcrumb_schema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL},
+                {"@type": "ListItem", "position": 2, "name": "States", "item": f"{SITE_URL}/area"},
+                {"@type": "ListItem", "position": 3, "name": result['name'], "item": f"{SITE_URL}/state/{slug}"},
+            ],
+        }
+        return page_document(result['name'], content, result['description'], canonical_path=f'/state/{slug}', json_ld=[state_schema, breadcrumb_schema])
 
     @app.get('/district/{slug}', response_class=HTMLResponse)
     def rendered_district(slug: str):
@@ -603,7 +671,41 @@ def create_app(database_path=None):
             gallery_html = f'''<section class="place-gallery place-gallery-single" aria-label="Photo of {escape(result['name'])}"><a class="place-gallery-main" href="{fallback_img}" target="_blank" rel="noopener noreferrer"><img src="{fallback_img}" alt="{escape(result['name'])} destination photo" loading="eager"></a></section>'''
 
         content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
-        return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}')
+        place_schema = {
+            "@context": "https://schema.org",
+            "@type": "TouristAttraction",
+            "name": result['name'],
+            "description": result['description'],
+            "url": f"{SITE_URL}/place/{slug}",
+            "image": f"{SITE_URL}{image_url}" if image_url else None,
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": result['latitude'],
+                "longitude": result['longitude'],
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": result['district'],
+                "addressRegion": result['state'],
+                "addressCountry": "IN",
+            },
+        }
+        if result.get('entry_fee'):
+            place_schema['isAccessibleForFree'] = any(
+                term in result['entry_fee'].lower()
+                for term in ('free', 'no entry fee', 'nil')
+            )
+        breadcrumb_schema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL},
+                {"@type": "ListItem", "position": 2, "name": result['state'], "item": f"{SITE_URL}/state/{result['state_slug']}"},
+                {"@type": "ListItem", "position": 3, "name": result['district'], "item": f"{SITE_URL}/district/{result['district_slug']}"},
+                {"@type": "ListItem", "position": 4, "name": result['name'], "item": f"{SITE_URL}/place/{slug}"},
+            ],
+        }
+        return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}', json_ld=[place_schema, breadcrumb_schema])
 
     @app.get('/circuits', response_class=HTMLResponse)
     def rendered_circuits():
@@ -621,8 +723,108 @@ def create_app(database_path=None):
             stops_html.append(f'''<div class="timeline-stop"><div class="stop-badge">Stop {s['stop_order']}</div><div class="stop-content"><h3><a href="/place/{escape(s['slug'])}">{escape(s['name'])} ↗</a></h3><div class="meta">{escape(s['district'])} · {escape(s['state'])} · {escape(s['category'].title())}</div><p>{escape(s['description'])}</p><div class="stop-note">💡 <strong>Trail note:</strong> {escape(s['notes'])}</div></div></div>''')
         header_html = f'''<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">Curated Trail · {escape(c['duration'])}</span></div><h1 class="region-title">{escape(c['name'])}</h1><p class="region-lead">{escape(c['tagline'])}</p><div class="region-meta-bar"><span class="region-meta-item">🗓 Best season: <strong>{escape(c['best_season'])}</strong></span><span class="region-meta-item">🧭 <strong>{len(c['stops'])}</strong> curated stops</span><span class="region-meta-item">⏱ <strong>{escape(c['duration'])}</strong></span></div></header>'''
         visual_html = f'''<div class="region-visual"><img src="{cover}" alt="{escape(c['name'])} trail cover" loading="eager"><span class="region-visual-caption">📍 {escape(c['name'])}</span></div>'''
-        content = f'''{breadcrumb_html(c['name'], 'Travel trails', '/circuits')}{header_html}{visual_html}<p class="lead">{escape(c['description'])}</p><section class="section"><h2>Itinerary & stops</h2><div class="circuit-timeline">{''.join(stops_html)}</div></section><section class="section"><h2>Destinations on this trail</h2>{server_cards([dict(s, district_slug='', state_slug=s.get('state_slug','')) for s in c['stops']])}</section>'''
-        return page_document(c['name'], content, c['description'], canonical_path=f'/circuit/{slug}')
+
+        trail_logistics = {
+            'golden-triangle': {
+                'transport': 'Vande Bharat / Gatimaan Express rail & Yamuna Expressway taxis',
+                'budget': '₹18,000–₹35,000 per person (mid-range stays, monument tickets & express rail)',
+                'pace': '5–6 Days · Fast rail transit between capitals',
+            },
+            'rajasthan-desert-trail': {
+                'transport': 'AC Sleeper Express rail & private highway taxi hire',
+                'budget': '₹20,000–₹38,000 per person (heritage havelis, camel safari & monument passes)',
+                'pace': '5–6 Days · Overnight desert rail from Jaipur',
+            },
+            'kalinga-coastal-odisha': {
+                'transport': 'Marine Drive taxi, coastal express rail & Chilika motorized boat',
+                'budget': '₹14,000–₹25,000 per person (beachfront stays, seafood & lagoon boat hire)',
+                'pace': '4–5 Days · Relaxed coastal exploration',
+            },
+            'sikkim-himalayan-ascent': {
+                'transport': 'High-clearance 4WD / SUV with Sikkim Protected Area Permits',
+                'budget': '₹25,000–₹45,000 per person (mountain taxi, alpine permits & eco-resorts)',
+                'pace': '6–7 Days · High-altitude acclimation recommended',
+            },
+            'tripura-royal-rock-art': {
+                'transport': 'Agartala city taxi, local cabs & unpaved hill-road vehicles',
+                'budget': '₹12,000–₹22,000 per person (palace entries, boat rides & local guides)',
+                'pace': '4–5 Days · Quiet northeast heritage route',
+            },
+            'goa-colonial-coastal': {
+                'transport': 'Self-drive rental car, two-wheeler scooter or local taxi network',
+                'budget': '₹15,000–₹28,000 per person (beach shacks, heritage Latin Quarter stays)',
+                'pace': '4–5 Days · Flexible coastal hops',
+            },
+            'kerala-backwaters-and-coast': {
+                'transport': 'State ferry, private houseboat / shikara boat & local auto-rickshaws',
+                'budget': '₹16,000–₹32,000 per person (traditional houseboat night & coastal dining)',
+                'pace': '3–4 Days · Gentle waterway cruising',
+            },
+            'spiti-valley-expedition': {
+                'transport': 'Sturdy 4x4 high-clearance SUV with experienced mountain driver',
+                'budget': '₹28,000–₹50,000 per person (homestays, oxygen canister & mountain fuel)',
+                'pace': '7–9 Days · Gradual mountain pass ascents',
+            },
+            'sacred-char-dham-shakti-peethas': {
+                'transport': 'Domestic inter-state flights combined with local temple taxis',
+                'budget': '₹30,000–₹55,000 per person (pan-India pilgrimage flights & dharamshalas)',
+                'pace': '8–10 Days · Multi-region sacred journey',
+            },
+        }
+        logistics = trail_logistics.get(slug, {
+            'transport': 'Inter-city express rail and local authorized taxi hire',
+            'budget': '₹15,000–₹30,000 per person estimated',
+            'pace': f'{c["duration"]} · Plan transit between stops ahead of time',
+        })
+        logistics_html = f'''<div class="trail-logistics-bar"><div class="trail-logistics-card"><span class="logistics-icon">🚆</span><div><strong>Suggested Transport</strong><p>{escape(logistics['transport'])}</p></div></div><div class="trail-logistics-card"><span class="logistics-icon">💳</span><div><strong>Estimated Trip Budget</strong><p>{escape(logistics['budget'])}</p></div></div><div class="trail-logistics-card"><span class="logistics-icon">⏱</span><div><strong>Suggested Pace</strong><p>{escape(logistics['pace'])}</p></div></div></div>'''
+
+        stops_json = json.dumps([
+            {
+                'order': s['stop_order'],
+                'name': s['name'],
+                'slug': s['slug'],
+                'lat': s['latitude'],
+                'lon': s['longitude'],
+                'district': s['district'],
+                'state': s['state'],
+                'image_url': s.get('image_url') or fallback_image(s.get('state_slug')),
+                'category': s.get('category', '').title(),
+            }
+            for s in c['stops'] if s.get('latitude') and s.get('longitude')
+        ])
+        map_html = f'''<section class="section"><h2>Route trail map</h2><div class="circuit-map-wrap"><div id="circuit-leaflet-map" class="circuit-leaflet-map" data-stops="{escape(stops_json, quote=True)}" style="height:380px;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 4px 16px rgba(0,0,0,0.06);"></div></div></section>'''
+
+        content = f'''{breadcrumb_html(c['name'], 'Travel trails', '/circuits')}{header_html}{visual_html}{logistics_html}<p class="lead">{escape(c['description'])}</p>{map_html}<section class="section"><h2>Itinerary & stops</h2><div class="circuit-timeline">{''.join(stops_html)}</div></section><section class="section"><h2>Destinations on this trail</h2>{server_cards([dict(s, district_slug='', state_slug=s.get('state_slug','')) for s in c['stops']])}</section>'''
+        trip_schema = {
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": c['name'],
+            "description": c['description'],
+            "touristType": "Cultural Tourism",
+            "itinerary": {
+                "@type": "ItemList",
+                "numberOfItems": len(c['stops']),
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": s['stop_order'],
+                        "name": s['name'],
+                        "url": f"{SITE_URL}/place/{s['slug']}",
+                    }
+                    for s in c['stops']
+                ],
+            },
+        }
+        breadcrumb_schema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL},
+                {"@type": "ListItem", "position": 2, "name": "Travel trails", "item": f"{SITE_URL}/circuits"},
+                {"@type": "ListItem", "position": 3, "name": c['name'], "item": f"{SITE_URL}/circuit/{slug}"},
+            ],
+        }
+        return page_document(c['name'], content, c['description'], canonical_path=f'/circuit/{slug}', json_ld=[trip_schema, breadcrumb_schema])
 
     @app.get('/festivals', response_class=HTMLResponse)
     def rendered_festivals(month: int | None = Query(None, ge=1, le=12)):
@@ -655,8 +857,17 @@ def create_app(database_path=None):
         territories = union_territories()
         state_links = ''.join(server_region_link(region) for region in regions)
         territory_links = ''.join(server_region_link(region) for region in territories)
-        content = f'''{breadcrumb_html('Explore by region')}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p><div class="state-search-box"><span>⌕</span><input type="text" id="state-filter-input" placeholder="Quick find a state or territory (e.g. Odisha, Sikkim, Goa)..." aria-label="Filter states"></div><div id="states-group-wrap"><section class="section"><p class="eyebrow">States</p><h2>Choose a state</h2><div class="cards">{state_links}</div></section><section class="section"><p class="eyebrow">Union territories</p><h2>Choose a union territory</h2><div class="cards">{territory_links}</div></section></div>'''
-        return page_document('Explore states and union territories', content, canonical_path='/area')
+        sort_bar = '''<div class="area-filter-bar"><div class="state-search-box"><span>⌕</span><input type="text" id="state-filter-input" placeholder="Quick find a state, territory or keyword..." aria-label="Filter states"></div><div class="area-sort-wrap"><label for="state-sort-select">Sort by:</label><select id="state-sort-select" aria-label="Sort regions"><option value="name">Name (A–Z)</option><option value="places">Most Destinations</option><option value="districts">Most Districts</option></select></div></div>'''
+        content = f'''{breadcrumb_html('Explore by region')}<p class="eyebrow">Start close to home</p><h1>Every corner has a story.</h1><p class="lead">Choose a state or union territory, then select a district for places, local food and celebrations.</p>{sort_bar}<div id="states-group-wrap"><section class="section"><p class="eyebrow">States</p><h2>All 28 States</h2><div class="cards">{state_links}</div></section><section class="section"><p class="eyebrow">Union territories</p><h2>All 8 Union Territories</h2><div class="cards">{territory_links}</div></section></div>'''
+        breadcrumb_schema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL},
+                {"@type": "ListItem", "position": 2, "name": "States & Union Territories", "item": f"{SITE_URL}/area"},
+            ],
+        }
+        return page_document('Explore states and union territories', content, canonical_path='/area', json_ld=breadcrumb_schema)
 
     @app.get('/about', response_class=HTMLResponse)
     def rendered_about():
