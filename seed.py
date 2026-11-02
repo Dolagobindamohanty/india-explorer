@@ -414,6 +414,9 @@ def seed(db):
         (15, 'Edicts of Ashoka at Dhauli', 'https://whc.unesco.org/en/tentativelists/6630/', 'tentative_list'),
         (16, 'Apatani Cultural Landscape', 'https://whc.unesco.org/en/tentativelists/5893/', 'tentative_list'),
         (17, 'Namdapha National Park', 'https://whc.unesco.org/en/tentativelists/2097/', 'tentative_list'),
+        (18, 'Group of Monuments at Hampi', 'https://whc.unesco.org/en/list/241/', 'world_heritage_site'),
+        (19, 'Sacred Ensembles of the Hoysalas', 'https://whc.unesco.org/en/list/1670/', 'component_site'),
+        (20, 'Group of Monuments at Pattadakal', 'https://whc.unesco.org/en/list/239/', 'world_heritage_site'),
     ]
     db.executemany('INSERT OR IGNORE INTO heritage_sites (id, name, unesco_url, designation) VALUES (?,?,?,?)', heritage)
 
@@ -811,7 +814,7 @@ def seed(db):
         (22, 'Dev Deepawali', 'The Festival of Gods in Varanasi where all 84 ghats along the sacred Ganges are illuminated with over a million earthen oil lamps (diyas).', 'lunar', 'https://www.uptourism.gov.in/', [('uttar-pradesh', 'varanasi')], [11]),
         (23, 'Pushkar Camel Fair', 'One of the world’s largest livestock fairs, bringing thousands of decked camels, desert nomads, cultural competitions and holy dips in Pushkar Lake.', 'lunar', 'https://www.tourism.rajasthan.gov.in/', [('rajasthan', 'ajmer')], [11]),
         (24, 'Hornbill Festival', 'The Festival of Festivals held in Kisama Heritage Village, uniting all 16 Naga tribes to showcase traditional dance, warrior songs, indigenous crafts and music.', 'fixed', 'https://tourism.nagaland.gov.in/', [('nagaland', 'kohima')], [12]),
-        (25, 'Mysuru Dasara', 'A regal 10-day state celebration culminating in the majestic Jumboo Savari elephant procession carrying the golden idol of Goddess Chamundeshwari from the illuminated Mysore Palace.', 'lunar', 'https://karnatakatourism.org/', [('karnataka', 'mysuru')], [10]),
+        (25, 'Mysuru Dasara', 'Karnataka’s state festival of processions, cultural performances and palace illuminations, centred on Mysuru during the Navaratri season.', 'lunar', 'https://karnatakatourism.org/en/blogs/mysuru-dasara/', [('karnataka', 'mysuru')], [9, 10]),
         (26, 'Sao Joao Festival', 'Goa’s joyous monsoon water festival celebrated on the Feast of St. John the Baptist. Revellers wearing vibrant kopel floral crowns dance to traditional songs and jump into village wells, ponds and streams to celebrate new beginnings.', 'fixed', 'https://www.goa-tourism.com/', [('goa', 'north-goa')], [6]),
         (27, 'Feast of St. Francis Xavier', 'The grand annual feast celebrated at the Basilica of Bom Jesus in Old Goa, drawing tens of thousands of pilgrims worldwide for solemn open-air masses, fairgrounds and cultural processions honouring the Patron Saint of Goa.', 'fixed', 'https://www.goa-tourism.com/', [('goa', 'north-goa'), ('goa', 'south-goa')], [12]),
         (28, 'Losar (Tibetan New Year)', 'The Tibetan Buddhist New Year celebrated with traditional Cham mask dances at Rumtek and Enchey monasteries, lighting of butter lamps, family feasts of gutuk dumplings and ceremonial prayer flags hoisted atop hills.', 'lunar', 'https://www.sikkimtourism.gov.in/', [('sikkim', 'gangtok'), ('sikkim', 'pakyong')], [2, 3]),
@@ -842,6 +845,8 @@ def seed(db):
         (53, 'National Chilika Bird Festival', 'An eco-tourism celebration at Mangalajodi and Satapada along Chilika Lake, bringing international birdwatchers, photographers, and boat safaris to celebrate over a million migratory birds.', 'fixed', 'https://odishatourism.gov.in/en/national-chilika-bird-festival', [('odisha', 'puri'), ('odisha', 'khordha')], [1]),
         (54, 'Torgya Festival', 'A recurring monastic festival at Tawang Monastery featuring sacred masked dances, prayer ceremonies and community observances in the Himalayan winter.', 'lunar', 'https://arunachaltourism.com/', [('arunachal-pradesh', 'tawang')], [1]),
         (55, 'Ziro Music Festival', 'An annual outdoor music and cultural gathering in Ziro Valley. Dates, venues and access arrangements vary annually and must be confirmed with organisers and local authorities.', 'varies_annually', 'https://arunachaltourism.com/', [('arunachal-pradesh', 'lower-subansiri')], [9]),
+        (57, 'Hassanamba Festival', 'An annual temple festival in Hassan, known for the limited opening of the Hassanamba shrine and major local gatherings.', 'varies_annually', 'https://karnatakatourism.org/en/', [('karnataka', 'hassan')], [10, 11]),
+        (58, 'Kambala', 'A traditional coastal buffalo-race season held at venues across Dakshina Kannada and Udupi, with schedules set locally each year.', 'varies_annually', 'https://karnatakatourism.org/en/', [('karnataka', 'dakshina-kannada'), ('karnataka', 'udupi')], [11, 12, 1, 2]),
     ]
 
     def resolve_district_id(region_slug, district_slug):
@@ -856,6 +861,11 @@ def seed(db):
     db.executemany('''UPDATE festivals SET name=?, description=?, date_type=?, source_url=?
                       WHERE id=?''',
                    [(f[1], f[2], f[3], f[4], f[0]) for f in festivals_data])
+    # Consolidate the superseded duplicate Mysuru Dasara record from an earlier Karnataka import.
+    db.execute("DELETE FROM festival_districts WHERE festival_id=56")
+    db.execute("DELETE FROM festival_months WHERE festival_id=56")
+    db.execute("DELETE FROM festival_occurrences WHERE festival_id=56")
+    db.execute("DELETE FROM festivals WHERE id=56")
 
     fest_dist_rows = []
     for f in festivals_data:

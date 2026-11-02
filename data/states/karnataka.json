@@ -1,0 +1,7 @@
+{
+  "slug": "karnataka",
+  "name": "Karnataka",
+  "kind": "state",
+  "source_url": "https://karnatakatourism.org/en/",
+  "places_file": "../karnataka-places.json"
+}
