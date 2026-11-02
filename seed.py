@@ -798,7 +798,7 @@ def seed(db):
         (9, 'Chithirai Festival', 'A spectacular month-long temple festival commemorating the celestial wedding of Goddess Meenakshi and Lord Sundareswarar.', 'lunar', 'https://www.tamilnadutourism.com/', [('tamil-nadu', 'madurai')], [4]),
         (10, 'Rath Yatra of Puri', 'The legendary Festival of Chariots where Lord Jagannath, Balabhadra and Subhadra journey on colossal wooden chariots pulled by millions of devotees along the Grand Road.', 'lunar', 'https://odishatourism.gov.in/', [('odisha', 'puri')], [6, 7]),
         (11, 'Konark Dance & Sand Art Festival', 'An open-air classical dance festival set against the illuminated backdrop of the Sun Temple, accompanied by master sand sculptures on Chandrabhaga beach.', 'fixed', 'https://odishatourism.gov.in/', [('odisha', 'puri')], [12]),
-        (12, 'Bali Yatra', 'Asia’s largest open-air trade and cultural fair on the banks of the Mahanadi, commemorating ancient Kalinga mariners who sailed to Bali, Java and Sumatra.', 'lunar', 'https://odishatourism.gov.in/', [('odisha', 'kataka')], [11]),
+        (12, 'Bali Yatra', 'Asia’s largest open-air trade and cultural fair on the banks of the Mahanadi in Cuttack, commemorating ancient Kalinga mariners who sailed to Bali, Java and Sumatra.', 'lunar', 'https://odishatourism.gov.in/', [('odisha', 'cuttack')], [11]),
         (13, 'Nuakhai', 'Western Odisha’s premier agricultural festival welcoming the new rice harvest with family reunions, offerings to Maa Samaleswari and community folk dances.', 'lunar', 'https://odishatourism.gov.in/', [('odisha', 'sambalpur')], [9]),
         (14, 'Makar Sankranti & International Kite Festival', 'The winter solstice festival marked by flying colourful kites across clear blue skies, sacred river baths and til-gul sweets.', 'fixed', 'https://www.gujarattourism.com/', [('gujarat', 'ahmedabad')], [1]),
         (15, 'Maha Shivratri', 'The Great Night of Shiva celebrated with midnight prayers, spiritual chants and riverbank rituals along the holy ghats.', 'lunar', 'https://www.uptourism.gov.in/', [('uttar-pradesh', 'varanasi')], [2, 3]),
@@ -853,6 +853,9 @@ def seed(db):
 
     db.executemany('INSERT OR IGNORE INTO festivals (id,name,description,date_type,source_url) VALUES (?,?,?,?,?)',
                    [(f[0], f[1], f[2], f[3], f[4]) for f in festivals_data])
+    db.executemany('''UPDATE festivals SET name=?, description=?, date_type=?, source_url=?
+                      WHERE id=?''',
+                   [(f[1], f[2], f[3], f[4], f[0]) for f in festivals_data])
 
     fest_dist_rows = []
     for f in festivals_data:
@@ -862,6 +865,12 @@ def seed(db):
             if did:
                 fest_dist_rows.append((fid, did))
     db.executemany('INSERT OR IGNORE INTO festival_districts (festival_id, district_id) VALUES (?,?)', fest_dist_rows)
+    # Bali Yatra belongs in Cuttack; refresh older databases that used the retired Kataka slug.
+    bali_yatra = db.execute("SELECT id FROM festivals WHERE name='Bali Yatra'").fetchone()
+    cuttack = db.execute("SELECT id FROM districts WHERE slug='cuttack'").fetchone()
+    if bali_yatra and cuttack:
+        db.execute('DELETE FROM festival_districts WHERE festival_id=?', (bali_yatra[0],))
+        db.execute('INSERT OR IGNORE INTO festival_districts (festival_id, district_id) VALUES (?,?)', (bali_yatra[0], cuttack[0]))
 
     fest_month_rows = []
     for f in festivals_data:

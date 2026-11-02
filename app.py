@@ -363,7 +363,7 @@ def create_app(database_path=None):
     def editorial_status_api():
         return editorial_status()
 
-    def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/', json_ld=None):
+    def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/', json_ld=None, og_image='/assets/state-cover.svg'):
         counts = directory_counts()
         canonical_url = SITE_URL + canonical_path
         json_ld_html = ''
@@ -378,7 +378,7 @@ def create_app(database_path=None):
                 json_ld_html = '\n' + '\n'.join(json_ld_scripts)
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{json_ld_html}
+<meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:image" content="{escape(SITE_URL + og_image, quote=True)}"><meta property="og:url" content="{escape(canonical_url, quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{json_ld_html}
 <title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGrad)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGrad" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><a href="/about">About</a><a class="nav-search-link" href="/explore" id="spotlight-btn" aria-label="Search destinations">⌕ <span>Search</span> <kbd class="kbd-hint">⌘K</kbd></a><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
@@ -400,7 +400,8 @@ def create_app(database_path=None):
         fee_badge = f'<span class="badge fee-badge">🎟 {escape(item["entry_fee"])}</span>' if item.get('entry_fee') else ''
         sector_display = f'📍 {escape(item["address"])}' if item.get('address') else escape(item['district'] + ' · ' + item['state'])
         months = ', '.join(MONTH_NAMES[month - 1] for month in item.get('best_months', []))
-        timing = f'Best in {escape(months)}' if months else 'Seasonal details pending'
+        generic_winter_months = {1, 2, 3, 10, 11, 12}
+        timing = f'Best in {escape(months)}' if months and set(item.get('best_months', [])) != generic_winter_months else 'Seasonal guidance'
         return f'''<article class="card place-card" data-category="{escape(item.get('category',''))}"><a href="/place/{escape(item['slug'])}" class="art"><img src="{image_url}" alt="{escape(item['name'])} destination photo" loading="lazy"><span class="badge">{escape(badge)}</span>{fee_badge}</a><div class="card-body"><div class="meta">{sector_display}</div><h3><a href="/place/{escape(item['slug'])}">{escape(item['name'])}</a></h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{timing}</span><button class="save" data-save="{escape(item['slug'])}" aria-label="Save {escape(item['name'])}">♡ Save</button></div></div></article>'''
 
     def category_filter_strip(places_list):
@@ -445,12 +446,18 @@ def create_app(database_path=None):
             locations.append(f'<span class="festival-location">📍 <strong>{escape(st)}</strong>: <a href="/district/{escape(d["slug"])}">{escape(dt)}</a></span>')
         locations_html = ' '.join(locations) if locations else '<span class="festival-location">📍 Pan-India</span>'
 
-        kind_labels = {
-            'lunar': 'Lunar Calendar',
-            'fixed': 'Solar / Fixed Date',
-            'varies_annually': 'Annual Cultural Fair',
-        }
-        kind_badge = f'<span class="badge" style="font-size:11px;padding:2px 8px;">{escape(kind_labels.get(item.get("kind"), "Traditional Celebration"))}</span>'
+        name = item['name'].lower()
+        if any(term in name for term in ('music', 'dance', 'utsav')):
+            festival_type = 'Music & Culture'
+        elif any(term in name for term in ('bird', 'flamingo', 'kite')):
+            festival_type = 'Nature & Outdoors'
+        elif any(term in name for term in ('harvest', 'nuakhai', 'pongal', 'onam')):
+            festival_type = 'Harvest'
+        elif any(term in name for term in ('fair', 'mela', 'yatra', 'carnival')):
+            festival_type = 'Fair & Procession'
+        else:
+            festival_type = 'Religious & Community'
+        kind_badge = f'<span class="badge" style="font-size:11px;padding:2px 8px;">{escape(festival_type)}</span>'
 
         occurrences = item.get('occurrences', [])
         if occurrences:
@@ -461,7 +468,7 @@ def create_app(database_path=None):
         elif item.get('kind') == 'fixed':
             date_info = f'🗓 <strong>Observed in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Fixed season</span>'
         else:
-            date_info = f'🗓 <strong>Typically in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Check state tourism for confirmed dates</span>'
+            date_info = f'🗓 <strong>Typically in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Dates vary annually</span>'
 
         source_link = f'<a class="source" href="{escape(item["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Official tourism schedule ↗</a>' if item.get('source_url') else ''
         return f'''<article class="card festival-card"><div class="card-body"><div class="meta" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">{locations_html}{kind_badge}</div><h3>{escape(item['name'])}</h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{date_info}</span>{source_link}</div></div></article>'''
@@ -493,7 +500,7 @@ def create_app(database_path=None):
     def rendered_home():
         regions = states()
         featured = enrich_places(rows(place_select + ' ORDER BY (p.heritage_id IS NOT NULL) DESC, p.id LIMIT 6'))
-        featured_states = [r for r in regions if r['slug'] in ('odisha', 'rajasthan', 'kerala', 'goa', 'himachal-pradesh', 'tamil-nadu')][:6]
+        featured_states = [r for r in regions if r['slug'] in ('odisha', 'goa', 'himachal-pradesh', 'arunachal-pradesh', 'karnataka', 'rajasthan')][:6]
         state_cards = ''.join(server_region_link(r) for r in featured_states)
         hero_slides_data = [
             ('/assets/places/konark-sun-temple.jpg', 'Puri, Odisha', 'Konark Sun Temple'),
@@ -512,7 +519,7 @@ def create_app(database_path=None):
         slides_html = ''.join(f'''<div class="hero-slide {'active' if i == 0 else ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('{img}')" data-caption-sub="{escape(sub)}" data-caption-title="{escape(title)}"></div>''' for i, (img, sub, title) in enumerate(hero_slides_data))
         dots_html = ''.join(f'''<span class="hero-dot {'active' if i == 0 else ''}" data-slide-index="{i}" role="button" aria-label="Slide {i+1}: {escape(title)}"></span>''' for i, (_, _, title) in enumerate(hero_slides_data))
 
-        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>Incredible India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">{slides_html}</div><div class="hero-art-caption"><span id="hero-art-sub">{hero_slides_data[0][1]}</span><strong id="hero-art-title">{hero_slides_data[0][2]}</strong><div class="hero-dots" aria-label="Slideshow navigation">{dots_html}</div></div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section recent-section" id="recent-places-section" style="display:none;"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Recently viewed destinations</h2></div></div><div class="cards" id="recent-places-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
+        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">{slides_html}</div><div class="hero-art-caption"><span id="hero-art-sub">{hero_slides_data[0][1]}</span><strong id="hero-art-title">{hero_slides_data[0][2]}</strong><div class="hero-dots" aria-label="Slideshow navigation">{dots_html}</div></div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section recent-section" id="recent-places-section" hidden><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Recently viewed destinations</h2></div></div><div class="cards" id="recent-places-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
         website_schema = {
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -525,7 +532,7 @@ def create_app(database_path=None):
                 "query-input": "required name=search_term_string",
             },
         }
-        return page_document('Explore Incredible India', content, json_ld=website_schema)
+        return page_document('India Explorer', content, 'Discover states, districts, destinations, travel trails and festivals across India.', json_ld=website_schema, og_image='/assets/states/odisha.jpg')
 
     @app.get('/explore', response_class=HTMLResponse)
     def rendered_explore(q: str = '', state: str = '', month: int | None = Query(None, ge=1, le=12), category: str = '', unesco: bool = False):
@@ -533,7 +540,7 @@ def create_app(database_path=None):
         result = places(q=q, state=state, month=month, category=category, unesco=unesco)
         places_json = json.dumps([{'slug': p['slug'], 'name': p['name'], 'category': p['category'], 'lat': p['latitude'], 'lon': p['longitude'], 'image_url': p.get('image_url') or fallback_image(p.get('state_slug')), 'district': p['district'], 'state': p['state']} for p in result])
         content = f'''{breadcrumb_html('Destinations')}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p>{server_filters(query)}<div class="explore-toolbar"><p><strong>{len(result)}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="{escape(places_json, quote=True)}"></div></div><div id="explore-grid-container">{server_cards(result)}</div>'''
-        return page_document('Explore destinations', content, canonical_path='/explore')
+        return page_document('Explore destinations', content, 'Search Indian destinations by state, season, category and UNESCO designation.', canonical_path='/explore')
 
     def breadcrumb_html(label, parent_label=None, parent_url=None):
         if parent_label and parent_url:
@@ -598,7 +605,7 @@ def create_app(database_path=None):
                 {"@type": "ListItem", "position": 3, "name": result['name'], "item": f"{SITE_URL}/state/{slug}"},
             ],
         }
-        return page_document(result['name'], content, result['description'], canonical_path=f'/state/{slug}', json_ld=[state_schema, breadcrumb_schema])
+        return page_document(result['name'], content, result['description'], canonical_path=f'/state/{slug}', json_ld=[state_schema, breadcrumb_schema], og_image=result.get('cover_image_url') or fallback_image(result['slug']))
 
     @app.get('/district/{slug}', response_class=HTMLResponse)
     def rendered_district(slug: str):
@@ -615,7 +622,7 @@ def create_app(database_path=None):
         visual_html = state_marquee_html(result['places'], result['name'], cover)
 
         content = f'''{breadcrumb_html(result['name'], result['state'], f'/state/{result["state_slug"]}')}{header_html}{visual_html}<div class="band"><div><h3>A taste of the district</h3><p>{escape(result['food_notes'])}</p></div><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official information ↗</a></div><section class="section" id="destinations"><div class="section-head"><div><p class="eyebrow">Curated attractions</p><h2>Make a day of it</h2></div><span class="meta">{len(result['places'])} attractions in {escape(result['name'])}</span></div>{category_filter_strip(result['places'])}{server_cards(result['places'])}</section><section class="section"><h2>Local celebrations</h2><div class="cards two">{festival_html}</div></section>'''
-        return page_document(result['name'], content, result['description'], canonical_path=f'/district/{slug}')
+        return page_document(result['name'], content, result['description'], canonical_path=f'/district/{slug}', og_image=cover)
 
     @app.get('/place/{slug}', response_class=HTMLResponse)
     def rendered_place(slug: str):
@@ -705,14 +712,14 @@ def create_app(database_path=None):
                 {"@type": "ListItem", "position": 4, "name": result['name'], "item": f"{SITE_URL}/place/{slug}"},
             ],
         }
-        return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}', json_ld=[place_schema, breadcrumb_schema])
+        return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}', json_ld=[place_schema, breadcrumb_schema], og_image=result.get('image_url') or fallback_image(result.get('state_slug')))
 
     @app.get('/circuits', response_class=HTMLResponse)
     def rendered_circuits():
         circuits_list = api_circuits()
         cards_html = f'<div class="cards two">{"".join(server_circuit_card(c) for c in circuits_list)}</div>'
         content = f'''{breadcrumb_html('Curated travel circuits')}<p class="eyebrow">Themed journeys</p><h1>Curated travel trails.</h1><p class="lead">Follow hand-crafted routes connecting iconic landmarks, sacred heritage, clifftop sea bastions, and high Himalayan valleys across India.</p>{cards_html}'''
-        return page_document('Curated travel trails', content, canonical_path='/circuits')
+        return page_document('Curated travel trails', content, 'Plan themed journeys across India with route maps, transport guidance and destination stops.', canonical_path='/circuits', og_image='/assets/places/puri-jagannath-temple.jpg')
 
     @app.get('/circuit/{slug}', response_class=HTMLResponse)
     def rendered_circuit(slug: str):
@@ -768,7 +775,7 @@ def create_app(database_path=None):
             'sacred-char-dham-shakti-peethas': {
                 'transport': 'Domestic inter-state flights combined with local temple taxis',
                 'budget': '₹30,000–₹55,000 per person (pan-India pilgrimage flights & dharamshalas)',
-                'pace': '8–10 Days · Multi-region sacred journey',
+                'pace': '10–12 Days · Allow a flight and recovery day between regions',
             },
         }
         logistics = trail_logistics.get(slug, {
@@ -824,7 +831,7 @@ def create_app(database_path=None):
                 {"@type": "ListItem", "position": 3, "name": c['name'], "item": f"{SITE_URL}/circuit/{slug}"},
             ],
         }
-        return page_document(c['name'], content, c['description'], canonical_path=f'/circuit/{slug}', json_ld=[trip_schema, breadcrumb_schema])
+        return page_document(c['name'], content, c['description'], canonical_path=f'/circuit/{slug}', json_ld=[trip_schema, breadcrumb_schema], og_image=c.get('cover_image_url') or '/assets/state-cover.svg')
 
     @app.get('/festivals', response_class=HTMLResponse)
     def rendered_festivals(month: int | None = Query(None, ge=1, le=12)):
@@ -835,10 +842,23 @@ def create_app(database_path=None):
         heading = f'Festivals in {month_name}.' if month else 'Celebrations across India.'
         lead = f'Explore traditional festivals, fairs and celebrations observed in {month_name} across Indian states and districts.' if month else 'Select a month to explore vibrant traditional festivals, fairs and celebrations across Indian states and districts.'
         tabs = month_tabs_html(month)
-        cards_html = f'<div class="cards two">{"".join(server_festival_card(item) for item in result)}</div>' if result else '<p class="empty">No festivals recorded for this selection yet.</p>'
+        if month is None:
+            by_month = {value: [] for value in range(1, 13)}
+            for item in result:
+                for value in item['months']:
+                    by_month[value].append(item)
+            sections = []
+            for value, name in enumerate(MONTH_NAMES, 1):
+                entries = by_month[value]
+                if entries:
+                    sections.append(f'''<section class="festival-month-group"><div class="section-head"><h2>{name}</h2><span class="meta">{len(entries)} celebrations</span></div><div class="cards two">{"".join(server_festival_card(item) for item in entries)}</div></section>''')
+            cards_html = ''.join(sections)
+        else:
+            cards_html = f'<div class="cards two">{"".join(server_festival_card(item) for item in result)}</div>' if result else '<p class="empty">No festivals recorded for this selection yet.</p>'
         notice = '<p class="notice">Festival months represent recurring seasonal windows. Always verify exact dates, venues and schedules with official state tourism authorities.</p>'
         content = f'''{breadcrumb_html('Festival calendar')}<p class="eyebrow">{eyebrow}</p><h1>{heading}</h1><p class="lead">{lead}</p>{tabs}{notice}<p><strong>{len(result)}</strong> celebrations found across India</p>{cards_html}'''
-        return page_document(title, content, canonical_path=f'/festivals{f"?month={month}" if month else ""}')
+        festival_description = f'Festivals and celebrations typically observed in {month_name} across India.' if month else 'Browse Indian festivals month by month, with district context and official tourism references.'
+        return page_document(title, content, festival_description, canonical_path=f'/festivals{f"?month={month}" if month else ""}', og_image='/assets/states/odisha.jpg')
 
     @app.get('/month/{value}', response_class=HTMLResponse)
     def rendered_month(value: int):
@@ -849,7 +869,7 @@ def create_app(database_path=None):
     @app.get('/saved', response_class=HTMLResponse)
     def rendered_saved():
         content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.</p><div id="saved-itinerary-builder"></div><div id="saved-cards-container"><a class="button" href="/explore">Explore destinations</a></div>'''
-        return page_document('Saved places', content, canonical_path='/saved')
+        return page_document('Saved places', content, 'Save and revisit destinations while planning your trip across India.', canonical_path='/saved')
 
     @app.get('/area', response_class=HTMLResponse)
     def rendered_area():
@@ -867,12 +887,12 @@ def create_app(database_path=None):
                 {"@type": "ListItem", "position": 2, "name": "States & Union Territories", "item": f"{SITE_URL}/area"},
             ],
         }
-        return page_document('Explore states and union territories', content, canonical_path='/area', json_ld=breadcrumb_schema)
+        return page_document('Explore states and union territories', content, 'Browse all Indian states and union territories by administrative district and destination coverage.', canonical_path='/area', json_ld=breadcrumb_schema, og_image='/assets/states/odisha.jpg')
 
     @app.get('/about', response_class=HTMLResponse)
     def rendered_about():
         content = f'''{breadcrumb_html('About')}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p><div class="about-grid"><div><h3>Explore with context</h3><p>Browse India’s states and union territories, then follow the directory into districts and detailed places.</p></div><div><h3>Save your ideas</h3><p>Favorites and recently viewed places stay on this device, so planning feels personal without an account.</p></div><div><h3>Travel responsibly</h3><p>Tourism details and festival dates can change. Use the linked official sources to confirm plans before you go.</p></div></div>'''
-        return page_document('About India Explorer', content, canonical_path='/about')
+        return page_document('About India Explorer', content, 'India Explorer is an editorial travel-discovery directory for India’s states, districts, festivals and landmarks.', canonical_path='/about', og_image='/assets/states/odisha.jpg')
 
     @app.get('/sitemap.xml', response_class=Response)
     def sitemap():

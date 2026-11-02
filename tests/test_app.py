@@ -180,6 +180,11 @@ def test_month_calendar_does_not_invent_annual_dates(client):
     assert len(dec_festivals) >= 2
     assert any(f['name'] == 'Hornbill Festival' for f in dec_festivals)
     assert any(f['name'] == 'Konark Dance & Sand Art Festival' for f in dec_festivals)
+    bali_yatra = client.get('/api/festivals?district=cuttack').json()
+    assert any(f['name'] == 'Bali Yatra' for f in bali_yatra)
+    all_festivals = client.get('/api/festivals').json()
+    bali = next(f for f in all_festivals if f['name'] == 'Bali Yatra')
+    assert bali['districts'] == [{'name': 'Cuttack', 'slug': 'cuttack', 'state': 'Odisha', 'state_slug': 'odisha'}]
 
 
 @pytest.mark.parametrize('url', ['/api/places?month=13', '/api/festivals?month=0'])
@@ -323,7 +328,7 @@ def test_every_state_and_union_territory_route_is_clean(client):
 def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
-    assert 'Explore Incredible India' in homepage
+    assert '<title>India Explorer · India Explorer</title>' in homepage
     assert '28' in homepage and '808' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
@@ -433,11 +438,25 @@ def test_audit_fixes_and_structured_data(client):
     assert 'application/ld+json' in home
     assert '"@type": "WebSite"' in home
     assert 'SearchAction' in home
+    assert '<meta property="og:image"' in home
+    assert '<title>India Explorer · India Explorer</title>' in home
+    assert 'recent-places-section" hidden' in home
+    assert 'Incredible India' not in home
 
     amber = client.get('/place/amber-fort').text
     assert 'application/ld+json' in amber
     assert '"@type": "TouristAttraction"' in amber
     assert '"@type": "BreadcrumbList"' in amber
+    assert 'og:image' in amber
+
+    district = client.get('/district/cuttack').text
+    assert 'og:image' in district
+
+    trails = client.get('/circuits').text
+    assert 'og:image' in trails
+
+    char_dham = client.get('/circuit/sacred-char-dham-shakti-peethas').text
+    assert '10–12 Days · Allow a flight and recovery day between regions' in char_dham
 
     circuit = client.get('/circuit/golden-triangle').text
     assert 'Suggested Transport' in circuit
@@ -448,6 +467,12 @@ def test_audit_fixes_and_structured_data(client):
     area = client.get('/area').text
     assert 'state-sort-select' in area
     assert 'destinations covered' in area
+    assert 'og:image' in area
+
+    festivals = client.get('/festivals').text
+    assert festivals.index('>January<') < festivals.index('>February<') < festivals.index('>March<')
+    assert 'Traditional Celebration' not in festivals
+    assert 'Pan-India' not in festivals
 
     # Verify JSON-LD does not emit unescaped closing script tags
     assert '</script>' not in home.split('<script type="application/ld+json">')[1].split('</script>')[0]
