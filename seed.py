@@ -646,6 +646,23 @@ def seed(db):
                 for op in canonical_extra
             ])
 
+    # Ramanagara district was officially renamed Bengaluru South on 23 May 2025
+    # (headquarters remain at Ramanagara town). Remove any transient duplicate
+    # "Ramanagara" district row so the snapshot holds the 31 current districts.
+    karnataka_id = db.execute("SELECT id FROM regions WHERE slug='karnataka'").fetchone()
+    stray = db.execute(
+        "SELECT id FROM districts WHERE slug='ramanagara' AND region_id=?",
+        (karnataka_id[0],),
+    ).fetchone() if karnataka_id else None
+    south = db.execute(
+        "SELECT id FROM districts WHERE slug='bengaluru-south' AND region_id=?",
+        (karnataka_id[0],),
+    ).fetchone() if karnataka_id else None
+    if stray and south:
+        db.execute('UPDATE places SET district_id=? WHERE district_id=?', (south[0], stray[0]))
+        db.execute('DELETE FROM festival_districts WHERE district_id=?', (stray[0],))
+        db.execute('DELETE FROM districts WHERE id=?', (stray[0],))
+
     place_extra_data = {
         'rock-garden-chandigarh': ('₹30 Adults, ₹10 Children', 'Sector 1, Chandigarh'),
         'sukhna-lake': ('Free entry (Boating: ₹100–₹400)', 'Sector 1, Chandigarh'),

@@ -69,7 +69,7 @@ def test_full_destination_journey(client):
     assert tawang['image_url'] == '/assets/places/tawang-monastery.svg'
     assert {1, 10}.issubset(tawang['best_months'])
     karnataka = client.get('/api/states/karnataka').json()
-    assert len(karnataka['districts']) == 32
+    assert len(karnataka['districts']) == 31
     assert len(karnataka['places']) == 170
     hampi = client.get('/api/places/hampi-group-of-monuments').json()
     assert hampi['district'] == 'Vijayanagara'
@@ -242,9 +242,10 @@ def test_seed_refreshes_corrected_odisha_records(tmp_path):
 
 
 def test_places_reparent_by_name_when_district_ids_shift(tmp_path):
-    # Ramanagara was appended to the Karnataka source list, which renumbers every
-    # dynamically inserted district in a fresh database. Places must still land on
-    # their true (state, district) parent regardless of those positional ids.
+    # Karnataka's Kanakapura/Ramanagara belt sits in Bengaluru South district
+    # (renamed from Ramanagara on 23 May 2025). District membership must be
+    # resolved by name, because inserting one district renumbers every later
+    # dynamically allocated district id in a fresh database.
     path = tmp_path / 'district-shift.sqlite3'
     create_app(path)
     with sqlite3.connect(path) as db:
@@ -257,8 +258,8 @@ def test_places_reparent_by_name_when_district_ids_shift(tmp_path):
             ).fetchone()
             return row
 
-        assert district_of('mekedatu') == ('ramanagara', 'karnataka')
-        assert district_of('savandurga') == ('ramanagara', 'karnataka')
+        assert district_of('mekedatu') == ('bengaluru-south', 'karnataka')
+        assert district_of('savandurga') == ('bengaluru-south', 'karnataka')
         assert district_of('hampi-group-of-monuments') == ('vijayanagara', 'karnataka')
         assert district_of('gokarna-and-om-beach') == ('uttara-kannada', 'karnataka')
         assert district_of('barabati-fort') == ('cuttack', 'odisha')
@@ -273,7 +274,7 @@ def test_places_reparent_by_name_when_district_ids_shift(tmp_path):
         ).fetchone()[0] == 170
         assert db.execute(
             'SELECT COUNT(*) FROM places p JOIN districts d ON d.id = p.district_id'
-            " WHERE d.slug = 'ramanagara'"
+            " WHERE d.slug = 'bengaluru-south'"
         ).fetchone()[0] == 5
 
 
@@ -396,7 +397,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer · India Explorer</title>' in homepage
-    assert '28' in homepage and '809' in homepage
+    assert '28' in homepage and '808' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
