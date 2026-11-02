@@ -1,11 +1,21 @@
+import json
 import sqlite3
 import re
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
 
 from app import create_app, distance
 from data_pipeline import import_report, validate_all_state_data, validate_database
+
+ASSETS = Path(__file__).resolve().parents[1] / "static"
+
+
+def assert_asset_exists(image_url):
+    """Every referenced place image must resolve to a real file on disk."""
+    assert image_url.startswith("/assets/"), image_url
+    assert (ASSETS / image_url.lstrip("/")).exists(), f"missing asset file for {image_url}"
 
 
 @pytest.fixture
@@ -66,7 +76,8 @@ def test_full_destination_journey(client):
     assert len(arunachal['places']) == 16
     tawang = client.get('/api/places/tawang-monastery').json()
     assert tawang['district'] == 'Tawang'
-    assert tawang['image_url'] == '/assets/places/tawang-monastery.svg'
+    assert tawang['image_url'] == '/assets/places/tawang-monastery.jpg'
+    assert_asset_exists(tawang['image_url'])
     assert {1, 10}.issubset(tawang['best_months'])
     karnataka = client.get('/api/states/karnataka').json()
     assert len(karnataka['districts']) == 31
@@ -74,7 +85,8 @@ def test_full_destination_journey(client):
     hampi = client.get('/api/places/hampi-group-of-monuments').json()
     assert hampi['district'] == 'Vijayanagara'
     assert hampi['heritage_designation'] == 'world_heritage_site'
-    assert hampi['image_url'] == '/assets/places/hampi-group-of-monuments.svg'
+    assert hampi['image_url'] == '/assets/places/hampi-group-of-monuments.jpg'
+    assert_asset_exists(hampi['image_url'])
     tirumala = client.get('/api/places/tirumala-venkateswara-temple').json()
     assert len(tirumala['images']) == 3
     assert tirumala['images'][0]['image_url'] == tirumala['image_url']
@@ -293,7 +305,10 @@ def test_reverified_karnataka_places_land_in_correct_districts(client):
         place = client.get(f'/api/places/{slug}').json()
         assert place['district'].lower().replace(' ', '-') == district, slug
         assert place['state_slug'] == state, slug
-        assert place['image_url'] == f'/assets/places/{slug}.svg', slug
+        assert place['image_url'] == f'/assets/places/{slug}.' + place['image_url'].rsplit('.', 1)[1], slug
+        assert_asset_exists(place['image_url'])
+    karnataka_photos = {p['slug']: p['image_url'] for p in client.get('/api/places?state=karnataka').json()}
+    assert sum(1 for url in karnataka_photos.values() if url.endswith(('.jpg', '.png'))) >= 164
     mudgal = client.get('/api/places/mudgal-fort').json()
     assert mudgal['state'] == 'Karnataka'
     assert 'Raichur' in mudgal['district']
@@ -551,3 +566,44 @@ def test_audit_fixes_and_structured_data(client):
 
     # Verify JSON-LD does not emit unescaped closing script tags
     assert '</script>' not in home.split('<script type="application/ld+json">')[1].split('</script>')[0]
+
+
+def test_every_place_image_resolves_to_a_real_file(client):
+    """Guard against image URLs pointing at artwork that was never written, or left behind after a photo swap."""
+    problems = []
+    for place in client.get('/api/places').json():
+        url = place['image_url']
+        if not url.startswith('/assets/places/'):
+            problems.append(f"{place['slug']}: bad prefix {url}")
+            continue
+        target = ASSETS / url.lstrip('/')
+        if not target.exists():
+            problems.append(f"{place['slug']}: missing {url}")
+            continue
+        if target.stat().st_size == 0:
+            problems.append(f"{place['slug']}: empty asset {url}")
+            continue
+        if url.endswith(('.jpg', '.png')) and target.stat().st_size < 3000:
+            problems.append(f"{place['slug']}: suspiciously small raster asset {url}")
+    assert not problems, "image asset problems:\n" + "\n".join(problems[:25])
+
+
+def test_karnataka_and_arunachal_use_real_photographs(client):
+    """The catalogue standard is Commons-sourced photographs with attribution; vector art needs an explicit note."""
+    sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    photo_slugs, vector_slugs = [], []
+    for place in client.get('/api/places').json():
+        if place['state_slug'] not in ('karnataka', 'arunachal-pradesh'):
+            continue
+        src = sources.get(place['slug'])
+        assert src, f"{place['slug']} has no attribution record"
+        if place['image_url'].endswith('.svg'):
+            vector_slugs.append(place['slug'])
+            assert 'vector' in src['file'].lower(), f"{place['slug']} artwork record must be labelled"
+            continue
+        photo_slugs.append(place['slug'])
+        assert 'commons.wikimedia.org' in src['source_page'], f"{place['slug']} missing Commons source page"
+        assert src['download_url'].startswith('https://'), f"{place['slug']} missing download url"
+        assert 'vector' not in src['file'].lower(), f"{place['slug']} still labelled artwork"
+    assert len(vector_slugs) <= 8, f"too many places still without a photo: {sorted(vector_slugs)}"
+    assert len(photo_slugs) >= 170, f"expected near-complete photographic coverage, got {len(photo_slugs)}"

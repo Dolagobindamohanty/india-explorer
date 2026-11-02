@@ -109,8 +109,10 @@ Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
 The website stores a destination-specific image URL for every place. The 484
-pilot place cards use locally stored Wikimedia Commons, Odisha Tourism, and Unsplash photographs (and original editorial vector artwork for Karnataka and Arunachal entries) selected for
-the named destination and category. Region pages use iconic landmark cover
+pilot place cards use locally stored Wikimedia Commons, Odisha Tourism, and Unsplash photographs selected for
+the named destination and category; 477 of them are real photographs and 7
+(6 Karnataka, 1 Arunachal Pradesh) keep original editorial vector artwork
+because no reliably matching Commons photograph was found. Region pages use iconic landmark cover
 photographs representing each state and union territory. Attribution/source records are in
 `static/assets/places/sources.json`; verify each file's current license and
 attribution requirements before a public commercial launch. Google Fonts is

@@ -13,7 +13,7 @@
     "practical_notes": "The legislature is not a walk-in tourist monument. Observe security restrictions and use designated public viewpoints. Seasonal lighting and access arrangements vary.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/destinations/bengaluru/",
-    "image_url": "/assets/places/vidhana-soudha.svg",
+    "image_url": "/assets/places/vidhana-soudha.jpg",
     "entry_fee": "Public exterior viewing; access restrictions apply",
     "address": "Dr. Ambedkar Veedhi, Bengaluru, Karnataka",
     "gallery_images": []
@@ -32,7 +32,7 @@
     "practical_notes": "Ticketing, illuminated-evening displays and holiday hours vary. Confirm current visitor rules with Karnataka Tourism before travel.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/destinations/mysuru/",
-    "image_url": "/assets/places/mysuru-palace.svg",
+    "image_url": "/assets/places/mysuru-palace.jpg",
     "entry_fee": "Check current palace ticket rates",
     "address": "Sayyaji Rao Road, Mysuru, Karnataka",
     "gallery_images": []
@@ -51,7 +51,7 @@
     "practical_notes": "October to March is generally more comfortable. Monument timings and entry charges should be confirmed before visiting.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/badami-cave-temples.svg",
+    "image_url": "/assets/places/badami-cave-temples.jpg",
     "entry_fee": "ASI ticket rates apply",
     "address": "Badami, Bagalkote district, Karnataka",
     "gallery_images": []
@@ -70,7 +70,7 @@
     "practical_notes": "Allow multiple days for the spread-out sites. Protected-monument ticketing, electric vehicle rules and heat conditions vary by season.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/destinations/hampi/",
-    "image_url": "/assets/places/hampi-group-of-monuments.svg",
+    "image_url": "/assets/places/hampi-group-of-monuments.jpg",
     "entry_fee": "Selected protected monuments require tickets",
     "address": "Hampi, Vijayanagara district, Karnataka",
     "gallery_images": []
@@ -89,7 +89,7 @@
     "practical_notes": "Beach conditions change during the monsoon. Swim only where local safety guidance permits and respect temple customs in town.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/blogs/gokarna-beaches/",
-    "image_url": "/assets/places/gokarna-and-om-beach.svg",
+    "image_url": "/assets/places/gokarna-and-om-beach.jpg",
     "entry_fee": "Free public beach access",
     "address": "Gokarna, Uttara Kannada district, Karnataka",
     "gallery_images": []
@@ -108,7 +108,7 @@
     "practical_notes": "Safari permits, zones, timings and seasonal closures are controlled by the forest department. Wildlife sightings are never guaranteed.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/experiences/wildlife-safari/",
-    "image_url": "/assets/places/bandipur-tiger-reserve.svg",
+    "image_url": "/assets/places/bandipur-tiger-reserve.jpg",
     "entry_fee": "Forest safari and entry charges apply",
     "address": "Bandipur, Chamarajanagar district, Karnataka",
     "gallery_images": []
@@ -127,7 +127,7 @@
     "practical_notes": "Weekend sunrise visits can be crowded. Confirm entry hours, parking rules and weather conditions before leaving Bengaluru.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/nandi-hills.svg",
+    "image_url": "/assets/places/nandi-hills.jpg",
     "entry_fee": "Check current entry and parking charges",
     "address": "Nandi Hills, Chikkaballapura district, Karnataka",
     "gallery_images": []
@@ -146,7 +146,7 @@
     "practical_notes": "Fog, rain and wind can make the route hazardous. Follow local access instructions and avoid off-trail hiking.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mullayanagiri-peak.svg",
+    "image_url": "/assets/places/mullayanagiri-peak.jpg",
     "entry_fee": "No standard entry fee; local parking charges may apply",
     "address": "Near Chikkamagaluru, Karnataka",
     "gallery_images": []
@@ -165,7 +165,7 @@
     "practical_notes": "The fort has steep, uneven terrain. Carry water, wear shoes with grip and confirm ASI opening hours.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/chitradurga-fort.svg",
+    "image_url": "/assets/places/chitradurga-fort.jpg",
     "entry_fee": "ASI ticket rates apply",
     "address": "Chitradurga, Karnataka",
     "gallery_images": []
@@ -184,7 +184,7 @@
     "practical_notes": "Boat operations depend on sea conditions and may pause in monsoon. Confirm schedules, life-jacket rules and last-return timings.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/destinations/udupi/",
-    "image_url": "/assets/places/st-marys-islands.svg",
+    "image_url": "/assets/places/st-marys-islands.jpg",
     "entry_fee": "Boat and local entry charges apply",
     "address": "Off Malpe, Udupi district, Karnataka",
     "gallery_images": []
@@ -203,7 +203,7 @@
     "practical_notes": "Temple and tower access rules can change. Dress modestly for worship areas and follow local sea-safety instructions.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/murudeshwar-temple-and-beach.svg",
+    "image_url": "/assets/places/murudeshwar-temple-and-beach.jpg",
     "entry_fee": "Temple entry is generally free; tower access may be charged",
     "address": "Murudeshwar, Uttara Kannada district, Karnataka",
     "gallery_images": []
@@ -222,7 +222,7 @@
     "practical_notes": "Monsoon brings the strongest flow but also wet, slippery conditions. Use marked viewpoints and check local access restrictions.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/jog-falls.svg",
+    "image_url": "/assets/places/jog-falls.jpg",
     "entry_fee": "Check current local entry charges",
     "address": "Near Sagara, Shivamogga district, Karnataka",
     "gallery_images": []
@@ -241,7 +241,7 @@
     "practical_notes": "This is an active temple as well as a protected heritage site. Dress respectfully and confirm photography and ticket rules on arrival.",
     "heritage_id": 19,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/belur-chennakeshava-temple.svg",
+    "image_url": "/assets/places/belur-chennakeshava-temple.jpg",
     "entry_fee": "Check current monument and camera charges",
     "address": "Belur, Hassan district, Karnataka",
     "gallery_images": []
@@ -260,7 +260,7 @@
     "practical_notes": "Confirm ASI hours and ticketing. The gallery is reached by steps and can be crowded in peak season.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/gol-gumbaz.svg",
+    "image_url": "/assets/places/gol-gumbaz.jpg",
     "entry_fee": "ASI ticket rates apply",
     "address": "Vijayapura, Karnataka",
     "gallery_images": []
@@ -279,7 +279,7 @@
     "practical_notes": "Explore only marked areas and confirm monument opening hours before visiting.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bidar-fort.svg",
+    "image_url": "/assets/places/bidar-fort.jpg",
     "entry_fee": "ASI ticket rates apply",
     "address": "Bidar, Karnataka",
     "gallery_images": []
@@ -298,7 +298,7 @@
     "practical_notes": "Rafting and water activities depend on releases, weather and licensed operators. Verify safety standards, age limits and current availability.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/experiences/adventure-activities/",
-    "image_url": "/assets/places/dandeli-kali-river.svg",
+    "image_url": "/assets/places/dandeli-kali-river.jpg",
     "entry_fee": "Operator and activity charges vary",
     "address": "Dandeli, Uttara Kannada district, Karnataka",
     "gallery_images": []
@@ -317,7 +317,7 @@
     "practical_notes": "Estate visits require permission. Monsoon is scenic but can bring landslides and restricted waterfall access; check local advisories.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/destinations/coorg/",
-    "image_url": "/assets/places/coorg-coffee-country.svg",
+    "image_url": "/assets/places/coorg-coffee-country.jpg",
     "entry_fee": "Destination and estate charges vary",
     "address": "Madikeri area, Kodagu district, Karnataka",
     "gallery_images": []
@@ -336,7 +336,7 @@
     "practical_notes": "Safaris are regulated and sightings cannot be promised. Book through authorised channels and follow forest department instructions.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/experiences/wildlife-safari/",
-    "image_url": "/assets/places/nagarhole-national-park.svg",
+    "image_url": "/assets/places/nagarhole-national-park.jpg",
     "entry_fee": "Forest safari and entry charges apply",
     "address": "Nagarhole, Mysuru district, Karnataka",
     "gallery_images": []
@@ -355,7 +355,7 @@
     "practical_notes": "It is an active religious institution. Dress modestly, respect ritual spaces and confirm festival-period access locally.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sringeri-sharada-peetham.svg",
+    "image_url": "/assets/places/sringeri-sharada-peetham.jpg",
     "entry_fee": "Free; donations welcome",
     "address": "Sringeri, Chikkamagaluru district, Karnataka",
     "gallery_images": []
@@ -374,7 +374,7 @@
     "practical_notes": "Follow temple dress and queue rules. Festival dates and special darshan arrangements should be confirmed with official temple channels.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/dharmasthala-manunatha-temple.svg",
+    "image_url": "/assets/places/dharmasthala-manunatha-temple.jpg",
     "entry_fee": "Free general entry; special services vary",
     "address": "Dharmasthala, Dakshina Kannada district, Karnataka",
     "gallery_images": []
@@ -393,7 +393,7 @@
     "practical_notes": "Visit in cooler hours and confirm ASI ticketing. Combine with Badami and Aihole only with enough daylight for travel.",
     "heritage_id": 20,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/pattadakal-monuments.svg",
+    "image_url": "/assets/places/pattadakal-monuments.jpg",
     "entry_fee": "ASI ticket rates apply",
     "address": "Pattadakal, Bagalkote district, Karnataka",
     "gallery_images": []
@@ -412,7 +412,7 @@
     "practical_notes": "Open early morning to evening; the Glass House and carings vary by week. Weekends and the weekly flower show are crowded.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/lalbagh-botanical-garden.svg",
+    "image_url": "/assets/places/lalbagh-botanical-garden.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Lalbagh, Bengaluru 560012",
     "gallery_images": []
@@ -431,7 +431,7 @@
     "practical_notes": "Open daily; some avenues close to vehicles on Sunday mornings.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/cubbon-park.svg",
+    "image_url": "/assets/places/cubbon-park.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Cubbon Park, Bengaluru",
     "gallery_images": []
@@ -450,7 +450,7 @@
     "practical_notes": "Gallery opens on scheduled hours and can close for weddings and state functions; check before going.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bangalore-palace.svg",
+    "image_url": "/assets/places/bangalore-palace.jpg",
     "entry_fee": "Ticketed entry; rates vary",
     "address": "Palace Road, Bengaluru",
     "gallery_images": []
@@ -469,7 +469,7 @@
     "practical_notes": "Safari quotas and timings are fixed daily; carry photo ID; closed on some holidays.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bannerghatta-biological-park.svg",
+    "image_url": "/assets/places/bannerghatta-biological-park.jpg",
     "entry_fee": "Park and safari tickets apply",
     "address": "Bannerghatta, Bengaluru",
     "gallery_images": []
@@ -488,7 +488,7 @@
     "practical_notes": "Darshan hours are set around aarti times; the complex is busiest on weekends and Ekadashi.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/iskcon-temple-bengaluru.svg",
+    "image_url": "/assets/places/iskcon-temple-bengaluru.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Hare Krishna Road, Rajajinagar, Bengaluru",
     "gallery_images": []
@@ -507,7 +507,7 @@
     "practical_notes": "The site is not always open beyond the outer walls; photography may be restricted near the gates.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/devanahalli-fort.svg",
+    "image_url": "/assets/places/devanahalli-fort.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Devanahalli, Bengaluru Rural district",
     "gallery_images": []
@@ -526,7 +526,7 @@
     "practical_notes": "Steep approach steps, monkeys and heavy festival crowds; avoid peak festival weekends if sensitive to rush.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ghati-subramanya-temple.svg",
+    "image_url": "/assets/places/ghati-subramanya-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Ghati, Doddaballapura taluk",
     "gallery_images": []
@@ -545,7 +545,7 @@
     "practical_notes": "The climb is steep and unprotected in stretches; carry water and start early. Monsoon rocks are slippery.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/makalidurga-hill.svg",
+    "image_url": "/assets/places/makalidurga-hill.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Makalidurga, Bengaluru Rural district",
     "gallery_images": []
@@ -583,7 +583,7 @@
     "practical_notes": "The hill road closes during Dasara processions; steps near the Nandi are crowded on Saturdays.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/chamundeshwari-temple.svg",
+    "image_url": "/assets/places/chamundeshwari-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Chamundi Hills, Mysuru",
     "gallery_images": []
@@ -602,7 +602,7 @@
     "practical_notes": "Open all week except a weekly maintenance day; night safari is bookable separately.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mysuru-zoo.svg",
+    "image_url": "/assets/places/mysuru-zoo.jpg",
     "entry_fee": "Zoo ticket applies; night safari extra",
     "address": "Green Palace Road, Mysuru",
     "gallery_images": []
@@ -621,7 +621,7 @@
     "practical_notes": "Service hours restrict sightseeing; photography inside may be limited.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/st-philomenas-church.svg",
+    "image_url": "/assets/places/st-philomenas-church.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Krishnaraja Mohalla, Mysuru",
     "gallery_images": []
@@ -640,7 +640,7 @@
     "practical_notes": "Closed weekly; photography policies vary inside.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/jaganmohan-palace.svg",
+    "image_url": "/assets/places/jaganmohan-palace.jpg",
     "entry_fee": "Museum ticket applies",
     "address": "Dhanwantri Road, Mysuru",
     "gallery_images": []
@@ -659,7 +659,7 @@
     "practical_notes": "Boating depends on water levels; best birding is early morning.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/karanji-lake.svg",
+    "image_url": "/assets/places/karanji-lake.jpg",
     "entry_fee": "Lake and boating charges apply",
     "address": "Karanji Lake, Mysuru",
     "gallery_images": []
@@ -678,7 +678,7 @@
     "practical_notes": "Beware of leeches in the wet season; viewpoints can be crowded on holidays.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/abbey-falls.svg",
+    "image_url": "/assets/places/abbey-falls.jpg",
     "entry_fee": "Entry and parking charges apply",
     "address": "Abbakeri, near Madikeri, Kodagu",
     "gallery_images": []
@@ -697,7 +697,7 @@
     "practical_notes": "Best in clear weather; the garden closes in the evening.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/rajas-seat.svg",
+    "image_url": "/assets/places/rajas-seat.jpg",
     "entry_fee": "Minor entry charge",
     "address": "Raja's Seat, Madikeri",
     "gallery_images": []
@@ -716,7 +716,7 @@
     "practical_notes": "Festival weeks mean heavy traffic and queues; tanks are for ritual use, not swimming.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/talacauvery.svg",
+    "image_url": "/assets/places/talacauvery.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Talakaveri, Kodagu",
     "gallery_images": []
@@ -735,7 +735,7 @@
     "practical_notes": "Sessions run on fixed slots and may cancel in high river flow; book in advance.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/dubare-elephant-camp.svg",
+    "image_url": "/assets/places/dubare-elephant-camp.jpg",
     "entry_fee": "Elephant interaction charges apply",
     "address": "Dubare, Kodagu",
     "gallery_images": []
@@ -754,7 +754,7 @@
     "practical_notes": "The track is monsoon-sensitive and the summit winds are strong; not suitable for two-wheelers.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mandalpatti.svg",
+    "image_url": "/assets/places/mandalpatti.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Mandalpatti, Kodagu",
     "gallery_images": []
@@ -773,7 +773,7 @@
     "practical_notes": "Forest drive beyond Kutta is unpaved; leeches and spray in monsoon.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/iruppu-falls.svg",
+    "image_url": "/assets/places/iruppu-falls.jpg",
     "entry_fee": "Entry and guide charges apply",
     "address": "Iruppu, Kodagu",
     "gallery_images": []
@@ -792,7 +792,7 @@
     "practical_notes": "Trek permits and forest timings apply; the ridge closes in heavy rain.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/baba-budangiri.svg",
+    "image_url": "/assets/places/baba-budangiri.jpg",
     "entry_fee": "Forest entry applies",
     "address": "Baba Budangiri, Chikkamagaluru",
     "gallery_images": []
@@ -811,7 +811,7 @@
     "practical_notes": "Jeep quotas are limited in monsoon; the final walk is slippery.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/hebbe-falls.svg",
+    "image_url": "/assets/places/hebbe-falls.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Kemmangundi range, Chikkamagaluru",
     "gallery_images": []
@@ -830,7 +830,7 @@
     "practical_notes": "Fog can shut the viewpoint; monsoon leeches are common on trails.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kemmangundi.svg",
+    "image_url": "/assets/places/kemmangundi.jpg",
     "entry_fee": "Minor entry charges",
     "address": "Kemmangundi, Chikkamagaluru",
     "gallery_images": []
@@ -849,7 +849,7 @@
     "practical_notes": "Safari routes and boat rides are set by the forest department; monsoon core-zone closures happen.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bhadra-wildlife-sanctuary.svg",
+    "image_url": "/assets/places/bhadra-wildlife-sanctuary.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Hospahalli, Chikkamagaluru",
     "gallery_images": []
@@ -868,7 +868,7 @@
     "practical_notes": "The approach narrows after rain; no facilities at the lake.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/hirekolale-lake.svg",
+    "image_url": "/assets/places/hirekolale-lake.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Hirekolale, Chikkamagaluru",
     "gallery_images": []
@@ -887,7 +887,7 @@
     "practical_notes": "Permits are limited and issued by the forest department; monsoon leeches and zero visibility are real hazards. Drones are banned.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kudremukh.svg",
+    "image_url": "/assets/places/kudremukh.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Kudremukh range, Chikkamagaluru",
     "gallery_images": []
@@ -906,7 +906,7 @@
     "practical_notes": "The annadanam queues move fast; dress code enforced inside.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/horanadu-annapoorneshwari.svg",
+    "image_url": "/assets/places/horanadu-annapoorneshwari.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Horanadu, Chikkamagaluru",
     "gallery_images": []
@@ -925,7 +925,7 @@
     "practical_notes": "Combine with Belur for a single-day Hoysala circuit; site opens through the day.",
     "heritage_id": 19,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/halebidu-hoysaleswara.svg",
+    "image_url": "/assets/places/halebidu-hoysaleswara.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Halebidu, Hassan district",
     "gallery_images": []
@@ -944,7 +944,7 @@
     "practical_notes": "The climb to the statue is 600 open steps; the compound closes at sunset and during major rituals.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/shravanabelagola.svg",
+    "image_url": "/assets/places/shravanabelagola.jpg",
     "entry_fee": "Minor entry charges",
     "address": "Shravanabelagola, Hassan district",
     "gallery_images": []
@@ -963,7 +963,7 @@
     "practical_notes": "Best submerged views are July–December; the site is on private farmland with a public path.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/shettihalli-floating-church.svg",
+    "image_url": "/assets/places/shettihalli-floating-church.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Shettihalli, Hassan district",
     "gallery_images": []
@@ -982,7 +982,7 @@
     "practical_notes": "The moat-side paths are eroded; stay on the marked ramparts.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/manjarabad-fort.svg",
+    "image_url": "/assets/places/manjarabad-fort.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Manjarabad, Sakleshpur taluk",
     "gallery_images": []
@@ -1001,7 +1001,7 @@
     "practical_notes": "Train views peak on the clear monsoon-adjacent months; check rail timings before planning.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sakleshpur.svg",
+    "image_url": "/assets/places/sakleshpur.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Sakleshpur, Hassan district",
     "gallery_images": []
@@ -1020,7 +1020,7 @@
     "practical_notes": "Forest jeeps cover the rough final stretch; monsoon leeches and cloud are common.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kodachadri-hills.svg",
+    "image_url": "/assets/places/kodachadri-hills.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Kodachadri, Shivamogga district",
     "gallery_images": []
@@ -1039,7 +1039,7 @@
     "practical_notes": "Leeches after rain; the natural history camp and trek routes are seasonal.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/agumbe.svg",
+    "image_url": "/assets/places/agumbe.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Agumbe, Shivamogga district",
     "gallery_images": []
@@ -1058,7 +1058,7 @@
     "practical_notes": "No shade or water on the rock; early morning is the sensible climb.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kundadri-hill.svg",
+    "image_url": "/assets/places/kundadri-hill.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Kundadri, Shivamogga district",
     "gallery_images": []
@@ -1077,7 +1077,7 @@
     "practical_notes": "Viewing is timed around bathing hours; monsoon levels can cancel the session.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sakrebailu-elephant-camp.svg",
+    "image_url": "/assets/places/sakrebailu-elephant-camp.jpg",
     "entry_fee": "Minor entry charges",
     "address": "Sakrebailu, Shivamogga district",
     "gallery_images": []
@@ -1096,7 +1096,7 @@
     "practical_notes": "Garden opens through the day; gates close in heavy spillover.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/gajanur-dam.svg",
+    "image_url": "/assets/places/gajanur-dam.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Gajanur, Shivamogga district",
     "gallery_images": []
@@ -1115,7 +1115,7 @@
     "practical_notes": "Museum timings are short; the temple pond area is protected.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/keladi.svg",
+    "image_url": "/assets/places/keladi.jpg",
     "entry_fee": "Museum ticket applies",
     "address": "Keladi, Shivamogga district",
     "gallery_images": []
@@ -1134,7 +1134,7 @@
     "practical_notes": "Ghat road after dark is discouraged; no commercial facilities.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/barkana-falls.svg",
+    "image_url": "/assets/places/barkana-falls.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Barkana, Shivamogga district",
     "gallery_images": []
@@ -1153,7 +1153,7 @@
     "practical_notes": "Darshan queues peak on purnima and paryaya months; phones not allowed inside.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/udupi-sri-krishna-math.svg",
+    "image_url": "/assets/places/udupi-sri-krishna-math.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Krishna Mutt Road, Udupi",
     "gallery_images": []
@@ -1172,7 +1172,7 @@
     "practical_notes": "Swimming is unsafe at the river mouth; heed posted flags; ferries pause in monsoon.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/malpe-beach.svg",
+    "image_url": "/assets/places/malpe-beach.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Malpe, Udupi district",
     "gallery_images": []
@@ -1191,7 +1191,7 @@
     "practical_notes": "Tower visits depend on coast-guard access; strong undertow at the tip.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kaup-lighthouse-beach.svg",
+    "image_url": "/assets/places/kaup-lighthouse-beach.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Kapu, Udupi district",
     "gallery_images": []
@@ -1210,7 +1210,7 @@
     "practical_notes": "Crossing to the beach uses local lanes; monsoon seas are dangerous.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/maravanthe-beach.svg",
+    "image_url": "/assets/places/maravanthe-beach.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Maravanthe, Udupi district",
     "gallery_images": []
@@ -1229,7 +1229,7 @@
     "practical_notes": "Ganesh Chaturthi draws huge crowds; the hill climb has steep steps.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/anegudde-kumbharashivana-vinayaka.svg",
+    "image_url": "/assets/places/anegudde-kumbharashivana-vinayaka.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Anantapur, Udupi district",
     "gallery_images": []
@@ -1248,7 +1248,7 @@
     "practical_notes": "Dress code enforced; festival months (Dec–Jan) are very busy.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kollur-mookambika.svg",
+    "image_url": "/assets/places/kollur-mookambika.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kollur, Udupi district",
     "gallery_images": []
@@ -1267,7 +1267,7 @@
     "practical_notes": "Sarpa samskara rituals run by appointment; forest area closes at night.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kukke-subramanya.svg",
+    "image_url": "/assets/places/kukke-subramanya.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kukke, Dakshina Kannada",
     "gallery_images": []
@@ -1286,7 +1286,7 @@
     "practical_notes": "Swim only in patrolled zones; monsoon seas are rough.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/panambur-beach.svg",
+    "image_url": "/assets/places/panambur-beach.jpg",
     "entry_fee": "Parking and activity charges",
     "address": "Panambur, Mangaluru",
     "gallery_images": []
@@ -1305,7 +1305,7 @@
     "practical_notes": "Ferry timings set the day; strong currents where river meets sea.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/tannirbhavi-beach.svg",
+    "image_url": "/assets/places/tannirbhavi-beach.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Tannirbhavi, Mangaluru",
     "gallery_images": []
@@ -1324,7 +1324,7 @@
     "practical_notes": "Rides have separate tickets; closed weekly for maintenance.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/pilikula-nisargadhama.svg",
+    "image_url": "/assets/places/pilikula-nisargadhama.jpg",
     "entry_fee": "Park tickets apply",
     "address": "Pilikula, Dakshina Kannada",
     "gallery_images": []
@@ -1343,7 +1343,7 @@
     "practical_notes": "Steep steps to the hill shrine; theNavaratri bhajans get very crowded.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mangaladevi-temple.svg",
+    "image_url": "/assets/places/mangaladevi-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Bolar, Mangaluru",
     "gallery_images": []
@@ -1362,7 +1362,7 @@
     "practical_notes": "Special poojas fill early; the Aane (elephant) processions draw festival crowds.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kateel-durga-parameshwari.svg",
+    "image_url": "/assets/places/kateel-durga-parameshwari.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kateel, Dakshina Kannada",
     "gallery_images": []
@@ -1381,7 +1381,7 @@
     "practical_notes": "Trek is closed in heavy monsoon; torches and water are essential. The rocks are sacred to local communities.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/yana-caves.svg",
+    "image_url": "/assets/places/yana-caves.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Yana, Sirsi taluk",
     "gallery_images": []
@@ -1400,7 +1400,7 @@
     "practical_notes": "Slippery rocks; no lifeguards; monsoon levels are dangerous.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sathodi-falls.svg",
+    "image_url": "/assets/places/sathodi-falls.jpg",
     "entry_fee": "Minor entry charges",
     "address": "Sathodi, Sirsi taluk",
     "gallery_images": []
@@ -1419,7 +1419,7 @@
     "practical_notes": "Forest gate timings are short; mist can hide the fall entirely.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/unchalli-falls.svg",
+    "image_url": "/assets/places/unchalli-falls.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Unchalli, Dandeli taluk",
     "gallery_images": []
@@ -1438,7 +1438,7 @@
     "practical_notes": "Rocky stretches at both ends; watch the tide before wading.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/karwar-beach.svg",
+    "image_url": "/assets/places/karwar-beach.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Karwar, Uttara Kannada",
     "gallery_images": []
@@ -1457,7 +1457,7 @@
     "practical_notes": "Windswept ramparts with no shade; combine with Unchalli or Sathodi.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mirjan-fort.svg",
+    "image_url": "/assets/places/mirjan-fort.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Mirjan, Uttara Kannada",
     "gallery_images": []
@@ -1476,7 +1476,7 @@
     "practical_notes": "Flow peaks Sept–Jan; viewpoints are crowded on holidays.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/gokak-falls.svg",
+    "image_url": "/assets/places/gokak-falls.jpg",
     "entry_fee": "Entry and parking charges",
     "address": "Gokak, Belagavi district",
     "gallery_images": []
@@ -1495,7 +1495,7 @@
     "practical_notes": "No facilities; best visited with a local guide Oct–Feb.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/godachinmalki-falls.svg",
+    "image_url": "/assets/places/godachinmalki-falls.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Godachinmalki, Belagavi district",
     "gallery_images": []
@@ -1514,7 +1514,7 @@
     "practical_notes": "Some inner monuments are locked off-hours; gates open daily.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/belgaum-fort.svg",
+    "image_url": "/assets/places/belgaum-fort.jpg",
     "entry_fee": "Entry charges apply",
     "address": "Fort Road, Belagavi",
     "gallery_images": []
@@ -1533,7 +1533,7 @@
     "practical_notes": "The palace is a protected monument; festival days close some areas.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kittur-fort.svg",
+    "image_url": "/assets/places/kittur-fort.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Kittur, Belagavi district",
     "gallery_images": []
@@ -1552,7 +1552,7 @@
     "practical_notes": "Permits needed near the border belt; monsoon leeches.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/jamboti-hills.svg",
+    "image_url": "/assets/places/jamboti-hills.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Jamboti, Belagavi district",
     "gallery_images": []
@@ -1590,7 +1590,7 @@
     "practical_notes": "Sites are spread out; a full day combines Badami and Pattadakal.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/aihole.svg",
+    "image_url": "/assets/places/aihole.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Aihole, Bagalkote district",
     "gallery_images": []
@@ -1609,7 +1609,7 @@
     "practical_notes": "Photography inside the sanctum is prohibited; festival weeks are extremely crowded.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/banashankari-temple-badami.svg",
+    "image_url": "/assets/places/banashankari-temple-badami.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Badami, Bagalkote district",
     "gallery_images": []
@@ -1628,7 +1628,7 @@
     "practical_notes": "The compound opens through the day; the tank steps are steep.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mahakuta-temples.svg",
+    "image_url": "/assets/places/mahakuta-temples.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Mahakuta, Bagalkote district",
     "gallery_images": []
@@ -1647,7 +1647,7 @@
     "practical_notes": "Garden opens evenings; the backwater wind is strong after sunset.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/almatti-dam.svg",
+    "image_url": "/assets/places/almatti-dam.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Almatti, Bagalkote district",
     "gallery_images": []
@@ -1666,7 +1666,7 @@
     "practical_notes": "Monsoon moss makes floors slick; inner chambers close for rain.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ibrahim-rauza.svg",
+    "image_url": "/assets/places/ibrahim-rauza.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Vijayapura, Karnataka",
     "gallery_images": []
@@ -1685,7 +1685,7 @@
     "practical_notes": "Open structure with no shade; go early.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bara-kaman.svg",
+    "image_url": "/assets/places/bara-kaman.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Vijayapura, Karnataka",
     "gallery_images": []
@@ -1704,7 +1704,7 @@
     "practical_notes": "Visits pause around prayer times; modest dress required.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/jama-masjid-vijayapura.svg",
+    "image_url": "/assets/places/jama-masjid-vijayapura.jpg",
     "entry_fee": "Minor entry charge",
     "address": "Vijayapura, Karnataka",
     "gallery_images": []
@@ -1742,7 +1742,7 @@
     "practical_notes": "Structure is protected but partially open; no signage inside.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/gagan-mahal.svg",
+    "image_url": "/assets/places/gagan-mahal.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Vijayapura, Karnataka",
     "gallery_images": []
@@ -1761,7 +1761,7 @@
     "practical_notes": "The 800-step climb is exposed; go at dawn with water.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ballari-fort.svg",
+    "image_url": "/assets/places/ballari-fort.jpg",
     "entry_fee": "Entry charges apply",
     "address": "Ballari, Karnataka",
     "gallery_images": []
@@ -1780,7 +1780,7 @@
     "practical_notes": "Viewing is by guided vehicle; sightings not guaranteed.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/daroji-sloth-bear-sanctuary.svg",
+    "image_url": "/assets/places/daroji-sloth-bear-sanctuary.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Daroji, Ballari district",
     "gallery_images": []
@@ -1799,7 +1799,7 @@
     "practical_notes": "Mining-zone roads are shared with trucks; visit outside shift hours.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sandur-hills.svg",
+    "image_url": "/assets/places/sandur-hills.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Sandur, Ballari district",
     "gallery_images": []
@@ -1818,7 +1818,7 @@
     "practical_notes": "Active ritual space; dress code enforced, shoes left at the gate.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/virupaksha-temple-hampi.svg",
+    "image_url": "/assets/places/virupaksha-temple-hampi.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Hampi, Vijayanagara district",
     "gallery_images": []
@@ -1837,7 +1837,7 @@
     "practical_notes": "The inner sanctum of the chariot courtyard may close; the walk is fully exposed to sun.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/vittala-temple-hampi.svg",
+    "image_url": "/assets/places/vittala-temple-hampi.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Hampi, Vijayanagara district",
     "gallery_images": []
@@ -1856,7 +1856,7 @@
     "practical_notes": "Combined with the Elephant Stables in one guarded circuit.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/lotus-mahal-hampi.svg",
+    "image_url": "/assets/places/lotus-mahal-hampi.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Hampi, Vijayanagara district",
     "gallery_images": []
@@ -1875,7 +1875,7 @@
     "practical_notes": "Interpretive signage is limited; a guide helps.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/elephant-stables-hampi.svg",
+    "image_url": "/assets/places/elephant-stables-hampi.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Hampi, Vijayanagara district",
     "gallery_images": []
@@ -1894,7 +1894,7 @@
     "practical_notes": "The interior is cool and dark; photography allowed outside.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/queens-bath-hampi.svg",
+    "image_url": "/assets/places/queens-bath-hampi.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Hampi, Vijayanagara district",
     "gallery_images": []
@@ -1913,7 +1913,7 @@
     "practical_notes": "Go with torches and water; snakes and heat are real after 10 a.m.",
     "heritage_id": 18,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/matanga-hill-hampi.svg",
+    "image_url": "/assets/places/matanga-hill-hampi.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Hampi, Vijayanagara district",
     "gallery_images": []
@@ -1932,7 +1932,7 @@
     "practical_notes": "Sights are spread across rocky terrain; go with a guide or map.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/anegundi.svg",
+    "image_url": "/assets/places/anegundi.jpg",
     "entry_fee": "Minor site charges",
     "address": "Anegundi, Koppal district",
     "gallery_images": []
@@ -1951,7 +1951,7 @@
     "practical_notes": "Carry water; the trail is unshaded.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/anjanadri-hill.svg",
+    "image_url": "/assets/places/anjanadri-hill.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Anjanadri, Koppal district",
     "gallery_images": []
@@ -1970,7 +1970,7 @@
     "practical_notes": "Temple hours are short midday.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kuknoor-mahadeva-temple.svg",
+    "image_url": "/assets/places/kuknoor-mahadeva-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kuknoor, Koppal district",
     "gallery_images": []
@@ -1989,7 +1989,7 @@
     "practical_notes": "Sun exposure on the platform is intense; morning visits are best.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bahmani-tombs-ashtur.svg",
+    "image_url": "/assets/places/bahmani-tombs-ashtur.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Ashtur, Bidar district",
     "gallery_images": []
@@ -2008,7 +2008,7 @@
     "practical_notes": "Fort gates close by late afternoon.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/rangin-mahal-bidar.svg",
+    "image_url": "/assets/places/rangin-mahal-bidar.png",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Bidar, Karnataka",
     "gallery_images": []
@@ -2046,7 +2046,7 @@
     "practical_notes": "Respect the langar queue etiquette; photography restricted in halls.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/guru-nanak-jhira-sahib.svg",
+    "image_url": "/assets/places/guru-nanak-jhira-sahib.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Bidar, Karnataka",
     "gallery_images": []
@@ -2065,7 +2065,7 @@
     "practical_notes": "Inner gates lock in the evening.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/gulbarga-fort.svg",
+    "image_url": "/assets/places/gulbarga-fort.jpg",
     "entry_fee": "Entry charges apply",
     "address": "Kalaburagi, Karnataka",
     "gallery_images": []
@@ -2084,7 +2084,7 @@
     "practical_notes": "Active Sufi space; dress modestly and follow qawwali timings.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/khwaja-bande-nawaz-dargah.svg",
+    "image_url": "/assets/places/khwaja-bande-nawaz-dargah.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kalaburagi, Karnataka",
     "gallery_images": []
@@ -2122,7 +2122,7 @@
     "practical_notes": "Museum hours vary; compound closes by evening.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/buddha-vihar-kalaburagi.svg",
+    "image_url": "/assets/places/buddha-vihar-kalaburagi.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Kalaburagi, Karnataka",
     "gallery_images": []
@@ -2141,7 +2141,7 @@
     "practical_notes": "Open structure with little shade; early morning is best.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/raichur-fort.svg",
+    "image_url": "/assets/places/raichur-fort.jpg",
     "entry_fee": "Entry charges apply",
     "address": "Raichur, Karnataka",
     "gallery_images": []
@@ -2160,7 +2160,7 @@
     "practical_notes": "Interior access depends on the waqf schedule.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ek-minar-ki-masjid.svg",
+    "image_url": "/assets/places/ek-minar-ki-masjid.jpg",
     "entry_fee": "Minor entry charge",
     "address": "Raichur, Karnataka",
     "gallery_images": []
@@ -2179,7 +2179,7 @@
     "practical_notes": "Crowded bazaar access; watch for scooters.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/aam-talab.svg",
+    "image_url": "/assets/places/aam-talab.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Raichur, Karnataka",
     "gallery_images": []
@@ -2198,7 +2198,7 @@
     "practical_notes": "The path is open ground with no shade; combine with the Jogimatti drive.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/chandravalli-caves.svg",
+    "image_url": "/assets/places/chandravalli-caves.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Chandravalli, Chitradurga district",
     "gallery_images": []
@@ -2217,7 +2217,7 @@
     "practical_notes": "Garden opens through the day; water-level safety signs must be respected.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/vani-vilas-sagar.svg",
+    "image_url": "/assets/places/vani-vilas-sagar.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Hiranyakeshi, Chitradurga district",
     "gallery_images": []
@@ -2236,7 +2236,7 @@
     "practical_notes": "Ropeway suspends in bad weather; monkeys grab food packs.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/jogimatti.svg",
+    "image_url": "/assets/places/jogimatti.jpg",
     "entry_fee": "Ropeway and entry charges",
     "address": "Jogimatti, Chitradurga district",
     "gallery_images": []
@@ -2255,7 +2255,7 @@
     "practical_notes": "Boats run short timed circuits; best in dry months for bird density.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ranganathittu-bird-sanctuary.svg",
+    "image_url": "/assets/places/ranganathittu-bird-sanctuary.jpg",
     "entry_fee": "Boat and entry charges",
     "address": "Ranganathittu, Mandya district",
     "gallery_images": []
@@ -2274,7 +2274,7 @@
     "practical_notes": "Several monuments share one ticket; check closing day.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/srirangapatna.svg",
+    "image_url": "/assets/places/srirangapatna.jpg",
     "entry_fee": "Ticketed circuit",
     "address": "Srirangapatna, Mandya district",
     "gallery_images": []
@@ -2293,7 +2293,7 @@
     "practical_notes": "The top walkway is crowded at weekends; strong winds in monsoon spillover.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/krs-dam.svg",
+    "image_url": "/assets/places/krs-dam.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "KRS, Mandya district",
     "gallery_images": []
@@ -2312,7 +2312,7 @@
     "practical_notes": "Fountain runs on evenings; some zones close for maintenance.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/brindavan-gardens.svg",
+    "image_url": "/assets/places/brindavan-gardens.jpg",
     "entry_fee": "Garden ticket applies",
     "address": "KRS, Mandya district",
     "gallery_images": []
@@ -2331,7 +2331,7 @@
     "practical_notes": "Viewpoints are strongest June–December; steps are wet and crowded at weekends.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/shivanasamudra-falls.svg",
+    "image_url": "/assets/places/shivanasamudra-falls.jpg",
     "entry_fee": "Entry charges apply",
     "address": "Shivanasamudra, Mandya district",
     "gallery_images": []
@@ -2350,7 +2350,7 @@
     "practical_notes": "The climb is steep; festivals bring huge weekend crowds.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/melukote.svg",
+    "image_url": "/assets/places/melukote.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Melukote, Mandya district",
     "gallery_images": []
@@ -2369,7 +2369,7 @@
     "practical_notes": "Night traffic bans in the reserve; leeches after rain.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/biligiriranga-hills.svg",
+    "image_url": "/assets/places/biligiriranga-hills.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "BR Hills, Chamarajanagar district",
     "gallery_images": []
@@ -2388,7 +2388,7 @@
     "practical_notes": "Ghat road is narrow; buses restrict timing.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/male-mahadeshwara-hills.svg",
+    "image_url": "/assets/places/male-mahadeshwara-hills.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "MM Hills, Chamarajanagar district",
     "gallery_images": []
@@ -2407,7 +2407,7 @@
     "practical_notes": "Entry controlled by the forest department; fog can erase the view.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/himavad-gopalaswamy-betta.svg",
+    "image_url": "/assets/places/himavad-gopalaswamy-betta.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "BR Hills, Chamarajanagar district",
     "gallery_images": []
@@ -2426,7 +2426,7 @@
     "practical_notes": "Steps are exposed; water at the top is limited.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/devarayanadurga.svg",
+    "image_url": "/assets/places/devarayanadurga.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Devarayanadurga, Tumakuru district",
     "gallery_images": []
@@ -2445,7 +2445,7 @@
     "practical_notes": "The Brahmakalola car festival week (Jan–Feb) is very crowded.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/siddaganga-math.svg",
+    "image_url": "/assets/places/siddaganga-math.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Tiptur, Tumakuru district",
     "gallery_images": []
@@ -2464,7 +2464,7 @@
     "practical_notes": "The scramble is exposed granite; go early with grip shoes.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/madhugiri-fort.svg",
+    "image_url": "/assets/places/madhugiri-fort.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Madhugiri, Tumakuru district",
     "gallery_images": []
@@ -2483,7 +2483,7 @@
     "practical_notes": "Forest gates close by late evening.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/namada-chilume.svg",
+    "image_url": "/assets/places/namada-chilume.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Namada Chilume, Tumakuru district",
     "gallery_images": []
@@ -2502,7 +2502,7 @@
     "practical_notes": "The climb is dark, steep and unlit; groups and guides are the norm.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/skandagiri-hills.svg",
+    "image_url": "/assets/places/skandagiri-hills.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Skandagiri, Chikkaballapura district",
     "gallery_images": []
@@ -2521,7 +2521,7 @@
     "practical_notes": "Photography inside restricted; weekends are busy.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bhoga-nandeeshwara-temple.svg",
+    "image_url": "/assets/places/bhoga-nandeeshwara-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Nandi, Chikkaballapura district",
     "gallery_images": []
@@ -2540,7 +2540,7 @@
     "practical_notes": "No facilities on the hill; carry everything in and out.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/gudibande-fort.svg",
+    "image_url": "/assets/places/gudibande-fort.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Gudibande, Chikkaballapura district",
     "gallery_images": []
@@ -2559,7 +2559,7 @@
     "practical_notes": "Road access varies with farm seasons; strong winds at the crest.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/avalabetta.svg",
+    "image_url": "/assets/places/avalabetta.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Avalabetta, Chikkaballapura district",
     "gallery_images": []
@@ -2578,7 +2578,7 @@
     "practical_notes": "Climbing on the rock faces is informal; go with experienced partners.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ramadevara-betta.svg",
+    "image_url": "/assets/places/ramadevara-betta.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Bengaluru South district",
     "gallery_images": []
@@ -2597,7 +2597,7 @@
     "practical_notes": "Closed on Mondays; guided sessions need booking.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/janapada-loka.svg",
+    "image_url": "/assets/places/janapada-loka.jpg",
     "entry_fee": "Entry charges apply",
     "address": "Kumatadoddi, Bengaluru South district",
     "gallery_images": []
@@ -2616,7 +2616,7 @@
     "practical_notes": "River levels are seasonal and the rocks are sharp; no lifeguards.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/mekedatu.svg",
+    "image_url": "/assets/places/mekedatu.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Mekedatu, Bengaluru South district",
     "gallery_images": []
@@ -2635,7 +2635,7 @@
     "practical_notes": "Flow depends on rain; water is unsafe in the dry months.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/chunchi-falls.svg",
+    "image_url": "/assets/places/chunchi-falls.jpg",
     "entry_fee": "Minor entry charges",
     "address": "Chunchi, Bengaluru South district",
     "gallery_images": []
@@ -2654,7 +2654,7 @@
     "practical_notes": "The climb has no railings; start before dawn in summer.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/savandurga.svg",
+    "image_url": "/assets/places/savandurga.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Savandurga, Bengaluru South district",
     "gallery_images": []
@@ -2673,7 +2673,7 @@
     "practical_notes": "Daily hours split around midday.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kolaramma-temple.svg",
+    "image_url": "/assets/places/kolaramma-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kolar, Karnataka",
     "gallery_images": []
@@ -2692,7 +2692,7 @@
     "practical_notes": "Active worship; visit outside puja hours for quiet viewing.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/someshwara-temple-kolar.svg",
+    "image_url": "/assets/places/someshwara-temple-kolar.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kolar, Karnataka",
     "gallery_images": []
@@ -2711,7 +2711,7 @@
     "practical_notes": "Steps are steep and exposed; crowds swell on Mondays.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/kotilingeshwara-temple.svg",
+    "image_url": "/assets/places/kotilingeshwara-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Kolar district",
     "gallery_images": []
@@ -2730,7 +2730,7 @@
     "practical_notes": "The cave route is dark and tight; head-torches and no big backpacks.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/antaragange-kolar.svg",
+    "image_url": "/assets/places/antaragange-kolar.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Antargange, Kolar district",
     "gallery_images": []
@@ -2749,7 +2749,7 @@
     "practical_notes": "Sights are scattered; the water tank is the meeting point.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/avani.svg",
+    "image_url": "/assets/places/avani.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Avani, Kolar district",
     "gallery_images": []
@@ -2768,7 +2768,7 @@
     "practical_notes": "Worship times restrict quiet photography.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/chandramouleshwara-temple-dharwad.svg",
+    "image_url": "/assets/places/chandramouleshwara-temple-dharwad.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Dharwad, Karnataka",
     "gallery_images": []
@@ -2787,7 +2787,7 @@
     "practical_notes": "Boating runs seasonally; keep distance from nesting banks.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/unkal-lake.svg",
+    "image_url": "/assets/places/unkal-lake.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Unkal, Dharwad district",
     "gallery_images": []
@@ -2806,7 +2806,7 @@
     "practical_notes": "Steep climb; festival days get packed.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/nuggikeri-hanuman-temple.svg",
+    "image_url": "/assets/places/nuggikeri-hanuman-temple.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Nuggikeri, Dharwad district",
     "gallery_images": []
@@ -2825,7 +2825,7 @@
     "practical_notes": "Opens in the evening hours mostly.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sadhankeri-park.svg",
+    "image_url": "/assets/places/sadhankeri-park.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Sadhankeri, Dharwad district",
     "gallery_images": []
@@ -2844,7 +2844,7 @@
     "practical_notes": "Temple rituals limit midday entry.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/trikuteshwara-temple-gadag.svg",
+    "image_url": "/assets/places/trikuteshwara-temple-gadag.jpg",
     "entry_fee": "ASI charges apply",
     "address": "Gadag, Karnataka",
     "gallery_images": []
@@ -2863,7 +2863,7 @@
     "practical_notes": "Sites are spread across the village; a two-wheeler or guide helps.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/lakkundi.svg",
+    "image_url": "/assets/places/lakkundi.jpg",
     "entry_fee": "ASI charges apply",
     "address": "Lakkundi, Gadag district",
     "gallery_images": []
@@ -2882,7 +2882,7 @@
     "practical_notes": "The compound closes by evening.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/dambal-temple-village.svg",
+    "image_url": "/assets/places/dambal-temple-village.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Dambal, Gadag district",
     "gallery_images": []
@@ -2901,7 +2901,7 @@
     "practical_notes": "Non-Hindus may be restricted from the inner hall.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/veeranarayana-temple-gadag.svg",
+    "image_url": "/assets/places/veeranarayana-temple-gadag.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Gadag, Karnataka",
     "gallery_images": []
@@ -2920,7 +2920,7 @@
     "practical_notes": "Best during the dawn and dusk display season.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bankapura-peacock-sanctuary.svg",
+    "image_url": "/assets/places/bankapura-peacock-sanctuary.jpg",
     "entry_fee": "Forest entry applies",
     "address": "Bankapura, Haveri district",
     "gallery_images": []
@@ -2939,7 +2939,7 @@
     "practical_notes": "Dawn drive is the rule; sightings depend on season.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/ranebennur-blackbuck-sanctuary.svg",
+    "image_url": "/assets/places/ranebennur-blackbuck-sanctuary.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Ranebennur, Haveri district",
     "gallery_images": []
@@ -2958,7 +2958,7 @@
     "practical_notes": "Active worship; visit off-puja hours.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/siddhesvara-temple-haveri.svg",
+    "image_url": "/assets/places/siddhesvara-temple-haveri.jpg",
     "entry_fee": "ASI charges apply",
     "address": "Haveri, Karnataka",
     "gallery_images": []
@@ -2966,20 +2966,20 @@
   {
     "id": 471,
     "slug": "galageshwara-temple",
-    "name": "Galageshwara Temple, Hirekerur",
-    "district_name": "Haveri",
-    "district_id": 359,
+    "name": "Galageshwara Temple, Galaganatha",
+    "district_name": "Bagalkote",
+    "district_id": 344,
     "category": "heritage",
     "latitude": 14.5,
     "longitude": 75.483,
-    "description": "A Hoysala-era Shiva temple at Hirekerur with an unusually large seated Nandi guarding the axis.",
-    "how_to_reach": "About 25 km from Ranibennur.",
-    "practical_notes": "Compound opens through the day.",
+    "description": "A early Chalukyan Shiva temple at Galaganatha near Pattadakal, standing by the Malaprabha river with a distinctive tall shikhara and a large Nandi in its forecourt; commonly visited with the Badami-Pattadakal-Aihole circuit.",
+    "how_to_reach": "About 20 km from Badami on the Badami-Pattadakal road in Bagalkote district.",
+    "practical_notes": "Open-air heritage site with limited shade; combine with Pattadakal and Badami in one day.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/galageshwara-temple.svg",
+    "image_url": "/assets/places/galageshwara-temple.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
-    "address": "Hirekerur, Haveri district",
+    "address": "Galaganatha, Pattadakal taluk, Bagalkote district",
     "gallery_images": []
   },
   {
@@ -2996,7 +2996,7 @@
     "practical_notes": "Steps are deep and wet in monsoon.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/santhebennur-pushkarani.svg",
+    "image_url": "/assets/places/santhebennur-pushkarani.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Santhebennur, Davanagere district",
     "gallery_images": []
@@ -3015,7 +3015,7 @@
     "practical_notes": "Village access; a local guide finds the compound.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/bagali-kalleshwara-temple.svg",
+    "image_url": "/assets/places/bagali-kalleshwara-temple.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Bagali, Davanagere district",
     "gallery_images": []
@@ -3034,7 +3034,7 @@
     "practical_notes": "Structures are weathered; access is open-air.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/yadgir-fort.svg",
+    "image_url": "/assets/places/yadgir-fort.jpg",
     "entry_fee": "Entry charges vary",
     "address": "Yadgir, Karnataka",
     "gallery_images": []
@@ -3053,7 +3053,7 @@
     "practical_notes": "The trail is unmarked; confirm access locally.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/shahapur-fort.svg",
+    "image_url": "/assets/places/shahapur-fort.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Shahapur, Yadgir district",
     "gallery_images": []
@@ -3072,7 +3072,7 @@
     "practical_notes": "Village stay is basic; the mound area is protected.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/sannati-buddhist-site.svg",
+    "image_url": "/assets/places/sannati-buddhist-site.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Sannati, Yadgir district",
     "gallery_images": []
@@ -3091,7 +3091,7 @@
     "practical_notes": "Winds on the causeway; avoid dusk by the water.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/narayanpur-dam.svg",
+    "image_url": "/assets/places/narayanpur-dam.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Narayanpur, Yadgir district",
     "gallery_images": []
@@ -3110,7 +3110,7 @@
     "practical_notes": "Temple opens early and closes over midday; car-festival weeks are packed.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/nanjangud-srikanteshwara.svg",
+    "image_url": "/assets/places/nanjangud-srikanteshwara.jpg",
     "entry_fee": "Free entry; dress modestly, photography restrictions inside. Timings vary on festival days.",
     "address": "Nanjangud, Mysuru district",
     "gallery_images": []
@@ -3129,7 +3129,7 @@
     "practical_notes": "The moat, bastions and Fateh Darwaza barbican are open-air ruins with little shade; visit early. Climb only stable masonry.",
     "heritage_id": null,
     "source_url": "https://raichur.nic.in/en/tourist-place/mudgal-fort/",
-    "image_url": "/assets/places/mudgal-fort.svg",
+    "image_url": "/assets/places/mudgal-fort.jpg",
     "entry_fee": "ASI-protected; ticket rates apply, confirm timings on arrival.",
     "address": "Mudgal, Lingsugur taluk, Raichur district",
     "gallery_images": []
@@ -3148,7 +3148,7 @@
     "practical_notes": "Flow depends on rain and melts; rock is wet and slippery and monsoon spray is strong. Wear grip footwear and stay outside the waterline.",
     "heritage_id": null,
     "source_url": "https://karnatakatourism.org/en/",
-    "image_url": "/assets/places/jhari-falls.svg",
+    "image_url": "/assets/places/jhari-falls.jpg",
     "entry_fee": "Forest entry, guide and safari charges apply; bookings via forest department channels.",
     "address": "Below Mullayanagiri, Chikkamagaluru district",
     "gallery_images": []
@@ -3167,7 +3167,7 @@
     "practical_notes": "The hill is forested, cool and known for leopard and venomous-snake habitat; do not stray off the path or visit alone after dusk. The Ghorpade rulers opened the shrine to all communities and lifted the ban on women in 1996.",
     "heritage_id": null,
     "source_url": "https://ballari.nic.in/en/tourist-place/kumaraswamy-temple-sandur/",
-    "image_url": "/assets/places/kumaraswamy-temple-kraunchagiri.svg",
+    "image_url": "/assets/places/kumaraswamy-temple-kraunchagiri.jpg",
     "entry_fee": "ASI-protected; confirm access on arrival",
     "address": "Krauncha Giri, Sandur taluk, Ballari district",
     "gallery_images": []
@@ -3186,7 +3186,7 @@
     "practical_notes": "Fort remains are fragmentary and mixed with the living temple town; the 1586 royal bath of Venkatappa Naik lies on the outskirts. Combine with Hemagudda and Kummata Durga forts if travelling with a vehicle.",
     "heritage_id": null,
     "source_url": "https://en.wikipedia.org/wiki/Kanakagiri",
-    "image_url": "/assets/places/kanakagiri-fort.svg",
+    "image_url": "/assets/places/kanakagiri-fort.jpg",
     "entry_fee": "Temple free; monument access varies",
     "address": "Kanakagiri, Koppal district",
     "gallery_images": []
@@ -3205,7 +3205,7 @@
     "practical_notes": "Summit access is restricted in places and the stone is exposed and hot by mid-morning; go early with water. Check local access before the climb.",
     "heritage_id": null,
     "source_url": "https://en.wikipedia.org/wiki/Pavagada",
-    "image_url": "/assets/places/pavagada-fort.svg",
+    "image_url": "/assets/places/pavagada-fort.jpg",
     "entry_fee": "No standard entry fee; local parking or guide charges may apply.",
     "address": "Pavagada, Tumakuru district",
     "gallery_images": []
