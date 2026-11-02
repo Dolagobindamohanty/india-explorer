@@ -1710,9 +1710,9 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Natural%20beauty%20of%20Mechuka%2C%20Arunachal%20Pradesh.jpg"
   },
   "samten-yongcha-monastery": {
-    "file": "Original vector editorial illustration (no verified Commons photograph)",
-    "source_page": "https://arunachaltourism.com/",
-    "download_url": ""
+    "file": "Annex of monastery Mechuka.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AAnnex_of_monastery_Mechuka.jpg",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Annex%20of%20monastery%20Mechuka.jpg"
   },
   "namdapha-national-park": {
     "file": "20200305 143438 Namdapha National Park & Tiger Reserve Miao Changlang, Arunachal Pradesh 792122 01.jpg",
@@ -2270,9 +2270,9 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bidar-Fort-Rangin-Mahal-Mother-Of-Pearl-Decoration.png"
   },
   "narasimha-jhira-temple": {
-    "file": "Original vector editorial illustration (no verified Commons photograph)",
-    "source_page": "https://karnatakatourism.org/en/",
-    "download_url": ""
+    "file": "Narsimha Jharna Bidar.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3ANarsimha_Jharna_Bidar.jpg",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narsimha%20Jharna%20Bidar.jpg"
   },
   "guru-nanak-jhira-sahib": {
     "file": "Bidar Gurudwara Nanak Jhira Sahib.jpg",
@@ -2288,11 +2288,6 @@
     "file": "Dargah of Hazrat Khwaja Band Nawaz Syed Mohammed Gesu Darz 2012-09-14 10-40-53.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ADargah_of_Hazrat_Khwaja_Band_Nawaz_Syed_Mohammed_Gesu_Darz_2012-09-14_10-40-53.jpg",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dargah%20of%20Hazrat%20Khwaja%20Band%20Nawaz%20Syed%20Mohammed%20Gesu%20Darz%202012-09-14%2010-40-53.jpg"
-  },
-  "basavana-bagevadi": {
-    "file": "Original vector editorial illustration (no verified Commons photograph)",
-    "source_page": "https://karnatakatourism.org/en/",
-    "download_url": ""
   },
   "buddha-vihar-kalaburagi": {
     "file": "Sarangib, Ashoka pillar at Buddha vihar, Gulbarga.jpg",
@@ -2585,8 +2580,18 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pavagada.jpg"
   },
   "kunduvada-lake": {
+    "file": "Kundawada Kere(Lake) Davanagere.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AKundawada_Kere%28Lake%29_Davanagere.jpg",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kundawada%20Kere%28Lake%29%20Davanagere.jpg"
+  },
+  "basaveshwara-temple-basavana-bagewadi": {
     "file": "Original vector editorial illustration (no verified Commons photograph)",
-    "source_page": "https://en.wikipedia.org/wiki/Davanagere",
+    "source_page": "https://www.incredibleindia.gov.in/en/karnataka/vijayapura/basavana-bagewadi",
     "download_url": ""
+  },
+  "sharana-basaveshwara-temple": {
+    "file": "Shri Sharana Basaveshwara back side view.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AShri_Sharana_Basaveshwara_back_side_view.jpg",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri%20Sharana%20Basaveshwara%20back%20side%20view.jpg"
   }
 }

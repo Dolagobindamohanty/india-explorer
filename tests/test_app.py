@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 484
+    assert len(all_places) == 485
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -81,7 +81,7 @@ def test_full_destination_journey(client):
     assert {1, 10}.issubset(tawang['best_months'])
     karnataka = client.get('/api/states/karnataka').json()
     assert len(karnataka['districts']) == 31
-    assert len(karnataka['places']) == 170
+    assert len(karnataka['places']) == 171
     hampi = client.get('/api/places/hampi-group-of-monuments').json()
     assert hampi['district'] == 'Vijayanagara'
     assert hampi['heritage_designation'] == 'world_heritage_site'
@@ -224,7 +224,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 484
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 485
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -283,7 +283,7 @@ def test_places_reparent_by_name_when_district_ids_shift(tmp_path):
             ' JOIN districts d ON d.id = p.district_id'
             ' JOIN regions r ON r.id = d.region_id'
             " WHERE r.slug = 'karnataka'"
-        ).fetchone()[0] == 170
+        ).fetchone()[0] == 171
         assert db.execute(
             'SELECT COUNT(*) FROM places p JOIN districts d ON d.id = p.district_id'
             " WHERE d.slug = 'bengaluru-south'"
@@ -313,12 +313,24 @@ def test_reverified_karnataka_places_land_in_correct_districts(client):
     assert mudgal['state'] == 'Karnataka'
     assert 'Raichur' in mudgal['district']
 
+    # Basavana Bagewadi (Vijayapura) and the Kalaburagi city temple are different
+    # places; one record used to conflate them.
+    bagewadi = client.get('/api/places/basaveshwara-temple-basavana-bagewadi').json()
+    assert bagewadi['district'] == 'Vijayapura'
+    assert 'Basavana Bagewadi' in bagewadi['address']
+    sharana = client.get('/api/places/sharana-basaveshwara-temple').json()
+    assert sharana['district'] == 'Kalaburagi'
+    assert sharana['image_url'] == '/assets/places/sharana-basaveshwara-temple.jpg'
+    kalaburagi = {p['slug'] for p in client.get('/api/districts/kalaburagi').json()['places']}
+    assert 'sharana-basaveshwara-temple' in kalaburagi
+    assert 'basaveshwara-temple-basavana-bagewadi' not in kalaburagi
+
 
 def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 484}
+    assert response.json() == {'status': 'ok', 'places': 485}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -423,7 +435,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 484}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 485}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -490,9 +502,9 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 484,
+        'detailed_places': 485,
         'reviewed_places': 0,
-        'unreviewed_places': 484,
+        'unreviewed_places': 485,
         'confirmed_festival_dates': 0,
     }
 
