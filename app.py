@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 import sqlite3
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 from fastapi.staticfiles import StaticFiles
 
@@ -259,9 +259,28 @@ def create_app(database_path=None):
         params.append(limit)
         return enrich_places(rows(place_select + ' WHERE ' + ' AND '.join(clauses) + ' ORDER BY p.name LIMIT ?', params))
 
+    def _empty_to_none(value: str | None):
+        if value is None:
+            return None
+        if isinstance(value, str) and value.strip() == '':
+            return None
+        return value
+
+    def _month_param(month: str | None = Query(default=None)):
+        month = _empty_to_none(month)
+        if month is None:
+            return None
+        try:
+            month_int = int(month)
+        except (TypeError, ValueError):
+            raise HTTPException(status_code=422, detail='Invalid month')
+        if month_int < 1 or month_int > 12:
+            raise HTTPException(status_code=422, detail='Invalid month')
+        return month_int
+
     @app.get('/api/places')
     def places(q: str = Query('', max_length=120), state: str = '', district: str = '',
-               month: int | None = Query(None, ge=1, le=12), category: str = '', unesco: bool = False):
+               month: int | None = Depends(_month_param), category: str = '', unesco: bool = False):
         return query_places(q=q, state=state, district=district, month=month, category=category, unesco=unesco)
 
     @app.get('/api/places/{slug}')
@@ -285,7 +304,7 @@ def create_app(database_path=None):
         return result
 
     @app.get('/api/festivals')
-    def festivals(month: int | None = Query(None, ge=1, le=12), district: str = ''):
+    def festivals(month: int | None = Depends(_month_param), district: str = ''):
         clauses, params = ['1=1'], []
         if month is not None:
             clauses.append('EXISTS (SELECT 1 FROM festival_months fm WHERE fm.festival_id=f.id AND fm.month=?)')
@@ -535,7 +554,7 @@ def create_app(database_path=None):
         return page_document('India Explorer', content, 'Discover states, districts, destinations, travel trails and festivals across India.', json_ld=website_schema, og_image='/assets/states/odisha.jpg')
 
     @app.get('/explore', response_class=HTMLResponse)
-    def rendered_explore(q: str = '', state: str = '', month: int | None = Query(None, ge=1, le=12), category: str = '', unesco: bool = False):
+    def rendered_explore(q: str = '', state: str = '', month: int | None = Depends(_month_param), category: str = '', unesco: bool = False):
         query = {'q': q, 'state': state, 'month': str(month) if month else '', 'category': category, 'unesco': 'true' if unesco else ''}
         result = places(q=q, state=state, month=month, category=category, unesco=unesco)
         places_json = json.dumps([{'slug': p['slug'], 'name': p['name'], 'category': p['category'], 'lat': p['latitude'], 'lon': p['longitude'], 'image_url': p.get('image_url') or fallback_image(p.get('state_slug')), 'district': p['district'], 'state': p['state']} for p in result])
