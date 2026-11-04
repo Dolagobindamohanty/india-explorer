@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
 :root {
-  --paper: #f6f8f4;
+  --paper: radial-gradient(1200px 800px at 20% -10%, rgba(47,107,63,0.08) 0%, transparent 60%), radial-gradient(1000px 700px at 80% -15%, rgba(182,90,43,0.05) 0%, transparent 55%), #f7f9f6;
   --surface: #ffffff;
-  --surface-2: #f0f5ed;
+  --surface-2: #f3f7f1;
   --ink: #16241c;
   --heading: #16241c;
   --muted: #54645a;
@@ -41,8 +41,10 @@ html {
 body {
   margin: 0;
   background: var(--paper);
+  background-attachment: fixed;
   color: var(--ink);
   font: 16px 'DM Sans', sans-serif;
+  min-height: 100vh;
 }
 
 a {
