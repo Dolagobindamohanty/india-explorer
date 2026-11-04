@@ -522,7 +522,7 @@ def create_app(database_path=None):
         featured_states = [r for r in regions if r['slug'] in ('odisha', 'goa', 'himachal-pradesh', 'arunachal-pradesh', 'karnataka', 'rajasthan')][:6]
         state_cards = ''.join(server_region_link(r) for r in featured_states)
         hero_slides_data = [
-            ('/assets/places/konark-sun-temple.jpg', 'Puri, Odisha', 'Konark Sun Temple'),
+            ('/assets/places/puri-jagannath-temple.jpg', 'Puri, Odisha', 'Shree Jagannath Temple'),
             ('/assets/states/uttar-pradesh.jpg', 'Agra, Uttar Pradesh', 'Taj Mahal'),
             ('/assets/places/aguada-fort.jpg', 'North Goa', 'Fort Aguada & Lighthouse'),
             ('/assets/states/punjab.jpg', 'Amritsar, Punjab', 'Harmandir Sahib (Golden Temple)'),
@@ -530,7 +530,7 @@ def create_app(database_path=None):
             ('/assets/states/rajasthan.jpg', 'Jaipur, Rajasthan', 'Hawa Mahal (Pink City)'),
             ('/assets/states/maharashtra.jpg', 'Mumbai, Maharashtra', 'Gateway of India'),
             ('/assets/states/west-bengal.jpg', 'Kolkata, West Bengal', 'Victoria Memorial'),
-            ('/assets/places/puri-jagannath-temple.jpg', 'Puri, Odisha', 'Shree Jagannath Temple'),
+            ('/assets/places/konark-sun-temple.jpg', 'Puri, Odisha', 'Konark Sun Temple'),
             ('/assets/states/jammu-and-kashmir.jpg', 'Srinagar, Jammu & Kashmir', 'Dal Lake Shikaras'),
             ('/assets/places/palolem-beach.jpg', 'Canacona, South Goa', 'Palolem Beach'),
             ('/assets/states/ladakh.jpg', 'Ladakh', 'Thiksey Monastery'),

@@ -63,7 +63,7 @@ async function api(path) {
 }
 
 const HERO_SLIDES = [
-  { img: '/assets/places/konark-sun-temple.jpg', sub: 'Puri, Odisha', title: 'Konark Sun Temple' },
+  { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple' },
   { img: '/assets/states/uttar-pradesh.jpg', sub: 'Agra, Uttar Pradesh', title: 'Taj Mahal' },
   { img: '/assets/places/aguada-fort.jpg', sub: 'North Goa', title: 'Fort Aguada & Lighthouse' },
   { img: '/assets/states/punjab.jpg', sub: 'Amritsar, Punjab', title: 'Harmandir Sahib (Golden Temple)' },
@@ -71,7 +71,7 @@ const HERO_SLIDES = [
   { img: '/assets/states/rajasthan.jpg', sub: 'Jaipur, Rajasthan', title: 'Hawa Mahal (Pink City)' },
   { img: '/assets/states/maharashtra.jpg', sub: 'Mumbai, Maharashtra', title: 'Gateway of India' },
   { img: '/assets/states/west-bengal.jpg', sub: 'Kolkata, West Bengal', title: 'Victoria Memorial' },
-  { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple' },
+  { img: '/assets/places/konark-sun-temple.jpg', sub: 'Puri, Odisha', title: 'Konark Sun Temple' },
   { img: '/assets/states/jammu-and-kashmir.jpg', sub: 'Srinagar, Jammu & Kashmir', title: 'Dal Lake Shikaras' },
   { img: '/assets/places/palolem-beach.jpg', sub: 'Canacona, South Goa', title: 'Palolem Beach' },
   { img: '/assets/states/ladakh.jpg', sub: 'Ladakh', title: 'Thiksey Monastery' },

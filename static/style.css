@@ -248,6 +248,24 @@ body[data-theme="dark"] nav span {
 .nav-search-link {
   color: var(--orange);
   font-weight: 600;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.nav-search-link:hover {
+  background: var(--surface-2);
+}
+
+.nav-search-link:focus-visible {
+  outline: 2px solid rgba(168,69,36,0.6);
+  outline-offset: 2px;
 }
 
 .menu-toggle {
