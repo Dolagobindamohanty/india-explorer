@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
 :root {
-  --paper: #f7f6f0;
-  --surface: #fffef9;
-  --surface-2: #e9eddf;
-  --ink: #1f352e;
-  --heading: #1f352e;
-  --muted: #526157;
-  --line: #d8ded1;
-  --orange: #a84524;
-  --green: #1e4536;
+  --paper: #f6f8f4;
+  --surface: #ffffff;
+  --surface-2: #f0f5ed;
+  --ink: #16241c;
+  --heading: #16241c;
+  --muted: #54645a;
+  --line: #d7e2d2;
+  --orange: #b65a2b;
+  --green: #2f6b3f;
   --radius: 10px;
-  --shadow: 0 12px 28px rgba(32, 59, 51, 0.12);
+  --shadow: 0 16px 36px -24px rgba(22, 36, 28, 0.45);
 }
 
 body[data-theme="dark"] {
