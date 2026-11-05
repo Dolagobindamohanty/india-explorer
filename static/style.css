@@ -837,6 +837,19 @@ body[data-theme="dark"] .badge {
   border: 1px solid #3d5c4e;
 }
 
+.sparse-badge {
+  background: #f5e6c8;
+  color: #a84d29;
+  border-color: #d4a574;
+  font-size: 9px;
+}
+
+body[data-theme="dark"] .sparse-badge {
+  background: #3d2e1a;
+  color: #f09a73;
+  border-color: #5d4a30;
+}
+
 .sector-tag {
   color: var(--orange);
   font-weight: 600;

@@ -416,12 +416,20 @@ def create_app(database_path=None):
             badge = 'UNESCO Tentative List'
         else:
             badge = labels.get(item.get('category'), category)
-        fee_badge = f'<span class="badge fee-badge">🎟 {escape(item["entry_fee"])}</span>' if item.get('entry_fee') else ''
-        sector_display = f'📍 {escape(item["address"])}' if item.get('address') else escape(item['district'] + ' · ' + item['state'])
+        fee_text = item.get('entry_fee') or 'Fee not available'
+        fee_badge = f'<span class="badge fee-badge">🎟 {escape(fee_text)}</span>'
+        if item.get('address'):
+            location_display = f'📍 {escape(item["address"])}'
+        elif item.get('district') and item.get('state') and item['district'].lower() == item['state'].lower():
+            location_display = f'📍 {escape(item["district"])}'
+        elif item.get('district') and item.get('state'):
+            location_display = f'📍 {escape(item["district"])} · {escape(item["state"])}'
+        else:
+            location_display = ''
         months = ', '.join(MONTH_NAMES[month - 1] for month in item.get('best_months', []))
         generic_winter_months = {1, 2, 3, 10, 11, 12}
-        timing = f'Best in {escape(months)}' if months and set(item.get('best_months', [])) != generic_winter_months else 'Seasonal guidance'
-        return f'''<article class="card place-card" data-category="{escape(item.get('category',''))}"><a href="/place/{escape(item['slug'])}" class="art"><img src="{image_url}" alt="{escape(item['name'])} destination photo" loading="lazy"><span class="badge">{escape(badge)}</span>{fee_badge}</a><div class="card-body"><div class="meta">{sector_display}</div><h3><a href="/place/{escape(item['slug'])}">{escape(item['name'])}</a></h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{timing}</span><button class="save" data-save="{escape(item['slug'])}" aria-label="Save {escape(item['name'])}">♡ Save</button></div></div></article>'''
+        timing = f'Best in {escape(months)}' if months and set(item.get('best_months', [])) != generic_winter_months else ''
+        return f'''<article class="card place-card" data-category="{escape(item.get('category',''))}"><a href="/place/{escape(item['slug'])}" class="art"><img src="{image_url}" alt="{escape(item['name'])} destination photo" loading="lazy"><span class="badge">{escape(badge)}</span>{fee_badge}</a><div class="card-body"><div class="meta">{location_display}</div><h3><a href="/place/{escape(item['slug'])}">{escape(item['name'])}</a></h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{timing}</span><button class="save" data-save="{escape(item['slug'])}" aria-label="Save {escape(item['name'])}">♡ Save</button></div></div></article>'''
 
     def category_filter_strip(places_list):
         if len(places_list) < 4:
@@ -523,17 +531,17 @@ def create_app(database_path=None):
         state_cards = ''.join(server_region_link(r) for r in featured_states)
         hero_slides_data = [
             ('/assets/places/puri-jagannath-temple.jpg', 'Puri, Odisha', 'Shree Jagannath Temple', '/place/puri-jagannath-temple', '/state/odisha'),
-            ('/assets/states/uttar-pradesh.jpg', 'Agra, Uttar Pradesh', 'Taj Mahal', '/place/taj-mahal', '/state/uttar-pradesh'),
-            ('/assets/places/aguada-fort.jpg', 'North Goa', 'Fort Aguada & Lighthouse', '/place/aguada-fort', '/state/goa'),
-            ('/assets/states/punjab.jpg', 'Amritsar, Punjab', 'Harmandir Sahib (Golden Temple)', '/state/punjab', '/state/punjab'),
-            ('/assets/places/alappuzha-backwaters.jpg', 'Alappuzha, Kerala', 'Backwaters of Kerala', '/place/alappuzha-backwaters', '/state/kerala'),
-            ('/assets/states/rajasthan.jpg', 'Jaipur, Rajasthan', 'Hawa Mahal (Pink City)', '/state/rajasthan', '/state/rajasthan'),
-            ('/assets/states/maharashtra.jpg', 'Mumbai, Maharashtra', 'Gateway of India', '/state/maharashtra', '/state/maharashtra'),
-            ('/assets/states/west-bengal.jpg', 'Kolkata, West Bengal', 'Victoria Memorial', '/state/west-bengal', '/state/west-bengal'),
-            ('/assets/places/konark-sun-temple.jpg', 'Puri, Odisha', 'Konark Sun Temple', '/place/konark-sun-temple', '/state/odisha'),
-            ('/assets/states/jammu-and-kashmir.jpg', 'Srinagar, Jammu & Kashmir', 'Dal Lake Shikaras', '/place/dal-lake', '/state/jammu-and-kashmir'),
-            ('/assets/places/palolem-beach.jpg', 'Canacona, South Goa', 'Palolem Beach', '/place/palolem-beach', '/state/goa'),
-            ('/assets/states/ladakh.jpg', 'Ladakh', 'Thiksey Monastery', '/place/thiksey-monastery', '/state/ladakh'),
+            ('/assets/places/mysuru-palace.jpg', 'Mysuru, Karnataka', 'Mysuru Palace', '/place/mysuru-palace', '/state/karnataka'),
+            ('/assets/places/hampi-group-of-monuments.jpg', 'Vijayanagara, Karnataka', 'Hampi Group of Monuments', '/place/hampi-group-of-monuments', '/state/karnataka'),
+            ('/assets/places/badami-cave-temples.jpg', 'Bagalkote, Karnataka', 'Badami Cave Temples', '/place/badami-cave-temples', '/state/karnataka'),
+            ('/assets/places/gokarna-and-om-beach.jpg', 'Uttara Kannada, Karnataka', 'Gokarna & Om Beach', '/place/gokarna-and-om-beach', '/state/karnataka'),
+            ('/assets/places/bandipur-tiger-reserve.jpg', 'Chamarajanagar, Karnataka', 'Bandipur Tiger Reserve', '/place/bandipur-tiger-reserve', '/state/karnataka'),
+            ('/assets/places/ananta-basudeva-temple.jpg', 'Bhubaneswar, Odisha', 'Ananta Basudeva Temple', '/place/ananta-basudeva-temple', '/state/odisha'),
+            ('/assets/places/barehipani-waterfall.jpg', 'Mayurbhanj, Odisha', 'Barehipani Waterfall', '/place/barehipani-waterfall', '/state/odisha'),
+            ('/assets/places/mangalajodi.jpg', 'Khordha, Odisha', 'Mangalajodi', '/place/mangalajodi', '/state/odisha'),
+            ('/assets/places/maa-kalijai-temple.jpg', 'Khordha, Odisha', 'Maa Kalijai Temple', '/place/maa-kalijai-temple', '/state/odisha'),
+            ('/assets/places/satapada-chilika.jpg', 'Puri, Odisha', 'Satapada (Chilika)', '/place/satapada-chilika', '/state/odisha'),
+            ('/assets/places/udayagiri-monastery.jpg', 'Jajpur, Odisha', 'Udayagiri Monastery', '/place/udayagiri-monastery', '/state/odisha'),
         ]
         # Mirror static/app.js heroSlidesHtml(): every slide carries its own
         # caption links and dot strip, so a photo and its labels always

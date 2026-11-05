@@ -27,17 +27,27 @@ function placeCard(p) {
   else if (p.heritage_designation === 'component_site') badge = 'UNESCO Component';
   else if (p.heritage_designation === 'tentative_list') badge = 'UNESCO Tentative List';
   const placeArtwork = p.image_url || `/assets/places/${p.slug}.jpg`;
-  const timing = p.distance_km != null ? `${p.distance_km} km straight-line` : p.best_months.length ? `Best in ${p.best_months.map(shortMonth).join(' · ')}` : 'Seasonal details pending';
-  const feeBadge = p.entry_fee ? `<span class="badge fee-badge">🎟 ${esc(p.entry_fee)}</span>` : '';
-  const sectorDisplay = p.address ? `📍 ${esc(p.address)}` : `${esc(p.district)} · ${esc(p.state)}`;
-  return `<article class="card place-card" data-category="${esc(p.category)}"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><span class="badge">${esc(badge)}</span>${feeBadge}</a><div class="card-body"><div class="meta">${sectorDisplay}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${timing}</span>${saveButton(p)}</div></div></article>`;
+  const timing = p.best_months.length ? `Best in ${p.best_months.map(shortMonth).join(' · ')}` : '';
+  const feeText = p.entry_fee ? `🎟 ${esc(p.entry_fee)}` : 'Fee not available';
+  const feeBadge = `<span class="badge fee-badge">${feeText}</span>`;
+  let locationDisplay = '';
+  if (p.address) {
+    locationDisplay = `📍 ${esc(p.address)}`;
+  } else if (p.district && p.state && p.district.toLowerCase() === p.state.toLowerCase()) {
+    locationDisplay = `📍 ${esc(p.district)}`;
+  } else if (p.district && p.state) {
+    locationDisplay = `📍 ${esc(p.district)} · ${esc(p.state)}`;
+  }
+  return `<article class="card place-card" data-category="${esc(p.category)}"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><span class="badge">${esc(badge)}</span>${feeBadge}</a><div class="card-body"><div class="meta">${locationDisplay}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${timing}</span>${saveButton(p)}</div></div></article>`;
 }
 function regionCard(r, kind) {
   const initials = r.name.split(/\s+/).map(word => word[0]).slice(0, 2).join('');
   const cover = r.cover_image_url
     ? `<div class="art"><img src="${esc(r.cover_image_url)}" alt="${esc(r.name)} destination image" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-missing');this.remove()"></div>`
     : `<div class="directory-art" aria-hidden="true"><strong>${esc(initials)}</strong></div>`;
-  return `<a class="card region-card" href="/state/${esc(r.slug)}">${cover}<div class="card-body"><div class="meta">${kind} · ${r.district_count} districts</div><h3>${esc(r.name)} <span class="arrow">↗</span></h3><p>${esc(r.description)}</p><div class="card-bottom"><span>${r.place_count} detailed places</span><span class="source">Explore</span></div></div></a>`;
+  const sparse = r.place_count < 10;
+  const sparseBadge = sparse ? '<span class="badge sparse-badge">Expanding coverage…</span>' : '';
+  return `<a class="card region-card" href="/state/${esc(r.slug)}">${cover}<div class="card-body"><div class="meta">${kind} · ${r.district_count} districts</div><h3>${esc(r.name)} <span class="arrow">↗</span>${sparseBadge}</h3><p>${esc(r.description)}</p><div class="card-bottom"><span>${r.place_count} detailed places</span><span class="source">Explore</span></div></div></a>`;
 }
 function cards(items) { return items.length ? `<div class="cards">${items.map(placeCard).join('')}</div>` : '<p class="empty">No places match yet. Try another month or filter. Our pilot directory is still small.</p>'; }
 function skeletonCards(count = 3) { return `<div class="cards skeleton-cards">${Array.from({length: count}, () => '<div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line short"></div></div>').join('')}</div>`; }
@@ -64,17 +74,17 @@ async function api(path) {
 
 const HERO_SLIDES = [
   { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple', href: '/place/puri-jagannath-temple', stateHref: '/state/odisha' },
-  { img: '/assets/states/uttar-pradesh.jpg', sub: 'Agra, Uttar Pradesh', title: 'Taj Mahal', href: '/place/taj-mahal', stateHref: '/state/uttar-pradesh' },
-  { img: '/assets/places/aguada-fort.jpg', sub: 'North Goa', title: 'Fort Aguada & Lighthouse', href: '/place/aguada-fort', stateHref: '/state/goa' },
-  { img: '/assets/states/punjab.jpg', sub: 'Amritsar, Punjab', title: 'Harmandir Sahib (Golden Temple)', href: '/state/punjab', stateHref: '/state/punjab' },
-  { img: '/assets/places/alappuzha-backwaters.jpg', sub: 'Alappuzha, Kerala', title: 'Backwaters of Kerala', href: '/place/alappuzha-backwaters', stateHref: '/state/kerala' },
-  { img: '/assets/states/rajasthan.jpg', sub: 'Jaipur, Rajasthan', title: 'Hawa Mahal (Pink City)', href: '/state/rajasthan', stateHref: '/state/rajasthan' },
-  { img: '/assets/states/maharashtra.jpg', sub: 'Mumbai, Maharashtra', title: 'Gateway of India', href: '/state/maharashtra', stateHref: '/state/maharashtra' },
-  { img: '/assets/states/west-bengal.jpg', sub: 'Kolkata, West Bengal', title: 'Victoria Memorial', href: '/state/west-bengal', stateHref: '/state/west-bengal' },
-  { img: '/assets/places/konark-sun-temple.jpg', sub: 'Puri, Odisha', title: 'Konark Sun Temple', href: '/place/konark-sun-temple', stateHref: '/state/odisha' },
-  { img: '/assets/states/jammu-and-kashmir.jpg', sub: 'Srinagar, Jammu & Kashmir', title: 'Dal Lake Shikaras', href: '/place/dal-lake', stateHref: '/state/jammu-and-kashmir' },
-  { img: '/assets/places/palolem-beach.jpg', sub: 'Canacona, South Goa', title: 'Palolem Beach', href: '/place/palolem-beach', stateHref: '/state/goa' },
-  { img: '/assets/states/ladakh.jpg', sub: 'Ladakh', title: 'Thiksey Monastery', href: '/place/thiksey-monastery', stateHref: '/state/ladakh' },
+  { img: '/assets/places/mysuru-palace.jpg', sub: 'Mysuru, Karnataka', title: 'Mysuru Palace', href: '/place/mysuru-palace', stateHref: '/state/karnataka' },
+  { img: '/assets/places/hampi-group-of-monuments.jpg', sub: 'Vijayanagara, Karnataka', title: 'Hampi Group of Monuments', href: '/place/hampi-group-of-monuments', stateHref: '/state/karnataka' },
+  { img: '/assets/places/badami-cave-temples.jpg', sub: 'Bagalkote, Karnataka', title: 'Badami Cave Temples', href: '/place/badami-cave-temples', stateHref: '/state/karnataka' },
+  { img: '/assets/places/gokarna-and-om-beach.jpg', sub: 'Uttara Kannada, Karnataka', title: 'Gokarna & Om Beach', href: '/place/gokarna-and-om-beach', stateHref: '/state/karnataka' },
+  { img: '/assets/places/bandipur-tiger-reserve.jpg', sub: 'Chamarajanagar, Karnataka', title: 'Bandipur Tiger Reserve', href: '/place/bandipur-tiger-reserve', stateHref: '/state/karnataka' },
+  { img: '/assets/places/ananta-basudeva-temple.jpg', sub: 'Bhubaneswar, Odisha', title: 'Ananta Basudeva Temple', href: '/place/ananta-basudeva-temple', stateHref: '/state/odisha' },
+  { img: '/assets/places/barehipani-waterfall.jpg', sub: 'Mayurbhanj, Odisha', title: 'Barehipani Waterfall', href: '/place/barehipani-waterfall', stateHref: '/state/odisha' },
+  { img: '/assets/places/mangalajodi.jpg', sub: 'Khordha, Odisha', title: 'Mangalajodi', href: '/place/mangalajodi', stateHref: '/state/odisha' },
+  { img: '/assets/places/maa-kalijai-temple.jpg', sub: 'Khordha, Odisha', title: 'Maa Kalijai Temple', href: '/place/maa-kalijai-temple', stateHref: '/state/odisha' },
+  { img: '/assets/places/satapada-chilika.jpg', sub: 'Puri, Odisha', title: 'Satapada (Chilika)', href: '/place/satapada-chilika', stateHref: '/state/odisha' },
+  { img: '/assets/places/udayagiri-monastery.jpg', sub: 'Jajpur, Odisha', title: 'Udayagiri Monastery', href: '/place/udayagiri-monastery', stateHref: '/state/odisha' },
 ];
 
 function heroSlidesHtml() {
