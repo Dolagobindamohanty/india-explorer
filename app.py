@@ -1,4 +1,4 @@
-from contextlib import contextmanager
+from contextlib import import contextmanager
 import hashlib
 from html import escape
 import json
@@ -7,6 +7,9 @@ import os
 from pathlib import Path
 import re
 import sqlite3
+
+# Force cache invalidation
+APP_VERSION = "20261105-dedupe-fix"
 
 from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.responses import HTMLResponse, PlainTextResponse, Response
