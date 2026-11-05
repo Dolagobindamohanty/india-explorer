@@ -217,6 +217,8 @@ def create_app(database_path=None):
             ('name', 'description', 'food_notes'),
         )
         result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? GROUP BY p.id ORDER BY p.name', (result['id'],)))
+        seen = set()
+        result['places'] = [p for p in result['places'] if p['id'] not in seen and not seen.add(p['id'])]
         return result
 
     @app.get('/api/districts')
@@ -237,6 +239,8 @@ def create_app(database_path=None):
             FROM districts d JOIN regions r ON r.id=d.region_id WHERE d.slug=?''', (slug,))
         repair_display_text([result], ('name', 'description', 'food_notes', 'state'))
         result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? GROUP BY p.id ORDER BY p.name', (result['id'],)))
+        seen = set()
+        result['places'] = [p for p in result['places'] if p['id'] not in seen and not seen.add(p['id'])]
         result['festivals'] = festivals(month=None, district=slug)
         return result
 
@@ -612,6 +616,9 @@ def create_app(database_path=None):
             ('name', 'description', 'food_notes'),
         )
         result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? GROUP BY p.id ORDER BY p.name', (result['id'],)))
+        # Deduplicate by id as safety net
+        seen = set()
+        result['places'] = [p for p in result['places'] if p['id'] not in seen and not seen.add(p['id'])]
         cover = escape(result.get('cover_image_url') or fallback_image(result['slug']), quote=True)
         districts_html = ''.join(f'<a href="/district/{escape(d["slug"])}">{escape(d["name"])} <span>↗</span></a>' for d in result['districts'])
         kind_label = 'Union Territory' if result['kind'] == 'union_territory' else 'State'
@@ -646,6 +653,8 @@ def create_app(database_path=None):
         result = one('''SELECT d.*, r.name AS state, r.slug AS state_slug FROM districts d JOIN regions r ON r.id=d.region_id WHERE d.slug=?''', (slug,))
         repair_display_text([result], ('name', 'description', 'food_notes', 'state'))
         result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? GROUP BY p.id ORDER BY p.name', (result['id'],)))
+        seen = set()
+        result['places'] = [p for p in result['places'] if p['id'] not in seen and not seen.add(p['id'])]
         result['festivals'] = festivals(month=None, district=slug)
         cover = escape(fallback_image(result['state_slug']), quote=True)
         festival_html = ''.join(server_festival_card(item) for item in result['festivals']) or '<p class="empty">No festivals recorded for this district yet.</p>'
