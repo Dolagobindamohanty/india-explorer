@@ -18,7 +18,7 @@ from seed import STATE_COVER_IMAGES, seed
 ROOT = Path(__file__).resolve().parent
 MONTH_NAMES = ('January', 'February', 'March', 'April', 'May', 'June',
                'July', 'August', 'September', 'October', 'November', 'December')
-SITE_URL = os.getenv('SITE_URL', 'https://india-explorer-hazel.vercel.app').rstrip('/')
+SITE_URL = os.getenv('SITE_URL', 'https://traveling-ketch.vercel.app').rstrip('/')
 DASH_CORRUPTION = re.compile(r'(?:–.){3,}–?')
 
 
