@@ -63,24 +63,23 @@ async function api(path) {
 }
 
 const HERO_SLIDES = [
-  { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple' },
-  { img: '/assets/states/uttar-pradesh.jpg', sub: 'Agra, Uttar Pradesh', title: 'Taj Mahal' },
-  { img: '/assets/places/aguada-fort.jpg', sub: 'North Goa', title: 'Fort Aguada & Lighthouse' },
-  { img: '/assets/states/punjab.jpg', sub: 'Amritsar, Punjab', title: 'Harmandir Sahib (Golden Temple)' },
-  { img: '/assets/places/alappuzha-backwaters.jpg', sub: 'Alappuzha, Kerala', title: 'Backwaters of Kerala' },
-  { img: '/assets/states/rajasthan.jpg', sub: 'Jaipur, Rajasthan', title: 'Hawa Mahal (Pink City)' },
-  { img: '/assets/states/maharashtra.jpg', sub: 'Mumbai, Maharashtra', title: 'Gateway of India' },
-  { img: '/assets/states/west-bengal.jpg', sub: 'Kolkata, West Bengal', title: 'Victoria Memorial' },
-  { img: '/assets/places/konark-sun-temple.jpg', sub: 'Puri, Odisha', title: 'Konark Sun Temple' },
-  { img: '/assets/states/jammu-and-kashmir.jpg', sub: 'Srinagar, Jammu & Kashmir', title: 'Dal Lake Shikaras' },
-  { img: '/assets/places/palolem-beach.jpg', sub: 'Canacona, South Goa', title: 'Palolem Beach' },
-  { img: '/assets/states/ladakh.jpg', sub: 'Ladakh', title: 'Thiksey Monastery' },
+  { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple', href: '/place/puri-jagannath-temple', stateHref: '/state/odisha' },
+  { img: '/assets/states/uttar-pradesh.jpg', sub: 'Agra, Uttar Pradesh', title: 'Taj Mahal', href: '/place/taj-mahal', stateHref: '/state/uttar-pradesh' },
+  { img: '/assets/places/aguada-fort.jpg', sub: 'North Goa', title: 'Fort Aguada & Lighthouse', href: '/place/aguada-fort', stateHref: '/state/goa' },
+  { img: '/assets/states/punjab.jpg', sub: 'Amritsar, Punjab', title: 'Harmandir Sahib (Golden Temple)', href: '/state/punjab', stateHref: '/state/punjab' },
+  { img: '/assets/places/alappuzha-backwaters.jpg', sub: 'Alappuzha, Kerala', title: 'Backwaters of Kerala', href: '/place/alappuzha-backwaters', stateHref: '/state/kerala' },
+  { img: '/assets/states/rajasthan.jpg', sub: 'Jaipur, Rajasthan', title: 'Hawa Mahal (Pink City)', href: '/state/rajasthan', stateHref: '/state/rajasthan' },
+  { img: '/assets/states/maharashtra.jpg', sub: 'Mumbai, Maharashtra', title: 'Gateway of India', href: '/state/maharashtra', stateHref: '/state/maharashtra' },
+  { img: '/assets/states/west-bengal.jpg', sub: 'Kolkata, West Bengal', title: 'Victoria Memorial', href: '/state/west-bengal', stateHref: '/state/west-bengal' },
+  { img: '/assets/places/konark-sun-temple.jpg', sub: 'Puri, Odisha', title: 'Konark Sun Temple', href: '/place/konark-sun-temple', stateHref: '/state/odisha' },
+  { img: '/assets/states/jammu-and-kashmir.jpg', sub: 'Srinagar, Jammu & Kashmir', title: 'Dal Lake Shikaras', href: '/place/dal-lake', stateHref: '/state/jammu-and-kashmir' },
+  { img: '/assets/places/palolem-beach.jpg', sub: 'Canacona, South Goa', title: 'Palolem Beach', href: '/place/palolem-beach', stateHref: '/state/goa' },
+  { img: '/assets/states/ladakh.jpg', sub: 'Ladakh', title: 'Thiksey Monastery', href: '/place/thiksey-monastery', stateHref: '/state/ladakh' },
 ];
 
 function heroSlidesHtml() {
-  const slidesHtml = HERO_SLIDES.map((s, i) => `<div class="hero-slide ${i === 0 ? 'active' : ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('${s.img}')" data-caption-sub="${esc(s.sub)}" data-caption-title="${esc(s.title)}"></div>`).join('');
-  const dotsHtml = HERO_SLIDES.map((s, i) => `<span class="hero-dot ${i === 0 ? 'active' : ''}" data-slide-index="${i}" role="button" aria-label="Slide ${i+1}: ${esc(s.title)}"></span>`).join('');
-  return `<div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">${slidesHtml}</div><div class="hero-art-caption"><span id="hero-art-sub">${esc(HERO_SLIDES[0].sub)}</span><strong id="hero-art-title">${esc(HERO_SLIDES[0].title)}</strong><div class="hero-dots" aria-label="Slideshow navigation">${dotsHtml}</div></div></div>`;
+  const slidesHtml = HERO_SLIDES.map((s, i) => `<div class="hero-slide ${i === 0 ? 'active' : ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('${s.img}')" data-href="${esc(s.href)}" aria-hidden="${i === 0 ? 'false' : 'true'}"><div class="hero-art-caption"><a class="hero-art-state-link" href="${esc(s.stateHref)}">${esc(s.sub)}</a><a class="hero-art-place-link" href="${esc(s.href)}">${esc(s.title)}</a><div class="hero-dots" aria-label="Slideshow navigation">${HERO_SLIDES.map((slide, index) => `<button type="button" class="hero-dot ${i === index ? 'active' : ''}" data-slide-index="${index}" aria-label="Show slide ${index + 1}: ${esc(slide.title)}"></button>`).join('')}</div></div></div>`).join('');
+  return `<div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">${slidesHtml}</div></div>`;
 }
 
 function initHeroSlideshow() {
@@ -88,8 +87,6 @@ function initHeroSlideshow() {
   if (!container) return;
   const slides = container.querySelectorAll('.hero-slide');
   if (slides.length <= 1) return;
-  const subEl = container.querySelector('#hero-art-sub');
-  const titleEl = container.querySelector('#hero-art-title');
   const dots = container.querySelectorAll('.hero-dot');
   let current = 0;
   let timer = null;
@@ -97,10 +94,8 @@ function initHeroSlideshow() {
   function update(index) {
     current = index;
     slides.forEach((s, i) => s.classList.toggle('active', i === current));
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
-    const activeSlide = slides[current];
-    if (subEl && activeSlide.dataset.captionSub) subEl.textContent = activeSlide.dataset.captionSub;
-    if (titleEl && activeSlide.dataset.captionTitle) titleEl.textContent = activeSlide.dataset.captionTitle;
+    slides.forEach((s, i) => s.setAttribute('aria-hidden', i === current ? 'false' : 'true'));
+    dots.forEach(dot => dot.classList.toggle('active', Number(dot.dataset.slideIndex) === current));
   }
 
   function next() {
@@ -121,6 +116,12 @@ function initHeroSlideshow() {
         startTimer();
       }
     });
+  });
+
+  // Keep the image click target independent from the caption links and dots.
+  container.addEventListener('click', event => {
+    if (event.target.closest('.hero-art-caption')) return;
+    location.href = slides[current].dataset.href;
   });
 
   container.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); });
