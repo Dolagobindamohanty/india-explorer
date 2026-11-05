@@ -191,7 +191,7 @@ def create_app(database_path=None):
             item['images'] = gallery
         return items
 
-    place_select = '''SELECT p.*, d.name AS district, d.slug AS district_slug,
+    place_select = '''SELECT DISTINCT p.*, d.name AS district, d.slug AS district_slug,
         r.name AS state, r.slug AS state_slug, h.name AS heritage_name, h.unesco_url,
         h.designation AS heritage_designation
         FROM places p JOIN districts d ON d.id=p.district_id
@@ -219,7 +219,7 @@ def create_app(database_path=None):
             rows('SELECT * FROM districts WHERE region_id=? ORDER BY name', (result['id'],)),
             ('name', 'description', 'food_notes'),
         )
-        result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? GROUP BY p.id ORDER BY p.name', (result['id'],)))
+        result['places'] = enrich_places(rows(place_select + ' WHERE r.id=? ORDER BY p.name', (result['id'],)))
         seen = set()
         result['places'] = [p for p in result['places'] if p['id'] not in seen and not seen.add(p['id'])]
         return result
@@ -241,7 +241,7 @@ def create_app(database_path=None):
         result = one('''SELECT d.*, r.name AS state, r.slug AS state_slug
             FROM districts d JOIN regions r ON r.id=d.region_id WHERE d.slug=?''', (slug,))
         repair_display_text([result], ('name', 'description', 'food_notes', 'state'))
-        result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? GROUP BY p.id ORDER BY p.name', (result['id'],)))
+        result['places'] = enrich_places(rows(place_select + ' WHERE d.id=? ORDER BY p.name', (result['id'],)))
         seen = set()
         result['places'] = [p for p in result['places'] if p['id'] not in seen and not seen.add(p['id'])]
         result['festivals'] = festivals(month=None, district=slug)
