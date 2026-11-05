@@ -465,7 +465,7 @@ def test_server_rendered_routes_are_crawlable(client):
     area = client.get('/area').text
     assert 'Choose a state' in area
     assert 'Kerala' in area and 'Puducherry' in area
-    assert '<link rel="canonical" href="https://india-explorer-hazel.vercel.app/explore">' in explore
+    assert '<link rel="canonical" href="https://traveling-ketch.vercel.app/explore">' in explore
     sitemap = client.get('/sitemap.xml')
     assert sitemap.status_code == 200
     assert '/state/kerala' in sitemap.text
