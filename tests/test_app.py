@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 485
+    assert len(all_places) == 508
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -74,6 +74,12 @@ def test_full_destination_journey(client):
     arunachal = client.get('/api/states/arunachal-pradesh').json()
     assert len(arunachal['districts']) == 26
     assert len(arunachal['places']) == 16
+    mizoram = client.get('/api/states/mizoram').json()
+    assert len(mizoram['districts']) == 11
+    assert len(mizoram['places']) == 23
+    assert all(place['image_url'].startswith('/assets/places/') for place in mizoram['places'])
+    assert all((ASSETS / place['image_url'].lstrip('/')).exists() for place in mizoram['places'])
+    assert client.get('/api/places/solomon-temple-aizawl').json()['district'] == 'Aizawl'
     tawang = client.get('/api/places/tawang-monastery').json()
     assert tawang['district'] == 'Tawang'
     assert tawang['image_url'] == '/assets/places/tawang-monastery.jpg'
@@ -139,7 +145,7 @@ def test_full_destination_journey(client):
     assert len(jk['places']) == 8
     assert {p['slug'] for p in jk['places']} >= {'dal-lake', 'gulmarg-gondola', 'vaishno-devi', 'martand-sun-temple', 'pahalgam-betaab-valley', 'shankaracharya-temple', 'sonamarg-thajiwas', 'nishat-shalimar-gardens'}
     ladakh = client.get('/api/states/ladakh').json()
-    assert len(ladakh['districts']) == 4
+    assert len(ladakh['districts']) == 2
     assert len(ladakh['places']) == 7
     assert {p['slug'] for p in ladakh['places']} >= {'thiksey-monastery', 'pangong-tso', 'diskit-monastery', 'leh-palace-shanti-stupa', 'sangam-indus-zanskar', 'khardung-la-pass', 'hemis-monastery'}
     puducherry = client.get('/api/states/puducherry').json()
@@ -224,7 +230,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 485
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 508
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -330,7 +336,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 485}
+    assert response.json() == {'status': 'ok', 'places': 508}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -424,7 +430,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer · India Explorer</title>' in homepage
-    assert '28' in homepage and '808' in homepage
+    assert '28' in homepage and '802' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
@@ -435,7 +441,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 485}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 508}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -502,9 +508,9 @@ def test_server_rendered_routes_are_crawlable(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 485,
+        'detailed_places': 508,
         'reviewed_places': 0,
-        'unreviewed_places': 485,
+        'unreviewed_places': 508,
         'confirmed_festival_dates': 0,
     }
 

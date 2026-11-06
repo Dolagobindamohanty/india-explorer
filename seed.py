@@ -400,6 +400,7 @@ def seed(db):
                 existing_names.add((region_id, name.lower()))
                 next_id += 1
 
+
     heritage = [
         (1, 'Hill Forts of Rajasthan', 'https://whc.unesco.org/en/list/247/', 'component_site'),
         (2, 'The Jantar Mantar, Jaipur', 'https://whc.unesco.org/en/list/1338/', 'world_heritage_site'),
@@ -429,7 +430,7 @@ def seed(db):
         (2, 1, 'mattancherry-palace', 'Mattancherry Palace', 'Discover Kerala murals and the history of Kochi’s royal household.', 'heritage', 9.9583, 76.2594, 'Continue from central Kochi to Mattancherry by local transport.', 'Museum opening days and ticket rates should be checked before visiting.', None, 'https://www.keralatourism.org/', place_image('mattancherry-palace')),
         (3, 2, 'alappuzha-backwaters', 'Alappuzha Backwaters', 'Explore the canals and waterways around Alappuzha with a locally operated boat trip.', 'nature', 9.5010, 76.3500, 'Alappuzha railway station connects to the town; boat departure points vary by operator.', 'Coordinate is an approximate town-area starting point. Agree on route and price before booking.', None, 'https://www.keralatourism.org/', place_image('alappuzha-backwaters')),
         (4, 2, 'alappuzha-beach', 'Alappuzha Beach', 'Spend an evening on the coast near Alappuzha town.', 'beach', 9.4929, 76.3177, 'Take local transport from Alappuzha town or railway station.', 'Follow local swimming restrictions and sea-condition advice.', None, 'https://www.keralatourism.org/', place_image('alappuzha-beach')),
-        (5, 3, 'amber-fort', 'Amber Fort', 'Explore courtyards, gateways and hilltop architecture at a component of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9855, 75.8513, 'Travel 11 km from Jaipur to Amer by bus, auto-rickshaw or taxi.', 'Open daily 8:00 AM to 5:30 PM as published by the Rajasthan Tourism department; ticket counters typically close by 5:00 PM. The evening light & sound show at the fort runs on seasonal evening slots (from around 6:30 PM in winter) — confirm show timings on the day, as they vary by season and language. Tickets: ₹100 for Indian nationals, ₹500 for foreign visitors (composite tickets available). Licensed guides available at Suraj Pol gate. Elephant rides are prohibited; walking or jeep taxi up the cobbled ramp is the official route. Last verified: November 2026.', 1, 'https://www.tourism.rajasthan.gov.in/jaipur.html', place_image('amber-fort')),
+        (5, 3, 'amber-fort', 'Amber Fort', 'Explore courtyards, gateways and hilltop architecture at a component of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9855, 75.8513, 'Travel 11 km from Jaipur to Amer by bus, auto-rickshaw or taxi.', 'Open daily 8:00 AM to 5:30 PM as published by the Rajasthan Tourism department; ticket counters typically close by 5:00 PM. The evening light & sound show at the fort runs on seasonal evening slots (from around 6:30 PM in winter) — confirm show timings on the day, as they vary by season and language. Tickets: ₹100 for Indian nationals, ₹500 for foreign visitors (composite tickets available). Licensed guides available at Suraj Pol gate. Confirm current animal-ride arrangements directly with the responsible authority before visiting. Last verified: November 2026.', 1, 'https://www.tourism.rajasthan.gov.in/jaipur.html', place_image('amber-fort')),
         (6, 3, 'jantar-mantar', 'Jantar Mantar, Jaipur', 'Explore monumental astronomical instruments at this UNESCO World Heritage Site.', 'heritage', 26.9248, 75.8246, 'Located in Jaipur’s old city adjacent to City Palace.', 'Open daily 9:00 AM to 5:00 PM. Tickets: ₹50 for Indian nationals, ₹200 for foreign visitors. Audio guides and authorized local guides explain the functioning of the Samrat Yantra and zodiac dials. Best visited in midday for clear solar shadow readings. Last verified: October 2026.', 2, 'https://whc.unesco.org/en/list/1338/', place_image('jantar-mantar')),
         (7, 4, 'jaisalmer-fort', 'Jaisalmer Fort', 'Walk through a living sandstone fort that forms part of the Hill Forts of Rajasthan World Heritage property.', 'heritage', 26.9124, 70.9120, 'Reach Jaisalmer by rail or road, then continue on foot or auto-rickshaw to the fort gates.', 'Open daily 6:00 AM to 5:00 PM. Palace museum entry: ₹100 for Indians, ₹250 for foreign visitors. Respect the 3,000 residents living inside the fort precinct. Narrow cobblestone alleys best explored on foot. Last verified: October 2026.', 1, 'https://www.tourism.rajasthan.gov.in/jaisalmer.html', place_image('jaisalmer-fort')),
         (8, 4, 'gadisar-lake', 'Gadisar Lake', 'Visit a historic water body framed by gateways and small shrines near Jaisalmer.', 'nature', 26.9083, 70.9232, 'A short local journey from Jaisalmer’s old town.', 'Visit early or late in the day; boat services depend on local conditions.', None, 'https://www.tourism.rajasthan.gov.in/jaisalmer.html', place_image('gadisar-lake')),
@@ -633,19 +634,36 @@ def seed(db):
         'maa-samaleswari-temple': 'sambalpur',
         'chandipur-beach': 'balasore',
         'satkosia-gorge': 'nayagarh',
+        'diskit-monastery': 'leh',
     }
     places = [
         (p[0], district_ids_by_slug.get(place_district_slugs.get(p[2], ''), p[1]), *p[2:])
         for p in places
     ]
     if canonical_extra:
+        existing_place_ids = {place[0] for place in places}
+        existing_place_slugs = {place[2] for place in places}
+        existing_places_by_slug = {
+            row['slug']: row['id']
+            for row in db.execute('SELECT id, slug FROM places')
+        }
+        existing_place_ids.update(existing_places_by_slug.values())
+        next_place_id = max(existing_place_ids | set(existing_places_by_slug.values()), default=0) + 1
         for op in canonical_extra:
             if op.get('district_name'):
                 op['district_id'] = district_ids_by_region_slug.get(
                     (op.get('state_slug', ''), district_slugify(op['district_name'])),
                     op['district_id'],
                 ) or op['district_id']
+            if op['slug'] in existing_places_by_slug:
+                op['id'] = existing_places_by_slug[op['slug']]
+            elif op['id'] in existing_place_ids:
+                op['id'] = next_place_id
+                next_place_id += 1
+            existing_place_ids.add(op['id'])
         for op in canonical_extra:
+            if op['slug'] in existing_place_slugs:
+                continue
             places.append((
                 op['id'], op['district_id'], op['slug'], op['name'], op['description'],
                 op['category'], op['latitude'], op['longitude'], op['how_to_reach'],
@@ -859,7 +877,13 @@ def seed(db):
     }
 
     for place in places:
-        pid = place[0]
+        # A seeded catalogue can be upgraded from releases with different numeric
+        # IDs. Resolve the row that actually survived INSERT OR IGNORE by slug
+        # before creating foreign-keyed month records.
+        persisted = db.execute('SELECT id FROM places WHERE slug=?', (place[2],)).fetchone()
+        if not persisted:
+            continue
+        pid = persisted[0]
         if pid in custom_months:
             months = custom_months[pid]
         elif place[1] in (29, 30, 31, 32, 33, 34):
@@ -874,7 +898,7 @@ def seed(db):
             months = [10, 11, 12, 1, 2, 3]
         else:
             months = [10, 11, 12, 1, 2]
-        db.executemany('INSERT OR IGNORE INTO place_months VALUES (?,?)', [(place[0], m) for m in months])
+        db.executemany('INSERT OR IGNORE INTO place_months VALUES (?,?)', [(pid, m) for m in months])
     tags = ['heritage', 'culture', 'nature', 'beach', 'spiritual']
     db.executemany('INSERT OR IGNORE INTO tags(id,name) VALUES (?,?)', [(i, tag) for i, tag in enumerate(tags, 1)])
     db.executemany('INSERT OR IGNORE INTO place_tags SELECT id, ? FROM places WHERE category = ?', [(i, tag) for i, tag in enumerate(tags, 1)])
@@ -1133,3 +1157,26 @@ def seed(db):
             if pid:
                 circuit_place_rows.append((cid, pid, order, notes))
     db.executemany('INSERT OR IGNORE INTO circuit_places (circuit_id, place_id, stop_order, notes) VALUES (?,?,?,?)', circuit_place_rows)
+
+    # Keep upgraded databases aligned with the canonical 802-district directory.
+    # These legacy rows are retained until now so historical place, festival, and
+    # circuit references can be safely reparented before removal.
+    for region_slug, legacy_slug, replacement_slug in (
+        ('ladakh', 'nubra', 'leh'),
+        ('ladakh', 'zanskar', 'leh'),
+        ('west-bengal', 'kolkata', 'north-24-parganas'),
+    ):
+        legacy = db.execute('''SELECT d.id FROM districts d
+            JOIN regions r ON r.id=d.region_id
+            WHERE r.slug=? AND d.slug=?''', (region_slug, legacy_slug)).fetchone()
+        replacement = db.execute('''SELECT d.id FROM districts d
+            JOIN regions r ON r.id=d.region_id
+            WHERE r.slug=? AND d.slug=?''', (region_slug, replacement_slug)).fetchone()
+        if legacy and replacement:
+            db.execute('UPDATE places SET district_id=? WHERE district_id=?', (replacement[0], legacy[0]))
+            db.execute('''DELETE FROM festival_districts
+                WHERE district_id=? AND festival_id IN (
+                    SELECT festival_id FROM festival_districts WHERE district_id=?
+                )''', (legacy[0], replacement[0]))
+            db.execute('UPDATE festival_districts SET district_id=? WHERE district_id=?', (replacement[0], legacy[0]))
+            db.execute('DELETE FROM districts WHERE id=?', (legacy[0],))
