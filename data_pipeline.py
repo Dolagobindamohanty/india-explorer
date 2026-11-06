@@ -124,7 +124,7 @@ def validate_state_dataset(dataset, static_dir=ROOT / 'static'):
             coordinates[(latitude, longitude)] += 1
         image_path = static_dir / place['image_url'].lstrip('/')
         if not image_path.exists():
-            warnings.append(f'{label}: image asset does not exist: {place["image_url"]}')
+            errors.append(f'{label}: image asset does not exist: {place["image_url"]}')
         if slug not in image_sources:
             warnings.append(f'{label}: image attribution is missing')
         for g_img in place.get('gallery_images', []):
@@ -199,7 +199,7 @@ def validate_database(db, static_dir=ROOT / 'static'):
             errors.append(f'{label}: coordinates are outside India')
         coordinates[(place['latitude'], place['longitude'])] += 1
         if not (static_dir / place['image_url'].lstrip('/')).exists():
-            warnings.append(f'{label}: image asset does not exist')
+            errors.append(f'{label}: image asset does not exist')
         if label not in image_sources:
             warnings.append(f'{label}: image attribution is missing')
     errors.extend(f'duplicate place slug: {slug}' for slug, count in seen_slugs.items() if count > 1)

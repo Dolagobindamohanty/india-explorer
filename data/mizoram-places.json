@@ -12,7 +12,7 @@
     "how_to_reach": "Located in Chawlhhmun, about 4 km from Aizawl city center. Accessible by taxi or local bus from Aizawl.",
     "practical_notes": "Open daily 6:00 AM to 8:00 PM. Photography allowed inside. Remove shoes before entering. Sunday services attract large crowds. Dress modestly.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/solomon-temple-aizawl.jpg",
+    "image_url": "/assets/places/solomon-temple-aizawl.svg",
     "entry_fee": "Free",
     "address": "Chawlhhmun, Aizawl, Mizoram",
     "gallery_images": []
@@ -30,7 +30,7 @@
     "how_to_reach": "From Champhai town (65 km from Aizawl), hire a taxi to the trek base at Zokhawthar. The valley is reached via a moderate 5-6 hour trek from the border town.",
     "practical_notes": "Best visited March-June for flowers, October-March for clear views. Carry warm clothing, rain gear, and camping gear for overnight stays. No accommodation in the valley. Hire local guide. Permit required from Champhai DC office.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/dzukou-valley.jpg",
+    "image_url": "/assets/places/dzukou-valley.svg",
     "entry_fee": "Forest entry permit required (nominal fee)",
     "address": "Near Zokhawthar, Champhai district, Mizoram",
     "gallery_images": []
@@ -48,7 +48,7 @@
     "how_to_reach": "About 60 km from Champhai town. Accessible by road via Tiau River bridge. Hire a taxi or SUV from Champhai (2-3 hour drive on rough roads).",
     "practical_notes": "Best visited October-March. Inner Line Permit required for non-Mizoram residents. Carry food and water as no facilities nearby. Respect local beliefs - no swimming or littering. Mobile connectivity limited.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/rih-dil-lake.jpg",
+    "image_url": "/assets/places/rih-dil-lake.svg",
     "entry_fee": "Free (ILP required for non-residents)",
     "address": "Near Tiau River, Champhai district, Mizoram",
     "gallery_images": []
@@ -66,7 +66,7 @@
     "how_to_reach": "About 245 km from Aizawl via Champhai. Hire SUV from Champhai (60 km, 3 hours on rough roads). Park entry from Rabung village.",
     "practical_notes": "Best visited November-March. Entry permit from Wildlife Warden, Aizawl required. Hire local guide. Basic forest rest house available (book in advance). No mobile connectivity. Carry supplies.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/murlen-national-park.jpg",
+    "image_url": "/assets/places/murlen-national-park.svg",
     "entry_fee": "Entry permit required (Indian: nominal, Foreign: higher)",
     "address": "Near Rabung village, Champhai district, Mizoram",
     "gallery_images": []
@@ -84,7 +84,7 @@
     "how_to_reach": "About 35 km from Champhai town. Accessible by road to Vaphai village, then short walk.",
     "practical_notes": "Best during monsoon (June-September) for full flow. Carry rain gear. Swimming possible in pool but exercise caution. No facilities nearby.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/vaphai-waterfall.jpg",
+    "image_url": "/assets/places/vaphai-waterfall.svg",
     "entry_fee": "Free",
     "address": "Vaphai village, Champhai district, Mizoram",
     "gallery_images": []
@@ -102,7 +102,7 @@
     "how_to_reach": "About 160 km from Aizawl via Hnahthial town. Hire taxi from Hnahthial (30 km, 1.5 hours).",
     "practical_notes": "Open daily 9:00 AM to 5:00 PM. Local guide recommended for cultural context. Respect village customs. Photography allowed with permission. Small entry fee supports village maintenance.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/hmunhmung-heritage-village.jpg",
+    "image_url": "/assets/places/hmunhmung-heritage-village.svg",
     "entry_fee": "Nominal fee",
     "address": "Hnahthial district, Mizoram",
     "gallery_images": []
@@ -120,7 +120,7 @@
     "how_to_reach": "About 40 km from Hnahthial town. Requires 4WD vehicle and short trek from nearest road point.",
     "practical_notes": "Best June-October. Moderate trek required. Carry water and snacks. No facilities. Hire local guide recommended.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/kawlbem-waterfall.jpg",
+    "image_url": "/assets/places/kawlbem-waterfall.svg",
     "entry_fee": "Free",
     "address": "Near Hnahthial, Mizoram",
     "gallery_images": []
@@ -138,7 +138,7 @@
     "how_to_reach": "Located in Khawzawl town, about 152 km from Aizawl. Accessible by road from Aizawl (4-5 hours).",
     "practical_notes": "Open daily 6:00 AM to 7:00 PM. Best at sunrise/sunset for views. Free entry. Good for family outings. Basic facilities available.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/khawzawl-park.jpg",
+    "image_url": "/assets/places/khawzawl-park.svg",
     "entry_fee": "Free",
     "address": "Khawzawl town, Khawzawl district, Mizoram",
     "gallery_images": []
@@ -156,7 +156,7 @@
     "how_to_reach": "Accessible from Khawzawl town via road to various border points (Zokhawthar, etc.).",
     "practical_notes": "Inner Line Permit required. Best November-March. Do not cross border. Photography of border posts restricted. Carry ID documents.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/tiau-river.jpg",
+    "image_url": "/assets/places/tiau-river.svg",
     "entry_fee": "Free (ILP required)",
     "address": "Khawzawl district, Mizoram-Myanmar border",
     "gallery_images": []
@@ -174,7 +174,7 @@
     "how_to_reach": "About 15 km from Kolasib town on Kolasib-Bairabi road. Accessible by taxi or local bus.",
     "practical_notes": "Best July-October. Easy access, good for families. Carry extra clothes for swimming. Small eateries nearby. Weekend crowds.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/khanmun-waterfall.jpg",
+    "image_url": "/assets/places/khanmun-waterfall.svg",
     "entry_fee": "Free",
     "address": "Near Kolasib town, Mizoram",
     "gallery_images": []
@@ -192,7 +192,7 @@
     "how_to_reach": "About 85 km from Aizawl, 10 km from Kolasib town. Well-connected by road.",
     "practical_notes": "Open daily 6:00 AM to 6:00 PM. Boating available (nominal fee). Fishing with permit. Lakeside restaurant available. Good for day trips from Aizawl.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/tamdil-lake.jpg",
+    "image_url": "/assets/places/tamdil-lake.svg",
     "entry_fee": "Free (boating extra)",
     "address": "Near Saitual, Kolasib district, Mizoram",
     "gallery_images": []
@@ -210,7 +210,7 @@
     "how_to_reach": "About 295 km from Aizawl via Lunglei. Requires full day journey. Hire SUV from Lawngtlai (60 km from sanctuary entrance).",
     "practical_notes": "Entry permit from Wildlife Warden required. Best November-March. Very remote - carry all supplies. Forest rest house at Ngengpui (book early). Hire local guide mandatory. No connectivity.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/ngengpui-wildlife-sanctuary.jpg",
+    "image_url": "/assets/places/ngengpui-wildlife-sanctuary.svg",
     "entry_fee": "Entry permit required",
     "address": "Near Lawngtlai, Mizoram",
     "gallery_images": []
@@ -228,7 +228,7 @@
     "how_to_reach": "About 30 km from Lawngtlai town. Accessible by road.",
     "practical_notes": "Respect local customs and church timings. Homestays available (book in advance). Try traditional Mara cuisine. Buy local handicrafts.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/saikao-village.jpg",
+    "image_url": "/assets/places/saikao-village.svg",
     "entry_fee": "Free",
     "address": "Lawngtlai district, Mizoram",
     "gallery_images": []
@@ -246,7 +246,7 @@
     "how_to_reach": "Located in Lunglei town (165 km from Aizawl). Accessible by road (5-6 hours from Aizawl).",
     "practical_notes": "Best at sunset. Free access. Good photography spot. Combine with visit to Saikuti Hall cultural center.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/lunglei-viewpoint.jpg",
+    "image_url": "/assets/places/lunglei-town-viewpoint.svg",
     "entry_fee": "Free",
     "address": "Lunglei town, Lunglei district, Mizoram",
     "gallery_images": []
@@ -264,7 +264,7 @@
     "how_to_reach": "About 70 km from Lunglei town. Requires 4WD and local guide. Access via Thenzawl road.",
     "practical_notes": "Entry permit from Wildlife Warden, Lunglei. Best November-March. Very basic facilities. Hire local guide. No accommodation inside.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/thorangtlang-sanctuary.jpg",
+    "image_url": "/assets/places/thorangtlang-wildlife-sanctuary.svg",
     "entry_fee": "Entry permit required",
     "address": "Lunglei district, Mizoram",
     "gallery_images": []
@@ -282,7 +282,7 @@
     "how_to_reach": "About 20 km from Lunglei town on Lunglei-Thenzawl road.",
     "practical_notes": "Open daily. Local guide recommended for historical context. Respect the memorial stones. Photography allowed.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/pallel-heritage.jpg",
+    "image_url": "/assets/places/pallel-heritage-site.svg",
     "entry_fee": "Free",
     "address": "Lunglei district, Mizoram",
     "gallery_images": []
@@ -300,7 +300,7 @@
     "how_to_reach": "About 110 km from Aizawl via Mamit. Hire SUV from Mamit (25 km to park entrance at Phuldungsei).",
     "practical_notes": "Entry permit from Field Director, Dampa Tiger Reserve required. Best November-April. Forest rest houses at Teirei and Damparengpui (book well in advance). Hire authorized guide mandatory. No mobile connectivity inside.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/dampa-tiger-reserve.jpg",
+    "image_url": "/assets/places/dampa-tiger-reserve.svg",
     "entry_fee": "Entry permit required (Indian: nominal, Foreign: higher)",
     "address": "Mamit district, Mizoram (Bangladesh border)",
     "gallery_images": []
@@ -318,7 +318,7 @@
     "how_to_reach": "About 30 km from Mamit town. Accessible by road.",
     "practical_notes": "Best at sunrise. Watchtower climb involves stairs. Carry water and snacks. No facilities at top. Good for day trips from Aizawl.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/rwmzawm-viewpoint.jpg",
+    "image_url": "/assets/places/rwmzawm-tourist-spot.svg",
     "entry_fee": "Free",
     "address": "Mamit district, Mizoram",
     "gallery_images": []
@@ -336,7 +336,7 @@
     "how_to_reach": "Located in Saitual town, about 85 km from Aizawl. Well-connected by road.",
     "practical_notes": "Best at sunrise/sunset. Free access. Good for photography. Combine with Tamdil Lake visit.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/saitual-viewpoint.jpg",
+    "image_url": "/assets/places/saitual-senate-viewpoint.svg",
     "entry_fee": "Free",
     "address": "Saitual town, Saitual district, Mizoram",
     "gallery_images": []
@@ -354,7 +354,7 @@
     "how_to_reach": "Located near Serchhip town, about 112 km from Aizawl. Well-connected by road.",
     "practical_notes": "Open daily 6:00 AM to 6:00 PM. Boating available. Lakeside walking path. Small cafe nearby. Good for family outings.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/serchhip-lake.jpg",
+    "image_url": "/assets/places/serchhip-lake.svg",
     "entry_fee": "Free (boating extra)",
     "address": "Near Serchhip town, Serchhip district, Mizoram",
     "gallery_images": []
@@ -372,7 +372,7 @@
     "how_to_reach": "About 135 km from Aizawl, 5 km from Thenzawl town. Well-marked road from Serchhip.",
     "practical_notes": "Best July-October for full flow. Viewing platform available. Monsoon can be slippery. No swimming. Small entry fee. Photography allowed.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/vantawng-waterfall.jpg",
+    "image_url": "/assets/places/vantawng-waterfall.svg",
     "entry_fee": "Nominal fee",
     "address": "Near Thenzawl, Serchhip district, Mizoram",
     "gallery_images": []
@@ -390,7 +390,7 @@
     "how_to_reach": "About 370 km from Aizawl via Lunglei. Full day journey. Hire SUV from Siaha (30 km from lake).",
     "practical_notes": "Best November-March. Inner Line Permit required. Boating with local fishermen. Lakeside camping possible (permission needed). Very remote - carry supplies. Homestays in nearby villages.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/palak-lake.jpg",
+    "image_url": "/assets/places/siaha-town-palak-lake.svg",
     "entry_fee": "Free (ILP required for non-residents)",
     "address": "Near Phura, Siaha district, Mizoram",
     "gallery_images": []
@@ -408,7 +408,7 @@
     "how_to_reach": "About 370 km from Aizawl. Daily bus service from Aizawl (10-12 hours).",
     "practical_notes": "Inner Line Permit required for non-residents. Try Mara cuisine (bamboo shoot dishes). Visit local market for handicrafts. Basic hotels available. Respect local customs.",
     "source_url": "https://mizoramtourism.com/",
-    "image_url": "assets/places/siaha-town.jpg",
+    "image_url": "/assets/places/siaha-town.svg",
     "entry_fee": "Free (ILP required)",
     "address": "Siaha town, Siaha district, Mizoram",
     "gallery_images": []
