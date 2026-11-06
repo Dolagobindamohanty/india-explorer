@@ -1,0 +1,7 @@
+{
+  "slug": "mizoram",
+  "name": "Mizoram",
+  "kind": "state",
+  "source_url": "https://mizoramtourism.com/",
+  "places_file": "../mizoram-places.json"
+}
