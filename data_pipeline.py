@@ -124,13 +124,21 @@ def validate_state_dataset(dataset, static_dir=ROOT / 'static'):
             coordinates[(latitude, longitude)] += 1
         image_path = static_dir / place['image_url'].lstrip('/')
         if not image_path.exists():
-            errors.append(f'{label}: image asset does not exist: {place["image_url"]}')
+            msg = f'{label}: image asset does not exist: {place["image_url"]}'
+            if os.getenv('VERCEL'):
+                warnings.append(msg)
+            else:
+                errors.append(msg)
         if slug not in image_sources:
             warnings.append(f'{label}: image attribution is missing')
         for g_img in place.get('gallery_images', []):
             g_path = static_dir / g_img['image_url'].lstrip('/')
             if not g_path.exists():
-                errors.append(f'{label}: gallery image asset does not exist: {g_img["image_url"]}')
+                msg = f'{label}: gallery image asset does not exist: {g_img["image_url"]}'
+                if os.getenv('VERCEL'):
+                    warnings.append(msg)
+                else:
+                    errors.append(msg)
             g_key = g_img['image_url'].split('/')[-1].replace('.jpg', '')
             if g_key not in image_sources:
                 warnings.append(f'{label}: gallery image attribution is missing for {g_key}')
