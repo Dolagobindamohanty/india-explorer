@@ -1,9 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "python validate_data.py",
+  "functions": {
+    "api/index.py": {
+      "excludeFiles": "{static/assets/places/**,public/**,data/*.sqlite3,tests/**,*.md,*.txt,*.pyc,__pycache__/**,.kilo/**,tmp-images/**}"
+    }
+  },
   "rewrites": [
-    { "source": "/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/(.*)", "destination": "/api/index" }
+    { "source": "/assets/:path*", "destination": "/assets/:path*" }
   ],
   "headers": [
     {
