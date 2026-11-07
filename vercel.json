@@ -1,10 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "python validate_data.py",
-  "rewrites": [
-    { "source": "/assets/:path*", "destination": "/static/assets/:path*" },
-    { "source": "/:path*", "destination": "/api/index" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
