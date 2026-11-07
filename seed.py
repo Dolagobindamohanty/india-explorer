@@ -597,6 +597,9 @@ def seed(db):
         (516, 411, 'siaha-town-palak-lake', 'Palak Lake (Pala Tipo)', 'Mizoram\'s largest natural lake (30 sq km) nestled in the hills near the Myanmar border. Rich in fish and birdlife, surrounded by pristine forest. Sacred in Mara folklore with legends of a submerged village.', 'nature', 22.4833, 92.9667, 'About 370 km from Aizawl via Lunglei. Full day journey. Hire SUV from Siaha (30 km from lake).', 'Best November-March. Inner Line Permit required. Boating with local fishermen. Lakeside camping possible (permission needed). Very remote - carry supplies. Homestays in nearby villages.', None, 'https://mizoramtourism.com/', place_image('siaha-town-palak-lake')),
         (517, 411, 'siaha-town', 'Siaha Town & Mara Culture', 'The headquarters of Mara Autonomous District Council, showcasing unique Mara tribal culture. Visit the Mara traditional house, local market, and historic churches. Gateway to Palak Lake.', 'culture', 22.4833, 92.9667, 'About 370 km from Aizawl. Daily bus service from Aizawl (10-12 hours).', 'Inner Line Permit required for non-residents. Try Mara cuisine (bamboo shoot dishes). Visit local market for handicrafts. Basic hotels available. Respect local customs.', None, 'https://mizoramtourism.com/', place_image('siaha-town'))
 ]
+    # Mizoram is maintained exclusively through its official state dataset.
+    # Retire the former 23-record placeholder batch before importing it.
+    places = [place for place in places if not 495 <= place[0] <= 517]
     canonical_extra = []
     for dataset in load_all_state_datasets():
         state_slug = dataset.get('slug') or ''
@@ -641,6 +644,20 @@ def seed(db):
         for p in places
     ]
     if canonical_extra:
+        canonical_slugs_by_state = {}
+        for op in canonical_extra:
+            canonical_slugs_by_state.setdefault(op['state_slug'], set()).add(op['slug'])
+        for state_slug, slugs in canonical_slugs_by_state.items():
+            if state_slug != 'mizoram':
+                continue
+            placeholders = ','.join('?' for _ in slugs)
+            db.execute(
+                f'''DELETE FROM places WHERE district_id IN (
+                    SELECT d.id FROM districts d JOIN regions r ON r.id = d.region_id
+                    WHERE r.slug = ?
+                ) AND slug NOT IN ({placeholders})''',
+                (state_slug, *slugs),
+            )
         existing_place_ids = {place[0] for place in places}
         existing_place_slugs = {place[2] for place in places}
         existing_places_by_slug = {
@@ -668,7 +685,7 @@ def seed(db):
                 op['id'], op['district_id'], op['slug'], op['name'], op['description'],
                 op['category'], op['latitude'], op['longitude'], op['how_to_reach'],
                 op['practical_notes'], op.get('heritage_id'), op['source_url'],
-                place_image(op['slug'])
+                op['image_url']
             ))
     db.executemany('''INSERT OR IGNORE INTO places
         (id,district_id,slug,name,description,category,latitude,longitude,how_to_reach,practical_notes,heritage_id,source_url,image_url)
@@ -685,7 +702,7 @@ def seed(db):
                     op['district_id'], op['name'], op['description'], op['category'],
                     op['latitude'], op['longitude'], op['how_to_reach'],
                     op['practical_notes'], op.get('heritage_id'), op['source_url'],
-                    place_image(op['slug']), op['slug'],
+                    op['image_url'], op['slug'],
                 )
                 for op in canonical_extra
             ])
