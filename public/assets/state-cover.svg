@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">India Explorer regional cover</title>
+  <description id="description">Abstract landscape in green and terracotta</description>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#244c3c"/>
+      <stop offset="1" stop-color="#6e9476"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d78558"/>
+      <stop offset="1" stop-color="#ba512e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="880" cy="190" r="95" fill="#f5d99a" opacity=".9"/>
+  <path d="M0 500 240 300l155 140 196-230 240 270 147-125 222 190v266H0Z" fill="#dce1d5" opacity=".82"/>
+  <path d="M0 600 270 420l190 160 200-125 230 145 160-85 150 110v175H0Z" fill="url(#land)"/>
+  <path d="M0 690c210-125 360-25 570-100s365-15 630-95v305H0Z" fill="#203b33" opacity=".8"/>
+</svg>
