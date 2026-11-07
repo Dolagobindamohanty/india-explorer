@@ -958,8 +958,7 @@ def create_app(database_path=None):
     def robots():
         return f'User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n'
 
-    if not os.getenv('VERCEL'):
-        app.mount('/', StaticFiles(directory=ROOT / 'static', html=True), name='website')
+    app.mount('/', StaticFiles(directory=ROOT / 'static', html=True), name='website')
     return app
 
 
