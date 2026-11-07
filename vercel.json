@@ -2,9 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "python validate_data.py",
   "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/static/assets/$1" },
-    { "source": "/(.*\\.(css|js|png|jpg|jpeg|svg|ico|json|webp|woff|woff2|ttf))", "destination": "/static/$1" },
-    { "source": "/(.*)", "destination": "/api/index" }
+    { "source": "/assets/:path*", "destination": "/static/assets/:path*" },
+    { "source": "/:path*", "destination": "/api/index" }
   ],
   "headers": [
     {
