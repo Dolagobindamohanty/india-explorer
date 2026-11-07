@@ -5,3 +5,5 @@ tmp-images/
 data/*.sqlite3
 .kilo/
 *.pyc
+*.md
+*.txt
