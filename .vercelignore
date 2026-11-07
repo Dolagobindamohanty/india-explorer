@@ -5,4 +5,3 @@ tmp-images/
 data/*.sqlite3
 .kilo/
 *.pyc
-static/assets/places/
