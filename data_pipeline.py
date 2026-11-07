@@ -87,7 +87,7 @@ def normalize_place(place):
     return normalized
 
 
-def validate_state_dataset(dataset, static_dir=ROOT / 'static'):
+def validate_state_dataset(dataset, static_dir=ROOT / 'public'):
     """Return data-quality errors and warnings without mutating source data."""
     errors, warnings = [], []
     state = dataset.get('slug', '<unknown>')
@@ -150,7 +150,7 @@ def validate_all_state_data():
     return errors, warnings
 
 
-def validate_database(db, static_dir=ROOT / 'static'):
+def validate_database(db, static_dir=ROOT / 'public'):
     """Validate the entire seeded catalogue, including legacy seed records."""
     errors, warnings = [], []
     sources_path = static_dir / 'assets' / 'places' / 'sources.json'
@@ -223,7 +223,7 @@ def import_report():
             'name': dataset.get('name', dataset['slug']),
             'district_count': len({place['district_id'] for place in places}),
             'place_count': len(places),
-            'missing_images': sum(not (ROOT / 'static' / place['image_url'].lstrip('/')).exists() for place in places),
+            'missing_images': sum(not (ROOT / 'public' / place['image_url'].lstrip('/')).exists() for place in places),
             'missing_sources': sum(not place.get('source_url') for place in places),
             'unverified_records': len(places),
             'errors': errors,

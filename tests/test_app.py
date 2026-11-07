@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 from app import create_app, distance
 from data_pipeline import import_report, validate_all_state_data, validate_database
 
-ASSETS = Path(__file__).resolve().parents[1] / "static"
+ASSETS = Path(__file__).resolve().parents[1] / "public"
 
 
 def assert_asset_exists(image_url):

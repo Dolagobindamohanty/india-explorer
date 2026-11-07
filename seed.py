@@ -192,10 +192,10 @@ def state_image(slug, filename=None):
 def place_image(slug):
     if slug in PLACE_IMAGE_PATHS:
         return PLACE_IMAGE_PATHS[slug]
-    svg_path = ROOT / 'static' / 'assets' / 'places' / f'{slug}.svg'
+    svg_path = ROOT / 'public' / 'assets' / 'places' / f'{slug}.svg'
     if svg_path.exists():
         return f'/assets/places/{slug}.svg'
-    if (ROOT / 'static' / 'assets' / 'places' / f'{slug}.png').exists():
+    if (ROOT / 'public' / 'assets' / 'places' / f'{slug}.png').exists():
         return f'/assets/places/{slug}.png'
     return f'/assets/places/{slug}.jpg'
 

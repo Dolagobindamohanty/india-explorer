@@ -958,7 +958,10 @@ def create_app(database_path=None):
     def robots():
         return f'User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n'
 
-    app.mount('/', StaticFiles(directory=ROOT / 'static', html=True), name='website')
+    # Vercel serves public/ directly from its CDN. Local development still
+    # mounts the same files so the app remains runnable without Vercel.
+    if not os.getenv('VERCEL'):
+        app.mount('/', StaticFiles(directory=ROOT / 'public', html=True), name='website')
     return app
 
 
