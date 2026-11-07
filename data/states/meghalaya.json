@@ -1,0 +1,7 @@
+{
+  "slug": "meghalaya",
+  "name": "Meghalaya",
+  "kind": "state",
+  "source_url": "https://www.meghalayatourism.in/explore/destinations/",
+  "places_file": "../meghalaya-places.json"
+}

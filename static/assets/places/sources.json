@@ -1730,7 +1730,7 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/GoldanPagoda-NamsaiArunachal.jpg"
   },
   "parashuram-kund": {
-    "file": "পৰশুৰাম কুণ্ডৰ আলোকচিত্ৰ (১).jpg",
+    "file": "\u09aa\u09f0\u09b6\u09c1\u09f0\u09be\u09ae \u0995\u09c1\u09a3\u09cd\u09a1\u09f0 \u0986\u09b2\u09cb\u0995\u099a\u09bf\u09a4\u09cd\u09f0 (\u09e7).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3A%E0%A6%AA%E0%A7%B0%E0%A6%B6%E0%A7%81%E0%A7%B0%E0%A6%BE%E0%A6%AE_%E0%A6%95%E0%A7%81%E0%A6%A3%E0%A7%8D%E0%A6%A1%E0%A7%B0_%E0%A6%86%E0%A6%B2%E0%A7%8B%E0%A6%95%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A7%B0_%28%E0%A7%A7%29.jpg",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E0%A6%AA%E0%A7%B0%E0%A6%B6%E0%A7%81%E0%A7%B0%E0%A6%BE%E0%A6%AE%20%E0%A6%95%E0%A7%81%E0%A6%A3%E0%A7%8D%E0%A6%A1%E0%A7%B0%20%E0%A6%86%E0%A6%B2%E0%A7%8B%E0%A6%95%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A7%B0%20%28%E0%A7%A7%29.jpg"
   },
@@ -3243,5 +3243,660 @@
     "file": "68bea48e6796f_WhatsApp Image 2024-11-09 at 23.20.41_9f10ca50.jpg",
     "source_page": "https://mizoramtourism.com/top-destination/143",
     "download_url": "https://mizoramtourism.com/post_images/68bea48e6796f_WhatsApp%20Image%202024-11-09%20at%2023.20.41_9f10ca50.jpg"
+  },
+  "shillong-peak": {
+    "file": "shillong-peak.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/shillong-peak/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/featured/shillong-peak.webp"
+  },
+  "don-bosco-museum": {
+    "file": "don-bosco-museum.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/don-bosco-museum/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/don-bosco-museum.webp"
+  },
+  "laitlum-canyon": {
+    "file": "laitlum-canyon.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/laitlum/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/laitlum-canyon.webp"
+  },
+  "elephant-falls": {
+    "file": "majestic-waterfalls-banner.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-interest/majestic-waterfalls/elephant-falls/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/explore/destinations/interest/majestic-waterfalls-banner.webp"
+  },
+  "mawphlang-sacred-grove": {
+    "file": "mawphlang.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawphlang/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/mawphlang.webp"
+  },
+  "david-scott-trail": {
+    "file": "david-scott-trail.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/david-scott-trail/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/david-scott-trail.webp"
+  },
+  "mawlynnong": {
+    "file": "mawlynnong.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawlynnong/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/banners/mawlynnong.jpg"
+  },
+  "nongriat-double-decker-living-root-bridge": {
+    "file": "nongriat.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/nongriat/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/explore/nongriat.jpg"
+  },
+  "arwah-caves": {
+    "file": "arwah-cave.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/arwah-cave/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/arwah-cave.webp"
+  },
+  "mawsmai-cave": {
+    "file": "mawsmai-cave.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawsmai-cave/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/mawsmai-cave.webp"
+  },
+  "sohra-cherrapunji": {
+    "file": "sohra.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/sohra/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/sohra.webp"
+  },
+  "nohkalikai-falls": {
+    "file": "nohkalikai.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/nohkalikai/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/nohkalikai.webp"
+  },
+  "mawsynram": {
+    "file": "mawsynram.png",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawsynram/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/mawsynram.png"
+  },
+  "krem-puri-cave": {
+    "file": "krem-puri-cave.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/krem-puri-cave/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/krem-puri-cave.webp"
+  },
+  "kongthong-village": {
+    "file": "kongthong.jpeg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/kongthong-village/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/nearby/kongthong.jpeg"
+  },
+  "mawkyrduk-megalith": {
+    "file": "mawkyrduk.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawkyrduk-megalith/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/mawkyrduk.webp"
+  },
+  "mawphanlur": {
+    "file": "mawphanlur.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawphanlur/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/mawphanlur.webp"
+  },
+  "kyllang-rock": {
+    "file": "kyllang-rock.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/kyllang-rock/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/kyllang-rock.webp"
+  },
+  "nartiang-megalith": {
+    "file": "nartiang.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/jaintia-hills/nartiang-megalith/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/nartiang.webp"
+  },
+  "larnai-black-pottery": {
+    "file": "larnai-black-pottery.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/jaintia-hills/larnai-black-pottery/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/larnai-black-pottery.webp"
+  },
+  "phe-phe-falls": {
+    "file": "phe-phe-falls.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/jaintia-hills/phe-phe-falls/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/phe-phe-falls.webp"
+  },
+  "krangshuri-falls": {
+    "file": "krangshuri-falls.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/jaintia-hills/krangshuri/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/krangshuri-falls.webp"
+  },
+  "dawki-shnongpdeng-and-darang": {
+    "file": "dawki.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/jaintia-hills/dawki-shnongpdeng-darang/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/dawki.jpg"
+  },
+  "tura-peak": {
+    "file": "tura-peak.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/tura-peak/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/tura-peak.webp"
+  },
+  "nokrek-national-park": {
+    "file": "nokrek.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/nokrek-national-park/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/nokrek.webp"
+  },
+  "rongbangdare-falls": {
+    "file": "rongbangdare.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/rongbang-dare/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/rongbangdare.webp"
+  },
+  "chandigre-village": {
+    "file": "chandigre.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/chandigre-village/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/nearby/chandigre.jpg"
+  },
+  "wari-chora": {
+    "file": "wari-chora.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/wari-chora/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/wari-chora.webp"
+  },
+  "siju-cave": {
+    "file": "siju-1.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/siju-cave/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/siju-1.webp"
+  },
+  "siju-bird-sanctuary": {
+    "file": "siju-bird-sanctuary.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/siju-bird-sanctuary/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/siju-bird-sanctuary.webp"
+  },
+  "balpakram-national-reserve": {
+    "file": "balpakram-park.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/balpakram-national-reserve/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/nearby/balpakram-park.jpg"
+  },
+  "wachiwari-fish-sanctuary": {
+    "file": "fish-sanctuary.jpeg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/wachi-wari-fish-sanctuary/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/explore/fish-sanctuary.jpeg"
+  },
+  "aminda-rangsa-art-village": {
+    "file": "aminda-rangsa.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/aminda-rangsa-art-village/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/banners/aminda-rangsa.jpg"
+  },
+  "nengkong": {
+    "file": "nengkong.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/nengkong/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/explore/nengkong.jpg"
+  },
+  "umden-eri-silk-village": {
+    "file": "eri-silk-village.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/eri-silk-village/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/explore/eri-silk-village.jpg"
+  },
+  "umiam-lake": {
+    "file": "umiam.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/umiam-lake/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/destinations/nearby/umiam.jpg"
+  },
+  "lum-sohpetbneng": {
+    "file": "lum-sohpetbneng.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/lum-sohpetbneng/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/lum-sohpetbneng.webp"
+  },
+  "khweng-village": {
+    "file": "khweng.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/khweng/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/khweng.webp"
+  },
+  "baking-pusaw-mawranglang": {
+    "file": "baking-pusaw.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/baking-pusaw-mawranglang/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/curated/baking-pusaw.webp"
+  },
+  "mawlyngbna-crevice-walk": {
+    "file": "mawlyngbna-crevice-walk.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/mawlyngbna-crevice-walk/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/curated/mawlyngbna-crevice-walk.webp"
+  },
+  "hima-khatsaw-phra": {
+    "file": "hima-khadsaw.jpg",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/hima-khatsaw-phra/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/hima-khadsaw.jpg"
+  },
+  "ever-living-museum": {
+    "file": "ever-living-museum.webp",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/ever-living-museum/",
+    "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/ever-living-museum.webp"
+  },
+  "shillong": {
+    "file": "Official Meghalaya Tourism regional image reused for Shillong",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "ward-s-lake": {
+    "file": "Official Meghalaya Tourism regional image reused for Ward's Lake",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "cathedral-of-mary-help-of-christians": {
+    "file": "Official Meghalaya Tourism regional image reused for Cathedral of Mary Help of Christians",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "all-saints-cathedral": {
+    "file": "Official Meghalaya Tourism regional image reused for All Saints' Cathedral",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "shillong-golf-course": {
+    "file": "Official Meghalaya Tourism regional image reused for Shillong Golf Course",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "rainbow-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Rainbow Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "riwai-living-root-bridge": {
+    "file": "Official Meghalaya Tourism regional image reused for Riwai Living Root Bridge",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "shnongpdeng-village": {
+    "file": "Official Meghalaya Tourism regional image reused for Shnongpdeng Village",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mawjymbuin-cave": {
+    "file": "Official Meghalaya Tourism regional image reused for Mawjymbuin Cave",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "khreng-khreng-waterfall": {
+    "file": "Official Meghalaya Tourism regional image reused for Khreng Khreng Waterfall",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "wahkhen-living-root-bridge": {
+    "file": "Official Meghalaya Tourism regional image reused for Wahkhen Living Root Bridge",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nohsngithiang-seven-sisters-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Nohsngithiang (Seven Sisters Falls)",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "dainthlen-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Dainthlen Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "wei-sawdong-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Wei Sawdong Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "kynrem-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Kynrem Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "thangkharang-park": {
+    "file": "Official Meghalaya Tourism regional image reused for Thangkharang Park",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "eco-park-sohra": {
+    "file": "Official Meghalaya Tourism regional image reused for Eco Park, Sohra",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mawsmai-village": {
+    "file": "Official Meghalaya Tourism regional image reused for Mawsmai Village",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mawkdok-dympep-valley": {
+    "file": "Official Meghalaya Tourism regional image reused for Mawkdok Dympep Valley",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "ramakrishna-mission-ashrama-sohra": {
+    "file": "Official Meghalaya Tourism regional image reused for Ramakrishna Mission Ashrama, Sohra",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "wah-kaba-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Wah Kaba Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "lyngksiar-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Lyngksiar Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mawmluh-cave": {
+    "file": "Official Meghalaya Tourism regional image reused for Mawmluh Cave",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "rangthylliang-mawkyrnot-living-root-bridges": {
+    "file": "Official Meghalaya Tourism regional image reused for Rangthylliang-Mawkyrnot Living Root Bridges",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "kudengrim": {
+    "file": "Official Meghalaya Tourism regional image reused for Kudengrim",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "padu-living-root-bridge": {
+    "file": "Official Meghalaya Tourism regional image reused for Padu Living Root Bridge",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "thadlaskein-lake": {
+    "file": "Official Meghalaya Tourism regional image reused for Thadlaskein Lake",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nartiang-durga-temple": {
+    "file": "Official Meghalaya Tourism regional image reused for Nartiang Durga Temple",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "syntu-ksiar": {
+    "file": "Official Meghalaya Tourism regional image reused for Syntu Ksiar",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "ialong-park": {
+    "file": "Official Meghalaya Tourism regional image reused for Ialong Park",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "tyrshi-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Tyrshi Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "jarain-pitcher-plant-lake": {
+    "file": "Official Meghalaya Tourism regional image reused for Jarain Pitcher Plant Lake",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "raliang": {
+    "file": "Official Meghalaya Tourism regional image reused for Raliang",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "shnongrim-ridge": {
+    "file": "Official Meghalaya Tourism regional image reused for Shnongrim Ridge",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "krem-liat-prah": {
+    "file": "Official Meghalaya Tourism regional image reused for Krem Liat Prah",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "krem-chympe": {
+    "file": "Official Meghalaya Tourism regional image reused for Krem Chympe",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "krem-umthloo": {
+    "file": "Official Meghalaya Tourism regional image reused for Krem Umthloo",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "jowai": {
+    "file": "Official Meghalaya Tourism regional image reused for Jowai",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "moopun-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Moopun Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "bophill-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Bophill Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "myntdu-river": {
+    "file": "Official Meghalaya Tourism regional image reused for Myntdu River",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mihmyntdu": {
+    "file": "Official Meghalaya Tourism regional image reused for Mihmyntdu",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "saphai-village": {
+    "file": "Official Meghalaya Tourism regional image reused for Saphai Village",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "amlarem": {
+    "file": "Official Meghalaya Tourism regional image reused for Amlarem",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "syndai-cave": {
+    "file": "Official Meghalaya Tourism regional image reused for Syndai Cave",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "syndai-village": {
+    "file": "Official Meghalaya Tourism regional image reused for Syndai Village",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "amwi-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Amwi Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "umlawan-cave": {
+    "file": "Official Meghalaya Tourism regional image reused for Umlawan Cave",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nongkhnum-island": {
+    "file": "Official Meghalaya Tourism regional image reused for Nongkhnum Island",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mawthadraishan-peak": {
+    "file": "Official Meghalaya Tourism regional image reused for Mawthadraishan Peak",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "ranikor": {
+    "file": "Official Meghalaya Tourism regional image reused for Ranikor",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "langshiang-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Langshiang Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "weinia-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Weinia Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "jakrem-hot-springs": {
+    "file": "Official Meghalaya Tourism regional image reused for Jakrem Hot Springs",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nongstoin": {
+    "file": "Official Meghalaya Tourism regional image reused for Nongstoin",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mairang": {
+    "file": "Official Meghalaya Tourism regional image reused for Mairang",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "markham-valley": {
+    "file": "Official Meghalaya Tourism regional image reused for Markham Valley",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "kynshi-river": {
+    "file": "Official Meghalaya Tourism regional image reused for Kynshi River",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nongnah": {
+    "file": "Official Meghalaya Tourism regional image reused for Nongnah",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "wahmawpat-open-air-museum": {
+    "file": "Official Meghalaya Tourism regional image reused for Wahmawpat Open-Air Museum",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "orchid-lake-resort": {
+    "file": "Official Meghalaya Tourism regional image reused for Orchid Lake Resort",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "lum-nehru-park": {
+    "file": "Official Meghalaya Tourism regional image reused for Lum Nehru Park",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nongpoh": {
+    "file": "Official Meghalaya Tourism regional image reused for Nongpoh",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "kyrdemkulai": {
+    "file": "Official Meghalaya Tourism regional image reused for Kyrdemkulai",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "nongkhyllem-wildlife-sanctuary": {
+    "file": "Official Meghalaya Tourism regional image reused for Nongkhyllem Wildlife Sanctuary",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "umsning": {
+    "file": "Official Meghalaya Tourism regional image reused for Umsning",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "marngar-lake": {
+    "file": "Official Meghalaya Tourism regional image reused for Marngar Lake",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "tura": {
+    "file": "Official Meghalaya Tourism regional image reused for Tura",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "pelga-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Pelga Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "dainadubi": {
+    "file": "Official Meghalaya Tourism regional image reused for Dainadubi",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "asanang": {
+    "file": "Official Meghalaya Tourism regional image reused for Asanang",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "babadam": {
+    "file": "Official Meghalaya Tourism regional image reused for Babadam",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "chokpot": {
+    "file": "Official Meghalaya Tourism regional image reused for Chokpot",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "baghmara": {
+    "file": "Official Meghalaya Tourism regional image reused for Baghmara",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "simsang-river": {
+    "file": "Official Meghalaya Tourism regional image reused for Simsang River",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "emangre": {
+    "file": "Official Meghalaya Tourism regional image reused for Emangre",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "rongdong-falls": {
+    "file": "Official Meghalaya Tourism regional image reused for Rongdong Falls",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "resubelpara": {
+    "file": "Official Meghalaya Tourism regional image reused for Resubelpara",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "bajengdoba": {
+    "file": "Official Meghalaya Tourism regional image reused for Bajengdoba",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "kharkutta": {
+    "file": "Official Meghalaya Tourism regional image reused for Kharkutta",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mendipathar": {
+    "file": "Official Meghalaya Tourism regional image reused for Mendipathar",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "rongjeng": {
+    "file": "Official Meghalaya Tourism regional image reused for Rongjeng",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "ampati": {
+    "file": "Official Meghalaya Tourism regional image reused for Ampati",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "zikzak": {
+    "file": "Official Meghalaya Tourism regional image reused for Zikzak",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "garobadha": {
+    "file": "Official Meghalaya Tourism regional image reused for Garobadha",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "betasing": {
+    "file": "Official Meghalaya Tourism regional image reused for Betasing",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "mahendraganj": {
+    "file": "Official Meghalaya Tourism regional image reused for Mahendraganj",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "bandalgre": {
+    "file": "Official Meghalaya Tourism regional image reused for Bandalgre",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
+  },
+  "dalu": {
+    "file": "Official Meghalaya Tourism regional image reused for Dalu",
+    "source_page": "https://www.meghalayatourism.in/explore/destinations/",
+    "download_url": ""
   }
 }
