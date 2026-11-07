@@ -1,6 +1,7 @@
 """Canonical state-data loading, normalization, validation, and import reporting."""
 
 import json
+import os
 import re
 import unicodedata
 from collections import Counter
