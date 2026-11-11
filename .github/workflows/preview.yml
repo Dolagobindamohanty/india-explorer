@@ -54,8 +54,15 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          # `vercel deploy` prints progress to stdout; the URL is the last line.
-          url=$(vercel deploy --yes --token="$VERCEL_TOKEN" | tail -n 1)
+          # Non-interactive runs emit JSON plus a "Preview" line, so pull the
+          # first deployment URL out of the output instead of assuming a bare URL.
+          out=$(vercel deploy --yes --token="$VERCEL_TOKEN")
+          url=$(printf '%s\n' "$out" | grep -oE 'https://[A-Za-z0-9._-]+\.vercel\.app' | head -n 1)
+          if [ -z "$url" ]; then
+            echo "::error::Could not parse the preview URL from vercel deploy output."
+            printf '%s\n' "$out"
+            exit 1
+          fi
           echo "url=$url" >> "$GITHUB_OUTPUT"
           {
             echo "### Preview deployment"
