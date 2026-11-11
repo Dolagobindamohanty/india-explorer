@@ -16,7 +16,8 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: preview-${{ github.event.pull_request.number }}
+  # One preview per pull request; manual runs get their own group.
+  group: preview-${{ github.event.pull_request.number || github.run_id }}
   cancel-in-progress: true
 
 jobs:
@@ -53,7 +54,8 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          url=$(vercel deploy --yes --token="$VERCEL_TOKEN")
+          # `vercel deploy` prints progress to stdout; the URL is the last line.
+          url=$(vercel deploy --yes --token="$VERCEL_TOKEN" | tail -n 1)
           echo "url=$url" >> "$GITHUB_OUTPUT"
           {
             echo "### Preview deployment"
