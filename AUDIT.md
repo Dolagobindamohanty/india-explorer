@@ -346,7 +346,7 @@ The Vercel Git link for `traveling-ketch` is disconnected on purpose, so a push 
 - Without a `VERCEL_TOKEN` repository secret the job still succeeds: it emits a warning and skips the deploy, so forks and fresh clones never fail.
 - Production is unchanged: still manual via `vercel --prod --yes` (see `AGENTS.md`).
 
-Verification: a manual dispatch of the workflow completed successfully and logged `VERCEL_TOKEN is not configured; skipping the preview deployment.`, confirming the guard works. The deploy step itself needs the secret before it can be exercised.
+Verification: with `VERCEL_TOKEN` set, a manual dispatch deployed a preview and a throwaway pull request received the bot comment `Preview deployment: https://traveling-ketch-…vercel.app`; both preview URLs served `/style.css`, `/explore` and `/place/avathi-hills` with 200. Production was untouched (`dpl_HyG4WCMS1o8VoSqsat9JBUymhJ76` still holds the alias).
 
 ### Verification after remediation
 
