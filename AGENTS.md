@@ -21,6 +21,18 @@ The workflow needs a repository secret named `VERCEL_TOKEN`. Without it the job 
 gh secret set VERCEL_TOKEN
 ```
 
+The token is a long-lived account token, not the CLI login token. The CLI's own
+credentials (`vca_`/refresh token under `%APPDATA%\com.vercel.cli`) expire and cannot
+be reused here — Vercel refuses to mint new tokens from CLI auth.
+
+#### Troubleshooting
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| Job fails with `VERCEL_TOKEN is invalid or expired` | Token revoked or past its expiry | Create a new token and re-run `gh secret set VERCEL_TOKEN` |
+| Job warns `VERCEL_TOKEN is not configured` and skips | Secret missing (normal for forks) | Add the secret if this repo should deploy previews |
+| Run sits in `queued` for hours and the REST API returns `Cannot cancel a workflow run that has not been queued yet` | GitHub-side queue stall on `push` events | Run the workflow from the Actions tab (`workflow_dispatch`); both workflows support it |
+
 ## Production Deployment
 
 - The required production project for this repository is `traveling-ketch`.
