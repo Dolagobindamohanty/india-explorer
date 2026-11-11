@@ -23,6 +23,8 @@ concurrency:
 jobs:
   preview:
     runs-on: ubuntu-latest
+    # A hung deploy or an API stall must not wedge the queue for hours.
+    timeout-minutes: 15
     env:
       VERCEL_ORG_ID: team_arU5Zgvguo9hoTRIbuGQCpZA
       VERCEL_PROJECT_ID: prj_C8lybVZJOpKl2hQctqTpH8isUBTb
@@ -45,6 +47,18 @@ jobs:
       - name: Install Vercel CLI
         if: steps.token.outputs.present == 'true'
         run: npm install --global vercel@latest
+
+      # An expired or revoked token fails here with a message that says so,
+      # instead of surfacing later as a confusing deployment error.
+      - name: Validate Vercel token
+        if: steps.token.outputs.present == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if ! vercel whoami --token="$VERCEL_TOKEN"; then
+            echo "::error::VERCEL_TOKEN is invalid or expired. Create a new token at https://vercel.com/account/tokens and update the repository secret."
+            exit 1
+          fi
 
       # Build on Vercel's build machines (no --prebuilt) so the runner does not
       # need the Python runtime or the project's pip dependencies.
