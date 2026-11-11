@@ -132,7 +132,16 @@ def create_app(database_path=None):
             seed(db)
             repair_odisha_records(db)
 
-    app = FastAPI(title='India Explorer', version='0.1.0')
+    # Keep the interactive API docs available in local development but not on
+    # the public deployment, where they only widen the attack surface.
+    is_production = bool(os.getenv('VERCEL'))
+    app = FastAPI(
+        title='India Explorer',
+        version='0.1.0',
+        docs_url=None if is_production else '/docs',
+        redoc_url=None if is_production else '/redoc',
+        openapi_url=None if is_production else '/openapi.json',
+    )
 
     def rows(sql, params=()):
         with connection() as db:
@@ -144,6 +153,11 @@ def create_app(database_path=None):
             raise HTTPException(404, 'This destination is not in our pilot directory.')
         return result[0]
 
+    # SQLite's historical SQLITE_MAX_VARIABLE_NUMBER limit is 999. Chunking the
+    # IN (...) lookups keeps enrichment working as the directory grows past
+    # 1,000 places instead of failing with "too many SQL variables".
+    ENRICH_CHUNK_SIZE = 400
+
     def enrich_places(items):
         if not items:
             return items
@@ -151,33 +165,31 @@ def create_app(database_path=None):
         # records. Keep responses readable while old serverless databases drain.
         repair_display_text(items, ('name', 'description', 'how_to_reach', 'practical_notes', 'entry_fee', 'address', 'district', 'state'))
         ids = [item['id'] for item in items]
-        placeholders = ','.join('?' for _ in ids)
-        with connection() as db:
-            month_rows = db.execute(
-                f'SELECT place_id, month FROM place_months WHERE place_id IN ({placeholders}) ORDER BY month', ids
-            ).fetchall()
-            tag_rows = db.execute(
-                f'''SELECT pt.place_id, t.name FROM tags t
-                    JOIN place_tags pt ON pt.tag_id=t.id
-                    WHERE pt.place_id IN ({placeholders}) ORDER BY t.name''', ids
-            ).fetchall()
         months_by_place = {place_id: [] for place_id in ids}
         tags_by_place = {place_id: [] for place_id in ids}
-        for row in month_rows:
-            months_by_place[row['place_id']].append(row['month'])
-        for row in tag_rows:
-            tags_by_place[row['place_id']].append(row['name'])
+        images_by_place = {place_id: [] for place_id in ids}
+        with connection() as db:
+            for start in range(0, len(ids), ENRICH_CHUNK_SIZE):
+                chunk = ids[start:start + ENRICH_CHUNK_SIZE]
+                placeholders = ','.join('?' for _ in chunk)
+                for row in db.execute(
+                    f'SELECT place_id, month FROM place_months WHERE place_id IN ({placeholders}) ORDER BY month', chunk
+                ):
+                    months_by_place[row['place_id']].append(row['month'])
+                for row in db.execute(
+                    f'''SELECT pt.place_id, t.name FROM tags t
+                        JOIN place_tags pt ON pt.tag_id=t.id
+                        WHERE pt.place_id IN ({placeholders}) ORDER BY t.name''', chunk
+                ):
+                    tags_by_place[row['place_id']].append(row['name'])
+                for image in db.execute(
+                    f'''SELECT place_id, image_url, alt_text, source_page, sort_order FROM place_images
+                        WHERE place_id IN ({placeholders}) ORDER BY sort_order, id''', chunk
+                ):
+                    images_by_place[image['place_id']].append(dict(image))
         for item in items:
             item['best_months'] = months_by_place[item['id']]
             item['tags'] = tags_by_place[item['id']]
-        with connection() as db:
-            image_rows = db.execute(
-                f'''SELECT place_id, image_url, alt_text, source_page, sort_order FROM place_images
-                    WHERE place_id IN ({placeholders}) ORDER BY sort_order, id''', ids
-            ).fetchall()
-        images_by_place = {place_id: [] for place_id in ids}
-        for image in image_rows:
-            images_by_place[image['place_id']].append(dict(image))
         for item in items:
             primary = item.get('image_url')
             gallery = images_by_place[item['id']]
@@ -247,7 +259,7 @@ def create_app(database_path=None):
         result['festivals'] = festivals(month=None, district=slug)
         return result
 
-    def query_places(q='', state='', district='', month=None, category='', unesco=False, limit=1000):
+    def query_places(q='', state='', district='', month=None, category='', unesco=False, limit=None, offset=0):
         clauses, params = ['1=1'], []
         if q.strip():
             search = q.strip().replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_')
@@ -263,8 +275,14 @@ def create_app(database_path=None):
             params.append(month)
         if unesco:
             clauses.append('p.heritage_id IS NOT NULL')
-        params.append(limit)
-        return enrich_places(rows(place_select + ' WHERE ' + ' AND '.join(clauses) + ' ORDER BY p.name LIMIT ?', params))
+        sql = place_select + ' WHERE ' + ' AND '.join(clauses) + ' ORDER BY p.name'
+        if limit is not None:
+            sql += ' LIMIT ? OFFSET ?'
+            params.extend([limit, offset])
+        elif offset:
+            sql += ' LIMIT -1 OFFSET ?'
+            params.append(offset)
+        return enrich_places(rows(sql, params))
 
     def _empty_to_none(value: str | None):
         if value is None:
@@ -287,8 +305,10 @@ def create_app(database_path=None):
 
     @app.get('/api/places')
     def places(q: str = Query('', max_length=120), state: str = '', district: str = '',
-               month: int | None = Depends(_month_param), category: str = '', unesco: bool = False):
-        return query_places(q=q, state=state, district=district, month=month, category=category, unesco=unesco)
+               month: int | None = Depends(_month_param), category: str = '', unesco: bool = False,
+               limit: int | None = Query(None, ge=1, le=5000), offset: int = Query(0, ge=0)):
+        return query_places(q=q, state=state, district=district, month=month, category=category,
+                            unesco=unesco, limit=limit, offset=offset)
 
     @app.get('/api/places/{slug}')
     def place(slug: str):
@@ -392,6 +412,9 @@ def create_app(database_path=None):
     def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/', json_ld=None, og_image='/assets/state-cover.svg'):
         counts = directory_counts()
         canonical_url = SITE_URL + canonical_path
+        # Avoid titles like "India Explorer · India Explorer" while keeping the
+        # brand suffix on every other page.
+        page_title = title if 'India Explorer' in title else f'{title} · India Explorer'
         json_ld_html = ''
         if json_ld:
             ld_items = json_ld if isinstance(json_ld, list) else [json_ld]
@@ -405,7 +428,7 @@ def create_app(database_path=None):
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:image" content="{escape(SITE_URL + og_image, quote=True)}"><meta property="og:url" content="{escape(canonical_url, quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{json_ld_html}
-<title>{escape(title)} · India Explorer</title><link rel="stylesheet" href="/style.css?v=20261105-slideshow-caption-fix"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
+<title>{escape(page_title)}</title><meta name="theme-color" content="#a7d3c9"><link rel="stylesheet" href="/style.css?v=20261105-slideshow-caption-fix"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGrad)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGrad" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><button type="button" class="nav-search-link" id="spotlight-btn" aria-label="Search destinations">⌕ <span>Search</span> <kbd class="kbd-hint">⌘K</kbd></button><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><a href="/about">About</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
 <main id="app" tabindex="-1">{content}</main><div id="spotlight-overlay" class="spotlight-overlay" aria-hidden="true" style="display:none;"><div class="spotlight-modal" role="dialog" aria-modal="true" aria-label="Spotlight search"><div class="spotlight-input-wrap"><span class="spotlight-icon">⌕</span><input type="text" id="spotlight-input" placeholder="Type a destination, district, state, festival or dish... (Esc to close)" autocomplete="off" spellcheck="false"><button type="button" id="spotlight-close" class="spotlight-close-btn" aria-label="Close search">✕</button></div><div class="spotlight-tags-strip"><span>Trending:</span><button type="button" class="spotlight-tag" data-q="Taj Mahal">Taj Mahal</button><button type="button" class="spotlight-tag" data-q="Chandigarh">Chandigarh</button><button type="button" class="spotlight-tag" data-q="Puri">Puri</button><button type="button" class="spotlight-tag" data-q="Goa">Goa</button><button type="button" class="spotlight-tag" data-q="Spiti">Spiti</button><button type="button" class="spotlight-tag" data-q="Sikkim">Sikkim</button></div><div id="spotlight-results" class="spotlight-results"><div class="spotlight-hint">Instant live search across all {counts['places']} destinations, {counts['districts']} districts, {counts['states'] + counts['union_territories']} regions, foods & trails across India...</div></div></div></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button><footer><div class="footer-inner"><div><a class="brand" href="/"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGradF)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGradF" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><p>Find a place to visit. Find a place to belong.</p></div><nav class="footer-links" aria-label="Footer"><a href="/explore">Explore</a><a href="/area">States & UTs</a><a href="/circuits">Travel trails</a><a href="/festivals">Festivals</a><a href="/saved">Favorites</a><a href="/about">About</a></nav><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js?v=20261105-slideshow-caption-fix"></script></body></html>'''
@@ -497,9 +520,9 @@ def create_app(database_path=None):
         if occurrences:
             latest = occurrences[-1]
             date_info = f'🗓 <strong>Confirmed:</strong> {escape(latest["starts_on"])} to {escape(latest["ends_on"])}'
-        elif item.get('kind') == 'lunar':
+        elif item.get('date_type') == 'lunar':
             date_info = f'🗓 <strong>Typically in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Lunar calendar shifts annually</span>'
-        elif item.get('kind') == 'fixed':
+        elif item.get('date_type') == 'fixed':
             date_info = f'🗓 <strong>Observed in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Fixed season</span>'
         else:
             date_info = f'🗓 <strong>Typically in {escape(months_str)}</strong> · <span class="meta" style="display:inline;">Dates vary annually</span>'
@@ -573,12 +596,12 @@ def create_app(database_path=None):
                 "query-input": "required name=search_term_string",
             },
         }
-        return page_document('India Explorer', content, 'Discover states, districts, destinations, travel trails and festivals across India.', json_ld=website_schema, og_image='/assets/states/odisha.jpg')
+        return page_document('India Explorer — Discover somewhere new', content, 'Discover states, districts, destinations, travel trails and festivals across India.', json_ld=website_schema, og_image='/assets/states/odisha.jpg')
 
     @app.get('/explore', response_class=HTMLResponse)
     def rendered_explore(q: str = '', state: str = '', month: int | None = Depends(_month_param), category: str = '', unesco: bool = False):
         query = {'q': q, 'state': state, 'month': str(month) if month else '', 'category': category, 'unesco': 'true' if unesco else ''}
-        result = places(q=q, state=state, month=month, category=category, unesco=unesco)
+        result = query_places(q=q, state=state, month=month, category=category, unesco=unesco)
         places_json = json.dumps([{'slug': p['slug'], 'name': p['name'], 'category': p['category'], 'lat': p['latitude'], 'lon': p['longitude'], 'image_url': p.get('image_url') or fallback_image(p.get('state_slug')), 'district': p['district'], 'state': p['state']} for p in result])
         content = f'''{breadcrumb_html('Destinations')}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p>{server_filters(query)}<div class="explore-toolbar"><p><strong>{len(result)}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="{escape(places_json, quote=True)}"></div></div><div id="explore-grid-container">{server_cards(result)}</div>'''
         return page_document('Explore destinations', content, 'Search Indian destinations by state, season, category and UNESCO designation.', canonical_path='/explore')
@@ -758,7 +781,14 @@ def create_app(database_path=None):
                 {"@type": "ListItem", "position": 4, "name": result['name'], "item": f"{SITE_URL}/place/{slug}"},
             ],
         }
-        return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}', json_ld=[place_schema, breadcrumb_schema], og_image=result.get('image_url') or fallback_image(result.get('state_slug')))
+        og_image = result.get('image_url') or fallback_image(result.get('state_slug'))
+        # Social scrapers do not render SVG, so a place that only has vector
+        # artwork should share the raster state cover instead of the illustration.
+        if og_image.endswith('.svg'):
+            og_image = fallback_image(result.get('state_slug'))
+            if og_image.endswith('.svg'):
+                og_image = '/assets/states/odisha.jpg'
+        return page_document(result['name'], content, result['description'], canonical_path=f'/place/{slug}', json_ld=[place_schema, breadcrumb_schema], og_image=og_image)
 
     @app.get('/circuits', response_class=HTMLResponse)
     def rendered_circuits():

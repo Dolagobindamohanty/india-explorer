@@ -434,7 +434,7 @@ def test_every_state_and_union_territory_route_is_clean(client):
 def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
-    assert '<title>India Explorer · India Explorer</title>' in homepage
+    assert '<title>India Explorer — Discover somewhere new</title>' in homepage
     assert '28' in homepage and '802' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
@@ -545,7 +545,7 @@ def test_audit_fixes_and_structured_data(client):
     assert '"@type": "WebSite"' in home
     assert 'SearchAction' in home
     assert '<meta property="og:image"' in home
-    assert '<title>India Explorer · India Explorer</title>' in home
+    assert '<title>India Explorer — Discover somewhere new</title>' in home
     assert 'recent-places-section" hidden' in home
     assert 'Incredible India' not in home
 

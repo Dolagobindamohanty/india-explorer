@@ -393,7 +393,7 @@ function generateItineraryHtml(userPlaces) {
     days.push(ordered.slice(i, i + 2));
   }
 
-  let shareText = `*My India Travel Itinerary*\nGenerated with India Explorer (https://india-explorer-hazel.vercel.app/saved)\n\n`;
+  let shareText = `*My India Travel Itinerary*\nGenerated with India Explorer (${location.origin}/saved)\n\n`;
   days.forEach((dayPlaces, dayIdx) => {
     shareText += `*Day ${dayIdx + 1}:*\n`;
     dayPlaces.forEach(p => {
@@ -892,7 +892,7 @@ function submitSearch(form) { const params = new URLSearchParams(); for (const [
 document.addEventListener('submit', event => { if (event.target.id === 'filters' || event.target.id === 'home-search' || event.target.id === 'nav-search') { event.preventDefault(); submitSearch(event.target); } });
 root.addEventListener('click', event => {
   const button = event.target.closest('[data-save]');
-  if (button) { const slug = button.dataset.save; saved.has(slug) ? saved.delete(slug) : saved.add(slug); try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { button.textContent = 'Storage unavailable'; return; } button.textContent = saved.has(slug) ? '♥ Saved' : '♡ Save'; button.setAttribute('aria-pressed', saved.has(slug)); updateCount(); if (location.hash === '#/saved') route(); }
+  if (button) { const slug = button.dataset.save; saved.has(slug) ? saved.delete(slug) : saved.add(slug); try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { button.textContent = 'Storage unavailable'; return; } button.textContent = saved.has(slug) ? '♥ Saved' : '♡ Save'; button.setAttribute('aria-pressed', saved.has(slug)); updateCount(); if (location.hash === '#/saved' || currentPath === '/saved') route(); }
 });
 document.querySelector('#theme-toggle').addEventListener('click', () => { const dark = document.body.dataset.theme !== 'dark'; document.body.dataset.theme = dark ? 'dark' : 'light'; localStorage.setItem('india-locally-theme', dark ? 'dark' : 'light'); document.querySelector('#theme-toggle').innerHTML = dark ? '☀ <span>Light</span>' : '☾ <span>Dark</span>'; });
 document.querySelector('#menu-toggle').addEventListener('click', () => { const nav = document.querySelector('#nav-links'); const open = nav.classList.toggle('open'); document.querySelector('#menu-toggle').setAttribute('aria-expanded', open); });
@@ -920,7 +920,26 @@ initScrollChrome();
 initCircuitMap();
 initRecentTracker();
 initRecentPlacesHome();
-if (document.body.dataset.serverRendered !== 'true') {
+const serverRendered = document.body.dataset.serverRendered === 'true';
+const currentPath = location.pathname.replace(/\/+$/, '') || '/';
+
+async function hydrateSavedPage() {
+  const version = ++routeVersion;
+  try {
+    const html = await savedPage();
+    if (version !== routeVersion) return;
+    root.innerHTML = html;
+  } catch (error) {
+    if (version !== routeVersion) return;
+    root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
+  }
+}
+
+if (!serverRendered) {
   window.addEventListener('hashchange', route);
   route();
+} else if (currentPath === '/saved') {
+  // Favorites live in localStorage, so the server can only render the shell.
+  // Hydrate the device-specific collection after the shell loads.
+  hydrateSavedPage();
 }
