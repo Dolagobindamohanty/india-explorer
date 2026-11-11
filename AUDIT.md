@@ -316,6 +316,7 @@ Deployment notes:
 | H1 | Done | CSP, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy` added; docs/redoc/openapi return 404 when `VERCEL` is set |
 | H7 | Done | Home title de-duplicated, canonical + JSON-LD + OG image confirmed, stale 808/484 counts gone |
 | D1 | Done | Fixed the failing `avathi-hills` attribution record (see below) |
+| D2 | Done | Preview deployments restored after disconnecting the Vercel Git integration (see below) |
 
 ### D1 — attribution record for four Karnataka places
 
@@ -335,6 +336,17 @@ Resolution (approved by the user): keep the label, fix the artifact.
 - Result: 4 vector places (budget 8) and 183 Commons-attributed photos (floor 170).
 
 Note: the 19 remaining vector-labelled records are orphan attribution entries for a removed Mizoram dataset (they have no matching place) and their `.jpg` counterparts are 1×1 placeholder pixels. They are harmless but are part of the "54 orphan attribution records" finding in §4.3 and should be deleted with the M5 script cleanup.
+
+### D2 — preview deployments without the Vercel Git integration
+
+The Vercel Git link for `traveling-ketch` is disconnected on purpose, so a push to `master` cannot publish to production by itself. That also removed Vercel's automatic preview deployments, which used to appear on every pull request.
+
+- `.github/workflows/preview.yml` deploys a preview on `pull_request` (opened/synchronize/reopened) and comments the URL on the PR.
+- It also supports `workflow_dispatch`, so the secret can be verified from the Actions tab without opening a PR.
+- Without a `VERCEL_TOKEN` repository secret the job still succeeds: it emits a warning and skips the deploy, so forks and fresh clones never fail.
+- Production is unchanged: still manual via `vercel --prod --yes` (see `AGENTS.md`).
+
+Verification: a manual dispatch of the workflow completed successfully and logged `VERCEL_TOKEN is not configured; skipping the preview deployment.`, confirming the guard works. The deploy step itself needs the secret before it can be exercised.
 
 ### Verification after remediation
 
