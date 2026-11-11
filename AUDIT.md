@@ -315,8 +315,16 @@ Deployment notes:
 | C5 | Done | `/api/places` supports `limit`/`offset`; `enrich_places` batches lookups in chunks of 400 |
 | H1 | Done | CSP, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy` added; docs/redoc/openapi return 404 when `VERCEL` is set |
 | H7 | Done | Home title de-duplicated, canonical + JSON-LD + OG image confirmed, stale 808/484 counts gone |
+| H3 | Done | `/api/festivals` and `/api/circuits` use one chunked query each; 69 festivals in 30 ms, 19 circuits / 112 stops in 21 ms |
+| H5 | Done | Sitemap drops `/saved` and `/month/*`, re-adds `/festivals?month=N` and emits `<lastmod>`; `/saved` is `noindex, follow` |
+| H8 | Done | `/month/{n}` now 301s to `/festivals?month=n`; invalid months still return 422 |
+| M2 | Done | Unknown HTML routes render a noindex 404 page; `/api/*` and asset paths keep JSON |
+| M5 | Done | 3 active helpers in `scripts/`, 49 one-off scripts + 11 artifacts in `scripts/legacy/`; `search.py` deleted, `test_fixes.py` renamed; `scripts/` excluded from Vercel uploads |
+| M9 | Done | README counts corrected to 726 places / 69 festivals / 802 districts, plus asset and script paths |
+| L1 | Done | `APP_VERSION` and the unused `load_state_dataset` import removed |
 | D1 | Done | Fixed the failing `avathi-hills` attribution record (see below) |
 | D2 | Done | Preview deployments restored after disconnecting the Vercel Git integration (see below) |
+| D3 | Done | Deleted 57 unreferenced assets (2.80 MB) and 26 dead attribution records; every remaining asset is referenced |
 
 ### D1 — attribution record for four Karnataka places
 
@@ -335,7 +343,7 @@ Resolution (approved by the user): keep the label, fix the artifact.
 - Place pages fall back to the raster state cover for `og:image`, because social scrapers do not render SVG.
 - Result: 4 vector places (budget 8) and 183 Commons-attributed photos (floor 170).
 
-Note: the 19 remaining vector-labelled records are orphan attribution entries for a removed Mizoram dataset (they have no matching place) and their `.jpg` counterparts are 1×1 placeholder pixels. They are harmless but are part of the "54 orphan attribution records" finding in §4.3 and should be deleted with the M5 script cleanup.
+Note: the 19 remaining vector-labelled records were orphan attribution entries for a removed Mizoram dataset (they had no matching place) and their `.jpg` counterparts were 1×1 placeholder pixels. They were harmless but were part of the orphan-attribution finding in §4.1 and were deleted with the dead-data cleanup in D3 below.
 
 ### D2 — preview deployments without the Vercel Git integration
 
@@ -348,13 +356,33 @@ The Vercel Git link for `traveling-ketch` is disconnected on purpose, so a push 
 
 Verification: with `VERCEL_TOKEN` set, a manual dispatch deployed a preview and a throwaway pull request received the bot comment `Preview deployment: https://traveling-ketch-…vercel.app`; both preview URLs served `/style.css`, `/explore` and `/place/avathi-hills` with 200. Production was untouched (`dpl_HyG4WCMS1o8VoSqsat9JBUymhJ76` still holds the alias).
 
+### H8 — one canonical festival calendar
+
+`/month/{n}` and `/festivals?month=n` returned byte-identical pages and both appeared in the sitemap, so search engines saw duplicate content with no canonical separation.
+
+- `/month/{n}` now returns `301` to `/festivals?month=n`; `/festivals?month=n` is the single canonical page.
+- Months outside 1–12 still return `422` before any redirect.
+- The sitemap lists the 12 canonical festival URLs and no `/month/*` entries.
+
+### D3 — dead assets and attribution records
+
+After D1, `sources.json` still held 780 records for 726 places, and `public/assets/places/` contained files that nothing served.
+
+- References were recomputed from the API (`image_url` plus `images`, including the 28 legitimate `-gallery-2/3` entries), not from the per-state JSON files alone, which had overstated the dead set.
+- Deleted 57 unreferenced files (2.80 MB): 1×1 Mizoram placeholders left by an earlier import, old-slug duplicates for Odisha places, and eight orphaned Chandigarh photographs.
+- Deleted 26 dead non-gallery attribution records. All 28 gallery records were kept because each still attributes a live `images` entry.
+- `sources.json` now has 754 records. A re-scan reports **0** unreferenced assets.
+
 ### Verification after remediation
 
 - `python -m compileall` — OK.
 - `node --check public/app.js` — OK.
 - `python validate_data.py` — passed (160 pre-existing warnings).
-- `python -m pytest tests/test_app.py -q` — **23 passed** (was 22 passed / 1 failed).
+- `python -m pytest tests/test_app.py -q` — **23 passed**.
 - Local `TestClient` checks: home title/canonical/JSON-LD/theme-color present, no 808/484, 802/726 present; festival labels 42/31/22; `/saved` shell + containers + `app.js`; `/api/places` 726 total and `limit=5&offset=5` returns 5; invalid pagination returns 422; `/explore` 726 cards; `/docs`, `/redoc`, `/openapi.json` 200 locally, 404 with `VERCEL=1`.
+- Route checks: `/month/8` → `301` `/festivals?month=8`, `/month/13` → `422`; `/no-such-page` → HTML 404 with `noindex` meta and `X-Robots-Tag`; `/api/no-such-page` and `/assets/...` → JSON 404; sitemap 1,601 URLs, `<lastmod>` present, no `/saved` or `/month/`; `/saved` carries `noindex, follow`.
+- API checks: `/api/festivals` 69 items in 30 ms; `/api/circuits` 19 items / 112 stops in 21 ms; list and detail stops payloads match.
+- Data checks: `sources.json` 754 records; 0 unreferenced assets under `public/assets/places/`.
 - Attribution check: all four new `.svg` assets return 200 `image/svg+xml`; `/place/*`, `/state/karnataka` and `/explore` reference the `.svg` and no longer reference the deleted `.jpg`; `og:image` for those four places resolves to `/assets/states/karnataka.jpg`.
 
 _Update this table as each item is implemented and verified._

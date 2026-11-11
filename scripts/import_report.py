@@ -2,9 +2,14 @@
 
 import json
 import sqlite3
+import sys
+from pathlib import Path
 
-from data_pipeline import ROOT, import_report, validate_database
-from seed import seed
+# Allow running as `python scripts/import_report.py` from the repo root.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from data_pipeline import ROOT, import_report, validate_database  # noqa: E402
+from seed import seed  # noqa: E402
 
 
 if __name__ == '__main__':

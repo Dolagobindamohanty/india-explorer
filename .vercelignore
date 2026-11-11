@@ -1,6 +1,7 @@
 __pycache__/
 .pytest_cache/
 tests/
+scripts/
 tmp-images/
 data/*.sqlite3
 .kilo/

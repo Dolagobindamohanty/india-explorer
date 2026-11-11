@@ -6,7 +6,7 @@ import re
 import sqlite3
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / 'data' / 'explorer.sqlite3'
 SOURCE = ROOT / 'data' / 'india-states-districts.json'
 

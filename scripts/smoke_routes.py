@@ -1,8 +1,12 @@
+import sys
 import tempfile
 from pathlib import Path
 
-from fastapi.testclient import TestClient
-from app import create_app
+# Allow running as `python scripts/smoke_routes.py` from the repo root.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from fastapi.testclient import TestClient  # noqa: E402
+from app import create_app  # noqa: E402
 
 path = Path(tempfile.mkdtemp()) / 'smoke.sqlite3'
 client = TestClient(create_app(path))

@@ -50,6 +50,11 @@ Then deploy to production:
 vercel --prod
 ```
 
+Pull requests deploy a preview automatically through
+`.github/workflows/preview.yml`, which needs a repository secret named
+`VERCEL_TOKEN`; the URL is commented on the pull request. Pushes never publish
+to production on their own.
+
 The CLI will print the public URL. The frontend and API are served by the same
 FastAPI deployment, so no CORS configuration is needed.
 
@@ -59,7 +64,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
-- 28 state pages and 8 union-territory pages, a growing district directory with 808 districts, and 485 detailed place pages.
+- 28 state pages and 8 union-territory pages, a growing district directory with 802 districts, and 726 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
 - District food notes, access guidance, official reference links and map links.
@@ -99,8 +104,8 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 485 destinations, 57
-traditional celebrations and festivals, 808 district directory entries across
+This is an expanding editorial pilot, covering 726 destinations, 69
+traditional celebrations and festivals, 802 district directory entries across
 all 28 states and 8 union territories. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
 is made that their current contents were independently checked in this build.
@@ -108,13 +113,13 @@ All place records are marked `needs_review`; annual festival dates are unpopulat
 Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place. The 485
+The website stores a destination-specific image URL for every place. The 726
 pilot place cards use locally stored Wikimedia Commons, Odisha Tourism, and Unsplash photographs selected for
-the named destination and category; 481 of them are real photographs and 4
+the named destination and category; 722 of them are real photographs and 4
 (Karnataka) keep original editorial vector artwork
 because no reliably matching Commons photograph was found. Region pages use iconic landmark cover
 photographs representing each state and union territory. Attribution/source records are in
-`static/assets/places/sources.json`; verify each file's current license and
+`public/assets/places/sources.json`; verify each file's current license and
 attribution requirements before a public commercial launch. Google Fonts is
 optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
@@ -129,9 +134,9 @@ optional; system-font fallbacks and coloured backgrounds remain usable offline.
 - `GET /healthz`; interactive API docs at `/docs`
 - `GET /sitemap.xml` and `/robots.txt` for crawlable server-rendered pages
 
-Run `python verify_data.py` to check the region counts, district foreign keys,
+Run `python scripts/verify_data.py` to check the region counts, district foreign keys,
 place image uniqueness and missing cover images. The bundled administrative
-snapshot contains 808 districts across India's 28 states and 8 union
+snapshot contains 802 districts across India's 28 states and 8 union
 territories (including Kushavati district in Goa, officially notified in Dec 2025,
 and Bengaluru South district in Karnataka, renamed from Ramanagara on 23 May 2025),
 matching official administrative reorganization data.
@@ -151,9 +156,9 @@ inputs, missing records, persistent seeding and foreign-key constraints.
 
 ## Scope
 
-No credentials, paid service or Node build is needed. This MVP uses hash-based
-client-side routes; production SEO would require server-rendered destination
-pages, canonical URLs and a sitemap. Content editing is currently through SQL
+No credentials, paid service or Node build is needed. The app serves
+server-rendered pages with canonical URLs and a sitemap, and JavaScript enhances
+navigation without replacing that content. Content editing is currently through SQL
 and seed data; an authenticated editorial interface, full India coverage,
 accounts and itinerary routing are future work. SQLite is appropriate for this
 local read-heavy pilot; PostgreSQL migration can follow when deployment and
