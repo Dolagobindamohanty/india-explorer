@@ -1,4 +1,5 @@
 from contextlib import contextmanager
+from datetime import datetime, timezone
 import hashlib
 from html import escape
 import json
@@ -8,12 +9,11 @@ from pathlib import Path
 import re
 import sqlite3
 
-# Force cache invalidation
-APP_VERSION = "20261105-dedupe-fix"
-
-from fastapi import Depends, FastAPI, HTTPException, Query
-from fastapi.responses import HTMLResponse, PlainTextResponse, Response
+from fastapi import Depends, FastAPI, HTTPException, Query, Request
+from fastapi.exception_handlers import http_exception_handler as default_http_exception_handler
+from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from data_pipeline import dataset_version_bytes
 from seed import STATE_COVER_IMAGES, seed
@@ -330,6 +330,17 @@ def create_app(database_path=None):
             result['nearby'] = []
         return result
 
+    def rows_chunked(sql, ids, chunk_size=400):
+        """Run an ``IN (...)`` query in chunks so large id lists stay under SQLite's variable limit."""
+        if not ids:
+            return []
+        out = []
+        for start in range(0, len(ids), chunk_size):
+            chunk = ids[start:start + chunk_size]
+            placeholders = ','.join('?' for _ in chunk)
+            out.extend(rows(sql.format(placeholders=placeholders), chunk))
+        return out
+
     @app.get('/api/festivals')
     def festivals(month: int | None = Depends(_month_param), district: str = ''):
         clauses, params = ['1=1'], []
@@ -341,41 +352,78 @@ def create_app(database_path=None):
                 ON d.id=fd.district_id WHERE fd.festival_id=f.id AND d.slug=?)''')
             params.append(district)
         result = rows('SELECT f.* FROM festivals f WHERE ' + ' AND '.join(clauses) + ' ORDER BY name', params)
+        if not result:
+            return result
+        ids = [item['id'] for item in result]
+
+        months_by_festival, districts_by_festival, occurrences_by_festival = {}, {}, {}
+        for row in rows_chunked(
+            'SELECT festival_id, month FROM festival_months WHERE festival_id IN ({placeholders}) ORDER BY month',
+            ids,
+        ):
+            months_by_festival.setdefault(row['festival_id'], []).append(row['month'])
+        for row in rows_chunked(
+            '''SELECT fd.festival_id, d.name, d.slug, r.name AS state, r.slug AS state_slug
+                FROM festival_districts fd
+                JOIN districts d ON d.id=fd.district_id
+                JOIN regions r ON r.id=d.region_id
+                WHERE fd.festival_id IN ({placeholders}) ORDER BY r.name, d.name''',
+            ids,
+        ):
+            districts_by_festival.setdefault(row['festival_id'], []).append(
+                {key: row[key] for key in ('name', 'slug', 'state', 'state_slug')}
+            )
+        for row in rows_chunked(
+            '''SELECT festival_id, starts_on, ends_on, source_url, verified_at
+                FROM festival_occurrences WHERE festival_id IN ({placeholders}) ORDER BY starts_on''',
+            ids,
+        ):
+            occurrences_by_festival.setdefault(row['festival_id'], []).append(
+                {key: row[key] for key in ('starts_on', 'ends_on', 'source_url', 'verified_at')}
+            )
         for item in result:
-            item['months'] = [r['month'] for r in rows('SELECT month FROM festival_months WHERE festival_id=? ORDER BY month', (item['id'],))]
-            item['districts'] = rows('''SELECT d.name, d.slug, r.name AS state, r.slug AS state_slug
-                FROM districts d JOIN regions r ON r.id=d.region_id
-                JOIN festival_districts fd ON fd.district_id=d.id
-                WHERE fd.festival_id=? ORDER BY r.name, d.name''', (item['id'],))
-            item['occurrences'] = rows('SELECT starts_on, ends_on, source_url, verified_at FROM festival_occurrences WHERE festival_id=? ORDER BY starts_on', (item['id'],))
+            item['months'] = months_by_festival.get(item['id'], [])
+            item['districts'] = districts_by_festival.get(item['id'], [])
+            item['occurrences'] = occurrences_by_festival.get(item['id'], [])
         return result
 
-    @app.get('/api/circuits')
-    def api_circuits():
-        circuits_list = rows('SELECT * FROM circuits ORDER BY id')
-        for c in circuits_list:
-            c['stops'] = rows('''SELECT cp.stop_order, cp.notes, p.name, p.slug, p.category, p.image_url,
-                d.name AS district, r.name AS state, r.slug AS state_slug, p.latitude, p.longitude
+    CIRCUIT_STOP_FIELDS = ('stop_order', 'notes', 'name', 'slug', 'category', 'image_url',
+                           'description', 'how_to_reach', 'district', 'state', 'state_slug',
+                           'latitude', 'longitude')
+
+    def circuit_stops(ids):
+        stops = {}
+        for row in rows_chunked(
+            '''SELECT cp.circuit_id, cp.stop_order, cp.notes, p.name, p.slug, p.category, p.image_url,
+                p.description, p.how_to_reach, d.name AS district, r.name AS state, r.slug AS state_slug,
+                p.latitude, p.longitude
                 FROM circuit_places cp
                 JOIN places p ON p.id=cp.place_id
                 JOIN districts d ON d.id=p.district_id
                 JOIN regions r ON r.id=d.region_id
-                WHERE cp.circuit_id=?
-                ORDER BY cp.stop_order''', (c['id'],))
+                WHERE cp.circuit_id IN ({placeholders})
+                ORDER BY cp.circuit_id, cp.stop_order''',
+            ids,
+        ):
+            stops.setdefault(row['circuit_id'], []).append(
+                {key: row[key] for key in CIRCUIT_STOP_FIELDS}
+            )
+        return stops
+
+    @app.get('/api/circuits')
+    def api_circuits():
+        circuits_list = rows('SELECT * FROM circuits ORDER BY id')
+        if not circuits_list:
+            return circuits_list
+        stops = circuit_stops([c['id'] for c in circuits_list])
+        for c in circuits_list:
+            c['stops'] = stops.get(c['id'], [])
         return circuits_list
 
     @app.get('/api/circuits/{slug}')
     def api_circuit(slug: str):
         c = one('SELECT * FROM circuits WHERE slug=?', (slug,))
-        c['stops'] = rows('''SELECT cp.stop_order, cp.notes, p.name, p.slug, p.category, p.image_url,
-            p.description, p.how_to_reach, d.name AS district, r.name AS state, r.slug AS state_slug,
-            p.latitude, p.longitude
-            FROM circuit_places cp
-            JOIN places p ON p.id=cp.place_id
-            JOIN districts d ON d.id=p.district_id
-            JOIN regions r ON r.id=d.region_id
-            WHERE cp.circuit_id=?
-            ORDER BY cp.stop_order''', (c['id'],))
+        c['stops'] = circuit_stops([c['id']]).get(c['id'], [])
         return c
 
     @app.get('/healthz')
@@ -409,9 +457,10 @@ def create_app(database_path=None):
     def editorial_status_api():
         return editorial_status()
 
-    def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/', json_ld=None, og_image='/assets/state-cover.svg'):
+    def page_document(title, content, description='Explore states, districts, heritage, beaches, mountains, culture and festivals across India.', canonical_path='/', json_ld=None, og_image='/assets/state-cover.svg', noindex=False):
         counts = directory_counts()
         canonical_url = SITE_URL + canonical_path
+        robots_meta = '<meta name="robots" content="noindex, follow">' if noindex else ''
         # Avoid titles like "India Explorer · India Explorer" while keeping the
         # brand suffix on every other page.
         page_title = title if 'India Explorer' in title else f'{title} · India Explorer'
@@ -427,7 +476,7 @@ def create_app(database_path=None):
                 json_ld_html = '\n' + '\n'.join(json_ld_scripts)
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:image" content="{escape(SITE_URL + og_image, quote=True)}"><meta property="og:url" content="{escape(canonical_url, quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{json_ld_html}
+<meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:image" content="{escape(SITE_URL + og_image, quote=True)}"><meta property="og:url" content="{escape(canonical_url, quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{robots_meta}{json_ld_html}
 <title>{escape(page_title)}</title><meta name="theme-color" content="#a7d3c9"><link rel="stylesheet" href="/style.css?v=20261105-slideshow-caption-fix"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><a class="brand" href="/" aria-label="India Explorer home"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGrad)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGrad" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><button type="button" class="nav-search-link" id="spotlight-btn" aria-label="Search destinations">⌕ <span>Search</span> <kbd class="kbd-hint">⌘K</kbd></button><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><a href="/about">About</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
@@ -936,16 +985,17 @@ def create_app(database_path=None):
         festival_description = f'Festivals and celebrations typically observed in {month_name} across India.' if month else 'Browse Indian festivals month by month, with district context and official tourism references.'
         return page_document(title, content, festival_description, canonical_path=f'/festivals{f"?month={month}" if month else ""}', og_image='/assets/states/odisha.jpg')
 
-    @app.get('/month/{value}', response_class=HTMLResponse)
+    @app.get('/month/{value}')
     def rendered_month(value: int):
         if value < 1 or value > 12:
             raise HTTPException(422, 'Choose a month from January to December.')
-        return rendered_festivals(month=value)
+        # /festivals?month=N is the canonical page; /month/N is a legacy alias.
+        return RedirectResponse(url=f'/festivals?month={value}', status_code=301)
 
     @app.get('/saved', response_class=HTMLResponse)
     def rendered_saved():
         content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.</p><div id="saved-itinerary-builder"></div><div id="saved-cards-container"><a class="button" href="/explore">Explore destinations</a></div>'''
-        return page_document('Saved places', content, 'Save and revisit destinations while planning your trip across India.', canonical_path='/saved')
+        return page_document('Saved places', content, 'Save and revisit destinations while planning your trip across India.', canonical_path='/saved', noindex=True)
 
     @app.get('/area', response_class=HTMLResponse)
     def rendered_area():
@@ -970,15 +1020,24 @@ def create_app(database_path=None):
         content = f'''{breadcrumb_html('About')}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p><div class="about-grid"><div><h3>Explore with context</h3><p>Browse India’s states and union territories, then follow the directory into districts and detailed places.</p></div><div><h3>Save your ideas</h3><p>Favorites and recently viewed places stay on this device, so planning feels personal without an account.</p></div><div><h3>Travel responsibly</h3><p>Tourism details and festival dates can change. Use the linked official sources to confirm plans before you go.</p></div></div>'''
         return page_document('About India Explorer', content, 'India Explorer is an editorial travel-discovery directory for India’s states, districts, festivals and landmarks.', canonical_path='/about', og_image='/assets/states/odisha.jpg')
 
+    # Captured once per process so sitemap lastmod is stable rather than changing
+    # on every request.
+    SITEMAP_LASTMOD = datetime.now(timezone.utc).date().isoformat()
+
     @app.get('/sitemap.xml', response_class=Response)
     def sitemap():
-        urls = ['/', '/explore', '/area', '/circuits', '/festivals', '/about', '/saved']
+        # /saved is private and client-only, and /month/* now redirects to
+        # /festivals?month=N, so neither belongs in the sitemap.
+        urls = ['/', '/explore', '/area', '/circuits', '/festivals', '/about']
         urls.extend(f"/circuit/{item['slug']}" for item in rows('SELECT slug FROM circuits'))
         urls.extend(f"/state/{item['slug']}" for item in rows('SELECT slug FROM regions'))
         urls.extend(f"/district/{item['slug']}" for item in rows('SELECT slug FROM districts'))
         urls.extend(f"/place/{item['slug']}" for item in rows('SELECT slug FROM places'))
-        urls.extend(f'/month/{month}' for month in range(1, 13))
-        body = ''.join(f'<url><loc>{escape(SITE_URL + url)}</loc></url>' for url in urls)
+        urls.extend(f'/festivals?month={month}' for month in range(1, 13))
+        body = ''.join(
+            f'<url><loc>{escape(SITE_URL + url)}</loc><lastmod>{SITEMAP_LASTMOD}</lastmod></url>'
+            for url in urls
+        )
         return Response(
             content=f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{body}</urlset>',
             media_type='application/xml',
@@ -987,6 +1046,28 @@ def create_app(database_path=None):
     @app.get('/robots.txt', response_class=PlainTextResponse)
     def robots():
         return f'User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n'
+
+    @app.exception_handler(StarletteHTTPException)
+    async def html_aware_http_exception(request: Request, exc: StarletteHTTPException):
+        """Render a real page for missing HTML routes, keep JSON for API/static paths."""
+        path = request.url.path
+        accept = request.headers.get('accept', '')
+        prefers_html = 'text/html' in accept or accept in ('*/*', '')
+        is_api_or_asset = path.startswith(('/api/', '/assets/')) or '.' in path.rsplit('/', 1)[-1]
+        if exc.status_code == 404 and prefers_html and not is_api_or_asset:
+            content = '''<section class="section"><p class="eyebrow">Error 404</p><h1>This trail leads nowhere.</h1><p class="lead">We could not find that page. It may have moved, or the destination is not in the directory yet.</p><p><a class="button" href="/explore">Explore destinations</a> <a class="button" href="/">Back home</a></p></section>'''
+            return HTMLResponse(
+                page_document(
+                    'Page not found',
+                    content,
+                    'The page you requested does not exist.',
+                    canonical_path=path,
+                    noindex=True,
+                ),
+                status_code=404,
+                headers={'X-Robots-Tag': 'noindex'},
+            )
+        return await default_http_exception_handler(request, exc)
 
     # Vercel serves public/ directly from its CDN. Local development still
     # mounts the same files so the app remains runnable without Vercel.

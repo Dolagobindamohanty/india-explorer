@@ -8,7 +8,7 @@ Each state features its most iconic landmark photograph.
 import json
 from pathlib import Path
 
-from data_pipeline import load_all_state_datasets, load_state_dataset, normalize_place
+from data_pipeline import load_all_state_datasets, normalize_place
 
 ROOT = Path(__file__).resolve().parent
 
