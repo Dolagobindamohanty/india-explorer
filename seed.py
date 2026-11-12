@@ -1042,6 +1042,16 @@ def seed(db):
         (120, 'Navaratri (Kerala)', 'Nine-night festival of Goddess Durga with Saraswati Puja and Vidyarambham ceremonies.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thiruvananthapuram'), ('kerala', 'ernakulam')], [9, 10]),
         (121, 'Deepavali (Kerala)', 'Festival of lights celebrated with lamps, sweets and family gatherings across Kerala.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thrissur')], [10, 11]),
         (122, 'Karkidaka Vavu', 'Ancestral offerings (bali) performed on the new moon of Karkidakam, especially at Thiruvallam and Aluva.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thiruvananthapuram'), ('kerala', 'ernakulam')], [7, 8]),
+        (123, 'Ganesh Chaturthi (Maharashtra)', 'Maharashtra\'s biggest festival, with home and public Ganpati installations, processions and visarjan immersions.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'mumbai'), ('maharashtra', 'pune')], [8, 9]),
+        (124, 'Gudi Padwa', 'Marathi New Year celebrated with gudi (flag) hoisting, rangoli and festive meals across Maharashtra.', 'fixed', 'https://maharashtratourism.gov.in/', [('maharashtra', 'mumbai'), ('maharashtra', 'pune')], [3, 4]),
+        (125, 'Dahi Handi', 'Janmashtami celebration where human pyramids break a suspended pot of curd, famous in Mumbai and Thane.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'mumbai'), ('maharashtra', 'thane')], [8]),
+        (126, 'Pandharpur Wari', 'Annual pilgrimage to Pandharpur for Ashadhi Ekadashi, with palanquins of saints and lakhs of warkaris.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'solapur')], [6, 7]),
+        (127, 'Ellora Festival', 'Cultural festival at the Ellora caves with classical music and dance performances.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'chhatrapati-sambhajinagar')], [10, 11]),
+        (128, 'Maharashtra Day', 'Statehood day on 1 May, marked by parades and cultural programmes across Maharashtra.', 'fixed', 'https://maharashtratourism.gov.in/', [('maharashtra', 'mumbai')], [5]),
+        (129, 'Nagpanchami (Maharashtra)', 'Snake worship festival observed across Maharashtra with milk offerings and folk traditions.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'kolhapur'), ('maharashtra', 'pune')], [7, 8]),
+        (130, 'Bail Pola', 'Festival honouring bullocks with decorated cattle, observed in rural Maharashtra.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'nagpur'), ('maharashtra', 'amravati')], [8, 9]),
+        (131, 'Khandoba Jatra', 'Annual fair at Jejuri, Pune, honouring Khandoba with turmeric processions.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'pune')], [12, 1]),
+        (132, 'Makar Sankranti (Maharashtra)', 'Kite festival and til-gur sweets, marking the harvest season across Maharashtra.', 'fixed', 'https://maharashtratourism.gov.in/', [('maharashtra', 'pune'), ('maharashtra', 'nashik')], [1]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

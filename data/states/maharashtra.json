@@ -1,0 +1,7 @@
+{
+  "slug": "maharashtra",
+  "name": "Maharashtra",
+  "kind": "state",
+  "source_url": "https://maharashtratourism.gov.in/",
+  "places_file": "../maharashtra-places.json"
+}
