@@ -1032,6 +1032,16 @@ def seed(db):
         (110, 'Chhath Puja (Haryana)', 'Sun worship festival with riverbank offerings, observed in several Haryana districts.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'faridabad'), ('haryana', 'yamuna_nagar')], [10, 11]),
         (111, 'Raksha Bandhan (Haryana)', 'Brother-sister festival of protection celebrated across Haryana with rakhis and family feasts.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'rohtak')], [8]),
         (112, 'Haryana Tourism and Heritage Festival', 'State tourism showcase of Haryana crafts, cuisine and folk performances, held at various venues.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'panchkula')], [10]),
+        (113, 'Vishu', 'Kerala New Year and harvest festival, marked by the Vishukkani (auspicious first sight), feasts and fireworks.', 'fixed', 'https://www.keralatourism.org/', [('kerala', 'thrissur'), ('kerala', 'ernakulam')], [4]),
+        (114, 'Thrissur Pooram', 'Spectacular temple festival in Thrissur with decorated elephants, percussion ensembles and fireworks.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thrissur')], [4, 5]),
+        (115, 'Attukal Pongala', 'World\'s largest gathering of women, offering pongala (sweet rice) to Goddess Attukalamma in Thiruvananthapuram.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thiruvananthapuram')], [2, 3]),
+        (116, 'Theyyam Season', 'Ritualistic dance-drama performed in temples of North Kerala, with elaborate costumes and face painting.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'kannur'), ('kerala', 'kasaragod')], [10, 11, 12, 1, 2, 3, 4, 5]),
+        (117, 'Sabarimala Makaravilakku', 'Pilgrimage season at Sabarimala culminating in the Makaravilakku light on Makar Sankranti.', 'fixed', 'https://www.keralatourism.org/', [('kerala', 'pathanamthitta')], [1]),
+        (118, 'Aranmula Boat Race', 'Annual snake-boat race on the Pamba River at Aranmula, part of the Onam celebrations.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'pathanamthitta'), ('kerala', 'alappuzha')], [8, 9]),
+        (119, 'Champakulam Moolam Boat Race', 'One of the oldest snake-boat races, held on the Pamba River during the monsoon.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'alappuzha')], [6, 7]),
+        (120, 'Navaratri (Kerala)', 'Nine-night festival of Goddess Durga with Saraswati Puja and Vidyarambham ceremonies.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thiruvananthapuram'), ('kerala', 'ernakulam')], [9, 10]),
+        (121, 'Deepavali (Kerala)', 'Festival of lights celebrated with lamps, sweets and family gatherings across Kerala.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thrissur')], [10, 11]),
+        (122, 'Karkidaka Vavu', 'Ancestral offerings (bali) performed on the new moon of Karkidakam, especially at Thiruvallam and Aluva.', 'varies_annually', 'https://www.keralatourism.org/', [('kerala', 'thiruvananthapuram'), ('kerala', 'ernakulam')], [7, 8]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

@@ -47,7 +47,7 @@ def test_full_destination_journey(client):
     kerala = client.get('/api/states/kerala').json()
     assert len(kerala['districts']) == 14
     district = client.get('/api/districts/alappuzha').json()
-    assert {f['name'] for f in district['festivals']} == {'Onam', 'Nehru Trophy Boat Race'}
+    assert {f['name'] for f in district['festivals']} == {'Onam', 'Nehru Trophy Boat Race', 'Aranmula Boat Race', 'Champakulam Moolam Boat Race'}
     place = client.get('/api/places/alappuzha-beach').json()
     assert place['district'] == 'Alappuzha'
     assert place['nearby'][0]['slug'] == 'alappuzha-backwaters'
@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 1007
+    assert len(all_places) == 1133
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -108,6 +108,18 @@ def test_full_destination_journey(client):
     assert len(haryana['places']) == 201
     assert all((ASSETS / place['image_url'].lstrip('/')).exists() for place in haryana['places'])
     assert client.get('/api/places/brahma-sarovar').json()['district'] == 'Kurukshetra'
+    kerala = client.get('/api/states/kerala').json()
+    assert len(kerala['districts']) == 14
+    assert len(kerala['places']) == 130
+    assert all((ASSETS / place['image_url'].lstrip('/')).exists() for place in kerala['places'])
+    assert client.get('/api/places/munnar').json()['district'] == 'Idukki'
+    assert client.get('/api/places/fort-kochi').json()['district'] == 'Ernakulam'
+    kerala = client.get('/api/states/kerala').json()
+    assert len(kerala['districts']) == 14
+    assert len(kerala['places']) == 130
+    assert all((ASSETS / place['image_url'].lstrip('/')).exists() for place in kerala['places'])
+    assert client.get('/api/places/munnar').json()['district'] == 'Idukki'
+    assert client.get('/api/places/fort-kochi').json()['district'] == 'Ernakulam'
     karnataka = client.get('/api/states/karnataka').json()
     assert len(karnataka['districts']) == 31
     assert len(karnataka['places']) == 171
@@ -213,11 +225,11 @@ def test_filters_combine_and_heritage_links(client):
     assert client.get('/api/places?state=kerala&unesco=true').json() == []
     assert len(client.get('/api/places?month=7').json()) == 14
     assert len(client.get('/api/places?month=6').json()) == 26
-    assert len(client.get('/api/places?q=Kochi').json()) == 2
+    assert len(client.get('/api/places?q=Kochi').json()) == 6
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     assert client.get('/api/places', params={'q': '%'}).json() == []
     assert client.get('/api/places', params={'q': '_'}).json() == []
-    assert len(client.get('/api/places?q=Kochi').json()) == 2
+    assert len(client.get('/api/places?q=Kochi').json()) == 6
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     assert client.get('/api/places', params={'q': '%'}).json() == []
     assert client.get('/api/places', params={'q': '_'}).json() == []
@@ -225,7 +237,7 @@ def test_filters_combine_and_heritage_links(client):
 
 def test_month_calendar_does_not_invent_annual_dates(client):
     result = client.get('/api/festivals?month=8&district=alappuzha').json()
-    assert len(result) == 2
+    assert len(result) == 3
     assert all(f['occurrences'] == [] for f in result)
     dec_festivals = client.get('/api/festivals?month=12').json()
     assert len(dec_festivals) >= 2
@@ -253,7 +265,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 1007
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 1133
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -359,7 +371,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 1007}
+    assert response.json() == {'status': 'ok', 'places': 1133}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -464,7 +476,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 1007}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 1133}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -608,6 +620,20 @@ def test_nagaland_festival_calendar(client):
     assert len(haryana_festivals) == 21
     assert 'Surajkund International Crafts Mela' in festivals
     assert 'Kurukshetra Mahotsav and Gita Jayanti' in festivals
+    kerala_festivals = [
+        f for f in festivals.values()
+        if any(d['state_slug'] == 'kerala' for d in f['districts'])
+    ]
+    assert len(kerala_festivals) == 12
+    assert 'Onam' in festivals
+    assert 'Thrissur Pooram' in festivals
+    kerala_festivals = [
+        f for f in festivals.values()
+        if any(d['state_slug'] == 'kerala' for d in f['districts'])
+    ]
+    assert len(kerala_festivals) == 12
+    assert 'Onam' in festivals
+    assert 'Thrissur Pooram' in festivals
     nagaland_festivals = [
         f for f in festivals.values()
         if any(d['state_slug'] == 'nagaland' for d in f['districts'])
@@ -617,9 +643,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 1007,
+        'detailed_places': 1133,
         'reviewed_places': 0,
-        'unreviewed_places': 1007,
+        'unreviewed_places': 1133,
         'confirmed_festival_dates': 0,
     }
 
@@ -687,7 +713,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 111
+    assert len(all_festivals) == 121
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 

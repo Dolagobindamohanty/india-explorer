@@ -1,0 +1,7 @@
+{
+  "slug": "kerala",
+  "name": "Kerala",
+  "kind": "state",
+  "source_url": "https://www.keralatourism.org/",
+  "places_file": "../kerala-places.json"
+}
