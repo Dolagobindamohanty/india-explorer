@@ -1,0 +1,7 @@
+{
+  "slug": "nagaland",
+  "name": "Nagaland",
+  "kind": "state",
+  "source_url": "https://tourism.nagaland.gov.in/",
+  "places_file": "../nagaland-places.json"
+}
