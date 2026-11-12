@@ -1022,6 +1022,16 @@ def seed(db):
         (100, 'Navratri (Haryana)', 'Nine-night festival of Goddess Durga with fasting, garba and community celebrations across Haryana.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'gurugram'), ('haryana', 'faridabad')], [9, 10]),
         (101, 'Gugga Naumi', 'Folk festival honouring Gugga Pir, observed with processions and fairs in many Haryana districts.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'hisar'), ('haryana', 'sirsa')], [8, 9]),
         (102, 'Pinjore Heritage Festival', 'Cultural festival at Pinjore Gardens, Panchkula, showcasing Haryana heritage, crafts and performances.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'panchkula')], [10]),
+        (103, 'International Gita Mahotsav', 'Annual celebration in Kurukshetra honouring the Bhagavad Gita, with discourse, cultural programmes, Deep Daan and Aarti at Brahma Sarovar.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'kurukshetra')], [11, 12]),
+        (104, 'Lohri (Haryana)', 'Winter harvest festival on 13 January marked by bonfires, folk songs and community gatherings across Haryana.', 'fixed', 'https://haryanatourism.gov.in/', [('haryana', 'rohtak'), ('haryana', 'sirsa')], [1]),
+        (105, 'Makar Sankranti (Haryana)', 'Winter solstice festival with kite flying, sacred baths and til-gur sweets, observed across Haryana.', 'fixed', 'https://haryanatourism.gov.in/', [('haryana', 'karnal'), ('haryana', 'ambala')], [1]),
+        (106, 'Basant Panchami (Haryana)', 'Spring festival honouring Goddess Saraswati with yellow attire, kite flying and temple visits across Haryana.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'rohtak')], [1, 2]),
+        (107, 'Karva Chauth (Haryana)', 'Married women observe a day-long fast for their husbands, broken after moonrise, widely celebrated across Haryana.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'gurugram'), ('haryana', 'faridabad')], [10]),
+        (108, 'Dussehra (Haryana)', 'Victory of good over evil celebrated with Ramlila performances and effigy burning across Haryana.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'panipat'), ('haryana', 'hisar')], [9, 10]),
+        (109, 'Diwali (Haryana)', 'Festival of lights with lamps, sweets and family gatherings celebrated across Haryana.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'gurugram'), ('haryana', 'faridabad')], [10, 11]),
+        (110, 'Chhath Puja (Haryana)', 'Sun worship festival with riverbank offerings, observed in several Haryana districts.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'faridabad'), ('haryana', 'yamuna_nagar')], [10, 11]),
+        (111, 'Raksha Bandhan (Haryana)', 'Brother-sister festival of protection celebrated across Haryana with rakhis and family feasts.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'rohtak')], [8]),
+        (112, 'Haryana Tourism and Heritage Festival', 'State tourism showcase of Haryana crafts, cuisine and folk performances, held at various venues.', 'varies_annually', 'https://haryanatourism.gov.in/', [('haryana', 'panchkula')], [10]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

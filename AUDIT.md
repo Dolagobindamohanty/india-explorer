@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 803 districts, 1002 places, 101 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **0 festival occurrences**. 183 of 803 districts have a place; **13 states have none**.
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 803 districts, 1007 places, 111 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **0 festival occurrences**. 185 of 803 districts have a place; **13 states have none**.
 
 ---
 
@@ -84,10 +84,10 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 1002 |
+| Places | 1007 |
 | Verified | **0** (all 726 `needs_review`) |
 | With entry fee / address | 646 / 646 (80 missing each → 160 warnings) |
-| Districts with ≥1 place | 183 / 803 |
+| Districts with ≥1 place | 185 / 803 |
 | States with 0 places | **13** (Assam, Bihar, Chhattisgarh, Gujarat, Haryana, Jharkhand, MP, Maharashtra, Manipur, Punjab, Telangana, Uttarakhand, West Bengal) |
 | Festival occurrences | 0 (only recurring month windows) |
 | Attribution records | 780 for 726 places (54 orphans) |
@@ -323,7 +323,7 @@ Deployment notes:
 | M9 | Done | README counts corrected to 726 places / 69 festivals / 802 districts, plus asset and script paths |
 | M10 | Done | Added Meluri, Nagaland's 17th district, to the source directory and seeded database (803 district entries in total) |
 | M11 | Done | Added 80 Nagaland place pages (one per official district-map entry) and 21 Nagaland festivals to the calendar |
-| M12 | Done | Added 196 Haryana place pages from haryanatourism.gov.in and 11 Haryana festivals to the calendar |
+| M12 | Done | Added 201 Haryana place pages from haryanatourism.gov.in and 21 Haryana festivals to the calendar |
 | L1 | Done | `APP_VERSION` and the unused `load_state_dataset` import removed |
 | D1 | Done | Fixed the failing `avathi-hills` attribution record (see below) |
 | D2 | Done | Preview deployments restored after disconnecting the Vercel Git integration (see below) |
