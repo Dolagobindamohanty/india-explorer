@@ -1,0 +1,7 @@
+{
+  "slug": "haryana",
+  "name": "Haryana",
+  "kind": "state",
+  "source_url": "https://haryanatourism.gov.in/",
+  "places_file": "../haryana-places.json"
+}
