@@ -435,7 +435,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer — Discover somewhere new</title>' in homepage
-    assert '28' in homepage and '802' in homepage
+    assert '28' in homepage and '803' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
@@ -548,6 +548,24 @@ def test_saved_page_accepts_shared_collection_query(client):
     assert response.status_code == 200
     assert 'id="profile-drawer"' in response.text
     assert 'noindex' in response.text
+
+
+def test_nagaland_directory_lists_all_17_districts(client):
+    expected = {
+        'Chumoukedima', 'Dimapur', 'Kiphire', 'Kohima', 'Longleng', 'Meluri',
+        'Mokokchung', 'Mon', 'Niuland', 'Noklak', 'Peren', 'Phek', 'Shamator',
+        'Tseminyu', 'Tuensang', 'Wokha', 'Zunheboto',
+    }
+    nagaland = client.get('/api/states/nagaland').json()
+    names = {district['name'] for district in nagaland['districts']}
+    assert names == expected
+    assert len(nagaland['districts']) == 17
+    state_page = client.get('/state/nagaland').text
+    assert '17' in state_page
+    assert 'Meluri' in state_page
+    meluri = client.get('/district/meluri')
+    assert meluri.status_code == 200
+    assert 'Meluri' in meluri.text
 
 
 def test_editorial_status(client):
