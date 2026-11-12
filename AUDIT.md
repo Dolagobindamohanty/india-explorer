@@ -387,3 +387,21 @@ After D1, `sources.json` still held 780 records for 726 places, and `public/asse
 
 _Update this table as each item is implemented and verified._
 
+### L7 — real accounts and cross-device sync (deferred)
+
+The traveler profile, favorites, avatar, recent history and collections are
+device-local by design: they live in `localStorage` under `india-locally-*` keys,
+and the read-only Vercel filesystem cannot store them. Real accounts would add
+cross-device sync, recovery and sharing between signed-in users, but they are a
+separate project:
+
+- authentication (email magic link or OAuth) with session cookies;
+- hosted PostgreSQL (Vercel Postgres, Neon or Supabase) and migrations;
+- per-user rows for profiles, favorites, recent history and collections;
+- an export/delete flow and a privacy policy covering the stored personal data;
+- a migration path that lets existing device-local data be claimed at first sign-in.
+
+Deferred deliberately: none of the four profile upgrades shipped in November 2026
+depends on it. When it is built, it should extend the existing device-local layer
+rather than replace it, so the site keeps working without an account.
+

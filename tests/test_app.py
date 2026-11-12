@@ -524,6 +524,32 @@ def test_traveler_profile_shell_is_present_on_every_page(client):
     assert 'aria-expanded="false"' in home
 
 
+def test_profile_upgrades_have_shells_and_accessible_drawer(client):
+    home = client.get('/').text
+    # Personalised row the client fills from /api/places once interests exist.
+    assert 'id="personalised-section"' in home
+    assert 'id="personalised-cards"' in home
+    assert 'id="personalised-heading"' in home
+    # Avatar picker: presets plus an upload that is downscaled in the browser.
+    assert 'id="profile-avatar-options"' in home
+    assert 'id="profile-avatar-upload"' in home
+    assert 'accept="image/*"' in home
+    # Collections with a create form and list.
+    assert 'id="collection-form"' in home
+    assert 'id="collection-name"' in home
+    assert 'id="profile-collection-list"' in home
+    # Drawer behaves like a modal dialog and can receive focus itself.
+    assert 'role="dialog" aria-modal="true"' in home
+    assert 'id="profile-drawer"' in home and 'tabindex="-1"' in home
+
+
+def test_saved_page_accepts_shared_collection_query(client):
+    response = client.get('/saved?places=alappuzha-beach,taj-mahal&name=Kerala%20and%20Agra')
+    assert response.status_code == 200
+    assert 'id="profile-drawer"' in response.text
+    assert 'noindex' in response.text
+
+
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
         'detailed_places': 726,

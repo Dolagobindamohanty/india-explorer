@@ -70,7 +70,9 @@ FastAPI deployment, so no CORS configuration is needed.
 - District food notes, access guidance, official reference links and map links.
 - Nearby destinations using straight-line coordinates (not road journey time).
 - Browser-local saved places, empty states and missing-page handling.
-- A collapsible traveler profile drawer (name, interests, saved places and recent history) stored only in the browser.
+- A collapsible traveler profile drawer (name, avatar, interests, saved places, recent history, collections and theme) stored only in the browser.
+- A personalised home row that follows the interests on the traveler profile.
+- Shareable saved collections: `/saved?places=slug1,slug2&name=...` opens a read-only shared route that can be saved to the current device.
 - FastAPI, persistent SQLite database, plain HTML/CSS/JavaScript frontend.
 
 ## Database

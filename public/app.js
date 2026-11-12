@@ -24,39 +24,164 @@ function saveRecent(slug) {
 // Traveler profile: a device-local identity, not an account. Everything lives
 // under india-locally-* keys so it can be cleared from the drawer.
 const PROFILE_KEY = 'india-locally-profile';
-const emptyProfile = () => ({ name: '', interests: [] });
+const COLLECTIONS_KEY = 'india-locally-collections';
+const AVATAR_PRESETS = ['🧭', '🏛', '🏖', '🌿', '🙏', '🎨', '🦁', '🧗'];
+const PHOTO_AVATAR = /^data:image\/(?:jpeg|png|webp|gif);base64,/;
+const emptyProfile = () => ({ name: '', interests: [], avatar: '' });
 function readProfile() {
   try {
     const raw = JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}');
+    const avatar = typeof raw.avatar === 'string' && (PHOTO_AVATAR.test(raw.avatar) || AVATAR_PRESETS.includes(raw.avatar)) ? raw.avatar : '';
     return {
       name: typeof raw.name === 'string' ? raw.name.slice(0, 40) : '',
-      interests: Array.isArray(raw.interests) ? raw.interests.filter(value => categories.some(c => c[0] === value)) : []
+      interests: Array.isArray(raw.interests) ? raw.interests.filter(value => categories.some(c => c[0] === value)) : [],
+      avatar
     };
   } catch { return emptyProfile(); }
 }
+function readCollections() {
+  try {
+    const data = JSON.parse(localStorage.getItem(COLLECTIONS_KEY) || '[]');
+    if (!Array.isArray(data)) return [];
+    return data.filter(item => item && typeof item.id === 'string' && typeof item.name === 'string').map(item => ({
+      id: item.id,
+      name: item.name.slice(0, 40),
+      slugs: Array.isArray(item.slugs) ? item.slugs.filter(slug => typeof slug === 'string') : []
+    }));
+  } catch { return []; }
+}
 let profile = readProfile();
+let collections = readCollections();
 let profilePlaces = null;
+let profilePlacesPromise = null;
 function persistProfile() {
   try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); } catch { /* optional enhancement */ }
 }
+function persistCollections() {
+  try { localStorage.setItem(COLLECTIONS_KEY, JSON.stringify(collections)); } catch { /* optional enhancement */ }
+}
+function profileStatus(message) {
+  const status = document.querySelector('#profile-status');
+  if (status) status.textContent = message;
+}
+async function loadPlaces() {
+  if (profilePlaces) return profilePlaces;
+  if (!profilePlacesPromise) {
+    profilePlacesPromise = api('places')
+      .then(places => { profilePlaces = places; return places; })
+      .catch(error => { profilePlacesPromise = null; throw error; });
+  }
+  return profilePlacesPromise;
+}
 async function profilePlacesList() {
-  if (!profilePlaces) profilePlaces = await api('places');
-  return profilePlaces;
+  return loadPlaces();
 }
 function profileInitial() {
   const name = profile.name.trim();
   return name ? name.charAt(0).toUpperCase() : '🧭';
 }
+function downscaleAvatar(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onload = () => {
+      const source = new Image();
+      source.onerror = reject;
+      source.onload = () => {
+        const size = 128;
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const context = canvas.getContext('2d');
+        const scale = Math.max(size / source.width, size / source.height);
+        const width = source.width * scale;
+        const height = source.height * scale;
+        context.drawImage(source, (size - width) / 2, (size - height) / 2, width, height);
+        resolve(canvas.toDataURL('image/jpeg', 0.82));
+      };
+      source.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+async function copyText(text) {
+  try {
+    if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); return true; }
+  } catch { /* fall through to the legacy path */ }
+  try {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    const copied = document.execCommand('copy');
+    area.remove();
+    return copied;
+  } catch { return false; }
+}
+function renderAvatar() {
+  const avatar = document.querySelector('#profile-avatar');
+  if (avatar) {
+    const uploaded = PHOTO_AVATAR.test(profile.avatar);
+    avatar.classList.toggle('has-photo', uploaded);
+    avatar.innerHTML = uploaded ? `<img src="${profile.avatar}" alt="">` : esc(profile.avatar || profileInitial());
+  }
+  const options = document.querySelector('#profile-avatar-options');
+  if (!options) return;
+  const choices = [{ value: '', label: profileInitial() }, ...AVATAR_PRESETS.map(value => ({ value, label: value }))];
+  options.innerHTML = choices.map(({ value, label }) => `<button type="button" class="profile-avatar-option${profile.avatar === value ? ' active' : ''}" data-avatar="${esc(value)}" aria-pressed="${profile.avatar === value}" aria-label="${value ? `Use the ${esc(label)} avatar` : 'Use my initial as the avatar'}">${esc(label)}</button>`).join('');
+}
+function collectionShareUrl(collection) {
+  return `${location.origin}/saved?places=${collection.slugs.map(encodeURIComponent).join(',')}&name=${encodeURIComponent(collection.name)}`;
+}
+function renderCollections() {
+  const list = document.querySelector('#profile-collection-list');
+  if (!list) return;
+  list.innerHTML = collections.length ? collections.map(collection => `
+    <li class="profile-collection" data-collection="${esc(collection.id)}">
+      <div class="profile-collection-head"><strong>${esc(collection.name)}</strong><span class="profile-badge">${collection.slugs.length}</span></div>
+      <div class="profile-collection-actions">
+        <button type="button" data-collection-add="${esc(collection.id)}">Add saved places</button>
+        <button type="button" data-collection-copy="${esc(collection.id)}">Copy link</button>
+        <button type="button" class="profile-collection-delete" data-collection-delete="${esc(collection.id)}" aria-label="Delete ${esc(collection.name)}">Delete</button>
+      </div>
+    </li>`).join('') : '<li class="profile-empty">Create a collection to group saved places into a shareable route.</li>';
+}
+async function renderPersonalisedRow() {
+  const section = document.querySelector('#personalised-section');
+  const container = document.querySelector('#personalised-cards');
+  const heading = document.querySelector('#personalised-heading');
+  if (!section || !container) return;
+  if (!profile.interests.length) { section.hidden = true; container.innerHTML = ''; return; }
+  try {
+    const places = await loadPlaces();
+    const groups = profile.interests.map(interest => places.filter(place => place.category === interest));
+    const matches = [];
+    for (let index = 0; matches.length < 6 && groups.some(group => group.length > index); index += 1) {
+      groups.forEach(group => { if (group[index] && matches.length < 6) matches.push(group[index]); });
+    }
+    if (!matches.length) { section.hidden = true; return; }
+    if (heading) {
+      const labels = profile.interests.map(categoryLabel);
+      const joined = labels.length === 1 ? labels[0] : `${labels.slice(0, -1).join(', ')} and ${labels[labels.length - 1]}`;
+      heading.textContent = `Because you like ${joined}`;
+    }
+    container.innerHTML = matches.map(placeCard).join('');
+    section.hidden = false;
+  } catch { section.hidden = true; }
+}
 async function renderProfile() {
   const drawer = document.querySelector('#profile-drawer');
   if (!drawer) return;
   const name = profile.name.trim();
-  const avatar = document.querySelector('#profile-avatar');
   const display = document.querySelector('#profile-name-display');
   const nameInput = document.querySelector('#profile-name');
   const count = document.querySelector('#profile-saved-count');
   const chips = document.querySelector('#profile-interests');
-  if (avatar) avatar.textContent = profileInitial();
+  renderAvatar();
+  renderCollections();
   if (display) display.textContent = name || 'Guest traveler';
   if (nameInput && document.activeElement !== nameInput) nameInput.value = profile.name;
   if (count) count.textContent = saved.size;
@@ -79,24 +204,43 @@ async function renderProfile() {
     if (recentList) recentList.innerHTML = recent.length ? recent.map(linkFor).join('') : '<li class="profile-empty">Places you view will appear here.</li>';
   } catch { /* the lists are optional enhancements */ }
 }
+function profileFocusable() {
+  const drawer = document.querySelector('#profile-drawer');
+  if (!drawer) return [];
+  return [...drawer.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+    .filter(element => element.getClientRects().length > 0);
+}
+function setBackgroundInert(inert) {
+  const drawer = document.querySelector('#profile-drawer');
+  const scrim = document.querySelector('#profile-scrim');
+  [...document.body.children].forEach(element => {
+    if (element === drawer || element === scrim || !['HEADER', 'MAIN', 'FOOTER', 'DIV', 'BUTTON'].includes(element.tagName)) return;
+    element.inert = inert;
+  });
+}
+let profileReturnFocus = null;
 function setProfileOpen(open) {
   const drawer = document.querySelector('#profile-drawer');
   const toggle = document.querySelector('#profile-toggle');
   const scrim = document.querySelector('#profile-scrim');
   if (!drawer || !toggle) return;
+  if (open === drawer.classList.contains('open')) return;
   drawer.classList.toggle('open', open);
   drawer.setAttribute('aria-hidden', String(!open));
   toggle.setAttribute('aria-expanded', String(open));
   toggle.setAttribute('aria-label', open ? 'Close traveler profile' : 'Open traveler profile');
   document.body.classList.toggle('profile-open', open);
   if (scrim) scrim.hidden = !open;
-  const status = document.querySelector('#profile-status');
-  if (status) status.textContent = '';
+  setBackgroundInert(open);
+  profileStatus('');
   if (open) {
+    profileReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
     renderProfile();
-    setTimeout(() => document.querySelector('#profile-name')?.focus(), 60);
+    setTimeout(() => (profileFocusable()[0] || drawer).focus(), 60);
   } else {
-    toggle.focus();
+    const target = profileReturnFocus && document.contains(profileReturnFocus) ? profileReturnFocus : toggle;
+    profileReturnFocus = null;
+    target.focus();
   }
 }
 function updateProfileThemeLabel() {
@@ -231,11 +375,11 @@ function initHeroSlideshow() {
 }
 
 async function home() {
-  const [states, territories, places] = await Promise.all([api('states'), api('union-territories'), api('places')]);
+  const [states, territories, places] = await Promise.all([api('states'), api('union-territories'), loadPlaces()]);
   const trending = places.slice(0, 6);
   const recentPlaces = recent.length ? recent.map(slug => places.find(place => place.slug === slug)).filter(Boolean) : [];
   const featuredStates = states.filter(s => ['odisha', 'goa', 'himachal-pradesh', 'arunachal-pradesh', 'karnataka', 'rajasthan'].includes(s.slug)).slice(0, 6);
-  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Odisha”, “Kerala”, “heritage”, or “beaches”</p></div>${heroSlidesHtml()}</section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all ${states.length} states & ${territories.length} UTs ↗</a></div><div class="cards">${featuredStates.map(s => regionCard(s, 'State')).join('')}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All ${states.length} States & ${territories.length} Union Territories ↗</a></div></section>`;
+  return `<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore<br><span>India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p>${homeSearch()}<p class="search-hint">Try “Odisha”, “Kerala”, “heritage”, or “beaches”</p></div>${heroSlidesHtml()}</section><section class="popular-section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips">${categoryChips()}</div></section><section class="section personalised-section" id="personalised-section" hidden><div class="section-head"><div><p class="eyebrow">Based on your traveler profile</p><h2 id="personalised-heading">Picked for your interests</h2></div><a href="/explore">View all ↗</a></div><div class="cards" id="personalised-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all <span class="arrow">↗</span></a></div>${cards(trending)}</section>${recentPlaces.length ? `<section class="section recent-section"><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Continue exploring</h2></div></div>${cards(recentPlaces)}</section>` : ''}<section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all ${states.length} states & ${territories.length} UTs ↗</a></div><div class="cards">${featuredStates.map(s => regionCard(s, 'State')).join('')}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All ${states.length} States & ${territories.length} Union Territories ↗</a></div></section>`;
 }
 function categoryFilterHtml(placesList) {
   if (placesList.length < 4) return '';
@@ -462,7 +606,7 @@ function haversineKm(lat1, lon1, lat2, lon2) {
   return Math.round(R * c);
 }
 
-function generateItineraryHtml(userPlaces) {
+function generateItineraryHtml(userPlaces, shareUrl = `${location.origin}/saved`) {
   const remaining = [...userPlaces];
   const ordered = [remaining.shift()];
   while (remaining.length > 0) {
@@ -484,7 +628,7 @@ function generateItineraryHtml(userPlaces) {
     days.push(ordered.slice(i, i + 2));
   }
 
-  let shareText = `*My India Travel Itinerary*\nGenerated with India Explorer (${location.origin}/saved)\n\n`;
+  let shareText = `*My India Travel Itinerary*\nGenerated with India Explorer (${shareUrl})\n\n`;
   days.forEach((dayPlaces, dayIdx) => {
     shareText += `*Day ${dayIdx + 1}:*\n`;
     dayPlaces.forEach(p => {
@@ -539,11 +683,35 @@ function generateItineraryHtml(userPlaces) {
   `;
 }
 
-async function savedPage() {
-  const allPlaces = await api('places');
-  const userPlaces = allPlaces.filter(p => saved.has(p.slug));
-  const itineraryHtml = userPlaces.length >= 2 ? generateItineraryHtml(userPlaces) : '';
-  return `${breadcrumb([['Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.</p>${itineraryHtml}<div class="section"><div class="section-head"><div><p class="eyebrow">All saved destinations</p><h2>Saved places (${userPlaces.length})</h2></div></div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>`;
+function sharedPlaceSlugs(query) {
+  const params = new URLSearchParams(query || '');
+  return (params.get('places') || '').split(',').map(slug => slug.trim()).filter(slug => /^[a-z0-9-]+$/.test(slug)).slice(0, 30);
+}
+async function savedPage(query) {
+  const params = new URLSearchParams(query || '');
+  const sharedSlugs = sharedPlaceSlugs(query);
+  const allPlaces = await loadPlaces();
+  const bySlug = new Map(allPlaces.map(place => [place.slug, place]));
+  const sharedPlaces = sharedSlugs.map(slug => bySlug.get(slug)).filter(Boolean);
+  const isShared = sharedPlaces.length > 0;
+  const sharedName = (params.get('name') || '').trim().slice(0, 40);
+  const ownPlaces = allPlaces.filter(place => saved.has(place.slug));
+  const userPlaces = isShared ? sharedPlaces : ownPlaces;
+  const shareUrl = isShared
+    ? `${location.origin}/saved?places=${sharedSlugs.map(encodeURIComponent).join(',')}${sharedName ? `&name=${encodeURIComponent(sharedName)}` : ''}`
+    : `${location.origin}/saved?places=${ownPlaces.map(place => encodeURIComponent(place.slug)).join(',')}`;
+  const itineraryHtml = userPlaces.length >= 2 ? generateItineraryHtml(userPlaces, shareUrl) : '';
+  const banner = isShared
+    ? `<div class="shared-banner"><div><p class="eyebrow">Shared itinerary</p><h2>${esc(sharedName || 'A shared India route')}</h2><p>${sharedPlaces.length} destination${sharedPlaces.length === 1 ? '' : 's'} shared with you. Save a copy to keep them in your own collection on this device.</p></div><button class="button" type="button" id="save-shared" data-shared="${esc(sharedSlugs.join(','))}">Save ${sharedPlaces.length === 1 ? 'this place' : `these ${sharedPlaces.length} places`}</button></div>`
+    : '';
+  const heading = isShared ? `${esc(sharedName || 'A shared India route')}.` : 'Your saved collection.';
+  const lead = isShared
+    ? 'This route came from another traveler’s link. Save it here to keep planning, or open any stop to explore it in full.'
+    : 'Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.';
+  const shareButton = (!isShared && ownPlaces.length >= 2)
+    ? `<button class="button secondary" type="button" id="copy-saved-link" data-share-url="${esc(shareUrl)}">🔗 Copy shareable link</button>`
+    : '';
+  return `${breadcrumb([[isShared ? 'Shared itinerary' : 'Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>${heading}</h1><p class="lead">${lead}</p>${banner}${itineraryHtml}<div class="section"><div class="section-head"><div><p class="eyebrow">${isShared ? 'Destinations on this shared route' : 'All saved destinations'}</p><h2>${isShared ? `Shared places (${userPlaces.length})` : `Saved places (${userPlaces.length})`}</h2></div>${shareButton}</div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>`;
 }
 async function festivalsPage(selectedMonth) {
   const monthNum = selectedMonth ? Number(selectedMonth) : null;
@@ -722,9 +890,7 @@ async function initRecentPlacesHome() {
   if (!section || !cardsContainer || !recent.length) return;
 
   try {
-    const res = await fetch('/api/places');
-    if (!res.ok) return;
-    const allPlaces = await res.json();
+    const allPlaces = await loadPlaces();
     const recentItems = recent.map(slug => allPlaces.find(p => p.slug === slug)).filter(Boolean);
     if (!recentItems.length) return;
 
@@ -789,11 +955,12 @@ async function route() {
     else if (type === 'month') html = await monthPage(slug);
     else if (type === 'area') html = await areaPage();
     else if (type === 'about') html = aboutPage();
-    else if (type === 'saved') html = await savedPage();
+    else if (type === 'saved') html = await savedPage(query);
     else throw new Error('That page does not exist.');
     if (version !== routeVersion) return;
     root.innerHTML = html;
-    if (!type) initHeroSlideshow();
+    if (!type) { initHeroSlideshow(); renderPersonalisedRow(); }
+    if (type === 'saved') { renderProfile(); }
     if (type === 'explore') initExploreMap();
     if (type === 'area') initAreaFilter();
     if (type === 'state' || type === 'district') initCategoryFilterStrip();
@@ -982,6 +1149,30 @@ if (spotlightInput) {
 function submitSearch(form) { const params = new URLSearchParams(); for (const [key, value] of new FormData(form)) if (value) params.set(key, value); location.hash = '/explore' + (params.toString() ? `?${params}` : ''); }
 document.addEventListener('submit', event => { if (event.target.id === 'filters' || event.target.id === 'home-search' || event.target.id === 'nav-search') { event.preventDefault(); submitSearch(event.target); } });
 root.addEventListener('click', event => {
+  const sharedSave = event.target.closest('#save-shared');
+  if (sharedSave) {
+    const slugs = (sharedSave.dataset.shared || '').split(',').filter(Boolean);
+    slugs.forEach(slug => {
+      saved.add(slug);
+      document.querySelectorAll(`[data-save="${slug}"]`).forEach(button => {
+        button.textContent = '♥ Saved';
+        button.setAttribute('aria-pressed', 'true');
+      });
+    });
+    try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { /* optional enhancement */ }
+    updateCount();
+    renderProfile();
+    sharedSave.textContent = 'Saved to your collection ✓';
+    sharedSave.disabled = true;
+    return;
+  }
+  const copyLink = event.target.closest('#copy-saved-link');
+  if (copyLink) {
+    copyText(copyLink.dataset.shareUrl || location.href).then(copied => {
+      copyLink.textContent = copied ? '✓ Link copied' : 'Copy failed — use your browser share menu';
+    });
+    return;
+  }
   const button = event.target.closest('[data-save]');
   if (button) { const slug = button.dataset.save; saved.has(slug) ? saved.delete(slug) : saved.add(slug); try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { button.textContent = 'Storage unavailable'; return; } button.textContent = saved.has(slug) ? '♥ Saved' : '♡ Save'; button.setAttribute('aria-pressed', saved.has(slug)); updateCount(); renderProfile(); if (location.hash === '#/saved' || currentPath === '/saved') route(); }
 });
@@ -994,28 +1185,105 @@ if (profileToggle) {
   document.querySelector('#profile-close')?.addEventListener('click', () => setProfileOpen(false));
   document.querySelector('#profile-scrim')?.addEventListener('click', () => setProfileOpen(false));
   document.querySelector('#profile-drawer')?.addEventListener('click', event => { if (event.target.closest('a')) setProfileOpen(false); });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && document.querySelector('#profile-drawer')?.classList.contains('open')) setProfileOpen(false); });
+  document.addEventListener('keydown', event => {
+    const drawer = document.querySelector('#profile-drawer');
+    if (!drawer || !drawer.classList.contains('open')) return;
+    if (event.key === 'Escape') { event.preventDefault(); setProfileOpen(false); return; }
+    if (event.key !== 'Tab') return;
+    const focusable = profileFocusable();
+    if (!focusable.length) { event.preventDefault(); drawer.focus(); return; }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || document.activeElement === drawer)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  document.querySelector('#profile-avatar-options')?.addEventListener('click', event => {
+    const choice = event.target.closest('[data-avatar]');
+    if (!choice) return;
+    profile.avatar = choice.dataset.avatar || '';
+    persistProfile();
+    renderAvatar();
+    profileStatus('Avatar saved on this device.');
+  });
+  document.querySelector('#profile-avatar-upload')?.addEventListener('change', event => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) return;
+    if (!file.type.startsWith('image/')) { profileStatus('Choose an image file to use as your avatar.'); return; }
+    downscaleAvatar(file)
+      .then(dataUrl => { profile.avatar = dataUrl; persistProfile(); renderAvatar(); profileStatus('Photo saved on this device.'); })
+      .catch(() => profileStatus('That image could not be read. Try a different file.'));
+  });
+  document.querySelector('#collection-form')?.addEventListener('submit', event => {
+    event.preventDefault();
+    const input = document.querySelector('#collection-name');
+    const name = input.value.trim().slice(0, 40);
+    if (!name) { input.focus(); return; }
+    collections.push({ id: `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`, name, slugs: [...saved] });
+    persistCollections();
+    renderCollections();
+    input.value = '';
+    profileStatus(`“${name}” created with ${saved.size} saved place${saved.size === 1 ? '' : 's'}.`);
+  });
+  document.querySelector('#profile-collection-list')?.addEventListener('click', async event => {
+    const addButton = event.target.closest('[data-collection-add]');
+    const copyButton = event.target.closest('[data-collection-copy]');
+    const deleteButton = event.target.closest('[data-collection-delete]');
+    const collection = id => collections.find(item => item.id === id);
+    if (addButton) {
+      const item = collection(addButton.dataset.collectionAdd);
+      if (!item) return;
+      item.slugs = [...new Set([...item.slugs, ...saved])];
+      persistCollections();
+      renderCollections();
+      profileStatus(`Added your saved places to “${item.name}”.`);
+      return;
+    }
+    if (copyButton) {
+      const item = collection(copyButton.dataset.collectionCopy);
+      if (!item) return;
+      const copied = await copyText(collectionShareUrl(item));
+      copyButton.textContent = copied ? '✓ Link copied' : 'Copy failed';
+      profileStatus(copied ? 'Shareable link copied to your clipboard.' : 'Could not copy the link on this browser.');
+      return;
+    }
+    if (deleteButton) {
+      const item = collection(deleteButton.dataset.collectionDelete);
+      if (!item) return;
+      if (!confirm(`Delete the collection “${item.name}”? Saved places stay in your favorites.`)) return;
+      collections = collections.filter(entry => entry.id !== item.id);
+      persistCollections();
+      renderCollections();
+      profileStatus('Collection deleted.');
+    }
+  });
   document.querySelector('#profile-form')?.addEventListener('submit', event => {
     event.preventDefault();
     profile = {
       name: document.querySelector('#profile-name').value.trim().slice(0, 40),
-      interests: [...document.querySelectorAll('#profile-interests input:checked')].map(input => input.value)
+      interests: [...document.querySelectorAll('#profile-interests input:checked')].map(input => input.value),
+      avatar: profile.avatar
     };
     persistProfile();
     renderProfile();
-    const status = document.querySelector('#profile-status');
-    if (status) status.textContent = 'Profile saved on this device.';
+    renderPersonalisedRow();
+    profileStatus('Profile saved on this device.');
   });
   document.querySelector('#profile-theme')?.addEventListener('click', () => document.querySelector('#theme-toggle').click());
   document.querySelector('#profile-reset')?.addEventListener('click', () => {
-    if (!confirm('Reset your traveler profile, saved places and history on this device?')) return;
-    try { ['india-locally-profile', 'india-locally-saved', 'india-locally-recent', 'india-locally-theme'].forEach(key => localStorage.removeItem(key)); } catch { /* optional enhancement */ }
-    profile = emptyProfile(); saved = new Set(); recent = []; updateCount();
+    if (!confirm('Reset your traveler profile, saved places, collections and history on this device?')) return;
+    try { ['india-locally-profile', 'india-locally-saved', 'india-locally-recent', 'india-locally-theme', COLLECTIONS_KEY].forEach(key => localStorage.removeItem(key)); } catch { /* optional enhancement */ }
+    profile = emptyProfile(); collections = []; saved = new Set(); recent = []; updateCount();
     document.body.dataset.theme = 'light';
     updateThemeButtons();
     renderProfile();
-    const status = document.querySelector('#profile-status');
-    if (status) status.textContent = 'Local data cleared.';
+    renderPersonalisedRow();
+    profileStatus('Local data cleared.');
   });
 }
 document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'light';
@@ -1041,13 +1309,14 @@ initScrollChrome();
 initCircuitMap();
 initRecentTracker();
 initRecentPlacesHome();
+renderPersonalisedRow();
 const serverRendered = document.body.dataset.serverRendered === 'true';
 const currentPath = location.pathname.replace(/\/+$/, '') || '/';
 
 async function hydrateSavedPage() {
   const version = ++routeVersion;
   try {
-    const html = await savedPage();
+    const html = await savedPage(location.search.replace(/^\?/, ''));
     if (version !== routeVersion) return;
     root.innerHTML = html;
   } catch (error) {
