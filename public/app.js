@@ -18,6 +18,97 @@ function updateCount() { const count = document.querySelector('#saved-count'); i
 function saveRecent(slug) {
   recent = [slug, ...recent.filter(item => item !== slug)].slice(0, 5);
   try { localStorage.setItem('india-locally-recent', JSON.stringify(recent)); } catch { /* optional enhancement */ }
+  renderProfile();
+}
+
+// Traveler profile: a device-local identity, not an account. Everything lives
+// under india-locally-* keys so it can be cleared from the drawer.
+const PROFILE_KEY = 'india-locally-profile';
+const emptyProfile = () => ({ name: '', interests: [] });
+function readProfile() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}');
+    return {
+      name: typeof raw.name === 'string' ? raw.name.slice(0, 40) : '',
+      interests: Array.isArray(raw.interests) ? raw.interests.filter(value => categories.some(c => c[0] === value)) : []
+    };
+  } catch { return emptyProfile(); }
+}
+let profile = readProfile();
+let profilePlaces = null;
+function persistProfile() {
+  try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); } catch { /* optional enhancement */ }
+}
+async function profilePlacesList() {
+  if (!profilePlaces) profilePlaces = await api('places');
+  return profilePlaces;
+}
+function profileInitial() {
+  const name = profile.name.trim();
+  return name ? name.charAt(0).toUpperCase() : '🧭';
+}
+async function renderProfile() {
+  const drawer = document.querySelector('#profile-drawer');
+  if (!drawer) return;
+  const name = profile.name.trim();
+  const avatar = document.querySelector('#profile-avatar');
+  const display = document.querySelector('#profile-name-display');
+  const nameInput = document.querySelector('#profile-name');
+  const count = document.querySelector('#profile-saved-count');
+  const chips = document.querySelector('#profile-interests');
+  if (avatar) avatar.textContent = profileInitial();
+  if (display) display.textContent = name || 'Guest traveler';
+  if (nameInput && document.activeElement !== nameInput) nameInput.value = profile.name;
+  if (count) count.textContent = saved.size;
+  if (chips && chips.dataset.ready !== 'true') {
+    chips.innerHTML = categories.map(([value, icon, label]) => `<label class="profile-chip"><input type="checkbox" name="interests" value="${esc(value)}"${profile.interests.includes(value) ? ' checked' : ''}><span>${icon} ${esc(label)}</span></label>`).join('');
+    chips.dataset.ready = 'true';
+  }
+  if (chips) chips.querySelectorAll('input').forEach(input => { input.checked = profile.interests.includes(input.value); });
+  if (!drawer.classList.contains('open')) return;
+  const savedList = document.querySelector('#profile-saved-list');
+  const recentList = document.querySelector('#profile-recent-list');
+  try {
+    const places = await profilePlacesList();
+    const bySlug = new Map(places.map(place => [place.slug, place]));
+    const linkFor = slug => {
+      const place = bySlug.get(slug);
+      return `<li><a href="/place/${esc(slug)}">${esc(place ? place.name : slug.replace(/-/g, ' '))}</a></li>`;
+    };
+    if (savedList) savedList.innerHTML = saved.size ? [...saved].map(linkFor).join('') : '<li class="profile-empty">No saved places yet. Tap ♡ on any destination.</li>';
+    if (recentList) recentList.innerHTML = recent.length ? recent.map(linkFor).join('') : '<li class="profile-empty">Places you view will appear here.</li>';
+  } catch { /* the lists are optional enhancements */ }
+}
+function setProfileOpen(open) {
+  const drawer = document.querySelector('#profile-drawer');
+  const toggle = document.querySelector('#profile-toggle');
+  const scrim = document.querySelector('#profile-scrim');
+  if (!drawer || !toggle) return;
+  drawer.classList.toggle('open', open);
+  drawer.setAttribute('aria-hidden', String(!open));
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Close traveler profile' : 'Open traveler profile');
+  document.body.classList.toggle('profile-open', open);
+  if (scrim) scrim.hidden = !open;
+  const status = document.querySelector('#profile-status');
+  if (status) status.textContent = '';
+  if (open) {
+    renderProfile();
+    setTimeout(() => document.querySelector('#profile-name')?.focus(), 60);
+  } else {
+    toggle.focus();
+  }
+}
+function updateProfileThemeLabel() {
+  const button = document.querySelector('#profile-theme');
+  if (!button) return;
+  button.textContent = document.body.dataset.theme === 'dark' ? '☀ Switch to light mode' : '☾ Switch to dark mode';
+}
+function updateThemeButtons() {
+  const dark = document.body.dataset.theme === 'dark';
+  const navTheme = document.querySelector('#theme-toggle');
+  if (navTheme) navTheme.innerHTML = dark ? '☀ <span>Light</span>' : '☾ <span>Dark</span>';
+  updateProfileThemeLabel();
 }
 function categoryLabel(value) { return categories.find(item => item[0] === value)?.[2] || value || 'Destination'; }
 function saveButton(p) { return `<button class="save" data-save="${esc(p.slug)}" aria-pressed="${saved.has(p.slug)}" aria-label="Save ${esc(p.name)}">${saved.has(p.slug) ? '♥ Saved' : '♡ Save'}</button>`; }
@@ -892,13 +983,43 @@ function submitSearch(form) { const params = new URLSearchParams(); for (const [
 document.addEventListener('submit', event => { if (event.target.id === 'filters' || event.target.id === 'home-search' || event.target.id === 'nav-search') { event.preventDefault(); submitSearch(event.target); } });
 root.addEventListener('click', event => {
   const button = event.target.closest('[data-save]');
-  if (button) { const slug = button.dataset.save; saved.has(slug) ? saved.delete(slug) : saved.add(slug); try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { button.textContent = 'Storage unavailable'; return; } button.textContent = saved.has(slug) ? '♥ Saved' : '♡ Save'; button.setAttribute('aria-pressed', saved.has(slug)); updateCount(); if (location.hash === '#/saved' || currentPath === '/saved') route(); }
+  if (button) { const slug = button.dataset.save; saved.has(slug) ? saved.delete(slug) : saved.add(slug); try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { button.textContent = 'Storage unavailable'; return; } button.textContent = saved.has(slug) ? '♥ Saved' : '♡ Save'; button.setAttribute('aria-pressed', saved.has(slug)); updateCount(); renderProfile(); if (location.hash === '#/saved' || currentPath === '/saved') route(); }
 });
-document.querySelector('#theme-toggle').addEventListener('click', () => { const dark = document.body.dataset.theme !== 'dark'; document.body.dataset.theme = dark ? 'dark' : 'light'; localStorage.setItem('india-locally-theme', dark ? 'dark' : 'light'); document.querySelector('#theme-toggle').innerHTML = dark ? '☀ <span>Light</span>' : '☾ <span>Dark</span>'; });
+document.querySelector('#theme-toggle').addEventListener('click', () => { const dark = document.body.dataset.theme !== 'dark'; document.body.dataset.theme = dark ? 'dark' : 'light'; localStorage.setItem('india-locally-theme', dark ? 'dark' : 'light'); updateThemeButtons(); });
 document.querySelector('#menu-toggle').addEventListener('click', () => { const nav = document.querySelector('#nav-links'); const open = nav.classList.toggle('open'); document.querySelector('#menu-toggle').setAttribute('aria-expanded', open); });
 document.querySelector('#nav-links').addEventListener('click', event => { if (event.target.closest('a')) document.querySelector('#nav-links').classList.remove('open'); });
+const profileToggle = document.querySelector('#profile-toggle');
+if (profileToggle) {
+  profileToggle.addEventListener('click', () => setProfileOpen(!document.querySelector('#profile-drawer').classList.contains('open')));
+  document.querySelector('#profile-close')?.addEventListener('click', () => setProfileOpen(false));
+  document.querySelector('#profile-scrim')?.addEventListener('click', () => setProfileOpen(false));
+  document.querySelector('#profile-drawer')?.addEventListener('click', event => { if (event.target.closest('a')) setProfileOpen(false); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && document.querySelector('#profile-drawer')?.classList.contains('open')) setProfileOpen(false); });
+  document.querySelector('#profile-form')?.addEventListener('submit', event => {
+    event.preventDefault();
+    profile = {
+      name: document.querySelector('#profile-name').value.trim().slice(0, 40),
+      interests: [...document.querySelectorAll('#profile-interests input:checked')].map(input => input.value)
+    };
+    persistProfile();
+    renderProfile();
+    const status = document.querySelector('#profile-status');
+    if (status) status.textContent = 'Profile saved on this device.';
+  });
+  document.querySelector('#profile-theme')?.addEventListener('click', () => document.querySelector('#theme-toggle').click());
+  document.querySelector('#profile-reset')?.addEventListener('click', () => {
+    if (!confirm('Reset your traveler profile, saved places and history on this device?')) return;
+    try { ['india-locally-profile', 'india-locally-saved', 'india-locally-recent', 'india-locally-theme'].forEach(key => localStorage.removeItem(key)); } catch { /* optional enhancement */ }
+    profile = emptyProfile(); saved = new Set(); recent = []; updateCount();
+    document.body.dataset.theme = 'light';
+    updateThemeButtons();
+    renderProfile();
+    const status = document.querySelector('#profile-status');
+    if (status) status.textContent = 'Local data cleared.';
+  });
+}
 document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'light';
-if (document.body.dataset.theme === 'dark') document.querySelector('#theme-toggle').innerHTML = '☀ <span>Light</span>';
+updateThemeButtons();
 updateCount();
 initHeroSlideshow();
 initExploreMap();

@@ -511,6 +511,19 @@ def test_server_rendered_routes_are_crawlable(client):
     assert 'Duduma' in odisha_trail
 
 
+def test_traveler_profile_shell_is_present_on_every_page(client):
+    for path in ('/', '/explore', '/saved', '/festivals', '/no-such-page'):
+        html = client.get(path).text
+        assert 'id="profile-toggle"' in html, path
+        assert 'aria-controls="profile-drawer"' in html, path
+        assert 'id="profile-drawer"' in html, path
+        assert 'id="profile-form"' in html, path
+        assert 'Saved on this device' in html, path
+    home = client.get('/').text
+    assert 'No account needed' in home
+    assert 'aria-expanded="false"' in home
+
+
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
         'detailed_places': 726,

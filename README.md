@@ -70,6 +70,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - District food notes, access guidance, official reference links and map links.
 - Nearby destinations using straight-line coordinates (not road journey time).
 - Browser-local saved places, empty states and missing-page handling.
+- A collapsible traveler profile drawer (name, interests, saved places and recent history) stored only in the browser.
 - FastAPI, persistent SQLite database, plain HTML/CSS/JavaScript frontend.
 
 ## Database
@@ -158,7 +159,9 @@ inputs, missing records, persistent seeding and foreign-key constraints.
 
 No credentials, paid service or Node build is needed. The app serves
 server-rendered pages with canonical URLs and a sitemap, and JavaScript enhances
-navigation without replacing that content. Content editing is currently through SQL
+navigation without replacing that content. The traveler profile is a
+convenience layer over `localStorage`, not an account: there is no server-side
+user record, and clearing browser data removes it. Content editing is currently through SQL
 and seed data; an authenticated editorial interface, full India coverage,
 accounts and itinerary routing are future work. SQLite is appropriate for this
 local read-heavy pilot; PostgreSQL migration can follow when deployment and
