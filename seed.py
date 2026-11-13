@@ -1052,6 +1052,16 @@ def seed(db):
         (130, 'Bail Pola', 'Festival honouring bullocks with decorated cattle, observed in rural Maharashtra.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'nagpur'), ('maharashtra', 'amravati')], [8, 9]),
         (131, 'Khandoba Jatra', 'Annual fair at Jejuri, Pune, honouring Khandoba with turmeric processions.', 'varies_annually', 'https://maharashtratourism.gov.in/', [('maharashtra', 'pune')], [12, 1]),
         (132, 'Makar Sankranti (Maharashtra)', 'Kite festival and til-gur sweets, marking the harvest season across Maharashtra.', 'fixed', 'https://maharashtratourism.gov.in/', [('maharashtra', 'pune'), ('maharashtra', 'nashik')], [1]),
+        (133, 'Rongali Bihu', 'Assamese New Year and spring harvest festival with Bihu dance, feasts and community celebrations.', 'fixed', 'https://assamtourism.gov.in/', [('assam', 'kamrup-metro'), ('assam', 'jorhat')], [4]),
+        (134, 'Magh Bihu (Bhogali Bihu)', 'Winter harvest festival marked by community feasts (bhog), bonfires (meji) and traditional games.', 'fixed', 'https://assamtourism.gov.in/', [('assam', 'dibrugarh'), ('assam', 'jorhat')], [1]),
+        (135, 'Kati Bihu (Kongali Bihu)', 'Autumn festival of lights with earthen lamps in paddy fields, praying for a good harvest.', 'fixed', 'https://assamtourism.gov.in/', [('assam', 'nagaon'), ('assam', 'sonitpur')], [10, 11]),
+        (136, 'Ambubachi Mela', 'Annual tantric festival at Kamakhya Temple, Guwahati, celebrating the menstruation of Goddess Kamakhya.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'kamrup-metro')], [6]),
+        (137, 'Majuli Festival', 'Cultural festival on Majuli island showcasing Assamese art, dance and satra traditions.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'majuli')], [11]),
+        (138, 'Kaziranga Festival', 'Wildlife and cultural festival near Kaziranga National Park with folk performances and adventure.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'golaghat')], [2]),
+        (139, 'Dehing Patkai Festival', 'Festival celebrating the rainforest culture of upper Assam with tribal dance and crafts.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'tinsukia'), ('assam', 'dibrugarh')], [1]),
+        (140, 'Brahmaputra Beach Festival', 'Riverfront festival in Tezpur with adventure sports, cultural programmes and food.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'sonitpur')], [1]),
+        (141, 'Jonbeel Mela', 'Ancient barter fair near Morigaon where communities trade goods without money.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'marigaon')], [1]),
+        (142, 'Tea Festival Assam', 'Celebration of Assam tea with estate tours, tasting sessions and cultural events in Jorhat.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'jorhat'), ('assam', 'dibrugarh')], [11, 12]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 803 districts, 1137 places, 121 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **0 festival occurrences**. 252 of 803 districts have a place; **13 states have none**.
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 803 districts, 1137 places, 121 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **0 festival occurrences**. 287 of 803 districts have a place; **13 states have none**.
 
 ---
 
@@ -87,7 +87,7 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 | Places | 1137 |
 | Verified | **0** (all 726 `needs_review`) |
 | With entry fee / address | 646 / 646 (80 missing each → 160 warnings) |
-| Districts with ≥1 place | 252 / 803 |
+| Districts with ≥1 place | 287 / 803 |
 | States with 0 places | **13** (Assam, Bihar, Chhattisgarh, Gujarat, Haryana, Jharkhand, MP, Maharashtra, Manipur, Punjab, Telangana, Uttarakhand, West Bengal) |
 | Festival occurrences | 0 (only recurring month windows) |
 | Attribution records | 780 for 726 places (54 orphans) |
@@ -326,6 +326,7 @@ Deployment notes:
 | M12 | Done | Added 201 Haryana place pages from haryanatourism.gov.in and 21 Haryana festivals to the calendar |
 | M13 | Done | Added 130 Kerala place pages and 10 Kerala festivals (Vishu, Thrissur Pooram, Attukal Pongala, Theyyam, etc.) |
 | M15 | Done | Added 82 Maharashtra place pages and 10 Maharashtra festivals; totals now 1215 places / 131 festivals |
+| M16 | Done | Added 130 Assam place pages (all 35 districts) and 10 Assam festivals; totals now 1389 places / 141 festivals |
 | L1 | Done | `APP_VERSION` and the unused `load_state_dataset` import removed |
 | D1 | Done | Fixed the failing `avathi-hills` attribution record (see below) |
 | D2 | Done | Preview deployments restored after disconnecting the Vercel Git integration (see below) |

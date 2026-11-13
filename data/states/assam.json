@@ -1,0 +1,7 @@
+{
+  "slug": "assam",
+  "name": "Assam",
+  "kind": "state",
+  "source_url": "https://assamtourism.gov.in/",
+  "places_file": "../assam-places.json"
+}
