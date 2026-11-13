@@ -711,7 +711,13 @@ async function savedPage(query) {
   const shareButton = (!isShared && ownPlaces.length >= 2)
     ? `<button class="button secondary" type="button" id="copy-saved-link" data-share-url="${esc(shareUrl)}">🔗 Copy shareable link</button>`
     : '';
-  return `${breadcrumb([[isShared ? 'Shared itinerary' : 'Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>${heading}</h1><p class="lead">${lead}</p>${banner}${itineraryHtml}<div class="section"><div class="section-head"><div><p class="eyebrow">${isShared ? 'Destinations on this shared route' : 'All saved destinations'}</p><h2>${isShared ? `Shared places (${userPlaces.length})` : `Saved places (${userPlaces.length})`}</h2></div>${shareButton}</div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>`;
+  const backupButtons = (!isShared)
+    ? `<div class="section"><div class="section-head"><div><p class="eyebrow">Backup your collection</p><h2>Export / import</h2><p class="lead" style="font-size:.9rem;">Save a JSON backup of your favorites and collections to this device, or restore one later. Nothing leaves your browser.</p></div><div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;"><button class="button secondary" type="button" id="export-saved">⬇ Export JSON</button><label class="button secondary" for="import-saved-file" style="cursor:pointer;margin:0;">⬆ Import JSON</label><input type="file" id="import-saved-file" accept="application/json" style="display:none;"></div></div></div>`
+    : '';
+  const savedMap = userPlaces.length >= 1
+    ? `<div class="section"><div class="section-head"><div><p class="eyebrow">Where your places are</p><h2>Map of your collection</h2></div></div><div id="saved-map-container" class="explore-map-wrap"><div id="saved-leaflet-map" class="explore-leaflet-map" data-places="${esc(JSON.stringify(userPlaces.map(p => ({ slug: p.slug, name: p.name, lat: p.latitude, lon: p.longitude, image_url: p.image_url, category: p.category, district: p.district, state: p.state }))))}"></div></div></div>`
+    : '';
+  return `${breadcrumb([[isShared ? 'Shared itinerary' : 'Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>${heading}</h1><p class="lead">${lead}</p>${banner}${itineraryHtml}${backupButtons}<div class="section"><div class="section-head"><div><p class="eyebrow">${isShared ? 'Destinations on this shared route' : 'All saved destinations'}</p><h2>${isShared ? `Shared places (${userPlaces.length})` : `Saved places (${userPlaces.length})`}</h2></div>${shareButton}</div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>${savedMap}`;
 }
 async function festivalsPage(selectedMonth) {
   const monthNum = selectedMonth ? Number(selectedMonth) : null;
@@ -819,6 +825,104 @@ function initExploreMap() {
 }
 
 let circuitMapInstance = null;
+let savedMapInstance = null;
+function wireSavedBackup() {
+  const exportBtn = document.getElementById('export-saved');
+  const importInput = document.getElementById('import-saved-file');
+  if (exportBtn) {
+    exportBtn.onclick = () => {
+      const backup = {
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        saved: [...saved],
+        collections: collections
+      };
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'india-explorer-backup.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      profileStatus('Backup downloaded.');
+    };
+  }
+  if (importInput) {
+    importInput.onchange = async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const data = JSON.parse(text);
+        if (data.saved && Array.isArray(data.saved)) {
+          data.saved.forEach(slug => { if (typeof slug === 'string') saved.add(slug); });
+          try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { /* optional */ }
+        }
+        if (data.collections && Array.isArray(data.collections)) {
+          const existingIds = new Set(collections.map(c => c.id));
+          data.collections.forEach(item => {
+            if (item && typeof item.id === 'string' && typeof item.name === 'string') {
+              if (!existingIds.has(item.id)) {
+                collections.push({ id: item.id, name: String(item.name).slice(0, 40), slugs: Array.isArray(item.slugs) ? item.slugs.filter(s => typeof s === 'string') : [] });
+                existingIds.add(item.id);
+              }
+            }
+          });
+          persistCollections();
+        }
+        updateCount();
+        renderProfile();
+        hydrateSavedPage();
+        profileStatus('Backup restored.');
+      } catch (err) {
+        profileStatus('Import failed: invalid file.');
+      }
+      e.target.value = '';
+    };
+  }
+}
+
+function initSavedMap() {
+  const container = document.getElementById('saved-leaflet-map');
+  if (!container || !window.L) return;
+
+  let placesList = [];
+  try { placesList = JSON.parse(container.dataset.places || '[]'); } catch { placesList = []; }
+
+  if (savedMapInstance) { savedMapInstance.remove(); savedMapInstance = null; }
+  savedMapInstance = L.map('saved-leaflet-map').setView([22.5, 82.0], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18, attribution: '© OpenStreetMap contributors'
+  }).addTo(savedMapInstance);
+
+  const bounds = [];
+  placesList.forEach(p => {
+    if (p.lat && p.lon) {
+      bounds.push([p.lat, p.lon]);
+      const marker = L.circleMarker([p.lat, p.lon], {
+        radius: 8, fillColor: '#d46a3b', color: '#ffffff', weight: 2, opacity: 1, fillOpacity: 0.95
+      }).addTo(savedMapInstance);
+      const popupContent = `
+        <div class="map-popup-card">
+          <img src="${p.image_url}" alt="${p.name}">
+          <div class="map-popup-body">
+            <span class="badge">${(p.category || '').toUpperCase()}</span>
+            <h4>${p.name}</h4>
+            <p>${p.district}, ${p.state}</p>
+            <a href="/place/${p.slug}">View destination ↗</a>
+          </div>
+        </div>`;
+      marker.bindPopup(popupContent);
+    }
+  });
+  if (bounds.length > 0) {
+    savedMapInstance.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
+  }
+  setTimeout(() => { if (savedMapInstance) savedMapInstance.invalidateSize(); }, 150);
+}
+
 function initCircuitMap() {
   const container = document.getElementById('circuit-leaflet-map');
   if (!container || !window.L) return;
@@ -960,7 +1064,7 @@ async function route() {
     if (version !== routeVersion) return;
     root.innerHTML = html;
     if (!type) { initHeroSlideshow(); renderPersonalisedRow(); }
-    if (type === 'saved') { renderProfile(); }
+    if (type === 'saved') { renderProfile(); initSavedMap(); wireSavedBackup(); }
     if (type === 'explore') initExploreMap();
     if (type === 'area') initAreaFilter();
     if (type === 'state' || type === 'district') initCategoryFilterStrip();
@@ -1319,12 +1423,14 @@ async function hydrateSavedPage() {
     const html = await savedPage(location.search.replace(/^\?/, ''));
     if (version !== routeVersion) return;
     root.innerHTML = html;
+    renderProfile();
+    initSavedMap();
+    wireSavedBackup();
   } catch (error) {
     if (version !== routeVersion) return;
     root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
   }
 }
-
 if (!serverRendered) {
   window.addEventListener('hashchange', route);
   route();
