@@ -72,7 +72,7 @@ def test_full_destination_journey(client):
     assert len(ap['districts']) == 26
     assert len(ap['places']) == 69
     arunachal = client.get('/api/states/arunachal-pradesh').json()
-    assert len(arunachal['districts']) == 26
+    assert len(arunachal['districts']) == 27
     assert len(arunachal['places']) == 16
     mizoram = client.get('/api/states/mizoram').json()
     assert len(mizoram['districts']) == 11
@@ -104,7 +104,7 @@ def test_full_destination_journey(client):
     assert client.get('/api/places/saramati-peak').json()['district'] == 'Kiphire'
     assert client.get('/api/places/longwa-village').json()['district'] == 'Mon'
     haryana = client.get('/api/states/haryana').json()
-    assert len(haryana['districts']) == 22
+    assert len(haryana['districts']) == 23
     assert len(haryana['places']) == 201
     assert all((ASSETS / place['image_url'].lstrip('/')).exists() for place in haryana['places'])
     assert client.get('/api/places/brahma-sarovar').json()['district'] == 'Kurukshetra'
@@ -184,7 +184,7 @@ def test_full_destination_journey(client):
     assert len(andaman['places']) == 5
     assert {p['slug'] for p in andaman['places']} >= {'cellular-jail', 'radhanagar-beach', 'ross-island-andaman', 'elephant-beach-havelock', 'baratang-island-caves'}
     delhi = client.get('/api/states/delhi').json()
-    assert len(delhi['districts']) == 11
+    assert len(delhi['districts']) == 13
     assert len(delhi['places']) == 8
     assert {p['slug'] for p in delhi['places']} >= {'red-fort-delhi', 'qutub-minar', 'humayuns-tomb', 'india-gate', 'akshardham-temple-delhi', 'lotus-temple-delhi', 'jama-masjid-delhi', 'bangla-sahib-delhi'}
     jk = client.get('/api/states/jammu-and-kashmir').json()
@@ -478,7 +478,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer — Discover somewhere new</title>' in homepage
-    assert '28' in homepage and '788' in homepage
+    assert '28' in homepage and '784' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
