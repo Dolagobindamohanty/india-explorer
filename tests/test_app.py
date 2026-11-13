@@ -250,7 +250,8 @@ def test_filters_combine_and_heritage_links(client):
 def test_month_calendar_does_not_invent_annual_dates(client):
     result = client.get('/api/festivals?month=8&district=alappuzha').json()
     assert len(result) == 3
-    assert all(f['occurrences'] == [] for f in result)
+    assert all(isinstance(f['occurrences'], list) for f in result)
+    assert all(f['occurrences'] == [] or all(o['starts_on'] <= o['ends_on'] for o in f['occurrences']) for f in result)
     dec_festivals = client.get('/api/festivals?month=12').json()
     assert len(dec_festivals) >= 2
     assert any(f['name'] == 'Hornbill Festival' for f in dec_festivals)
@@ -650,7 +651,7 @@ def test_nagaland_festival_calendar(client):
         f for f in festivals.values()
         if any(d['state_slug'] == 'maharashtra' for d in f['districts'])
     ]
-    assert len(maharashtra_festivals) == 11
+    assert len(maharashtra_festivals) == 13
     assert 'Ganesh Chaturthi (Maharashtra)' in festivals
     assert 'Gudi Padwa' in festivals
     kerala_festivals = [
@@ -679,7 +680,7 @@ def test_editorial_status(client):
         'detailed_places': 1516,
         'reviewed_places': 0,
         'unreviewed_places': 1516,
-        'confirmed_festival_dates': 0,
+        'confirmed_festival_dates': 16,
     }
 
 
@@ -746,7 +747,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 151
+    assert len(all_festivals) == 154
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 

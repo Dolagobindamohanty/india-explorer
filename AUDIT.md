@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 788 districts, 1137 places, 121 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **0 festival occurrences**. 325 of 788 districts have a place; **13 states have none**.
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 788 districts, 1516 places, 154 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 325 of 788 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
@@ -84,7 +84,7 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 1137 |
+| Places | 1516 |
 | Verified | **0** (all 726 `needs_review`) |
 | With entry fee / address | 646 / 646 (80 missing each → 160 warnings) |
 | Districts with ≥1 place | 325 / 788 |

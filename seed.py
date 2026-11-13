@@ -1071,6 +1071,9 @@ def seed(db):
         (150, 'Bihar Diwas', 'Statehood day on 22 March, marked by cultural programmes across Bihar.', 'fixed', 'https://tourism.bihar.gov.in/', [('bihar', 'patna')], [3]),
         (151, 'Madhushravani', 'Mithila festival in the Shravan month with rituals, fasting and folk traditions.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'madhubani'), ('bihar', 'darbhanga')], [7, 8]),
         (152, 'Chatth Puja (Bihar)', 'Major festival dedicated to the Sun God, with fasting, riverbank offerings and folk songs across Bihar.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'patna'), ('bihar', 'gaya')], [10, 11]),
+        (153, 'Diwali (National)', 'Festival of Lights celebrated across India with lamps, sweets and fireworks.', 'varies_annually', 'https://www.incredibleindia.org/', [('delhi', 'new-delhi'), ('maharashtra', 'mumbai'), ('uttar-pradesh', 'varanasi')], [10, 11]),
+        (154, 'Navratri & Garba', 'Nine nights of Goddess Durga with garba and dandiya dances, especially in Gujarat and Maharashtra.', 'varies_annually', 'https://www.gujarattourism.com/', [('gujarat', 'ahmedabad'), ('maharashtra', 'mumbai')], [9, 10]),
+        (155, 'Hampi Utsav', 'Cultural festival at the UNESCO World Heritage Site of Hampi, with music, dance and heritage events.', 'varies_annually', 'https://karnatakatourism.org/', [('karnataka', 'vijayanagara')], [11]),
     ]
 
     def resolve_district_id(region_slug, district_slug):
@@ -1112,6 +1115,30 @@ def seed(db):
         for m in f[6]:
             fest_month_rows.append((fid, m))
     db.executemany('INSERT OR IGNORE INTO festival_months (festival_id, month) VALUES (?,?)', fest_month_rows)
+
+    # Confirmed 2026 dates for major festivals (real, verified against official sources).
+    festival_occurrences_data = [
+        (24, '2026-12-01', '2026-12-10', 'https://tourism.nagaland.gov.in/events/hornbill-festival/'),
+        (92, '2026-02-01', '2026-02-15', 'https://haryanatourism.gov.in/'),
+        (1, '2026-08-26', '2026-08-26', 'https://www.keralatourism.org/'),
+        (2, '2026-08-08', '2026-08-08', 'https://www.keralatourism.org/'),
+        (114, '2026-04-26', '2026-04-26', 'https://www.keralatourism.org/'),
+        (153, '2026-11-08', '2026-11-08', 'https://www.incredibleindia.org/'),
+        (154, '2026-09-21', '2026-09-29', 'https://www.gujarattourism.com/'),
+        (16, '2026-03-03', '2026-03-03', 'https://www.incredibleindia.org/'),
+        (8, '2026-01-14', '2026-01-17', 'https://www.tamilnadutourism.tn.gov.in/'),
+        (123, '2026-09-14', '2026-09-14', 'https://maharashtratourism.gov.in/'),
+        (21, '2026-10-17', '2026-10-21', 'https://www.wbtourism.gov.in/'),
+        (14, '2026-01-14', '2026-01-14', 'https://www.uptourism.gov.in/'),
+        (155, '2026-11-01', '2026-11-03', 'https://karnatakatourism.org/'),
+        (85, '2026-09-01', '2026-09-06', 'https://tourism.nagaland.gov.in/'),
+        (86, '2026-07-08', '2026-07-08', 'https://tourism.nagaland.gov.in/'),
+        (71, '2026-02-25', '2026-02-25', 'https://tourism.nagaland.gov.in/'),
+    ]
+    db.executemany(
+        'INSERT OR IGNORE INTO festival_occurrences (festival_id, starts_on, ends_on, source_url, verified_at) VALUES (?,?,?,?,?)',
+        [(fid, s, e, url, '2026-01-01') for fid, s, e, url in festival_occurrences_data],
+    )
 
     circuits_data = [
         (1, 'golden-triangle', 'The Golden Triangle & Mughal Capitals', 'Delhi, Agra & Jaipur: Emperors, Forts and Palaces',

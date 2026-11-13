@@ -511,7 +511,7 @@ def create_app(database_path=None):
             badge = 'UNESCO Tentative List'
         else:
             badge = labels.get(item.get('category'), category)
-        fee_text = item.get('entry_fee') or 'Fee not available'
+        fee_text = item.get('entry_fee') or 'No standard entry fee'
         fee_badge = f'<span class="badge fee-badge">🎟 {escape(fee_text)}</span>'
         if item.get('address'):
             location_display = f'📍 {escape(item["address"])}'
@@ -569,16 +569,18 @@ def create_app(database_path=None):
         locations_html = ' '.join(locations) if locations else '<span class="festival-location">📍 Pan-India</span>'
 
         name = item['name'].lower()
-        if any(term in name for term in ('music', 'dance', 'utsav')):
+        if any(term in name for term in ('music', 'dance', 'utsav', 'hornbill', 'cultural', 'theatre')):
             festival_type = 'Music & Culture'
-        elif any(term in name for term in ('bird', 'flamingo', 'kite')):
+        elif any(term in name for term in ('bird', 'flamingo', 'kite', 'rose', 'flower', 'waterfall', 'safari', 'nature')):
             festival_type = 'Nature & Outdoors'
-        elif any(term in name for term in ('harvest', 'nuakhai', 'pongal', 'onam')):
+        elif any(term in name for term in ('harvest', 'nuakhai', 'pongal', 'onam', 'makar', 'lohri', 'baisakhi')):
             festival_type = 'Harvest'
-        elif any(term in name for term in ('fair', 'mela', 'yatra', 'carnival')):
+        elif any(term in name for term in ('fair', 'mela', 'yatra', 'carnival', 'desert', 'procession', 'rally')):
             festival_type = 'Fair & Procession'
-        else:
+        elif any(term in name for term in ('temple', 'pooram', 'jayanti', 'puja', 'shivratri', 'holi', 'diwali', 'navratri', 'garba', 'eid', 'christmas', 'gurpurab', 'sankranti', 'chhath', 'karva', 'raksha', 'dussehra', 'janmashtami', 'ram navami', 'guru', 'sai', 'thai', 'pongala', 'theyyam', 'bihu', 'ambubachi', 'vishu', 'onam')):
             festival_type = 'Religious & Community'
+        else:
+            festival_type = 'Culture & Heritage'
         kind_badge = f'<span class="badge" style="font-size:11px;padding:2px 8px;">{escape(festival_type)}</span>'
 
         occurrences = item.get('occurrences', [])
@@ -811,7 +813,7 @@ def create_app(database_path=None):
             fallback_img = image_url
             gallery_html = f'''<section class="place-gallery place-gallery-single" aria-label="Photo of {escape(result['name'])}"><a class="place-gallery-main" href="{fallback_img}" target="_blank" rel="noopener noreferrer"><img src="{fallback_img}" alt="{escape(result['name'])} destination photo" loading="eager"></a></section>'''
 
-        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Pilot editorial entry. Confirm access, fees and opening hours with the official source.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
+        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">Editorial entry. Confirm access, fees and opening hours with the official source before you travel.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         place_schema = {
             "@context": "https://schema.org",
             "@type": "TouristAttraction",
