@@ -1062,6 +1062,16 @@ def seed(db):
         (140, 'Brahmaputra Beach Festival', 'Riverfront festival in Tezpur with adventure sports, cultural programmes and food.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'sonitpur')], [1]),
         (141, 'Jonbeel Mela', 'Ancient barter fair near Morigaon where communities trade goods without money.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'marigaon')], [1]),
         (142, 'Tea Festival Assam', 'Celebration of Assam tea with estate tours, tasting sessions and cultural events in Jorhat.', 'varies_annually', 'https://assamtourism.gov.in/', [('assam', 'jorhat'), ('assam', 'dibrugarh')], [11, 12]),
+        (143, 'Chhath Puja (Bihar)', 'Major festival dedicated to the Sun God, with fasting, riverbank offerings and folk songs across Bihar.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'patna'), ('bihar', 'gaya')], [10, 11]),
+        (144, 'Sonepur Mela', 'Asia\'s largest cattle fair held on the Ganges at Sonepur, Saran, with folk performances and trade.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'saran')], [11, 12]),
+        (145, 'Buddha Purnima (Bihar)', 'Celebration of Buddha\'s birth, enlightenment and nirvana, especially at Bodh Gaya and Nalanda.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'gaya'), ('bihar', 'nalanda')], [4, 5]),
+        (146, 'Mahavir Jayanti (Bihar)', 'Jain festival celebrating the birth of Lord Mahavira, with processions and prayers at Vaishali and Pawapuri.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'vaishali'), ('bihar', 'nalanda')], [3, 4]),
+        (147, 'Shravani Mela', 'Month-long pilgrimage to Deoghar (Baidyanath Dham) with kanwariyas carrying Ganga water.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'bhagalpur')], [7, 8]),
+        (148, 'Rajgir Mahotsav', 'Cultural festival in Rajgir with music, dance and heritage events.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'nalanda')], [10]),
+        (149, 'Pitru Paksha Mela', 'Ancestral offerings (pind daan) performed at Gaya during Pitru Paksha.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'gaya')], [9, 10]),
+        (150, 'Bihar Diwas', 'Statehood day on 22 March, marked by cultural programmes across Bihar.', 'fixed', 'https://tourism.bihar.gov.in/', [('bihar', 'patna')], [3]),
+        (151, 'Madhushravani', 'Mithila festival in the Shravan month with rituals, fasting and folk traditions.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'madhubani'), ('bihar', 'darbhanga')], [7, 8]),
+        (152, 'Chatth Puja (Bihar)', 'Major festival dedicated to the Sun God, with fasting, riverbank offerings and folk songs across Bihar.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'patna'), ('bihar', 'gaya')], [10, 11]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

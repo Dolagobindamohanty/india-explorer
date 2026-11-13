@@ -1,0 +1,7 @@
+{
+  "slug": "bihar",
+  "name": "Bihar",
+  "kind": "state",
+  "source_url": "https://tourism.bihar.gov.in/",
+  "places_file": "../bihar-places.json"
+}
