@@ -23,10 +23,12 @@
       "Kakinada",
       "Krishna",
       "Kurnool",
+      "Markapuram",
       "Nandyal",
       "Ntr",
       "Palnadu",
       "Parvathipuram Manyam",
+      "Polavaram",
       "Prakasam",
       "Sri Potti Sriramulu Nellore",
       "Sri Sathya Sai",
@@ -42,6 +44,7 @@
     "state": "Arunachal Pradesh",
     "districts": [
       "Anjaw",
+      "Bichom",
       "Changlang",
       "Dibang Valley",
       "East Kameng",
@@ -427,8 +430,13 @@
   {
     "state": "Ladakh",
     "districts": [
+      "Changthang",
+      "Drass",
       "Kargil",
-      "Leh"
+      "Leh",
+      "Nubra",
+      "Sham",
+      "Zanskar"
     ]
   },
   {

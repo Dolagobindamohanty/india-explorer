@@ -1328,8 +1328,6 @@ def seed(db):
     # These legacy rows are retained until now so historical place, festival, and
     # circuit references can be safely reparented before removal.
     for region_slug, legacy_slug, replacement_slug in (
-        ('ladakh', 'nubra', 'leh'),
-        ('ladakh', 'zanskar', 'leh'),
     ):
         legacy = db.execute('''SELECT d.id FROM districts d
             JOIN regions r ON r.id=d.region_id

@@ -25,14 +25,14 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 784 districts, 1516 places, 154 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 306 of 784 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1516 places, 154 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 306 of 792 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
 ## 2. Architecture & data flow
 
 ```
-data/india-states-districts.json        (36 regions, 784 districts)
+data/india-states-districts.json        (36 regions, 792 districts)
 data/states/*.json                      (6 state manifests)
 data/*-places.json                      (6 place documents)
             │

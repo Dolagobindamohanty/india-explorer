@@ -478,7 +478,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer — Discover somewhere new</title>' in homepage
-    assert '28' in homepage and '784' in homepage
+    assert '28' in homepage and '792' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage
