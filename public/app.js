@@ -683,6 +683,31 @@ function generateItineraryHtml(userPlaces, shareUrl = `${location.origin}/saved`
   `;
 }
 
+function tripPlannerHtml(userPlaces) {
+  const poolItems = userPlaces.map(p => `
+    <div class="trip-stop" draggable="true" data-slug="${esc(p.slug)}">
+      <img src="${p.image_url || fallbackImage(p.state_slug)}" alt="${esc(p.name)}">
+      <div class="trip-stop-info"><strong>${esc(p.name)}</strong><span>${esc(p.district)}, ${esc(p.state)}</span></div>
+      <button class="trip-stop-remove" type="button" data-remove="${esc(p.slug)}" aria-label="Remove from plan">×</button>
+    </div>`).join('');
+  return `
+    <div class="section trip-planner" id="trip-planner">
+      <div class="trip-planner-head">
+        <div><p class="eyebrow">Day-by-day planner</p><h2>Build your trip</h2><p class="lead" style="font-size:.9rem;margin:.4rem 0 0;">Drag destinations into days. Add days, reorder stops, and your plan is saved on this device.</p></div>
+        <div class="trip-planner-actions">
+          <button class="button secondary" type="button" id="trip-add-day">+ Add day</button>
+          <button class="button secondary" type="button" id="trip-auto">⚡ Auto-plan</button>
+          <button class="button secondary" type="button" id="trip-clear">Clear</button>
+        </div>
+      </div>
+      <div class="trip-pool" id="trip-pool">
+        <div class="trip-pool-head">Unscheduled (${userPlaces.length})</div>
+        <div class="trip-pool-body" id="trip-pool-body" data-day="-1">${poolItems}</div>
+      </div>
+      <div class="trip-planner-board" id="trip-board"></div>
+    </div>`;
+}
+
 function sharedPlaceSlugs(query) {
   const params = new URLSearchParams(query || '');
   return (params.get('places') || '').split(',').map(slug => slug.trim()).filter(slug => /^[a-z0-9-]+$/.test(slug)).slice(0, 30);
@@ -717,7 +742,8 @@ async function savedPage(query) {
   const savedMap = userPlaces.length >= 1
     ? `<div class="section"><div class="section-head"><div><p class="eyebrow">Where your places are</p><h2>Map of your collection</h2></div></div><div id="saved-map-container" class="explore-map-wrap"><div id="saved-leaflet-map" class="explore-leaflet-map" data-places="${esc(JSON.stringify(userPlaces.map(p => ({ slug: p.slug, name: p.name, lat: p.latitude, lon: p.longitude, image_url: p.image_url, category: p.category, district: p.district, state: p.state }))))}"></div></div></div>`
     : '';
-  return `${breadcrumb([[isShared ? 'Shared itinerary' : 'Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>${heading}</h1><p class="lead">${lead}</p>${banner}${itineraryHtml}${backupButtons}<div class="section"><div class="section-head"><div><p class="eyebrow">${isShared ? 'Destinations on this shared route' : 'All saved destinations'}</p><h2>${isShared ? `Shared places (${userPlaces.length})` : `Saved places (${userPlaces.length})`}</h2></div>${shareButton}</div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>${savedMap}`;
+  const plannerHtml = (!isShared && userPlaces.length >= 2) ? tripPlannerHtml(userPlaces) : '';
+  return `${breadcrumb([[isShared ? 'Shared itinerary' : 'Saved places']])}<p class="eyebrow">Trip planning & favorites</p><h1>${heading}</h1><p class="lead">${lead}</p>${banner}${itineraryHtml}${plannerHtml}${backupButtons}<div class="section"><div class="section-head"><div><p class="eyebrow">${isShared ? 'Destinations on this shared route' : 'All saved destinations'}</p><h2>${isShared ? `Shared places (${userPlaces.length})` : `Saved places (${userPlaces.length})`}</h2></div>${shareButton}</div>${userPlaces.length ? cards(userPlaces) : '<p class="empty">Tap Save on any destination card to keep it here and build your itinerary.</p>'}</div>${savedMap}`;
 }
 async function festivalsPage(selectedMonth) {
   const monthNum = selectedMonth ? Number(selectedMonth) : null;
@@ -923,6 +949,177 @@ function initSavedMap() {
   setTimeout(() => { if (savedMapInstance) savedMapInstance.invalidateSize(); }, 150);
 }
 
+function initTripPlanner() {
+  const root = document.getElementById('trip-planner');
+  if (!root) return;
+  const poolBody = document.getElementById('trip-pool-body');
+  const board = document.getElementById('trip-board');
+  const addDayBtn = document.getElementById('trip-add-day');
+  const autoBtn = document.getElementById('trip-auto');
+  const clearBtn = document.getElementById('trip-clear');
+  if (!poolBody || !board) return;
+
+  const savedKey = [...saved].sort().join(',');
+  let trip = null;
+  try { trip = JSON.parse(localStorage.getItem('india-locally-trip') || 'null'); } catch { trip = null; }
+  if (!trip || trip.savedKey !== savedKey) {
+    trip = { savedKey, days: [] };
+  }
+  if (!Array.isArray(trip.days)) trip.days = [];
+  // ensure at least one day if there are saved places
+  if (saved.size > 0 && trip.days.length === 0) trip.days.push([]);
+
+  let allPlaces = [];
+  let bySlug = new Map();
+  loadPlaces().then(places => {
+    allPlaces = places;
+    bySlug = new Map(places.map(p => [p.slug, p]));
+    render();
+  }).catch(() => {});
+
+  function persist() { try { localStorage.setItem('india-locally-trip', JSON.stringify(trip)); } catch {} }
+
+  function placeOf(slug) { return bySlug.get(slug); }
+
+  function unscheduledSlugs() {
+    const used = new Set(trip.days.flat());
+    return [...saved].filter(s => !used.has(s));
+  }
+
+  function render() {
+    // pool
+    const poolSlugs = unscheduledSlugs();
+    const poolHead = root.querySelector('.trip-pool-head');
+    if (poolHead) poolHead.textContent = `Unscheduled (${poolSlugs.length})`;
+    poolBody.innerHTML = poolSlugs.map(slug => stopHtml(slug, -1)).join('');
+    // days
+    board.innerHTML = trip.days.map((day, di) => `
+      <div class="trip-day" data-day="${di}">
+        <div class="trip-day-head">Day ${di + 1}<button class="trip-day-remove" type="button" data-remove-day="${di}" aria-label="Remove day">×</button></div>
+        <div class="trip-day-body" data-day="${di}">
+          ${day.length ? day.map((slug, si) => {
+            const p = placeOf(slug);
+            const prev = si > 0 ? placeOf(day[si-1]) : null;
+            const leg = (prev && p) ? `<div class="trip-leg">🚗 ~${haversineKm(prev.latitude, prev.longitude, p.latitude, p.longitude)} km from previous</div>` : '';
+            return stopHtml(slug, di) + leg;
+          }).join('') : '<div class="trip-day-empty">Drop places here</div>'}
+        </div>
+      </div>`).join('');
+    wireDrag();
+  }
+
+  function stopHtml(slug, dayIdx) {
+    const p = placeOf(slug);
+    if (!p) return '';
+    return `<div class="trip-stop" draggable="true" data-slug="${esc(slug)}" data-day="${dayIdx}">
+      <img src="${p.image_url || fallbackImage(p.state_slug)}" alt="${esc(p.name)}">
+      <div class="trip-stop-info"><strong>${esc(p.name)}</strong><span>${esc(p.district)}, ${esc(p.state)}</span></div>
+      <button class="trip-stop-remove" type="button" data-remove="${esc(slug)}" aria-label="Remove">×</button>
+    </div>`;
+  }
+
+  function wireDrag() {
+    // dragstart
+    board.querySelectorAll('.trip-stop, #trip-pool-body .trip-stop').forEach(el => {
+      el.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', el.dataset.slug);
+        e.dataTransfer.effectAllowed = 'move';
+        el.classList.add('dragging');
+      });
+      el.addEventListener('dragend', () => el.classList.remove('dragging'));
+    });
+    // remove buttons
+    root.querySelectorAll('.trip-stop-remove').forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const slug = btn.dataset.remove;
+        // remove from any day
+        trip.days.forEach(day => {
+          const i = day.indexOf(slug);
+          if (i !== -1) day.splice(i, 1);
+        });
+        persist();
+        render();
+      };
+    });
+    // day remove
+    root.querySelectorAll('.trip-day-remove').forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const di = Number(btn.dataset.removeDay);
+        // move its places back to pool (just remove the day)
+        trip.days.splice(di, 1);
+        persist();
+        render();
+      };
+    });
+    // drop targets
+    const targets = [...root.querySelectorAll('.trip-day-body'), poolBody];
+    targets.forEach(t => {
+      t.addEventListener('dragover', e => { e.preventDefault(); t.classList.add('drag-over'); e.dataTransfer.dropEffect = 'move'; });
+      t.addEventListener('dragleave', () => t.classList.remove('drag-over'));
+      t.addEventListener('drop', e => {
+        e.preventDefault();
+        t.classList.remove('drag-over');
+        const slug = e.dataTransfer.getData('text/plain');
+        if (!slug) return;
+        const targetDay = t.dataset.day;
+        // remove from source
+        trip.days.forEach(day => {
+          const i = day.indexOf(slug);
+          if (i !== -1) day.splice(i, 1);
+        });
+        if (targetDay === '-1') {
+          // pool: already removed, nothing to add
+        } else {
+          const di = Number(targetDay);
+          if (!trip.days[di]) trip.days[di] = [];
+          trip.days[di].push(slug);
+        }
+        // remove empty trailing days? keep
+        persist();
+        render();
+      });
+    });
+  }
+
+  if (addDayBtn) addDayBtn.onclick = () => { trip.days.push([]); persist(); render(); };
+  if (autoBtn) autoBtn.onclick = () => {
+    // auto-plan: nearest-neighbor across all saved, 2 per day
+    const ordered = [];
+    const remaining = [...saved];
+    if (remaining.length) {
+      ordered.push(remaining.shift());
+      while (remaining.length) {
+        const cur = ordered[ordered.length-1];
+        const pcur = placeOf(cur);
+        let ni = 0, nd = Infinity;
+        remaining.forEach((s, idx) => {
+          const pp = placeOf(s);
+          if (pcur && pp) {
+            const d = haversineKm(pcur.latitude, pcur.longitude, pp.latitude, pp.longitude);
+            if (d < nd) { nd = d; ni = idx; }
+          }
+        });
+        ordered.push(remaining.splice(ni, 1)[0]);
+      }
+    }
+    const days = [];
+    for (let i = 0; i < ordered.length; i += 2) days.push(ordered.slice(i, i + 2));
+    trip.days = days.length ? days : [[]];
+    persist();
+    render();
+  };
+  if (clearBtn) clearBtn.onclick = () => {
+    if (!confirm('Clear the day plan? Saved places stay in your favorites.')) return;
+    trip.days = [];
+    persist();
+    render();
+  };
+
+  render();
+}
+
 function initCircuitMap() {
   const container = document.getElementById('circuit-leaflet-map');
   if (!container || !window.L) return;
@@ -1064,7 +1261,7 @@ async function route() {
     if (version !== routeVersion) return;
     root.innerHTML = html;
     if (!type) { initHeroSlideshow(); renderPersonalisedRow(); }
-    if (type === 'saved') { renderProfile(); initSavedMap(); wireSavedBackup(); }
+    if (type === 'saved') { renderProfile(); initSavedMap(); wireSavedBackup(); initTripPlanner(); }
     if (type === 'explore') initExploreMap();
     if (type === 'area') initAreaFilter();
     if (type === 'state' || type === 'district') initCategoryFilterStrip();
@@ -1426,6 +1623,7 @@ async function hydrateSavedPage() {
     renderProfile();
     initSavedMap();
     wireSavedBackup();
+    initTripPlanner();
   } catch (error) {
     if (version !== routeVersion) return;
     root.innerHTML = `<div class="error-state"><h1>A small detour.</h1><p role="alert">${esc(error.message)}</p><a class="button" href="/">Back to exploring</a></div>`;
