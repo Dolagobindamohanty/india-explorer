@@ -172,12 +172,12 @@ def test_full_destination_journey(client):
     unakoti = client.get('/api/districts/unakoti').json()
     assert any(p['slug'] == 'unakoti-rock-carvings' for p in unakoti['places'])
     hp = client.get('/api/states/himachal-pradesh').json()
-    assert len(hp['districts']) == 13
+    assert len(hp['districts']) == 12
     assert len(hp['places']) == 11
     kullu = client.get('/api/districts/kullu').json()
     assert {p['slug'] for p in kullu['places']} >= {'hidimba-devi-temple', 'rohtang-pass'}
-    spiti = client.get('/api/districts/spiti').json()
-    assert {p['slug'] for p in spiti['places']} >= {'key-monastery', 'chandratal-lake', 'tabo-monastery'}
+    lahaul = client.get('/api/districts/lahaul-and-spiti').json()
+    assert {p['slug'] for p in lahaul['places']} >= {'key-monastery', 'chandratal-lake', 'tabo-monastery'}
     # Union Territories comprehensive verification
     andaman = client.get('/api/states/andaman-and-nicobar-islands').json()
     assert len(andaman['districts']) == 3
@@ -477,7 +477,7 @@ def test_website_and_health(client):
     homepage = client.get('/').text
     assert 'india' in homepage
     assert '<title>India Explorer — Discover somewhere new</title>' in homepage
-    assert '28' in homepage and '803' in homepage
+    assert '28' in homepage and '788' in homepage
     assert 'Featured destinations' in homepage
     assert 'href="/explore"' in homepage
     assert 'href="/state/' in homepage

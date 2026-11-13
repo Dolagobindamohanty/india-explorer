@@ -64,7 +64,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
-- 28 state pages and 8 union-territory pages, a growing district directory with 803 districts, and 1516 detailed place pages.
+- 28 state pages and 8 union-territory pages, a growing district directory with 788 districts, and 1516 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
 - District food notes, access guidance, official reference links and map links.
@@ -108,7 +108,7 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 ## Data and assets
 
 This is an expanding editorial pilot, covering 1516 destinations, 111
-traditional celebrations and festivals, 803 district directory entries across
+traditional celebrations and festivals, 788 district directory entries across
 all 28 states and 8 union territories. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
 is made that their current contents were independently checked in this build.
@@ -139,7 +139,7 @@ optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
 Run `python scripts/verify_data.py` to check the region counts, district foreign keys,
 place image uniqueness and missing cover images. The bundled administrative
-snapshot contains 803 districts across India's 28 states and 8 union
+snapshot contains 788 districts across India's 28 states and 8 union
 territories (including Meluri district in Nagaland, the state's 17th district,
 Kushavati district in Goa, officially notified in Dec 2025,
 and Bengaluru South district in Karnataka, renamed from Ramanagara on 23 May 2025),
