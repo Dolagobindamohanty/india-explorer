@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1551 places, 154 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 306 of 792 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1563 places, 154 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 306 of 792 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
@@ -84,7 +84,7 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 1551 |
+| Places | 1563 |
 | Verified | **0** (all 726 `needs_review`) |
 | With entry fee / address | 646 / 646 (80 missing each → 160 warnings) |
 | Districts with ≥1 place | 306 / 788 |
@@ -327,7 +327,7 @@ Deployment notes:
 | M13 | Done | Added 130 Kerala place pages and 10 Kerala festivals (Vishu, Thrissur Pooram, Attukal Pongala, Theyyam, etc.) |
 | M15 | Done | Added 82 Maharashtra place pages and 10 Maharashtra festivals; totals now 1215 places / 131 festivals |
 | M16 | Done | Added 130 Assam place pages (all 35 districts) and 10 Assam festivals; totals now 1389 places / 141 festivals |
-| M17 | Done | Added 127 Bihar place pages (all 38 districts) and 10 Bihar festivals; totals now 1551 places / 151 festivals |
+| M17 | Done | Added 127 Bihar place pages (all 38 districts) and 10 Bihar festivals; totals now 1563 places / 151 festivals |
 | L1 | Done | `APP_VERSION` and the unused `load_state_dataset` import removed |
 | D1 | Done | Fixed the failing `avathi-hills` attribution record (see below) |
 | D2 | Done | Preview deployments restored after disconnecting the Vercel Git integration (see below) |
