@@ -1,0 +1,7 @@
+{
+  "slug": "chhattisgarh",
+  "name": "Chhattisgarh",
+  "kind": "state",
+  "source_url": "https://tourism.cgstate.gov.in/",
+  "places_file": "../chhattisgarh-places.json"
+}
