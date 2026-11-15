@@ -1,0 +1,970 @@
+{
+  "chitrakote-waterfall": {
+    "lat": 19.20337,
+    "lon": 81.70711,
+    "source": "nominatim",
+    "address": "Chitrakot, Dhurkonta, Bastar Tahsil, Chhattisgarh 494010"
+  },
+  "tirathgarh-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kutumsar-caves": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "danteshwari-temple": {
+    "lat": 19.1362,
+    "lon": 81.37806,
+    "source": "wikidata:Q5221212",
+    "address": "Barsur, Gidam Tahsil, Dakshin Bastar Dantewada, Chhattisgarh"
+  },
+  "bhoramdeo-temple": {
+    "lat": 22.116,
+    "lon": 81.148,
+    "source": "wikidata:Q4902046",
+    "address": "Bodla Tahsil, Kabeerdham, Chhattisgarh"
+  },
+  "dongargarh": {
+    "lat": 21.19,
+    "lon": 80.76,
+    "source": "wikidata:Q55339261",
+    "address": "Dongargarh Tahsil, Rajnandgaon, Chhattisgarh 491445"
+  },
+  "sirpur-laxman-temple": {
+    "lat": 21.34702,
+    "lon": 82.18469,
+    "source": "nominatim",
+    "address": "Sirpur, Mahasamund Tahsil, Chhattisgarh"
+  },
+  "mainpat": {
+    "lat": 22.79646,
+    "lon": 83.30619,
+    "source": "nominatim",
+    "address": "Mainpat Tahsil, Surguja, Chhattisgarh"
+  },
+  "gangrel-dam": {
+    "lat": 20.61667,
+    "lon": 81.56972,
+    "source": "wikidata:Q5521182",
+    "address": "Dhamtari Tahsil, Chhattisgarh"
+  },
+  "barnawapara-wildlife-sanctuary": {
+    "lat": 21.4,
+    "lon": 82.46389,
+    "source": "wikipedia:Barnawapara Wildlife Sanctuary",
+    "address": "Kasdol Tahsil, Balodabazar-Bhatapara, Chhattisgarh"
+  },
+  "achanakmar-tiger-reserve": {
+    "lat": 22.47489,
+    "lon": 81.71683,
+    "source": "nominatim",
+    "address": "Katami, Mungeli, Bilaspur, Chhattisgarh"
+  },
+  "kailash-caves": {
+    "lat": 21.09671,
+    "lon": 81.04143,
+    "source": "nominatim-bounded",
+    "address": "Chikhali, Rajnandgaon, Bastar, Chhattisgarh 491441"
+  },
+  "maa-bamleshwari-temple": {
+    "lat": 21.17861,
+    "lon": 80.75059,
+    "source": "nominatim",
+    "address": "Dongargarh, Rajnandgaon, Chhattisgarh 491445"
+  },
+  "ratanpur-mahamaya-temple": {
+    "lat": 22.28683,
+    "lon": 82.16778,
+    "source": "nominatim",
+    "address": "Ratanpur, Kota Tahsil, Bilaspur, Chhattisgarh 495442"
+  },
+  "chaiturgarh-fort": {
+    "lat": 22.5103,
+    "lon": 82.2714,
+    "source": "wikidata:Q5068137",
+    "address": "Pali Tahsil, Korba, Chhattisgarh"
+  },
+  "sihawa-hills": {
+    "lat": 20.31066,
+    "lon": 81.91544,
+    "source": "nominatim",
+    "address": "Sihawa, Nagri Tahsil, Dhamtari, Chhattisgarh 493780"
+  },
+  "giroudpuri-dham": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "vivekananda-sarovar": {
+    "lat": 21.18536,
+    "lon": 81.74593,
+    "source": "nominatim",
+    "address": "Atal Nagar-Nava Raipur, Arang Tahsil, Chhattisgarh 492101"
+  },
+  "nandanvan-jungle-safari": {
+    "lat": 21.26787,
+    "lon": 81.55883,
+    "source": "nominatim",
+    "address": "Raipur, Chhattisgarh 493332"
+  },
+  "ram-jharna": {
+    "lat": 22.78047,
+    "lon": 80.90624,
+    "source": "nominatim-bounded",
+    "address": "Jharna, Dindori Tahsil, Raigarh, Chhattisgarh"
+  },
+  "gomarda-wildlife-sanctuary": {
+    "lat": 21.5,
+    "lon": 83.13333,
+    "source": "wikipedia:Gomardha Wildlife Sanctuary",
+    "address": "Sarangarh Tahsil, Raigarh, Chhattisgarh"
+  },
+  "shivrinarayan-temple": {
+    "lat": 21.73,
+    "lon": 82.58,
+    "source": "wikipedia:Shivrinarayan",
+    "address": "Kharod, Pamgarh Tahsil, Janjgir-Champa, Chhattisgarh"
+  },
+  "kudargarh-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "maitri-bagh-zoo": {
+    "lat": 21.17139,
+    "lon": 81.35306,
+    "source": "wikipedia:Maitri Bagh",
+    "address": "Bhilai, Durg Tahsil, Chhattisgarh 491002"
+  },
+  "tandula-dam": {
+    "lat": 20.71057,
+    "lon": 81.19452,
+    "source": "nominatim",
+    "address": "Balod, Chhattisgarh 491226"
+  },
+  "gadiya-mountain": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "keshkal-valley": {
+    "lat": 20.08328,
+    "lon": 81.58906,
+    "source": "nominatim",
+    "address": "Kondagaon, Komalpur, Keskal Tahsil, Chhattisgarh 494331"
+  },
+  "indravati-national-park": {
+    "lat": 19.13107,
+    "lon": 80.50665,
+    "source": "nominatim",
+    "address": "Adapalli, Bijapur, Chhattisgarh"
+  },
+  "guru-ghasidas-national-park": {
+    "lat": 23.681,
+    "lon": 82.52555,
+    "source": "nominatim",
+    "address": "Sonhat Tahsil, Korea, Chhattisgarh"
+  },
+  "deobaloda-shiva-temple": {
+    "lat": 21.21878,
+    "lon": 81.47354,
+    "source": "nominatim",
+    "address": "Patan Tahsil, Durg, Chhattisgarh 490021"
+  },
+  "ghatarani-waterfall": {
+    "lat": 20.82797,
+    "lon": 82.05977,
+    "source": "nominatim-bounded",
+    "address": "Chhura Tahsil, Gariyaband, Chhattisgarh 493109"
+  },
+  "khallari-mata-temple": {
+    "lat": 21.20558,
+    "lon": 82.18953,
+    "source": "nominatim",
+    "address": "Tumgaon, Mahasamund Tahsil, Chhattisgarh 492110"
+  },
+  "kanan-pendari-zoo": {
+    "lat": 22.11129,
+    "lon": 82.06394,
+    "source": "nominatim",
+    "address": "Takhatpur Tahsil, Bilaspur, Chhattisgarh"
+  },
+  "bailadila-hills": {
+    "lat": 18.7,
+    "lon": 81.21944,
+    "source": "wikipedia:Bailadila Range",
+    "address": "Padhapur, Dantewada Tahsil, Dakshin Bastar Dantewada, Chhattisgarh 494553"
+  },
+  "barsoor": {
+    "lat": 19.13779,
+    "lon": 81.38569,
+    "source": "wikidata:Q19359255",
+    "address": "Barsur, Upet, Gidam Tahsil, Chhattisgarh"
+  },
+  "tatapani-hot-springs": {
+    "lat": 23.62567,
+    "lon": 83.6382,
+    "source": "nominatim",
+    "address": "Ramanuj Ganj, Bohla, Balrampur Tahsil, Chhattisgarh"
+  },
+  "bhadrakali-temple-berla": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "jaleshwar-mahadev-temple": {
+    "lat": 22.73514,
+    "lon": 81.76228,
+    "source": "nominatim",
+    "address": "Jaleshwar Dham, Pendra Road Gorella Tahsil, Gaurela-Pendra-Marwahi, Chhattisgarh"
+  },
+  "kunakuri-cathedral": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "khairagarh-palace": {
+    "lat": 21.41661,
+    "lon": 80.98185,
+    "source": "nominatim",
+    "address": "Khairagarh, Chhattisgarh"
+  },
+  "chirmiri-hill-station": {
+    "lat": 23.19167,
+    "lon": 82.35417,
+    "source": "wikipedia:Chirmiri",
+    "address": "Chirimiri, Duman Hill, Khadganva Tahsil, Chhattisgarh 497449"
+  },
+  "ambagarh-chowki-fort": {
+    "lat": 20.77799,
+    "lon": 80.74255,
+    "source": "nominatim-bounded",
+    "address": "Ambagarh Chauki, Ambagarh Tahsil, Mohla-Manpur-Ambagarh Chouki, Chhattisgarh 491665"
+  },
+  "madku-dweep": {
+    "lat": 21.83879,
+    "lon": 81.94964,
+    "source": "nominatim",
+    "address": "Mungeli, Pathariya Tahsil, Chhattisgarh"
+  },
+  "abujhmad-hills": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "chandrasini-devi-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "bileshwar-mahadev-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "chitradhara-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "purkhauti-muktangan": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "mahant-ghasidas-memorial-museum": {
+    "lat": 21.24359,
+    "lon": 81.64499,
+    "source": "nominatim",
+    "address": "Raipur, Chhattisgarh 493332"
+  },
+  "doodhadhari-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "vivekananda-sarovar-budha-talab": {
+    "lat": 21.18536,
+    "lon": 81.74593,
+    "source": "nominatim",
+    "address": "Atal Nagar-Nava Raipur, Arang Tahsil, Chhattisgarh 492101"
+  },
+  "kaivalya-dham-jain-temple": {
+    "lat": 21.247,
+    "lon": 81.52853,
+    "source": "nominatim",
+    "address": "Kumhari, Dhamdha Tahsil, Raipur, Chhattisgarh 490042"
+  },
+  "rajiv-lochan-temple": {
+    "lat": 21.23876,
+    "lon": 81.64127,
+    "source": "nominatim",
+    "address": "Raipur, Chhattisgarh 493332"
+  },
+  "jaitkhamb": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "turturiya": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "dhamni-temple": {
+    "lat": 23.12989,
+    "lon": 81.48148,
+    "source": "nominatim-bounded",
+    "address": "Shahdol, Dhamni, Budar Tahsil, Chhattisgarh"
+  },
+  "siddheshwar-temple-palari": {
+    "lat": 21.53473,
+    "lon": 82.17767,
+    "source": "wikipedia:Siddheshwar Mandir, Palari",
+    "address": "Palari, Balodabazar-Bhatapara, Chhattisgarh 493228"
+  },
+  "jatmai-temple-and-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "bhuteshwar-nath-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "rajim-triveni-sangam": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "sikasar-dam": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "udanti-wildlife-sanctuary": {
+    "lat": 20.0716,
+    "lon": 82.3223,
+    "source": "wikidata:Q106675739",
+    "address": "Mainpur Tahsil, Gariyaband, Chhattisgarh 493890"
+  },
+  "sirpur-archaeological-site": {
+    "lat": 21.34702,
+    "lon": 82.18469,
+    "source": "nominatim",
+    "address": "Sirpur, Mahasamund Tahsil, Chhattisgarh"
+  },
+  "laxman-temple-sirpur": {
+    "lat": 21.35314,
+    "lon": 82.18673,
+    "source": "nominatim",
+    "address": "Sirpur, Mahasamund Tahsil, Chhattisgarh"
+  },
+  "gandheshwar-mahadev-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "anand-prabhu-kuti-vihar": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kodar-dam": {
+    "lat": 21.19568,
+    "lon": 82.18014,
+    "source": "nominatim",
+    "address": "Mahasamund Tahsil, Chhattisgarh"
+  },
+  "saptarishi-ashram": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "angarmoti-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "rudri-barrage": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "madamsilli-dam": {
+    "lat": 20.54189,
+    "lon": 81.66585,
+    "source": "nominatim",
+    "address": "Nagri Tahsil, Dhamtari, Chhattisgarh"
+  },
+  "malhar-archaeological-site": {
+    "lat": 21.89312,
+    "lon": 82.28348,
+    "source": "nominatim",
+    "address": "Malhar, Masturi Tahsil, Bilaspur, Chhattisgarh"
+  },
+  "kutaghat-dam": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "talagram-deoranijethani-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "pataleshwar-temple": {
+    "lat": 21.99425,
+    "lon": 82.28317,
+    "source": "nominatim",
+    "address": "Masturi, Bilaspur, Chhattisgarh"
+  },
+  "hasdeo-bango-dam": {
+    "lat": 22.41415,
+    "lon": 82.68103,
+    "source": "nominatim",
+    "address": "Katghora Tahsil, Korba, Chhattisgarh 495450"
+  },
+  "sarvamangala-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kudurmal-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kendai-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "devpahari-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kabra-pahad-rock-paintings": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "singhanpur-rock-paintings": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "chakradhar-samaroh-venue": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "pahad-mandir": {
+    "lat": 24.231,
+    "lon": 81.14406,
+    "source": "nominatim-bounded",
+    "address": "Gidhaula Pahad, Ramnagar Tahsil, Raigarh, Chhattisgarh"
+  },
+  "vishnu-temple-janjgir": {
+    "lat": 22.00595,
+    "lon": 82.57217,
+    "source": "wikidata:Q19632978",
+    "address": "Janjgir, Chhattisgarh 495668"
+  },
+  "pithampur-kalpeshwar-mahadev-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "madanpurgarh": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kharod-laxmaneshwar-temple": {
+    "lat": 21.74348,
+    "lon": 82.57934,
+    "source": "nominatim",
+    "address": "Kharod, Pamgarh Tahsil, Janjgir-Champa, Chhattisgarh"
+  },
+  "sheorinarayan-sangam": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "achanakmar-wildlife-sanctuary-mungeli-side-access": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "setganga-temple": {
+    "lat": 22.114,
+    "lon": 81.54678,
+    "source": "nominatim",
+    "address": "Mungeli, Pandariya Tahsil, Chhattisgarh 495337"
+  },
+  "khudia-dam": {
+    "lat": 22.39,
+    "lon": 81.59639,
+    "source": "wikipedia:Khudia Dam",
+    "address": "Mungeli, Lormi Tahsil, Chhattisgarh"
+  },
+  "dindori-waterfall": {
+    "lat": 22.95,
+    "lon": 81.08333,
+    "source": "wikipedia:Dindori district",
+    "address": "Dindori, Dandbidayapur, Mungeli, Chhattisgarh 481880"
+  },
+  "khodrikhongsara-valley": {
+    "lat": 22.66554,
+    "lon": 81.9352,
+    "source": "nominatim",
+    "address": "Pendra Road Gorella Tahsil, Gaurela-Pendra-Marwahi, Chhattisgarh"
+  },
+  "kabir-chabutra": {
+    "lat": 22.67471,
+    "lon": 81.72737,
+    "source": "nominatim-bounded",
+    "address": "Amarkantak, Pushparajgarh Tehsil, Gaurela-Pendra-Marwahi, Chhattisgarh 484886"
+  },
+  "sonbachhar-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "chandrasini-devi-temple-chandrapur": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "nathaldai-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "damau-dhara-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "rishabh-tirth": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "adbhar-ashtabhuji-temple": {
+    "lat": 21.95327,
+    "lon": 83.02579,
+    "source": "nominatim",
+    "address": "Adbhar, Malkharoda Tahsil, Sakti, Chhattisgarh"
+  },
+  "girivilas-palace": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "timalga": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "bilaigarh-fort": {
+    "lat": 21.63768,
+    "lon": 82.72061,
+    "source": "nominatim",
+    "address": "Bilaigarh, Chhattisgarh 493222"
+  },
+  "bhilai-steel-plant": {
+    "lat": 21.1837,
+    "lon": 81.38383,
+    "source": "nominatim",
+    "address": "Bhilai, Durg Tahsil, Chhattisgarh"
+  },
+  "shivnath-river": {
+    "lat": 21.43331,
+    "lon": 81.38016,
+    "source": "nominatim",
+    "address": "Dhamdha Tahsil, Durg, Chhattisgarh"
+  },
+  "tandula-region-viewpoints": {
+    "lat": 21.23066,
+    "lon": 81.39379,
+    "source": "nominatim",
+    "address": "Bhilai, Durg Tahsil, Chhattisgarh 490024"
+  },
+  "ganga-maiya-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "siyadevi-waterfall": {
+    "lat": 20.69303,
+    "lon": 81.37748,
+    "source": "nominatim",
+    "address": "Gurur, Balod, Chhattisgarh 491227"
+  },
+  "hattadula-dam": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kapileshwar-temple": {
+    "lat": 22.94172,
+    "lon": 81.14627,
+    "source": "nominatim-bounded",
+    "address": "Dindori, Lutgaon, Balod, Chhattisgarh 481880"
+  },
+  "gidhwaparsa-wetland-and-bird-area": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kapileshwar-mahadev-temple": {
+    "lat": 22.94172,
+    "lon": 81.14627,
+    "source": "nominatim-bounded",
+    "address": "Dindori, Lutgaon, Bemetara, Chhattisgarh 481880"
+  },
+  "salkhan-temple": {
+    "lat": 21.8159,
+    "lon": 82.5781,
+    "source": "nominatim-bounded",
+    "address": "Salkhan, Nawagarh Tahsil, Bemetara, Chhattisgarh"
+  },
+  "chhoti-bamleshwari-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "patal-bhairavi-temple": {
+    "lat": 21.09289,
+    "lon": 81.0063,
+    "source": "nominatim",
+    "address": "Mamta Nagar, Rajnandgaon, Chhattisgarh 491441"
+  },
+  "madwa-mahal": {
+    "lat": 24.11,
+    "lon": 81.78,
+    "source": "wikipedia:Madwas",
+    "address": "Marwas, Majhauli Tahsil, Kabeerdham, Chhattisgarh"
+  },
+  "saroda-reservoir": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "chhaparwa": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kawardha-palace": {
+    "lat": 21.83415,
+    "lon": 81.12797,
+    "source": "nominatim",
+    "address": "Sahaspur Lohara, Kabeerdham, Chhattisgarh"
+  },
+  "bhoramdeo-wildlife-sanctuary": {
+    "lat": 22.116,
+    "lon": 81.148,
+    "source": "wikipedia:Bhoramdeo Temple",
+    "address": "Bodla Tahsil, Kabeerdham, Chhattisgarh"
+  },
+  "indira-kala-sangeet-vishwavidyalaya": {
+    "lat": 21.42025,
+    "lon": 80.97768,
+    "source": "nominatim",
+    "address": "Khairagarh, Chhattisgarh"
+  },
+  "gandai-temples": {
+    "lat": 21.66883,
+    "lon": 81.10061,
+    "source": "nominatim",
+    "address": "Gandai, Chhuikhadan Tahsil, Chhattisgarh"
+  },
+  "achankeshwar-mahadev-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "chhuikhadan-heritage-sites": {
+    "lat": 21.52385,
+    "lon": 80.99862,
+    "source": "nominatim",
+    "address": "Chhuikhadan, Chhattisgarh 491885"
+  },
+  "manpur-forest-landscapes": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "shivnath-river-surroundings": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "local-tribal-cultural-attractions": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kanger-valley-national-park": {
+    "lat": 18.83398,
+    "lon": 82.02011,
+    "source": "nominatim",
+    "address": "Darbha Tahsil, Bastar, Chhattisgarh"
+  },
+  "danteshwari-temple-jagdalpur": {
+    "lat": 20.32401,
+    "lon": 81.86907,
+    "source": "nominatim",
+    "address": "Sihawa, Nagri Tahsil, Bastar, Chhattisgarh 493780"
+  },
+  "bastar-palace": {
+    "lat": 19.20929,
+    "lon": 81.93264,
+    "source": "nominatim",
+    "address": "Bastar, Sukarpalanpara, Chhattisgarh"
+  },
+  "dalpat-sagar": {
+    "lat": 19.09496,
+    "lon": 82.01162,
+    "source": "nominatim",
+    "address": "Jagdalpur, Bastar, Chhattisgarh 494001"
+  },
+  "mamabhanja-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "battisa-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "phoolpad-waterfall": {
+    "lat": 19.86396,
+    "lon": 81.14689,
+    "source": "nominatim-bounded",
+    "address": "Phoolpad, Antagarh Tahsil, Dakshin Bastar Dantewada, Chhattisgarh"
+  },
+  "kanker-palace": {
+    "lat": 20.26927,
+    "lon": 81.49321,
+    "source": "nominatim",
+    "address": "Kanker, Chhattisgarh 494334"
+  },
+  "malanjhkudum-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "charre-marre-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "shivani-temple": {
+    "lat": 21.55495,
+    "lon": 80.18595,
+    "source": "nominatim-bounded",
+    "address": "Shivani, Gondiya Taluka, Uttar Bastar Kanker, Chhattisgarh"
+  },
+  "tatamari-viewpoint": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "mavli-mata-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "narangi-river": {
+    "lat": 19.77611,
+    "lon": 81.98851,
+    "source": "nominatim",
+    "address": "Kondagaon, Makdi Tahsil, Chhattisgarh"
+  },
+  "shilpgram": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kondagaon-handicraft-centres": {
+    "lat": 19.58901,
+    "lon": 81.66166,
+    "source": "nominatim",
+    "address": "Kondagaon, Chhattisgarh 494266"
+  },
+  "ramakrishna-mission-ashram": {
+    "lat": 19.7165,
+    "lon": 81.22925,
+    "source": "nominatim",
+    "address": "Dewanganpara 2, Lmlipadar, Narayanpur Tahsil, Chhattisgarh"
+  },
+  "khursel-waterfall": {
+    "lat": 19.89704,
+    "lon": 81.02041,
+    "source": "nominatim-bounded",
+    "address": "Antagarh Tahsil, Narayanpur, Chhattisgarh"
+  },
+  "tribal-art-and-craft-centres": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "bhairamgarh-wildlife-sanctuary": {
+    "lat": 19.0991,
+    "lon": 80.9394,
+    "source": "wikidata:Q130974358",
+    "address": "Bijapur, Bhairamgarh Tahsil, Chhattisgarh"
+  },
+  "bhairam-baba-temple": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kutru-forest-region": {
+    "lat": 19.09321,
+    "lon": 80.7904,
+    "source": "nominatim",
+    "address": "Bijapur, Bhairamgarh Tahsil, Chhattisgarh"
+  },
+  "dudh-river": {
+    "lat": 20.2648,
+    "lon": 81.48819,
+    "source": "nominatim",
+    "address": "Kanker, Sukma, Chhattisgarh 494334"
+  },
+  "tungal-dam": {
+    "lat": 18.41866,
+    "lon": 81.66135,
+    "source": "nominatim",
+    "address": "Sukma, Durgaguda, Chhattisgarh 494111"
+  },
+  "ramaram-temple": {
+    "lat": 18.3633,
+    "lon": 81.18103,
+    "source": "nominatim",
+    "address": "Chintalnar, Konta Tahsil, Sukma, Chhattisgarh"
+  },
+  "kanger-valley-forest-landscapes-regional": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "tiger-point-waterfall": {
+    "lat": 23.9153,
+    "lon": 81.83926,
+    "source": "nominatim-bounded",
+    "address": "Kusmi Tahsil, Surguja, Chhattisgarh"
+  },
+  "fish-point": {
+    "lat": 18.28599,
+    "lon": 83.88214,
+    "source": "nominatim-bounded",
+    "address": "Thotapalem, Etcherla Mandal, Surguja, Chhattisgarh"
+  },
+  "ulta-pani": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "tibetan-buddhist-monastery-mainpat": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "mahamaya-temple-ambikapur": {
+    "lat": 22.98037,
+    "lon": 83.0462,
+    "source": "nominatim",
+    "address": "Lakhanpur, Surguja, Chhattisgarh"
+  },
+  "ramgarh-hills": {
+    "lat": 22.92811,
+    "lon": 82.97301,
+    "source": "wikipedia:Ramgarh, Chhattisgarh",
+    "address": "Udaypur Tahsil, Surguja, Chhattisgarh"
+  },
+  "jogimara-caves": {
+    "lat": 22.89296,
+    "lon": 82.90529,
+    "source": "nominatim",
+    "address": "Udaypur Tahsil, Surguja, Chhattisgarh 497333"
+  },
+  "rakasganda-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "tamor-pingla-wildlife-sanctuary": {
+    "lat": 23.66768,
+    "lon": 82.87739,
+    "source": "nominatim",
+    "address": "Oudgi Tahsil, Surajpur, Chhattisgarh 497231"
+  },
+  "shivpur-temple": {
+    "lat": 24.27595,
+    "lon": 83.47343,
+    "source": "nominatim-bounded",
+    "address": "Nagar Untari, Shivpur, Nagaruntari, Chhattisgarh 822121"
+  },
+  "deogarh": {
+    "lat": 23.42243,
+    "lon": 81.56215,
+    "source": "nominatim-bounded",
+    "address": "Shahdol, Jaitpur Tahsil, Surajpur, Chhattisgarh"
+  },
+  "pawai-waterfall": {
+    "lat": 24.27,
+    "lon": 80.17,
+    "source": "wikipedia:Pawai",
+    "address": "Pawai, Surajpur, Chhattisgarh"
+  },
+  "semarsot-wildlife-sanctuary": {
+    "lat": 23.54,
+    "lon": 83.53,
+    "source": "wikipedia:Semarsot Wildlife Sanctuary",
+    "address": "Balrampur Tahsil, Balrampur-Ramanujganj, Chhattisgarh"
+  },
+  "thirakheli-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "dipadih-archaeological-site": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "ramanujganj": {
+    "lat": 23.80638,
+    "lon": 83.69981,
+    "source": "nominatim",
+    "address": "Ramanuj Ganj, Bohla, Ramanujganj Tahsil, Chhattisgarh"
+  },
+  "maheshpur-archaeological-remains": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "rani-dah-waterfall": {
+    "lat": 23.28157,
+    "lon": 80.9171,
+    "source": "nominatim-bounded",
+    "address": "Rani Dadar, Nowrozabad Tahsil, Jashpur, Chhattisgarh"
+  },
+  "rajpuri-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "dangari-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kailash-gufa": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kunkuri-cathedral": {
+    "lat": 22.74199,
+    "lon": 83.9495,
+    "source": "nominatim",
+    "address": "Kunkuri, Jashpur, Chhattisgarh 496225"
+  },
+  "bel-mahadev": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "khuriarani-cave": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "kotebira": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "amrit-dhara-waterfall": {
+    "lat": 23.19811,
+    "lon": 82.35453,
+    "source": "nominatim",
+    "address": "Khadganva Tahsil, Korea, Chhattisgarh 497451"
+  },
+  "gavar-ghat-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "ramdaha-waterfall": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "koriya-palace": {
+    "lat": 23.25,
+    "lon": 82.55,
+    "source": "wikipedia:Koriya district",
+    "address": "Baikunthpur, Korea, Chhattisgarh 497335"
+  },
+  "hasdeo-river-landscapes": {
+    "kept": true,
+    "source": "unresolved"
+  },
+  "gondwana-marine-fossil-park": {
+    "lat": 23.20652,
+    "lon": 82.22007,
+    "source": "wikipedia:Marine Gondwana Fossil Park",
+    "address": "Manendragarh, Chhattisgarh 497442"
+  },
+  "siddha-baba-temple": {
+    "lat": 23.1731,
+    "lon": 81.56362,
+    "source": "nominatim-bounded",
+    "address": "Shahdol, Amlai, Budar Tahsil, Chhattisgarh 484116"
+  },
+  "jagannath-temple-chirmiri": {
+    "lat": 23.19167,
+    "lon": 82.35417,
+    "source": "wikipedia:Chirmiri",
+    "address": "Chirimiri, Duman Hill, Khadganva Tahsil, Chhattisgarh 497449"
+  },
+  "hasdeo-river-viewpoints": {
+    "kept": true,
+    "source": "unresolved"
+  }
+}
