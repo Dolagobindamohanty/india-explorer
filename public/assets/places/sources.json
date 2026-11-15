@@ -7844,5 +7844,35 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/ACHANAKMAR%20TIGER%20RESERVE%2C%20CHHATISGARH%20%28INDIA%29.jpg?width=800",
     "file": "ACHANAKMAR TIGER RESERVE, CHHATISGARH (INDIA).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AACHANAKMAR_TIGER_RESERVE%2C_CHHATISGARH_%28INDIA%29.jpg"
+  },
+  "kailash-caves": {
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kailash%20Cave%20KVNP.jpg?width=800",
+    "file": "Kailash Cave KVNP.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AKailash_Cave_KVNP.jpg"
+  },
+  "maa-bamleshwari-temple": {
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maa%20Bamleshwari%20Temple.jpg?width=800",
+    "file": "Maa Bamleshwari Temple.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AMaa_Bamleshwari_Temple.jpg"
+  },
+  "ratanpur-mahamaya-temple": {
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/MAHAMAYA%20DEVI%20TEMPLE%20%2C%20RATANPUR%2C%20BILASPUR%20%2C%20CHHATISGARH%20%2CINDIA.jpg?width=800",
+    "file": "MAHAMAYA DEVI TEMPLE , RATANPUR, BILASPUR , CHHATISGARH ,INDIA.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AMAHAMAYA_DEVI_TEMPLE_%2C_RATANPUR%2C_BILASPUR_%2C_CHHATISGARH_%2CINDIA.jpg"
+  },
+  "chaiturgarh-fort": {
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singh%20Dwar%2C%20Chaiturgarh%20Fort%20Chhattisgarh.jpg?width=800",
+    "file": "Singh Dwar, Chaiturgarh Fort Chhattisgarh.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3ASingh_Dwar%2C_Chaiturgarh_Fort_Chhattisgarh.jpg"
+  },
+  "sihawa-hills": {
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central%20Provinces%20district%20gazetteers%20%28IA%20centralprovinces18cent%29.pdf?width=800",
+    "file": "Central Provinces district gazetteers (IA centralprovinces18cent).pdf",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3ACentral_Provinces_district_gazetteers_%28IA_centralprovinces18cent%29.pdf"
+  },
+  "giroudpuri-dham": {
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giroudpuri%20Dham.jpg?width=800",
+    "file": "Giroudpuri Dham.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AGiroudpuri_Dham.jpg"
   }
 }
