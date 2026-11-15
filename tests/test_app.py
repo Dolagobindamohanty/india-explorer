@@ -69,10 +69,10 @@ def test_full_destination_journey(client):
     assert len(odisha['districts']) == 30
     assert len(odisha['places']) == 111
     ap = client.get('/api/states/andhra-pradesh').json()
-    assert len(ap['districts']) == 26
+    assert len(ap['districts']) == 28
     assert len(ap['places']) == 69
     arunachal = client.get('/api/states/arunachal-pradesh').json()
-    assert len(arunachal['districts']) == 27
+    assert len(arunachal['districts']) == 28
     assert len(arunachal['places']) == 16
     mizoram = client.get('/api/states/mizoram').json()
     assert len(mizoram['districts']) == 11
@@ -192,7 +192,7 @@ def test_full_destination_journey(client):
     assert len(jk['places']) == 8
     assert {p['slug'] for p in jk['places']} >= {'dal-lake', 'gulmarg-gondola', 'vaishno-devi', 'martand-sun-temple', 'pahalgam-betaab-valley', 'shankaracharya-temple', 'sonamarg-thajiwas', 'nishat-shalimar-gardens'}
     ladakh = client.get('/api/states/ladakh').json()
-    assert len(ladakh['districts']) == 2
+    assert len(ladakh['districts']) == 7
     assert len(ladakh['places']) == 7
     assert {p['slug'] for p in ladakh['places']} >= {'thiksey-monastery', 'pangong-tso', 'diskit-monastery', 'leh-palace-shanti-stupa', 'sangam-indus-zanskar', 'khardung-la-pass', 'hemis-monastery'}
     puducherry = client.get('/api/states/puducherry').json()
