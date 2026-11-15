@@ -625,5 +625,43 @@
     "address": "Bilaspur, Bilaspur district",
     "gallery_images": [],
     "id": 1858
+  },
+  {
+    "district_id": 0,
+    "slug": "bailadila-hills",
+    "name": "Bailadila Hills",
+    "district_name": "Dakshin Bastar Dantewada",
+    "category": "nature",
+    "latitude": 18.65,
+    "longitude": 81.25,
+    "description": "Iron-ore rich hills with scenic landscapes and mining heritage.",
+    "how_to_reach": "In Dantewada district.",
+    "practical_notes": "Best October-March. Restricted mining areas.",
+    "heritage_id": null,
+    "source_url": "https://tourism.cgstate.gov.in/",
+    "image_url": "/assets/places/bailadila-hills.jpg",
+    "entry_fee": "Free",
+    "address": "Dantewada, Dantewada district",
+    "gallery_images": [],
+    "id": 1859
+  },
+  {
+    "district_id": 0,
+    "slug": "barsoor",
+    "name": "Barsoor",
+    "district_name": "Dakshin Bastar Dantewada",
+    "category": "heritage",
+    "latitude": 19.05,
+    "longitude": 81.4,
+    "description": "Ancient temple complex with intricately carved stone temples from the 10th-11th century.",
+    "how_to_reach": "In Barsoor, Dantewada district.",
+    "practical_notes": "ASI site. Best October-March.",
+    "heritage_id": null,
+    "source_url": "https://tourism.cgstate.gov.in/",
+    "image_url": "/assets/places/barsoor.jpg",
+    "entry_fee": "Free",
+    "address": "Barsoor, Dantewada district",
+    "gallery_images": [],
+    "id": 1860
   }
 ]
