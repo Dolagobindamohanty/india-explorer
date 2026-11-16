@@ -680,7 +680,7 @@ def test_editorial_status(client):
         'detailed_places': 1703,
         'reviewed_places': 0,
         'unreviewed_places': 1703,
-        'confirmed_festival_dates': 16,
+        'confirmed_festival_dates': 18,
     }
 
 
@@ -747,7 +747,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 154
+    assert len(all_festivals) == 160
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 

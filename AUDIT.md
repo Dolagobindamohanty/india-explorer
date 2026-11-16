@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1703 places, 154 festivals, 19 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 306 of 792 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1703 places, 160 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **16 confirmed festival dates**. 306 of 792 districts have a place; **9 states have none** (Chhattisgarh, Gujarat, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
@@ -186,7 +186,7 @@ Other:
 - No real festival dates: 0 occurrences, only month windows, so "festival planning" is approximate.
 - 80 places missing `entry_fee`, 80 missing `address`.
 - `README.md` claims 808 districts / 485 places / 57 festivals vs actual 802 / 726 / 69.
-- `trail_logistics` covers only 9 of 19 circuits.
+- `trail_logistics` covers only 9 of 20 circuits.
 - No duplicate place names or duplicate images (good).
 
 ### 4.6 Security & deployment
@@ -267,7 +267,7 @@ Deployment notes:
 |---|---|---|
 | L1 | Remove `APP_VERSION` and unused imports; replace ad-hoc `ALTER TABLE` with a migration tool | M |
 | L2 | Move 214 MB of images to a CDN/object store or Git LFS; shrink repo pack | L |
-| L3 | Expand `trail_logistics` to all 19 circuits | M |
+| L3 | Expand `trail_logistics` to all 20 circuits | M |
 | L4 | Escape all interpolated strings in map popups/itinerary HTML; remove inline handlers to allow strict CSP | M |
 | L5 | Accessibility pass (alt text quality, focus states, aria on map controls) | M |
 | L6 | Split `app.py` into routers (`routers/states.py`, `places.py`, `festivals.py`, `pages.py`) | L |
@@ -315,7 +315,7 @@ Deployment notes:
 | C5 | Done | `/api/places` supports `limit`/`offset`; `enrich_places` batches lookups in chunks of 400 |
 | H1 | Done | CSP, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy` added; docs/redoc/openapi return 404 when `VERCEL` is set |
 | H7 | Done | Home title de-duplicated, canonical + JSON-LD + OG image confirmed, stale 808/484 counts gone |
-| H3 | Done | `/api/festivals` and `/api/circuits` use one chunked query each; 69 festivals in 30 ms, 19 circuits / 112 stops in 21 ms |
+| H3 | Done | `/api/festivals` and `/api/circuits` use one chunked query each; 69 festivals in 30 ms, 20 circuits / 112 stops in 21 ms |
 | H5 | Done | Sitemap drops `/saved` and `/month/*`, re-adds `/festivals?month=N` and emits `<lastmod>`; `/saved` is `noindex, follow` |
 | H8 | Done | `/month/{n}` now 301s to `/festivals?month=n`; invalid months still return 422 |
 | M2 | Done | Unknown HTML routes render a noindex 404 page; `/api/*` and asset paths keep JSON |

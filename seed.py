@@ -1073,6 +1073,12 @@ def seed(db):
         (153, 'Diwali (National)', 'Festival of Lights celebrated across India with lamps, sweets and fireworks.', 'varies_annually', 'https://www.incredibleindia.org/', [('delhi', 'new-delhi'), ('maharashtra', 'mumbai'), ('uttar-pradesh', 'varanasi')], [10, 11]),
         (154, 'Navratri & Garba', 'Nine nights of Goddess Durga with garba and dandiya dances, especially in Gujarat and Maharashtra.', 'varies_annually', 'https://www.gujarattourism.com/', [('gujarat', 'ahmedabad'), ('maharashtra', 'mumbai')], [9, 10]),
         (155, 'Hampi Utsav', 'Cultural festival at the UNESCO World Heritage Site of Hampi, with music, dance and heritage events.', 'varies_annually', 'https://karnatakatourism.org/', [('karnataka', 'vijayanagara')], [11]),
+        (156, 'Bastar Dussehra', 'A 75-day tribal observance in and around Jagdalpur honouring Goddess Danteshwari and local deities, with rituals such as Pat Jatra, chariot processions and Muria Darbar rather than the burning of Ravana effigies.', 'lunar', 'https://bastar.gov.in/en/tourism/culture-heritage/', [('chhattisgarh', 'bastar')], [7, 8, 9, 10]),
+        (157, 'Bastar Goncha Festival', 'Jagdalpur\'s chariot (rath) festival aligned with Rath Yatra, featuring a bamboo mock-gun (tupki) tradition and processions near the Bastar Palace, and marking preparations for Bastar Dussehra.', 'lunar', 'https://www.incredibleindia.gov.in/en/festivals-and-events/chhattisgarh/bastar-goncha-festival-2026', [('chhattisgarh', 'bastar')], [7]),
+        (158, 'Rajim Kumbh Kalp', 'A major river-confluence gathering at Rajim where devotees take holy dips at the Triveni Sangam of the Mahanadi, Pairi and Sondur rivers, with rituals and cultural programmes around Magh Purnima to Mahashivratri.', 'lunar', 'https://dprcg.gov.in/post/1769672580/Rajim-Kumbh-Kalpa-2026-Tourism-and-Culture-Minister-Shri-Rajesh-Agarwal-invited-Chief-Minister-Shri-Vishnudev-Sai', [('chhattisgarh', 'gariyaband')], [2, 3]),
+        (159, 'Chakradhar Samaroh', 'An annual classical music and dance festival in Raigarh held in memory of Maharaja Chakradhar Singh, typically starting around Ganesh Chaturthi and drawing performers of Indian classical traditions.', 'lunar', 'https://tourism.cgstate.gov.in/', [('chhattisgarh', 'raigarh')], [9]),
+        (160, 'Sirpur National Mahotsav', 'A cultural festival at the Sirpur heritage complex on the Mahanadi, showcasing classical and folk performances against the backdrop of Sirpur\'s Buddhist, Hindu and Jain monuments.', 'lunar', 'https://tourism.cgstate.gov.in/', [('chhattisgarh', 'mahasamund')], [1, 2]),
+        (161, 'Bhoramdeo Mahotsav', 'A cultural festival held at the Bhoramdeo temple complex in Kabirdham district, featuring folk and classical performances in the temple setting.', 'varies_annually', 'https://tourism.cgstate.gov.in/', [('chhattisgarh', 'kabeerdham')], [3, 4]),
     ]
 
     def resolve_district_id(region_slug, district_slug):
@@ -1133,6 +1139,8 @@ def seed(db):
         (85, '2026-09-01', '2026-09-06', 'https://tourism.nagaland.gov.in/'),
         (86, '2026-07-08', '2026-07-08', 'https://tourism.nagaland.gov.in/'),
         (71, '2026-02-25', '2026-02-25', 'https://tourism.nagaland.gov.in/'),
+        (157, '2026-07-16', '2026-07-19', 'https://www.incredibleindia.gov.in/en/festivals-and-events/chhattisgarh/bastar-goncha-festival-2026'),
+        (158, '2026-02-01', '2026-02-15', 'https://dprcg.gov.in/post/1769672580/Rajim-Kumbh-Kalpa-2026-Tourism-and-Culture-Minister-Shri-Rajesh-Agarwal-invited-Chief-Minister-Shri-Vishnudev-Sai'),
     ]
     db.executemany(
         'INSERT OR IGNORE INTO festival_occurrences (festival_id, starts_on, ends_on, source_url, verified_at) VALUES (?,?,?,?,?)',
@@ -1309,6 +1317,15 @@ def seed(db):
            ('nongriat-double-decker-living-root-bridge', 4, 'East Jaintia Hills: Iconic double-decker living root bridge reached via 3,000-step trek from Tyrshang village'),
            ('nohkalikai-falls', 5, 'East Khasi Hills: India\'s highest plunge waterfall at 340 metres, 30 km from Mawlynnong'),
            ('mawsmai-cave', 6, 'East Khasi Hills: Open to visitors limestone cave with illuminated formations near Sohra')]),
+        (20, 'bastar-waterfalls-and-heritage', 'Bastar Waterfalls & Living Heritage Trail', 'Jagdalpur, Kanger Valley & Chitrakote in Bastar',
+         'A Bastar-focused trail linking Jagdalpur\'s palace and Danteshwari shrine with the caves and forests of Kanger Valley and the Chitrakote falls on the Indravati. Best planned at an easy pace, allowing time for local markets and seasonal conditions.',
+         '4-6 Days', 'October to March', '/assets/places/chitrakote-waterfall.jpg',
+         [('danteshwari-temple-jagdalpur', 1, 'Jagdalpur: Danteshwari temple, central to local worship and Bastar Dussehra traditions'),
+          ('bastar-palace', 2, 'Jagdalpur: Historic palace complex in the heart of the town'),
+          ('kanger-valley-national-park', 3, 'Bastar: Forested national park area known for caves, waterfalls and biodiversity (check entry timings/permits locally)'),
+          ('kutumsar-caves', 4, 'Kanger Valley: Limestone cave system visited with guides when open; access can be seasonal'),
+          ('tirathgarh-waterfall', 5, 'Bastar: Stepped waterfall in the Kanger landscape, best after the monsoon'),
+          ('chitrakote-waterfall', 6, 'Bastar: Wide horseshoe falls on the Indravati, most voluminous after the monsoon; road access from Jagdalpur')]),
     ]
 
     db.executemany('INSERT OR IGNORE INTO circuits (id,slug,name,tagline,description,duration,best_season,cover_image_url) VALUES (?,?,?,?,?,?,?,?)',

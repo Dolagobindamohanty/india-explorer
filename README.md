@@ -107,7 +107,7 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 1703 destinations, 154
+This is an expanding editorial pilot, covering 1703 destinations, 160
 traditional celebrations and festivals, 788 district directory entries across
 all 28 states and 8 union territories. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
