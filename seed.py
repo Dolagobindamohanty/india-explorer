@@ -673,8 +673,12 @@ def seed(db):
             if op['slug'] in existing_places_by_slug:
                 op['id'] = existing_places_by_slug[op['slug']]
             elif op['id'] in existing_place_ids:
+                while next_place_id in existing_place_ids:
+                    next_place_id += 1
                 op['id'] = next_place_id
+                existing_place_ids.add(next_place_id)
                 next_place_id += 1
+                continue
             existing_place_ids.add(op['id'])
         for op in canonical_extra:
             if op['slug'] in existing_place_slugs:
@@ -1079,6 +1083,16 @@ def seed(db):
         (159, 'Chakradhar Samaroh', 'An annual classical music and dance festival in Raigarh held in memory of Maharaja Chakradhar Singh, typically starting around Ganesh Chaturthi and drawing performers of Indian classical traditions.', 'lunar', 'https://tourism.cgstate.gov.in/', [('chhattisgarh', 'raigarh')], [9]),
         (160, 'Sirpur National Mahotsav', 'A cultural festival at the Sirpur heritage complex on the Mahanadi, showcasing classical and folk performances against the backdrop of Sirpur\'s Buddhist, Hindu and Jain monuments.', 'lunar', 'https://tourism.cgstate.gov.in/', [('chhattisgarh', 'mahasamund')], [1, 2]),
         (161, 'Bhoramdeo Mahotsav', 'A cultural festival held at the Bhoramdeo temple complex in Kabirdham district, featuring folk and classical performances in the temple setting.', 'varies_annually', 'https://tourism.cgstate.gov.in/', [('chhattisgarh', 'kabeerdham')], [3, 4]),
+        (162, 'Rann Utsav', 'A winter cultural festival at Dhordo in the Great Rann of Kutch featuring Kutchi folk music and dance, crafts, local cuisine and tented accommodation experiences amid the white salt desert landscape.', 'varies_annually', 'https://www.gujarattourism.com/fair-and-festival/rann-utsav.html', [('gujarat', 'kachchh')], [11, 12, 1, 2, 3]),
+        (163, 'Somnath Mahashivratri Parv', 'Mahashivratri observances and cultural programmes at Somnath in Prabhas Patan, marking the festival at the Somnath Jyotirlinga temple on the Arabian Sea coast.', 'lunar', 'https://www.gujarattourism.com/fair-and-festival/somnath-mahashivratri-parv.html', [('gujarat', 'gir-somnath')], [2]),
+        (164, 'Saputara Monsoon Festival', 'An annual monsoon-season festival in Saputara (Dang district) with cultural programmes, local crafts, food and activities set amid the Western Ghats hill landscape.', 'varies_annually', 'https://www.gujarattourism.com/fair-and-festival/saputara-monsson-festival.html', [('gujarat', 'dangs')], [8]),
+        (165, 'Mandvi Beach Festival', 'A beachside cultural festival at Mandvi in Kutch featuring local performances, crafts and coastal experiences near the historic Mandvi waterfront.', 'varies_annually', 'https://www.gujarattourism.com/fair-and-festival/mandvi-beach-festival.html', [('gujarat', 'kachchh')], [12]),
+        (166, 'Mahashivratri Mela (Bhavnath)', 'An annual Maha Shivratri fair at the Bhavnath Mahadev Temple at the foothills of Mount Girnar near Junagadh, drawing pilgrims for rituals and celebrations over several days.', 'lunar', 'https://www.gujarattourism.com/fair-and-festival/mahashivratri-mela.html', [('gujarat', 'junagadh')], [2, 3]),
+        (167, 'Kavant Fair', 'A tribal fair at Kavant in Chhotaudepur district associated with the Rathva community, featuring traditional music, dance and social gatherings, held annually after Holi.', 'lunar', 'https://www.gujarattourism.com/fair-and-festival/kavant-fair.html', [('gujarat', 'chhotaudepur')], [3]),
+        (168, 'Madhavpur Fair', 'A cultural fair at Madhavpur in Porbandar district commemorating the marriage of Lord Krishna and Rukmini, with cultural programmes and regional traditions.', 'varies_annually', 'https://www.gujarattourism.com/fair-and-festival/-madhavpur-fair.html', [('gujarat', 'porbandar')], [3, 4]),
+        (169, 'Dang Darbar', 'A traditional darbar gathering in Ahwa (Dang district) that continues the historic assembly of local rulers and village heads, accompanied by tribal cultural performances.', 'varies_annually', 'https://www.gujarattourism.com/fair-and-festival/dang-darbar.html', [('gujarat', 'dangs')], [3, 4]),
+        (170, 'Tarnetar Fair', 'An annual fair near the Trinetreshwar Temple at Tarnetar in Surendranagar district, known for folk music, dance, traditional attire and community gatherings linked to local legends.', 'varies_annually', 'https://www.gujarattourism.com/fair-and-festival/tarnetar-fair.html', [('gujarat', 'surendranagar')], [8, 9]),
+        (171, 'Ambaji Bhadarvi Poonam Fair', 'A major pilgrimage fair at Ambaji Temple in Banaskantha district held around Bhadarvi Poonam, drawing devotees to the Shakti Peetha shrine.', 'lunar', 'https://www.gujarattourism.com/fair-and-festival/ambaji-bhadarvi-poonam-fair.html', [('gujarat', 'banas-kantha')], [8, 9]),
     ]
 
     def resolve_district_id(region_slug, district_slug):
@@ -1141,6 +1155,11 @@ def seed(db):
         (71, '2026-02-25', '2026-02-25', 'https://tourism.nagaland.gov.in/'),
         (157, '2026-07-16', '2026-07-19', 'https://www.incredibleindia.gov.in/en/festivals-and-events/chhattisgarh/bastar-goncha-festival-2026'),
         (158, '2026-02-01', '2026-02-15', 'https://dprcg.gov.in/post/1769672580/Rajim-Kumbh-Kalpa-2026-Tourism-and-Culture-Minister-Shri-Rajesh-Agarwal-invited-Chief-Minister-Shri-Vishnudev-Sai'),
+        (162, '2026-11-01', '2027-03-07', 'https://www.gujarattourism.com/fair-and-festival/rann-utsav.html'),
+        (163, '2026-02-14', '2026-02-15', 'https://www.gujarattourism.com/fair-and-festival/somnath-mahashivratri-parv.html'),
+        (164, '2026-08-08', '2026-08-29', 'https://www.gujarattourism.com/fair-and-festival/saputara-monsson-festival.html'),
+        (166, '2026-02-11', '2026-02-15', 'https://www.gujarattourism.com/fair-and-festival/mahashivratri-mela.html'),
+        (168, '2026-03-26', '2026-03-26', 'https://www.gujarattourism.com/fair-and-festival/-madhavpur-fair.html'),
     ]
     db.executemany(
         'INSERT OR IGNORE INTO festival_occurrences (festival_id, starts_on, ends_on, source_url, verified_at) VALUES (?,?,?,?,?)',

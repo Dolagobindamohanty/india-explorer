@@ -1,0 +1,7 @@
+{
+  "slug": "gujarat",
+  "name": "Gujarat",
+  "kind": "state",
+  "source_url": "https://www.gujarattourism.com/",
+  "places_file": "../gujarat-places.json"
+}
