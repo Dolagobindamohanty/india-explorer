@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1797 places, 170 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 306 of 792 districts have a place; **8 states have none** (Chhattisgarh, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1947 places, 170 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 306 of 792 districts have a place; **8 states have none** (Chhattisgarh, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
@@ -76,7 +76,7 @@ Production (Vercel):
 ## 3. Feature & data inventory
 
 ### Features that exist
-Home (hero slideshow, spotlight search, stats, featured states, recents), Explore (search + category/state/month/UNESCO filters + Leaflet map), Area (states/UTs directory), State, District, Place (gallery, map, nearby, directions, best months, tags), Circuits (19 itineraries), Circuit detail (map + stops), Festivals (month tabs), Month pages, Saved (favorites, itinerary builder, distance, WhatsApp share), About, sitemap, robots.
+Home (hero slideshow, spotlight search, stats, featured states, recents), Explore (search + category/state/month/UNESCO filters + Leaflet map), Area (states/UTs directory), State, District, Place (gallery, map, nearby, directions, best months, tags), Circuits (20 itineraries), Circuit detail (map + stops), Festivals (month tabs), Month pages, Saved (favorites, itinerary builder, distance, WhatsApp share), About, sitemap, robots.
 
 ### APIs (12)
 `/api/states`, `/api/union-territories`, `/api/states/{slug}`, `/api/districts`, `/api/districts/{slug}`, `/api/places`, `/api/places/{slug}`, `/api/festivals`, `/api/circuits`, `/api/circuits/{slug}`, `/healthz`, `/api/editorial-status`.
@@ -84,21 +84,21 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 1797 |
-| Verified | **0** (all 726 `needs_review`) |
-| With entry fee / address | 646 / 646 (80 missing each → 160 warnings) |
-| Districts with ≥1 place | 306 / 788 |
-| States with 0 places | **13** (Assam, Bihar, Chhattisgarh, Gujarat, Haryana, Jharkhand, MP, Maharashtra, Manipur, Punjab, Telangana, Uttarakhand, West Bengal) |
-| Festival occurrences | 0 (only recurring month windows) |
-| Attribution records | 780 for 726 places (54 orphans) |
+| Places | 1947 |
+| Verified | **0** (all 1947 `needs_review`) |
+| With entry fee / address | 1871 / 1871 (76 missing each → 152 warnings) |
+| Districts with ≥1 place | 374 / 792 |
+| States with 0 places | **7** (Jharkhand, Madhya Pradesh, Manipur, Punjab, Telangana, Uttarakhand, West Bengal) |
+| Festival occurrences | 23 confirmed dates |
+| Attribution records | 1975 for 1805 dataset places (170 orphan keys) |
 | Canonical validation | 0 errors / 0 warnings |
-| DB validation | 0 errors / 160 warnings |
+| DB validation | 0 errors / 152 warnings |
 
 ### Positives worth keeping
-- Every one of the 726 places has an image, and **all referenced images exist on disk** (0 broken refs).
-- Attribution metadata is present for every place.
+- Every one of the 1947 places has an image, and **all referenced images exist on disk** (0 broken refs).
+- Attribution metadata is present for every canonical dataset place.
 - Data normalization/validation pipeline is real and CI-enforced.
-- Sitemap is comprehensive (1,602 URLs) and robots.txt is correct.
+- Sitemap is comprehensive (2,813 URLs) and robots.txt is correct.
 - HSTS is on, static assets get `max-age=31536000, immutable`.
 
 ---
