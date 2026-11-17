@@ -10783,5 +10783,577 @@
     "file": "jamnagar.jpg",
     "source_page": "https://www.gujarattourism.com/saurashtra/jamnagar/jamnagar.html",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page."
+  },
+  "jonha-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_121800.jpg",
+    "file": "jonha-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/51",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "palamu-fort": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_125540.jpg",
+    "file": "palamu-fort.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/52",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "baidyanath-dham": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180813_170214.jpg",
+    "file": "baidyanath-dham.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/53",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "amadubi": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20230104_130059.jpg",
+    "file": "amadubi.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/54",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "satsang-ashram": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160204_100331.jpg",
+    "file": "satsang-ashram.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/55",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap node named satsang in Deoghar, matching the Satsang Ashram; the state page gives no map coordinates."
+  },
+  "netarhat-sunrise-point": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170426_224210.JPG",
+    "file": "netarhat-sunrise-point.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/58",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "saranda-forest": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_125335.jpg",
+    "file": "saranda-forest.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/61",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "dassam-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_130830.jpg",
+    "file": "dassam-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/64",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "panchghagh-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_133012.jpg",
+    "file": "panchghagh-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/65",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "lower-ghaghri-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180425_234354.jpg",
+    "file": "lower-ghaghri-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/67",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "lodh-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180426_002517.jpg",
+    "file": "lodh-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/68",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "mirchaiya-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_134151.jpg",
+    "file": "mirchaiya-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/69",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "betla-national-park": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_171824.jpg",
+    "file": "betla-national-park.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/70",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "birsa-deer-park": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_172304.jpg",
+    "file": "birsa-deer-park.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/71",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Spotwander point for Birsa Mrig Vihar at Kalamati; the state page gives no map coordinates."
+  },
+  "tenughat-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_172732.jpg",
+    "file": "tenughat-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/72",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "tilaiya-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_173013.jpg",
+    "file": "tilaiya-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/73",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "khandoli": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_173215.jpg",
+    "file": "khandoli.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/74",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "kiriburu": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_174351.jpg",
+    "file": "kiriburu.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/76",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "burudih-lake": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_175152.jpg",
+    "file": "burudih-lake.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/77",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "vibhuti-bhushan-house": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_175459.jpg",
+    "file": "vibhuti-bhushan-house.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/78",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "naulakha-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_175941.jpg",
+    "file": "naulakha-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/79",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "nandan-pahar": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_180226.jpg",
+    "file": "nandan-pahar.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/80",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "basukinath-dham": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_180826.jpg",
+    "file": "basukinath-dham.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/81",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "parasnath-hill": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_181631.jpg",
+    "file": "parasnath-hill.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/82",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "sun-temple-bundu": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_182205.jpg",
+    "file": "sun-temple-bundu.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/83",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "maluti-temples": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_182520.jpg",
+    "file": "maluti-temples.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/84",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "rikhia-ashram": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160204_100253.jpg",
+    "file": "rikhia-ashram.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/85",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "deuridih": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160204_102228.jpg",
+    "file": "deuridih.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/86",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "mccluskieganj": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160204_102538.jpg",
+    "file": "mccluskieganj.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/87",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "hirni-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160208_093043.jpg",
+    "file": "hirni-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/88",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "pahari-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_101846.jpg",
+    "file": "pahari-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/89",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "ranchi-lake": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_102232.jpg",
+    "file": "ranchi-lake.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/90",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "rock-garden-ranchi": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_102355.jpg",
+    "file": "rock-garden-ranchi.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/91",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "kanke-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_102514.jpg",
+    "file": "kanke-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/92",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "tagore-hill": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_102705.jpg",
+    "file": "tagore-hill.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/93",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "jagannath-temple-dhurwa": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_103139.jpg",
+    "file": "jagannath-temple-dhurwa.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/94",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "hundru-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_120617.jpg",
+    "file": "hundru-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/95",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "sita-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180813_164219.jpg",
+    "file": "sita-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/96",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "deori-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_122935.jpg",
+    "file": "deori-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/97",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "massanjore-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_124130.jpg",
+    "file": "massanjore-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/98",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "moti-jharna": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_124430.jpg",
+    "file": "moti-jharna.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/99",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "udhwa-lake-bird-sanctuary": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_124955.jpg",
+    "file": "udhwa-lake-bird-sanctuary.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/100",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "maithon-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_125213.jpg",
+    "file": "maithon-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/101",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "topchanchi-lake": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_125427.jpg",
+    "file": "topchanchi-lake.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/102",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "bhatinda-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_125909.jpg",
+    "file": "bhatinda-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/103",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "trikut-hills": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_130709.jpg",
+    "file": "trikut-hills.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/104",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "tapovan-hill": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_131146.jpg",
+    "file": "tapovan-hill.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/105",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "itkhori": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_132030.jpg",
+    "file": "itkhori.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/107",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "bhadrakali-temple-chatra": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_132253.jpg",
+    "file": "bhadrakali-temple-chatra.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/108",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "dimna-lake": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_132502.jpg",
+    "file": "dimna-lake.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/109",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "jubilee-park": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_132655.jpg",
+    "file": "jubilee-park.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/110",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "rankini-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_133133.jpg",
+    "file": "rankini-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/111",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "upper-ghaghri-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_141113.jpg",
+    "file": "upper-ghaghri-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/112",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "suga-bandh-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_141627.jpg",
+    "file": "suga-bandh-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/113",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "chandil-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20241212_121427.jpg",
+    "file": "chandil-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/114",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "dalma-wildlife-sanctuary": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_142116.jpg",
+    "file": "dalma-wildlife-sanctuary.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/115",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "hazaribagh-national-park": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_142321.jpg",
+    "file": "hazaribagh-national-park.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/116",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "suraj-kund": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_142747.jpg",
+    "file": "suraj-kund.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/117",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Surajkund hot spring in Hazaribagh district from OpenStreetMap/Wikipedia; the state page gives no map coordinates."
+  },
+  "megaliths-hazaribagh": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_143201.jpg",
+    "file": "megaliths-hazaribagh.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/118",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Megalith site near Barkagaon from OpenStreetMap/Spotwander; the state page describes the location but gives no map coordinates."
+  },
+  "chhinnamasta-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_143557.jpg",
+    "file": "chhinnamasta-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/119",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "patratu-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_143850.jpg",
+    "file": "patratu-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/120",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "usri-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_145623.jpg",
+    "file": "usri-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/121",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "anjan-gram": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20161007_110721.jpg",
+    "file": "anjan-gram.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/122",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Gumla town, the district headquarters from which Anjan Gram is reached 18 km away via Toto; the state page gives no map coordinates for the village."
+  },
+  "state-museum-ranchi": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170411_163633.jpg",
+    "file": "state-museum-ranchi.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/123",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "indra-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170426_191102.jpg",
+    "file": "indra-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/124",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "kanti-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170426_192936.jpg",
+    "file": "kanti-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/125",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "magnolia-sunset-point": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170426_222144.jpg",
+    "file": "magnolia-sunset-point.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/126",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "sarju-valley": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170426_233655.jpg",
+    "file": "sarju-valley.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/127",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Sarju valley in Garu block from OpenStreetMap/Photon; the state page gives no map coordinates."
+  },
+  "nakshatra-van": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170508_222041.jpg",
+    "file": "nakshatra-van.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/128",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "luguburu-ghantabari": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20171103_183126.jpg",
+    "file": "luguburu-ghantabari.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/131",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "lavapani-falls": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180103_165258.jpg",
+    "file": "lavapani-falls.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/132",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "hatia-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180409_121623.jpg",
+    "file": "hatia-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/133",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "tanginath": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20201006_113834.jpg",
+    "file": "tanginath.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/134",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "biodiversity-park-ranchi": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180508_120652.jpg",
+    "file": "biodiversity-park-ranchi.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/136",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "ugratara-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180508_132728.jpg",
+    "file": "ugratara-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/137",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Tori, the nearest town about 37 km from Latehar; the temple lies near Tori and the state page gives no map coordinates."
+  },
+  "netarhat-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180514_142333.jpg",
+    "file": "netarhat-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/138",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Spotwander point for Netarhat Lake, the reservoir formed by the dam about 1.5-2 km from Netarhat bus stand."
+  },
+  "koel-river-view-point": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180514_161300.jpg",
+    "file": "koel-river-view-point.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/140",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "chalet-house": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180518_143953.jpg",
+    "file": "chalet-house.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/142",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Netarhat town centre, since the state page places Chalet House within Netarhat and gives no separate map point."
+  },
+  "tattapani-hot-spring": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180518_145406.jpg",
+    "file": "tattapani-hot-spring.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/143",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Plus code RFFR+5QF for Jagram, the village named on the state page about 11 km from Latehar; the exact spring outlet is not mapped separately."
+  },
+  "sun-temple-giridih": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180522_173825.jpg",
+    "file": "sun-temple-giridih.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/144",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "shakti-mandir": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180528_163455.jpg",
+    "file": "shakti-mandir.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/145",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "harihar-dham": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180529_124907.jpg",
+    "file": "harihar-dham.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/146",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "ulihatu": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180618_173445.jpg",
+    "file": "ulihatu.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/147",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "sidhu-kanhu-park": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180627_162743.jpg",
+    "file": "sidhu-kanhu-park.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/148",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "ranchi-science-centre": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180827_172753.jpg",
+    "file": "ranchi-science-centre.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/149",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Approximate point for the Ranchi Science Centre area in the state capital; the state page gives no map coordinates."
+  },
+  "palna-dam": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20190604_152911.jpg",
+    "file": "palna-dam.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/192",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Spotwander/OpenStreetMap point for Palna Dam near Chandil; the state page gives no map coordinates."
+  },
+  "lapung-sai-temple": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20190604_171851.jpg",
+    "file": "lapung-sai-temple.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/203",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "patratu-valley": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20190606_114152.jpg",
+    "file": "patratu-valley.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/204",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "kaitha-shiv-mandir": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20190610_104239.jpg",
+    "file": "kaitha-shiv-mandir.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/212",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "chutupalu-valley": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20190701_120213.jpg",
+    "file": "chutupalu-valley.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/214",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Wikipedia coordinates for Chutupalu on the Ranchi-Hazaribagh road; the valley is the highway descent at the same roadside site as the Sheikh Bhikhari Shahadat Sthal rather than a separately mapped point."
+  },
+  "jain-museum-madhuban": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20220414_140238.jpg",
+    "file": "jain-museum-madhuban.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/215",
+    "note": "Official Jharkhand Tourism banner image."
+  },
+  "sheikh-bhikhari-tomb": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20190701_123308.jpg",
+    "file": "sheikh-bhikhari-tomb.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/216",
+    "note": "Official Jharkhand Tourism banner image.",
+    "coordinate_note": "Coordinate reference: Wikipedia coordinates for Chutupalu, where the Shahadat Sthal memorial stands on the Ranchi-Hazaribagh road; the state page gives no map coordinates, and the point is shared with the Chutupalu valley listing because they are the same roadside site."
+  },
+  "yogoda-satsanga-math": {
+    "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20230104_154700.jpg",
+    "file": "yogoda-satsanga-math.jpg",
+    "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/218",
+    "note": "Official Jharkhand Tourism banner image."
   }
 }
