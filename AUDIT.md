@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1947 places, 170 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 306 of 792 districts have a place; **8 states have none** (Chhattisgarh, Jharkhand, MP, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 1950 places, 170 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 374 of 792 districts have a place; **7 states have none** (Jharkhand, Madhya Pradesh, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
@@ -84,21 +84,21 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 1947 |
-| Verified | **0** (all 1947 `needs_review`) |
-| With entry fee / address | 1871 / 1871 (76 missing each → 152 warnings) |
+| Places | 1950 |
+| Verified | **0** (all 1950 `needs_review`) |
+| With entry fee / address | 1874 / 1874 (76 missing each → 152 warnings) |
 | Districts with ≥1 place | 374 / 792 |
 | States with 0 places | **7** (Jharkhand, Madhya Pradesh, Manipur, Punjab, Telangana, Uttarakhand, West Bengal) |
 | Festival occurrences | 23 confirmed dates |
-| Attribution records | 1975 for 1805 dataset places (170 orphan keys) |
+| Attribution records | 1978 for 1808 dataset places (170 orphan keys) |
 | Canonical validation | 0 errors / 0 warnings |
 | DB validation | 0 errors / 152 warnings |
 
 ### Positives worth keeping
-- Every one of the 1947 places has an image, and **all referenced images exist on disk** (0 broken refs).
+- Every one of the 1950 places has an image, and **all referenced images exist on disk** (0 broken refs).
 - Attribution metadata is present for every canonical dataset place.
 - Data normalization/validation pipeline is real and CI-enforced.
-- Sitemap is comprehensive (2,813 URLs) and robots.txt is correct.
+- Sitemap is comprehensive (2,816 URLs) and robots.txt is correct.
 - HSTS is on, static assets get `max-age=31536000, immutable`.
 
 ---

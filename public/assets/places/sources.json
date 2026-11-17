@@ -10763,5 +10763,25 @@
     "file": "udvada-parsi-pilgrims.jpg",
     "source_page": "https://www.gujarattourism.com/south-zone/valsad/udvada-parsi-pilgrims.html",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page."
+  },
+  "glow-garden": {
+    "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/glow-garden/Unity_glow_1.jpg",
+    "file": "glow-garden.jpg",
+    "source_page": "https://www.gujarattourism.com/central-zone/narmada/glow-garden.html",
+    "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap node named \"Unity Glow Garden\" (an artwork/fountain in the Statue of Unity complex). The Gujarat Tourism page map embed places the garden near Vadodara and was not used."
+  },
+  "royal-chhatardis": {
+    "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/royal-chhatardis/Royal-Chhatardis-Thumbnail.jpg",
+    "file": "royal-chhatardis.jpg",
+    "source_page": "https://www.gujarattourism.com/kutch-zone/kutch/royal-chhatardis.html",
+    "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap node \"Rao Lakhpatji Chhatri\" in the Chhatri Bari area southwest of Hamirsar Lake, matching the Gujarat Tourism description. The page has no map embed."
+  },
+  "jamnagar": {
+    "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/destinations/jamnagar/heritage/ranmal---lakhota-lake/Ranmal%20Lake%20(8).jpg",
+    "file": "jamnagar.jpg",
+    "source_page": "https://www.gujarattourism.com/saurashtra/jamnagar/jamnagar.html",
+    "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page."
   }
 }
