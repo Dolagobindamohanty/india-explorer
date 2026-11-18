@@ -1,0 +1,7 @@
+{
+  "slug": "manipur",
+  "name": "Manipur",
+  "kind": "state",
+  "source_url": "https://manipurtourism.gov.in/",
+  "places_file": "../manipur-places.json"
+}

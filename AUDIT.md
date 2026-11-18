@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2043 places, 181 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 392 of 792 districts have a place; **6 states have none** (Madhya Pradesh, Manipur, Punjab, Telangana, Uttarakhand, West Bengal).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2099 places, 194 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 408 of 792 districts have a place; **5 states have none** (Madhya Pradesh, Punjab, Telangana, Uttarakhand, West Bengal).
 
 ---
 
@@ -33,8 +33,8 @@ Everything else is quality, scale, SEO, and hygiene work — valuable, but not o
 
 ```
 data/india-states-districts.json        (36 regions, 792 districts)
-data/states/*.json                      (15 state manifests)
-data/*-places.json                      (15 place documents)
+data/states/*.json                      (16 state manifests)
+data/*-places.json                      (16 place documents)
             │
             ▼
      data_pipeline.py   normalize → validate → import_report
@@ -84,21 +84,21 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 2043 |
-| Verified | **0** (all 2043 `needs_review`) |
-| With entry fee / address | 1967 / 1967 (76 missing each → 152 warnings) |
-| Districts with ≥1 place | 392 / 792 |
-| States with 0 places | **6** (Madhya Pradesh, Manipur, Punjab, Telangana, Uttarakhand, West Bengal) |
+| Places | 2099 |
+| Verified | **0** (all 2099 `needs_review`) |
+| With entry fee / address | 2023 / 2023 (76 missing each → 152 warnings) |
+| Districts with ≥1 place | 408 / 792 |
+| States with 0 places | **5** (Madhya Pradesh, Punjab, Telangana, Uttarakhand, West Bengal) |
 | Festival occurrences | 23 confirmed dates |
-| Attribution records | 2071 for 1901 dataset places (170 orphan keys) |
-| Canonical validation | 0 errors / 1 warning (Chutupalu valley and Sheikh Bhikhari Shahadat Sthal share one roadside coordinate) |
-| DB validation | 0 errors / 153 warnings |
+| Attribution records | 2127 for 1957 dataset places (170 orphan keys) |
+| Canonical validation | 0 errors / 2 warnings (Chutupalu valley and Sheikh Bhikhari Shahadat Sthal share one roadside coordinate; four Andro heritage sites share the mapped village reference) |
+| DB validation | 0 errors / 154 warnings |
 
 ### Positives worth keeping
-- Every one of the 2043 places has an image, and **all referenced images exist on disk** (0 broken refs).
+- Every one of the 2099 places has an image, and **all referenced images exist on disk** (0 broken refs).
 - Attribution metadata is present for every canonical dataset place.
 - Data normalization/validation pipeline is real and CI-enforced.
-- Sitemap is comprehensive (2,909 URLs) and robots.txt is correct.
+- Sitemap is comprehensive (2,965 URLs) and robots.txt is correct.
 - HSTS is on, static assets get `max-age=31536000, immutable`.
 
 ---

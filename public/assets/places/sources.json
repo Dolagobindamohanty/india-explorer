@@ -11355,5 +11355,397 @@
     "file": "yogoda-satsanga-math.jpg",
     "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/218",
     "note": "Official Jharkhand Tourism banner image."
+  },
+  "loktak-lake": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/Loktak.png",
+    "file": "loktak-lake.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Loktak Lake.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon centroid for Loktak Lake; the lake covers a wide area and the state page gives no single visitor point."
+  },
+  "keibul-lamjao-national-park": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2017/06/keibullamjao.jpg",
+    "file": "keibul-lamjao-national-park.jpg",
+    "source_page": "https://manipurtourism.gov.in/in-around-loktak-lake/",
+    "note": "Official Manipur Tourism photograph from the In and around Loktak Lake page.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Wikipedia point for Keibul Lamjao National Park within Loktak Lake; the park has no single mapped entrance."
+  },
+  "sendra-island": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Loktak_Lake_from_Sendra_point%2C_December_2016.jpg/500px-Loktak_Lake_from_Sendra_point%2C_December_2016.jpg",
+    "file": "sendra-island.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Loktak_Lake_from_Sendra_point,_December_2016.jpg",
+    "note": "Wikimedia Commons photograph of Loktak Lake viewed from Sendra; official pages carry no Sendra-specific image.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for the Sendra lakeside homestay near Phubala on the Tedim Road; the hillock viewpoint is not mapped separately."
+  },
+  "ina-memorial-moirang": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/INA-MEMORIAL.png",
+    "file": "ina-memorial-moirang.jpg",
+    "source_page": "https://manipurtourism.gov.in/historical-site/",
+    "note": "Official Manipur Tourism illustration of the INA Memorial.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for the INA Memorial at Moirang; the state page gives no map coordinates."
+  },
+  "red-hill-lokpaching": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/RED-HILL-MAIBAM-LOKPACHING-INDIA-PEACE-MEMORIAL.png",
+    "file": "red-hill-lokpaching.jpg",
+    "source_page": "https://manipurtourism.gov.in/historical-site/",
+    "note": "Official Manipur Tourism illustration of Red Hill and the India Peace Memorial.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Maibam Lokpaching, the Red Hill battle site on the Tiddim Road; the state page gives no map coordinates."
+  },
+  "takmu-water-sports-complex": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/TAKMU-WATER-SPORTS-COMPLEX.png",
+    "file": "takmu-water-sports-complex.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of the Takmu Water Sports Complex.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Takmu on Loktak Lake; the sports complex is an area rather than a single mapped point."
+  },
+  "shri-gopinath-temple": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SHRI-GOPINATH-TEMPLE.png",
+    "file": "shri-gopinath-temple.jpg",
+    "source_page": "https://manipurtourism.gov.in/culture-and-heritage/",
+    "note": "Official Manipur Tourism illustration of Shri Gopinath Temple.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Shri Gopinath Temple at Ningthoukhong; the state page gives no map coordinates."
+  },
+  "lakoi-pat": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2017/06/image.png",
+    "file": "lakoi-pat.jpg",
+    "source_page": "https://manipurtourism.gov.in/in-around-loktak-lake/",
+    "note": "Official Manipur Tourism image placed beside the Lakoi Pat description on the Loktak Lake page.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Loukoi Pat near the Tiddim Road; the state page gives no map coordinates."
+  },
+  "kangla-fort": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/KANGLA.png",
+    "file": "kangla-fort.jpg",
+    "source_page": "https://manipurtourism.gov.in/historical-site/",
+    "note": "Official Manipur Tourism illustration of Kangla.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Wikipedia point for Kangla Fort in central Imphal; the fort complex covers more than one mapped point."
+  },
+  "shaheed-minar": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SHAHEED-MINAR.png",
+    "file": "shaheed-minar.jpg",
+    "source_page": "https://manipurtourism.gov.in/historical-site/",
+    "note": "Official Manipur Tourism illustration of Shaheed Minar.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Shaheed Minar at Bir Tikendrajit Park, Imphal; the state page gives no map coordinates."
+  },
+  "imphal-war-cemetery": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/IMPHAL-WAR-CEMETERY.png",
+    "file": "imphal-war-cemetery.jpg",
+    "source_page": "https://manipurtourism.gov.in/historical-site/",
+    "note": "Official Manipur Tourism illustration of the Imphal War Cemetery.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for the Imphal War Cemetery; the state page gives no map coordinates."
+  },
+  "mapal-kangjeibung": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/MAPAL-KANGJEIBUNG.png",
+    "file": "mapal-kangjeibung.jpg",
+    "source_page": "https://manipurtourism.gov.in/exclusive-destination/",
+    "note": "Official Manipur Tourism illustration of Mapal Kangjeibung.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Mapal Kangjeibung, the polo ground in central Imphal; the ground is an area rather than a single point."
+  },
+  "ima-keithel": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/ema-keithel3.jpg",
+    "file": "ima-keithel.jpg",
+    "source_page": "https://manipurtourism.gov.in/exclusive-destination/",
+    "note": "Official Manipur Tourism photograph of Ema Market (Ima Keithel).",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Khwairamband Bazar (Ima Keithel), Imphal; the market spans more than one block."
+  },
+  "shri-bijoy-govindaji-temple": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SHRI-BIJOY-GOVINDAJI-TEMPLE-SAGOLBAND.png",
+    "file": "shri-bijoy-govindaji-temple.jpg",
+    "source_page": "https://manipurtourism.gov.in/culture-and-heritage/",
+    "note": "Official Manipur Tourism illustration of Shri Bijoy Govindaji Temple, Sagolband.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Shri Bijoy Govindaji Temple at Sagolband; the state page gives no map coordinates."
+  },
+  "khonghampat-orchidarium": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/KHONGHAMPAT-ORCHIDARIUM.png",
+    "file": "khonghampat-orchidarium.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Khonghampat Orchidarium.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Khonghampat village, home of the orchidarium about 10 km from Imphal; the state page gives no map coordinates."
+  },
+  "shree-govindajee-temple": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/govindajee.png",
+    "file": "shree-govindajee-temple.jpg",
+    "source_page": "https://manipurtourism.gov.in/culture-and-heritage/",
+    "note": "Official Manipur Tourism illustration of Shree Shree Govindajee Temple.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node named Shree Govindajee Temple on Wangkhei Road, Imphal East; the state page gives no map coordinates."
+  },
+  "mutua-museum": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/MUTUA-MUSEUM.jpg",
+    "file": "mutua-museum.jpg",
+    "source_page": "https://manipurtourism.gov.in/culture-and-heritage/",
+    "note": "Official Manipur Tourism photograph of Mutua Museum.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Andro village, Keirao Bitra, Imphal East, about 26 km from Imphal; the Mutua Museum is not mapped separately, and the four Andro sites share this village reference."
+  },
+  "panam-ningthou-temple": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2024/02/Panam-Ningthou-Temple-scaled.jpg",
+    "file": "panam-ningthou-temple.jpg",
+    "source_page": "https://manipurtourism.gov.in/culture-and-heritage/",
+    "note": "Official Manipur Tourism photograph of Panam Ningthou Temple.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Andro village, Keirao Bitra, Imphal East; the temple is not mapped separately, and the four Andro sites share this village reference."
+  },
+  "panam-eco-park": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/PANAM-ECO-PARK.png",
+    "file": "panam-eco-park.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of Panam Eco-Park.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Andro village, Keirao Bitra, Imphal East; the eco-park is not mapped separately, and the four Andro sites share this village reference."
+  },
+  "marjing-polo-complex": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/Marjing-polo.jpg",
+    "file": "marjing-polo-complex.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism photograph of the Marjing Polo Complex.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Marjing/Heingang, where the polo complex and Ibudhou Marjing shrine are located; the state page gives no map coordinates."
+  },
+  "santhei-natural-park": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SANTHEI-NATURAL-PARK.png",
+    "file": "santhei-natural-park.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of Santhei Natural Park.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Andro village, Keirao Bitra, Imphal East; the park is not mapped separately, and the four Andro sites share this village reference."
+  },
+  "shilheipung": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SHILHEIPUNG.png",
+    "file": "shilheipung.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of Shilheipung.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Shilheipung near Lamlai in Imphal East district; the state page gives no map coordinates."
+  },
+  "awunching-park": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/AWUNCHING-PARK.png",
+    "file": "awunching-park.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of Awunching Park.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Awunching in Imphal East district; the state page gives no map coordinates."
+  },
+  "maasic": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/MAASIC.png",
+    "file": "maasic.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of the Manipur Adventure and Allied Sports Institute.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Keirao Bitra, Imphal East, where the MAASI complex at Keirao is located; the institute is not mapped separately."
+  },
+  "khongjom-war-memorial": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/KHONGJOM-WAR-MEMORIAL.png",
+    "file": "khongjom-war-memorial.jpg",
+    "source_page": "https://manipurtourism.gov.in/historical-site/",
+    "note": "Official Manipur Tourism illustration of the Khongjom War Memorial.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Khongjom War Memorial on Kheba hill, Thoubal; the state page gives no map coordinates."
+  },
+  "kaina-temple": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/KAINA-TEMPLE-SHRI-BUNGSHIBUDON-TEMPLE.png",
+    "file": "kaina-temple.jpg",
+    "source_page": "https://manipurtourism.gov.in/culture-and-heritage/",
+    "note": "Official Manipur Tourism illustration of Kaina Temple and Shri Bungshibudon Temple.",
+    "coordinate_note": "Coordinate reference: Approximate point for Kaina on the hillock in Thoubal district from OpenStreetMap/Photon; the temple is not mapped separately."
+  },
+  "mmrc-park": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/A_traditional_Meitei_dragon_watercraft_%28Hiyang_Hiren_alias_Hiyang_Hirel%29_in_the_MMRC_%26_Unity_Park%2C_Khangabok%2C_Thoubal_district%2C_Kangleipak_%28Manipur%29.jpg/500px-A_traditional_Meitei_dragon_watercraft_%28Hiyang_Hiren_alias_Hiyang_Hirel%29_in_the_MMRC_%26_Unity_Park%2C_Khangabok%2C_Thoubal_district%2C_Kangleipak_%28Manipur%29.jpg",
+    "file": "mmrc-park.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_traditional_Meitei_dragon_watercraft_(Hiyang_Hiren_alias_Hiyang_Hirel)_in_the_MMRC_%26_Unity_Park,_Khangabok,_Thoubal_district,_Kangleipak_(Manipur).jpg",
+    "note": "Wikimedia Commons photograph of MMRC and Unity Park at Khangabok; no official MMRC image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Khangabok, Thoubal, the location named by the state page for MMRC and Unity Park; the park is not mapped separately."
+  },
+  "waithou-lake": {
+    "download_url": "https://discovermanipur.vercel.app/file-uploads/wa4.jpg",
+    "file": "waithou-lake.jpg",
+    "source_page": "https://discovermanipur.vercel.app/hotspots/waithou-lake",
+    "note": "Photograph from the DiscoverManipur Waithou Lake hotspot page; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Waithou in Thoubal district; the lake is an area and no entrance point is mapped."
+  },
+  "kakching-garden": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/kacking-Garden.jpg",
+    "file": "kakching-garden.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism photograph of Kakching Garden.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Kakching town, where Uyok Ching and Kakching Garden are located; the garden is not mapped separately."
+  },
+  "shirui-hills": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SHIRUI-HILLS.png",
+    "file": "shirui-hills.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Shirui Hills.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Wikidata point for Shirui Hills (Shirui Kashung) in Ukhrul district; the hilltop covers an area with no single visitor point."
+  },
+  "khangkhui-lime-caves": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/KHANGKHUI-LIME-CAVES.png",
+    "file": "khangkhui-lime-caves.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Khangkhui Lime Caves.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Khangkhui village, Ukhrul, where the lime caves are located; the cave mouth is not mapped separately."
+  },
+  "phangrei": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/PHANGREI.png",
+    "file": "phangrei.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Phangrei.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Phangrei peak in Ukhrul district; the state page gives no map coordinates."
+  },
+  "dzukou-valley-manipur": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/DZUKO-VALLEY.png",
+    "file": "dzukou-valley-manipur.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Dzuko Valley.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Google Maps point for Dzukou Valley on the Manipur-Nagaland border; the valley is a trekking area rather than a single point, and this slug is distinct from the Nagaland Dzukou Valley record."
+  },
+  "yangkhullen-village": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/YANGKHULLEN.png",
+    "file": "yangkhullen-village.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Yangkhullen.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Yangkhullen village in Senapati district; the state page gives no map coordinates."
+  },
+  "willong-khullen": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Stone_Erections_of_Willong_Khullen.jpg/500px-Stone_Erections_of_Willong_Khullen.jpg",
+    "file": "willong-khullen.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Stone_Erections_of_Willong_Khullen.jpg",
+    "note": "Wikimedia Commons photograph of the Willong Khullen stone erections; no official image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Willong Khullen in Senapati district; the megalith site is not mapped separately."
+  },
+  "sadu-chiru-waterfall": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SADU-CHIRU-WATERFALL.png",
+    "file": "sadu-chiru-waterfall.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Sadu Chiru Waterfall.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for the Sadu Chiru waterfall area near the Tiddim Road; official pages disagree on whether the site is in Senapati or Kangpokpi district."
+  },
+  "koubru-peak": {
+    "download_url": "https://discovermanipur.vercel.app/file-uploads/26.jpg",
+    "file": "koubru-peak.jpg",
+    "source_page": "https://discovermanipur.vercel.app/hotspots/mount-koubru",
+    "note": "Photograph from the DiscoverManipur Mount Koubru hotspot page; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Mount Koubru in Kangpokpi district; the summit is a broad area with no single mapped visitor point."
+  },
+  "eco-park-thangal-surung": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/ECO-PARK-THANGAL-SURUNG.png",
+    "file": "eco-park-thangal-surung.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism illustration of the Thangal Surung eco-park.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Thangal Surung, Kangpokpi; the eco-park is not mapped separately."
+  },
+  "tharon-cave": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/THARON-CAVE.png",
+    "file": "tharon-cave.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Tharon Cave.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Tharon village, about 27 km from Tamenglong town; the cave entrance is not mapped separately."
+  },
+  "bunning-meadow": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/BUNNING-MEADOW.png",
+    "file": "bunning-meadow.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Bunning Meadow.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Bunning near Tamei in Tamenglong district; the meadow is an area with no single mapped point."
+  },
+  "zeilad-lake": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/ZEILAD-LAKE.png",
+    "file": "zeilad-lake.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Zeilad Lake.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Zeilad Lake, a hill lake and wildlife sanctuary in Tamenglong district; the sanctuary covers a wider area."
+  },
+  "barak-waterfalls": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/BARAK-WATERFALLS.png",
+    "file": "barak-waterfalls.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Barak Waterfalls.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Barak Falls in the Tamenglong forests; the state page gives no map coordinates."
+  },
+  "rani-gaidinliu-tomb": {
+    "download_url": "http://www.e-pao.org/galleries/images/News_Related/2015/07/Gaidinlui_20150726.jpg",
+    "file": "rani-gaidinliu-tomb.jpg",
+    "source_page": "http://e-pao.net/epSubPageExtractor.asp?src=travel.Manipur_Travel_Log.In_the_den_of_Rani_Gaidinliu_Mount_Kisha_at_Magulong_Village_By_Kh_Hitler",
+    "note": "Photograph from E-Pao's travel log on Rani Gaidinliu and Mount Kisha, credited to Hueiyen Lanpao; no official image is published.",
+    "coordinate_note": "Coordinate reference: Photon point for Nungkao/Longkao village in Tamenglong district, associated with Rani Gaidinliu's final years; the tomb itself is not separately mapped, so treat this as an area reference."
+  },
+  "khoupum-valley": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/KHOUPUM-VALLEY.png",
+    "file": "khoupum-valley.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Khoupum Valley.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Khoupum in Noney district; the valley is a broad area with no single mapped visitor point."
+  },
+  "integrated-tourist-destination-tupul": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/FTUPUL-1.jpg",
+    "file": "integrated-tourist-destination-tupul.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism photograph of the integrated tourist destination at Tupul.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Tupul in Noney district; the tourism site is not mapped separately."
+  },
+  "khuga-dam": {
+    "download_url": "https://discovermanipur.vercel.app/file-uploads/21.jpg",
+    "file": "khuga-dam.jpg",
+    "source_page": "https://discovermanipur.vercel.app/hotspots/khuga-dam",
+    "note": "Photograph from the DiscoverManipur Khuga Dam hotspot page; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Khuga Dam near Mata village, about 3 km from Churachandpur town; the reservoir covers a wider area."
+  },
+  "ngaloi-waterfall": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Ngaloi_Waterfall.jpg/500px-Ngaloi_Waterfall.jpg",
+    "file": "ngaloi-waterfall.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ngaloi_Waterfall.jpg",
+    "note": "Wikimedia Commons photograph of Ngaloi Waterfall; the district NIC page carries no usable full image.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Ngaloi (Ngaloimoul) village about 9 km from Churachandpur; the falls are not mapped as a separate point."
+  },
+  "tonglon-cave": {
+    "download_url": "https://discovermanipur.vercel.app/file-uploads/72.jpg",
+    "file": "tonglon-cave.jpg",
+    "source_page": "https://discovermanipur.vercel.app/hotspots/tonglon-cave",
+    "note": "Photograph from the DiscoverManipur Tonglon Cave hotspot page; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Tonglon in Singngat sub-division, Churachandpur district; the cave group is not mapped separately."
+  },
+  "manipur-mountaineering-institute-lamdan": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/lamdam.jpg",
+    "file": "manipur-mountaineering-institute-lamdan.jpg",
+    "source_page": "https://manipurtourism.gov.in/1508-2/",
+    "note": "Official Manipur Tourism photograph of Lamdan, the home of the Manipur Mountaineering Institute.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Lamdan, Churachandpur, where the Mountaineering Institute is located; the institute is not mapped separately."
+  },
+  "luipi-waterfall": {
+    "download_url": "https://cdn.s3waas.gov.in/s31fc214004c9481e4c8073e85323bfd4b/uploads/2021/10/2021101246-1.jpg",
+    "file": "luipi-waterfall.jpg",
+    "source_page": "https://pherzawl.nic.in/tourist-place/luipi-waterfall/",
+    "note": "Official Pherzawl District NIC image of Luipi Waterfall.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Pherzawl town, the nearest mapped settlement named by the district page for Luipi Waterfall; the falls themselves are not mapped."
+  },
+  "yangoupokpi-lokchao-wildlife-sanctuary": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/YANGOUPOKPI_LOKCHAO_WILDLIFE_SANCTUARY.jpg/500px-YANGOUPOKPI_LOKCHAO_WILDLIFE_SANCTUARY.jpg",
+    "file": "yangoupokpi-lokchao-wildlife-sanctuary.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:YANGOUPOKPI_LOKCHAO_WILDLIFE_SANCTUARY.jpg",
+    "note": "Wikimedia Commons photograph of Yangoupokpi-Lokchao Wildlife Sanctuary; no official image is published.",
+    "coordinate_note": "Coordinate reference: Wikidata/Wikipedia point for Yangoupokpi-Lokchao Wildlife Sanctuary on the Indo-Myanmar border; the sanctuary covers about 184.8 sq km and has no single visitor point."
+  },
+  "bro-waterfall": {
+    "download_url": "http://www.e-paolive.net/galleries/images/Landscape/Loktak/2011/Bro_Waterfall_10/Bro_Waterfall_201110_14.jpg",
+    "file": "bro-waterfall.jpg",
+    "source_page": "https://www.e-pao.net/epGallery.asp?id=14&src=Landscape/Loktak_Pat/BroWatrefall201110",
+    "note": "Photograph from E-Pao's Bro Waterfall gallery, credited to Bullu Raj (Poknapham); no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Chandel town, the nearest mapped reference for Bro Waterfall; the falls are not separately mapped and older DiscoverManipur coordinates duplicate Barak Falls."
+  },
+  "moreh": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/MOREH-BORDER-TRADE.png",
+    "file": "moreh.jpg",
+    "source_page": "https://manipurtourism.gov.in/exclusive-destination/",
+    "note": "Official Manipur Tourism illustration of Moreh border trade.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap point for Moreh town on the Indo-Myanmar border in Tengnoupal district; the town is an area rather than a single point."
+  },
+  "kwatha-village": {
+    "download_url": "https://discovermanipur.vercel.app/file-uploads/an3.jpg",
+    "file": "kwatha-village.jpg",
+    "source_page": "https://discovermanipur.vercel.app/hotspots/kwatha-village",
+    "note": "Photograph from the DiscoverManipur Kwatha Village hotspot page; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Kwatha village near the Myanmar border; the village is small and not mapped with a separate landmark node."
+  },
+  "liabi-waterfall": {
+    "download_url": "https://cdn.s3waas.gov.in/s3aab3238922bcc25a6f606eb525ffdc56/uploads/bfi_thumb/2021092254-rr7n9376a6kpgntofvl8jn541js6hsl58p5qz5cao2.jpg",
+    "file": "liabi-waterfall.jpg",
+    "source_page": "https://kamjong.nic.in/tourist-place/liabi-waterfall/",
+    "note": "Thumbnail image from the official Kamjong District NIC Liabi Waterfall page; the full-size upload returns HTTP 401.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Chatric village in Kamjong district, where the district page places Liabi Waterfall; the falls are not mapped separately."
+  },
+  "ningshing-khun": {
+    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/NINGSHING-KHUN.png",
+    "file": "ningshing-khun.jpg",
+    "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
+    "note": "Official Manipur Tourism illustration of Ningshing Khun.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Ningshing Khun village in Jiribam district; the memorial complex is not mapped separately."
   }
 }
