@@ -1,0 +1,7 @@
+{
+  "slug": "sikkim",
+  "name": "Sikkim",
+  "kind": "state",
+  "source_url": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department/where-to-go",
+  "places_file": "../sikkim-places.json"
+}

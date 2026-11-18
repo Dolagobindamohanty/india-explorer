@@ -2936,7 +2936,8 @@
   "gurudongmar-lake": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gurudongmar%20Lake%20Sikkim%2C%20India%20%28edit%29.jpg",
     "file": "Gurudongmar Lake Sikkim, India (edit).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudongmar_Lake_Sikkim,_India_(edit).jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudongmar_Lake_Sikkim,_India_(edit).jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Gurudongmar Lake; the official district page gives the high-altitude setting but no map coordinate."
   },
   "gurudwara-guru-gobind-singh": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/guru_pic3.jpg",
@@ -4033,7 +4034,8 @@
   "khangchendzonga-national-park": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kangch-Goechala.jpg",
     "file": "Kangch-Goechala.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Kangch-Goechala.jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kangch-Goechala.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia protected-area point for Khangchendzonga National Park; the park covers a large mountain landscape rather than a single point."
   },
   "khardung-la-pass": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khardung_La_%28mountain_pass%29%2C_Ladakh%2C_North_India.jpg",
@@ -6414,7 +6416,8 @@
   "pemayangtse-monastery": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main%20Shrine%20of%20Pemangytse%20Gompa%20with%20prayer%20flags.jpg",
     "file": "Main Shrine of Pemangytse Gompa with prayer flags.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Main_Shrine_of_Pemangytse_Gompa_with_prayer_flags.jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Main_Shrine_of_Pemangytse_Gompa_with_prayer_flags.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Pemayangtse Monastery; the official district page gives approach context but no map coordinate."
   },
   "pentha-beach": {
     "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-pentha-beach-card",
@@ -7124,7 +7127,8 @@
   "rumtek-monastery": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rumtek%20Monastery%20alias%20Dharma%20Chakra%20Centre%20near%20Gangtok%2C%20East%20Sikkim%2009.jpg",
     "file": "Rumtek Monastery alias Dharma Chakra Centre near Gangtok, East Sikkim 09.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Rumtek_Monastery_alias_Dharma_Chakra_Centre_near_Gangtok,_East_Sikkim_09.jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rumtek_Monastery_alias_Dharma_Chakra_Centre_near_Gangtok,_East_Sikkim_09.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Rumtek Monastery; the official Gangtok district page confirms the monastery but gives no map coordinate."
   },
   "rung-dil": {
     "download_url": "https://mizoramtourism.com/post_images/62b8636c93e8d_Rungdil.jpg",
@@ -7914,7 +7918,8 @@
   "solophok-char-dham": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lordshiva.JPG",
     "file": "Lordshiva.JPG",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Lordshiva.JPG"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lordshiva.JPG",
+    "coordinate_note": "Coordinate reference: OpenStreetMap religious land-use point for Solophok Chardham; the official district page gives distance but no map coordinate."
   },
   "someshwar-fort": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Bhangarh_Fort_1.jpg/960px-Bhangarh_Fort_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -8728,7 +8733,8 @@
   "tsomgo-lake": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsongmo%20Lake%20or%20Changu%20Lake%20-%20East%20Sikkim.jpg",
     "file": "Tsongmo Lake or Changu Lake - East Sikkim.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Tsongmo_Lake_or_Changu_Lake_-_East_Sikkim.jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tsongmo_Lake_or_Changu_Lake_-_East_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Lake Tsomgo; the official nature page gives distance and setting but no map coordinate."
   },
   "tu-142-aircraft-museum": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/TU-142_Aircraft_Museum%2C_beside_the_sea_beach_in_Visakhapatnam_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -9252,7 +9258,8 @@
   "yumthang-valley": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yumthang%20valley%2C%20Lachung%20Sikkim%20India%202012.jpg",
     "file": "Yumthang valley, Lachung Sikkim India 2012.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Yumthang_valley,_Lachung_Sikkim_India_2012.jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yumthang_valley,_Lachung_Sikkim_India_2012.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Yumthang Valley of Flowers; the official district page gives road and seasonal context but no map coordinate."
   },
   "zanibu-peak": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_%28edit%29.jpg/960px-Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_%28edit%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -11824,5 +11831,535 @@
     "source_page": "https://chandel.nic.in/tourist-place/langol-peak-garden/",
     "note": "Official Chandel District NIC image labelled Langol Peak View on the Langol Peak Garden page.",
     "coordinate_note": "Coordinate reference: approximate point from the official Chandel district direction link for Langol Peak Garden; the garden covers a peak area rather than a single point."
+  },
+  "gangtok": {
+    "creator": "Kailas98",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sikkim_Gangtok.jpg?width=1200",
+    "file": "gangtok.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image: Sikkim Gangtok.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sikkim_Gangtok.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Gangtok, the district headquarters; the official tourism page describes the town but gives no map coordinate."
+  },
+  "nathula-pass": {
+    "creator": "Giridhar Appaji Nag Y",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nathu_La.jpg?width=1200",
+    "file": "nathula-pass.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image: Nathu La.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nathu_La.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Nathu La; the official district attraction page gives the border-pass setting and permit rules but no map coordinate."
+  },
+  "baba-harbhajan-singh-temple": {
+    "creator": "Dineshtripathy9658",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Baba_Harbhajan_Singh%27s_Shrine_-_SDC10626.jpg?width=1200",
+    "file": "baba-harbhajan-singh-temple.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image: View of Baba Harbhajan Singh's Shrine - SDC10626.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:View_of_Baba_Harbhajan_Singh%27s_Shrine_-_SDC10626.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap building node named Baba Harbhajan Singh Temple near Sherathang; an unrelated Wikipedia match was rejected."
+  },
+  "tashi-view-point": {
+    "creator": "Robin S Kishore",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tashi_view_point%2C_Gangtok.jpg?width=1200",
+    "file": "tashi-view-point.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Tashi view point, Gangtok.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tashi_view_point,_Gangtok.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap viewpoint named Tashi Viewpoint; the Wikipedia district centroid was rejected."
+  },
+  "ganesh-tok": {
+    "creator": "Anjan Kumar Kundu",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ganesh_Tok_in_Gangtok_district%2C_East_Sikkim_02.jpg?width=1200",
+    "file": "ganesh-tok.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Ganesh Tok in Gangtok district, East Sikkim 02.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ganesh_Tok_in_Gangtok_district,_East_Sikkim_02.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for Ganesh Tok; the generic Gangtok city point was rejected."
+  },
+  "hanuman-tok": {
+    "creator": "Pinakpani",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanuman_Tok_temple_in_Sikkim_04.jpg?width=1200",
+    "file": "hanuman-tok.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Hanuman Tok temple in Sikkim 04.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hanuman_Tok_temple_in_Sikkim_04.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Hanuman Tok; the official district page gives approach details but no map coordinate."
+  },
+  "banjhakri-falls": {
+    "creator": "Indrajit Das",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ban_Jhakri_Falls_-_Gangtok.jpg?width=1200",
+    "file": "banjhakri-falls.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image: Ban Jhakri Falls - Gangtok.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ban_Jhakri_Falls_-_Gangtok.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Banjhakri Falls and Energy Park; the official district page gives access details but no map coordinate."
+  },
+  "do-drul-chorten": {
+    "creator": "Bernard Gagnon",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Do-drul_Chorten%2C_Gangtok_01.jpg?width=1200",
+    "file": "do-drul-chorten.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Do-drul Chorten, Gangtok 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Do-drul_Chorten,_Gangtok_01.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Do-drul Chorten; the official district attraction page gives no map coordinate."
+  },
+  "enchey-monastery": {
+    "creator": "Bernard Gagnon",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Enchey_Monastery_01.jpg?width=1200",
+    "file": "enchey-monastery.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Enchey Monastery 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Enchey_Monastery_01.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Enchey Monastery; the official district page describes the monastery but gives no map coordinate."
+  },
+  "namgyal-institute-of-tibetology": {
+    "creator": "KaranKapoor1314",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Namgyal_Institute_of_Tibetology.jpg?width=1200",
+    "file": "namgyal-institute-of-tibetology.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Namgyal Institute of Tibetology.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Namgyal_Institute_of_Tibetology.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for the Namgyal Institute of Tibetology; the official district page gives timings but no map coordinate."
+  },
+  "saramsa-garden": {
+    "creator": "Shajahan T",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brilliant_Morning_Rays%2C_Saramsa_Garden%2C_Gangtok%2C_Sikkim_Wiki_Loves_Earth_2017_-_India.jpg?width=1200",
+    "file": "saramsa-garden.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Brilliant Morning Rays, Saramsa Garden, Gangtok, Sikkim Wiki Loves Earth 2017 - India.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Brilliant_Morning_Rays,_Saramsa_Garden,_Gangtok,_Sikkim_Wiki_Loves_Earth_2017_-_India.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Saramsa Garden; the official district page gives the setting but no map coordinate."
+  },
+  "gangtok-ropeway": {
+    "creator": "kalyan3",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gangtok_ropeway.jpg?width=1200",
+    "file": "gangtok-ropeway.jpg",
+    "license": "CC BY-SA 2.0",
+    "note": "Wikimedia Commons image: Gangtok ropeway.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gangtok_ropeway.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap aerialway node for the Damodar Gangtok ropeway; the generic Gangtok city point was rejected."
+  },
+  "lingdum-monastery": {
+    "creator": "Subhrajyoti07",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lingdum_Monastery_%28also_Ranka_Lingdum_or_Pal_Zurmang_Kagyud_Monastery%29.jpg?width=1200",
+    "file": "lingdum-monastery.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Lingdum Monastery (also Ranka Lingdum or Pal Zurmang Kagyud Monastery).jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lingdum_Monastery_(also_Ranka_Lingdum_or_Pal_Zurmang_Kagyud_Monastery).jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for Lingdum Monastery; Wikipedia has no usable coordinate for the monastery."
+  },
+  "menmecho-lake": {
+    "creator": "Avisek.Dutta83",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mamencho_lake.jpg?width=1200",
+    "file": "menmecho-lake.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Mamencho lake.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mamencho_lake.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Lake Menmecho; the official nature page gives the route context but no map coordinate."
+  },
+  "lachung": {
+    "creator": "Indrajit Das",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lachung_Town.jpg?width=1200",
+    "file": "lachung.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image: Lachung Town.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lachung_Town.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Lachung village; the official district page gives road context but no map coordinate."
+  },
+  "lachen": {
+    "creator": "Tushar2486",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lachen_Sikkim.jpg?width=1200",
+    "file": "lachen.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Lachen Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lachen_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Lachen, Sikkim; the official district list describes the village but gives no map coordinate."
+  },
+  "zero-point-yumesamdong": {
+    "creator": "Sujay25",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zero_Point%2C_Yumesamdong%2C_North_Sikkim_01.jpg?width=1200",
+    "file": "zero-point-yumesamdong.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Zero Point, Yumesamdong, North Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Zero_Point,_Yumesamdong,_North_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap locality node for Yumesamdong; the Wikipedia Mangan district centroid was rejected."
+  },
+  "chopta-valley": {
+    "creator": "soumyajit pramanick",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Chopta_valley%2C_North_Sikkim%2C_India.jpg?width=1200",
+    "file": "chopta-valley.jpg",
+    "license": "CC BY-SA 2.0",
+    "note": "Wikimedia Commons image: A view of Chopta valley, North Sikkim, India.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_view_of_Chopta_valley,_North_Sikkim,_India.jpg",
+    "coordinate_note": "Coordinate reference: Google Maps point for Chopta Valley; Wikipedia and OpenStreetMap searches returned nearby Thangu Valley and were not treated as an exact match."
+  },
+  "thangu-valley": {
+    "creator": "Ajay kumar",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thangu_valley%2C_North_Sikkim.jpg?width=1200",
+    "file": "thangu-valley.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Thangu valley, North Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Thangu_valley,_North_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Thangu Valley; the official district page gives access context but no map coordinate."
+  },
+  "phodong-monastery": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phodong_%22Karma_Thubten_Tashi_ChoKhorling%22_Monastery_at_Phodong_town%2C_North_Sikkim%2C_India_12.jpg?width=1200",
+    "file": "phodong-monastery.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Phodong \"Karma Thubten Tashi ChoKhorling\" Monastery at Phodong town, North Sikkim, India 12.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Phodong_%22Karma_Thubten_Tashi_ChoKhorling%22_Monastery_at_Phodong_town,_North_Sikkim,_India_12.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Phodong Monastery; the official tourism page gives the highway context but no map coordinate."
+  },
+  "labrang-monastery": {
+    "creator": "Prof Ranga Sai",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labrang_Monastery.jpg?width=1200",
+    "file": "labrang-monastery.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Labrang Monastery.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Labrang_Monastery.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Labrang Monastery in Sikkim; the official tourism page groups it with Phodong but gives no map coordinate."
+  },
+  "seven-sisters-waterfall": {
+    "creator": "Madhumita Das",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seven_Sisters_Waterfall%2C_Sikkim.jpg?width=1200",
+    "file": "seven-sisters-waterfall.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Seven Sisters Waterfall, Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Seven_Sisters_Waterfall,_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap tourism=attraction node for Seven Sisters Waterfalls; the Wikipedia Tumlong point was rejected."
+  },
+  "chungthang": {
+    "creator": "PRATAP CHAKMA",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/CHUNGTHANG%2CSIKKIM.jpg?width=1200",
+    "file": "chungthang.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: CHUNGTHANG,SIKKIM.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:CHUNGTHANG,SIKKIM.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Chungthang; the official tourism page describes it as a route junction but gives no map coordinate."
+  },
+  "dzongu": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanging_bridge_at_Dzongu%2C_North_Sikkim_02.jpg?width=1200",
+    "file": "dzongu.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Hanging bridge at Dzongu, North Sikkim 02.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hanging_bridge_at_Dzongu,_North_Sikkim_02.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap tourism=attraction point for Dzongu; the Wikipedia Gnon-Samdong point was rejected."
+  },
+  "kabi-lungchok": {
+    "creator": "walter callens",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabi_Lungchok.jpg?width=1200",
+    "file": "kabi-lungchok.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image: Kabi Lungchok.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kabi_Lungchok.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Kabi Lungchok; the official tourism page gives the historical setting but no map coordinate."
+  },
+  "pelling": {
+    "creator": "Amritendu Mallick",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanchenjungha_and.._premonsoon_season_view_from_Pelling_%2C_West_Sikkim.jpg?width=1200",
+    "file": "pelling.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Kanchenjungha and.. premonsoon season view from Pelling , West Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kanchenjungha_and.._premonsoon_season_view_from_Pelling_,_West_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place=village node for Pelling; an unrelated Wikipedia point was rejected."
+  },
+  "pelling-skywalk": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sky_Walk_at_Pelling%2C_West_Sikkim_02.jpg?width=1200",
+    "file": "pelling-skywalk.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Sky Walk at Pelling, West Sikkim 02.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sky_Walk_at_Pelling,_West_Sikkim_02.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap viewpoint named Kanchendzonga view from the skywalk; the Wikipedia Pelling point was rejected."
+  },
+  "yuksom": {
+    "creator": "Kothanda Srinivasan",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yuksom_Village.jpg?width=1200",
+    "file": "yuksom.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image: Yuksom Village.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yuksom_Village.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Yuksom; the official district page gives its historical setting but no map coordinate."
+  },
+  "khecheopalri-lake": {
+    "creator": "Anjan Kumar Kundu",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khecheopalri_Lake_from_the_view_point%2C_West_Sikkim_03.jpg?width=1200",
+    "file": "khecheopalri-lake.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Khecheopalri Lake from the view point, West Sikkim 03.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Khecheopalri_Lake_from_the_view_point,_West_Sikkim_03.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap natural=water node for Khecheopalri Lake; the Wikipedia point is coarse and the viewpoint was not used."
+  },
+  "singshore-bridge": {
+    "creator": "Pankaj.biswas",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singshore_Bridge%2C_Pelling%2C_Sikkim.jpg?width=1200",
+    "file": "singshore-bridge.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Singshore Bridge, Pelling, Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Singshore_Bridge,_Pelling,_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Singshore Bridge, Pelling; the official district list names the bridge but gives no map coordinate."
+  },
+  "rabdentse-ruins": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_Rabdentse%2C_second_capital_of_Sikkim_near_Pelling%2C_West_Sikkim_01.jpg?width=1200",
+    "file": "rabdentse-ruins.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Ruins of Rabdentse, second capital of Sikkim near Pelling, West Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ruins_of_Rabdentse,_second_capital_of_Sikkim_near_Pelling,_West_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Rabdentse; the official district page describes the ruins but gives no map coordinate."
+  },
+  "sanga-choeling-monastery": {
+    "creator": "walter callens",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Full_view_of_Sanga-Choeling_Monastery.jpg?width=1200",
+    "file": "sanga-choeling-monastery.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image: Full view of Sanga-Choeling Monastery.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Full_view_of_Sanga-Choeling_Monastery.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Sanga Choeling Monastery; the official district attraction page gives no map coordinate."
+  },
+  "dubdi-monastery": {
+    "creator": "Rangan Datta Wiki",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubdi_Monastery_7.jpg?width=1200",
+    "file": "dubdi-monastery.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Dubdi Monastery 7.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dubdi_Monastery_7.jpg",
+    "coordinate_note": "Coordinate reference: Google Maps point for Dubdi Monastery above Yuksom; the Wikipedia point was inconsistent with the official heritage description and was rejected."
+  },
+  "tashiding-monastery": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tashiding_Monastery%2C_West_Sikkim_03.jpg?width=1200",
+    "file": "tashiding-monastery.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Tashiding Monastery, West Sikkim 03.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tashiding_Monastery,_West_Sikkim_03.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Tashiding Monastery; the official district page gives the hill setting but no map coordinate."
+  },
+  "chenrezig-statue": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chenrezig_alias_Avalokite%C5%9Bvara_statue_at_Sky_Walk_at_Pelling%2C_West_Sikkim_01.jpg?width=1200",
+    "file": "chenrezig-statue.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Chenrezig alias Avalokiteśvara statue at Sky Walk at Pelling, West Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chenrezig_alias_Avalokite%C5%9Bvara_statue_at_Sky_Walk_at_Pelling,_West_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for the Chenrezig Statue; the combined statue-and-skywalk point was used only as a cross-check."
+  },
+  "uttarey": {
+    "creator": "Kayal Vizhi",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tenzing_Hillary_Statue_Uttarey_Sikkim.jpg?width=1200",
+    "file": "uttarey.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Tenzing Hillary Statue Uttarey Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tenzing_Hillary_Statue_Uttarey_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Uttarey; the official district page gives the mountain setting but no map coordinate."
+  },
+  "rimbi-waterfall": {
+    "creator": "Shubhamshukla585",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rimbi_Waterfall_Sikkim.jpg?width=1200",
+    "file": "rimbi-waterfall.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Rimbi Waterfall Sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rimbi_Waterfall_Sikkim.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap waterfall node named Rimbi Waterfall; the Wikipedia Pelling point was rejected."
+  },
+  "kirateshwar-mahadev-temple": {
+    "creator": "Bhattaraibinod3",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Legship_shiva_temple.jpg?width=1200",
+    "file": "kirateshwar-mahadev-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Legship shiva temple.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Legship_shiva_temple.jpg",
+    "coordinate_note": "Coordinate reference: Google Maps point for Kirateshwar Mahadev Temple at Legship; the coarse Wikipedia point was not used."
+  },
+  "gyalshing": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Geyzing_Gumpa_alias_Gyalshing_Manilakhang%2C_Geyzing_Bazzar%2C_West_Sikkim_04.jpg?width=1200",
+    "file": "gyalshing.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Geyzing Gumpa alias Gyalshing Manilakhang, Geyzing Bazzar, West Sikkim 04.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Geyzing_Gumpa_alias_Gyalshing_Manilakhang,_Geyzing_Bazzar,_West_Sikkim_04.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Gyalshing town; the official district page gives no map coordinate."
+  },
+  "namchi": {
+    "creator": "PP Yoonus",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Namchi.jpg?width=1200",
+    "file": "namchi.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image: Namchi.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Namchi.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Namchi town; the official district page gives no map coordinate."
+  },
+  "samdruptse-hill": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guru_Padmasambhava_statue_in_Samdruptse_Hill%2C_Namchi%2C_district_of_South_Sikkim_02.jpg?width=1200",
+    "file": "samdruptse-hill.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Guru Padmasambhava statue in Samdruptse Hill, Namchi, district of South Sikkim 02.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Guru_Padmasambhava_statue_in_Samdruptse_Hill,_Namchi,_district_of_South_Sikkim_02.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap natural=peak node for Samdruptse Hill; the generic Namchi town point was rejected."
+  },
+  "ravangla": {
+    "creator": "Masum Ibn Musa",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ravangla%2C_Sikkim_by_Masum_Ibn_Musa_%28195%29.jpg?width=1200",
+    "file": "ravangla.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Ravangla, Sikkim by Masum Ibn Musa (195).jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ravangla,_Sikkim_by_Masum_Ibn_Musa_(195).jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Ravangla; the official district page gives the hill-station setting but no map coordinate."
+  },
+  "buddha-park": {
+    "creator": "Subhrajyoti07",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Large_Buddha_statue_inside_Buddha_Park_of_Ravangla.jpg?width=1200",
+    "file": "buddha-park.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Large Buddha statue inside Buddha Park of Ravangla.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Large_Buddha_statue_inside_Buddha_Park_of_Ravangla.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap park and monastery nodes for Rabongla Buddha Park; the Wikipedia point is nearby but broader."
+  },
+  "tarey-bhir": {
+    "creator": "Madhumita Das",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarey_Bhir%2C_the_cliff_at_south_sikkim.jpg?width=1200",
+    "file": "tarey-bhir.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Tarey Bhir, the cliff at south sikkim.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tarey_Bhir,_the_cliff_at_south_sikkim.jpg",
+    "coordinate_note": "Coordinate reference: Google Maps entry-point coordinate for Tarey Bhir; the Wikipedia Tareythang point was rejected."
+  },
+  "jorethang": {
+    "creator": "Sharada Prasad CS",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jorethang_Sikkim_India.jpg?width=1200",
+    "file": "jorethang.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image: Jorethang Sikkim India.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jorethang_Sikkim_India.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place=town node for Jorethang; the Wikipedia point is close but coarser."
+  },
+  "ralong-monastery": {
+    "creator": "Photos Worldwide",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ralong_Monastery_Sikkim_-1.jpg?width=1200",
+    "file": "ralong-monastery.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image: Ralong Monastery Sikkim -1.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ralong_Monastery_Sikkim_-1.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for New Ralong Monastery; Old Ralong Monastery is mapped separately nearby."
+  },
+  "doling-monastery": {
+    "creator": "Anjan Kumar Kundu",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doling_Monastery_at_Bakhim_near_Ravangla%2C_South_Sikkim_01.jpg?width=1200",
+    "file": "doling-monastery.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Doling Monastery at Bakhim near Ravangla, South Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Doling_Monastery_at_Bakhim_near_Ravangla,_South_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for Doling Monastery near Ravangla; the official ecclesiastical page gives distance but no map coordinate."
+  },
+  "rhenock": {
+    "creator": "Anjan Kumar Kundu",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhenock_Monastery_in_Silk_Route%2C_East_Sikkim_01.jpg?width=1200",
+    "file": "rhenock.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Rhenock Monastery in Silk Route, East Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rhenock_Monastery_in_Silk_Route,_East_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap place=town node for Rhenock; the Wikipedia point is coarse and the monastery node is separate."
+  },
+  "zuluk": {
+    "creator": "Linus pradhan",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zuluk_village.jpg?width=1200",
+    "file": "zuluk.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Zuluk village.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Zuluk_village.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Dzuluk village; the official Silk Route page gives route context but no map coordinate."
+  },
+  "aritar-lake": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lampokhari_or_Aritar_Lake_at_Aritar%2C_East_Sikkim_01.jpg?width=1200",
+    "file": "aritar-lake.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Lampokhari or Aritar Lake at Aritar, East Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lampokhari_or_Aritar_Lake_at_Aritar,_East_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap lake node named Lampokhari (Aritar Lake); the Wikipedia Aritar town point was rejected."
+  },
+  "gnathang-monastery": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gnathang_Gadenchoeling_Gumpa_or_the_Nathang_%28Gnathang%29_Valley_Monastery%2C_East_Sikkim_01.jpg?width=1200",
+    "file": "gnathang-monastery.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Gnathang Gadenchoeling Gumpa or the Nathang (Gnathang) Valley Monastery, East Sikkim 01.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gnathang_Gadenchoeling_Gumpa_or_the_Nathang_(Gnathang)_Valley_Monastery,_East_Sikkim_01.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia Nathang Valley point used as a locality reference because no exact published monastery coordinate was found; the official Silk Route page names Gnathang but gives no map coordinate."
+  },
+  "rinchenpong": {
+    "creator": "Amitabha Gupta",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rinchenpong_Monastery%2C_Rinchenpong_%28Richenpong%29_and_Kaluk_%2C_West_Sikkim_03.jpg?width=1200",
+    "file": "rinchenpong.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image: Rinchenpong Monastery, Rinchenpong (Richenpong) and Kaluk , West Sikkim 03.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rinchenpong_Monastery,_Rinchenpong_(Richenpong)_and_Kaluk_,_West_Sikkim_03.jpg",
+    "coordinate_note": "Coordinate reference: Wikipedia point for Rinchenpong village; the official district page gives the setting but no map coordinate."
+  },
+  "barsey-rhododendron-sanctuary": {
+    "creator": "Spattadar",
+    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barsey_Rhododendron_Sanctuary_in_late_april.jpg?width=1200",
+    "file": "barsey-rhododendron-sanctuary.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image: Barsey Rhododendron Sanctuary in late april.jpg.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Barsey_Rhododendron_Sanctuary_in_late_april.jpg",
+    "coordinate_note": "Coordinate reference: OpenStreetMap nature-reserve node for Barsey Rhododendron Wildlife Sanctuary; the Wikipedia Varsey point is coarse."
   }
 }
