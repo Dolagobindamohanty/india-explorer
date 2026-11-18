@@ -1,0 +1,9 @@
+{
+  "slug": "uttarakhand",
+  "name": "Uttarakhand",
+  "kind": "state",
+  "source_url": "https://www.uttarakhandtourism.gov.in/search",
+  "map_url": "https://www.uttarakhandtourism.gov.in/assets/media/Tourist-Map-Uttarakhand-UK.pdf",
+  "festivals_url": "https://www.uttarakhandtourism.gov.in/festivals",
+  "places_file": "../uttarakhand-places.json"
+}

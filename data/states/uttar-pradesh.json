@@ -1,0 +1,7 @@
+{
+  "slug": "uttar-pradesh",
+  "name": "Uttar Pradesh",
+  "kind": "state",
+  "source_url": "https://sonbhadra.nic.in/places-of-interest/",
+  "places_file": "../uttar-pradesh-places.json"
+}

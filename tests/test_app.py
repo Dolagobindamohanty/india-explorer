@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 2163
+    assert len(all_places) == 2279
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -160,6 +160,35 @@ def test_full_destination_journey(client):
     assert any(p['slug'] == 'tsomgo-lake' for p in gangtok['places'])
     mangan = client.get('/api/districts/mangan').json()
     assert {p['slug'] for p in mangan['places']} >= {'gurudongmar-lake', 'yumthang-valley', 'khangchendzonga-national-park'}
+    uttarakhand = client.get('/api/states/uttarakhand').json()
+    assert len(uttarakhand['districts']) == 13
+    assert len(uttarakhand['places']) == 115
+    assert all(place['source_url'].startswith('https://') for place in uttarakhand['places'])
+    assert 'govind-ballabh-pant-sagar' not in {p['slug'] for p in uttarakhand['places']}
+    dehradun = client.get('/api/districts/dehradun').json()
+    assert {p['slug'] for p in dehradun['places']} >= {
+        'sahastradhara', 'mussoorie', 'rishikesh', 'kempty-falls', 'tiger-falls'
+    }
+    uttarkashi_places = {p['slug'] for p in client.get('/api/districts/uttarkashi').json()['places']}
+    assert 'kedarkantha' in uttarkashi_places
+    kedarnath = client.get('/api/places/kedarnath-temple').json()
+    assert kedarnath['district'] == 'Rudraprayag'
+    assert kedarnath['entry_fee'] == 'Check locally'
+    assert kedarnath['address'] == 'Kedarnath Temple, Rudraprayag, Uttarakhand'
+    assert kedarnath['source_url'].startswith('https://www.uttarakhandtourism.gov.in/')
+    assert_asset_exists(kedarnath['image_url'])
+    sonbhadra = client.get('/api/districts/sonbhadra').json()
+    assert {p['slug'] for p in sonbhadra['places']} == {'govind-ballabh-pant-sagar'}
+    gb_pant = client.get('/api/places/govind-ballabh-pant-sagar').json()
+    assert gb_pant['district'] == 'Sonbhadra'
+    assert gb_pant['address'] == 'Govind Ballabh Pant Sagar, Sonbhadra, Uttar Pradesh'
+    assert gb_pant['entry_fee'] == 'Check locally'
+    assert gb_pant['source_url'] == 'https://sonbhadra.nic.in/places-of-interest/'
+    assert_asset_exists(gb_pant['image_url'])
+    assert any(
+        p['slug'] == 'govind-ballabh-pant-sagar'
+        for p in client.get('/api/states/uttar-pradesh').json()['places']
+    )
     tripura = client.get('/api/states/tripura').json()
     assert len(tripura['districts']) == 8
     assert len(tripura['places']) == 8
@@ -280,7 +309,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 2163
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 2279
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -386,7 +415,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 2163}
+    assert response.json() == {'status': 'ok', 'places': 2279}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -497,7 +526,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 2163}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 2279}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -685,9 +714,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 2163,
+        'detailed_places': 2279,
         'reviewed_places': 0,
-        'unreviewed_places': 2163,
+        'unreviewed_places': 2279,
         'confirmed_festival_dates': 23,
     }
 
@@ -755,7 +784,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 194
+    assert len(all_festivals) == 220
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 
