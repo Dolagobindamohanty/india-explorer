@@ -11406,10 +11406,10 @@
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Shri Gopinath Temple at Ningthoukhong; the state page gives no map coordinates."
   },
   "lakoi-pat": {
-    "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2017/06/image.png",
+    "download_url": "https://cdn.s3waas.gov.in/s305f971b5ec196b8c65b75d2ef8267331/uploads/2018/06/2018061335.jpg",
     "file": "lakoi-pat.jpg",
-    "source_page": "https://manipurtourism.gov.in/in-around-loktak-lake/",
-    "note": "Official Manipur Tourism image placed beside the Lakoi Pat description on the Loktak Lake page.",
+    "source_page": "https://bishnupur.nic.in/tourist-place/loukoipat/",
+    "note": "Official Bishnupur District Administration image titled \"Boating at Loukoipat\" from the Loukoipat tourist-place page.",
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Loukoi Pat near the Tiddim Road; the state page gives no map coordinates."
   },
   "kangla-fort": {
@@ -11707,10 +11707,10 @@
     "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Pherzawl town, the nearest mapped settlement named by the district page for Luipi Waterfall; the falls themselves are not mapped."
   },
   "yangoupokpi-lokchao-wildlife-sanctuary": {
-    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/YANGOUPOKPI_LOKCHAO_WILDLIFE_SANCTUARY.jpg/500px-YANGOUPOKPI_LOKCHAO_WILDLIFE_SANCTUARY.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Yangoupokpi_Lokchao_WLS_Manipur_by_Dr_Raju_Kasambe_%281%29_01.jpg/960px-Yangoupokpi_Lokchao_WLS_Manipur_by_Dr_Raju_Kasambe_%281%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "yangoupokpi-lokchao-wildlife-sanctuary.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:YANGOUPOKPI_LOKCHAO_WILDLIFE_SANCTUARY.jpg",
-    "note": "Wikimedia Commons photograph of Yangoupokpi-Lokchao Wildlife Sanctuary; no official image is published.",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yangoupokpi_Lokchao_WLS_Manipur_by_Dr_Raju_Kasambe_(1)_01.jpg",
+    "note": "Wikimedia Commons photograph of Yangoupokpi-Lokchao Wildlife Sanctuary by Dr. Raju Kasambe (CC BY-SA 4.0); no official image is published.",
     "coordinate_note": "Coordinate reference: Wikidata/Wikipedia point for Yangoupokpi-Lokchao Wildlife Sanctuary on the Indo-Myanmar border; the sanctuary covers about 184.8 sq km and has no single visitor point."
   },
   "bro-waterfall": {
