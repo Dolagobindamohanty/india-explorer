@@ -11747,5 +11747,82 @@
     "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/",
     "note": "Official Manipur Tourism illustration of Ningshing Khun.",
     "coordinate_note": "Coordinate reference: OpenStreetMap/Photon point for Ningshing Khun village in Jiribam district; the memorial complex is not mapped separately."
+  },
+  "manipur-state-museum": {
+    "download_url": "https://cdn.s3waas.gov.in/s3faa9afea49ef2ff029a833cccc778fd0/uploads/2018/07/2018072552.png",
+    "file": "manipur-state-museum.jpg",
+    "source_page": "https://imphalwest.nic.in/tourist-place/manipur-state-museum/",
+    "note": "Official Imphal West District NIC image labelled State Museum on the Manipur State Museum tourist-place page.",
+    "coordinate_note": "Coordinate reference: Wikidata Q110501212 point for Manipur State Museum near the polo ground; the district page gives no map coordinates."
+  },
+  "nupi-lal-memorial-complex": {
+    "download_url": "https://cdn.s3waas.gov.in/s3faa9afea49ef2ff029a833cccc778fd0/uploads/2018/03/2018032754.jpg",
+    "file": "nupi-lal-memorial-complex.jpg",
+    "source_page": "https://imphalwest.nic.in/tourist-place/nupi-lal-memorial-complex/",
+    "note": "Official Imphal West District NIC image on the Nupi Lal Memorial Complex tourist-place page.",
+    "coordinate_note": "Coordinate reference: Google Maps listing for Nupi Lal Memorial Complex on NH-39 in Imphal; the district page gives no map coordinates."
+  },
+  "thangjing-temple": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Thangching_Temple_%28or_Thangjing_Temple%29%2C_flanked_with_holy_%26_sacred_flags%2C_where_Khuman_Khamba_%26_Moirang_Thoibi_danced%2C_in_Ancient_Moirang_kingdom_in_Ancient_Kangleipak_civilisation_%28early_Manipur%29.jpg/960px-thumbnail.jpg",
+    "file": "thangjing-temple.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Thangching_Temple_(or_Thangjing_Temple),_flanked_with_holy_%26_sacred_flags,_where_Khuman_Khamba_%26_Moirang_Thoibi_danced,_in_Ancient_Moirang_kingdom_in_Ancient_Kangleipak_civilisation_(early_Manipur).jpg",
+    "note": "1908 Wikimedia Commons photograph labelled as the Thangjing Temple at Moirang, by Bhudro Singh (Ningthoujam Bhadra), public domain; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: Wikidata/Simple Wikipedia point for Thangjing Temple in Moirang; the official Moirang page places the temple in Moirang but gives no separate map point."
+  },
+  "bishnupur-vishnu-temple": {
+    "download_url": "https://cdn.s3waas.gov.in/s305f971b5ec196b8c65b75d2ef8267331/uploads/2018/06/2018061370.jpg",
+    "file": "bishnupur-vishnu-temple.jpg",
+    "source_page": "https://bishnupur.nic.in/tourist-place/bishnupur/",
+    "note": "Official Bishnupur District NIC image labelled Bishnu Temple at Bishnupur.",
+    "coordinate_note": "Coordinate reference: Google Maps listing for Vishnu Temple, Bishnupur; the official direction link has swapped east/north labels and the ASI page gives only degree-level coordinates."
+  },
+  "makhel": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/THE_MAKHEL_STONE.jpg/500px-THE_MAKHEL_STONE.jpg",
+    "file": "makhel.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:THE_MAKHEL_STONE.jpg",
+    "note": "1911 Wikimedia Commons photograph of the Makhel stone by Thomas Callan Hodson, public domain; no official tourism image is published.",
+    "coordinate_note": "Coordinate reference: Google Maps point for The Sacred Banyan Tree Makhel Manipur, one of several monuments named on the official Senapati places-of-interest page; the site has no single official map point."
+  },
+  "singda-dam": {
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Singda.jpg/500px-Singda.jpg",
+    "file": "singda-dam.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Singda.jpg",
+    "note": "Wikimedia Commons photograph of Singda by Mongyamba, CC BY-SA 3.0; no official tourism image is published for the dam.",
+    "coordinate_note": "Coordinate converted from 24°52'30\"N, 93°48'24\"E in the Government of Manipur Singda Dam ESIA; the nearby OpenStreetMap point is 24.8815884, 93.8054657."
+  },
+  "khayang-waterfall": {
+    "download_url": "https://cdn.s3waas.gov.in/s3aab3238922bcc25a6f606eb525ffdc56/uploads/2019/06/2021092291.jpg",
+    "file": "khayang-waterfall.jpg",
+    "source_page": "https://kamjong.nic.in/tourist-place/khayang-tililytiluelue-waterfall/",
+    "note": "Official Kamjong District NIC image on the Khayang (Tililytiluelue) Waterfall page.",
+    "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Khayang waterfall; the official Kamjong page names Khayang village but gives no map coordinates."
+  },
+  "hundung-mova-cave": {
+    "download_url": "https://cdn.s3waas.gov.in/s3598b3e71ec378bd83e0a727608b5db01/uploads/2018/04/20180428100.jpg",
+    "file": "hundung-mova-cave.jpg",
+    "source_page": "https://ukhrul.nic.in/tourist-place/hundung-mova-cave/",
+    "note": "Official Ukhrul District NIC image labelled Hundung Mova Cave.",
+    "coordinate_note": "Coordinate reference: approximate point from the official Ukhrul district direction link for Hundung Mova Cave; the cave is a linear feature and the page gives no exact coordinate."
+  },
+  "barak-river": {
+    "download_url": "https://cdn.s3waas.gov.in/s31fc214004c9481e4c8073e85323bfd4b/uploads/2021/10/2021101269.jpg",
+    "file": "barak-river.jpg",
+    "source_page": "https://pherzawl.nic.in/tourist-place/tipaimukh-dam/",
+    "note": "Official Pherzawl District NIC image labelled Barak Crossing on the Barak River page.",
+    "coordinate_note": "Coordinate reference: point from the official Pherzawl Barak River direction link near the district's Barak river landscape; a river has no single fixed point."
+  },
+  "noney-railway-bridge": {
+    "download_url": "https://cdn.s3waas.gov.in/s3d1c38a09acc34845c6be3a127a5aacaf/uploads/2024/03/2024031413.jpeg",
+    "file": "noney-railway-bridge.jpg",
+    "source_page": "https://noney.nic.in/tourist-place/world-highest-railway-bridge-noney/",
+    "note": "Official Noney District NIC image on the World Highest Railway Bridge: Noney page.",
+    "coordinate_note": "Coordinate reference: Wikidata Q136702595 point for the Noney railway bridge; the official Noney page names the bridge but gives no map coordinates."
+  },
+  "langol-peak-garden": {
+    "download_url": "https://cdn.s3waas.gov.in/s3c3c59e5f8b3e9753913f4d435b53c308/uploads/2018/06/2018061810-1.jpg",
+    "file": "langol-peak-garden.jpg",
+    "source_page": "https://chandel.nic.in/tourist-place/langol-peak-garden/",
+    "note": "Official Chandel District NIC image labelled Langol Peak View on the Langol Peak Garden page.",
+    "coordinate_note": "Coordinate reference: approximate point from the official Chandel district direction link for Langol Peak Garden; the garden covers a peak area rather than a single point."
   }
 }
