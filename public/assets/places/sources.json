@@ -13521,5 +13521,1245 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Rihand_Dam,_Renukoot_1.jpg",
     "coordinate_note": "Coordinate reference: Wikipedia article Rihand Dam (https://en.wikipedia.org/wiki/Rihand_Dam)."
+  },
+  "adina-deer-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f72abb26aa768e5903e7eb",
+    "file": "adina-deer-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Adina Deer Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f72abb26aa768e5903e7eb",
+    "coordinate_note": "Wikipedia: Adina Deer Park, West Bengal, India."
+  },
+  "ajodhya-hills": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63f5f76ac2833880ea035474",
+    "file": "ajodhya-hills.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Ajodhya Hills, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63f5f76ac2833880ea035474",
+    "coordinate_note": "Wikipedia: Ajodhya Hills, West Bengal, India."
+  },
+  "armenian-church": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8018be4bbd858c20633b7",
+    "file": "armenian-church.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Armenian Church, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8018be4bbd858c20633b7",
+    "coordinate_note": "Wikipedia: Armenian Church of the Holy Nazareth, West Bengal, India."
+  },
+  "armenian-ghat": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118d1da7dc4d45a8004782",
+    "file": "armenian-ghat.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Armenian Ghat, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118d1da7dc4d45a8004782",
+    "coordinate_note": "OpenStreetMap/Photon: Armenian Ghat ferry terminal, Brabourne Road, Kolkata."
+  },
+  "babughat": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=640f0a4d6eba05b8070d2898",
+    "file": "babughat.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Babughat, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=640f0a4d6eba05b8070d2898",
+    "coordinate_note": "Wikipedia: Babu Ghat, West Bengal, India."
+  },
+  "bakkhali": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63d7f309e4bbd858c2063390",
+    "file": "bakkhali.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bakkhali, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63d7f309e4bbd858c2063390",
+    "coordinate_note": "Wikipedia: Bakkhali, West Bengal, India."
+  },
+  "balaram-mandir": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9a90cec836803000e1a1",
+    "file": "balaram-mandir.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Balaram Mandir, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9a90cec836803000e1a1",
+    "coordinate_note": "Wikipedia: Balaram Mandir, West Bengal, India."
+  },
+  "bandel-church": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc922bcec836803000e183",
+    "file": "bandel-church.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bandel Church, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc922bcec836803000e183",
+    "coordinate_note": "Wikipedia: Basilica of the Holy Rosary, Bandel, West Bengal, India."
+  },
+  "bankura": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=63e76f3ff21baf83e8050ec7",
+    "file": "bankura.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bankura, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=63e76f3ff21baf83e8050ec7",
+    "coordinate_note": "Wikipedia: Bankura, West Bengal, India."
+  },
+  "bardhaman": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ed0333b5bd7cf7d0c1bd0",
+    "file": "bardhaman.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bardhaman, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ed0333b5bd7cf7d0c1bd0",
+    "coordinate_note": "Wikipedia: Bardhaman, West Bengal, India."
+  },
+  "belur-math": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8d1e66327ed072c056a23",
+    "file": "belur-math.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Belur Math, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8d1e66327ed072c056a23",
+    "coordinate_note": "Wikipedia: Belur Math, West Bengal, India."
+  },
+  "bethuadahari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f7315226aa768e5903e7f7",
+    "file": "bethuadahari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bethuadahari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f7315226aa768e5903e7f7",
+    "coordinate_note": "Wikipedia: Bethuadahri, West Bengal, India."
+  },
+  "birbhum": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ecc023b5bd7cf7d0c1bc2",
+    "file": "birbhum.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Birbhum, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ecc023b5bd7cf7d0c1bc2",
+    "coordinate_note": "Wikipedia: Birbhum district, West Bengal, India."
+  },
+  "birla-mandir": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc7315cec836803000e14e",
+    "file": "birla-mandir.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Birla Mandir, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc7315cec836803000e14e",
+    "coordinate_note": "Wikipedia: Birla Mandir, Kolkata, West Bengal, India."
+  },
+  "bishnupur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63e7c702f21baf83e8050ee1",
+    "file": "bishnupur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bishnupur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63e7c702f21baf83e8050ee1",
+    "coordinate_note": "Wikipedia: Bishnupur (West Bengal), West Bengal, India."
+  },
+  "bolla-kali-temple": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8ff146327ed072c056a47",
+    "file": "bolla-kali-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Bolla Kali Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8ff146327ed072c056a47",
+    "coordinate_note": "OpenStreetMap/Photon: Bolla village, Balurghat, Dakshin Dinajpur."
+  },
+  "buxa-tiger-reserve": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63e90cfa0e6185b3d60e9407",
+    "file": "buxa-tiger-reserve.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Buxa Tiger Reserve, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63e90cfa0e6185b3d60e9407",
+    "coordinate_note": "Wikipedia: Buxa Tiger Reserve, West Bengal, India."
+  },
+  "chamurchi-eco-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640ef4966eba05b8070d287a",
+    "file": "chamurchi-eco-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chamurchi Eco Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640ef4966eba05b8070d287a",
+    "coordinate_note": "OpenStreetMap/Photon: Chamurchi village, Dhupguri, Jalpaiguri."
+  },
+  "chandannagar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63fc94dccec836803000e18f",
+    "file": "chandannagar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chandannagar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63fc94dccec836803000e18f",
+    "coordinate_note": "Wikipedia: Chandannagar, West Bengal, India."
+  },
+  "chapramari-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d81005e4bbd858c20633d2",
+    "file": "chapramari-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chapramari Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d81005e4bbd858c20633d2",
+    "coordinate_note": "Wikipedia: Chapramari Wildlife Sanctuary, West Bengal, India."
+  },
+  "chatakpur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=641179451efbb7eced070ec4",
+    "file": "chatakpur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chatakpur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=641179451efbb7eced070ec4",
+    "coordinate_note": "Wikipedia: Chatakpur, West Bengal, India."
+  },
+  "chilapata-forest": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f70c9626aa768e5903e7dc",
+    "file": "chilapata-forest.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chilapata Forest, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f70c9626aa768e5903e7dc",
+    "coordinate_note": "OpenStreetMap/Photon: Chillapata village, Alipurduar-I, Alipurduar."
+  },
+  "chinsurah": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc988dcec836803000e195",
+    "file": "chinsurah.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chinsurah, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc988dcec836803000e195",
+    "coordinate_note": "Wikipedia: Hugli-Chuchura, West Bengal, India."
+  },
+  "chuikhim": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=64117a241efbb7eced070eca",
+    "file": "chuikhim.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Chuikhim, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=64117a241efbb7eced070eca",
+    "coordinate_note": "Wikidata Q105200622: Chuikhim village, Kalimpong district, West Bengal."
+  },
+  "cooch-behar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ec94c3b5bd7cf7d0c1bbc",
+    "file": "cooch-behar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Cooch Behar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ec94c3b5bd7cf7d0c1bbc",
+    "coordinate_note": "Wikipedia: Cooch Behar, West Bengal, India."
+  },
+  "cooch-behar-palace": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9e238ffe009a67043f62",
+    "file": "cooch-behar-palace.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Cooch Behar Palace, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9e238ffe009a67043f62",
+    "coordinate_note": "Wikipedia: Cooch Behar Palace, West Bengal, India."
+  },
+  "dakshineswar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8d36b6327ed072c056a26",
+    "file": "dakshineswar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Dakshineswar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8d36b6327ed072c056a26",
+    "coordinate_note": "Wikipedia: Dakshineswar, West Bengal, India."
+  },
+  "damdim-tea-residency": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef2a4b56673d1a4e0effa2",
+    "file": "damdim-tea-residency.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Damdim Tea Residency, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef2a4b56673d1a4e0effa2",
+    "coordinate_note": "Wikipedia: Dam Dim, West Bengal, India."
+  },
+  "darjeeling": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63d54ce734d3802cfd04682b",
+    "file": "darjeeling.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Darjeeling, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63d54ce734d3802cfd04682b",
+    "coordinate_note": "Wikipedia: Darjeeling, West Bengal, India."
+  },
+  "digha": {
+    "creator": "Dassurojitsd",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Digha%2C_Purba_Medinipur_%28East_Midnapore%29_district%2C_West_Bengal%2C_India.JPG",
+    "file": "digha.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Digha, Purba Medinipur (East Midnapore) district, West Bengal, India.JPG. Attribution checked via Commons metadata. The official detail page provided no usable image.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Digha,_Purba_Medinipur_(East_Midnapore)_district,_West_Bengal,_India.JPG",
+    "coordinate_note": "Wikipedia: Digha, West Bengal, India."
+  },
+  "dooars": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63d6c6eaec7aa076f30b35d3",
+    "file": "dooars.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Dooars, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63d6c6eaec7aa076f30b35d3",
+    "coordinate_note": "OpenStreetMap/Photon: Chalsa village, Matiali, Jalpaiguri, a representative point in the Dooars foothills."
+  },
+  "duarsini": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f72f0026aa768e5903e7f4",
+    "file": "duarsini.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Duarsini, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f72f0026aa768e5903e7f4",
+    "coordinate_note": "OpenStreetMap/Photon: Duarsini upper, Manbazar-I, Purulia."
+  },
+  "eco-park-new-town-kolkata": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640ef8ca6eba05b8070d2880",
+    "file": "eco-park-new-town-kolkata.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for ECO PARK NEW TOWN, KOLKATA, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640ef8ca6eba05b8070d2880",
+    "coordinate_note": "Wikipedia: Eco Park, New Town, West Bengal, India."
+  },
+  "furfura-sharif": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fc5e6327ed072c056a3b",
+    "file": "furfura-sharif.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Furfura Sharif, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fc5e6327ed072c056a3b",
+    "coordinate_note": "Wikipedia: Furfura Sharif, West Bengal, India."
+  },
+  "garh-panchakot": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f72bed26aa768e5903e7ee",
+    "file": "garh-panchakot.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Garh Panchakot, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f72bed26aa768e5903e7ee",
+    "coordinate_note": "Wikipedia: Garh Panchkot, West Bengal, India."
+  },
+  "ghoom-monastery": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc6f45cec836803000e142",
+    "file": "ghoom-monastery.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Ghoom Monastery, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc6f45cec836803000e142",
+    "coordinate_note": "Wikipedia: Ghum Monastery, West Bengal, India."
+  },
+  "ging-tea-house": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef218556673d1a4e0eff8d",
+    "file": "ging-tea-house.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Ging Tea House, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef218556673d1a4e0eff8d",
+    "coordinate_note": "Wikipedia: Ging Tea Garden, West Bengal, India."
+  },
+  "glenburn-tea-estate": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef1db956673d1a4e0eff87",
+    "file": "glenburn-tea-estate.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Glenburn Tea Estate, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef1db956673d1a4e0eff87",
+    "coordinate_note": "Wikipedia: Glenburn Tea Estate, West Bengal, India."
+  },
+  "goomtee-tea-estate": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef201956673d1a4e0eff8a",
+    "file": "goomtee-tea-estate.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Goomtee Tea Estate, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef201956673d1a4e0eff8a",
+    "coordinate_note": "Wikipedia: Goomtee Tea Estate, West Bengal, India."
+  },
+  "gorumara-national-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d7fc45e4bbd858c206339f",
+    "file": "gorumara-national-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Gorumara National Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d7fc45e4bbd858c206339f",
+    "coordinate_note": "Wikipedia: Gorumara National Park, West Bengal, India."
+  },
+  "hooghly": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ed9023b5bd7cf7d0c1bd6",
+    "file": "hooghly.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Hooghly, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ed9023b5bd7cf7d0c1bd6",
+    "coordinate_note": "Wikipedia: Hooghly Imambara, West Bengal, India."
+  },
+  "house-of-gokul-mitra": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc909ccec836803000e17e",
+    "file": "house-of-gokul-mitra.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for House Of Gokul Mitra, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc909ccec836803000e17e",
+    "coordinate_note": "OpenStreetMap/Photon: Madan Mohan Tala Street, Kolkata, the locality of the historic Gokul Mitra house."
+  },
+  "house-of-swami-vivekananda": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9eb5cec836803000e1a7",
+    "file": "house-of-swami-vivekananda.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for House Of Swami Vivekananda, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9eb5cec836803000e1a7",
+    "coordinate_note": "Wikipedia: Ramakrishna Mission Swami Vivekananda's Ancestral House and Cultural Centre, West Bengal, India."
+  },
+  "howrah": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Weekend Gateways/details?template_id=1&id=63da5bcc171e967049012c30",
+    "file": "howrah.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Howrah, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Weekend Gateways/details?template_id=1&id=63da5bcc171e967049012c30",
+    "coordinate_note": "Wikipedia: Howrah, West Bengal, India."
+  },
+  "imambara": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fcd86327ed072c056a3e",
+    "file": "imambara.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for IMAMBARA, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fcd86327ed072c056a3e",
+    "coordinate_note": "Wikipedia: Nizamat Imambara, West Bengal, India."
+  },
+  "indian-museum": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc7feacec836803000e160",
+    "file": "indian-museum.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Indian Museum, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc7feacec836803000e160",
+    "coordinate_note": "Wikipedia: Indian Museum, West Bengal, India."
+  },
+  "iskcon-kolkata": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=64115d8471d33cd8e80f9d24",
+    "file": "iskcon-kolkata.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for ISKCON Kolkata, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=64115d8471d33cd8e80f9d24",
+    "coordinate_note": "OpenStreetMap/Photon: Radha Govinda Mandir (ISKCON Kolkata), Albert Road, Kolkata."
+  },
+  "iskcon-mayapur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fac56327ed072c056a35",
+    "file": "iskcon-mayapur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for ISKCON Mayapur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fac56327ed072c056a35",
+    "coordinate_note": "Wikipedia: Mayapur, West Bengal, India."
+  },
+  "itachuna-rajbari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9b058ffe009a67043f56",
+    "file": "itachuna-rajbari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Itachuna Rajbari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9b058ffe009a67043f56",
+    "coordinate_note": "Wikipedia: Itachuna Rajbari, West Bengal, India."
+  },
+  "jagannath-ghat": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118c59a7dc4d45a8004776",
+    "file": "jagannath-ghat.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Jagannath Ghat, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118c59a7dc4d45a8004776",
+    "coordinate_note": "OpenStreetMap/Photon: Jagannath Ghat ferry terminal, Strand Bank Road, Kolkata."
+  },
+  "jaldapara-national-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d80f54e4bbd858c20633c9",
+    "file": "jaldapara-national-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Jaldapara National Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d80f54e4bbd858c20633c9",
+    "coordinate_note": "Wikipedia: Jaldapara National Park, West Bengal, India."
+  },
+  "jhargram": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Weekend Gateways/details?template_id=1&id=63da5c05171e967049012c33",
+    "file": "jhargram.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Jhargram, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Weekend Gateways/details?template_id=1&id=63da5c05171e967049012c33",
+    "coordinate_note": "Wikipedia: Jhargram, West Bengal, India."
+  },
+  "jor-bangla-temple-bishnupur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd96988ffe009a67043f44",
+    "file": "jor-bangla-temple-bishnupur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Jor Bangla Temple, Bishnupur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd96988ffe009a67043f44",
+    "coordinate_note": "Wikipedia: Jor Bangla Temple, West Bengal, India."
+  },
+  "jorasanko-thakurbari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc861fcec836803000e172",
+    "file": "jorasanko-thakurbari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Jorasanko Thakurbari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc861fcec836803000e172",
+    "coordinate_note": "Wikipedia: Jorasanko Thakur Bari, West Bengal, India."
+  },
+  "jorpokhri-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d810f5e4bbd858c20633db",
+    "file": "jorpokhri-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Jorpokhri Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d810f5e4bbd858c20633db",
+    "coordinate_note": "Wikipedia: Jore Pokhri Wildlife Sanctuary, West Bengal, India."
+  },
+  "kalighat-temple": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d800a0e4bbd858c20633ab",
+    "file": "kalighat-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kalighat Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d800a0e4bbd858c20633ab",
+    "coordinate_note": "Wikipedia: Kalighat Temple, West Bengal, India."
+  },
+  "kalimpong": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=638f831f9e20437bfb0ce12a",
+    "file": "kalimpong.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kalimpong, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=638f831f9e20437bfb0ce12a",
+    "coordinate_note": "Wikipedia: Kalimpong, West Bengal, India."
+  },
+  "kalimpong-teesta-bazar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118b22a7dc4d45a8004764",
+    "file": "kalimpong-teesta-bazar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kalimpong - Teesta Bazar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118b22a7dc4d45a8004764",
+    "coordinate_note": "Wikipedia: Teesta Bazaar, West Bengal, India."
+  },
+  "kapil-muni-ashram-gangasagar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8beb36327ed072c056a20",
+    "file": "kapil-muni-ashram-gangasagar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kapil Muni Ashram, Gangasagar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8beb36327ed072c056a20",
+    "coordinate_note": "Wikipedia: Gangasagar, West Bengal, India."
+  },
+  "kolkata": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63e0f9bde1e96d5daf0e5c4c",
+    "file": "kolkata.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kolkata, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63e0f9bde1e96d5daf0e5c4c",
+    "coordinate_note": "Wikipedia: Kolkata, West Bengal, India."
+  },
+  "krishnanagar-rajbari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fda1628ffe009a67043f6e",
+    "file": "krishnanagar-rajbari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Krishnanagar Rajbari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fda1628ffe009a67043f6e",
+    "coordinate_note": "Wikipedia: Krishnanagar, Nadia, West Bengal, India."
+  },
+  "kumartuli": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d801b8e4bbd858c20633ba",
+    "file": "kumartuli.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kumartuli, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d801b8e4bbd858c20633ba",
+    "coordinate_note": "Wikipedia: Kumortuli, West Bengal, India."
+  },
+  "kurseong": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f848d9e20437bfb0ce12d",
+    "file": "kurseong.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Kurseong, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f848d9e20437bfb0ce12d",
+    "coordinate_note": "Wikipedia: Kurseong, West Bengal, India."
+  },
+  "lava": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f85769e20437bfb0ce133",
+    "file": "lava.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Lava, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f85769e20437bfb0ce133",
+    "coordinate_note": "Wikipedia: Lava, West Bengal, West Bengal, India."
+  },
+  "lepchajagat": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63f5f5b94de79e5c160fc4a3",
+    "file": "lepchajagat.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Lepchajagat, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63f5f5b94de79e5c160fc4a3",
+    "coordinate_note": "Wikidata Q129331965: Lepcha Jagat village, Darjeeling district, West Bengal."
+  },
+  "lolegaon": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f859c9e20437bfb0ce136",
+    "file": "lolegaon.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Lolegaon, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f859c9e20437bfb0ce136",
+    "coordinate_note": "Wikipedia: Loleygaon, West Bengal, India."
+  },
+  "lothian-island-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f7106626aa768e5903e7df",
+    "file": "lothian-island-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Lothian Island Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f7106626aa768e5903e7df",
+    "coordinate_note": "Wikipedia: Lothian Island Wildlife Sanctuary, West Bengal, India."
+  },
+  "mahananda-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d81045e4bbd858c20633d5",
+    "file": "mahananda-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Mahananda Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d81045e4bbd858c20633d5",
+    "coordinate_note": "Wikipedia: Mahananda Wildlife Sanctuary, West Bengal, India."
+  },
+  "makaibari-tea-estate": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef252656673d1a4e0eff93",
+    "file": "makaibari-tea-estate.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Makaibari Tea Estate, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef252656673d1a4e0eff93",
+    "coordinate_note": "Wikipedia: Makaibari Tea Estate, West Bengal, India."
+  },
+  "malda": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=63e87df24315f840270835b4",
+    "file": "malda.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Malda, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=63e87df24315f840270835b4",
+    "coordinate_note": "Wikipedia: Malda, West Bengal, West Bengal, India."
+  },
+  "mandarmani": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=638f91549e20437bfb0ce146",
+    "file": "mandarmani.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Mandarmani, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=638f91549e20437bfb0ce146",
+    "coordinate_note": "Wikipedia: Mandarmani, West Bengal, India."
+  },
+  "marble-palace": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc8126cec836803000e166",
+    "file": "marble-palace.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Marble Palace, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc8126cec836803000e166",
+    "coordinate_note": "OpenStreetMap/Photon: Marble Palace museum, Muktaram Babu Street, Kolkata."
+  },
+  "millennium-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=640f09bc6eba05b8070d2892",
+    "file": "millennium-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Millennium Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=640f09bc6eba05b8070d2892",
+    "coordinate_note": "OpenStreetMap/Photon: Millennium Park, Strand Road, Kolkata."
+  },
+  "mirik": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63d7ed9ce4bbd858c2063384",
+    "file": "mirik.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Mirik, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63d7ed9ce4bbd858c2063384",
+    "coordinate_note": "Wikipedia: Mirik, West Bengal, India."
+  },
+  "motijheel-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640eec926eba05b8070d2874",
+    "file": "motijheel-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Motijheel Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640eec926eba05b8070d2874",
+    "coordinate_note": "OpenStreetMap/Photon: Motijheel Eco Park, Murshidabad Jiaganj, Murshidabad."
+  },
+  "mukutmanipur-dam": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118bf6a7dc4d45a8004770",
+    "file": "mukutmanipur-dam.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Mukutmanipur Dam, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118bf6a7dc4d45a8004770",
+    "coordinate_note": "Wikipedia: Mukutmanipur Dam, West Bengal, India."
+  },
+  "murshidabad": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ec7b53b5bd7cf7d0c1bb6",
+    "file": "murshidabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Murshidabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ec7b53b5bd7cf7d0c1bb6",
+    "coordinate_note": "Wikipedia: Murshidabad, West Bengal, India."
+  },
+  "murshidabad-jain-temple": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc5ec5cec836803000e136",
+    "file": "murshidabad-jain-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Murshidabad Jain Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc5ec5cec836803000e136",
+    "coordinate_note": "Wikipedia: Kathgola, West Bengal, India."
+  },
+  "murshidabad-rajbari-choto-rajbari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9ffe8ffe009a67043f68",
+    "file": "murshidabad-rajbari-choto-rajbari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Murshidabad Rajbari/Choto Rajbari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9ffe8ffe009a67043f68",
+    "coordinate_note": "OpenStreetMap/Photon: Nazhipur Rajbhari (Choto Rajbari), Murshidabad Jiaganj, Murshidabad."
+  },
+  "murti-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f727b026aa768e5903e7e8",
+    "file": "murti-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Murti Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f727b026aa768e5903e7e8",
+    "coordinate_note": "Wikipedia: Murti, Jalpaiguri, West Bengal, India."
+  },
+  "nadia": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ecd153b5bd7cf7d0c1bca",
+    "file": "nadia.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Nadia, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ecd153b5bd7cf7d0c1bca",
+    "coordinate_note": "Wikipedia: Nadia district, West Bengal, India."
+  },
+  "nakhoda-masjid": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fb206327ed072c056a38",
+    "file": "nakhoda-masjid.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Nakhoda Masjid, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fb206327ed072c056a38",
+    "coordinate_note": "Wikipedia: Nakhoda Mosque, West Bengal, India."
+  },
+  "neora-valley-national-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d8043fe4bbd858c20633c0",
+    "file": "neora-valley-national-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Neora Valley National Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d8043fe4bbd858c20633c0",
+    "coordinate_note": "Wikipedia: Neora Valley National Park, West Bengal, India."
+  },
+  "outram-ghat": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118cbda7dc4d45a800477c",
+    "file": "outram-ghat.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Outram Ghat, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118cbda7dc4d45a800477c",
+    "coordinate_note": "Wikipedia: Outram Ghat, West Bengal, India."
+  },
+  "pareswanath-temple-digambar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc741dcec836803000e154",
+    "file": "pareswanath-temple-digambar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Pareswanath Temple Digambar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc741dcec836803000e154",
+    "coordinate_note": "OpenStreetMap/Photon: Parshwanath Jain Temple, Belgachia Bridge, Kolkata."
+  },
+  "paschim-and-purba-medinipur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=6412c039d80e2e5dfb089464",
+    "file": "paschim-and-purba-medinipur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Paschim and Purba Medinipur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=6412c039d80e2e5dfb089464",
+    "coordinate_note": "Wikipedia: Purba Medinipur district, West Bengal, India."
+  },
+  "paschim-medinipur": {
+    "creator": "Pinakpani",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Paschim_Medinipur_District_Library_01.jpg",
+    "file": "paschim-medinipur.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Paschim Medinipur District Library 01.jpg. Attribution checked via Commons metadata. The official detail page provided no usable image.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Paschim_Medinipur_District_Library_01.jpg",
+    "coordinate_note": "Wikipedia: Paschim Medinipur district, West Bengal, India."
+  },
+  "phalut": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63f5f3fd4de79e5c160fc4a0",
+    "file": "phalut.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Phalut, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63f5f3fd4de79e5c160fc4a0",
+    "coordinate_note": "Wikipedia: Phalut, West Bengal, India."
+  },
+  "princep-ghat": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=640f08d16eba05b8070d288c",
+    "file": "princep-ghat.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Princep Ghat, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=640f08d16eba05b8070d288c",
+    "coordinate_note": "Wikipedia: Prinsep Ghat, West Bengal, India."
+  },
+  "purulia": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63da5916171e967049012c2d",
+    "file": "purulia.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Purulia, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63da5916171e967049012c2d",
+    "coordinate_note": "Wikipedia: Purulia, West Bengal, India."
+  },
+  "purulia-jain-temple": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc60bdcec836803000e139",
+    "file": "purulia-jain-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Purulia Jain Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63fc60bdcec836803000e139",
+    "coordinate_note": "OpenStreetMap/Photon: mapped temple reference in Purulia-II, Purulia district."
+  },
+  "raiganj-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=64119bf9f44207a55b0d931a",
+    "file": "raiganj-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Raiganj Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=64119bf9f44207a55b0d931a",
+    "coordinate_note": "Wikipedia: Raiganj Wildlife Sanctuary, West Bengal, India."
+  },
+  "rajpur-tea-gardens": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef288656673d1a4e0eff9c",
+    "file": "rajpur-tea-gardens.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Rajpur Tea Gardens, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef288656673d1a4e0eff9c",
+    "coordinate_note": "OpenStreetMap/Photon: Raipur Tea Estate, Jalpaiguri."
+  },
+  "rasamancha-bankura": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd99c68ffe009a67043f50",
+    "file": "rasamancha-bankura.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Rasamancha, Bankura, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd99c68ffe009a67043f50",
+    "coordinate_note": "OpenStreetMap/Photon: Rasamancha monument, Bishnupur, Bankura."
+  },
+  "rishop": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f84f99e20437bfb0ce130",
+    "file": "rishop.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Rishop, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=638f84f99e20437bfb0ce130",
+    "coordinate_note": "Wikipedia: Rishyap, West Bengal, India."
+  },
+  "sandakphu": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63d7f015e4bbd858c2063387",
+    "file": "sandakphu.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Sandakphu, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/The Mountains/details?template_id=1&id=63d7f015e4bbd858c2063387",
+    "coordinate_note": "Wikipedia: Sandakphu, West Bengal, India."
+  },
+  "santiniketan": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63da5372171e967049012c27",
+    "file": "santiniketan.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Santiniketan, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/topDestination/details1?template_id=1&id=63da5372171e967049012c27",
+    "coordinate_note": "Wikipedia: Santiniketan, West Bengal, India."
+  },
+  "sea-beaches": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Adventure/details?template_id=1&id=641008ffba3de81f7e08f692",
+    "file": "sea-beaches.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Sea Beaches, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Adventure/details?template_id=1&id=641008ffba3de81f7e08f692",
+    "coordinate_note": "OpenStreetMap/Photon: Junput village, Deshopran, Purba Medinipur, a representative West Bengal sea beach."
+  },
+  "senchal-wildlife-sanctuary": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=64119b1cf44207a55b0d9314",
+    "file": "senchal-wildlife-sanctuary.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Senchal Wildlife Sanctuary, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=64119b1cf44207a55b0d9314",
+    "coordinate_note": "Wikipedia: Senchal Wildlife Sanctuary, West Bengal, India."
+  },
+  "serampore": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9408cec836803000e189",
+    "file": "serampore.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Serampore, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9408cec836803000e189",
+    "coordinate_note": "Wikipedia: Serampore, West Bengal, India."
+  },
+  "seth-banshidhar-jalan-smriti-mandir": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=662b488e55c0fd2b570b0d84",
+    "file": "seth-banshidhar-jalan-smriti-mandir.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Seth Banshidhar Jalan Smriti Mandir, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=662b488e55c0fd2b570b0d84",
+    "coordinate_note": "OpenStreetMap/Photon: Mandirtala Mandir, Shibpur, Howrah."
+  },
+  "shankarpur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63d7f2e0e4bbd858c206338d",
+    "file": "shankarpur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Shankarpur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63d7f2e0e4bbd858c206338d",
+    "coordinate_note": "Wikipedia: Shankarpur, West Bengal, India."
+  },
+  "sillery-gaon": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640efede6eba05b8070d2886",
+    "file": "sillery-gaon.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Sillery Gaon, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=640efede6eba05b8070d2886",
+    "coordinate_note": "Wikipedia: Sillery Gaon, West Bengal, India."
+  },
+  "singalila-national-park": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d80f25e4bbd858c20633c6",
+    "file": "singalila-national-park.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Singalila National Park, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d80f25e4bbd858c20633c6",
+    "coordinate_note": "Wikipedia: Singalila National Park, West Bengal, India."
+  },
+  "singtom-tea-estate": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef292256673d1a4e0eff9f",
+    "file": "singtom-tea-estate.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Singtom Tea Estate, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef292256673d1a4e0eff9f",
+    "coordinate_note": "Wikipedia: Singtam Tea Garden, West Bengal, India."
+  },
+  "sourenee-tea-estate": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef339c56673d1a4e0effc3",
+    "file": "sourenee-tea-estate.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Sourenee Tea Estate, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef339c56673d1a4e0effc3",
+    "coordinate_note": "Wikidata Q111861699: Sourenee Tea Estate, Darjeeling district, West Bengal."
+  },
+  "sovabazar-rajbari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc8409cec836803000e16c",
+    "file": "sovabazar-rajbari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Sovabazar Rajbari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc8409cec836803000e16c",
+    "coordinate_note": "Wikipedia: Shobhabazar, West Bengal, India."
+  },
+  "st-jame-s-church": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8feb66327ed072c056a44",
+    "file": "st-jame-s-church.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for ST. Jame's Church, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8feb66327ed072c056a44",
+    "coordinate_note": "Wikipedia: St. James' Church, Kolkata, West Bengal, India."
+  },
+  "st-paul-s-cathedral": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fd3b6327ed072c056a41",
+    "file": "st-paul-s-cathedral.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for ST. Paul's Cathedral, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fd3b6327ed072c056a41",
+    "coordinate_note": "Wikipedia: St. Paul's Cathedral, Kolkata, West Bengal, India."
+  },
+  "sundarbans": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=638f90b09e20437bfb0ce140",
+    "file": "sundarbans.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Sundarbans, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=638f90b09e20437bfb0ce140",
+    "coordinate_note": "Wikipedia: Sundarbans, West Bengal, India."
+  },
+  "tajpur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63d7f2afe4bbd858c206338a",
+    "file": "tajpur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Tajpur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63d7f2afe4bbd858c206338a",
+    "coordinate_note": "Wikipedia: Tajpur, West Bengal, West Bengal, India."
+  },
+  "tarakeshwar": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8d6d86327ed072c056a32",
+    "file": "tarakeshwar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for TARAKESHWAR, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8d6d86327ed072c056a32",
+    "coordinate_note": "Wikipedia: Tarakeswar, West Bengal, India."
+  },
+  "tarapith": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8d4236327ed072c056a2c",
+    "file": "tarapith.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Tarapith, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8d4236327ed072c056a2c",
+    "coordinate_note": "Wikipedia: Tarapith, West Bengal, India."
+  },
+  "the-arya-tea-resort": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef25f156673d1a4e0eff96",
+    "file": "the-arya-tea-resort.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Arya Tea Resort, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef25f156673d1a4e0eff96",
+    "coordinate_note": "Wikipedia: Arya Tea Estate, West Bengal, India."
+  },
+  "the-bari-kothi-heritage-property": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9d368ffe009a67043f5c",
+    "file": "the-bari-kothi-heritage-property.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Bari Kothi Heritage Property, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9d368ffe009a67043f5c",
+    "coordinate_note": "Wikipedia: Jiaganj Azimganj, Murshidabad, the locality of the Bari Kothi heritage property."
+  },
+  "the-darjeeling-himalayan-railway": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fca17bcec836803000e1ad",
+    "file": "the-darjeeling-himalayan-railway.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Darjeeling Himalayan Railway, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fca17bcec836803000e1ad",
+    "coordinate_note": "Wikipedia: Darjeeling Himalayan Railway, West Bengal, India."
+  },
+  "the-hazarduari-palace-murshidabad": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fca32dcec836803000e1b3",
+    "file": "the-hazarduari-palace-murshidabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Hazarduari Palace, Murshidabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fca32dcec836803000e1b3",
+    "coordinate_note": "Wikipedia: Hazarduari Palace, West Bengal, India."
+  },
+  "the-mayfair-tea-resort": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef27c956673d1a4e0eff99",
+    "file": "the-mayfair-tea-resort.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Mayfair Tea Resort, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef27c956673d1a4e0eff99",
+    "coordinate_note": "OpenStreetMap/Photon: Mayfair Resort, Mall Road, Darjeeling."
+  },
+  "the-mother-house": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=64116d501b65f46abc00c174",
+    "file": "the-mother-house.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Mother House, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=64116d501b65f46abc00c174",
+    "coordinate_note": "Wikipedia: Kalighat Home for the Dying, West Bengal, India."
+  },
+  "the-rajbari-bawali": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd986b8ffe009a67043f4a",
+    "file": "the-rajbari-bawali.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for The Rajbari Bawali, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd986b8ffe009a67043f4a",
+    "coordinate_note": "Wikipedia: Bawali, West Bengal, India."
+  },
+  "tinchuley-village": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=6411846f45f0b4c72b0e24e4",
+    "file": "tinchuley-village.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Tinchuley Village, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Eco Tourism/details?template_id=1&id=6411846f45f0b4c72b0e24e4",
+    "coordinate_note": "OpenStreetMap/Photon: Tinchuley Ground, Rangli Rangliot, Darjeeling."
+  },
+  "tumsong-chiabari": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef241756673d1a4e0eff90",
+    "file": "tumsong-chiabari.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Tumsong Chiabari, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Tea Tourism/details?template_id=1&id=63ef241756673d1a4e0eff90",
+    "coordinate_note": "Wikipedia: Tumsong Tea Garden, West Bengal, India."
+  },
+  "udaipur": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63f607991ac1db467607abc4",
+    "file": "udaipur.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Udaipur, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=63f607991ac1db467607abc4",
+    "coordinate_note": "OpenStreetMap/Photon: Udaypur Beach near Digha on the West Bengal-Odisha border."
+  },
+  "victoria-memorial": {
+    "creator": "Department of Tourism, Government of West Bengal",
+    "download_url": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d8002ee4bbd858c20633a8",
+    "file": "victoria-memorial.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official West Bengal Tourism destination detail image for Victoria Memorial, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "West Bengal Tourism",
+    "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d8002ee4bbd858c20633a8",
+    "coordinate_note": "Wikipedia: Victoria Memorial, Kolkata, West Bengal, India."
   }
 }

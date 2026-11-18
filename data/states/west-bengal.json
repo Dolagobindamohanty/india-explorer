@@ -1,0 +1,8 @@
+{
+  "slug": "west-bengal",
+  "name": "West Bengal",
+  "kind": "state",
+  "source_url": "https://www.wbtourism.gov.in/",
+  "festivals_url": "https://www.wbtourism.gov.in/festival-durga-puja",
+  "places_file": "../west-bengal-places.json"
+}
