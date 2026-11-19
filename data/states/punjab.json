@@ -1,0 +1,7 @@
+{
+  "slug": "punjab",
+  "name": "Punjab",
+  "kind": "state",
+  "source_url": "https://punjabtourism.punjab.gov.in/",
+  "places_file": "../punjab-places.json"
+}

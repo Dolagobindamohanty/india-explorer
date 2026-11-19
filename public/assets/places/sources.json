@@ -15861,5 +15861,485 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Kumaram_Bheem_Museum_Jodeghat.jpg",
     "coordinate_note": "Wikipedia: Jodeghat, Kumuram Bheem Asifabad, Telangana, India."
+  },
+  "golden-temple": {
+    "creator": "Raavimohantydelhi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Golden_Temple%2C_Harmandir_Sahib%2C_Amritsar.jpg",
+    "file": "golden-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Golden Temple, Harmandir Sahib, Amritsar.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Golden_Temple,_Harmandir_Sahib,_Amritsar.jpg",
+    "coordinate_note": "Wikipedia: Golden Temple, Punjab, India."
+  },
+  "jallianwala-bagh": {
+    "creator": "Gannu03",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Jallianwala_Bagh_Memorial_in_Amritsar.jpg",
+    "file": "jallianwala-bagh.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Jallianwala Bagh Memorial in Amritsar.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jallianwala_Bagh_Memorial_in_Amritsar.jpg",
+    "coordinate_note": "Wikipedia: Jallianwala Bagh, Punjab, India."
+  },
+  "wagah-border": {
+    "creator": "Vinayaraj",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Attari%E2%80%93Wagah_border%2C_ceremony_and_crowds_Indian_side_vrtmrgmpksk_%28105%29.jpg",
+    "file": "wagah-border.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Attari–Wagah border, ceremony and crowds Indian side vrtmrgmpksk (105).jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Attari–Wagah_border,_ceremony_and_crowds_Indian_side_vrtmrgmpksk_(105).jpg",
+    "coordinate_note": "Wikipedia: Attari–Wagah border ceremony, Punjab, India."
+  },
+  "gobindgarh-fort": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Gobindgarh_fort%2C_Amritsar%2C_Punjab%2C_India.jpg",
+    "file": "gobindgarh-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gobindgarh fort, Amritsar, Punjab, India.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gobindgarh_fort,_Amritsar,_Punjab,_India.jpg",
+    "coordinate_note": "Wikidata: Q19891598, Punjab, India."
+  },
+  "durgiana-temple": {
+    "creator": "Bernard Gagnon",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Durgiana_Temple%2C_Amritsar_02.jpg",
+    "file": "durgiana-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Durgiana Temple, Amritsar 02.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Durgiana_Temple,_Amritsar_02.jpg",
+    "coordinate_note": "Wikipedia: Durgiana Temple, Punjab, India."
+  },
+  "partition-museum": {
+    "creator": "Amritpal Singh Mann",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Partition_Museum_26_September_2018.jpg",
+    "file": "partition-museum.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Partition Museum 26 September 2018.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Partition_Museum_26_September_2018.jpg",
+    "coordinate_note": "Wikidata: Q30595186, Punjab, India."
+  },
+  "qila-mubarak-bathinda": {
+    "creator": "Tamoghni",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Qila_Mubarak_main_entrance_building.jpg",
+    "file": "qila-mubarak-bathinda.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Qila Mubarak main entrance building.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Bathinda district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Qila_Mubarak_main_entrance_building.jpg",
+    "coordinate_note": "Wikipedia: Qila Mubarak, Bathinda, Punjab, India."
+  },
+  "damdama-sahib": {
+    "creator": "banmeet singh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/DAMDAMA_SAHIB_BATHINDA.jpg",
+    "file": "damdama-sahib.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image File:DAMDAMA SAHIB BATHINDA.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Bathinda district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:DAMDAMA_SAHIB_BATHINDA.jpg",
+    "coordinate_note": "Wikipedia: Takht Sri Damdama Sahib, Punjab, India."
+  },
+  "qila-mubarak-faridkot": {
+    "creator": "Unknown photographer",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Photograph_of_the_gate_of_Faridkot_Fort_of_the_erstwhile_Faridkot_State.jpg",
+    "file": "qila-mubarak-faridkot.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Photograph of the gate of Faridkot Fort of the erstwhile Faridkot State.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Faridkot district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Photograph_of_the_gate_of_Faridkot_Fort_of_the_erstwhile_Faridkot_State.jpg",
+    "coordinate_note": "Wikidata: Q137719579, Punjab, India."
+  },
+  "fatehgarh-sahib": {
+    "creator": "Jasleen Kaur from USA",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Fatehgarh_Sahib_Gurdwara%2C_Punjab%2C_India.jpg",
+    "file": "fatehgarh-sahib.jpg",
+    "license": "CC BY-SA 2.0",
+    "note": "Wikimedia Commons image File:Fatehgarh Sahib Gurdwara, Punjab, India.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Fatehgarh Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Fatehgarh_Sahib_Gurdwara,_Punjab,_India.jpg",
+    "coordinate_note": "Wikidata: Q5619960, Punjab, India."
+  },
+  "jyoti-sarup": {
+    "creator": "Kuldeepburjbhalaike",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Gurdwara_Jyoti_Sarup_is_being_overlaid_by_Golden_leaf_%28December_2025%29.jpg",
+    "file": "jyoti-sarup.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurdwara Jyoti Sarup is being overlaid by Golden leaf (December 2025).jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Fatehgarh Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurdwara_Jyoti_Sarup_is_being_overlaid_by_Golden_leaf_(December_2025).jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Fountain Jyoti Sarup Sahib, Punjab, India."
+  },
+  "aam-khas-bagh": {
+    "creator": "baljinder kang",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Aam_khas_Bagh%2C_Fatehgarh_Sahib_-_panoramio.jpg",
+    "file": "aam-khas-bagh.jpg",
+    "license": "CC BY 3.0",
+    "note": "Wikimedia Commons image File:Aam khas Bagh, Fatehgarh Sahib - panoramio.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Fatehgarh Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Aam_khas_Bagh,_Fatehgarh_Sahib_-_panoramio.jpg",
+    "coordinate_note": "Wikipedia: Aam Khas Bagh, Punjab, India."
+  },
+  "hussainiwala": {
+    "creator": "Sidhuharry",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Hussainiwala-border.jpg",
+    "file": "hussainiwala.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image Hussainiwala-border.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ferozepur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hussainiwala-border.jpg",
+    "coordinate_note": "Wikipedia: Hussainiwala, Punjab, India."
+  },
+  "dera-baba-nanak": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Gurudwara_Sri_Chola_Sahib%2C_Dera_Baba_Nanak_02.jpg",
+    "file": "dera-baba-nanak.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurudwara Sri Chola Sahib, Dera Baba Nanak 02.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Gurdaspur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Sri_Chola_Sahib,_Dera_Baba_Nanak_02.jpg",
+    "coordinate_note": "Wikipedia: Dera Baba Nanak, Punjab, India."
+  },
+  "qadian": {
+    "creator": "Ceddyfresse",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fazl_Mosque_2010.jpg",
+    "file": "qadian.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Fazl Mosque 2010.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Gurdaspur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Fazl_Mosque_2010.jpg",
+    "coordinate_note": "Wikipedia: Qadian, Punjab, India."
+  },
+  "devi-talab-temple": {
+    "creator": "Shivamsetu",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Devi_Talab_Jalandhar_01.jpg",
+    "file": "devi-talab-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Devi Talab Jalandhar 01.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Jalandhar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Devi_Talab_Jalandhar_01.jpg",
+    "coordinate_note": "Wikipedia: Devi Talab Mandir, Punjab, India."
+  },
+  "wonderland-jalandhar": {
+    "creator": "Saurabh srivastava",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Wonderland_boating.JPG",
+    "file": "wonderland-jalandhar.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Wonderland boating.JPG. Attribution checked via Commons metadata. The canonical source for this place is the official Jalandhar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Wonderland_boating.JPG",
+    "coordinate_note": "OpenStreetMap (Photon): Wonderland, Punjab, India."
+  },
+  "jagatjit-palace": {
+    "creator": "MSharma at en.wikipedia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Jagatjit_Palace_-_Kapurthala_Sainik_School.jpg",
+    "file": "jagatjit-palace.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Jagatjit Palace - Kapurthala Sainik School.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jagatjit_Palace_-_Kapurthala_Sainik_School.jpg",
+    "coordinate_note": "Wikipedia: Jagatjit Palace, Punjab, India."
+  },
+  "moorish-mosque": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Moorish_Mosque_of_Kapurthala_in_the_state_of_Punjab_01.jpg",
+    "file": "moorish-mosque.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Moorish Mosque of Kapurthala in the state of Punjab 01.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Moorish_Mosque_of_Kapurthala_in_the_state_of_Punjab_01.jpg",
+    "coordinate_note": "Wikipedia: Moorish Mosque, Kapurthala, Punjab, India."
+  },
+  "shalimar-gardens-kapurthala": {
+    "creator": "Glasreifen",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Shalimar_Gardens_Kapurthala_1.jpg",
+    "file": "shalimar-gardens-kapurthala.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Shalimar Gardens Kapurthala 1.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Shalimar_Gardens_Kapurthala_1.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Shalimar Gardens, Punjab, India."
+  },
+  "pau-museum": {
+    "creator": "RameshSharma1",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pau_museum.jpg",
+    "file": "pau-museum.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image File:Pau museum.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ludhiana district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Pau_museum.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Punjab Agricultural University, Punjab, India."
+  },
+  "phillaur-fort": {
+    "creator": "Smloverboy4",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Phillaur-fort.jpg",
+    "file": "phillaur-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Phillaur-fort.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ludhiana district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Phillaur-fort.jpg",
+    "coordinate_note": "Wikipedia: Phillaur Fort, Punjab, India."
+  },
+  "ranjit-sagar-dam": {
+    "creator": "Simarsarb",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ranjit_sagar_dam.jpg",
+    "file": "ranjit-sagar-dam.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Ranjit sagar dam.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Pathankot district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ranjit_sagar_dam.jpg",
+    "coordinate_note": "Wikipedia: Ranjit Sagar Dam, Punjab, India."
+  },
+  "mukteshwar-mahadev-temple": {
+    "creator": "ArmouredCyborg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Mukteshwar_Mahadev_Temple.jpg",
+    "file": "mukteshwar-mahadev-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Mukteshwar Mahadev Temple.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Pathankot district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mukteshwar_Mahadev_Temple.jpg",
+    "coordinate_note": "Wikipedia: Mukteshwar Mahadev Temple, Punjab, India."
+  },
+  "qila-mubarak-patiala": {
+    "creator": "Journojp",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Qila_Mubarak%2C_Patiala.jpg",
+    "file": "qila-mubarak-patiala.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Qila Mubarak, Patiala.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Patiala district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Qila_Mubarak,_Patiala.jpg",
+    "coordinate_note": "Wikipedia: Qila Mubarak, Patiala, Punjab, India."
+  },
+  "moti-bagh-palace": {
+    "creator": "Satdeep Gill",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/New_Moti_Bagh_Palace%2C_Patiala.jpg",
+    "file": "moti-bagh-palace.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:New Moti Bagh Palace, Patiala.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Patiala district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:New_Moti_Bagh_Palace,_Patiala.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Moti Bagh Palace (Old), Punjab, India."
+  },
+  "bahadurgarh-fort": {
+    "creator": "Fauzdar Rashmi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Bahadurgarh_Fort_a_dilapidated_part_Patiala_Punjab_IMG_3.jpg",
+    "file": "bahadurgarh-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Bahadurgarh Fort a dilapidated part Patiala Punjab IMG 3.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Patiala district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bahadurgarh_Fort_a_dilapidated_part_Patiala_Punjab_IMG_3.jpg",
+    "coordinate_note": "Wikipedia: Bahadurgarh Fort, Punjab, India."
+  },
+  "anandpur-sahib": {
+    "creator": "Ssriram mt",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Anandpur_Sahib_%281%29_02.jpg",
+    "file": "anandpur-sahib.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Anandpur Sahib (1) 02.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rupnagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Anandpur_Sahib_(1)_02.jpg",
+    "coordinate_note": "Wikipedia: Anandpur Sahib, Punjab, India."
+  },
+  "virasat-e-khalsa": {
+    "creator": "Kshitiz Sikka",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Virasat-e-Khalsa_%28Anandpur_Sahib%29.jpg",
+    "file": "virasat-e-khalsa.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Virasat-e-Khalsa (Anandpur Sahib).jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rupnagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Virasat-e-Khalsa_(Anandpur_Sahib).jpg",
+    "coordinate_note": "Wikipedia: Virasat-e-Khalsa, Punjab, India."
+  },
+  "bhakra-dam": {
+    "creator": "Deepak Bhargava",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Bhakra_dam_from_Naina_Devi_%28HP%29%2C_India.jpg",
+    "file": "bhakra-dam.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Bhakra dam from Naina Devi (HP), India.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rupnagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bhakra_dam_from_Naina_Devi_(HP),_India.jpg",
+    "coordinate_note": "Wikipedia: Bhakra Dam, Punjab, India."
+  },
+  "fateh-burj": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Fateh_Burj_during_Sunset_%2Cvllage_Chappar_Chiri%2C_Mohali%2C_Punjab%2C_India.jpg",
+    "file": "fateh-burj.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Fateh Burj during Sunset ,vllage Chappar Chiri, Mohali, Punjab, India.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official S.A.S Nagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Fateh_Burj_during_Sunset_,vllage_Chappar_Chiri,_Mohali,_Punjab,_India.jpg",
+    "coordinate_note": "Wikipedia: Fateh Burj, Punjab, India."
+  },
+  "muktsar-sahib": {
+    "creator": "WikiUser",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Gurudwara_Tooti_Gandi_Sahib%2C_Sri_Muktsar_Sahib.jpg",
+    "file": "muktsar-sahib.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurudwara Tooti Gandi Sahib, Sri Muktsar Sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Sri Muktsar Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Tooti_Gandi_Sahib,_Sri_Muktsar_Sahib.jpg",
+    "coordinate_note": "Wikipedia: Sri Muktsar Sahib, Punjab, India."
+  },
+  "tarn-taran-sahib": {
+    "creator": "jasleen_kaur",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Tarn_taran_sahib.jpg",
+    "file": "tarn-taran-sahib.jpg",
+    "license": "CC BY-SA 2.0",
+    "note": "Wikimedia Commons image File:Tarn taran sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Tarn Taran district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tarn_taran_sahib.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Tarn Taran Sahib, Punjab, India."
+  },
+  "goindwal-sahib": {
+    "creator": "Kuldeepburjbhalaike",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Gurdwara_Baoli_Sahib%2C_Goindwal_Sahib.jpg",
+    "file": "goindwal-sahib.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurdwara Baoli Sahib, Goindwal Sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Tarn Taran district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurdwara_Baoli_Sahib,_Goindwal_Sahib.jpg",
+    "coordinate_note": "Wikipedia: Goindwal, Punjab, India."
+  },
+  "harike-wetland": {
+    "creator": "Himanithakur",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/HARIKE_Wetlands.jpg",
+    "file": "harike-wetland.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:HARIKE Wetlands.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Tarn Taran district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:HARIKE_Wetlands.jpg",
+    "coordinate_note": "Wikipedia: Harike Wetland, Punjab, India."
+  },
+  "ram-tirath": {
+    "creator": "Mohalimunda",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Ramtirath.jpg",
+    "file": "ram-tirath.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Ramtirath.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ramtirath.jpg",
+    "coordinate_note": "Wikidata: Q16892565, Punjab, India."
+  },
+  "pul-kanjari": {
+    "creator": "Vikasjariyal",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Canal_in_pul_kanjari.JPG",
+    "file": "pul-kanjari.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Canal in pul kanjari.JPG. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Canal_in_pul_kanjari.JPG",
+    "coordinate_note": "Wikipedia: Pul Kanjri, Punjab, India."
+  },
+  "pushpa-gujral-science-city": {
+    "creator": "itsnsb",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Pushpa_Gujral_Science_City_-_Outside_View_of_IMAX_Theater.jpg",
+    "file": "pushpa-gujral-science-city.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Pushpa Gujral Science City - Outside View of IMAX Theater.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Pushpa_Gujral_Science_City_-_Outside_View_of_IMAX_Theater.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Pushpa Gujral Science City, Punjab, India."
+  },
+  "sheesh-mahal-patiala": {
+    "creator": "Keshuseeker",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Sheesh_Mahal%2C_Patiala.jpg",
+    "file": "sheesh-mahal-patiala.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Sheesh Mahal, Patiala.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Patiala district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sheesh_Mahal,_Patiala.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Shees Mahal, Punjab, India."
+  },
+  "gurdwara-deepgarh": {
+    "creator": "Satdeep Gill",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Gurdwara%2C_Deepgarh.jpg",
+    "file": "gurdwara-deepgarh.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurdwara, Deepgarh.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurdwara,_Deepgarh.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Deepgarh, Barnala district, Punjab, India."
+  },
+  "asafwala-war-memorial": {
+    "creator": "Stalinjeet",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/War_Memorial_Aasf_Wala_6.jpg",
+    "file": "asafwala-war-memorial.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:War Memorial Aasf Wala 6.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Fazilka district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:War_Memorial_Aasf_Wala_6.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): War Memorial, Gharumi, Fazilka district, Punjab, India."
+  },
+  "bajwara-fort": {
+    "creator": "Karantsingh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Bajwara_Fort_Hoshiarpur.jpg",
+    "file": "bajwara-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Bajwara Fort Hoshiarpur.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Hoshiarpur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bajwara_Fort_Hoshiarpur.jpg",
+    "coordinate_note": "Wikipedia: Bajwara, Hoshiarpur district, Punjab, India."
+  },
+  "mubarak-manzil": {
+    "creator": "Khalid G A",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Mubarak_Manzil_Palace%2C_Malerkotla_05.jpg",
+    "file": "mubarak-manzil.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Mubarak Manzil Palace, Malerkotla 05.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Malerkotla district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mubarak_Manzil_Palace,_Malerkotla_05.jpg",
+    "coordinate_note": "Wikipedia: Malerkotla, Punjab, India (the palace stands in Malerkotla town)."
+  },
+  "pahin-sahib-sachi-manji": {
+    "creator": "Kuldeepburjbhalaike",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Gurdwara_Pahin_Sahib_Sachi_Manji%2C_Saidewala.jpg",
+    "file": "pahin-sahib-sachi-manji.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurdwara Pahin Sahib Sachi Manji, Saidewala.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Mansa district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurdwara_Pahin_Sahib_Sachi_Manji,_Saidewala.jpg",
+    "coordinate_note": "Wikimedia Commons geotag on File:Gurdwara Pahin Sahib Sachi Manji, Saidewala.jpg, Mansa district, Punjab."
+  },
+  "takhtupura-yadgar": {
+    "creator": "Gurlal Maan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/SHAHEED_SADHU_SINGH_TAKHTUPURA_YADGAR.jpg",
+    "file": "takhtupura-yadgar.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:SHAHEED SADHU SINGH TAKHTUPURA YADGAR.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Moga district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:SHAHEED_SADHU_SINGH_TAKHTUPURA_YADGAR.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Gurdwara Takhtupura Sahib, Lohara, Moga district, Punjab, India."
+  },
+  "banasar-garden": {
+    "creator": "Osheen477",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Banasar_Bagh_Sangrur_Image.jpg",
+    "file": "banasar-garden.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Banasar Bagh Sangrur Image.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Sangrur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Banasar_Bagh_Sangrur_Image.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Banasar Bagh, Sangrur, Punjab, India."
+  },
+  "khatkar-kalan": {
+    "creator": "Kjstyles",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Khatkar_Kalan.jpg",
+    "file": "khatkar-kalan.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Khatkar Kalan.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Shahid Bhagat Singh Nagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Khatkar_Kalan.jpg",
+    "coordinate_note": "Wikipedia: Khatkar Kalan, Shahid Bhagat Singh Nagar district, Punjab, India."
+  },
+  "amb-sahib": {
+    "creator": "Amanpreet7",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/AmbSahib.jpg",
+    "file": "amb-sahib.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:AmbSahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official S.A.S Nagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:AmbSahib.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Gurudwara Amb Sahib, Mohali, S.A.S Nagar district, Punjab, India."
   }
 }
