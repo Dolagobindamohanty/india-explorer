@@ -14761,5 +14761,625 @@
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63d8002ee4bbd858c20633a8",
     "coordinate_note": "Wikipedia: Victoria Memorial, Kolkata, West Bengal, India."
+  },
+  "adilabad": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/ADILABAD_IMAGE.jpg",
+    "file": "adilabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Adilabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/adilabad",
+    "coordinate_note": "Wikipedia: Adilabad, Telangana, India."
+  },
+  "bhadradri-kothagudem": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/BHADRADRI-KOTHAGUDEM-DISTRICT_IMAGE.jpg",
+    "file": "bhadradri-kothagudem.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Bhadradri Kothagudem, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/bhadradri-kothagudem-districtbhadradri-kothagudem-district",
+    "coordinate_note": "Wikipedia: Bhadradri Kothagudem district, Telangana, India."
+  },
+  "charminar": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/charminar-landscape.jpg",
+    "file": "charminar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Charminar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/charminar",
+    "coordinate_note": "Wikipedia: Charminar, Telangana, India."
+  },
+  "chowmahalla-palace": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/chowmahalla-palace-darbar.jpg",
+    "file": "chowmahalla-palace.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Chowmahalla Palace, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/chowmahalla-palace",
+    "coordinate_note": "Wikipedia: Chowmahalla Palace, Telangana, India."
+  },
+  "falaknuma-palace": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/falaknuma-palace-hyderabad.jpeg",
+    "file": "falaknuma-palace.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Falaknuma Palace, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/falaknuma-palace",
+    "coordinate_note": "Wikipedia: Falaknuma Palace, Telangana, India."
+  },
+  "golconda-fort": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/golconda-fort-hyderabad.jpeg",
+    "file": "golconda-fort.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Golconda Fort, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/golconda-fort",
+    "coordinate_note": "Wikipedia: Golconda, Telangana, India."
+  },
+  "hanumakonda": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/HANMAKONDA_IMAGE.jpg",
+    "file": "hanumakonda.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Hanumakonda, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/hanmakonda",
+    "coordinate_note": "Wikipedia: Hanamkonda, Telangana, India."
+  },
+  "hyderabad": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/chowmahalla-palace-hyderabad.jpg",
+    "file": "hyderabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Hyderabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/hyderabad",
+    "coordinate_note": "Wikipedia: Hyderabad, Telangana, India."
+  },
+  "jagtial": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/JAGTIAL_IMAGE.jpg",
+    "file": "jagtial.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Jagtial, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/jagtial",
+    "coordinate_note": "Wikipedia: Jagtial, Telangana, India."
+  },
+  "jangaon": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/JANGAON-DISTRICT_IMAGE.jpg",
+    "file": "jangaon.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Jangaon, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/jangaon-district",
+    "coordinate_note": "Wikipedia: Jangaon, Telangana, India."
+  },
+  "jayashankar-bhupalapally": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/JAYASHANKAR-BHUPALPALLY-DISTRICT_IMAGE.jpg",
+    "file": "jayashankar-bhupalapally.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Jayashankar Bhupalapally, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/jayashankar-bhupalpally-district",
+    "coordinate_note": "Wikipedia: Bhupalpally, Telangana, India."
+  },
+  "jogulamba-gadwal": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/JOGULAMBA-GADWAL-IMAGE.jpg",
+    "file": "jogulamba-gadwal.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Jogulamba Gadwal, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/jogulamba-gadwal",
+    "coordinate_note": "Wikipedia: Gadwal, Telangana, India."
+  },
+  "kaleshwaram-temple": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/Kaleshwaram.jpeg",
+    "file": "kaleshwaram-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Kaleshwaram Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/kaleshwaram",
+    "coordinate_note": "Wikipedia: Kaleshwara Mukteswara Swamy Temple, Telangana, India."
+  },
+  "kamareddy": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/KAMAREDDY-IMAGE.jpg",
+    "file": "kamareddy.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Kamareddy, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/kamareddy",
+    "coordinate_note": "Wikipedia: Kamareddy, Telangana, India."
+  },
+  "karimnagar": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/KARIMNAGAR-IMAGE.jpg",
+    "file": "karimnagar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Karimnagar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/karimnagar",
+    "coordinate_note": "Wikipedia: Karimnagar, Telangana, India."
+  },
+  "khammam": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/KHAMMAM-IMAGE.jpg",
+    "file": "khammam.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Khammam, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/khammam",
+    "coordinate_note": "Wikipedia: Khammam, Telangana, India."
+  },
+  "kumuram-bheem-asifabad": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/KUMURAM-BHEEM-ASIFABAD-IMAGE.jpg",
+    "file": "kumuram-bheem-asifabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Kumuram Bheem Asifabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/kumuram-bheem-asifabad",
+    "coordinate_note": "Wikipedia: Asifabad, Telangana, Telangana, India."
+  },
+  "mahabubabad": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/MAHABUBABAD-IMAGE.jpg",
+    "file": "mahabubabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Mahabubabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/mahabubabad",
+    "coordinate_note": "Wikipedia: Mahabubabad, Telangana, India."
+  },
+  "mahabubnagar": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/MAHABUBNAGAR-IMAGE.jpg",
+    "file": "mahabubnagar.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Mahabubnagar, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/mahabubnagar",
+    "coordinate_note": "Wikipedia: Mahbubnagar, Telangana, India."
+  },
+  "mancherial": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/MANCHERIAL-IMAGE.jpg",
+    "file": "mancherial.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Mancherial, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/mancherial",
+    "coordinate_note": "Wikipedia: Mancherial, Telangana, India."
+  },
+  "medak": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/MEDAK-IMAGE.jpg",
+    "file": "medak.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Medak, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/medak",
+    "coordinate_note": "Wikipedia: Medak, Telangana, India."
+  },
+  "medchal-malkajgiri": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/MEDCHAL-MALKAJGIRI-IMAGE.jpg",
+    "file": "medchal-malkajgiri.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Medchal Malkajgiri, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/medchal-malkajgiri",
+    "coordinate_note": "Wikipedia: Medchal, Telangana, India."
+  },
+  "mulugu": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/MULUGU-IMAGE.jpg",
+    "file": "mulugu.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Mulugu, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/mulugu",
+    "coordinate_note": "Wikipedia: Mulugu, Telangana, India."
+  },
+  "nagarkurnool": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/NAGARKURNOOL-IMAGE.jpg",
+    "file": "nagarkurnool.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Nagarkurnool, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/nagarkurnool",
+    "coordinate_note": "Wikipedia: Nagarkurnool, Telangana, India."
+  },
+  "nalgonda": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/NALGONDA-IMAGE.jpg",
+    "file": "nalgonda.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Nalgonda, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/nalgonda",
+    "coordinate_note": "Wikipedia: Nalgonda, Telangana, India."
+  },
+  "narayanpet": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/NARAYANPET-IMAGE.jpg",
+    "file": "narayanpet.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Narayanpet, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/narayanpet",
+    "coordinate_note": "Wikipedia: Narayanpet, Telangana, India."
+  },
+  "nirmal": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/NIRMAL-IMAGE.jpg",
+    "file": "nirmal.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Nirmal, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/nirmal",
+    "coordinate_note": "Wikipedia: Nirmal, Telangana, India."
+  },
+  "nizamabad": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/NIZAMABAD-IMAGE.jpg",
+    "file": "nizamabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Nizamabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/nizamabad",
+    "coordinate_note": "Wikipedia: Nizamabad, Telangana, Telangana, India."
+  },
+  "peddapalli": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/PEDDAPALLI-IMAGE.jpg",
+    "file": "peddapalli.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Peddapalli, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/peddapalli",
+    "coordinate_note": "Wikipedia: Peddapalli, Telangana, India."
+  },
+  "qutub-shahi-tombs": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/qutubshahitombs.jpg",
+    "file": "qutub-shahi-tombs.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Qutub Shahi Tombs, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/qutub-shahi-tombs",
+    "coordinate_note": "Wikipedia: Qutb Shahi tombs, Telangana, India."
+  },
+  "rajanna-sircilla": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/RAJANNA-SIRCILLA-IMAGE.jpg",
+    "file": "rajanna-sircilla.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Rajanna Sircilla, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/rajanna-sircilla",
+    "coordinate_note": "Wikipedia: Sircilla, Telangana, India."
+  },
+  "ramappa-temple": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/ramappa-temple-warangal.jpeg",
+    "file": "ramappa-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Ramappa Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/ramappa",
+    "coordinate_note": "Wikipedia: Ramappa Temple, Telangana, India."
+  },
+  "ranga-reddy": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/RANGAREDDY-IMAGE.jpg",
+    "file": "ranga-reddy.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Ranga Reddy, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/rangareddy",
+    "coordinate_note": "Wikipedia: Ranga Reddy district, Telangana, India."
+  },
+  "salar-jung-museum": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/salar-jung-museum-aerial.jpeg",
+    "file": "salar-jung-museum.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Salar Jung Museum, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/salar-jung-museum",
+    "coordinate_note": "Wikipedia: Salar Jung Museum, Telangana, India."
+  },
+  "sangareddy": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/SANGAREDDY-IMAGE.jpg",
+    "file": "sangareddy.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Sangareddy, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/sangareddy",
+    "coordinate_note": "Wikipedia: Sangareddy, Telangana, India."
+  },
+  "siddipet": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/SIDDIPET-IMAGE.jpg",
+    "file": "siddipet.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Siddipet, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/siddipet",
+    "coordinate_note": "Wikipedia: Siddipet, Telangana, India."
+  },
+  "sri-lakshmi-narasimha-swamy-temple": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/narasimha-swamy-images.jpg",
+    "file": "sri-lakshmi-narasimha-swamy-temple.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Sri Lakshmi Narasimha Swamy Temple, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/attractions/sri-lakshmi-narasimha-swamy-temple",
+    "coordinate_note": "Wikipedia: Sri Lakshmi Narasimha Swamy Temple, Yadagirigutta, Telangana, India."
+  },
+  "statue-of-equality": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/status-of-equality_banner.webp",
+    "file": "statue-of-equality.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Statue of Equality, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/statue-equality",
+    "coordinate_note": "Wikipedia: Statue of Equality (Ramanuja), Telangana, India."
+  },
+  "suryapet": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/SURYAPET-IMAGE.jpg",
+    "file": "suryapet.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Suryapet, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/suryapet",
+    "coordinate_note": "Wikipedia: Suryapet, Telangana, India."
+  },
+  "vikarabad": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/kayaking.png",
+    "file": "vikarabad.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Vikarabad, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/vikarabad",
+    "coordinate_note": "Wikipedia: Vikarabad, Telangana, India."
+  },
+  "wanaparthy": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/WANAPARTHY-IMAGE.jpg",
+    "file": "wanaparthy.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Wanaparthy, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/wanaparthy",
+    "coordinate_note": "Wikipedia: Wanaparthy, Telangana, India."
+  },
+  "warangal": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/WARANGAL-IMAGE.jpg",
+    "file": "warangal.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Warangal, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/warangal",
+    "coordinate_note": "Wikipedia: Warangal, Telangana, India."
+  },
+  "yadadri-bhuvanagiri": {
+    "creator": "Department of Tourism, Government of Telangana",
+    "download_url": "https://tourism.telangana.gov.in/storage/app/media/YADADRI-BHUVANAGIRI-IMAGE.jpg",
+    "file": "yadadri-bhuvanagiri.jpg",
+    "license": "Official tourism source; reuse terms not specified",
+    "note": "Official Telangana Tourism destination detail image for Yadadri Bhuvanagiri, embedded on the official page. Reuse terms should be verified before publication.",
+    "provider": "Telangana Tourism",
+    "source_page": "https://tourism.telangana.gov.in/destinations/yadadri-bhuvanagiri",
+    "coordinate_note": "Wikipedia: Yadadri Bhuvanagiri, Telangana, India."
+  },
+  "kuntala-water-falls": {
+    "creator": "Rajib Ghosh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Stream_No._1_at_Kuntala_Waterfalls.JPG",
+    "file": "kuntala-water-falls.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Stream No. 1 at Kuntala Waterfalls.JPG. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Adilabad provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Stream_No._1_at_Kuntala_Waterfalls.JPG",
+    "coordinate_note": "Wikipedia: Kuntala Waterfall, Telangana, India."
+  },
+  "kinnerasani-wildlife-sanctuary": {
+    "creator": "Adbh266",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Kinnerasani_wild_life_sanctuary.jpg",
+    "file": "kinnerasani-wildlife-sanctuary.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Kinnerasani wild life sanctuary.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Bhadradri Kothagudem provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kinnerasani_wild_life_sanctuary.jpg",
+    "coordinate_note": "Wikipedia: Kinnerasani Wildlife Sanctuary, Telangana, India."
+  },
+  "thousand-pillar-temple": {
+    "creator": "Pinakpani",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Thousand_Pillar_Temple_at_Hanamakonda_near_Warangal_23.jpg",
+    "file": "thousand-pillar-temple.jpg",
+    "license": "CC BY 4.0",
+    "note": "Wikimedia Commons image File:Thousand Pillar Temple at Hanamakonda near Warangal 23.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Hanumakonda provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Thousand_Pillar_Temple_at_Hanamakonda_near_Warangal_23.jpg",
+    "coordinate_note": "Wikipedia: Thousand Pillar Temple, Telangana, India."
+  },
+  "padmakshi-temple": {
+    "creator": "Adbh266",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Padmakshi_temple%2C_Warangal.jpg",
+    "file": "padmakshi-temple.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Padmakshi temple, Warangal.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Hanumakonda provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Padmakshi_temple,_Warangal.jpg",
+    "coordinate_note": "Wikipedia: Padmakshi Temple, Telangana, India."
+  },
+  "kondagattu": {
+    "creator": "Kasarlanithinreddy3246",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/KONDAGATTU_ANJANEYA_SWAMI_TEMPLE.jpg",
+    "file": "kondagattu.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:KONDAGATTU ANJANEYA SWAMI TEMPLE.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Jagitial provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:KONDAGATTU_ANJANEYA_SWAMI_TEMPLE.jpg",
+    "coordinate_note": "Wikipedia: Kondagattu Anjaneya Swamy Temple, Telangana, India."
+  },
+  "jurala-dam": {
+    "creator": "Naidugari Jayanna",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Lower_Jurala_project.jpg",
+    "file": "jurala-dam.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Lower Jurala project.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Jogulamba Gadwal provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lower_Jurala_project.jpg",
+    "coordinate_note": "Wikipedia: Jurala Project, Telangana, India."
+  },
+  "domakonda-fort": {
+    "creator": "Sumanth Garakarajula",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Domakonda_Fort_Venkata_Bhavanam_Facade_detail.jpg",
+    "file": "domakonda-fort.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image File:Domakonda Fort Venkata Bhavanam Facade detail.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Kamareddy provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Domakonda_Fort_Venkata_Bhavanam_Facade_detail.jpg",
+    "coordinate_note": "Wikipedia: Domakonda, Telangana, India."
+  },
+  "jamalapuram-temple": {
+    "creator": "Skdnits",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Jamalapuram_Temple.jpg",
+    "file": "jamalapuram-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Jamalapuram Temple.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Khammam provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jamalapuram_Temple.jpg",
+    "coordinate_note": "Wikipedia: Jamalapuram Temple, Telangana, India."
+  },
+  "nelakondapally": {
+    "creator": "Ms Sarah Welch",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Nelakondapally_banner.jpg",
+    "file": "nelakondapally.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image File:Nelakondapally banner.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Khammam provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nelakondapally_banner.jpg",
+    "coordinate_note": "Wikipedia: Nelakondapalli, Telangana, India."
+  },
+  "kusumanchi": {
+    "creator": "P. Madhusudan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/A_Kakatiya_era_Trikuta_Mukkanteswaralayam_Hindu_Temple%2C_Kusumanchi%2C_Telangana_02.jpg",
+    "file": "kusumanchi.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image File:A Kakatiya era Trikuta Mukkanteswaralayam Hindu Temple, Kusumanchi, Telangana 02.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Khammam provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_Kakatiya_era_Trikuta_Mukkanteswaralayam_Hindu_Temple,_Kusumanchi,_Telangana_02.jpg",
+    "coordinate_note": "Wikipedia: Kusumanchi, Telangana, India."
+  },
+  "shamirpet-lake": {
+    "creator": "J.M.Garg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Shamirpet_Lake_near_Hyderabad_W_IMG_7626.jpg",
+    "file": "shamirpet-lake.jpg",
+    "license": "CC BY 3.0",
+    "note": "Wikimedia Commons image File:Shamirpet Lake near Hyderabad W IMG 7626.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Medchal Malkajgiri provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Shamirpet_Lake_near_Hyderabad_W_IMG_7626.jpg",
+    "coordinate_note": "Wikipedia: Shamirpet Lake, Telangana, India."
+  },
+  "bogatha-waterfall": {
+    "creator": "Manikanta1973",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Bogatha_Waterfall_top_view.jpg",
+    "file": "bogatha-waterfall.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Bogatha Waterfall top view.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Mulugu provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bogatha_Waterfall_top_view.jpg",
+    "coordinate_note": "Wikipedia: Bogatha Waterfall, Telangana, India."
+  },
+  "nagarjuna-sagar-dam": {
+    "creator": "iMahesh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Nagarjuna_Sagar_Interstate_bridge.jpg",
+    "file": "nagarjuna-sagar-dam.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Nagarjuna Sagar Interstate bridge.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Nalgonda provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nagarjuna_Sagar_Interstate_bridge.jpg",
+    "coordinate_note": "Wikipedia: Nagarjuna Sagar Dam, Telangana, India."
+  },
+  "pachala-someswara-temple": {
+    "creator": "P. Madhusudan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/11th_12th_century_Pachala_Someshwara_Temple_Panagal_Telangana_India_-_1.jpg",
+    "file": "pachala-someswara-temple.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image File:11th 12th century Pachala Someshwara Temple Panagal Telangana India - 1.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Nalgonda provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:11th_12th_century_Pachala_Someshwara_Temple_Panagal_Telangana_India_-_1.jpg",
+    "coordinate_note": "Wikipedia: Pachala Someswara Temple, Telangana, India."
+  },
+  "mrugavani-national-park": {
+    "creator": "J.M.Garg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Diospyros_chloroxylon_leaves_%26_flowers_at_Mrugavani_National_Park_in_Chilkur_near_Hyderabad_W_IMG_7420.jpg",
+    "file": "mrugavani-national-park.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Diospyros chloroxylon leaves & flowers at Mrugavani National Park in Chilkur near Hyderabad W IMG 7420.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Ranga Reddy provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Diospyros_chloroxylon_leaves_&_flowers_at_Mrugavani_National_Park_in_Chilkur_near_Hyderabad_W_IMG_7420.jpg",
+    "coordinate_note": "Wikipedia: Mrugavani National Park, Telangana, India."
+  },
+  "osman-sagar-lake": {
+    "creator": "Swaroop",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Osman_Sagar_lake_near_Hyderabad.jpg",
+    "file": "osman-sagar-lake.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Osman Sagar lake near Hyderabad.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Ranga Reddy provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Osman_Sagar_lake_near_Hyderabad.jpg",
+    "coordinate_note": "Wikipedia: Osman Sagar, Telangana, India."
+  },
+  "kolanupaka-temple": {
+    "creator": "Adityamadhav83",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Kolanupaka_Temple_%28Kulpakji_Temple%29_entrance_01.jpg",
+    "file": "kolanupaka-temple.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Kolanupaka Temple (Kulpakji Temple) entrance 01.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Yadadri Bhuvanagiri provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kolanupaka_Temple_(Kulpakji_Temple)_entrance_01.jpg",
+    "coordinate_note": "Wikipedia: Kolanupaka, Telangana, India."
+  },
+  "bhuvanagiri-fort": {
+    "creator": "Kasyap",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Bhuvanagiri_Fort_inside.jpg",
+    "file": "bhuvanagiri-fort.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image File:Bhuvanagiri Fort inside.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Yadadri Bhuvanagiri provided no separate image for this sub-attraction.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bhuvanagiri_Fort_inside.jpg",
+    "coordinate_note": "Wikipedia: Bhongir Fort, Telangana, India."
+  },
+  "bhadrakali-temple-warangal": {
+    "creator": "Warangalite",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Bhadrakali_Temple%2C_Warangal.jpg",
+    "file": "bhadrakali-temple-warangal.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Bhadrakali Temple, Warangal.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Hanumakonda listed this sub-attraction but provided no separate image for it.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bhadrakali_Temple,_Warangal.jpg",
+    "coordinate_note": "Wikipedia: Bhadrakali Temple, Warangal, Telangana, India."
   }
 }

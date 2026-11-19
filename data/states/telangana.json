@@ -1,0 +1,8 @@
+{
+  "slug": "telangana",
+  "name": "Telangana",
+  "kind": "state",
+  "source_url": "https://tourism.telangana.gov.in/",
+  "festivals_url": "https://tourism.telangana.gov.in/page/festivals-and-fairs",
+  "places_file": "../telangana-places.json"
+}
