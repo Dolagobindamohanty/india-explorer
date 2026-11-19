@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2465 places, 223 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 478 of 792 districts have a place; **2 states have none** (Madhya Pradesh, Punjab).
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2513 places, 223 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 478 of 792 districts have a place; **2 states have none** (Madhya Pradesh, Punjab).
 
 ---
 
@@ -84,21 +84,21 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 2465 |
-| Verified | **0** (all 2465 `needs_review`) |
+| Places | 2513 |
+| Verified | **0** (all 2513 `needs_review`) |
 | With entry fee / address | 2396 / 2396 (69 missing each → 138 warnings) |
 | Districts with ≥1 place | 478 / 792 |
 | States with 0 places | **2** (Madhya Pradesh, Punjab) |
 | Festival occurrences | 23 confirmed dates |
-| Attribution records | 2493 for 2330 dataset places (163 orphan keys) |
+| Attribution records | 2541 for 2378 dataset places (163 orphan keys) |
 | Canonical validation | 0 errors / 2 warnings (Chutupalu valley and Sheikh Bhikhari Shahadat Sthal share one roadside coordinate; four Andro heritage sites share the mapped village reference) |
 | DB validation | 0 errors / 140 warnings |
 
 ### Positives worth keeping
-- Every one of the 2465 places has an image, and **all referenced images exist on disk** (0 broken refs).
+- Every one of the 2513 places has an image, and **all referenced images exist on disk** (0 broken refs).
 - Attribution metadata is present for every canonical dataset place.
 - Data normalization/validation pipeline is real and CI-enforced.
-- Sitemap is comprehensive (3,331 URLs) and robots.txt is correct.
+- Sitemap is comprehensive (3,379 URLs) and robots.txt is correct.
 - HSTS is on, static assets get `max-age=31536000, immutable`.
 
 ---
