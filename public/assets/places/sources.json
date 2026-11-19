@@ -16341,5 +16341,225 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:AmbSahib.jpg",
     "coordinate_note": "OpenStreetMap (Photon): Gurudwara Amb Sahib, Mohali, S.A.S Nagar district, Punjab, India."
+  },
+  "barki-memorial": {
+    "creator": "RameshSharma1",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/The_Barki_Memorial_Ferozepur.jpg",
+    "file": "barki-memorial.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image File:The Barki Memorial Ferozepur.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ferozepur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:The_Barki_Memorial_Ferozepur.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Barki Memorial, Firozpur, Punjab, India."
+  },
+  "national-martyrs-memorial": {
+    "creator": "Kuldeepburjbhalaike",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hussainiwala_National_Martyrs_Memorial%2C_Ferozepur.jpg",
+    "file": "national-martyrs-memorial.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Hussainiwala National Martyrs Memorial, Ferozepur.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ferozepur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hussainiwala_National_Martyrs_Memorial,_Ferozepur.jpg",
+    "coordinate_note": "User-supplied Punjab tourism CSV locality pin (Ferozepur district, Punjab); approximate, not individually geocoded."
+  },
+  "saragarhi-memorial": {
+    "creator": "RameshSharma1",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saragarhi_Memorial_Ferozepur.jpg",
+    "file": "saragarhi-memorial.jpg",
+    "license": "CC BY 2.0",
+    "note": "Wikimedia Commons image File:Saragarhi Memorial Ferozepur.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ferozepur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Saragarhi_Memorial_Ferozepur.jpg",
+    "coordinate_note": "User-supplied Punjab tourism CSV locality pin (Ferozepur district, Punjab); approximate, not individually geocoded."
+  },
+  "raj-mahal-faridkot": {
+    "creator": "Unknown photographer",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Photograph_of_the_Raj_Mahal_palace_of_Faridkot_State.jpg",
+    "file": "raj-mahal-faridkot.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Photograph of the Raj Mahal palace of Faridkot State.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Faridkot district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Photograph_of_the_Raj_Mahal_palace_of_Faridkot_State.jpg",
+    "coordinate_note": "User-supplied Punjab tourism CSV locality pin (Faridkot district, Punjab); approximate, not individually geocoded."
+  },
+  "kandh-sahib": {
+    "creator": "Vipsachinverma",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Kandh_Sahib.jpg",
+    "file": "kandh-sahib.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Kandh Sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Gurdaspur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kandh_Sahib.jpg",
+    "coordinate_note": "Wikipedia: Batala, Gurdaspur district, Punjab, India (the gurdwara stands near Batala)."
+  },
+  "tibbi-sahib": {
+    "creator": "WikiUser",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Gurudwara_Tibbi_Sahib%2C_Sri_Muktsar_Sahib.jpg",
+    "file": "tibbi-sahib.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurudwara Tibbi Sahib, Sri Muktsar Sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Sri Muktsar Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Tibbi_Sahib,_Sri_Muktsar_Sahib.jpg",
+    "coordinate_note": "User-supplied Punjab tourism CSV locality pin (Sri Muktsar Sahib district, Punjab); approximate, not individually geocoded."
+  },
+  "ropar-museum": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Archaeological_Museum%2C_Rupnagar%2C_Punjab.jpg",
+    "file": "ropar-museum.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Archaeological Museum, Rupnagar, Punjab.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rupnagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Archaeological_Museum,_Rupnagar,_Punjab.jpg",
+    "coordinate_note": "User-supplied Punjab tourism CSV locality pin (Rupnagar district, Punjab); approximate, not individually geocoded."
+  },
+  "khadoor-sahib": {
+    "creator": "Published by Kahn Singh of Nabha [Kahn Singh Nabha]",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Photograph_of_Gurdwara_Sri_Darbar_Sahib_in_Khadur_Sahib%2C_as_published_in_the_Mahan_Kosh_%281930%29.jpg",
+    "file": "khadoor-sahib.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Photograph of Gurdwara Sri Darbar Sahib in Khadur Sahib, as published in the Mahan Kosh (1930).jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Tarn Taran district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Photograph_of_Gurdwara_Sri_Darbar_Sahib_in_Khadur_Sahib,_as_published_in_the_Mahan_Kosh_(1930).jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Gurudwara Sri Darbar Sahib Khadoor Sahib, Khadur Sahib, Tarn Taran district, Punjab, India."
+  },
+  "gurdwara-baba-atal": {
+    "creator": "Amarpreet.singh.in at English Wikipedia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Baba_Atal_Amritsar.jpg",
+    "file": "gurdwara-baba-atal.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Baba Atal Amritsar.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Amritsar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Baba_Atal_Amritsar.jpg",
+    "coordinate_note": "Wikipedia: Gurdwara Baba Atal, Amritsar, Punjab, India."
+  },
+  "khanda-museum": {
+    "creator": "Quality check",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Khanda_museum_Fatehgarh_Sahib.jpg",
+    "file": "khanda-museum.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Khanda museum Fatehgarh Sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Fatehgarh Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Khanda_museum_Fatehgarh_Sahib.jpg",
+    "coordinate_note": "Wikipedia: Khanda Museum, Fatehgarh Sahib, Punjab, India."
+  },
+  "firozpur-fort": {
+    "creator": "Unknown authorUnknown author",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/%22Ferozepore_%28Firozpur%29_%E2%80%93_the_Fort%2C%22_from_the_Illustrated_London_News%2C_1851.jpg",
+    "file": "firozpur-fort.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:\"Ferozepore (Firozpur) – the Fort,\" from the Illustrated London News, 1851.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Ferozepur district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:\"Ferozepore_(Firozpur)_–_the_Fort,\"_from_the_Illustrated_London_News,_1851.jpg",
+    "coordinate_note": "Wikipedia: Firozpur Fort, Ferozepur district, Punjab, India."
+  },
+  "fazilka-tv-tower": {
+    "creator": "Miklondon",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Fernsehturm_fazilka.png",
+    "file": "fazilka-tv-tower.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Fernsehturm fazilka.png. Attribution checked via Commons metadata. The canonical source for this place is the official Fazilka district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Fernsehturm_fazilka.png",
+    "coordinate_note": "OpenStreetMap (Photon): Fazilka TV Tower, Fazilka, Punjab, India."
+  },
+  "ustad-tomb-nakodar": {
+    "creator": "Gaurav Madhopuri",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Ustad%27s_Tomb_Nakodar%2C_Punjab.jpg",
+    "file": "ustad-tomb-nakodar.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Ustad's Tomb Nakodar, Punjab.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Jalandhar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ustad's_Tomb_Nakodar,_Punjab.jpg",
+    "coordinate_note": "Wikipedia: Nakodar, Jalandhar district, Punjab, India (the tomb stands in Nakodar town)."
+  },
+  "st-marys-cathedral-jalandhar": {
+    "creator": "Sushil Kumar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/St._Mary%27s_Cathedral%2C_Jalandhar.jpg",
+    "file": "st-marys-cathedral-jalandhar.jpg",
+    "license": "CC BY 3.0",
+    "note": "Wikimedia Commons image File:St. Mary's Cathedral, Jalandhar.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Jalandhar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:St._Mary's_Cathedral,_Jalandhar.jpg",
+    "coordinate_note": "Wikipedia: Diocese of Jalandhar, Jalandhar, Punjab, India."
+  },
+  "hira-mahal-nabha": {
+    "creator": "Historiansimar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Hira_Mahal%2C_Nabha.jpg",
+    "file": "hira-mahal-nabha.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Hira Mahal, Nabha.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Patiala district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hira_Mahal,_Nabha.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Hira Mahal, Nabha, Patiala district, Punjab, India."
+  },
+  "chhatbir-zoo": {
+    "creator": "Manojkhurana",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Chhatbir_Zoo%2C_Chandigarh.jpeg",
+    "file": "chhatbir-zoo.jpg",
+    "license": "CC BY-SA 3.0",
+    "note": "Wikimedia Commons image File:Chhatbir Zoo, Chandigarh.jpeg. Attribution checked via Commons metadata. The canonical source for this place is the official Patiala district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chhatbir_Zoo,_Chandigarh.jpeg",
+    "coordinate_note": "Wikipedia: Mahendra Chaudhary Zoological Park (Chhatbir Zoo), Patiala district, Punjab, India."
+  },
+  "kotla-nihang-khan": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Gurudwara_Bhatha_Sahib_%2C_Kotla_Nihang%2C_Roopnagar%2C_Punjab%2C_India.jpg",
+    "file": "kotla-nihang-khan.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Gurudwara Bhatha Sahib , Kotla Nihang, Roopnagar, Punjab, India.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rupnagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Bhatha_Sahib_,_Kotla_Nihang,_Roopnagar,_Punjab,_India.jpg",
+    "coordinate_note": "Wikipedia: Kotla Nihang Khan, Rupnagar district, Punjab, India."
+  },
+  "bara-archaeological-site": {
+    "creator": "Aman0980",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Bara%2CPunjab.jpg",
+    "file": "bara-archaeological-site.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Bara,Punjab.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rupnagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bara,Punjab.jpg",
+    "coordinate_note": "Wikipedia: Bara, Rupnagar district, Punjab, India."
+  },
+  "guptsar-sahib": {
+    "creator": "Tari Buttar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Gurudwara_Guptsar_Sahib%2C_Chhattiana.jpg",
+    "file": "guptsar-sahib.jpg",
+    "license": "CC0",
+    "note": "Wikimedia Commons image File:Gurudwara Guptsar Sahib, Chhattiana.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Sri Muktsar Sahib district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Guptsar_Sahib,_Chhattiana.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Gurdwara Guptsar Sahib, Chhattiana, Sri Muktsar Sahib district, Punjab, India."
+  },
+  "ber-sahib-sultanpur": {
+    "creator": "Jiwanjot (Jjsingh1981 (talk))",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Ber_Sahib.jpg",
+    "file": "ber-sahib-sultanpur.jpg",
+    "license": "Public domain",
+    "note": "Wikimedia Commons image File:Ber Sahib.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ber_Sahib.jpg",
+    "coordinate_note": "Wikipedia: Gurdwara Sri Ber Sahib, Sultanpur Lodhi, Kapurthala district, Punjab, India."
+  },
+  "eidgah-malerkotla": {
+    "creator": "Khalid G A",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Eidgah%2C_Malerkotla_1.jpg",
+    "file": "eidgah-malerkotla.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Eidgah, Malerkotla 1.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Malerkotla district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Eidgah,_Malerkotla_1.jpg",
+    "coordinate_note": "OpenStreetMap (Photon): Malerkotla, Punjab, India (the Eidgah stands in Malerkotla town)."
+  },
+  "manauli-fort": {
+    "creator": "Harvinder Chandigarh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Manauli_fort_01.jpg",
+    "file": "manauli-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "note": "Wikimedia Commons image File:Manauli fort 01.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official S.A.S Nagar district government tourist-places page.",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Manauli_fort_01.jpg",
+    "coordinate_note": "Wikipedia: Manauli Fort, S.A.S Nagar (Mohali) district, Punjab, India."
   }
 }
