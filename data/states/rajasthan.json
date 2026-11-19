@@ -1,0 +1,7 @@
+{
+  "slug": "rajasthan",
+  "name": "Rajasthan",
+  "kind": "state",
+  "source_url": "https://www.tourism.rajasthan.gov.in/",
+  "places_file": "../rajasthan-places.json"
+}
