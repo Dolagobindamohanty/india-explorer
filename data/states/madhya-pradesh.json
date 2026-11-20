@@ -1,0 +1,7 @@
+{
+  "slug": "madhya-pradesh",
+  "name": "Madhya Pradesh",
+  "kind": "state",
+  "source_url": "https://www.mptourism.com/",
+  "places_file": "../madhya-pradesh-places.json"
+}

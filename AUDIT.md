@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2691 places, 223 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 540 of 792 districts have a place; **0 states have none**.
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2746 places, 223 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 595 of 792 districts have a place; **0 states have none**.
 
 ---
 
@@ -33,8 +33,8 @@ Everything else is quality, scale, SEO, and hygiene work — valuable, but not o
 
 ```
 data/india-states-districts.json        (36 regions, 792 districts)
-data/states/*.json                      (22 state manifests)
-data/*-places.json                      (22 place documents)
+data/states/*.json                      (24 state manifests)
+data/*-places.json                      (24 place documents)
             │
             ▼
      data_pipeline.py   normalize → validate → import_report
@@ -84,18 +84,18 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 2691 |
-| Verified | **0** (all 2691 `needs_review`) |
+| Places | 2746 |
+| Verified | **0** (all 2746 `needs_review`) |
 | With entry fee / address | 2622 / 2622 (69 missing each) |
 | Districts with ≥1 place | 540 / 792 |
 | States with 0 places | **0** (none) |
 | Festival occurrences | 23 confirmed dates |
-| Attribution records | 2719 for 2691 places (28 orphan keys) |
+| Attribution records | 2774 for 2746 places (28 orphan keys) |
 | Canonical validation | 0 errors / 2 warnings (Chutupalu valley and Sheikh Bhikhari Shahadat Sthal share one roadside coordinate; four Andro heritage sites share the mapped village reference) |
 | DB validation | 0 errors / 140 warnings |
 
 ### Positives worth keeping
-- Every one of the 2691 places has an image, and **all referenced images exist on disk** (0 broken refs).
+- Every one of the 2746 places has an image, and **all referenced images exist on disk** (0 broken refs).
 - Attribution metadata is present for every canonical dataset place.
 - Data normalization/validation pipeline is real and CI-enforced.
 - Sitemap is comprehensive (3,545 URLs) and robots.txt is correct.
