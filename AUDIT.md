@@ -25,7 +25,7 @@ Five issues were actively broken in production at audit time:
 
 Everything else is quality, scale, SEO, and hygiene work — valuable, but not on fire.
 
-**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2746 places, 223 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 595 of 792 districts have a place; **0 states have none**.
+**Scale snapshot:** 36 regions (28 states + 8 UTs), 792 districts, 2784 places, 230 festivals, 20 circuits, 20 heritage sites. **0 verified places**, **23 confirmed festival dates**. 595 of 792 districts have a place; **0 states have none**.
 
 ---
 
@@ -84,18 +84,18 @@ Home (hero slideshow, spotlight search, stats, featured states, recents), Explor
 ### Data quality
 | Metric | Value |
 |---|---|
-| Places | 2746 |
-| Verified | **0** (all 2746 `needs_review`) |
+| Places | 2784 |
+| Verified | **0** (all 2784 `needs_review`) |
 | With entry fee / address | 2622 / 2622 (69 missing each) |
 | Districts with ≥1 place | 540 / 792 |
 | States with 0 places | **0** (none) |
 | Festival occurrences | 23 confirmed dates |
-| Attribution records | 2774 for 2746 places (28 orphan keys) |
+| Attribution records | 2812 for 2784 places (28 orphan keys) |
 | Canonical validation | 0 errors / 2 warnings (Chutupalu valley and Sheikh Bhikhari Shahadat Sthal share one roadside coordinate; four Andro heritage sites share the mapped village reference) |
 | DB validation | 0 errors / 140 warnings |
 
 ### Positives worth keeping
-- Every one of the 2746 places has an image, and **all referenced images exist on disk** (0 broken refs).
+- Every one of the 2784 places has an image, and **all referenced images exist on disk** (0 broken refs).
 - Attribution metadata is present for every canonical dataset place.
 - Data normalization/validation pipeline is real and CI-enforced.
 - Sitemap is comprehensive (3,545 URLs) and robots.txt is correct.
