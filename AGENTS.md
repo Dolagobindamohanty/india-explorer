@@ -37,6 +37,7 @@ be reused here — Vercel refuses to mint new tokens from CLI auth.
 
 - The required production project for this repository is `traveling-ketch`.
 - Before every Vercel deployment, run `vercel project ls` and `vercel inspect https://traveling-ketch.vercel.app` to confirm the target.
-- Deploy only with `vercel --prod --yes` after the CLI reports this workspace is linked to `dolagobindamohanty/traveling-ketch`.
+- The GitHub remote is `Dolagobindamohanty/india-explorer`; the Vercel project it deploys is named `traveling-ketch` in the `dolagobindamohanty` scope. These names intentionally differ; confirm with `vercel project ls` and `.vercel/project.json`.
+- Deploy only with `vercel --prod --yes` after the CLI reports this workspace is linked to the `traveling-ketch` project.
 - Verify the deployed asset at `https://traveling-ketch.vercel.app/style.css` after production deployment.
 - Do not deploy this repository to the separate `india-explorer` Vercel project unless the user explicitly asks for it.

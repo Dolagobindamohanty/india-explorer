@@ -3,6 +3,7 @@ __pycache__/
 tests/
 scripts/
 tmp-images/
+tmp_*
 data/*.sqlite3
 .kilo/
 *.pyc

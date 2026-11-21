@@ -5,6 +5,7 @@ data/verification_report.json
 .env
 .vercel/
 .kilo/
+tmp_*
 
 .vercel
 .env*
