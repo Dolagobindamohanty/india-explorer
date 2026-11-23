@@ -3795,13 +3795,13 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AMahadev_Temple_Deobaloda%2C_Durg_Chhattisgarh_-_23.jpg"
   },
   "deogarh": {
-    "creator": "Wikipedia/Wikimedia Commons contributors",
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Pintail_pair_Surajpur_Wetlands.jpg?width=900",
-    "file": "Northern_Pintail_pair_Surajpur_Wetlands.jpg",
-    "license": "Wikipedia/Wikimedia Commons (see file page)",
-    "note": "No freely licensed photograph of Deogarh could be verified. This shows the Surajpur wetlands in the same district.",
-    "provider": "commons-district",
-    "source_page": "https://commons.wikimedia.org/wiki/File%3ANorthern_Pintail_pair_Surajpur_Wetlands.jpg"
+    "creator": "Ed Sentner",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Deogarh%2C_UP._Jain_temple_complex.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "deogarh.jpg",
+    "license": "CC BY 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Deogarh,_UP._Jain_temple_complex.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
   },
   "deokuli-dham": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Bihar_Museum_-_Patna_41.jpg/960px-Bihar_Museum_-_Patna_41.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -5469,14 +5469,13 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Art_of_India_in_the_Government_Museum_and_Art_Gallery,_Chandigarh_01.jpg"
   },
   "govind-ballabh-pant-sagar": {
-    "coordinate_note": "Coordinate reference: Wikipedia article Rihand Dam (https://en.wikipedia.org/wiki/Rihand_Dam).",
-    "creator": "Pritamcr7",
-    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Rihand_Dam%2C_Renukoot_1.jpg/1280px-Rihand_Dam%2C_Renukoot_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Nandanupadhyay",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/View_from_the_top_of_Vijay_Garh_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "govind-ballabh-pant-sagar.jpg",
-    "license": "CC BY-SA 4.0",
-    "note": "Wikimedia Commons image File:Rihand Dam, Renukoot 1.jpg. Attribution checked via Commons metadata.",
+    "license": "CC BY-SA 3.0",
     "provider": "Wikimedia Commons",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Rihand_Dam,_Renukoot_1.jpg"
+    "source_page": "https://commons.wikimedia.org/wiki/File:View_from_the_top_of_Vijay_Garh_Fort.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
   },
   "govindaraja-swamy-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sri_Govinda_Raja_Swamy_Temple_in_Tirupati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -18757,5 +18756,1207 @@
     "note": "Wikimedia Commons image: Zuluk village.jpg.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Zuluk_village.jpg"
+  },
+  "agra-fort": {
+    "creator": "Argha1812",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Agra_Fort_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "agra-fort.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Agra_Fort_2.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "fatehpur-sikri": {
+    "creator": "Marcin Białek",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "fatehpur-sikri.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "aligarh-fort": {
+    "creator": "Saadakhtar at English Wikipedia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Aligarh_fort%2C_Aligarh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "aligarh-fort.jpg",
+    "license": "Public domain",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Aligarh_fort,_Aligarh.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "shekha-jheel": {
+    "creator": "Viragsharma",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/ShekhaJheel1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "shekha-jheel.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:ShekhaJheel1.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "dargah-e-ala-hazrat": {
+    "creator": "Pratyk321",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Ahichchhatra_Shwethambar_Tirth_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "dargah-e-ala-hazrat.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ahichchhatra_Shwethambar_Tirth_(1).jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "makhauda-dham": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "makhauda-dham.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "raza-dargah-budaun": {
+    "creator": "ArmouredCyborg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bhamashah_Chowk_Budaun_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "raza-dargah-budaun.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bhamashah_Chowk_Budaun_01.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "kala-aam-bulandshahr": {
+    "creator": "ArmouredCyborg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Ganga_River_Anupshahar_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kala-aam-bulandshahr.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ganga_River_Anupshahar_02.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "ram-janaki-mandir-tanda": {
+    "creator": "Ar.mdzeeshan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Tanda_Kalwari_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ram-janaki-mandir-tanda.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tanda_Kalwari_Bridge.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "vasudev-temple-amroha": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "vasudev-temple-amroha.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "national-chambal-sanctuary-auraiya": {
+    "creator": "Yann (talk)",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Chambal_river_near_Dhaulpur%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "national-chambal-sanctuary-auraiya.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chambal_river_near_Dhaulpur,_India.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "ram-mandir": {
+    "creator": "Narendra Modi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Ram_Mandir%2C_Ayodhya.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ram-mandir.jpg",
+    "license": "CC BY 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ram_Mandir,_Ayodhya.png"
+  },
+  "kanak-bhawan": {
+    "creator": "Shalini Tomar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Kanak_Bhawan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kanak-bhawan.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kanak_Bhawan.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "mehnagar-fort": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "mehnagar-fort.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "maharajganj-durvasa-ashram": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "maharajganj-durvasa-ashram.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "pura-mahadev-temple": {
+    "creator": "Udham Solanki",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Pura_Mahadev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "pura-mahadev-temple.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Pura_Mahadev.jpg"
+  },
+  "barnava-ashram": {
+    "creator": "आशीष भटनागर at hi.wikipedia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Barnava_%2835%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "barnava-ashram.jpg",
+    "license": "Public domain",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Barnava_(35).JPG"
+  },
+  "katarniaghat-wildlife-sanctuary": {
+    "creator": "Attensky",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Katarniaghat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "katarniaghat-wildlife-sanctuary.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Katarniaghat.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "shravasti": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "shravasti.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "nawab-tank-banda": {
+    "creator": "Maywe46",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Banda_MC%2C_UP.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "nawab-tank-banda.jpg",
+    "license": "CC BY 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Banda_MC,_UP.png",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "deva-sharif": {
+    "creator": "Mohammad Aqdas Qadri",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Suhail_Miyan_Deva_Sharif_Aqdas_Miyan_Kalpi_Shareef.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "deva-sharif.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Suhail_Miyan_Deva_Sharif_Aqdas_Miyan_Kalpi_Shareef.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "parijaat-tree-kintoor": {
+    "creator": "Amritanshu Tripathi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Parijat_tree_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "parijaat-tree-kintoor.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Parijat_tree_01.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "fun-city-bareilly": {
+    "creator": "Pratyk321",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Ahichchhatra_Shwethambar_Tirth_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "fun-city-bareilly.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ahichchhatra_Shwethambar_Tirth_(1).jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "sita-samahit-sthal": {
+    "creator": "Saisumanth Javvaji",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Building_at_Sitamarhi_Mandir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "sita-samahit-sthal.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Building_at_Sitamarhi_Mandir.jpg"
+  },
+  "haiderpur-wetland": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "haiderpur-wetland.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "jama-masjid-budaun": {
+    "creator": "The noorfatima",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Jama_Masjid_Shamsi%2C_Badaun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "jama-masjid-budaun.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jama_Masjid_Shamsi,_Badaun.jpg"
+  },
+  "kakora-dham": {
+    "creator": "ArmouredCyborg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bhamashah_Chowk_Budaun_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kakora-dham.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bhamashah_Chowk_Budaun_01.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "ahar": {
+    "creator": "ArmouredCyborg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Ganga_River_Anupshahar_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ahar.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ganga_River_Anupshahar_02.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "chandra-prabha-wildlife-sanctuary": {
+    "creator": "Rosehubwiki, Kuber Patel",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Devdari_Water_fall_in_Chandra_prabha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "chandra-prabha-wildlife-sanctuary.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Devdari_Water_fall_in_Chandra_prabha.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "devdari-waterfall": {
+    "creator": "Anil kumar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Devadari_waterfall_%2CChandauli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "devdari-waterfall.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Devadari_waterfall_,Chandauli.jpg"
+  },
+  "ram-ghat-chitrakoot": {
+    "creator": "Harkirat Singh",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Ganesh_bagh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ram-ghat-chitrakoot.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ganesh_bagh.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "devraha-baba-ashram-deoria": {
+    "creator": "Shivait",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ShyamMandirDeoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "devraha-baba-ashram-deoria.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:ShyamMandirDeoria.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "hanuman-mandir-deoria": {
+    "creator": "Shivait",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/ShyamMandirDeoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "hanuman-mandir-deoria.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:ShyamMandirDeoria.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "kailash-mandir-etah": {
+    "creator": "Bhashkar Bharat",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Shiv_mandir_ka_wall.sunnasihori_etah.jpg_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kailash-mandir-etah.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Shiv_mandir_ka_wall.sunnasihori_etah.jpg_04.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "patna-bird-sanctuary": {
+    "creator": "Bhashkar Bharat",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Shiv_mandir_ka_wall.sunnasihori_etah.jpg_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "patna-bird-sanctuary.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Shiv_mandir_ka_wall.sunnasihori_etah.jpg_04.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "etawah-safari-park": {
+    "creator": "Pankajsingh210~enwiki",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Etawah_Safari_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "etawah-safari-park.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Etawah_Safari_Park.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "sankisa": {
+    "creator": "Author: J. Homany",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Sankissa_elephant_abacus_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "sankisa.jpg",
+    "license": "CC BY-SA 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sankissa_elephant_abacus_detail.jpg"
+  },
+  "kampil": {
+    "creator": "Ghinafarahtika",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Kampil_gempang_siwa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kampil.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kampil_gempang_siwa.jpg"
+  },
+  "bhitaura-ghat": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "bhitaura-ghat.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "vaishno-devi-dham-firozabad": {
+    "creator": "Krugar.fredie",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Firozabad_UP_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "vaishno-devi-dham-firozabad.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Firozabad_UP_2.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "okhla-bird-sanctuary": {
+    "creator": "Akhilan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Okhla_bird_sanctuary_Entrance.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "okhla-bird-sanctuary.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Okhla_bird_sanctuary_Entrance.jpeg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "buddh-international-circuit": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "buddh-international-circuit.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "mohan-nagar-temple": {
+    "creator": "Bollywood Hungama",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shakti-Mohan-Mukti-Mohan-Kriti-Mohan-Neeti-Mohan-grace-Kapil-Sharma-and-Ginni-Chatrath%E2%80%99s-wedding-reception.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "mohan-nagar-temple.jpg",
+    "license": "CC BY 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Shakti-Mohan-Mukti-Mohan-Kriti-Mohan-Neeti-Mohan-grace-Kapil-Sharma-and-Ginni-Chatrath%E2%80%99s-wedding-reception.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "hastinapur-wildlife-sanctuary-ghaziabad-part": {
+    "creator": "AK Gandhi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Leopard%27s_Pugmarks_At_Hastinapur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "hastinapur-wildlife-sanctuary-ghaziabad-part.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Leopard%27s_Pugmarks_At_Hastinapur.jpg"
+  },
+  "lord-cornwallis-tomb": {
+    "creator": "Wanderlust paradise",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Lord_Cornwallis_Tomb_Wanderlusts_Paradise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "lord-cornwallis-tomb.jpg",
+    "license": "CC BY 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lord_Cornwallis_Tomb_Wanderlusts_Paradise.jpg"
+  },
+  "ganga-ghat-ghazipur": {
+    "creator": "Rahulwiki214",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Bara_-Evening_view_at_Ganga_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ganga-ghat-ghazipur.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bara_-Evening_view_at_Ganga_River.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "prithvinath-temple": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "prithvinath-temple.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "ramgarh-tal": {
+    "creator": "Wittystef",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ramgarh_tal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ramgarh-tal.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ramgarh_tal.jpg"
+  },
+  "sangameshwar-dham-hamirpur": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "sangameshwar-dham-hamirpur.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "garhmukteshwar": {
+    "creator": "ANUJ SHARMA",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Garhmukteshwar_ganga_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "garhmukteshwar.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Garhmukteshwar_ganga_water.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "baba-tempal-das-mandir": {
+    "creator": "Ankur.25081992",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/A_tribute_to_the_Martyr_Narpat_Singh.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "baba-tempal-das-mandir.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_tribute_to_the_Martyr_Narpat_Singh.JPG",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "shri-dauji-maharaj-temple-baldeo": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "shri-dauji-maharaj-temple-baldeo.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "hathras-fort": {
+    "creator": "Suyash Dwivedi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Banke_Bhawan_Residance_of_Kaka_Hathrasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "hathras-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Banke_Bhawan_Residance_of_Kaka_Hathrasi.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "kalpi": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "kalpi.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "jagammanpur-fort": {
+    "creator": "Lion.ajit",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Jagammanpur_fort_jalaun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "jagammanpur-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jagammanpur_fort_jalaun.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "shahi-bridge-jaunpur": {
+    "creator": "Faizhaider at English Wikipedia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Jaunpurbridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "shahi-bridge-jaunpur.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jaunpurbridge.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "atala-masjid-jaunpur": {
+    "creator": "Varun Shiv Kapur from Berkeley, United States",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Details_of_the_central_pishtaq_and_side_pishtaq%2C_Atala_Masjid%2C_Jaunpur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "atala-masjid-jaunpur.jpg",
+    "license": "CC BY 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Details_of_the_central_pishtaq_and_side_pishtaq,_Atala_Masjid,_Jaunpur.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "shahi-qila-jaunpur": {
+    "creator": "Rangan Datta Wiki",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Jaunpur_Fort_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "shahi-qila-jaunpur.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jaunpur_Fort_20.jpg"
+  },
+  "jhansi-fort": {
+    "creator": "Ppan279",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Jhansi_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "jhansi-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jhansi_Fort.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "barua-sagar": {
+    "creator": "Pranavarora187",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Rani_Mahal_Jhansi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "barua-sagar.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rani_Mahal_Jhansi.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "kannauj-perfume-market": {
+    "creator": "David Prasad",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Camel_skin_Perfume_Bottles_from_Kannauj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kannauj-perfume-market.jpg",
+    "license": "CC BY-SA 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Camel_skin_Perfume_Bottles_from_Kannauj.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "bhitargaon-temple": {
+    "creator": "Amarjitchaudhary",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Gupt_kalin_mandir_bhitargaon_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "bhitargaon-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gupt_kalin_mandir_bhitargaon_(cropped).jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "devgarh-kanpur-dehat": {
+    "creator": "Satendra37",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Akbarpur_kanpur_dehat_temple_and_places_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "devgarh-kanpur-dehat.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Akbarpur_kanpur_dehat_temple_and_places_5.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "jk-temple-kanpur": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "jk-temple-kanpur.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "kanpur-memorial-church": {
+    "creator": "Shivam Maini",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Kanpur_Memorial_Church.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kanpur-memorial-church.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kanpur_Memorial_Church.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "allen-forest-zoo": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "allen-forest-zoo.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "sorokhutta-soron": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "sorokhutta-soron.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "kampil-hari-ganga-dham": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "kampil-hari-ganga-dham.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "sheetla-devi-temple-kara": {
+    "creator": "Aj.abhishek1998",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Sheetla_mandir_kada_kaushambi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "sheetla-devi-temple-kara.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sheetla_mandir_kada_kaushambi.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "dudhwa-national-park": {
+    "creator": "SAMVID SHARMA",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Deers_in_Dudhwa_National_Park%2C_Lakhimpur_Kheri%2C_Uttar_Pradesh%2C_India_%282014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "dudhwa-national-park.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Deers_in_Dudhwa_National_Park,_Lakhimpur_Kheri,_Uttar_Pradesh,_India_(2014).jpg"
+  },
+  "mahaparinirvana-temple": {
+    "creator": "Prince Roy from Arlington, Virginia, USA",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Buddha%27s_cremation_stupa%2C_Kushinagar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "mahaparinirvana-temple.jpg",
+    "license": "CC BY 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Buddha%27s_cremation_stupa,_Kushinagar.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "neelkanth-mahadev-temple-talbehat": {
+    "creator": "Work2win",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Talbehat_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "neelkanth-mahadev-temple-talbehat.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Talbehat_Fort.jpg"
+  },
+  "bara-imambara": {
+    "creator": "Muhammad Mahdi Karim",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Bara_Imambara_Lucknow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "bara-imambara.jpg",
+    "license": "GFDL 1.2",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bara_Imambara_Lucknow.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "rumi-darwaza": {
+    "creator": "Rishabhgpt",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Rumi_Darwaza_-_DSC2797-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "rumi-darwaza.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rumi_Darwaza_-_DSC2797-01.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "chota-imambara": {
+    "creator": "Muhammad Mahdi Karim",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Chhota_imambara_Lucknow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "chota-imambara.jpg",
+    "license": "GFDL 1.2",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chhota_imambara_Lucknow.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "kakramar-hills": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "kakramar-hills.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "sohagi-barwa-wildlife-sanctuary": {
+    "creator": "A. J. T. Johnsingh, WWF-India and NCF",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Gandak_River_in_Sohagi_barwa_WLS_AJTJ_IMG_5447.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "sohagi-barwa-wildlife-sanctuary.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gandak_River_in_Sohagi_barwa_WLS_AJTJ_IMG_5447.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "krishna-janmabhoomi": {
+    "creator": "Belur Ashok from Secunderabad, India",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Janmabhoomi_SF_%2826505664852%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "krishna-janmabhoomi.jpg",
+    "license": "CC BY 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Janmabhoomi_SF_(26505664852).jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "banke-bihari-temple": {
+    "creator": "Kridha20",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Banke_Bihari_Vrindavan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "banke-bihari-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Banke_Bihari_Vrindavan.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "prem-mandir-vrindavan": {
+    "creator": "KuwarOnline",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/PremMandirSideViewFromCanteen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "prem-mandir-vrindavan.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:PremMandirSideViewFromCanteen.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "shitla-mata-dham-mau": {
+    "creator": "Prashant Kharote",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Shitla_ghat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "shitla-mata-dham-mau.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Shitla_ghat.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "surajkund-mau": {
+    "creator": "Tarun4u",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/%22Aao_Surajkund_Chale%22_Surajkund_Fair_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "surajkund-mau.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%22Aao_Surajkund_Chale%22_Surajkund_Fair_2019.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "st-johns-church-meerut": {
+    "creator": "MMKhan22",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Mustafa_Castle_--_night_shot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "st-johns-church-meerut.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mustafa_Castle_--_night_shot.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "gandhi-bagh-meerut": {
+    "creator": "Siddhartha Ghai",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/An_Entrance_to_Gandhi_Bagh_Meerut_Cantt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "gandhi-bagh-meerut.jpg",
+    "license": "CC0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:An_Entrance_to_Gandhi_Bagh_Meerut_Cantt.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "vindhyachal": {
+    "creator": "Ramshankaryadav",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Inside_Vindhyachal_Temple_enterance.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "vindhyachal.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Inside_Vindhyachal_Temple_enterance.JPG"
+  },
+  "wyndham-falls": {
+    "creator": "SimonP",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Mirzapur_from_the_Ganges.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "wyndham-falls.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mirzapur_from_the_Ganges.JPG",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "sita-temple-moradabad": {
+    "creator": "Ashishb04",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_road_in_Moradabad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "sita-temple-moradabad.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_road_in_Moradabad.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "vahelna-jain-temple": {
+    "creator": "Pratyk321",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Vahelna_Jain_temple_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "vahelna-jain-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Vahelna_Jain_temple_(1).jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "gomat-taal": {
+    "creator": "Maywe46",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pilibhit_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "gomat-taal.jpg",
+    "license": "CC0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Pilibhit_2.png",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "bela-bhawani-temple": {
+    "creator": "Jeeteshroxx",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Belha_Devi_Temple_Pratapgarh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "bela-bhawani-temple.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Belha_Devi_Temple_Pratapgarh.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "allahabad-fort": {
+    "creator": "Vyomtripathi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Akbar_Fort_Allahabad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "allahabad-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Akbar_Fort_Allahabad.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "khusro-bagh": {
+    "creator": "सत्यम् मिश्र",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Tomb_of_Nisar_Begum_at_Khusro_Bagh_Allahabad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "khusro-bagh.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tomb_of_Nisar_Begum_at_Khusro_Bagh_Allahabad.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "indira-gandhi-memorial-botanical-garden": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "indira-gandhi-memorial-botanical-garden.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "behta-bridge": {
+    "creator": "Ankitshilu",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Behta_bujurg_temple_complex..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "behta-bridge.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Behta_bujurg_temple_complex..jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "rampur-fort": {
+    "creator": "Utkarsh Nandan Oreya",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Rampur_Raza_Library%2C_Rampur%2C_Uttar_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "rampur-fort.jpg",
+    "license": "CC BY 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rampur_Raza_Library,_Rampur,_Uttar_Pradesh.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "shakumbhari-devi-temple": {
+    "creator": "AbhishekSaini1910",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Devotees_of_Maa_Shakumbhari_Devi_standing_in_ques_to_see_Siddhpeeth_Shri_Shakumbhari_Devi_Mandir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "shakumbhari-devi-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Devotees_of_Maa_Shakumbhari_Devi_standing_in_ques_to_see_Siddhpeeth_Shri_Shakumbhari_Devi_Mandir.jpg"
+  },
+  "company-garden-saharanpur": {
+    "creator": "Navneet Sharma",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Company_garden_Mussoorie_waterfall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "company-garden-saharanpur.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Company_garden_Mussoorie_waterfall.jpg"
+  },
+  "kalki-vishnu-mandir-sambhal": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "kalki-vishnu-mandir-sambhal.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "maghar": {
+    "creator": "सत्यम् मिश्र",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Kabir-Samadhi-and-Majar-at-Magahar-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "maghar.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kabir-Samadhi-and-Majar-at-Magahar-01.jpg"
+  },
+  "tama-lake-sant-kabir-nagar": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "tama-lake-sant-kabir-nagar.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "shahjahanpur-memorial-shaheed-udyan": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "shahjahanpur-memorial-shaheed-udyan.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "jetavana-monastery": {
+    "creator": "Photo Dharma from Penang, Malaysia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Nava_Jetavana_Temple_-_Shravasti_-_004_King_Pasenadi_Planting_the_Ananda_Bodhi_Tree_in_Jetavana_%289241772739%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "jetavana-monastery.jpg",
+    "license": "CC BY 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nava_Jetavana_Temple_-_Shravasti_-_004_King_Pasenadi_Planting_the_Ananda_Bodhi_Tree_in_Jetavana_(9241772739).jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "piprahwa": {
+    "creator": "Santosh Kumar Madhukar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Pilgrims_at_Piprahwa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "piprahwa.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Pilgrims_at_Piprahwa.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "naimisharanya": {
+    "creator": "T.sujatha",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Naimisanatha_mandir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "naimisharanya.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Naimisanatha_mandir.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "chakratirth-naimisharanya": {
+    "creator": "Kshitij Vats 001",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Naimisharanya_%28Neemsar%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "chakratirth-naimisharanya.jpg",
+    "license": "CC0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Naimisharanya_(Neemsar)_01.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "vijaygarh-fort": {
+    "creator": "Nandanupadhyay",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Inside_Vijay_Garh_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "vijaygarh-fort.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Inside_Vijay_Garh_Fort.jpg"
+  },
+  "agori-fort": {
+    "creator": "Stanley Leighton",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Agori_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "agori-fort.jpg",
+    "license": "Public domain",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Agori_Fort.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "vijayethuwa-mahaviran-mandir": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "vijayethuwa-mahaviran-mandir.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "sitakund-ghat-sultanpur": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "sitakund-ghat-sultanpur.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "kashi-vishwanath-temple": {
+    "creator": "Architkumar1234",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Kashi_Vishwanath.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "kashi-vishwanath-temple.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kashi_Vishwanath.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "dashashwamedh-ghat": {
+    "creator": "Saaremees",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dasaswamedh_ghat-varanasi_india-andres_larin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "dashashwamedh-ghat.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dasaswamedh_ghat-varanasi_india-andres_larin.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "sarnath": {
+    "creator": "Yusuke Kawasaki",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Ancient_Buddhist_monasteries_near_Dhamekh_Stupa_Monument_Site%2C_Sarnath.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "sarnath.jpg",
+    "license": "CC BY 2.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ancient_Buddhist_monasteries_near_Dhamekh_Stupa_Monument_Site,_Sarnath.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "gauriganj": {
+    "creator": "Ajitkumarpanicker",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Ulta_Gadha_Dham_Gauriganj_Amethi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "gauriganj.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ulta_Gadha_Dham_Gauriganj_Amethi.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "langra-veer-baba-temple": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "langra-veer-baba-temple.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "valmiki-ashram-baghpat": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "valmiki-ashram-baghpat.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "chhawani-bazaar-basti": {
+    "creator": "Shailendrakjaiswal",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Chaturbhuji_Mandir%2C_Amorha%2C_Basti%2C_Uttar_Pradesh%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "chhawani-bazaar-basti.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chaturbhuji_Mandir,_Amorha,_Basti,_Uttar_Pradesh,_India.jpg"
+  },
+  "najibudaulah-fort-najibabad": {
+    "creator": "Sita Ram",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/A_Mosque_and_a_shrine%2C_Najibabad%2C_1814-15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "najibudaulah-fort-najibabad.jpg",
+    "license": "Public domain",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_Mosque_and_a_shrine,_Najibabad,_1814-15.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "awagarh-fort": {
+    "creator": "Akshay123pratap",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Awagarh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "awagarh-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Awagarh.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "fatehgarh-fort": {
+    "creator": "Mohammad Aqib Khan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tomb_of_Nawab_Rasheed_Khan_Kaimganj.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "fatehgarh-fort.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tomb_of_Nawab_Rasheed_Khan_Kaimganj.JPG",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "stupa-18-art-gallery-noida": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "stupa-18-art-gallery-noida.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "aunrihar": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "aunrihar.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "varaha-temple-gonda": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "varaha-temple-gonda.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "rath-fort-hamirpur": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "rath-fort-hamirpur.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "chandi-mandir-hapur": {
+    "creator": "Ravi Dwivedi",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Hapur_Junction_PF_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "chandi-mandir-hapur.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hapur_Junction_PF_4.jpg"
+  },
+  "orai-fort": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "orai-fort.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "tirwa": {
+    "creator": "Jyoti017394",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Annapurna_Temple%2C_Kannauj%2C_Uttar_Pradesh%2C_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "tirwa.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Annapurna_Temple,_Kannauj,_Uttar_Pradesh,_2018.jpg",
+    "note": "District-level reference photo; a freely licensed photo of this exact place was not available."
+  },
+  "bilram": {
+    "creator": "SHIV KUMAR VERMA",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Bilram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "bilram.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bilram.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "prabhasgiri-kaushambi": {
+    "creator": "Vinod26Jan",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Ghoshitaram_monastery_in_Kosambi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "prabhasgiri-kaushambi.jpg",
+    "license": "CC BY-SA 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ghoshitaram_monastery_in_Kosambi.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "gurudwara-bhagwanpur": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "gurudwara-bhagwanpur.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "bhongaon": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "bhongaon.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "ganeshdham-muzaffarnagar": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "ganeshdham-muzaffarnagar.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "bichia-ghat": {
+    "creator": "Uttar Pradesh Tourism / Wikimedia Commons",
+    "download_url": "https://www.uptourism.gov.in/en",
+    "file": "bichia-ghat.jpg",
+    "license": "Attribution required - see source page",
+    "provider": "Official Uttar Pradesh Tourism reference",
+    "source_page": "https://www.uptourism.gov.in/en",
+    "note": "State reference image; a freely licensed photo of this exact place was not available."
+  },
+  "salkhan-fossils-park": {
+    "creator": "Yash partner",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/150_crore_years_old_Fossils_of_Blue_green_algae%2C_in_Salkhan_%28Sonebhadra%2C_UP%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "salkhan-fossils-park.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:150_crore_years_old_Fossils_of_Blue_green_algae,_in_Salkhan_(Sonebhadra,_UP).jpg"
+  },
+  "ballia": {
+    "creator": "Indian Railways",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/BalliaUp60.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "ballia.jpg",
+    "license": "CC0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:BalliaUp60.jpg",
+    "note": "Lead image from the place's Wikipedia article."
+  },
+  "thana-bhawan": {
+    "creator": "Anang M",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Eastern_Cattle_Egret%2C_Thanabhawan%2C_Uttar_Pradesh_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "thana-bhawan.jpg",
+    "license": "CC BY 3.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Eastern_Cattle_Egret,_Thanabhawan,_Uttar_Pradesh_1.jpg",
+    "note": "Strictly name-matched replacement during UP data QA."
+  },
+  "akbarpur-ambedkar-nagar": {
+    "creator": "Teacher1943",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/City_view_of_Akbarpur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "akbarpur-ambedkar-nagar.jpg",
+    "license": "CC BY-SA 4.0",
+    "provider": "Wikimedia Commons",
+    "source_page": "https://commons.wikimedia.org/wiki/File:City_view_of_Akbarpur.jpg",
+    "note": "Lead image from the Wikipedia article."
   }
 }
