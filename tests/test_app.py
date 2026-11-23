@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 2939
+    assert len(all_places) == 3021
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -179,7 +179,11 @@ def test_full_destination_journey(client):
     assert_asset_exists(kedarnath['image_url'])
     sonbhadra = client.get('/api/districts/sonbhadra').json()
     assert {p['slug'] for p in sonbhadra['places']} == {
-        'govind-ballabh-pant-sagar', 'vijaygarh-fort', 'agori-fort', 'salkhan-fossils-park',
+        'agori-fort',
+        'govind-ballabh-pant-sagar',
+        'mukkha-falls',
+        'salkhan-fossils-park',
+        'vijaygarh-fort',
     }
     gb_pant = client.get('/api/places/govind-ballabh-pant-sagar').json()
     assert gb_pant['district'] == 'Sonbhadra'
@@ -189,7 +193,7 @@ def test_full_destination_journey(client):
     assert_asset_exists(gb_pant['image_url'])
     up = client.get('/api/states/uttar-pradesh').json()
     assert len(up['districts']) == 75
-    assert len(up['places']) == 139
+    assert len(up['places']) == 222
     assert all((ASSETS / p['image_url'].lstrip('/')).exists() for p in up['places'])
     assert any(p['slug'] == 'govind-ballabh-pant-sagar' for p in up['places'])
     assert any(p['slug'] == 'taj-mahal' for p in up['places'])
@@ -314,7 +318,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 2939
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3021
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -420,7 +424,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 2939}
+    assert response.json() == {'status': 'ok', 'places': 3021}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -531,7 +535,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 2939}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3021}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -719,9 +723,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 2939,
+        'detailed_places': 3021,
         'reviewed_places': 0,
-        'unreviewed_places': 2939,
+        'unreviewed_places': 3021,
         'confirmed_festival_dates': 23,
     }
 
