@@ -1,0 +1,7 @@
+{
+  "slug": "tamil-nadu",
+  "name": "Tamil Nadu",
+  "kind": "state",
+  "source_url": "https://www.tamilnadutourism.tn.gov.in/destinations",
+  "places_file": "../tamil-nadu-places.json"
+}

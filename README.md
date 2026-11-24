@@ -64,7 +64,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
-- 28 state pages and 8 union-territory pages, a growing district directory with 792 districts, and 2,962 detailed place pages.
+- 28 state pages and 8 union-territory pages, a growing district directory with 792 districts, and 3,078 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
 - District food notes, access guidance, official reference links and map links.
@@ -107,7 +107,7 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 2,962 destinations, 237
+This is an expanding editorial pilot, covering 3,078 destinations, 237
 traditional celebrations and festivals, 792 district directory entries across
 all 28 states and 8 union territories. Official tourism/
 district/UNESCO URLs are reference pointers; no claim
@@ -116,7 +116,7 @@ All place records are marked `needs_review`; annual festival dates are unpopulat
 Seasonal guidance and coordinates are approximate. Fees and opening times are
 deliberately not invented. Add confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place. The 2,828 canonical dataset place cards use locally stored photographs from Wikimedia Commons, official state tourism sites and other public web sources, selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is
+The website stores a destination-specific image URL for every place. The 2,948 canonical dataset place cards use locally stored photographs from Wikimedia Commons, official state tourism sites and other public web sources, selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is
 optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
 ## APIs
