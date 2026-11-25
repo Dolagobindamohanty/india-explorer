@@ -7,7 +7,7 @@ and UNESCO designation, and save destinations in your browser.
 ## Run in Windows Command Prompt
 
 ```cmd
-cd C:\Users\ADMIN\omnirush.ai\india-explorer
+cd D:\india-explorer
 python -m pip install -r requirements.txt
 python -m uvicorn app:app --host 127.0.0.1 --port 8010 --reload
 ```
@@ -47,7 +47,7 @@ vercel
 Then deploy to production:
 
 ```cmd
-vercel --prod
+vercel --prod --yes
 ```
 
 Pull requests deploy a preview automatically through
@@ -64,7 +64,7 @@ FastAPI deployment, so no CORS configuration is needed.
 - Light/dark mode, hover-enhanced destination cards, favorites and recently viewed places stored in the browser.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
-- 28 state pages and 8 union-territory pages, a growing district directory with 792 districts, and 3,078 detailed place pages.
+- 28 state pages and 8 union-territory pages, a district directory with 792 districts, and 3,159 detailed place pages.
 - Month-based festival calendar and seasonal place recommendations.
 - Search and combinable state, month, category and UNESCO filters.
 - District food notes, access guidance, official reference links and map links.
@@ -79,8 +79,11 @@ FastAPI deployment, so no CORS configuration is needed.
 
 `schema.sql` defines the relational schema. `seed.py` supplies the editorial
 pilot. The app creates `data/explorer.sqlite3` at first startup and seeds it
-only if the regions table is empty. Restarts preserve data. Each API request
-uses short-lived database connections with foreign keys enabled.
+only if the regions table is empty. Restarts preserve data. If the seed data
+changes, delete that local file and restart to rebuild it from the current
+source data; Vercel uses a versioned `/tmp` database path automatically, so
+deployments never inherit an older database. Each API request uses short-lived
+database connections with foreign keys enabled.
 
 ```text
 regions (state or union territory)
@@ -107,17 +110,18 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 3,078 destinations, 237
-traditional celebrations and festivals, 792 district directory entries across
-all 28 states and 8 union territories. Official tourism/
-district/UNESCO URLs are reference pointers; no claim
-is made that their current contents were independently checked in this build.
-All place records are marked `needs_review`; annual festival dates are unpopulated.
-Seasonal guidance and coordinates are approximate. Fees and opening times are
-deliberately not invented. Add confirmed information with sources before publishing.
+This is an expanding editorial pilot, covering 3,159 destinations, 247
+traditional celebrations and festivals, and 792 district directory entries
+across all 28 states and 8 union territories. Provenance for the place images
+is recorded in `public/assets/places/sources.json`; Arunachal Pradesh uses
+official state and district government photographs, while other states use a
+mix of Commons and public web sources. All place records are marked
+`needs_review`; 23 festival occurrences have confirmed dates, while the rest
+of the annual dates remain unpopulated. Seasonal guidance and coordinates are
+approximate. Fees and opening times are deliberately not invented. Add
+confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place. The 2,948 canonical dataset place cards use locally stored photographs from Wikimedia Commons, official state tourism sites and other public web sources, selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is
-optional; system-font fallbacks and coloured backgrounds remain usable offline.
+The website stores a destination-specific image URL for every place. All 3,159 canonical dataset place cards use locally stored photographs selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
 ## APIs
 
@@ -144,6 +148,8 @@ the linked official sources.
 ## Checks
 
 ```cmd
+python validate_data.py
+python scripts/verify_data.py
 python -m pytest -q
 python -m compileall -q app.py seed.py tests
 ```
