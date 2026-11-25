@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3078
+    assert len(all_places) == 3159
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -73,7 +73,10 @@ def test_full_destination_journey(client):
     assert len(ap['places']) == 69
     arunachal = client.get('/api/states/arunachal-pradesh').json()
     assert len(arunachal['districts']) == 28
-    assert len(arunachal['places']) == 16
+    assert len(arunachal['places']) == 97
+    assert {place['district'] for place in arunachal['places']} == {
+        district['name'] for district in arunachal['districts']
+    }
     mizoram = client.get('/api/states/mizoram').json()
     assert len(mizoram['districts']) == 11
     assert len(mizoram['places']) == 110
@@ -326,7 +329,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3078
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3159
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -432,7 +435,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3078}
+    assert response.json() == {'status': 'ok', 'places': 3159}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -543,7 +546,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3078}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3159}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -731,9 +734,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3078,
+        'detailed_places': 3159,
         'reviewed_places': 0,
-        'unreviewed_places': 3078,
+        'unreviewed_places': 3159,
         'confirmed_festival_dates': 23,
     }
 
@@ -801,7 +804,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 237
+    assert len(all_festivals) == 247
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 
@@ -830,8 +833,9 @@ def test_every_place_image_resolves_to_a_real_file(client):
 
 
 def test_karnataka_and_arunachal_use_real_photographs(client):
-    """The catalogue standard is Commons-sourced photographs with attribution; vector art needs an explicit note."""
+    """Karnataka uses Commons photographs; Arunachal uses official state/district photographs."""
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    ap_official_domains = ('arunachaltourism.com', '.nic.in', '.gov.in')
     photo_slugs, vector_slugs = [], []
     for place in client.get('/api/places').json():
         if place['state_slug'] not in ('karnataka', 'arunachal-pradesh'):
@@ -843,7 +847,12 @@ def test_karnataka_and_arunachal_use_real_photographs(client):
             assert 'vector' in src['file'].lower(), f"{place['slug']} artwork record must be labelled"
             continue
         photo_slugs.append(place['slug'])
-        assert 'commons.wikimedia.org' in src['source_page'], f"{place['slug']} missing Commons source page"
+        if place['state_slug'] == 'karnataka':
+            assert 'commons.wikimedia.org' in src['source_page'], f"{place['slug']} missing Commons source page"
+        else:
+            assert any(domain in src['source_page'] for domain in ap_official_domains), (
+                f"{place['slug']} missing official Arunachal source page"
+            )
         assert src['download_url'].startswith('https://'), f"{place['slug']} missing download url"
         assert 'vector' not in src['file'].lower(), f"{place['slug']} still labelled artwork"
     assert len(vector_slugs) <= 8, f"too many places still without a photo: {sorted(vector_slugs)}"
