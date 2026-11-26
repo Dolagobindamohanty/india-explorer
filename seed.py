@@ -644,9 +644,10 @@ def seed(db):
         for op in canonical_extra:
             canonical_slugs_by_state.setdefault(op['state_slug'], set()).add(op['slug'])
         for state_slug, slugs in canonical_slugs_by_state.items():
-            # Mizoram, Himachal Pradesh and Tripura are maintained exclusively by
-            # their canonical datasets, so retire legacy records outside those lists.
-            if state_slug not in {'mizoram', 'himachal-pradesh', 'tripura'}:
+            # Mizoram, Himachal Pradesh, Tripura and Delhi are maintained
+            # exclusively by their canonical datasets, so retire legacy records
+            # outside those lists.
+            if state_slug not in {'mizoram', 'himachal-pradesh', 'tripura', 'delhi'}:
                 continue
             placeholders = ','.join('?' for _ in slugs)
             db.execute(
@@ -1087,7 +1088,7 @@ def seed(db):
         (150, 'Bihar Diwas', 'Statehood day on 22 March, marked by cultural programmes across Bihar.', 'fixed', 'https://tourism.bihar.gov.in/', [('bihar', 'patna')], [3]),
         (151, 'Madhushravani', 'Mithila festival in the Shravan month with rituals, fasting and folk traditions.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'madhubani'), ('bihar', 'darbhanga')], [7, 8]),
         (152, 'Chatth Puja (Bihar)', 'Major festival dedicated to the Sun God, with fasting, riverbank offerings and folk songs across Bihar.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'patna'), ('bihar', 'gaya')], [10, 11]),
-        (153, 'Diwali (National)', 'Festival of Lights celebrated across India with lamps, sweets and fireworks.', 'varies_annually', 'https://www.incredibleindia.org/', [('delhi', 'new-delhi'), ('maharashtra', 'mumbai'), ('uttar-pradesh', 'varanasi')], [10, 11]),
+        (153, 'Diwali (National)', 'Festival of Lights celebrated across India with lamps, sweets and fireworks.', 'varies_annually', 'https://www.incredibleindia.org/', [('maharashtra', 'mumbai'), ('uttar-pradesh', 'varanasi')], [10, 11]),
         (154, 'Navratri & Garba', 'Nine nights of Goddess Durga with garba and dandiya dances, especially in Gujarat and Maharashtra.', 'varies_annually', 'https://www.gujarattourism.com/', [('gujarat', 'ahmedabad'), ('maharashtra', 'mumbai')], [9, 10]),
         (155, 'Hampi Utsav', 'Cultural festival at the UNESCO World Heritage Site of Hampi, with music, dance and heritage events.', 'varies_annually', 'https://karnatakatourism.org/', [('karnataka', 'vijayanagara')], [11]),
         (156, 'Bastar Dussehra', 'A 75-day tribal observance in and around Jagdalpur honouring Goddess Danteshwari and local deities, with rituals such as Pat Jatra, chariot processions and Muria Darbar rather than the burning of Ravana effigies.', 'lunar', 'https://bastar.gov.in/en/tourism/culture-heritage/', [('chhattisgarh', 'bastar')], [7, 8, 9, 10]),
@@ -1173,6 +1174,17 @@ def seed(db):
         (236, 'Ganga Mahotsav', 'A cultural festival on the ghats of Varanasi featuring classical music, dance, processions and illuminated riverfront celebrations.', 'varies_annually', 'https://www.uptourism.gov.in/en/page/ganga-mahotsav', [('uttar-pradesh', 'varanasi')], [11]),
         (237, 'Kumbh Mela, Prayagraj', 'One of the largest Hindu pilgrimage gatherings, held at the confluence of the Ganga, Yamuna and mythical Saraswati in Prayagraj, with ritual bathing and ascetic processions.', 'varies_annually', 'https://www.uptourism.gov.in/en/page/prayagraj-chitrakoot', [('uttar-pradesh', 'prayagraj')], [1, 2]),
         (238, 'Chhath Puja (Uttar Pradesh)', 'Ancient Sun-worship festival observed on the banks of rivers and ponds in eastern Uttar Pradesh, with devotees offering arghya to the setting and rising sun.', 'lunar', 'https://www.uptourism.gov.in/', [('uttar-pradesh', 'varanasi'), ('uttar-pradesh', 'chandauli'), ('uttar-pradesh', 'ballia'), ('uttar-pradesh', 'deoria'), ('uttar-pradesh', 'gorakhpur')], [10, 11]),
+        (263, 'Christmas in Delhi', 'Delhi Tourism describes Christmas as the annual commemoration of the birth of Jesus Christ, with church services, decorated public spaces and festive menus across the capital.', 'fixed', 'https://delhitourism.gov.in/dt/festivals/christmas.html', [('delhi', 'new-delhi')], [12]),
+        (264, 'Diwali in Delhi', 'Delhi Tourism describes Diwali as the festival of lights marking the victory of good over evil and the return of Lord Ram. Lamps, fairs and a bazaar at Dilli Haat, INA are part of the city’s observance.', 'lunar', 'https://delhitourism.gov.in/dt/festivals/diwali.html', [('delhi', 'new-delhi'), ('delhi', 'south-delhi')], [10, 11]),
+        (265, 'Durga Puja in Delhi', 'Delhi Tourism describes Durga Puja as a Bengali festival celebrating Goddess Durga’s victory over Mahishasura, observed by Bengali communities in localities such as Chittaranjan Park, Minto Road, Kashmere Gate and Civil Lines.', 'lunar', 'https://delhitourism.gov.in/dt/festivals/durga_puja.html', [('delhi', 'south-delhi'), ('delhi', 'north-delhi')], [9, 10]),
+        (266, 'Dussehra in Delhi', 'Delhi Tourism describes Dussehra as the victory of Lord Ram over Ravan, marked in the capital by Ram Lila performances, Ramlila Maidan gatherings and the burning of Ravan effigies.', 'lunar', 'https://delhitourism.gov.in/dt/festivals/dussehra.html', [('delhi', 'central-delhi')], [9, 10]),
+        (267, 'Eid-ul-Fitr in Delhi', 'Delhi Tourism describes Eid-ul-Fitr as the festival ending Ramadan fasting, with morning prayers, city fairs and large gatherings at Jama Masjid and its surrounding food shops.', 'varies_annually', 'https://delhitourism.gov.in/dt/festivals/eid-ul-fitr.html', [('delhi', 'old-delhi')], []),
+        (268, 'Guru Nanak Jayanti in Delhi', 'Delhi Tourism describes Gurpurab as the birth anniversary of Guru Nanak Dev, observed by Sikh communities with nagar kirtan processions and hymns at the capital’s gurudwaras.', 'lunar', 'https://delhitourism.gov.in/dt/festivals/guru_nanak_jayanti.html', [('delhi', 'new-delhi')], [11]),
+        (269, 'Holi in Delhi', 'Delhi Tourism describes Holi as a spring festival symbolising the triumph of good over evil, with neighbourhood celebrations, colour and community gatherings across the city.', 'lunar', 'https://delhitourism.gov.in/dt/festivals/holi.html', [('delhi', 'new-delhi')], [3]),
+        (270, 'Independence Day in Delhi', 'Delhi Tourism describes the annual flag-hoisting ceremony at Red Fort as the centrepiece of Independence Day, commemorating the transfer of sovereignty in 1947.', 'fixed', 'https://delhitourism.gov.in/dt/festivals/independence_day.html', [('delhi', 'central-delhi')], [8]),
+        (271, 'Lohri in Delhi', 'Delhi Tourism describes Lohri as a Punjabi winter folk festival marking longer days after the solstice and the Rabi harvest, celebrated with bonfires and neighbourhood gatherings.', 'fixed', 'https://delhitourism.gov.in/dt/festivals/lohri.html', [('delhi', 'new-delhi')], [1]),
+        (272, 'New Year in Delhi', 'Delhi Tourism describes the first day of the Gregorian year as a citywide celebration with decorations, music, concerts, parties and festive events.', 'fixed', 'https://delhitourism.gov.in/dt/festivals/new_year.html', [('delhi', 'new-delhi')], [1]),
+        (273, 'Republic Day in Delhi', 'Delhi Tourism describes Republic Day as the commemoration of the Constitution taking effect in 1950, marked by the President’s flag-hoisting, gallantry awards and state tableaux along Kartavya Path.', 'fixed', 'https://delhitourism.gov.in/dt/festivals/republic_day.html', [('delhi', 'new-delhi')], [1]),
     ]
 
     def resolve_district_id(region_slug, district_slug):

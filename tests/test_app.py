@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3250
+    assert len(all_places) == 3302
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -250,8 +250,19 @@ def test_full_destination_journey(client):
     assert {p['slug'] for p in andaman['places']} >= {'cellular-jail', 'radhanagar-beach', 'ross-island-andaman', 'elephant-beach-havelock', 'baratang-island-caves'}
     delhi = client.get('/api/states/delhi').json()
     assert len(delhi['districts']) == 13
-    assert len(delhi['places']) == 8
-    assert {p['slug'] for p in delhi['places']} >= {'red-fort-delhi', 'qutub-minar', 'humayuns-tomb', 'india-gate', 'akshardham-temple-delhi', 'lotus-temple-delhi', 'jama-masjid-delhi', 'bangla-sahib-delhi'}
+    assert len(delhi['places']) == 60
+    delhi_slugs = {p['slug'] for p in delhi['places']}
+    assert delhi_slugs >= {'red-fort-delhi', 'qutub-minar', 'humayuns-tomb', 'india-gate', 'akshardham-temple-delhi', 'lotus-temple-delhi', 'jama-masjid-delhi', 'bangla-sahib-delhi'}
+    assert delhi_slugs >= {
+        'agrasen-ki-baoli-delhi', 'sunder-nursery-delhi', 'yamuna-biodiversity-park-delhi',
+        'national-rail-museum-delhi', 'dilli-haat-ina-delhi', 'chandni-chowk-delhi',
+    }
+    delhi_festivals = [
+        f['name'] for f in client.get('/api/festivals').json()
+        if any(d['state_slug'] == 'delhi' for d in f['districts'])
+    ]
+    assert len(delhi_festivals) == 11
+    assert 'Diwali in Delhi' in delhi_festivals
     jk = client.get('/api/states/jammu-and-kashmir').json()
     assert len(jk['districts']) == 20
     assert len(jk['places']) == 8
@@ -345,7 +356,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3250
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3302
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -451,7 +462,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3250}
+    assert response.json() == {'status': 'ok', 'places': 3302}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -562,7 +573,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3250}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3302}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -750,9 +761,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3250,
+        'detailed_places': 3302,
         'reviewed_places': 0,
-        'unreviewed_places': 3250,
+        'unreviewed_places': 3302,
         'confirmed_festival_dates': 23,
     }
 
@@ -820,7 +831,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 250
+    assert len(all_festivals) == 261
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 
@@ -849,15 +860,16 @@ def test_every_place_image_resolves_to_a_real_file(client):
 
 
 def test_state_photo_policies(client):
-    """Karnataka uses Commons; Arunachal, Himachal and Tripura use official photographs."""
+    """Karnataka uses Commons; Arunachal, Himachal, Tripura and Delhi use official photographs."""
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
     ap_official_domains = ('arunachaltourism.com', '.nic.in', '.gov.in')
     hp_official_domains = ('incredibleindia.gov.in', 'himachaltourism.gov.in')
     tripura_official_domains = ('incredibleindia.gov.in', 'tripuratourism.gov.in')
+    delhi_official_domains = ('incredibleindia.gov.in', 'delhitourism.gov.in')
     photo_slugs, vector_slugs = [], []
     for place in client.get('/api/places').json():
         if place['state_slug'] not in (
-            'karnataka', 'arunachal-pradesh', 'himachal-pradesh', 'tripura'
+            'karnataka', 'arunachal-pradesh', 'himachal-pradesh', 'tripura', 'delhi'
         ):
             continue
         src = sources.get(place['slug'])
@@ -876,6 +888,16 @@ def test_state_photo_policies(client):
         elif place['state_slug'] == 'tripura':
             assert any(domain in src['source_page'] for domain in tripura_official_domains), (
                 f"{place['slug']} missing official Tripura source page"
+            )
+            assert 'commons.wikimedia.org' not in src['source_page'], (
+                f"{place['slug']} still attributed to Wikimedia Commons"
+            )
+        elif place['state_slug'] == 'delhi':
+            assert any(domain in src['source_page'] for domain in delhi_official_domains), (
+                f"{place['slug']} missing official Delhi source page"
+            )
+            assert any(domain in src['download_url'] for domain in delhi_official_domains), (
+                f"{place['slug']} missing official Delhi download URL"
             )
             assert 'commons.wikimedia.org' not in src['source_page'], (
                 f"{place['slug']} still attributed to Wikimedia Commons"

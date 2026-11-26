@@ -1,0 +1,7 @@
+{
+  "slug": "delhi",
+  "name": "Delhi",
+  "kind": "union territory",
+  "source_url": "https://delhitourism.gov.in/",
+  "places_file": "../delhi-places.json"
+}

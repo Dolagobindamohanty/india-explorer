@@ -111,6 +111,13 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Adhai_Din-ka-Jhonpra_Screen_wall_(6133975257).jpg"
   },
+  "adham-khan-s-tomb-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/adham_khan.jpg",
+    "file": "adham-khan-s-tomb-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
+  },
   "adi-kadi-vav-and-navghan-kuwo": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/june/Adi-Kadi-Vav-1.jpg",
     "file": "adi-kadi-vav-and-navghan-kuwo.jpg",
@@ -206,6 +213,13 @@
     "note": "Restored during UP restoration QA with an exact photograph of Agra Fort.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Agra_Fort_2.jpg"
+  },
+  "agrasen-ki-baoli-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/agrasen_ki_baoli.jpg",
+    "file": "agrasen-ki-baoli-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "aguada-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_aguada.jpg",
@@ -399,9 +413,11 @@
     "source_page": "https://www.gujarattourism.com/central-zone/gandhinagar/akshardham-temple.html"
   },
   "akshardham-temple-delhi": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akshardham_Delhi.jpg",
-    "file": "Akshardham_Delhi.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Akshardham_Delhi.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/img/new/Swaminarayan.jpg",
+    "file": "akshardham-temple-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/"
   },
   "akshayavat": {
     "creator": "juggadery",
@@ -918,6 +934,13 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Arasavalli-srikakulam_temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "Arasavalli-srikakulam_temple.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AArasavalli-srikakulam_temple.jpg"
+  },
+  "aravalli-biodiversity-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/aravalli_biodiversity_park.jpg",
+    "file": "aravalli-biodiversity-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
   },
   "aritar-lake": {
     "coordinate_note": "Coordinate reference: OpenStreetMap lake node named Lampokhari (Aritar Lake); the Wikipedia Aritar town point was rejected.",
@@ -1673,9 +1696,11 @@
     "source_page": "https://mizoramtourism.com/top-destination/47"
   },
   "bangla-sahib-delhi": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gurudwara_Bangla_Sahib_New_Delhi.jpg",
-    "file": "Gurudwara_Bangla_Sahib_New_Delhi.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Bangla_Sahib_New_Delhi.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/img/new/Bangla-Sahib.jpg",
+    "file": "bangla-sahib-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/"
   },
   "banjhakri-falls": {
     "coordinate_note": "Coordinate reference: Wikipedia point for Banjhakri Falls and Energy Park; the official district page gives access details but no map coordinate.",
@@ -2267,6 +2292,13 @@
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/saurashtra/gir-somnath/bhalka-tirth.html"
   },
+  "bhalswa-lake-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/bhalswa_lake.jpg",
+    "file": "bhalswa-lake-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "bhalukpong": {
     "download_url": "https://arunachaltourism.com/wp-content/uploads/2021/07/BHALUKPONG.jpg",
     "file": "bhalukpong.jpg",
@@ -2563,6 +2595,13 @@
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/kutch-zone/kutch/bhujodi.html"
   },
+  "bhuli-bhatiyari-ka-mahal-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/bhuli_bhatiyari_ka_mahal.jpg",
+    "file": "bhuli-bhatiyari-ka-mahal-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
+  },
   "bhulla-lake": {
     "coordinate_note": "Coordinate reference: Wikipedia article Bhullatal (https://en.wikipedia.org/wiki/Bhullatal).",
     "creator": "Priyambada Nath",
@@ -2631,6 +2670,13 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Beech_58_Baron_PH-BYB_KLM_luchtvaart_school_%287061288209%29.jpg/960px-Beech_58_Baron_PH-BYB_KLM_luchtvaart_school_%287061288209%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Beech_58_Baron_PH-BYB_KLM_luchtvaart_school_(7061288209).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Beech_58_Baron_PH-BYB_KLM_luchtvaart_school_(7061288209).jpg"
+  },
+  "bijay-mandal-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/bijay_mandal.jpg",
+    "file": "bijay-mandal-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "bijni": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Bijni_Amguri.jpg/960px-Bijni_Amguri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3404,6 +3450,13 @@
     "file": "Chandipur Beach, Balasore.jpg",
     "source_page": "https://odishatourism.gov.in/en/w/chandipur-beach"
   },
+  "chandni-chowk-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Chandni_Chowk_Bazaars.jpg",
+    "file": "chandni-chowk-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/shop-in-delhi.html"
+  },
   "chandra-prabha-wildlife-sanctuary": {
     "creator": "Rosehubwiki, Kuber Patel",
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Devdari_Water_fall_in_Chandra_prabha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3736,6 +3789,13 @@
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63f70c9626aa768e5903e7dc"
   },
+  "children-s-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Children%27s_Park.jpg",
+    "file": "children-s-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/delhi-for-kids.html"
+  },
   "chilika-lake": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balugaon%20on%20Chilika%2C%20Odisha%2C%20India.jpg",
     "file": "Balugaon on Chilika, Odisha, India.jpg",
@@ -3896,6 +3956,13 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/chor_pic2-1.jpg",
     "file": "chor_pic2-1.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/chor-gumbad/"
+  },
+  "chor-minar-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/chor_minar.jpg",
+    "file": "chor-minar-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "choral-dam": {
     "coordinate_note": "Approximate coordinates for Choral Dam in Indore district, Madhya Pradesh (district centroid used for map placement); verify on arrival.",
@@ -4130,6 +4197,13 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Coringa_Reserve_Forest_Park_Mangrove_Forest_53.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "Coringa_Reserve_Forest_Park_Mangrove_Forest_53.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ACoringa_Reserve_Forest_Park_Mangrove_Forest_53.jpg"
+  },
+  "coronation-durbar-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Coronation_Durbar_Park.jpg",
+    "file": "coronation-durbar-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "cotigao-wildlife-sanctuary": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Somewhere_in_the_interiors_of_Cotigao.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -4570,6 +4644,13 @@
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/central-zone/ahmedabad/dekho-amdavad-hop-on-hop-off-tour.html"
   },
+  "delhi-ridge-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Delhi_Ridge.jpg",
+    "file": "delhi-ridge-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "deo-sun-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Deo_Surya_Mandir%2C_Deo%2C_India_-_DPLA_-_7ed1eb8cde6cbbb76c2bab3b0fbba82a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "Deo_Surya_Mandir,_Deo,_India_-_DPLA_-_7ed1eb8cde6cbbb76c2bab3b0fbba82a.jpg",
@@ -4924,6 +5005,27 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Digha,_Purba_Medinipur_(East_Midnapore)_district,_West_Bengal,_India.JPG"
   },
+  "dilli-haat-ina-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Dilli_Haat_INA.jpg",
+    "file": "dilli-haat-ina-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/food-tours.html"
+  },
+  "dilli-haat-janakpuri-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Delhi_Haat_Janakpuri.jpg",
+    "file": "dilli-haat-janakpuri-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/food-tours.html"
+  },
+  "dilli-haat-pitampura-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Dilli_Haat_Pitampura.jpg",
+    "file": "dilli-haat-pitampura-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/food-tours.html"
+  },
   "dilpui": {
     "download_url": "https://mizoramtourism.com/post_images/626b9141bccea_Dilpui.jpg",
     "file": "626b9141bccea_Dilpui.jpg",
@@ -5118,6 +5220,13 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Doyang_reservoir_and_its_suroundings_in_Nagaland_JEG4572.JPG/960px-Doyang_reservoir_and_its_suroundings_in_Nagaland_JEG4572.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Doyang_reservoir_and_its_suroundings_in_Nagaland_JEG4572.JPG",
     "source_page": "https://commons.wikimedia.org/wiki/File:Doyang_reservoir_and_its_suroundings_in_Nagaland_JEG4572.JPG"
+  },
+  "dr-ambedkar-national-memorial-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/DrBhimraoAmbedkar.jpg",
+    "file": "dr-ambedkar-national-memorial-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "dr-apj-abdul-kalam-memorial": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dr-a-p-j-abdul-kalam-memorial-1656168085_21209b48884b76fb7cca.webp",
@@ -6018,6 +6127,13 @@
     "file": "960px-Gasteracantha_cancriformis_(spinybacked_orbweaver),_female_spotted_at_Nambor_Wildlife_Sanctuary,_Assam.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Gasteracantha_cancriformis_(spinybacked_orbweaver),_female_spotted_at_Nambor_Wildlife_Sanctuary,_Assam.jpg"
   },
+  "garden-of-five-senses-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Gardens_of_five_Senses.jpg",
+    "file": "garden-of-five-senses-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "garden-of-fragrance": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garden_Of_Fragrance_-_panoramio.jpg",
     "file": "Garden_Of_Fragrance_-_panoramio.jpg",
@@ -6162,6 +6278,13 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Ghagar_Buri_Temple%2C_Asansol.jpg/960px-Ghagar_Buri_Temple%2C_Asansol.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Ghagar_Buri_Temple,_Asansol.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Ghagar_Buri_Temple,_Asansol.jpg"
+  },
+  "ghalib-museum-delhi": {
+    "download_url": "https://delhitourism.gov.in/images/ghalib_academy.jpg",
+    "file": "ghalib-museum-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/entertainment/ghalib_academy.html"
   },
   "ghatarani-waterfall": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic%20heritage%20sites%20of%20Chhattisgarh%20with%20GPS%20coordinates.jpg?width=800",
@@ -7147,6 +7270,27 @@
     "provider": "Incredible India (Ministry of Tourism, Government of India)",
     "source_page": "https://www.incredibleindia.gov.in/en/himachal-pradesh/shimla/hatu-peak"
   },
+  "hauz-khas-fort-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Hauz_Khas_Fort.jpg",
+    "file": "hauz-khas-fort-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
+  "hauz-khas-reservoir-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/hauz_khas_reservoir.jpg",
+    "file": "hauz-khas-reservoir-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
+  "hauz-khas-village-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Hauz_Khas_Village_Market.jpg",
+    "file": "hauz-khas-village-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/shop-in-delhi.html"
+  },
   "hawa-mahal": {
     "coordinate_note": "Wikipedia: Hawa Mahal, Jaipur, Rajasthan, India.",
     "creator": "Marcin Białek",
@@ -7181,6 +7325,13 @@
     "file": "hazaribagh-national-park.jpg",
     "note": "Official Jharkhand Tourism banner image.",
     "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/116"
+  },
+  "hazrat-nizamuddin-ki-baoli-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Hazrat_Nizamuddin_Ki_Baoli.jpg",
+    "file": "hazrat-nizamuddin-ki-baoli-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "hazratganj": {
     "creator": "Matt Stabile",
@@ -7425,9 +7576,11 @@
     "source_page": "https://haryanatourism.gov.in/places_of_interest/humayun-mosque/"
   },
   "humayuns-tomb": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Humayun%27s%20Tomb-Delhi%20front%20view.jpg",
-    "file": "Humayun's Tomb-Delhi front view.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Humayun%27s_Tomb-Delhi_front_view.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/images/humayun-tomb.jpg",
+    "file": "humayuns-tomb.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "hundru-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_120617.jpg",
@@ -7551,9 +7704,11 @@
     "source_page": "https://manipurtourism.gov.in/historical-site/"
   },
   "india-gate": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/India_Gate_front.jpg",
-    "file": "India_Gate_front.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:India_Gate_front.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/images/India_Gate.jpg",
+    "file": "india-gate.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "indian-museum": {
     "coordinate_note": "Wikipedia: Indian Museum, West Bengal, India.",
@@ -7627,6 +7782,13 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beauty%20of%20IRUPPU%20FALLS.jpg",
     "file": "Beauty of IRUPPU FALLS.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ABeauty_of_IRUPPU_FALLS.jpg"
+  },
+  "isa-khan-s-tomb-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/isa_khans_tomb.jpg",
+    "file": "isa-khan-s-tomb-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "iskcon-kolkata": {
     "coordinate_note": "OpenStreetMap/Photon: Radha Govinda Mandir (ISKCON Kolkata), Albert Road, Kolkata.",
@@ -7823,6 +7985,13 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jahangir_Mahal,_Orchha,_Madhya_Pradesh,_India.jpg"
   },
+  "jahaz-mahal-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Jahaz_Mahal.jpg",
+    "file": "jahaz-mahal-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
+  },
   "jahaz-mahal-mandu": {
     "coordinate_note": "Approximate coordinates for Jahaz Mahal in Mandu, Dhar district.",
     "creator": "Jaithakurpix",
@@ -8013,9 +8182,11 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Jama_masjid_,_Burhanpur_Minaret_and_front_open_space.jpg"
   },
   "jama-masjid-delhi": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/20191203_Jama_Masjid%2C_Delhi_0707_6468_DxO.jpg",
-    "file": "20191203_Jama_Masjid,_Delhi_0707_6468_DxO.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:20191203_Jama_Masjid,_Delhi_0707_6468_DxO.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/images/Jama_Masjid.jpg",
+    "file": "jama-masjid-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/delhi-delicacies.html"
   },
   "jama-masjid-jaunpur": {
     "creator": "Official district website",
@@ -8049,6 +8220,13 @@
     "note": "Wikimedia Commons image File:Jamalapuram Temple.jpg. Attribution checked via Commons metadata. The official Telangana Tourism detail page for Khammam provided no separate image for this sub-attraction.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jamalapuram_Temple.jpg"
+  },
+  "jamali-kamali-mosque-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Jamali_Kamali_Mosque.jpg",
+    "file": "jamali-kamali-mosque-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "jamboti-hills": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jamboti%2C%20Mandovi%20River.jpg",
@@ -8103,6 +8281,13 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doors%20of%20Jantar%20Mantar.jpg?width=960",
     "file": "Doors of Jantar Mantar.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Doors_of_Jantar_Mantar.jpg"
+  },
+  "jantar-mantar-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/jantar-mantar.jpg",
+    "file": "jantar-mantar-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "japanese-garden-chandigarh": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_statue_in_chandigarh_Japanese_Garden.jpg",
@@ -8849,6 +9034,13 @@
     "provider": "Telangana Tourism",
     "source_page": "https://tourism.telangana.gov.in/destinations/kamareddy"
   },
+  "kamla-nehru-biodiversity-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/kamla_nehru_biodiversity_park.jpg",
+    "file": "kamla-nehru-biodiversity-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
+  },
   "kamlanehru-zoo-kankaria": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/kankaria-zoo/Kankaria-Zoo-Thumbnail.jpg",
     "file": "kamlanehru-zoo-kankaria.jpg",
@@ -9256,6 +9448,13 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/Kartikeya-Mandir-Pehowa.webp",
     "file": "Kartikeya-Mandir-Pehowa.webp",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/kartikeya-temple/"
+  },
+  "karvya-path-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Rajpath.jpg",
+    "file": "karvya-path-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "karwar-beach": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20beach%20in%20Karwar%2C%20Uttara%20Kannada%2C%20India%20%282018%29.jpg",
@@ -11362,6 +11561,20 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Lodheshwar_mahadev_temple.jpg"
   },
+  "lodhi-garden-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Lodhi_Garden.jpg",
+    "file": "lodhi-garden-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
+  "lodi-gardens-lake-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/lodhi_garden_lake.jpg",
+    "file": "lodi-gardens-lake-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "lohagarh-fort-bharatpur": {
     "coordinate_note": "Wikipedia: Lohagarh Fort, Bharatpur, Rajasthan, India.",
     "creator": "Dr. Raju Kasambe",
@@ -11474,9 +11687,11 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AHampi%2C_India%2C_Lotus_Mahal.jpg"
   },
   "lotus-temple-delhi": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotus_Temple%2C_Baha_-_i_-_House%2C_Delhi.jpg",
-    "file": "Lotus_Temple,_Baha_-_i_-_House,_Delhi.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Lotus_Temple,_Baha_-_i_-_House,_Delhi.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/images/Lotus_Temple.jpg",
+    "file": "lotus-temple-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "lower-ghaghri-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180425_234354.jpg",
@@ -12850,6 +13065,13 @@
     "provider": "Telangana Tourism",
     "source_page": "https://tourism.telangana.gov.in/destinations/medchal-malkajgiri"
   },
+  "meena-bazaar-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Meena_Bazaar.jpg",
+    "file": "meena-bazaar-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/shop-in-delhi.html"
+  },
   "meenakshi-temple": {
     "download_url": "https://www.tamilnadutourism.com/uploads/attractions/banners/61de619f-6fba-46ed-afcd-9d0c8b91c8af.webp",
     "file": "meenakshi-temple.jpg",
@@ -13005,6 +13227,13 @@
     "file": "mirza_alijan_2.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/mirza-alijans-takhat-and-baoli/"
   },
+  "mirza-ghalib-ki-haveli-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/unexplored_delhi/images/mirza_ghalib_ki_haveli.jpg",
+    "file": "mirza-ghalib-ki-haveli-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored_delhi/mirza_ghalib_ki_haveli.html"
+  },
   "mishing-villages-majuli": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Assam_146.jpg/960px-Assam_146.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Assam_146.jpg",
@@ -13100,6 +13329,13 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/mosque_of_ala_vardi_4.jpg",
     "file": "mosque_of_ala_vardi_4.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/mosque-and-sarai-of-ala-vardi-khan/"
+  },
+  "moth-mosque-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Moth_Mosque.jpg",
+    "file": "moth-mosque-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "moti-bagh-palace": {
     "coordinate_note": "OpenStreetMap (Photon): Moti Bagh Palace (Old), Punjab, India.",
@@ -13231,6 +13467,13 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/mughal_bridge_khiwaza_4.jpg",
     "file": "mughal_bridge_khiwaza_4.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/mughal-bridge/"
+  },
+  "mughal-period-jharna-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Mughal_Period_Jharna.jpg",
+    "file": "mughal-period-jharna-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "mukkha-falls": {
     "creator": "Government of Uttar Pradesh tourism department",
@@ -14043,6 +14286,13 @@
     "provider": "Uttar Pradesh Wildlife Tourism / Forest Department (official)",
     "source_page": "https://ecotourism.up.gov.in/zoo/Nationalchambalwildlife?category=4&destinationId=132"
   },
+  "national-charkha-museum-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/national_charkha_museum.jpg",
+    "file": "national-charkha-museum-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "national-martyrs-memorial": {
     "coordinate_note": "User-supplied Punjab tourism CSV locality pin (Ferozepur district, Punjab); approximate, not individually geocoded.",
     "creator": "Kuldeepburjbhalaike",
@@ -14053,11 +14303,39 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Hussainiwala_National_Martyrs_Memorial,_Ferozepur.jpg"
   },
+  "national-museum-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/national_museum.jpg",
+    "file": "national-museum-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
+  "national-rail-museum-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/national_rail_museum.jpg",
+    "file": "national-rail-museum-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/delhi-for-kids.html"
+  },
   "national-salt-satygraha-museum-dandi": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/june/nssm.jpg",
     "file": "national-salt-satygraha-museum-dandi.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/south-zone/navsari/national-salt-satygraha-museum---dandi.html"
+  },
+  "national-science-centre-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/National_Science_Centre.jpg",
+    "file": "national-science-centre-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/delhi-for-kids.html"
+  },
+  "national-zoological-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/National_Zoological_Park.jpg",
+    "file": "national-zoological-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/delhi-for-kids.html"
   },
   "natural-history-museum-chandigarh": {
     "download_url": "https://chandigarhtourism.gov.in/",
@@ -14137,6 +14415,13 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Nawabganj_Bird_Sanctuary,_Unnao_03.JPG"
   },
+  "neela-hauz-biodiversity-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/neela_hauz_biodiversity_park.jpg",
+    "file": "neela-hauz-biodiversity-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
+  },
   "neelamadhaba-temple-kantilo": {
     "download_url": "https://odishatourism.gov.in/documents/d/guest/reg-plc-ladukeswarnilaadhab-2",
     "file": "reg-plc-ladukeswarnilaadhab-2",
@@ -14191,6 +14476,13 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Negheriting_Shiva_Doul%2CDergaon%2CGolaghat%2CAssam.jpg/960px-Negheriting_Shiva_Doul%2CDergaon%2CGolaghat%2CAssam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Negheriting_Shiva_Doul,Dergaon,Golaghat,Assam.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Negheriting_Shiva_Doul,Dergaon,Golaghat,Assam.jpg"
+  },
+  "nehru-planetarium-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Nehru_Planetarium.jpg",
+    "file": "nehru-planetarium-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/delhi-for-kids.html"
   },
   "nelakondapally": {
     "coordinate_note": "Wikipedia: Nelakondapalli, Telangana, India.",
@@ -15874,6 +16166,13 @@
     "file": "960px-DSC09765_Shri_Shakti_Devi_temple_Chamba.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:DSC09765_Shri_Shakti_Devi_temple_Chamba.jpg"
   },
+  "purana-qila-old-fort-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Purana_Qila.jpg",
+    "file": "purana-qila-old-fort-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "purbasa-tripura": {
     "download_url": "https://tripuratourism.gov.in/images/tour/1661774185/81.jpg",
     "file": "purbasa-tripura.jpg",
@@ -16022,9 +16321,11 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AHampi_-_Queen%27s_Bath_-_Front_Side.jpg"
   },
   "qutub-minar": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qutb%20Minar%202022.jpg",
-    "file": "Qutb Minar 2022.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Qutb_Minar_2022.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/images/Qutub_Minar.jpg",
+    "file": "qutub-minar.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "qutub-shahi-tombs": {
     "coordinate_note": "Wikipedia: Qutb Shahi tombs, Telangana, India.",
@@ -16268,6 +16569,13 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Ruins_of_Rajnagar_palace_Madhubani_district.jpg/960px-Ruins_of_Rajnagar_palace_Madhubani_district.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Ruins_of_Rajnagar_palace_Madhubani_district.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Ruins_of_Rajnagar_palace_Madhubani_district.jpg"
+  },
+  "rajon-ki-baoli-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/rajon_ki_baoli.jpg",
+    "file": "rajon-ki-baoli-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "rajpur-tea-gardens": {
     "coordinate_note": "OpenStreetMap/Photon: Raipur Tea Estate, Jalpaiguri.",
@@ -16786,6 +17094,13 @@
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd99c68ffe009a67043f50"
   },
+  "rashtrapati-bhavan-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/img/new/Rashtrapati-Bhavan.jpg",
+    "file": "rashtrapati-bhavan-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/"
+  },
   "rashtriya-dalit-prerna-sthal": {
     "creator": "Ramesh Lalwani",
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/National_Dalit_Memorial_Noida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -16838,9 +17153,11 @@
     "source_page": "https://www.gujarattourism.com/central-zone/ahmedabad/ravivari--sunday-market--ahmedabad.html"
   },
   "red-fort-delhi": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Delhi_fort.jpg",
-    "file": "Delhi_fort.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Delhi_fort.jpg"
+    "download_url": "https://delhitourism.gov.in/dt/img/new/red-ort.jpg",
+    "file": "red-fort-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/"
   },
   "red-hill-lokpaching": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Maibam Lokpaching, the Red Hill battle site on the Tiddim Road; the state page gives no map coordinates.",
@@ -17247,6 +17564,13 @@
     "note": "Official Manipur Tourism illustration of Sadu Chiru Waterfall.",
     "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/"
   },
+  "safdarjung-tomb-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Safdarjung_Tomb.jpg",
+    "file": "safdarjung-tomb-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "sahasra-shivalinga-temple": {
     "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-sahashra-sibalinga-card",
     "file": "south-od-sahashra-sibalinga-card",
@@ -17533,6 +17857,13 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Entrance_gate_of_Sanjay_Gandhi_National_Park%2C_Mumbai.jpg/960px-Entrance_gate_of_Sanjay_Gandhi_National_Park%2C_Mumbai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Entrance_gate_of_Sanjay_Gandhi_National_Park,_Mumbai.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Entrance_gate_of_Sanjay_Gandhi_National_Park,_Mumbai.jpg"
+  },
+  "sanjay-lake-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/sanjay_lake.jpg",
+    "file": "sanjay-lake-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "sanjeevi-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/sanjeevi-hills-1656234853_a55eac0b821081a35d2d.webp",
@@ -18055,6 +18386,13 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/shahjahan_ki_baoli_1.jpg",
     "file": "shahjahan_ki_baoli_1.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/shahjahan-ki-baoli/"
+  },
+  "shahpur-jat-market-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Shahpur_Jat_Market.jpg",
+    "file": "shahpur-jat-market-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/shop-in-delhi.html"
   },
   "shakthan-thampuran-palace": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Decorated_potsherds%2C_Cheraman_Parambu_%28Shakthan_Thampuran_Palace_Museum%2C_Thrissur%29.jpg/960px-Decorated_potsherds%2C_Cheraman_Parambu_%28Shakthan_Thampuran_Palace_Museum%2C_Thrissur%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -19442,6 +19780,13 @@
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=638f90b09e20437bfb0ce140"
   },
+  "sunder-nursery-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/sunder_nursery.jpg",
+    "file": "sunder-nursery-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "sunderdhunga-glacier": {
     "coordinate_note": "Coordinate reference: Google Maps place 5WRF+5PP Sunderdhunga Glacier Trek, Wachham, Uttarakhand 263679 (https://www.google.com/maps/place/?q=place_id:ChIJUbsZkq0ZpzkRlJxhjK-Kkxs).",
     "creator": "Thisboytraveller",
@@ -20556,6 +20901,13 @@
     "provider": "Anjaw District Administration",
     "source_page": "https://anjaw.nic.in/tourist-place/hot-springtilam/"
   },
+  "tilpath-valley-biodiversity-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/tilpath_valley_biodiversity_park.jpg",
+    "file": "tilpath-valley-biodiversity-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
+  },
   "timalga": {
     "creator": "Ashish deury",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kelo_river.jpg?width=1280",
@@ -20792,6 +21144,13 @@
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/central-zone/ahmedabad/tribal-museum.html"
   },
+  "tribal-museum-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Tribal_Museum.jpg",
+    "file": "tribal-museum-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "trikut-hills": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_130709.jpg",
     "file": "trikut-hills.jpg",
@@ -20897,6 +21256,13 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/TU-142_Aircraft_Museum%2C_beside_the_sea_beach_in_Visakhapatnam_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "TU-142_Aircraft_Museum,_beside_the_sea_beach_in_Visakhapatnam_01.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ATU-142_Aircraft_Museum%2C_beside_the_sea_beach_in_Visakhapatnam_01.jpg"
+  },
+  "tughlaqabad-fort-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Tughlaqabad_Fort.jpg",
+    "file": "tughlaqabad-fort-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
   "tuilut": {
     "download_url": "https://mizoramtourism.com/post_images/62b88497a3252_Tuilut%20Kolasib1.jpg",
@@ -21940,6 +22306,13 @@
     "file": "wari-chora.webp",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/wari-chora/"
   },
+  "waste-to-wonder-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/Waste_to_Wonder_Park.jpg",
+    "file": "waste-to-wonder-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
   "watson-museum": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/museums/watson-museum/Watson-Museum-Banner.jpg",
     "file": "watson-museum.jpg",
@@ -22036,6 +22409,13 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Agastya_Pushkarini_at_Uma_Maheswara_Temple_Yaganti_Andhra_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "Agastya_Pushkarini_at_Uma_Maheswara_Temple_Yaganti_Andhra_Pradesh.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AAgastya_Pushkarini_at_Uma_Maheswara_Temple_Yaganti_Andhra_Pradesh.jpg"
+  },
+  "yamuna-biodiversity-park-delhi": {
+    "download_url": "https://delhitourism.gov.in/dt/images/yamuna_biodiversity_park.jpg",
+    "file": "yamuna-biodiversity-park-delhi.jpg",
+    "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
+    "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
+    "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
   },
   "yamunotri-temple": {
     "coordinate_note": "Coordinate from the official Uttarakhand Tourism destination page https://www.uttarakhandtourism.gov.in/destination/yamunotri.",
