@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3225
+    assert len(all_places) == 3250
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -211,7 +211,10 @@ def test_full_destination_journey(client):
     }
     tripura = client.get('/api/states/tripura').json()
     assert len(tripura['districts']) == 8
-    assert len(tripura['places']) == 8
+    assert len(tripura['places']) == 33
+    assert all(p['entry_fee'] == 'Check locally' for p in tripura['places'])
+    assert all('banswara' not in p['image_url'] for p in tripura['places'])
+    assert {p['district_id'] for p in tripura['places']} == {35, 36, 37, 38, 39, 40, 41, 42}
     west_tripura = client.get('/api/districts/west-tripura').json()
     assert any(p['slug'] == 'ujjayanta-palace' for p in west_tripura['places'])
     gomati = client.get('/api/districts/gomati').json()
@@ -342,7 +345,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3225
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3250
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -448,7 +451,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3225}
+    assert response.json() == {'status': 'ok', 'places': 3250}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -559,7 +562,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3225}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3250}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -747,9 +750,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3225,
+        'detailed_places': 3250,
         'reviewed_places': 0,
-        'unreviewed_places': 3225,
+        'unreviewed_places': 3250,
         'confirmed_festival_dates': 23,
     }
 
@@ -817,7 +820,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 247
+    assert len(all_festivals) == 250
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 
@@ -846,13 +849,16 @@ def test_every_place_image_resolves_to_a_real_file(client):
 
 
 def test_state_photo_policies(client):
-    """Karnataka uses Commons; Arunachal and Himachal use official government photographs."""
+    """Karnataka uses Commons; Arunachal, Himachal and Tripura use official photographs."""
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
     ap_official_domains = ('arunachaltourism.com', '.nic.in', '.gov.in')
     hp_official_domains = ('incredibleindia.gov.in', 'himachaltourism.gov.in')
+    tripura_official_domains = ('incredibleindia.gov.in', 'tripuratourism.gov.in')
     photo_slugs, vector_slugs = [], []
     for place in client.get('/api/places').json():
-        if place['state_slug'] not in ('karnataka', 'arunachal-pradesh', 'himachal-pradesh'):
+        if place['state_slug'] not in (
+            'karnataka', 'arunachal-pradesh', 'himachal-pradesh', 'tripura'
+        ):
             continue
         src = sources.get(place['slug'])
         assert src, f"{place['slug']} has no attribution record"
@@ -866,6 +872,13 @@ def test_state_photo_policies(client):
         elif place['state_slug'] == 'arunachal-pradesh':
             assert any(domain in src['source_page'] for domain in ap_official_domains), (
                 f"{place['slug']} missing official Arunachal source page"
+            )
+        elif place['state_slug'] == 'tripura':
+            assert any(domain in src['source_page'] for domain in tripura_official_domains), (
+                f"{place['slug']} missing official Tripura source page"
+            )
+            assert 'commons.wikimedia.org' not in src['source_page'], (
+                f"{place['slug']} still attributed to Wikimedia Commons"
             )
         else:
             assert any(domain in src['source_page'] for domain in hp_official_domains), (

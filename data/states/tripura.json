@@ -1,0 +1,7 @@
+{
+  "slug": "tripura",
+  "name": "Tripura",
+  "kind": "state",
+  "source_url": "https://tripuratourism.gov.in/",
+  "places_file": "../tripura-places.json"
+}
