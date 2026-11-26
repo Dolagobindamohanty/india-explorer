@@ -68,7 +68,6 @@ PLACE_IMAGE_PATHS = {
     'dudhsagar-falls': '/assets/places/dudhsagar-falls.jpg',
     'shimla-ridge': '/assets/places/shimla-ridge.jpg',
     'jakhu-temple': '/assets/places/jakhu-temple.jpg',
-    'dharamshala': '/assets/places/dharamshala.jpg',
     'masroor-temple': '/assets/places/masroor-temple.jpg',
     'marina-beach': '/assets/places/marina-beach.jpg',
     'kapaleeshwarar-temple': '/assets/places/kapaleeshwarar-temple.jpg',
@@ -438,7 +437,6 @@ def seed(db):
         (12, 6, 'dudhsagar-falls', 'Dudhsagar Falls', 'A dramatic waterfall landscape in the Western Ghats, best planned with current access information.', 'nature', 15.3144, 74.3144, 'Access rules and permitted routes vary; check the official forest/tourism guidance first.', 'Do not enter restricted areas. Monsoon access and water conditions can change quickly.', None, 'https://www.goa-tourism.com/', place_image('dudhsagar-falls')),
         (13, 7, 'shimla-ridge', 'The Ridge, Shimla', 'A broad hilltop promenade with mountain views and a close connection to Shimla’s public life.', 'culture', 31.1048, 77.1734, 'Shimla is connected by road; the historic Kalka-Shimla mountain railway route reaches nearby areas.', 'Open 24 hours. Free public pedestrian access; motor vehicles strictly prohibited. Walking in the hill town involves slopes and steps. Connects directly to Mall Road, Lakkar Bazaar, and Christ Church (1857). Last verified: October 2026.', None, 'https://himachaltourism.gov.in/destination/shimla/', place_image('shimla-ridge')),
         (14, 7, 'jakhu-temple', 'Jakhu Temple', 'A hilltop temple reached through Shimla’s wooded slopes, with broad views over the town.', 'spiritual', 31.1046, 77.1820, 'Continue from Shimla by local taxi or on foot where appropriate.', 'Follow temple customs and take care around steep paths and local wildlife.', None, 'https://himachaltourism.gov.in/destination/shimla/', place_image('jakhu-temple')),
-        (15, 8, 'dharamshala', 'Dharamshala', 'A mountain destination connecting Tibetan cultural life, hillside walks and Dhauladhar views.', 'nature', 32.2190, 76.3234, 'Reach by road or via Kangra airport, then use local transport between settlements.', 'The area spans different elevations; allow time for weather and road changes.', None, 'https://himachaltourism.gov.in/', place_image('dharamshala')),
         (16, 8, 'masroor-temple', 'Masroor Rock-Cut Temples', 'Explore a remarkable group of temples carved from rock in the Kangra landscape.', 'heritage', 32.0108, 76.0907, 'Plan a road journey from Kangra or Dharamshala and check local access.', 'Treat this as a heritage site; avoid climbing or touching carved surfaces.', None, 'https://himachaltourism.gov.in/', place_image('masroor-temple')),
         (17, 9, 'marina-beach', 'Marina Beach', 'See Chennai’s long urban shoreline and the city’s evening public life.', 'beach', 13.0500, 80.2824, 'Accessible from central Chennai by local bus, rail or taxi.', 'The sea can be dangerous; follow local warnings and do not assume swimming is safe.', None, 'https://www.tamilnadutourism.com/', place_image('marina-beach')),
         (18, 9, 'kapaleeshwarar-temple', 'Kapaleeshwarar Temple', 'Visit a major Chennai temple surrounded by the streets and food culture of Mylapore.', 'spiritual', 13.0338, 80.2697, 'Reach Mylapore by local bus, rail or taxi.', 'Check temple visitor customs and opening hours before visiting.', None, 'https://www.tamilnadutourism.com/', place_image('kapaleeshwarar-temple')),
@@ -646,7 +644,9 @@ def seed(db):
         for op in canonical_extra:
             canonical_slugs_by_state.setdefault(op['state_slug'], set()).add(op['slug'])
         for state_slug, slugs in canonical_slugs_by_state.items():
-            if state_slug != 'mizoram':
+            # Mizoram and Himachal Pradesh are maintained exclusively by their
+            # canonical datasets, so retire legacy records outside those lists.
+            if state_slug not in {'mizoram', 'himachal-pradesh'}:
                 continue
             placeholders = ','.join('?' for _ in slugs)
             db.execute(

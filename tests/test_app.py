@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3159
+    assert len(all_places) == 3225
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -222,7 +222,20 @@ def test_full_destination_journey(client):
     assert any(p['slug'] == 'unakoti-rock-carvings' for p in unakoti['places'])
     hp = client.get('/api/states/himachal-pradesh').json()
     assert len(hp['districts']) == 12
-    assert len(hp['places']) == 11
+    assert len(hp['places']) == 77
+    assert {p['district'] for p in hp['places']} == {d['name'] for d in hp['districts']}
+    assert all(p['entry_fee'] == 'Check locally' for p in hp['places'])
+    assert all((ASSETS / p['image_url'].lstrip('/')).exists() for p in hp['places'])
+    assert {p['slug'] for p in hp['places']} >= {
+        'shimla-ridge', 'jakhu-temple', 'masroor-temple', 'hidimba-devi-temple',
+        'rohtang-pass', 'chandratal-lake', 'key-monastery', 'tabo-monastery',
+        'prashar-lake', 'khajjiar-lake', 'bhimakali-temple-sarahan',
+        'trilokinath-temple', 'sankat-mochan-temple-shimla',
+    }
+    assert client.get('/api/places/trilokinath-temple').json()['district'] == 'Lahaul and Spiti'
+    assert client.get('/api/places/baba-balak-nath-temple').json()['district'] == 'Hamirpur'
+    assert client.get('/api/places/sankat-mochan-temple-shimla').json()['district'] == 'Shimla'
+    assert client.get('/api/places/sankat-mochan-temple').json()['district'] == 'Varanasi'
     kullu = client.get('/api/districts/kullu').json()
     assert {p['slug'] for p in kullu['places']} >= {'hidimba-devi-temple', 'rohtang-pass'}
     lahaul = client.get('/api/districts/lahaul-and-spiti').json()
@@ -285,7 +298,7 @@ def test_filters_combine_and_heritage_links(client):
     assert all(p['unesco_url'].startswith('https://whc.unesco.org/en/list/') for p in result)
     assert client.get('/api/places?state=kerala&unesco=true').json() == []
     assert len(client.get('/api/places?month=7').json()) == 14
-    assert len(client.get('/api/places?month=6').json()) == 26
+    assert len(client.get('/api/places?month=6').json()) == 92
     assert len(client.get('/api/places?q=Kochi').json()) == 6
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     percent = client.get('/api/places', params={'q': '%'}).json()
@@ -329,7 +342,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3159
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3225
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -435,7 +448,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3159}
+    assert response.json() == {'status': 'ok', 'places': 3225}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -546,7 +559,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3159}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3225}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -734,9 +747,9 @@ def test_nagaland_festival_calendar(client):
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3159,
+        'detailed_places': 3225,
         'reviewed_places': 0,
-        'unreviewed_places': 3159,
+        'unreviewed_places': 3225,
         'confirmed_festival_dates': 23,
     }
 
@@ -832,13 +845,14 @@ def test_every_place_image_resolves_to_a_real_file(client):
     assert not problems, "image asset problems:\n" + "\n".join(problems[:25])
 
 
-def test_karnataka_and_arunachal_use_real_photographs(client):
-    """Karnataka uses Commons photographs; Arunachal uses official state/district photographs."""
+def test_state_photo_policies(client):
+    """Karnataka uses Commons; Arunachal and Himachal use official government photographs."""
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
     ap_official_domains = ('arunachaltourism.com', '.nic.in', '.gov.in')
+    hp_official_domains = ('incredibleindia.gov.in', 'himachaltourism.gov.in')
     photo_slugs, vector_slugs = [], []
     for place in client.get('/api/places').json():
-        if place['state_slug'] not in ('karnataka', 'arunachal-pradesh'):
+        if place['state_slug'] not in ('karnataka', 'arunachal-pradesh', 'himachal-pradesh'):
             continue
         src = sources.get(place['slug'])
         assert src, f"{place['slug']} has no attribution record"
@@ -849,9 +863,16 @@ def test_karnataka_and_arunachal_use_real_photographs(client):
         photo_slugs.append(place['slug'])
         if place['state_slug'] == 'karnataka':
             assert 'commons.wikimedia.org' in src['source_page'], f"{place['slug']} missing Commons source page"
-        else:
+        elif place['state_slug'] == 'arunachal-pradesh':
             assert any(domain in src['source_page'] for domain in ap_official_domains), (
                 f"{place['slug']} missing official Arunachal source page"
+            )
+        else:
+            assert any(domain in src['source_page'] for domain in hp_official_domains), (
+                f"{place['slug']} missing official Himachal source page"
+            )
+            assert 'commons.wikimedia.org' not in src['source_page'], (
+                f"{place['slug']} still attributed to Wikimedia Commons"
             )
         assert src['download_url'].startswith('https://'), f"{place['slug']} missing download url"
         assert 'vector' not in src['file'].lower(), f"{place['slug']} still labelled artwork"

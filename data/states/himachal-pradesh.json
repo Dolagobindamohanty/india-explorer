@@ -1,0 +1,7 @@
+{
+  "slug": "himachal-pradesh",
+  "name": "Himachal Pradesh",
+  "kind": "state",
+  "source_url": "https://himachaltourism.gov.in/",
+  "places_file": "../himachal-pradesh-places.json"
+}
