@@ -1,6 +1,7 @@
 import json
 import sqlite3
 import re
+from collections import Counter
 from pathlib import Path
 
 import pytest
@@ -55,7 +56,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3487
+    assert len(all_places) == 3525
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -311,8 +312,38 @@ def test_full_destination_journey(client):
     }.issubset(ladakh_festivals)
     puducherry = client.get('/api/states/puducherry').json()
     assert len(puducherry['districts']) == 4
-    assert len(puducherry['places']) == 6
-    assert {p['slug'] for p in puducherry['places']} >= {'auroville-matrimandir', 'promenade-beach-pondicherry', 'aurobindo-ashram', 'white-town-pondicherry', 'paradise-beach-pondicherry', 'sacred-heart-basilica-pondicherry'}
+    assert len(puducherry['places']) == 44
+    puducherry_slugs = {p['slug'] for p in puducherry['places']}
+    assert {
+        'aurobindo-ashram', 'promenade-beach-pondicherry', 'paradise-beach-pondicherry',
+        'sacred-heart-basilica-pondicherry', 'auroville-matrimandir',
+        'white-town-pondicherry', 'pondicherry-museum', 'arikamedu-puducherry',
+    }.issubset(puducherry_slugs)
+    assert {
+        'sri-aurobindo-ashram-puducherry', 'basilica-of-the-sacred-heart-of-jesus-puducherry',
+        'matrimandir-auroville-puducherry',
+    }.isdisjoint(puducherry_slugs)
+    assert Counter(p['district_slug'] for p in puducherry['places']) == {
+        'puducherry-district': 41,
+        'karaikal': 3,
+    }
+    puducherry_festivals = [
+        f['name'] for f in client.get('/api/festivals').json()
+        if any(d['state_slug'] == 'puducherry' for d in f['districts'])
+    ]
+    assert len(puducherry_festivals) == 10
+    assert {
+        'Bastille Day at the French War Memorial',
+        'Flower Festival at the Botanical Garden',
+        'Immaculate Conception Church Feast',
+        'Christmas at the Basilica of the Sacred Heart',
+        'Easter at the Basilica of the Sacred Heart',
+        'New Year at the Basilica of the Sacred Heart',
+        'Vijayadashami Chariot Procession',
+        'Brahmotsavam Temple Car Festival',
+        'Veerampattinam Temple Car Festival',
+        'Ram Navami at Varadharaja Perumal Temple',
+    }.issubset(puducherry_festivals)
     chandigarh = client.get('/api/states/chandigarh').json()
     assert len(chandigarh['places']) == 23
     assert {p['slug'] for p in chandigarh['places']} >= {'rock-garden-chandigarh', 'sukhna-lake', 'rose-garden-chandigarh', 'capitol-complex-open-hand', 'leisure-valley-chandigarh', 'garden-of-fragrance', 'japanese-garden-chandigarh', 'sector-17-plaza'}
@@ -400,7 +431,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3487
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3525
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -506,7 +537,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3487}
+    assert response.json() == {'status': 'ok', 'places': 3525}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -623,7 +654,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3487}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3525}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -819,11 +850,38 @@ def test_nagaland_festival_calendar(client):
     }.issubset(dnh_festivals)
 
 
+def test_puducherry_uses_only_verified_official_destination_records(client):
+    places = client.get('/api/states/puducherry').json()['places']
+    assert len(places) == 44
+    assert all(place['entry_fee'] == 'Check locally' for place in places)
+    assert all(place['source_url'].startswith('https://') for place in places)
+    sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    official_domains = (
+        'pondicherrytourism.co.in', 'pdymun.in', 'incredibleindia.gov.in'
+    )
+    assert_asset_exists('/assets/places/white-town-pondicherry.jpg')
+    for place in places:
+        src = sources[place['slug']]
+        assert src['file'] == f"{place['slug']}.jpg"
+        assert any(domain in src['source_page'] for domain in official_domains), place['slug']
+        assert src['download_url'].startswith('https://'), place['slug']
+        assert 'commons.wikimedia.org' not in src['source_page'], place['slug']
+        assert not any(
+            phrase in src['note'].lower()
+            for phrase in ('reference', 'lead image', 'best available', 'matched to the landmark', 'not available')
+        ), place['slug']
+        assert_asset_exists(place['image_url'])
+    assert sources['white-town-pondicherry']['source_page'] == (
+        'https://www.incredibleindia.gov.in/en/puducherry/puducherry/the-french-quarter'
+    )
+    assert sources['white-town-pondicherry']['download_url'].startswith('https://s7ap1.scene7.com/is/image/incredibleindia/')
+
+
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3487,
+        'detailed_places': 3525,
         'reviewed_places': 0,
-        'unreviewed_places': 3487,
+        'unreviewed_places': 3525,
         'confirmed_festival_dates': 23,
     }
 
@@ -891,7 +949,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 288
+    assert len(all_festivals) == 297
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 
@@ -920,16 +978,18 @@ def test_every_place_image_resolves_to_a_real_file(client):
 
 
 def test_state_photo_policies(client):
-    """Karnataka uses Commons; Arunachal, Himachal, Tripura and Delhi use official photographs."""
+    """Karnataka uses Commons; Arunachal, Himachal, Tripura, Delhi and Puducherry use official photographs."""
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
     ap_official_domains = ('arunachaltourism.com', '.nic.in', '.gov.in')
     hp_official_domains = ('incredibleindia.gov.in', 'himachaltourism.gov.in')
     tripura_official_domains = ('incredibleindia.gov.in', 'tripuratourism.gov.in')
     delhi_official_domains = ('incredibleindia.gov.in', 'delhitourism.gov.in')
+    puducherry_official_domains = ('pondicherrytourism.co.in', 'pdymun.in', 'incredibleindia.gov.in')
     photo_slugs, vector_slugs = [], []
     for place in client.get('/api/places').json():
         if place['state_slug'] not in (
-            'karnataka', 'arunachal-pradesh', 'himachal-pradesh', 'tripura', 'delhi'
+            'karnataka', 'arunachal-pradesh', 'himachal-pradesh', 'tripura',
+            'delhi', 'puducherry',
         ):
             continue
         src = sources.get(place['slug'])
@@ -958,6 +1018,13 @@ def test_state_photo_policies(client):
             )
             assert any(domain in src['download_url'] for domain in delhi_official_domains), (
                 f"{place['slug']} missing official Delhi download URL"
+            )
+            assert 'commons.wikimedia.org' not in src['source_page'], (
+                f"{place['slug']} still attributed to Wikimedia Commons"
+            )
+        elif place['state_slug'] == 'puducherry':
+            assert any(domain in src['source_page'] for domain in puducherry_official_domains), (
+                f"{place['slug']} missing official Puducherry source page"
             )
             assert 'commons.wikimedia.org' not in src['source_page'], (
                 f"{place['slug']} still attributed to Wikimedia Commons"

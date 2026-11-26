@@ -742,6 +742,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:6th_century_Anandaprabha_Vihara_Buddhist_site%2C_Sirpur_Chhattisgarh.jpg"
   },
+  "ananda-ranga-pillai-mansion-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/ananda-ranga-pillai-mansion-pondicherry-tourism-header.jpg",
+    "file": "ananda-ranga-pillai-mansion-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "08a8da13d5f6372608405c8ede73a8ac41a5ed2b40b17390aeb23a48a6d39475",
+    "sha256_local": "ffe73dc37260b0f33c8bc58f404adbc2b1d5e552dd89aafba08215d9c0cfc44d",
+    "source_page": "https://pondicherrytourism.co.in/ananda-ranga-pillai-mansion-puducherry"
+  },
   "anandpur-bandh-dam": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/anandpur_dam_4.jpg",
     "file": "anandpur_dam_4.jpg",
@@ -1002,6 +1012,16 @@
     "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
     "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
   },
+  "arikamedu-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Arikamedu.jpg",
+    "file": "arikamedu-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "3b565f3776c496d0816feb659d6623e22a413bf6d4c59ac03cc3de22a858b7cb",
+    "sha256_local": "25573d640e1bc80067c42608e5bcf7d9af71fc278fe372a4a262c872d3b44089",
+    "source_page": "https://pdymun.in/important-places.php"
+  },
   "aritar-lake": {
     "coordinate_note": "Coordinate reference: OpenStreetMap lake node named Lampokhari (Aritar Lake); the Wikipedia Aritar town point was rejected.",
     "creator": "Amitabha Gupta",
@@ -1051,6 +1071,16 @@
     "file": "arogya-van.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/central-zone/narmada/arogya-van.html"
+  },
+  "arulmigu-manakula-vinayagar-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Manakula-Vinayagar-Temple.jpg",
+    "file": "arulmigu-manakula-vinayagar-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "e71b7e0324584310f040d2aa3b2d27656478fca09f1a2b2da8daefa3e8c31b6c",
+    "sha256_local": "e886a2d67df68f9986de4c7f33f66e774817f7025507dff53e242aed3a5434af",
+    "source_page": "https://pdymun.in/important-places.php"
   },
   "arwah-caves": {
     "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/arwah-cave.webp",
@@ -1259,14 +1289,44 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:A_Garuda_statue_inside_the_Auniati_Satra,_Majuli,_Assam.jpg"
   },
   "aurobindo-ashram": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Aurobindo_Ashram%2C_a_spiritual_ashram_of_Sri_Aurobindo_in_Pondicherry_01.jpg",
-    "file": "Sri_Aurobindo_Ashram,_a_spiritual_ashram_of_Sri_Aurobindo_in_Pondicherry_01.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Sri_Aurobindo_Ashram,_a_spiritual_ashram_of_Sri_Aurobindo_in_Pondicherry_01.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sri-aurobindo-ashram-pondicherry-tourism-header.jpg",
+    "file": "aurobindo-ashram.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "228c7954ad369569f6e25223adf09aa9072ebc8ff1048155b025701baa164893",
+    "sha256_local": "6ec98382580a992cb6ce0d3827fbd1104b0d4d0fe58e5d2a1eac10ad36f81091",
+    "source_page": "https://pondicherrytourism.co.in/sri-aurobindo-ashram-puducherry"
+  },
+  "auroville-beach-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/auroville-beach-pondicherry-tourism-header.jpg",
+    "file": "auroville-beach-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "fded4a6c7c589f5c80254e1f932766aa92e1b3ea1bcb512ef582297a86fd1f77",
+    "sha256_local": "83d2cf0a34d0c1b71557398fa980b0fec25663f6622cd040c828b5641bdb6c41",
+    "source_page": "https://pondicherrytourism.co.in/auroville-beach-puducherry"
   },
   "auroville-matrimandir": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Matrimandir_in_Auroville%2C_Tamil_Nadu%2C_India.jpg",
-    "file": "The_Matrimandir_in_Auroville,_Tamil_Nadu,_India.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:The_Matrimandir_in_Auroville,_Tamil_Nadu,_India.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/matrimandir-auroville-pondicherry-tourism-header.jpg",
+    "file": "auroville-matrimandir.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "95712cc8ef36f1fc045198ad7fc1eb36a6958d19e97a6404932a0c1f395978df",
+    "sha256_local": "470835d3af940f9d01ff1c19576cf2a2c5bae645823819589b568aba64ea7612",
+    "source_page": "https://pondicherrytourism.co.in/matrimandir-auroville-puducherry"
+  },
+  "auroville-visitors-center-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/auroville-visitors-center-pondicherry-tourism-header.jpg",
+    "file": "auroville-visitors-center-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "58488b28a8e9ed3d355810928bb55b22adfec3ef45592ae94028a9df65f1abf6",
+    "sha256_local": "d85e04827d1480ad5eeda8d6a4fcc845cb0ebbd21ef1028d4695775bacebc5db",
+    "source_page": "https://pondicherrytourism.co.in/auroville-visitors-center-puducherry"
   },
   "ausa-fort": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Ausa_Fort.jpg/960px-Ausa_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2547,6 +2607,26 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Bharat_mata_mandir,_Haridwar.jpg"
   },
+  "bharathi-park-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/bharathi-park-pondicherry-tourism-header.jpg",
+    "file": "bharathi-park-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "32a20aac558e1b798483e455c19bab3ce24b51d05c458ddc190d2eae05971574",
+    "sha256_local": "ef8043d0aaa5935a6449ea09cd8bd97545ee816150f1371d037b1de37425c797",
+    "source_page": "https://pondicherrytourism.co.in/bharathi-park-puducherry"
+  },
+  "bharathidasan-museum-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/bharathidasan-museum-pondicherry-tourism-header.jpg",
+    "file": "bharathidasan-museum-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "2e7745cb19f7882622d1c337c1045b21886ac5b7e87fdc39d139abd0b369bc13",
+    "sha256_local": "5e6370dbdc4882245e25c82eda40b5caba096d04f2fc0680217be454e3314880",
+    "source_page": "https://pondicherrytourism.co.in/bharathidasan-museum-puducherry"
+  },
   "bharatpur-beach": {
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1772777088_bharatpur_beach.jpg",
@@ -3166,6 +3246,16 @@
     "file": "960px-Agriculture_near_Kohima_Nagaland_India.jpg",
     "note": "Nagaland image selected by district/theme; place-specific photo unavailable.",
     "source_page": "https://commons.wikimedia.org/wiki/File:Agriculture_near_Kohima_Nagaland_India.jpg"
+  },
+  "botanical-garden-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Botanical-Garden.jpg",
+    "file": "botanical-garden-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "8d9da39ba7941f2bfbe3448cfe7595c8024eb9c1a0dee1d70e1443f4febd3aa5",
+    "sha256_local": "aa66b40adf9d9ab9442002a3f2f39eee3a2fdd280723b0df32eaf177ea9b5933",
+    "source_page": "https://pdymun.in/important-places.php"
   },
   "bougainvillea-garden": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bougainvillea_Garden.jpg",
@@ -4406,6 +4496,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:CHUNGTHANG,SIKKIM.jpg"
   },
+  "chunnambar-boat-house-parking-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/chunnambar-boat-house-parking-pondicherry-tourism-header.jpg",
+    "file": "chunnambar-boat-house-parking-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "23039b921b610070ad4410631af50b1172a253e0abb531a49b17394329bbb16e",
+    "sha256_local": "7c3ecf33babbfd1c424b512e1e0362697c7cd58d4cc2751c9dd05bb56171fc4d",
+    "source_page": "https://pondicherrytourism.co.in/chunnambar-boat-house-parking-puducherry"
+  },
   "church-of-our-lady-of-sea": {
     "content_type": "image/jpeg",
     "download_url": "https://dnhddtourism.in/storage/place_to_visit/Lhe16zX2iev2wvyf6cRiPTLaX5WAHkZPx5t2S2SL.jpg",
@@ -4500,6 +4600,16 @@
     "note": "Wikimedia Commons image File:Jodhpur, India, Jodhpur Clock Tower (Ghanta Ghar).jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Rajasthan Tourism tourist destinations page.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jodhpur,_India,_Jodhpur_Clock_Tower_(Ghanta_Ghar).jpg"
+  },
+  "cluny-embroidery-centre-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/cluny-embroidery-centre-pondicherry-tourism-header.jpg",
+    "file": "cluny-embroidery-centre-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "5eeb210841a4228bf2bd86e270838bf0e63741be05b8d9b74ea132328c252ec2",
+    "sha256_local": "d14465410045c69ea78531c93dd266722b89937ca48e88a8f6586f98f6ea869f",
+    "source_page": "https://pondicherrytourism.co.in/cluny-embroidery-centre-puducherry"
   },
   "coimbatore": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/coimbatore-1656092595_19e9fcebd774ab38d0a5.webp",
@@ -6444,6 +6554,16 @@
     "sha256_download": "54275fd5a8b5581f5aec22950e3fba695548d26bda039c705a516211b0897062",
     "sha256_local": "b72326340071b75bd5ffd2ee55bd27440c1654942afdd5fb4e0c39b5e7a1fd45",
     "source_page": "https://tourism.ladakh.gov.in/places/fotu-la"
+  },
+  "french-war-memorial-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/french-war-memorial-pondicherry-tourism-header.jpg",
+    "file": "french-war-memorial-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "445de682b3d9e9d2eb1fd5a711158fc116edd0a789694d0b1641c4bd7f3d1a50",
+    "sha256_local": "376e875fd8221328531db810b97079b118d356013d48036d1543aa84023e8dcb",
+    "source_page": "https://pondicherrytourism.co.in/french-war-memorial-puducherry"
   },
   "frog-temple-oel": {
     "creator": "Mansigpt37",
@@ -8509,6 +8629,16 @@
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/Religious Tourism/details?template_id=1&id=63d8fcd86327ed072c056a3e"
   },
+  "immaculate-conception-cathedral-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Immaculate-Conception-Cathedral.jpg",
+    "file": "immaculate-conception-cathedral-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "c3034ab531366e0d4fa4cee560919c8ec5f52ade405c82a125bccb468728a52b",
+    "sha256_local": "5b4230438569144811002e287621f49a82e568db38f3d10ab2771a07f950c50e",
+    "source_page": "https://pdymun.in/important-places.php"
+  },
   "imphal-war-cemetery": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for the Imphal War Cemetery; the state page gives no map coordinates.",
     "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/IMPHAL-WAR-CEMETERY.png",
@@ -9222,6 +9352,16 @@
     "license": "CC0",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:0012623_Jatamai_temple%2C_Gariaband_Chhattisgarh_003.jpg"
+  },
+  "jawahar-toy-museum-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/jawahar-toy-museum-pondicherry-tourism-header.jpg",
+    "file": "jawahar-toy-museum-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "f3af58233de9d7a14da4e10a2ee9d9d1031c850dfc32d6550ed7a3c14149f57d",
+    "sha256_local": "bb6eb3c7ddefd622e855b4d7715b6da7f66b080dac6e176237d394d2e5ebf91d",
+    "source_page": "https://pondicherrytourism.co.in/jawahar-toy-museum-puducherry"
   },
   "jawaharlal-nehru-state-museum": {
     "download_url": "https://cdn.s3waas.gov.in/s3b4a528955b84f584974e92d025a75d1f/uploads/2017/06/2018060110.jpg",
@@ -10269,6 +10409,26 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Kappil_Beach_Cottage.jpg/960px-Kappil_Beach_Cottage.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Kappil_Beach_Cottage.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Kappil_Beach_Cottage.jpg"
+  },
+  "karaikal-ammaiyar-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/karaikal-ammaiyar-temple-pondicherry-tourism-header.jpg",
+    "file": "karaikal-ammaiyar-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "b2c4f0df1d883bcf027e5893865f73e484701ceea5d598cf28567a312832a823",
+    "sha256_local": "8f15dab9950c7e99d8278465fbe45497a2bc6cb64a72b27fba6ce982a5e3d19d",
+    "source_page": "https://pondicherrytourism.co.in/karaikal-ammaiyar-temple-puducherry"
+  },
+  "karaikal-beach-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/karaikal-beach-pondicherry-tourism-header.jpg",
+    "file": "karaikal-beach-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "9d5cf57faaaea6ec92f9e55edc4bb720b4acf075430c19ce3305de1d455cb9cb",
+    "sha256_local": "7b0277951d0a67f435292f5400c55b742e6d19378b2005f91718cda7cfdf1b56",
+    "source_page": "https://pondicherrytourism.co.in/karaikal-beach-puducherry"
   },
   "karanja-lad": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Blackbuck_Antilope_cervicapra_Roadkill_Karanja_Lad_Maharashtra_01.jpg/960px-Blackbuck_Antilope_cervicapra_Roadkill_Karanja_Lad_Maharashtra_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -13206,6 +13366,16 @@
     "sha256_local": "05bb75465be49c051974ed60b5dd057404b6e57c69913f8886d58e630401ca3f",
     "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2"
   },
+  "mahatma-gandhi-statue-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/mahatma-gandhi-statue-pondicherry-tourism-header.jpg",
+    "file": "mahatma-gandhi-statue-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "2293a8c50a1404c3679822d5a1e32c86f99bdb0392a4ff80f481876411d1627c",
+    "sha256_local": "360664f5339b3a6abddb01e535d14b16b9825e8579abf606d93e200fc682f69b",
+    "source_page": "https://pondicherrytourism.co.in/mahatma-gandhi-statue-puducherry"
+  },
   "mahendraganj": {
     "download_url": "",
     "file": "Official Meghalaya Tourism regional image reused for Mahendraganj",
@@ -14218,6 +14388,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Meenmutty_Falls_Wayanad.JPG/960px-Meenmutty_Falls_Wayanad.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Meenmutty_Falls_Wayanad.JPG",
     "source_page": "https://commons.wikimedia.org/wiki/File:Meenmutty_Falls_Wayanad.JPG"
+  },
+  "meerapalli-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Periya-Palli.jpg",
+    "file": "meerapalli-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "0d7b823839f62b2a14aa9683a1c2c3c26c3d24f2efe425f594e55f1d207540c9",
+    "sha256_local": "403997d204b2cea1bdec32f377429fac403c0072f3a7cec39d84b049ab93f7dc",
+    "source_page": "https://pdymun.in/important-places.php"
   },
   "megaliths-hazaribagh": {
     "coordinate_note": "Coordinate reference: Megalith site near Barkagaon from OpenStreetMap/Spotwander; the state page describes the location but gives no map coordinates.",
@@ -16207,6 +16387,16 @@
     "provider": "Anjaw District Administration",
     "source_page": "https://anjaw.nic.in/tourist-place/old-hawai/"
   },
+  "old-lighthouse-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/old-lighthouse-pondicherry-tourism-header.jpg",
+    "file": "old-lighthouse-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "2356f2fabbbb56db0a916a4eb8c11b7e5acf74b03c32d9b953975afeeb242bd1",
+    "sha256_local": "4e6db12e64e4df8c2b34f282bd3611b8d4a99ce597458ec13767faf07d24bc54",
+    "source_page": "https://pondicherrytourism.co.in/old-lighthouse-puducherry"
+  },
   "old-rajbari-palace": {
     "download_url": "https://tripuratourism.gov.in/images/tour/1708077639/88.jpg",
     "file": "old-rajbari-palace.jpg",
@@ -16272,6 +16462,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Osman_Sagar_lake_near_Hyderabad.jpg"
   },
+  "our-lady-of-angels-church-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/our-lady-of-angels-church-pondicherry-tourism-header.jpg",
+    "file": "our-lady-of-angels-church-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "36cf5933e673cc4c5499546aa3aa20f1093afebc537754d6df7b9ac4e568fe46",
+    "sha256_local": "692e366363542c991bb7db10aabb350c71e41a565b67644e6ede85c7c637e170",
+    "source_page": "https://pondicherrytourism.co.in/our-lady-of-angels-church-puducherry"
+  },
   "our-lady-of-remedios-church": {
     "content_type": "image/jpeg",
     "download_url": "https://dnhddtourism.in/storage/place_to_visit/pyDbWCcWMvsbhloJe6vLJq0uGKoDKyzgkhjRcnfS.jpg",
@@ -16281,6 +16481,16 @@
     "sha256_download": "f3a2da93ad00c1d57a2894a006ce385c0a8a637389acf0c010bf045934815585",
     "sha256_local": "54f53137e18221d1690e955b0ee421c7cc7c63a0b281de893aa90f602918034d",
     "source_page": "https://dnhddtourism.in/daman/place-to-visit"
+  },
+  "ousteri-lake-ossudu-lake-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/ousteri-lake-ossudu-lake-pondicherry-tourism-header.jpg",
+    "file": "ousteri-lake-ossudu-lake-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "b1c5ce38ba1dec493febf33bda9b219cf5575fd449cb32f7264c46749244847d",
+    "sha256_local": "5203d92f178af993cb8190fc4bda1a3d1ac65b953cb72d180793c0df2f48bcc8",
+    "source_page": "https://pondicherrytourism.co.in/ousteri-lake-ossudu-lake-puducherry"
   },
   "outram-ghat": {
     "coordinate_note": "Wikipedia: Outram Ghat, West Bengal, India.",
@@ -16690,9 +16900,14 @@
     "source_page": "https://odishatourism.gov.in/en/w/paradip-port-beach"
   },
   "paradise-beach-pondicherry": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paradise_beach.jpg",
-    "file": "Paradise_beach.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Paradise_beach.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/paradise-beach-pondicherry-tourism-header.jpg",
+    "file": "paradise-beach-pondicherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "c23303825eebd26f6ceb3950d08536ef1fb5a6ccad2de5e5383bb5773b1b5947",
+    "sha256_local": "2f2b4adfe17d9698cded2ba21731877df1851d9d3335f7ab34c9b4dfa582a2a1",
+    "source_page": "https://pondicherrytourism.co.in/paradise-beach-puducherry"
   },
   "parambikulam-tiger-reserve": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Parambikulam_Tiger_Reserve%2C_Palakkad%2C_Kerala.jpg/960px-Parambikulam_Tiger_Reserve%2C_Palakkad%2C_Kerala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -17354,17 +17569,57 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Pochera_waterfall.jpg"
   },
+  "pogo-land-water-and-amusement-park-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/pogo-land-water-and-amusement-park-pondicherry-tourism-header.jpg",
+    "file": "pogo-land-water-and-amusement-park-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "1196d9a5ae5b0548217455e6720aa8f1758ab318803dad46f45f98ddfa7c1d76",
+    "sha256_local": "619d6590b17130e21ad5b231da9625542d7c7c16d7e2aaa0e1b5710cbdbb1724",
+    "source_page": "https://pondicherrytourism.co.in/pogo-land-water-and-amusement-park-puducherry"
+  },
   "poilwa-village": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/A_village_market_shed_in_Nagaland.jpg/960px-A_village_market_shed_in_Nagaland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-A_village_market_shed_in_Nagaland.jpg",
     "note": "Nagaland image selected by district/theme; place-specific photo unavailable.",
     "source_page": "https://commons.wikimedia.org/wiki/File:A_village_market_shed_in_Nagaland.jpg"
   },
+  "police-museum-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/police-museum-pondicherry-tourism-header.jpg",
+    "file": "police-museum-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "dcc515c79f610b6a734409ab686c5bd9267c848e1536297fa4e4ac5d48f9f329",
+    "sha256_local": "e72c57fc7ab96aea4fbedee63e349e57af3805e8e4510d50a1a18a248fe07d89",
+    "source_page": "https://pondicherrytourism.co.in/police-museum-puducherry"
+  },
   "polo-forest": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/-flora---fauna/polo-forest/Polo-Forest-Banner1.jpg",
     "file": "polo-forest.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/north-zone/sabarkantha/polo-forest.html"
+  },
+  "pondicherry-lighthouse": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/pondicherry-lighthouse-pondicherry-tourism-header.jpg",
+    "file": "pondicherry-lighthouse.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "7076fff2c55af81a7445d8e3cad5f72eec2d858d8e8e773ec7a4954abf3d7199",
+    "sha256_local": "08647a86c31701b553e2a446b0f27eaadd0cac0793cca39eec921f6fccf91c8f",
+    "source_page": "https://pondicherrytourism.co.in/pondicherry-lighthouse"
+  },
+  "pondicherry-museum": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Puducherry-Museum.jpg",
+    "file": "pondicherry-museum.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "07dcb45480fb1d92028c4e7d695d748362d216ccde2deb23d6a0d68836ecb02a",
+    "sha256_local": "b4bc2e7a7c835e80057bcdb406df5c3c9a5ea46b9517cf5d689d93231b82442a",
+    "source_page": "https://pdymun.in/important-places.php"
   },
   "pong-dam-lake": {
     "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/farms-pong-lake-kangra-hp-hero?qlt=82&ts=1726730252364",
@@ -17413,6 +17668,16 @@
     "file": "porbandar-bird-sanctuary.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/saurashtra/porbandar/porbandar-bird-sanctuary.html"
+  },
+  "port-of-pondicherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/port-of-pondicherry-tourism-header.jpg",
+    "file": "port-of-pondicherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "4b6cb6afa056f6c003b6921b320c21ed012c13ae7d319077a8062378bb18cffa",
+    "sha256_local": "ed39d65b4683c8f8e71218b3e363e6072abccbaa9620899e15b9e98ae509cbd7",
+    "source_page": "https://pondicherrytourism.co.in/port-of-pondicherry"
   },
   "pothamedu-view-point": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/View_of_Munnar_from_Deshadan_Mountain_Resort_in_2018.jpg/960px-View_of_Munnar_from_Deshadan_Mountain_Resort_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -17512,9 +17777,14 @@
     "source_page": "https://haryanatourism.gov.in/places_of_interest/prithviraj-ki-kutcheri/"
   },
   "promenade-beach-pondicherry": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beach_Promenade%2C_Pondicherry%2C_India.jpg",
-    "file": "Beach_Promenade,_Pondicherry,_India.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Beach_Promenade,_Pondicherry,_India.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/promenade-beach-pondicherry-tourism-header.jpg",
+    "file": "promenade-beach-pondicherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "b11bd913776edbb79bd9fd148a5277bcf0c04cab9acc06435de24eae7da58dcf",
+    "sha256_local": "40f11f0acdb272786d6cdf3865f0fbd0ceb89bebf0980c709d9e5fd521ca7238",
+    "source_page": "https://pondicherrytourism.co.in/promenade-beach-puducherry"
   },
   "pualreng-wildlife-sanctuary": {
     "download_url": "https://mizoramtourism.com/post_images/62b95a4139538_Pualreng%20WL%20Sanctuary.jpg",
@@ -17866,6 +18136,16 @@
     "note": "Wikimedia Commons image File:Photograph of the Raj Mahal palace of Faridkot State.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Faridkot district government tourist-places page.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Photograph_of_the_Raj_Mahal_palace_of_Faridkot_State.jpg"
+  },
+  "raj-nivas-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/raj-nivas-pondicherry-tourism-header.jpg",
+    "file": "raj-nivas-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "d888426ce533e76008edeee004e26d1056d6d9e12e65518f6b4ed63f0102e0ba",
+    "sha256_local": "d8ad13aae7eac09ea8f48cdc4c647a5d04aa75cae34f46bfd22416db84420b06",
+    "source_page": "https://pondicherrytourism.co.in/raj-nivas-puducherry"
   },
   "raja-harsha-ka-tila": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/harsh_ka_tila_4.jpg",
@@ -18769,6 +19049,16 @@
     "file": "Cattle_grazing_outside_Rollapadu_wildlife_sanctuary,_Nandyal_District,_Andhra_Pradesh..jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ACattle_grazing_outside_Rollapadu_wildlife_sanctuary%2C_Nandyal_District%2C_Andhra_Pradesh..jpg"
   },
+  "romain-rolland-library-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/romain-rolland-library-pondicherry-tourism-header.jpg",
+    "file": "romain-rolland-library-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "a07abd80d7e2382b7444acdfb6565688eef2800a58a8ffab03ec268817fb9492",
+    "sha256_local": "8653f7c6058fcf93a5ee65cae60f2ffca8f402087010fa778ca4940dcb6abf0e",
+    "source_page": "https://pondicherrytourism.co.in/romain-rolland-library-puducherry"
+  },
   "rongbangdare-falls": {
     "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/rongbangdare.webp",
     "file": "rongbangdare.webp",
@@ -18986,9 +19276,14 @@
     "source_page": "https://www.gujarattourism.com/central-zone/ahmedabad/sabarmati-riverfront.html"
   },
   "sacred-heart-basilica-pondicherry": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_of_the_Sacred_Heart_of_Jesus%2C_Pondicherry%2C_1907_%282%29_%2823662517608%29.jpg",
-    "file": "Basilica_of_the_Sacred_Heart_of_Jesus,_Pondicherry,_1907_(2)_(23662517608).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Basilica_of_the_Sacred_Heart_of_Jesus,_Pondicherry,_1907_(2)_(23662517608).jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Sacred-Heart-of-Jesus.jpg",
+    "file": "sacred-heart-basilica-pondicherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "d17c32b89f07bb2d7e0e49006a862942cd8888df3578ee03c7d02896d624b67b",
+    "sha256_local": "096e9cd8a883b47935f535adf71173e37c6a62aa7de0a99148d0bd5f9d15cea2",
+    "source_page": "https://pdymun.in/important-places.php"
   },
   "saddle-peak-national-park": {
     "content_type": "image/png",
@@ -19004,6 +19299,16 @@
     "download_url": "https://odishatourism.gov.in/documents/d/guest/central-od-dokra-craft-village-card",
     "file": "central-od-dokra-craft-village-card",
     "source_page": "https://odishatourism.gov.in/en/w/sadeibarani-dhokra-handicraft-village"
+  },
+  "sadhana-forest-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sadhana-forest-pondicherry-tourism-header.jpg",
+    "file": "sadhana-forest-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "2c0093c2dcfe041deec63e492e396db1dd80d1050fd85a392a802aa35487f426",
+    "sha256_local": "d1caa43c3bf019ecb7730141d087250bedffd8bba4fef03d2ccd86ba41e64a47",
+    "source_page": "https://pondicherrytourism.co.in/sadhana-forest-puducherry"
   },
   "sadhankeri-park": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sadhankeri%20Park.jpg",
@@ -19763,6 +20068,16 @@
     "note": "Official West Bengal Tourism destination detail image for Serampore, embedded on the official page. Reuse terms should be verified before publication.",
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fc9408cec836803000e189"
+  },
+  "serenity-beach-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/serenity-beach-pondicherry-tourism-header.jpg",
+    "file": "serenity-beach-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "9e4f6e622d09b93e87b0b4b345d5d90c135f3a08975b9d2e266cc0bbe0befc19",
+    "sha256_local": "64e68295a611672b958ba2af635bc88febd5a4f54c63c00188fc250193524be7",
+    "source_page": "https://pondicherrytourism.co.in/serenity-beach-puducherry"
   },
   "serlui-b-lake": {
     "download_url": "https://mizoramtourism.com/post_images/626bc6afa662b_Serlui%20B%201.jpg",
@@ -20800,6 +21115,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Sisodia_Rani_Bagh,_Jaipur,_Rajasthan_(DSCN4756).jpg"
   },
+  "sita-cultural-centre-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sita-cultural-centre-pondicherry-tourism-header.jpg",
+    "file": "sita-cultural-centre-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "398bb05452b84afc0666a154835e84cb97d6b51ff77a34c2a9460d7c313c72cf",
+    "sha256_local": "da93b4bff2fec574056efc9c16e597e442b8492af325db9d635a7d6b942dc538",
+    "source_page": "https://pondicherrytourism.co.in/sita-cultural-centre-puducherry"
+  },
   "sita-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180813_164219.jpg",
     "file": "sita-falls.jpg",
@@ -21086,6 +21411,46 @@
     "file": "960px-Padmanabhaswamy-temple-2.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Padmanabhaswamy-temple-2.jpg"
   },
+  "sri-dharbaranyeswara-swamy-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sri-dharbaranyeswara-swamy-temple-pondicherry-tourism-header.jpg",
+    "file": "sri-dharbaranyeswara-swamy-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "e4dd4aa5152c301ad5dd510e843b74386d7c9929b7e141ec86f58858cfe19bec",
+    "sha256_local": "d5839770dce2ec032b3c05bb72fc360ffc7eba2ad6afddb1a0910a517604390e",
+    "source_page": "https://pondicherrytourism.co.in/sri-dharbaranyeswara-swamy-temple-puducherry"
+  },
+  "sri-gokilambal-thirukameshwara-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sri-gokilambal-thirukameshwara-temple-pondicherry-tourism-header.jpg",
+    "file": "sri-gokilambal-thirukameshwara-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "40693fda0dc72a0be496431af207666281cec2ff9f43e539f2143b1c86e20ac2",
+    "sha256_local": "9b59dc53daabd1ee10ed13b6151f9aee18722418aaf06b4c244ceab790d5bb25",
+    "source_page": "https://pondicherrytourism.co.in/sri-gokilambal-thirukameshwara-temple-puducherry"
+  },
+  "sri-kanniga-parameswari-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sri-kanniga-parameswari-temple-pondicherry-tourism-header.jpg",
+    "file": "sri-kanniga-parameswari-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "d3b3fb2f70dcd73a062f939ccdb4ab2e784f354c1fb32fac815d0194d310eccc",
+    "sha256_local": "e628a467b3958300e80c92e29c38c6f78a0fb5b84174d2a7d21e3bd31347dddd",
+    "source_page": "https://pondicherrytourism.co.in/sri-kanniga-parameswari-temple-puducherry"
+  },
+  "sri-karaneswar-nataraja-temple-pyramid-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sri-karaneswar-nataraja-temple-pyramid-temple-pondicherry-tourism-header.jpg",
+    "file": "sri-karaneswar-nataraja-temple-pyramid-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "2fe254064b098c48f70b82044fae872e388790c42a4958499e25d98466250cd7",
+    "sha256_local": "3a218be99cf11b617e109e4f07d2526607b2e00392efe800899c970910d45d4e",
+    "source_page": "https://pondicherrytourism.co.in/sri-karaneswar-nataraja-temple-pyramid-temple-puducherry"
+  },
   "sri-lakshmi-narasimha-swamy-temple": {
     "coordinate_note": "Wikipedia: Sri Lakshmi Narasimha Swamy Temple, Yadagirigutta, Telangana, India.",
     "creator": "Department of Tourism, Government of Telangana",
@@ -21281,6 +21646,16 @@
     "note": "Official Jharkhand Tourism banner image.",
     "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/123"
   },
+  "statue-of-dupleix-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/statue-of-dupleix-pondicherry-tourism-header.jpg",
+    "file": "statue-of-dupleix-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "6c77679a8a9bcd6024d258f0038c7f3c82bf1020d10abba7a24bb57cf3de02c7",
+    "sha256_local": "efc0b8c22193e033bfb6d5f0ba100865be14d055bcad7557fd8c5a5e78d45c3a",
+    "source_page": "https://pondicherrytourism.co.in/statue-of-dupleix-puducherry"
+  },
   "statue-of-equality": {
     "coordinate_note": "Wikipedia: Statue of Equality (Ramanuja), Telangana, India.",
     "creator": "Department of Tourism, Government of Telangana",
@@ -21449,6 +21824,16 @@
     "note": "Official West Bengal Tourism destination detail image for Sundarbans, embedded on the official page. Reuse terms should be verified before publication.",
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=638f90b09e20437bfb0ce140"
+  },
+  "sunday-market-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/sunday-market-pondicherry-tourism-header.jpg",
+    "file": "sunday-market-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "c7e222915d629758b74863767f23090bc2a84a0a748329583110f9ce5fb54fff",
+    "sha256_local": "4c0d16ece3adf96efde916266f291846a447e1ee0f31edc8c088d63a8820f2eb",
+    "source_page": "https://pondicherrytourism.co.in/sunday-market-puducherry"
   },
   "sunder-nursery-delhi": {
     "download_url": "https://delhitourism.gov.in/dt/images/sunder_nursery.jpg",
@@ -23637,6 +24022,16 @@
     "file": "626b8dff68d85_Vantawng-Falls.jpg",
     "source_page": "https://mizoramtourism.com/top-destination/23"
   },
+  "varadharaja-perumal-temple-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pdymun.in/images/important-places/Varadharaja-Perumal-Temple.jpg",
+    "file": "varadharaja-perumal-temple-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Municipality",
+    "sha256_download": "e8935bc7f7fd909c25562ec85181bbbc91fb2c5d4d98c41ef43f1478f2942300",
+    "sha256_local": "100cc341ca5e12aa16e8cfbb8a54597ba0c92e71598ee8555230beb32eb657b1",
+    "source_page": "https://pdymun.in/important-places.php"
+  },
   "varaha-statue-eran": {
     "coordinate_note": "Approximate coordinates for Eran archaeological site in Sagar district; verify on arrival.",
     "creator": "Ms Sarah Welch",
@@ -23706,6 +24101,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Veer_Kunwar_Singh_Memorial_and_statue_in_Deoghar_01.jpg/960px-Veer_Kunwar_Singh_Memorial_and_statue_in_Deoghar_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Veer_Kunwar_Singh_Memorial_and_statue_in_Deoghar_01.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Veer_Kunwar_Singh_Memorial_and_statue_in_Deoghar_01.jpg"
+  },
+  "veerampattinam-beach-puducherry": {
+    "content_type": "image/jpeg",
+    "download_url": "https://pondicherrytourism.co.in/images/v2/header-small/veerampattinam-beach-pondicherry-tourism-header.jpg",
+    "file": "veerampattinam-beach-puducherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Pondicherry Tourism",
+    "sha256_download": "cf6d11fddbfb564508a7cfa7a2036edb3889ed0310708f492e48b718cf08a350",
+    "sha256_local": "05617618aa3028f723678852f489031ed7d8cdee0a31b3fabe7f619c1c0a4873",
+    "source_page": "https://pondicherrytourism.co.in/veerampattinam-beach-puducherry"
   },
   "veeranam-lake": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/veeranam-lake-1656183940_665e4e77152dbd7b968a.webp",
@@ -24258,9 +24663,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=5"
   },
   "white-town-pondicherry": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/French_Quarter%2C_Pondicherry_%288%29_%2823662063428%29.jpg",
-    "file": "French_Quarter,_Pondicherry_(8)_(23662063428).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:French_Quarter,_Pondicherry_(8)_(23662063428).jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/the-french-quarter-puducherry-puducherry-1-attr-hero?qlt=82&ts=1726656252438",
+    "file": "white-town-pondicherry.jpg",
+    "note": "Official tourism destination record; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "16875e204a0851075a7817642220fb657fcdc40f1dea9c8c53f29f470f14a13c",
+    "sha256_local": "38ed26d5f8a3c7a5e3393dea336c93f96df020e72c8399fc4204756972383c18",
+    "source_page": "https://www.incredibleindia.gov.in/en/puducherry/puducherry/the-french-quarter"
   },
   "wild-ass-sanctuary-in-little-rann-of-kutch": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/june/Wild-Ass-Sanctuary-Glossy-Ibis.jpg",
