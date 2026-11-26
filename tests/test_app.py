@@ -55,7 +55,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3446
+    assert len(all_places) == 3487
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -317,8 +317,14 @@ def test_full_destination_journey(client):
     assert len(chandigarh['places']) == 23
     assert {p['slug'] for p in chandigarh['places']} >= {'rock-garden-chandigarh', 'sukhna-lake', 'rose-garden-chandigarh', 'capitol-complex-open-hand', 'leisure-valley-chandigarh', 'garden-of-fragrance', 'japanese-garden-chandigarh', 'sector-17-plaza'}
     dnh = client.get('/api/states/dadra-and-nagar-haveli-and-daman-and-diu').json()
-    assert len(dnh['places']) == 5
-    assert {p['slug'] for p in dnh['places']} >= {'diu-fort', 'moti-daman-fort', 'naida-caves-diu', 'nagoa-beach-diu', 'jampore-beach-daman'}
+    assert len(dnh['districts']) == 3
+    assert len(dnh['places']) == 46
+    dnh_slugs = {p['slug'] for p in dnh['places']}
+    assert {
+        'diu-fort', 'nagoa-beach', 'moti-daman-fort', 'jampore-beach',
+        'nakshatra-garden', 'om-temple', 'diu-museum',
+    }.issubset(dnh_slugs)
+    assert {'naida-caves-diu', 'nagoa-beach-diu', 'jampore-beach-daman'}.isdisjoint(dnh_slugs)
     lakshadweep = client.get('/api/states/lakshadweep').json()
     assert len(lakshadweep['places']) == 4
     assert {p['slug'] for p in lakshadweep['places']} >= {'bangaram-atoll', 'agatti-island-lagoon', 'kavaratti-island', 'kadmat-island-diving'}
@@ -394,7 +400,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3446
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3487
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -500,7 +506,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3446}
+    assert response.json() == {'status': 'ok', 'places': 3487}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -558,9 +564,15 @@ def test_canonical_data_and_seeded_catalogue_validate(tmp_path):
     errors, warnings = validate_all_state_data()
     assert errors == []
     # The Chutupalu valley and the Sheikh Bhikhari Shahadat Sthal occupy the same
-    # roadside site, and four Andro heritage sites share the mapped village reference
-    # point. Both shared coordinates are expected, documented duplicates.
+    # roadside site, four Andro heritage sites share the mapped village reference
+    # point, and DNHDD detail pages without landmark-level coordinates share the
+    # district reference point published in their official map embeds. All shared
+    # coordinates are expected, documented duplicates.
     assert warnings == [
+        'dadra-and-nagar-haveli-and-daman-and-diu: duplicated coordinates: 20.71111076484518, 70.97008546168944',
+        'dadra-and-nagar-haveli-and-daman-and-diu: duplicated coordinates: 20.391732349398236, 72.80489298207296',
+        'dadra-and-nagar-haveli-and-daman-and-diu: duplicated coordinates: 20.2753406, 73.0072986',
+        'dadra-and-nagar-haveli-and-daman-and-diu: duplicated coordinates: 20.188340361514445, 73.01439888581146',
         'jharkhand: duplicated coordinates: 23.5788, 85.5174',
         'manipur: duplicated coordinates: 24.7547931, 94.0467274',
     ]
@@ -611,7 +623,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3446}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3487}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -795,13 +807,23 @@ def test_nagaland_festival_calendar(client):
         if any(d['state_slug'] == 'nagaland' for d in f['districts'])
     ]
     assert len(nagaland_festivals) == 22
+    dnh_festivals = [
+        f['name'] for f in festivals.values()
+        if any(d['state_slug'] == 'dadra-and-nagar-haveli-and-daman-and-diu' for d in f['districts'])
+    ]
+    assert len(dnh_festivals) == 7
+    assert {
+        'Festa De Diu', 'Nariyal Poornima', 'Christmas in Daman',
+        'Makar Sankranti Kite Festival, Silvassa', 'Tarpa Dance Festival',
+        'DNH & DD Monsoon Festival', 'National Tribal Art & Food Festival',
+    }.issubset(dnh_festivals)
 
 
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3446,
+        'detailed_places': 3487,
         'reviewed_places': 0,
-        'unreviewed_places': 3446,
+        'unreviewed_places': 3487,
         'confirmed_festival_dates': 23,
     }
 
@@ -869,7 +891,7 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 282
+    assert len(all_festivals) == 288
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 
