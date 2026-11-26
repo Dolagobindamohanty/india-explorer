@@ -1,0 +1,7 @@
+{
+  "slug": "ladakh",
+  "name": "Ladakh",
+  "kind": "union territory",
+  "source_url": "https://tourism.ladakh.gov.in/",
+  "places_file": "../ladakh-places.json"
+}

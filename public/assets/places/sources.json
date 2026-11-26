@@ -484,6 +484,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Albert_Hall_(_Jaipur_).jpg"
   },
+  "alchi-monastery": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/alchi-monastery-1.jpg",
+    "file": "alchi-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "c6b684e1c7a0957aff63548aede0371478d49d35a5bc176686f3c5a79e1c891c",
+    "sha256_local": "3a554c57ec8e7f62de4aed66f2c3b37ad90404ebd41ccaa40671db012914a12c",
+    "source_page": "https://tourism.ladakh.gov.in/places/alchi-monastery"
+  },
   "alibaug": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Great_Knot_Calidris_tenuirostris_by_Raju_Kasambe_DSC_1109_01.jpg/960px-Great_Knot_Calidris_tenuirostris_by_Raju_Kasambe_DSC_1109_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Great_Knot_Calidris_tenuirostris_by_Raju_Kasambe_DSC_1109_01.jpg",
@@ -1016,6 +1026,16 @@
     "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/arwah-cave.webp",
     "file": "arwah-cave.webp",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/khasi-hills/arwah-cave/"
+  },
+  "aryan-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/aryan-valley-1.jpg",
+    "file": "aryan-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "665b2f2b86202531ba88c8c252ed59035c29493fcc2c05b6d5e93b0235433be8",
+    "sha256_local": "b6e9f322b63545c34dbb38a6be60756781429c51883d57f7ad8403e1c40e3c15",
+    "source_page": "https://tourism.ladakh.gov.in/places/aryan-valley"
   },
   "asafwala-war-memorial": {
     "coordinate_note": "OpenStreetMap (Photon): War Memorial, Gharumi, Fazilka district, Punjab, India.",
@@ -3389,6 +3409,16 @@
     "provider": "Tripura Tourism Development Corporation Limited (Government of Tripura)",
     "source_page": "https://tripuratourism.gov.in/tour/31?type=destinations"
   },
+  "chadar-trek": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/chadar-trek-1.jpg",
+    "file": "chadar-trek.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "fc2c90723575161b6af1bbcbffecec1c69dc0874feed48c27fb1ab200e61ed9c",
+    "sha256_local": "ddd1dc1aa94f3b97b0c52d96e323cf3594d6172964a740f301c327847aeabeba",
+    "source_page": "https://tourism.ladakh.gov.in/places/chadar-trek"
+  },
   "chaglagam": {
     "download_url": "https://cdn.s3waas.gov.in/s3076a0c97d09cf1a0ec3e19c7f2529f2b/uploads/2018/06/2018063017.jpg",
     "file": "chaglagam.jpg",
@@ -3656,6 +3686,26 @@
     "file": "960px-A_view_of_the_Chandubi_lake.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:A_view_of_the_Chandubi_lake.jpg"
   },
+  "chang-la": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/chang-la-1.jpg",
+    "file": "chang-la.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "13aaa88e81219922518c13f430bb0f455196240818e0ff511fbdeda0b3742f6b",
+    "sha256_local": "8f2101c3c4ad58bd238c19370d4271a114677c95d3b041fff2da81b3872b1adc",
+    "source_page": "https://tourism.ladakh.gov.in/places/chang-la"
+  },
+  "changthang-wildlife-sanctuary": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/changthang-wildlife-sanctuary-1.jpg",
+    "file": "changthang-wildlife-sanctuary.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "29c1b8f09965a56e0dafd4ef951e143aed4c0981ed9c36b183a482828939165b",
+    "sha256_local": "041e321f7a0f14e8e56f226c00a43c105cb9f13a96dab81b51d7840ba81230ee",
+    "source_page": "https://tourism.ladakh.gov.in/places/changthang-wildlife-sanctuary"
+  },
   "chaprala-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/View_of_Chaprala_Wildlife_Sanctuary.jpg/960px-View_of_Chaprala_Wildlife_Sanctuary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-View_of_Chaprala_Wildlife_Sanctuary.jpg",
@@ -3920,6 +3970,16 @@
     "note": "Wikimedia Commons image File:Balaji temple, chilkoor.jpg. Attribution checked via Commons metadata. The official Telangana Tourism district page for Hyderabad listed this attraction but provided no separate public image for it.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Balaji_temple,_chilkoor.jpg"
+  },
+  "chilling-rockart": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/chilling-rockart-1.jpg",
+    "file": "chilling-rockart.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "631e0ec415f6d12ea2bbcd2fbdb2fda8646ed9bb2458728ac96837b885d5cd9e",
+    "sha256_local": "1b9d887ec4db8c6589c91720c65a027fbefd5934f949ab3c6b97fc84eee2c69a",
+    "source_page": "https://tourism.ladakh.gov.in/places/chilling-rockart"
   },
   "chillipam-monastery": {
     "download_url": "https://arunachaltourism.com/wp-content/uploads/2021/07/CHILLIPAM-MONASTERY.jpg",
@@ -5083,6 +5143,16 @@
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page. Coordinates referenced via https://en.wikipedia.org/wiki/Dholavira.",
     "source_page": "https://www.gujarattourism.com/kutch-zone/kutch/dholavira.html"
   },
+  "dhomkhar-rockart": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/dhomkhar-rockart-1.jpg",
+    "file": "dhomkhar-rockart.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "339f859f93da3dafbbab435cd43a567b30c0408ff54ea6a4e7806ad91ac30f2f",
+    "sha256_local": "8d01f4483a09751a1afa9dfe7790a3a756142318596de3ee9878c3f59e417f04",
+    "source_page": "https://tourism.ladakh.gov.in/places/dhomkhar-rockart"
+  },
   "dhoni-waterfalls": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Athirappilly_water_falls%2C_Thrissur_kerala_.jpg/960px-Athirappilly_water_falls%2C_Thrissur_kerala_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Athirappilly_water_falls,_Thrissur_kerala_.jpg",
@@ -5219,9 +5289,14 @@
     "source_page": "https://arunachaltourism.com/dirang-view/"
   },
   "diskit-monastery": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diskit_Gompa_2.jpg",
-    "file": "Diskit_Gompa_2.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Diskit_Gompa_2.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/diskit-monastery-leh-ladakh-1-attr-nearby?qlt=82&ts=1742154994563&wid=1200",
+    "file": "diskit-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "28b50360fc014d1debc9ebe18cba9f44665c942f7802d991624faa4079f4871c",
+    "sha256_local": "4164edcd45c4439749aa7b1eab37891b960c5b22de565160ed000f88dc8d4eba",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/leh/diskit-monastery"
   },
   "diu-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diu%2CGujarat%2CIndia_%2837%29.jpg",
@@ -5404,6 +5479,16 @@
     "sha256_download": "ab5dd2d6f59b3955f8035d63e8f4cc3e7c8fadd2e4fa6d95654bc0bfaef8e706",
     "sha256_local": "d317f7ec6daa7be2b99e89812318365593532923e6b654b4843e61ad4d791b2c",
     "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
+  "drass-war-memorial": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/drass-compressed-1.jpg",
+    "file": "drass-war-memorial.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "28d2bf593d958add3a7606e92adae7708f5e1ca8cfb1d3bc27fdf12786cf2ff8",
+    "sha256_local": "c3091484633ca5271b52093b066f36eb59a631ba1aa8206ff3329c24f84bfd76",
+    "source_page": "https://tourism.ladakh.gov.in/"
   },
   "dron-sagar": {
     "coordinate_note": "Coordinate reference: Google Maps place Drona Sagar, Kashipur (https://www.google.com/maps/place/?q=place_id:ChIJC1vuVrJDCjkRgyvumFp7Xas).",
@@ -5969,6 +6054,16 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/fort_pic1-1.jpg",
     "file": "fort_pic1-1.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/forts-and-palaces-of-bhais/"
+  },
+  "fotu-la": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/fotu-la-1.jpg",
+    "file": "fotu-la.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "54275fd5a8b5581f5aec22950e3fba695548d26bda039c705a516211b0897062",
+    "sha256_local": "b72326340071b75bd5ffd2ee55bd27440c1654942afdd5fb4e0c39b5e7a1fd45",
+    "source_page": "https://tourism.ladakh.gov.in/places/fotu-la"
   },
   "frog-temple-oel": {
     "creator": "Mansigpt37",
@@ -6806,6 +6901,16 @@
     "provider": "Itanagar District Administration",
     "source_page": "https://itanagar.nic.in/tourist-place/gompa-temple/"
   },
+  "gonbo-rangjon": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/gonbo-compressed-2.jpg",
+    "file": "gonbo-rangjon.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "c2cdae35f866e8ddef628c0ba9f126826c66dd616b385ed0cf376c79134f1fe1",
+    "sha256_local": "5a1fe6b2d63a9fd181336a1d95381de325d595781b9dfb10b44a36b2a0f2e95f",
+    "source_page": "https://tourism.ladakh.gov.in/"
+  },
   "gondwana-marine-fossil-park": {
     "creator": "Wikimedia Commons contributor",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Rail_Bridge_over_Hasdeo_River%2C_from_Gondwana_Fossil_Park%2C_Nov_2021.jpg?width=900",
@@ -7142,6 +7247,16 @@
     "provider": "Himachal Pradesh Tourism",
     "source_page": "https://himachaltourism.gov.in/destination/"
   },
+  "gurudwara-pathar-sahib": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/gurudwara-pathar-sahib-leh-ladakh-1-attr-nearby?qlt=82&ts=1742155374123&wid=1200",
+    "file": "gurudwara-pathar-sahib.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "55625ac78df5a30a3dc8ae85339b3ba8593efc52a52d2d134a8f04781c428c06",
+    "sha256_local": "63eab75bebab870c20c5cf9302b7e959f37564dc0478fbb4edb53f8039ebcf89",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/leh/gurudwara-pathar-sahib"
+  },
   "gurudwara-teg-bahadur-dhubri": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Gurdwara_dhamtan_sahib1.jpg/960px-Gurdwara_dhamtan_sahib1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Gurdwara_dhamtan_sahib1.jpg",
@@ -7246,6 +7361,16 @@
     "download_url": "https://mizoramtourism.com/post_images/626a57bf10038_Hangi%20Lunglen%20Tlang.jpg",
     "file": "626a57bf10038_Hangi Lunglen Tlang.jpg",
     "source_page": "https://mizoramtourism.com/top-destination/6"
+  },
+  "hanle-village": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/hanle-compressed-1.jpg",
+    "file": "hanle-village.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "a536890706924b58e92426929faa3670cf956048c3cf73f9733d1891c6061c6a",
+    "sha256_local": "bbf5a691017b9e6d0b00c26e4a224e65ed683caddfb483bc1f1133558eea383a",
+    "source_page": "https://tourism.ladakh.gov.in/"
   },
   "hansdehar": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/HANSEDAR_PIC-1.jpeg",
@@ -7602,9 +7727,24 @@
     "source_page": "https://anjaw.nic.in/tourist-place/helmet-top/"
   },
   "hemis-monastery": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemis_Monastery%2C_Ladakh.jpg",
-    "file": "Hemis_Monastery,_Ladakh.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Hemis_Monastery,_Ladakh.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/hemis-monastery-1.jpg",
+    "file": "hemis-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "ed23759b180a3c93fd97ae9f09a563ba1f78de4fe100f7e9a3370baa883dc4c5",
+    "sha256_local": "fba6b186f7376ba8d7b245761384ec2b37a91a62567cee79102b0189b9fc7260",
+    "source_page": "https://tourism.ladakh.gov.in/places/hemis-monastery"
+  },
+  "hemis-national-park": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/hemis-national-park-1.jpg",
+    "file": "hemis-national-park.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "d62f826f6a328b1d1204a10f60314574b75610ebc8253bc7c1d1de7ab8b8318b",
+    "sha256_local": "a3d7f52925d9ffe5af204778d736c66dae178d4082b1aea23d44eb5624e091ff",
+    "source_page": "https://tourism.ladakh.gov.in/places/hemis-national-park"
   },
   "hemkund-sahib": {
     "coordinate_note": "Coordinate from the official Uttarakhand Tourism destination page https://www.google.com/maps/place/?q=place_id:ChIJTXMBpAyRpzkR_dmJmlpphY4.",
@@ -7802,6 +7942,26 @@
     "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
     "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
+  "hunder-sand-dunes": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/sanddunes-compressed-1.jpg",
+    "file": "hunder-sand-dunes.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "5a8bfa4283e63de6b905df761527278ff96c42219af5aec7f386931aecda9ddc",
+    "sha256_local": "1beb08c6769b829c0040388fb908f118e83d8181c437a34927f68131d0627501",
+    "source_page": "https://tourism.ladakh.gov.in/"
+  },
+  "hunderman-village": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/hunderman-compressed-1.jpg",
+    "file": "hunderman-village.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "c4c18e2f62898f0b05aac955d72db7816edce61835ff3f32d219370f191b1eea",
+    "sha256_local": "229e6057c51ba216f3f09f09d958094032515dd77ad9be833035a7530387f74f",
+    "source_page": "https://tourism.ladakh.gov.in/"
+  },
   "hundru-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_120617.jpg",
     "file": "hundru-falls.jpg",
@@ -7985,6 +8145,16 @@
     "file": "indu-ayurveda-hospital.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/central-zone/vadodara/indu-ayurveda-hospital.html"
+  },
+  "indus-valley-rockart": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/indus-valley-rockart-1.jpg",
+    "file": "indus-valley-rockart.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "f7fcb9a628ef504d2acc4a6ff7780c7c6c98ed0769418a6fd5136418b6518f2f",
+    "sha256_local": "186d9e050d3e5c38c3ef1b5acec948f271adf22f04726123b00c0bebfe093e1e",
+    "source_page": "https://tourism.ladakh.gov.in/places/indus-valley-rockart"
   },
   "ins-kursura-submarine-museum": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/INS_KURSURA_1204.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -8416,6 +8586,16 @@
     "note": "Restored during UP restoration QA with official image labelled 'Jama Masjid'.",
     "provider": "Official district website",
     "source_page": "https://jaunpur.nic.in/tourist-place/"
+  },
+  "jama-masjid-leh": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/jama-masjid-1-attr-nearby?qlt=82&ts=1742158963709&wid=1200",
+    "file": "jama-masjid-leh.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "2c19264eb6dac79d5fc12a0e764ed8424336f29e46c32320e3c62492088eb357",
+    "sha256_local": "b08573c156df6d3d4a134f8ee27345fd1e8b42f3ea56641e6cad026a759cc55d",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/leh/jama-masjid"
   },
   "jama-masjid-moradabad": {
     "creator": "Ashishb04",
@@ -9634,6 +9814,16 @@
     "provider": "Incredible India (Ministry of Tourism, Government of India)",
     "source_page": "https://www.incredibleindia.gov.in/en/himachal-pradesh/dharamshala"
   },
+  "kargil-war-memorial": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/kargil-war-memorial-kargil-ladakh-1-attr-nearby?qlt=82&ts=1742156738580&wid=1200",
+    "file": "kargil-war-memorial.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "a530adddffd41449ff8f3ec6dc00e69dd925d60b8cbb7f0f69fb5adf60f920e9",
+    "sha256_local": "8d55cb507625f4d4652461ef6ee0f5885208f4db2a20b44374a2868b8ca4694a",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/kargil/kargil-war-memorial"
+  },
   "karimnagar": {
     "coordinate_note": "Wikipedia: Karimnagar, Telangana, India.",
     "creator": "Department of Tourism, Government of Telangana",
@@ -10187,9 +10377,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Kharbuza_Mahal,_Dhar,_Madhya_Pradesh_4.jpg"
   },
   "khardung-la-pass": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khardung_La_%28mountain_pass%29%2C_Ladakh%2C_North_India.jpg",
-    "file": "Khardung_La_(mountain_pass),_Ladakh,_North_India.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Khardung_La_(mountain_pass),_Ladakh,_North_India.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/khardung-la-1.jpg",
+    "file": "khardung-la-pass.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "9026157a6064651f72fdebc2d4d5f6fd349c827f2f90aaaf31096e842baa7819",
+    "sha256_local": "6096b2e03ba1eb7957d13bdcc5022f2e3b810f1d46b1ac375b7cf2037a9938dc",
+    "source_page": "https://tourism.ladakh.gov.in/places/khardung-la"
   },
   "kharkutta": {
     "download_url": "",
@@ -11565,6 +11760,16 @@
     "file": "east-od-lalitgiri-buddhist-complex-card",
     "source_page": "https://odishatourism.gov.in/en/w/lalitagiri-buddhist-complex"
   },
+  "lamayuru-monastery": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/lamayuru-monastery-leh-ladakh-1-attr-nearby?qlt=82&ts=1742163289988&wid=1200",
+    "file": "lamayuru-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "f1992acc35bff00f85daa280c08174bab8c0050c639b6c2db63841b2b7d76dfb",
+    "sha256_local": "1f18c7327b08e27e4dda4e9358555a7a2aa88fc1fa3340efb5666b5e38c62423",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/leh/lamayuru-monastery"
+  },
   "lambasingi-hill-station": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Bus_Enroute_to_lambasinghi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "Bus_Enroute_to_lambasinghi.jpg",
@@ -11709,10 +11914,15 @@
     "file": "west-od-huma-temple-card-2",
     "source_page": "https://odishatourism.gov.in/en/w/leaning-temple-of-huma"
   },
-  "leh-palace-shanti-stupa": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/India_-_Ladakh_-_Leh_-_032_-_Old_Town_from_the_Palace_%283842494471%29.jpg",
-    "file": "India_-_Ladakh_-_Leh_-_032_-_Old_Town_from_the_Palace_(3842494471).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:India_-_Ladakh_-_Leh_-_032_-_Old_Town_from_the_Palace_(3842494471).jpg"
+  "leh-palace": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/leh-palace-leh-ladakh-1-attr-nearby?qlt=82&ts=1742156572461&wid=1200",
+    "file": "leh-palace.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "3e8519ee444968a2cb00ed4986f9e63cd3e7438ed302db4fc15dfa01f6f5cdf0",
+    "sha256_local": "7fea68aec191f4cc0880eb40ae71678361fa67c8623ba362d4e144a3e702ebd2",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/leh/leh-palace"
   },
   "leisang-kurung-ailawng": {
     "download_url": "https://mizoramtourism.com/post_images/62b861b68ef91_Leisang%20Kurung.jpg",
@@ -13117,6 +13327,16 @@
     "file": "960px-0011823_Markandeshvara_Markanda_Rishi_temple,_Maharashtra_099.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:0011823_Markandeshvara_Markanda_Rishi_temple,_Maharashtra_099.jpg"
   },
+  "markha-valley-trek": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/markha-valley-trek-1.jpg",
+    "file": "markha-valley-trek.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "2b0da9b7aecb65c833fa10f0f6e0f65ca3b2a05b90c91043db7169a6ba0b5287",
+    "sha256_local": "5ba48f0d1bfb9d2b234736eb5cb792f27cbf6ed377e42d00a142a927b968f19f",
+    "source_page": "https://tourism.ladakh.gov.in/places/markha-valley-trek"
+  },
   "markham-valley": {
     "download_url": "",
     "file": "Official Meghalaya Tourism regional image reused for Markham Valley",
@@ -13904,6 +14124,16 @@
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=64118bf6a7dc4d45a8004770"
   },
+  "mulbekh-monastery": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/mulbekh-monastery-&-maitreya-buddha-kargil-ladakh-1-attr-nearby?qlt=82&ts=1742157849078&wid=1200",
+    "file": "mulbekh-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "101edf0be5b1882f8aa2415ece260014eccca1bd7c141bf894b97f8aa6903959",
+    "sha256_local": "c06080b157c1cba94413c46cbf64917efeadea98de2a4d67234a28c72e229865",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/kargil/mulbekh-monastery-maitreya-buddha"
+  },
   "mullayanagiri-peak": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mullayanagiri%20Peak.jpg",
     "file": "Mullayanagiri Peak.jpg",
@@ -14034,6 +14264,16 @@
     "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-tribal-museum-card-2",
     "file": "east-od-tribal-museum-card-2",
     "source_page": "https://odishatourism.gov.in/en/w/museum-of-tribal-arts-artifacts"
+  },
+  "mushkoh-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/mushkoh-valley-1.jpg",
+    "file": "mushkoh-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "3031ecfccde3a991a64d2a2dd16476f8d4d46f71d268782907c969be35b84ae2",
+    "sha256_local": "2f6b1a6a50b50c2268cdafc729a75d8f7d31476616da7ea92538058e2214352e",
+    "source_page": "https://tourism.ladakh.gov.in/places/mushkoh-valley"
   },
   "muslim-shrines-of-lakhi-shah-and-taqwal-shah": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/Ambala_photo2.jpg",
@@ -15160,6 +15400,26 @@
     "file": "west-od-reg-plc-nrusinghanath-temple-card-1-",
     "source_page": "https://odishatourism.gov.in/en/w/nrusinghanath-temple"
   },
+  "nubra-rockart": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/nubra-rockart-1.jpg",
+    "file": "nubra-rockart.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "f7fcb9a628ef504d2acc4a6ff7780c7c6c98ed0769418a6fd5136418b6518f2f",
+    "sha256_local": "186d9e050d3e5c38c3ef1b5acec948f271adf22f04726123b00c0bebfe093e1e",
+    "source_page": "https://tourism.ladakh.gov.in/places/nubra-rockart"
+  },
+  "nubra-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/nubra-valley-1.jpg",
+    "file": "nubra-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "ccd624c3fc6a121086a6a739a4fb43d6c1974dc4681be738a8634e4fa94e3f64",
+    "sha256_local": "ba7090f1deed1ea22e8be0c949a69d7dfe839054232ead9589c11e2f04e91faa",
+    "source_page": "https://tourism.ladakh.gov.in/places/nubra-valley"
+  },
   "nuggikeri-hanuman-temple": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nuggikeri%20Shree%20Hanuman%20temple%2C%20Dharwad.jpg",
     "file": "Nuggikeri Shree Hanuman temple, Dharwad.jpg",
@@ -15670,9 +15930,14 @@
     "source_page": "https://siang.nic.in/tourist-place/pangin/"
   },
   "pangong-tso": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS054-E-7809_-_View_of_Earth_%28cropped%29.jpg",
-    "file": "ISS054-E-7809_-_View_of_Earth_(cropped).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:ISS054-E-7809_-_View_of_Earth_(cropped).jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/pangong-tso-1.jpg",
+    "file": "pangong-tso.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "3b409b7daed7720cc6217353935b542eb710956506e7791af8b01fcc241d1d6a",
+    "sha256_local": "e40208c36679122a5fd9ae39ca1ba648eb1c27fc68dbfd4ecd3a189f7b31325c",
+    "source_page": "https://tourism.ladakh.gov.in/places/pangong-tso"
   },
   "pangot": {
     "coordinate_note": "Coordinate reference: Google Maps place Pangoot, Uttarakhand (https://www.google.com/maps/place/?q=place_id:ChIJmQYc9wKhoDkRXp1nRdzK9TM).",
@@ -17927,6 +18192,16 @@
     "file": "Rumtek Monastery alias Dharma Chakra Centre near Gangtok, East Sikkim 09.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Rumtek_Monastery_alias_Dharma_Chakra_Centre_near_Gangtok,_East_Sikkim_09.jpg"
   },
+  "rumtse-to-tso-moriri-trek": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/rumtse-to-tso-moriri-trek-1.jpg",
+    "file": "rumtse-to-tso-moriri-trek.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "f734632b1dc24b04de0a354388f75042bae9e4b0ddd055fd6cc078c54deb6093",
+    "sha256_local": "664dc7d4f694a5109b199792ff0135253a71b292fe7d7104ee2fa55a6499fa12",
+    "source_page": "https://tourism.ladakh.gov.in/places/rumtse-to-tso-moriri-trek"
+  },
   "rung-dil": {
     "download_url": "https://mizoramtourism.com/post_images/62b8636c93e8d_Rungdil.jpg",
     "file": "62b8636c93e8d_Rungdil.jpg",
@@ -18267,11 +18542,6 @@
     "note": "Wikimedia Commons image: Full view of Sanga-Choeling Monastery.jpg.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Full_view_of_Sanga-Choeling_Monastery.jpg"
-  },
-  "sangam-indus-zanskar": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/13-10-08_217_CONFLUENCE_OF_INDUS_RIVER_N.jpg",
-    "file": "13-10-08_217_CONFLUENCE_OF_INDUS_RIVER_N.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:13-10-08_217_CONFLUENCE_OF_INDUS_RIVER_N.jpg"
   },
   "sangareddy": {
     "coordinate_note": "Wikipedia: Sangareddy, Telangana, India.",
@@ -18878,6 +19148,26 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Shalimar_Gardens_Kapurthala_1.jpg"
   },
+  "sham-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/sham-valley-1.jpg",
+    "file": "sham-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "f96bbe39412f9e91f270d13c1d0cc8330ef082dc268eb199164cf4f93f449286",
+    "sha256_local": "70f31b7b60cb956beb70940fa05f95244574418825cd0bd3e21a212c8e1065a8",
+    "source_page": "https://tourism.ladakh.gov.in/places/sham-valley"
+  },
+  "sham-valley-trek": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/sham-valley-trek-1.jpg",
+    "file": "sham-valley-trek.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "8160c0f4a70029457e825d9fa695f7a77623d89febf6205bb64eecb080c4529f",
+    "sha256_local": "6111db7458d9a5805d15e392e4729530a12577401f8874c34b3d93d9349ffdf0",
+    "source_page": "https://tourism.ladakh.gov.in/places/sham-valley-trek"
+  },
   "shamirpet-lake": {
     "coordinate_note": "Wikipedia: Shamirpet Lake, Telangana, India.",
     "creator": "J.M.Garg",
@@ -18950,6 +19240,16 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanti_Kunj_garden_during_spring_2017%2C_Chandigarh_01.jpg",
     "file": "Shanti_Kunj_garden_during_spring_2017,_Chandigarh_01.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Shanti_Kunj_garden_during_spring_2017,_Chandigarh_01.jpg"
+  },
+  "shanti-stupa": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/shanti-stupa-leh-ladakh-1-attr-nearby?qlt=82&ts=1742162446420&wid=1200",
+    "file": "shanti-stupa.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "8f87e24565814974cdfb4167a8527f86f0b0d011904d3b8b9e59060c90bbb367",
+    "sha256_local": "86d12fd5cd4a0dbc509fde9975701fb1e1899f4a2144422814257fe267470523",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/leh/shanti-stupa"
   },
   "shantikunj": {
     "coordinate_note": "Coordinate reference: Google Maps result for Shantikunj, Haridwar (https://www.google.com/maps/search/?api=1&query=Shantikunj%2C+Haridwar%2C+Uttarakhand).",
@@ -20144,6 +20444,16 @@
     "provider": "Arunachal Pradesh Tourism",
     "source_page": "https://arunachaltourism.com/sitwell-road/"
   },
+  "stongdey-monastery": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/stongdey-monastery-1-attr-nearby?qlt=82&ts=1742156265790&wid=1200",
+    "file": "stongdey-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "d5c1d1abaeffcc90dd6fe2296f38fe52884019d30150ff74a53139b939b1df8c",
+    "sha256_local": "dbf806f4638f6ae06a82e39f49675a4499f4086c2fe7ea2802b01a7e25bc7968",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/kargil/stongdey-monastery"
+  },
   "sualkuchi": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Manchester_of_Assam-_Sualkuchi.jpg/960px-Manchester_of_Assam-_Sualkuchi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Manchester_of_Assam-_Sualkuchi.jpg",
@@ -20379,6 +20689,16 @@
     "file": "sursagar-lake.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/central-zone/vadodara/sursagar-lake.html"
+  },
+  "suru-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/suru-valley-1.jpg",
+    "file": "suru-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "898bb74972ff6b318e4a86257c6d1a673a11f1f03b47671706faab236e2ddb28",
+    "sha256_local": "3fcb46007b0abc418ee2e7a3465e5fc884676f649c17d1eaa06b0d5bc5add1eb",
+    "source_page": "https://tourism.ladakh.gov.in/places/suru-valley"
   },
   "suruhoto-range": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Canarium_resiniferum_IMG_8161.jpg/960px-Canarium_resiniferum_IMG_8161.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -21213,9 +21533,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Thiba_Palace.jpg"
   },
   "thiksey-monastery": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thikse_Monastery_.jpg",
-    "file": "Thikse_Monastery_.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Thikse_Monastery_.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/thiksey-monastery-1.jpg",
+    "file": "thiksey-monastery.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "7450eac8731db111195e3cd94d9a5dea18d8f0d71308d46437b35e4730e40393",
+    "sha256_local": "d68ef17011c3484922fc547d7db9dd673a808d8072bc0ab17f8936976e8365be",
+    "source_page": "https://tourism.ladakh.gov.in/places/thiksey-monastery"
   },
   "thirakheli-waterfall": {
     "creator": "Ms Sarah Welch",
@@ -21369,6 +21694,16 @@
     "note": "Official Tamil Nadu Tourism destination image; verified exact.",
     "provider": "Tamil Nadu Tourism",
     "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tiger-hill"
+  },
+  "tiger-hill-kargil": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/tiger-hill-kargil-ladakh-1-attr-nearby?qlt=82&ts=1742163931420&wid=1200",
+    "file": "tiger-hill-kargil.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "817b84f1cc8a9a0c9213f325e6761288743ac66d62c9f7522dfa5a4af56420f1",
+    "sha256_local": "fe00c8978ed830175664c3f2748d0c499aab56ea936464757c1166c22924fca9",
+    "source_page": "https://www.incredibleindia.gov.in/en/ladakh/kargil/tiger-hill"
   },
   "tiger-point-waterfall": {
     "creator": "Wikimedia Commons contributor",
@@ -21761,6 +22096,36 @@
     "note": "Nagaland image selected by district/theme; place-specific photo unavailable.",
     "source_page": "https://commons.wikimedia.org/wiki/File:Early_Dawn_of_Kohima_Town.JPG"
   },
+  "tso-kar": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/tso-kar-1.jpg",
+    "file": "tso-kar.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "719c4d1e3005229298df3cf7db768915af9bffe67a658e15068f2235e46feb45",
+    "sha256_local": "36adfc1c532fed2adf8d303610a1be78efc26a7cb10b37f8d8f480f9723526b2",
+    "source_page": "https://tourism.ladakh.gov.in/places/tso-kar"
+  },
+  "tso-kar-basin": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/tso-kar-basin-1.jpg",
+    "file": "tso-kar-basin.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "9cb34310a35580067bdc5a6d93d67f02d340fe28dc5926cbeeb49916a2291285",
+    "sha256_local": "0e51c9cf10c34d530cdaaef1b556a072b6b2596e72149b62326ae4c75e6a7883",
+    "source_page": "https://tourism.ladakh.gov.in/places/tso-kar-basin"
+  },
+  "tso-moriri": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/tso-moriri-1.jpg",
+    "file": "tso-moriri.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "16d8b1e405c31092c08d82db05e414d15698a1270ce99927ac352fb86020c171",
+    "sha256_local": "e60f2bc21acfdd91cafce78169ea0244aef7862e0992db872450dea3ee5fd4c3",
+    "source_page": "https://tourism.ladakh.gov.in/places/tso-moriri"
+  },
   "tsomgo-lake": {
     "coordinate_note": "Coordinate reference: Wikipedia point for Lake Tsomgo; the official nature page gives distance and setting but no map coordinate.",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsongmo%20Lake%20or%20Changu%20Lake%20-%20East%20Sikkim.jpg",
@@ -21873,6 +22238,16 @@
     "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/overview/tura-peak.webp",
     "file": "tura-peak.webp",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/by-region/garo-hills/tura-peak/"
+  },
+  "turtuk-village": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/turtuk-compressed-1.jpg",
+    "file": "turtuk-village.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "a8335f35c65c26440715e9572f47983a2d54c163afc0266d72d4058f86f80e8f",
+    "sha256_local": "2fac00dfc5069457eadaee7cd19d75e2a045d276323d91dedb685397438570ff",
+    "source_page": "https://tourism.ladakh.gov.in/"
   },
   "turturiya": {
     "creator": "Work97111",
@@ -22042,6 +22417,16 @@
     "download_url": "",
     "file": "Official Meghalaya Tourism regional image reused for Umlawan Cave",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/"
+  },
+  "umling-la": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/destinations/signature/umlingla-compressed-1.jpg",
+    "file": "umling-la.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "e3bbf066fb7d54995d8a6ebc57e94024f6d97701eca57946903741ce38ddb39b",
+    "sha256_local": "fcb5652076f20a2776974839eccc365a2a56d0d34e31a06859b1968e41212ad0",
+    "source_page": "https://tourism.ladakh.gov.in/"
   },
   "umrangso": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/A_view_from_Umrangso.jpg/960px-A_view_from_Umrangso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -23091,6 +23476,26 @@
     "file": "960px-Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_(edit).jpg",
     "note": "Nagaland image selected by district/theme; place-specific photo unavailable.",
     "source_page": "https://commons.wikimedia.org/wiki/File:Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_(edit).jpg"
+  },
+  "zanskar-rockart": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/zanskar-rockart-1.jpg",
+    "file": "zanskar-rockart.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "c4fac3fbcb1ca70fc72e755825c3b795e4592fadaa81e9a84f0814252f3435dd",
+    "sha256_local": "a04dcd62684d9b8d7dbe75aea4692f8a06f4e00cfb9520ea43ae3fbe5c3598c2",
+    "source_page": "https://tourism.ladakh.gov.in/places/zanskar-rockart"
+  },
+  "zanskar-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://tourism.ladakh.gov.in/uploads/places/heroes/zanskar-valley-1.jpg",
+    "file": "zanskar-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Department of Tourism, Union Territory of Ladakh",
+    "sha256_download": "2c52303f3eefbbd37af98df20100aeb473fd1601dfb95105234346d0109ea5a4",
+    "sha256_local": "a02eecfe38dedb20cdd245036d4e3450c7146ebc5b42980bd4a26ccd34728c6e",
+    "source_page": "https://tourism.ladakh.gov.in/places/zanskar-valley"
   },
   "zarwani-waterfall": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/zarwani-waterfall/Zarwani-Thumbnail.jpg",
