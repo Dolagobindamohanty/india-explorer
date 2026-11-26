@@ -62,6 +62,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Forests_below_Chaiturgarh_Fort_Chhattisgarh_012.jpg"
   },
+  "achabal-gardens": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Achabal.png",
+    "file": "achabal-gardens.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "3d7e26d89b0b941b8c66154380c11fc8a6377a3a3b02bcba323ce0325afbcd8c",
+    "sha256_local": "914284c85b195f52e27f4bab9e89e7d8963b8621480360d3ac7db5a6786aed81",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "achanakmar-tiger-reserve": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/ACHANAKMAR%20TIGER%20RESERVE%2C%20CHHATISGARH%20%28INDIA%29.jpg?width=800",
     "file": "ACHANAKMAR TIGER RESERVE, CHHATISGARH (INDIA).jpg",
@@ -230,6 +240,16 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical%20rainforest%20Agumbe.jpg",
     "file": "Tropical rainforest Agumbe.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ATropical_rainforest_Agumbe.jpg"
+  },
+  "aharbal-waterfall": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Aharbal.png",
+    "file": "aharbal-waterfall.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "318520f438547139fb78471adc3602df35b79de87214e65cce775b2c45bce6ff",
+    "sha256_local": "32646b9938e94258d67640ced48e6dd65ed06705fe6d68773ea38fb13e1083a9",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "ahichchhatra": {
     "creator": "Pratyk321",
@@ -1409,6 +1429,16 @@
     "file": "Official Meghalaya Tourism regional image reused for Baghmara",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/"
   },
+  "baglihar-dam": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Baglihar.png",
+    "file": "baglihar-dam.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "0f313f722067cc26a5fbcb87d8752b9db576d9ddfc817e95114e7c9088332b25",
+    "sha256_local": "c134d634db2e4b2652558c8040bd131baa52844226c4611133a5b834d8543040",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "bagnath-temple": {
     "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim result for Bagnath Temple, Bageshwar (https://www.openstreetmap.org/way/484324514).",
     "creator": "Uttarakhand Tourism Development Board",
@@ -1443,6 +1473,16 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahmani%20Tombs%2C%20Ashtur%2C%20Bidar%2C%20Karnataka%2C%20India%20%282018%29.jpg",
     "file": "Bahmani Tombs, Ashtur, Bidar, Karnataka, India (2018).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ABahmani_Tombs%2C_Ashtur%2C_Bidar%2C_Karnataka%2C_India_%282018%29.jpg"
+  },
+  "bahu-fort": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/bahu-fort-jammu-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "bahu-fort.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "822fd59c6b8825d576338a18e7da9e53fac74d6bb81952c2ee710596cbdd4c6f",
+    "sha256_local": "92f6a0d308bec78dd9e167102666240c2690ebf9ce97db68c1fd4226a56a4b86",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/bahu-fort"
   },
   "bahuchar-mata-temple-becharaji": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/religious-sites/bahuchar-mata-temple-becharaji/Bahuchar-Mata-Thumbnail.jpg",
@@ -1702,6 +1742,26 @@
     "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
     "source_page": "https://delhitourism.gov.in/"
   },
+  "bangus-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/BangusValley.png",
+    "file": "bangus-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "97bf5910642ac4e452326a4e25084af6bf407ace5b511e890d68f24cd63cb55e",
+    "sha256_local": "966d081e2d871a126c190af1e344ece9676dd40b2b41a203086ef2b4a8a4f5c3",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
+  "bani-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Bani.png",
+    "file": "bani-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "88d374505768ca46741bc40be6c5af44001a2de6d767912d53098f2ce05740fc",
+    "sha256_local": "5c640d73d4dea64cd00e389af870def8b3c6d2ba1f5c45cc2c1112c122bcf849",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "banjhakri-falls": {
     "coordinate_note": "Coordinate reference: Wikipedia point for Banjhakri Falls and Energy Park; the official district page gives access details but no map coordinate.",
     "creator": "Indrajit Das",
@@ -1811,6 +1871,16 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/suraj7_2017-Copy.jpg",
     "file": "suraj7_2017-Copy.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/baradari/"
+  },
+  "baradari-chenab": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Baradari.png",
+    "file": "baradari-chenab.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "70af59245e92a6a79c8e29ef5cc96f9b3c1264afaa4a38056369501a20731c50",
+    "sha256_local": "8733250857f80aedaa0b6272a523c42b621874b208933b557434cbf1419d28f4",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "barak-river": {
     "coordinate_note": "Coordinate reference: point from the official Pherzawl Barak River direction link near the district's Barak river landscape; a river has no single fixed point.",
@@ -1950,6 +2020,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Basistha_Temple%2C_also_known_as_Basistha_Ashram%2C_a_significant_pilgrimage_center_located_in_Guwahati%2C_Assam.jpg/960px-Basistha_Temple%2C_also_known_as_Basistha_Ashram%2C_a_significant_pilgrimage_center_located_in_Guwahati%2C_Assam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Basistha_Temple,_also_known_as_Basistha_Ashram,_a_significant_pilgrimage_center_located_in_Guwahati,_Assam.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Basistha_Temple,_also_known_as_Basistha_Ashram,_a_significant_pilgrimage_center_located_in_Guwahati,_Assam.jpg"
+  },
+  "basohli": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Basholi.png",
+    "file": "basohli.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "5bc61aa25ab5538a3179e3523321f00bfde9360c8afb544d5cf535853f387775",
+    "sha256_local": "598cd67ba03442e4ee1321c34a4d6a4bc82f0d945569c86e9fe228d783126be3",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "bastar-palace": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pankaj%20Oudhia%20on%20Bastar%20%289%29.jpg?width=800",
@@ -2165,6 +2245,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Beypore_Beach%2C_Kozhikode%2C_Kerala.jpg/960px-Beypore_Beach%2C_Kozhikode%2C_Kerala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Beypore_Beach,_Kozhikode,_Kerala.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Beypore_Beach,_Kozhikode,_Kerala.jpg"
+  },
+  "bhaderwah-padri": {
+    "content_type": "image/jpeg",
+    "download_url": "https://jandktourism.jk.gov.in/gallery/PadriBahderwah.jpg",
+    "file": "bhaderwah-padri.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "2e4b615e3b58fc207a2f89fb5da1df1a9354e3c14561e5a898e1e60f7997e6f3",
+    "sha256_local": "fce32fb093413cc31ef4f99b6921c9b5cd5f84d992a415a8af203e035f3129de",
+    "source_page": "https://jandktourism.jk.gov.in/Gallery.Html"
   },
   "bhadra-fort": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/bhadra-fort/Bhadra-Fort-Thumbnail.jpg",
@@ -3123,6 +3213,16 @@
     "file": "chaneti_stupa_4.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/buddhist-stupa-chaneti/"
   },
+  "budhal-valley": {
+    "content_type": "image/jpeg",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Budhal.jpg",
+    "file": "budhal-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "556716dd5a9459b2ed054d0aa36bf8ab87c7e791e10b3a7aea552a3e6d513a53",
+    "sha256_local": "0600a10bea47a65574bee61c180f5f48bce261bd614c50e092d30921b908dd59",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "budhanath-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/2025-12-45sdvgfff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "2025-12-45sdvgfff.jpg",
@@ -3152,6 +3252,16 @@
     "file": "burudih-lake.jpg",
     "note": "Official Jharkhand Tourism banner image.",
     "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/77"
+  },
+  "burzahama": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Burzahama.png",
+    "file": "burzahama.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "f4572efe15983818c74b863394f34fb78ab518096405e31095388f8f7c99e3b9",
+    "sha256_local": "0d973c93c8e0224bb9efe78fb7523cf05152c928b34946f9d4422953531c7c2b",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "butterfly-garden": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/butterfly-garden/Butterfly-Garden-Banner.jpg",
@@ -4323,9 +4433,14 @@
     "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63d8d36b6327ed072c056a26"
   },
   "dal-lake": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dal_Lake_Hazratbal_Srinagar.jpg",
-    "file": "Dal_Lake_Hazratbal_Srinagar.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Dal_Lake_Hazratbal_Srinagar.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/srinagar/attraction/dal-lake-srinagar-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "dal-lake.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "686234660661a886611180679394bb9989515996a56aee1e9e9c638af3d2e2fd",
+    "sha256_local": "88843a4ecf8aa399d112d2992dede39fa80ce8fdb334104da232822a1614fa62",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/srinagar/dal-lake"
   },
   "dal-lake-dharamshala": {
     "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/dal-lake-dharamsala-himachal-pradesh-city-body?qlt=82&ts=1742165032806",
@@ -4492,6 +4607,16 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/dargah_pic1-1.jpg",
     "file": "dargah_pic1-1.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/dargah-nuri/"
+  },
+  "darhal-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Darhal.png",
+    "file": "darhal-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "07a0fd66feb8ce6d63080bd267f45495139d901aa086166302ef7f5c2d178a4e",
+    "sha256_local": "437fa622ba6ade121dd9f592271da3553b11d4f49467a6552da602ea46e7416b",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "daringbadi-coffee-garden": {
     "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-daringbadi-coffeegarden-card",
@@ -4720,6 +4845,16 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/dera_pic3.jpg",
     "file": "dera_pic3.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/dera-baba-sarsai-nath/"
+  },
+  "dera-ki-gali": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/DeraKiGali.png",
+    "file": "dera-ki-gali.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "c6fd552483ff9d2a692f61e54f6710d51f060bd0e0e9d8110f5f9100b2aa152c",
+    "sha256_local": "e4fb8c322aaba828818fd1219cf7a32661683c1e655c82d7fad920f803698718",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "deuridih": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160204_102228.jpg",
@@ -5210,6 +5345,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Dudhadhari_Monastery.JPG"
   },
+  "doodhpathri": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Doodhpathri.png",
+    "file": "doodhpathri.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "fb759a18b461b2150b394d07f50cd0513e6ae6480c8a222c36837bc36f17171e",
+    "sha256_local": "3d660b7bddf9a42d1dfe689f153af3fc5efb3927bfe2990ea40238e7e18d7929",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "dowlat-vilas-palace": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/dowlat-vilas-palace/Dowlat-Vilas-Palace-Thumbnail.jpg",
     "file": "dowlat-vilas-palace.jpg",
@@ -5239,6 +5384,26 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/A_Devotee_Frieze_at_the_Bhimeswara_temple_in_Draksharamam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "A_Devotee_Frieze_at_the_Bhimeswara_temple_in_Draksharamam.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AA_Devotee_Frieze_at_the_Bhimeswara_temple_in_Draksharamam.jpg"
+  },
+  "drang-waterfall": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Drang.png",
+    "file": "drang-waterfall.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "7b5261a53de1ce94bfa310eab31c8612ce79eb8022901fbf3b8a99e2a54d81dc",
+    "sha256_local": "7b155fc04d38f85d7cd12842ba6406b94b33d4397a10385b0eb12509db3522f3",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
+  "drangyari-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Drangyari.png",
+    "file": "drangyari-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "ab5dd2d6f59b3955f8035d63e8f4cc3e7c8fadd2e4fa6d95654bc0bfaef8e706",
+    "sha256_local": "d317f7ec6daa7be2b99e89812318365593532923e6b654b4843e61ad4d791b2c",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "dron-sagar": {
     "coordinate_note": "Coordinate reference: Google Maps place Drona Sagar, Kashipur (https://www.google.com/maps/place/?q=place_id:ChIJC1vuVrJDCjkRgyvumFp7Xas).",
@@ -5274,6 +5439,16 @@
     "note": "Wikimedia Commons image: Dubdi Monastery 7.jpg.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Dubdi_Monastery_7.jpg"
+  },
+  "dubjan": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Dubjan.png",
+    "file": "dubjan.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "4918a1d7912b2db4b9f874a08c9586d550021732191c04b37722820af7e0c3b2",
+    "sha256_local": "30801bf2494fa3b034609c934bc63efec61821f56487cef84d316f6514387f58",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "dudh-river": {
     "creator": "Iamg",
@@ -5867,6 +6042,16 @@
     "file": "Gagan Mahal, a national heritage in Bijapur 01.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AGagan_Mahal%2C_a_national_heritage_in_Bijapur_01.jpg"
   },
+  "gagangeer": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Gagangeer.png",
+    "file": "gagangeer.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "b7fd8cf041bc3f877b86383d27b60ccad8201de9fb93852b5b1b68580af203d5",
+    "sha256_local": "0381112bcf6453bcbcb19993c85c65d6f1cb9f138cc6b79dc4cff604dbd3cd45",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "gagron-fort": {
     "coordinate_note": "Wikipedia: Gagron Fort, Jhalawar, Rajasthan, India.",
     "creator": "Siddharth 36",
@@ -6066,6 +6251,16 @@
     "note": "Official Tamil Nadu Tourism destination image; verified exact.",
     "provider": "Tamil Nadu Tourism",
     "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gangaikonda-cholapuram"
+  },
+  "gangbal-lake": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Gangbal.png",
+    "file": "gangbal-lake.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "8693a1190058c459b0adddcf27baa75b3871a53b55e85394ed68b759b31eb1e1",
+    "sha256_local": "cb95d4802b885b0e3b403ecd89f2eafb1ba15e72b7a7ec3f09a3c230e41d0f8e",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "gangotri-temple": {
     "coordinate_note": "Coordinate from the official Uttarakhand Tourism destination page https://www.uttarakhandtourism.gov.in/destination/gangotri.",
@@ -6789,9 +6984,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AGreat_Mosque_in_Gulbarga_Fort..jpg"
   },
   "gulmarg-gondola": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg_gondola.JPG",
-    "file": "Gulmarg_gondola.JPG",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Gulmarg_gondola.JPG"
+    "content_type": "image/jpeg",
+    "download_url": "https://jandktourism.jk.gov.in/banner/Gulmarg.jpg",
+    "file": "gulmarg-gondola.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "77b03bfd196e5f9242786a3c766d3e35f0a3d93745dddf79fc711a4a7cecfd08",
+    "sha256_local": "8de412357fa334e574addac08d84750b615ec5c531f4ef7e2ba87e58c92a9770",
+    "source_page": "https://jandktourism.jk.gov.in/index.html"
   },
   "gunabati-group-of-temples": {
     "download_url": "https://tripuratourism.gov.in/images/tour/1661767670/37.jpg",
@@ -6861,6 +7061,16 @@
     "note": "Wikimedia Commons image File:Gurdwara, Deepgarh.jpg. Attribution checked via Commons metadata. The canonical source for this place is the official Punjab Tourism website.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Gurdwara,_Deepgarh.jpg"
+  },
+  "gurez-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Gurez.png",
+    "file": "gurez-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "2e9a776dfedb495ac6c33d230396b8567373273dbd23b42e574515b2bc174451",
+    "sha256_local": "04d4f6f8aaa40a6430cb9340da195e49cabd2a7eaad19825c98f4aac38bb8979",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "guru-drona-shiva-temple": {
     "download_url": "https://himachaltourism.gov.in/wp-content/uploads/2018/01/Guru-Drona-Shiva-Temple-Una-min.jpg",
@@ -7332,6 +7542,16 @@
     "note": "Official Delhi Tourism image; the linked destination page and image URL were checked.",
     "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
     "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
+  },
+  "hazratbal-mosque": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/srinagar/attraction/1-hazratbal-mosque-srinagar-j_k-attr-nearby.jpg",
+    "file": "hazratbal-mosque.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "36b22254edc659d6c967d28a7e8a416adb42431ef464b3022aca403f176a05e7",
+    "sha256_local": "2ba4ade13b6761c180fbd6db157f69d5a99e106a2d62eccbc9700ee47c8f55c9",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/srinagar/hazratbal-mosque"
   },
   "hazratganj": {
     "creator": "Matt Stabile",
@@ -8305,6 +8525,16 @@
     "file": "Official Meghalaya Tourism regional image reused for Jarain Pitcher Plant Lake",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/"
   },
+  "jasrota-jandi": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Jasrota-Jandi.png",
+    "file": "jasrota-jandi.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "77184146856bff8914e87f0d6cf83b19d73386005af0c4368fda8ceacbce663b",
+    "sha256_local": "d63d2a30fa8fa27ebd025b2b879683b165de04808e59dc99fbd6b0a1b42a2676",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "jaswant-garh-war-memorial": {
     "download_url": "https://arunachaltourism.com/wp-content/uploads/2026/06/jaswant-garh-war-memorial.jpg",
     "file": "jaswant-garh-war-memorial.jpg",
@@ -9202,6 +9432,16 @@
     "file": "960px-Kanheri_Caves_Mumbai_Maharashtra_DSCF9805_(2).JPG",
     "source_page": "https://commons.wikimedia.org/wiki/File:Kanheri_Caves_Mumbai_Maharashtra_DSCF9805_(2).JPG"
   },
+  "kanihama": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Kanihama.png",
+    "file": "kanihama.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "017f2b1510e2c69b7d4d110fd9001df312490e4da9bfbd72fe85cce9e28b081d",
+    "sha256_local": "1a7113bed962c03096bd0b11daf8f8f51104d3f8accf0557410edd2700f175eb",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "kanipakam-vinayaka-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Swayambu_Sri_Varasiddhi_Vinayaka_Swamy_temple_at_Kanipakkam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "file": "Swayambu_Sri_Varasiddhi_Vinayaka_Swamy_temple_at_Kanipakkam.jpg",
@@ -9672,6 +9912,16 @@
     "file": "Floor plan of Virabhadra, Parvati and Rameshwara temple, Keladi Karnataka.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AFloor_plan_of_Virabhadra%2C_Parvati_and_Rameshwara_temple%2C_Keladi_Karnataka.jpg"
   },
+  "kellar-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Kellar.png",
+    "file": "kellar-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "c59b2b1ea60d927ecb7022813c96c0b183039f0e7890d94ca7809a73be0e0ebc",
+    "sha256_local": "16dbcf49f0d4d9603ef0e7f163eb5efd3dc5235cdda92d61a3c275a546ef9c14",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "keltomi-village": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Image_of_Zunheboto.jpeg/960px-Image_of_Zunheboto.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Image_of_Zunheboto.jpeg",
@@ -9760,6 +10010,16 @@
     "note": "Official Himachal Pradesh Tourism image; exact source verified.",
     "provider": "Himachal Pradesh Tourism",
     "source_page": "https://himachaltourism.gov.in/destination/spiti-valley/"
+  },
+  "khadaniyar-eco-park": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Khadaniar.png",
+    "file": "khadaniyar-eco-park.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "eec144e475ca5d0aae052eee03c2b8e0323d302f3525713454c07acc48130db1",
+    "sha256_local": "392de3b1a90a06b7f5e263510bbf95ed50948253c61e55bff13fa75adc13bf5b",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "khadi": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/other-images/handicraft/khadi-banner.jpg",
@@ -10341,6 +10601,16 @@
     "provider": "Uttar Pradesh Eco-Tourism Development Board (official)",
     "source_page": "https://upecoboard.up.gov.in/en/destinations"
   },
+  "kishtwar-national-park": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/kishtwar-high-altitude-national-park-jammu-jammu-and-kashmir-1-new-attr-nearby.jpg",
+    "file": "kishtwar-national-park.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "ff51988cb8ee6ae44ead4ff6207ae2d9adcb391893e46b4699165a26a7249832",
+    "sha256_local": "85f66a5dbb3e0af375cb545f6123894eafb640724b29f0efcb9fc68fe61668bd",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/kishtwar-national-park"
+  },
   "kittur-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kittur%2001.jpg",
     "file": "Kittur 01.jpg",
@@ -10416,6 +10686,16 @@
     "note": "Wikimedia Commons image File:Koilsagar Dam Devarakadra Mahabubnagar Telangana India.jpg. Attribution checked via Commons metadata. The official Telangana Tourism district page for Mahabubnagar listed this attraction but provided no separate public image for it.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Koilsagar_Dam_Devarakadra_Mahabubnagar_Telangana_India.jpg"
+  },
+  "kokernag-springs": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/KOKERNAG.png",
+    "file": "kokernag-springs.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "8d9fe837cc9ed465d44e4fd490ac078303248a9722367001b8169974bc3fae3a",
+    "sha256_local": "02bdaab2767fb34e5f9adb9b3ab3db2379c2297a2683c3b295387d9339f7b48d",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "kolab-dam": {
     "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-kolabdam-card",
@@ -10644,6 +10924,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Gurudwara_Bhatha_Sahib_,_Kotla_Nihang,_Roopnagar,_Punjab,_India.jpg"
   },
+  "kotranka": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Kotranka.png",
+    "file": "kotranka.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "0572a7f1f92184446f8d8d6263e23ec18e05421d18072e07d5824cd186427e0f",
+    "sha256_local": "94918097d2416a9da39b865028619041e42eaf97008db49a81bef64a43946185",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "kottakkunnu": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/A_sunset_from_Kottakkunnu%2C_Malappuram.jpg/960px-A_sunset_from_Kottakkunnu%2C_Malappuram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-A_sunset_from_Kottakkunnu,_Malappuram.jpg",
@@ -10695,6 +10985,16 @@
     "download_url": "",
     "file": "Official Meghalaya Tourism regional image reused for Krem Umthloo",
     "source_page": "https://www.meghalayatourism.in/explore/destinations/"
+  },
+  "krimchi-temples": {
+    "content_type": "image/jpeg",
+    "download_url": "https://jandktourism.jk.gov.in/banner/Krimchi.jpg",
+    "file": "krimchi-temples.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "cf955fc6495eafc6236928e9dbb5f37eb7120b5c63d563a930b067637cc82c24",
+    "sha256_local": "3f6d9a335f17fd1d0bd24502843980c860984069773dbf7fa664e3c4c242f025",
+    "source_page": "https://jandktourism.jk.gov.in/index.html"
   },
   "kripalu-dham-mangarh": {
     "creator": "Vikas.jehanabad",
@@ -11224,6 +11524,16 @@
     "note": "Official Bishnupur District Administration image titled \"Boating at Loukoipat\" from the Loukoipat tourist-place page.",
     "source_page": "https://bishnupur.nic.in/tourist-place/loukoipat/"
   },
+  "lal-draman": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/LalDraman.png",
+    "file": "lal-draman.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "657a45b294540602a7856f827fe535edc572d4fa23136e1a74004a7dd815532f",
+    "sha256_local": "63af661b9830449efb47db30088b1e50f5440e128dc8b0307487b03f482c1085",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "lalbagh-botanical-garden": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalbagh%20Botanical%20Garden%20in%20Bangalore%202024.jpg",
     "file": "Lalbagh Botanical Garden in Bangalore 2024.jpg",
@@ -11608,6 +11918,16 @@
     "note": "Official Manipur Tourism illustration of Loktak Lake.",
     "source_page": "https://manipurtourism.gov.in/nature-and-wildlife/"
   },
+  "lolab-valley": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/LolabValley.png",
+    "file": "lolab-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "eb232f9ab6d56997a129327a834761fa1dd198a89360ab8c022ff04732353f50",
+    "sha256_local": "f58ddbda89f63a069eb3e4f038df4049937714fa6d05b928f3830f51336c8494",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "lolegaon": {
     "coordinate_note": "Wikipedia: Loleygaon, West Bengal, India.",
     "creator": "Department of Tourism, Government of West Bengal",
@@ -11862,6 +12182,16 @@
     "file": "maasic.jpg",
     "note": "Official Manipur Tourism illustration of the Manipur Adventure and Allied Sports Institute.",
     "source_page": "https://manipurtourism.gov.in/1508-2/"
+  },
+  "machail-mata": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Macheil.png",
+    "file": "machail-mata.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "84e5e152029cc330e988c15ee59bca211b67ca0c732e22d1d695be485baf47ed",
+    "sha256_local": "a381850352121f96da8754c5957e7e51209bcd1e44838569a3dab0ef41074e3d",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "machkund-dholpur": {
     "coordinate_note": "Wikipedia: Machkund, Dholpur, Rajasthan, India.",
@@ -12420,6 +12750,16 @@
     "file": "960px-A_garden_lizard_near_Manas_national_park.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:A_garden_lizard_near_Manas_national_park.jpg"
   },
+  "manasbal-lake": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Manasbal.png",
+    "file": "manasbal-lake.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "4d602d82245f4a1565c5f975f6154db2ecc34ccbdf0f8cbb581afabd2629c354",
+    "sha256_local": "c4fda299300077480ad332fbdcbdc3925a55bef43901f2d9414967dd6a8feb60",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "manauli-fort": {
     "coordinate_note": "Wikipedia: Manauli Fort, S.A.S Nagar (Mohali) district, Punjab, India.",
     "creator": "Harvinder Chandigarh",
@@ -12659,6 +12999,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Ropeway_to_Mansa_Devi_Temple,_Haridwar.jpg"
   },
+  "mansar-lake": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/mansar-lake-jammu-j&k-1-attr-nearby.jpg",
+    "file": "mansar-lake.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "ec49aef1ed86b9c50b887273bb9961bdc0e64f7773aa63c798b4c6b749b36896",
+    "sha256_local": "2b1e6342249d14554439d7d3e69a98406235d04d0afe14ea3c761a563c457091",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/mansar-lake"
+  },
   "manyamkonda": {
     "coordinate_note": "Wikipedia: Manyamkonda, Telangana, India.",
     "creator": "Kavali Chandrakanth KCK",
@@ -12783,9 +13133,14 @@
     "source_page": "https://www.meghalayatourism.in/explore/destinations/"
   },
   "martand-sun-temple": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Martand_Sun_Temple_Central_shrine_%286133772365%29.jpg",
-    "file": "Martand_Sun_Temple_Central_shrine_(6133772365).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Martand_Sun_Temple_Central_shrine_(6133772365).jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/anantnag/attraction/martand-sun-temple-anantnag-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "martand-sun-temple.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "fe2deb2b5dcfddcdaa777bb9fba6fd2fdb9d704d078dee03803eba98cfba4410",
+    "sha256_local": "21dd1185bfc197a73ac31d2aabb41b4ea908f5b4f4fa5061a8c28bd0f2193944",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/anantnag/martand-sun-temple"
   },
   "mashiku-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Ch%C3%BCmoukedima_District_Office_Complex.jpg/960px-Ch%C3%BCmoukedima_District_Office_Complex.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -13442,6 +13797,16 @@
     "file": "960px-The_Children_being_served_the_food_under_the_Mid-day_Meal_Scheme_at_a_primary_school,_Wokha_district_in_Nagaland.jpg",
     "note": "Nagaland image selected by district/theme; place-specific photo unavailable.",
     "source_page": "https://commons.wikimedia.org/wiki/File:The_Children_being_served_the_food_under_the_Mid-day_Meal_Scheme_at_a_primary_school,_Wokha_district_in_Nagaland.jpg"
+  },
+  "mubarak-mandi-palace": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/1-mubarak-mandi-parj-jammu-jk-attr-nearby.jpg",
+    "file": "mubarak-mandi-palace.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "69cd1d4c8c17c6ac31cf2b5d714d8f3a9f1c9f0bfd4d0d67b38eb7c820b5b35f",
+    "sha256_local": "d93dae6925c82a1a8a493a49401ab517986395660d53ff155db4b18d1a68e4f0",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/mubarak-mandi-palace"
   },
   "mubarak-manzil": {
     "coordinate_note": "Wikipedia: Malerkotla, Punjab, India (the palace stands in Malerkotla town).",
@@ -14124,6 +14489,16 @@
     "file": "960px-Ahom-kingdom-c1826p1.png",
     "source_page": "https://commons.wikimedia.org/wiki/File:Ahom-kingdom-c1826p1.png"
   },
+  "nangali-sahib": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Nangali.png",
+    "file": "nangali-sahib.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "b2900a4314be8def3648d950ca37e5aeae7e6c9eeb4ff2de5878d05e0ab92af0",
+    "sha256_local": "94053073d28d69d0b419d7efa20ab6c3883722459e11c33c671436a32fb17699",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "nanjangud-srikanteshwara": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/KAM22%20Nanjangud%2001%20SriKanteshwara%20Temple%20South%20Side.jpg",
     "file": "KAM22 Nanjangud 01 SriKanteshwara Temple South Side.jpg",
@@ -14138,6 +14513,16 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/pinjore_pic-2.jpg",
     "file": "pinjore_pic-2.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/naraina/"
+  },
+  "naranag": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Naranag.png",
+    "file": "naranag.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "48abf4c7e0e045841968a4534442cf7b529f9c87d2adbafefc82a3bff48c4c8d",
+    "sha256_local": "3d40375224ec9a238ff8a88332990d7a3b253ef3e74f71e81e3022e68e0a1fa7",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "narangi-river": {
     "creator": "Jitendranakka1986",
@@ -14247,6 +14632,16 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Dindori_Vineyards.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "Dindori_Vineyards.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Dindori_Vineyards.jpg"
+  },
+  "natha-top": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/patnitop/attraction/nathatop-patnitop-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "natha-top.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "de2490a21811325a770317957d2e033ae22c594135fc652b1d68f268560a9621",
+    "sha256_local": "bfcafcb4b0f6a5bfd721b5feff395ca8075c380b5ad2d84f6d4d66a8b0ef4fa1",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/patnitop/nathatop"
   },
   "nathaldai-temple": {
     "creator": "Unknown author",
@@ -14657,9 +15052,14 @@
     "source_page": "https://www.gujarattourism.com/kutch-zone/kutch/nirona.html"
   },
   "nishat-shalimar-gardens": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Couple_in_Nishat_Bagh_Garden_-_Srinagar_-_Jammu_%26_Kashmir_-_India_%2826570407430%29.jpg",
-    "file": "Couple_in_Nishat_Bagh_Garden_-_Srinagar_-_Jammu_&_Kashmir_-_India_(26570407430).jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Couple_in_Nishat_Bagh_Garden_-_Srinagar_-_Jammu_%26_Kashmir_-_India_(26570407430).jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/srinagar/attraction/nishat-bagh-srinagar-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "nishat-shalimar-gardens.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "590e72171692f9e621d2e91beda5d6a7bc457901f8441d8a374446faa8c3a4f0",
+    "sha256_local": "8fe16036420531fb96818d11a60aba6e0b5b51641ac0a98fa420d00d7ce03e8e",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/srinagar/nishat-bagh"
   },
   "nishkalank-mahadev": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/religious-sites/nishkalank-mahadev/Nishkalank-Mahadev-Thumbnail.jpg",
@@ -14783,6 +15183,16 @@
     "note": "Official Arunachal Pradesh Tourism image; verified exact.",
     "provider": "Arunachal Pradesh Tourism",
     "source_page": "https://arunachaltourism.com/nuranang-waterfall/"
+  },
+  "nurpur-poonch": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Nurpur.png",
+    "file": "nurpur-poonch.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "b4cfbf7d432f90ab08ca09578c1d8101596d35f05dfd290ce7d9c4555944e98e",
+    "sha256_local": "4a82f12a9f2a9ef9e13830b3300f26ad4c09510b9bbc44d00255fbf061f7e3ef",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "nyapin-valley": {
     "download_url": "https://arunachaltourism.com/wp-content/uploads/2022/01/1487327067_nyapin_valley.jpg.jpg",
@@ -15014,9 +15424,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3APahad_mandir_raigarh.jpg"
   },
   "pahalgam-betaab-valley": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Betaab_Valley_Pahalgam.jpg",
-    "file": "Betaab_Valley_Pahalgam.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Betaab_Valley_Pahalgam.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/pahalgam/attraction/lidder-river-pahalgam-j&k-1-attr-nearby.jpg",
+    "file": "pahalgam-betaab-valley.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "f2891a27960e5cf3a8811f6263bfd03c9aff0244afc3ebe6153014671746e789",
+    "sha256_local": "8b1cd7cf35eee32e61553568964b4c3f021a7efa37caf20e9771a82f0c520977",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/pahalgam/lidder-river"
   },
   "pahari-temple": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_101846.jpg",
@@ -15561,6 +15976,16 @@
     "file": "960px-An_Elephant_Family_at_Sanjay_Gandhi_Biological_Park,_Patna,_Bihar,_India.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:An_Elephant_Family_at_Sanjay_Gandhi_Biological_Park,_Patna,_Bihar,_India.jpg"
   },
+  "patnitop": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/banner/Patnitop_Snow_View.png",
+    "file": "patnitop.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "a4a69827f745b8fb69e73958f93fc1ff032b22228c46d362de65d04843774829",
+    "sha256_local": "980bb831d149b140b1b6a49bec6605fba453e32fadd03c8260e048b23e885e8b",
+    "source_page": "https://jandktourism.jk.gov.in/index.html"
+  },
   "patratu-dam": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_143850.jpg",
     "file": "patratu-dam.jpg",
@@ -15651,6 +16076,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/PeechiDamview.jpg/960px-PeechiDamview.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-PeechiDamview.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:PeechiDamview.jpg"
+  },
+  "peer-ki-gali": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/PeerKiGali.png",
+    "file": "peer-ki-gali.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "cf15897bc82f1fc6cdba8c7dbc3950db02291efc28cfa61735fb025c8a4f2c21",
+    "sha256_local": "0242a7f9180ee619756e71627a10e46bdcb52cee60f393c9c580709ca9b40c8c",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "peletkie-village": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Sangtam_Tribe_village.jpg/960px-Sangtam_Tribe_village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -16377,6 +16812,16 @@
     "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-raghunath-jew-card",
     "file": "east-od-raghunath-jew-card",
     "source_page": "https://odishatourism.gov.in/en/w/raghunath-jew-temple"
+  },
+  "raghunath-temple": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/raghunath-temple-jammu-jammu-and-kashmir-1-attr-nearby.jpg",
+    "file": "raghunath-temple.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "a2beaa47cd0bef6ae64fa0708163c2e4983d5fe28cacaededcf6c97fd2bd64e0",
+    "sha256_local": "fab25708bde1378cdf60e555ca2fd91ef9c04a5e9cb1b9c2cb9f5c55692341df",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/raghunath-temple"
   },
   "raghunathji-temple": {
     "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/raghunath%20temple-kullu-hp?qlt=82&ts=1726730495278",
@@ -17779,6 +18224,16 @@
     "provider": "Tripura Tourism Development Corporation Limited (Government of Tripura)",
     "source_page": "https://tripuratourism.gov.in/tour/33?type=destinations"
   },
+  "sanasar": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/patnitop/attraction/sanasar-patnitop-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "sanasar.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "5a81abbded45003aff1052578eda781ebf1b8fef7561fd66f3a671ac26663065",
+    "sha256_local": "4f753d76245eda7938f528def5f00827af6b6dfee31f02cf4a5b4c5762fc6931",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/patnitop/sanasar"
+  },
   "sandakphu": {
     "coordinate_note": "Wikipedia: Sandakphu, West Bengal, India.",
     "creator": "Department of Tourism, Government of West Bengal",
@@ -18461,9 +18916,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Shaniwar_Wada,_Shaniwar_Peth,_Pune,_Maharashtra,_India_(2021).jpg"
   },
   "shankaracharya-temple": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shankaracharya_Hill_Temple.jpg",
-    "file": "Shankaracharya_Hill_Temple.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Shankaracharya_Hill_Temple.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/srinagar/attraction/shankaracharya-temple-srinagar-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "shankaracharya-temple.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "dcb4e1eba96f8faa211a1daa2978289291c3cb7f7bac933b777c2db67500e492",
+    "sha256_local": "950ebea5ca5749b06bd49c8e44314ca877804eebb38df0027ef00b9d45fa8889",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/srinagar/shankaracharya-temple"
   },
   "shankarpur": {
     "coordinate_note": "Wikipedia: Shankarpur, West Bengal, India.",
@@ -18637,6 +19097,16 @@
     "file": "In Monochrome - Shettihalli Rosary Church , Hassan 02.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AIn_Monochrome_-_Shettihalli_Rosary_Church_%2C_Hassan_02.jpg"
   },
+  "shikargah": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Shikargah.png",
+    "file": "shikargah.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "89aaf2e5c809c39eb5476e8ad6cd3d51566374b847fde81e07d605825f505168",
+    "sha256_local": "7291a3241519ed1ca9ccde7d1063dd5199e9fefa76fa5bd5f0eab61832c08a6b",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "shilheipung": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Shilheipung near Lamlai in Imphal East district; the state page gives no map coordinates.",
     "download_url": "https://manipurtourism.gov.in/wp-content/uploads/2020/08/SHILHEIPUNG.png",
@@ -18722,6 +19192,16 @@
     "license": "Public domain",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Hanswar_koat.JPG"
+  },
+  "shiv-khori": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/jammu/Ransoo.png",
+    "file": "shiv-khori.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "5635382d05a5e66b2c7b1c2690c74d1ed089754f9ae45321219a11e92afc3d43",
+    "sha256_local": "485eeacf50da781d1e6b41d5d113592038cd642bd0f5969331978115f04ab9b3",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "shiv-mandir": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/shivmandir_pic1-1.jpg",
@@ -19191,6 +19671,16 @@
     "file": "960px-Sinhagad_Fort_(34468).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Sinhagad_Fort_(34468).jpg"
   },
+  "sinthan-top": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/SinthanTop.png",
+    "file": "sinthan-top.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "ebedaeb285f285a72f7d87386bd4073f04bf92ea17a787c4e8e48ae7a449603a",
+    "sha256_local": "9ee059c1cfffecc9791b886e68c7fa30c6e9096eb00debe2e72e5c6dc3e85377",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "sirpur-archaeological-site": {
     "download_url": "placeholder",
     "file": "sirpur-archaeological-site.svg",
@@ -19411,11 +19901,6 @@
     "note": "Wikimedia Commons file File:Jain temples Sonagiri Madhya Pradesh.jpg for Sonagiri Jain Temples (Datia, Madhya Pradesh).",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jain_temples_Sonagiri_Madhya_Pradesh.jpg"
-  },
-  "sonamarg-thajiwas": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_flowers4.jpg",
-    "file": "Alpine_flowers4.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Alpine_flowers4.jpg"
   },
   "sonapur-blue-flag-beach": {
     "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-sonapur-beach-card-1",
@@ -19670,6 +20155,16 @@
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/saurashtra/porbandar/sudama-mandir.html"
   },
+  "sudh-mahadev-mantalai": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/patnitop/attraction/sudh-mahadev-temple-patnitop-jammu-kashmir-1-attr-nearby.jpeg",
+    "file": "sudh-mahadev-mantalai.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "279f46173dc9d8e2e19fb0fd5247015310fe0e03c319621d74eef2fb08afa315",
+    "sha256_local": "5d1cf933f6797443f3cd3d02c8aacf5b89fb8f62bc927feeff9d1771da5ea03e",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/patnitop/sudh-mahadev-temple"
+  },
   "suga-bandh-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_141627.jpg",
     "file": "suga-bandh-falls.jpg",
@@ -19852,6 +20347,16 @@
     "file": "surat-castle.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/south-zone/surat/surat-castle.html"
+  },
+  "surinsar-lake": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/surinsar-lake-jammu-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "surinsar-lake.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "ebc66caaeca476a250936847422ed6ceb6819fbfd9c075674b24b61a8a44b09d",
+    "sha256_local": "dc01fd5227364883958a0d5584d233bc5ec7b7e6b587c0740aefd3c4edb16a05",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/surinsar-lake"
   },
   "surkanda-devi-temple": {
     "coordinate_note": "Coordinate reference: Google Maps place Maa Surkanda Devi, near Dhanaulti, Kaddukhal, Dhanaulti, Saklana Range, Uttarakhand 249145 (https://www.google.com/maps/place/?q=place_id:ChIJDx8omNTfCDkRy2XEkBXSSMc).",
@@ -21122,6 +21627,16 @@
     "file": "960px-Toranmal-Nandurbar.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Toranmal-Nandurbar.jpg"
   },
+  "tosamaidan": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Tosamaidan.png",
+    "file": "tosamaidan.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "1d07053a9f349d83ae637dcdc1133e648921d1ca2d79b8604e6e5ecf195a0a52",
+    "sha256_local": "be6dc009bed6cceb2a6e73538839a6d7c77aba667be09c66ccc37a5b9f3fcee4",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
+  },
   "tranquebar": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tranquebar-1678086444_b33c554309cf0e63b29b.webp",
     "file": "tranquebar.jpg",
@@ -21298,6 +21813,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Tukreswari_Temple.jpg/960px-Tukreswari_Temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Tukreswari_Temple.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Tukreswari_Temple.jpg"
+  },
+  "tulail": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Tulail.png",
+    "file": "tulail.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "3dc1d9de4779d4b4c56d064bc2e9846372a88c785013beffd91329df9de85ecb",
+    "sha256_local": "2198b21348909608a47220d2b439cb8152706812459b02d32648108757aacf21",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "tulja-bhavani-temple": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Raje_Shahaji_Mahadwar_of_Tulja_Bhavani_Temple.jpg/960px-Raje_Shahaji_Mahadwar_of_Tulja_Bhavani_Temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -21703,9 +22228,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Ashoka_pillar_at_Vaishali,_Bihar,_India.jpg"
   },
   "vaishno-devi": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snowfall_in_Vaishno_Devi.jpg",
-    "file": "Snowfall_in_Vaishno_Devi.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Snowfall_in_Vaishno_Devi.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/jammu/attraction/1-vaishno-devi-jammu-jk-attr-nearby.jpg",
+    "file": "vaishno-devi.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "8c65e176a62ea4e13162172f58535d9fc82d76e325356922e524e08a815e7a01",
+    "sha256_local": "e89090bbf1799d7fe4266e2f27ef477d8f2d869db050d55296561f19ab5fe89c",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/jammu/vaishno-devi-temple"
   },
   "vaishno-devi-dham-firozabad": {
     "creator": "Official district website",
@@ -21925,6 +22455,16 @@
     "note": "Official Tripura Tourism image; the linked destination page and image URL were checked.",
     "provider": "Tripura Tourism Development Corporation Limited (Government of Tripura)",
     "source_page": "https://tripuratourism.gov.in/tour/26?type=destinations"
+  },
+  "verinag-spring": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Verinag.png",
+    "file": "verinag-spring.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "be447045d409068bf33f024dc81104b08f08de5dbe4f1a82fd68acf9fff0dad7",
+    "sha256_local": "813682b83b4d269e6c9f2127527bfbcc2b3721cd9ea8186794d2487839e0da07",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "vety-farm": {
     "download_url": "https://mizoramtourism.com/post_images/626b929197625_Thenzawl-%28Dilpui--1%29.jpg",
@@ -22381,6 +22921,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Wonderland_boating.JPG"
   },
+  "wular-lake": {
+    "content_type": "image/jpeg",
+    "download_url": "https://www.incredibleindia.gov.in/content/dam/incredible-india/images/jammu-and-kashmir/srinagar/attraction/wular-lake-srinagar-jammu-&-kashmir-1-attr-nearby.jpg",
+    "file": "wular-lake.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "3d85859295710a93bb49d298a0fa703dad0575eb24d71e309b09d23c374edfe8",
+    "sha256_local": "22ab04bad55533469e67dd5275c275e6387694994458bc5e5408a6b668bff21d",
+    "source_page": "https://www.incredibleindia.gov.in/en/jammu-and-kashmir/srinagar/wular-lake"
+  },
   "wyndham-falls": {
     "creator": "Government of Uttar Pradesh tourism department",
     "download_url": "https://upecoboard.up.gov.in/dest-images/dest_Wyndham_Falls.jpg",
@@ -22525,6 +23075,16 @@
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yumthang%20valley%2C%20Lachung%20Sikkim%20India%202012.jpg",
     "file": "Yumthang valley, Lachung Sikkim India 2012.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Yumthang_valley,_Lachung_Sikkim_India_2012.jpg"
+  },
+  "yusmarg": {
+    "content_type": "image/png",
+    "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/Yusmarg.png",
+    "file": "yusmarg.jpg",
+    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "provider": "Jammu and Kashmir Tourism Development Corporation (Government of Jammu and Kashmir)",
+    "sha256_download": "21bf2f5243465707a226a5449c2bf2bea56a3ac1272c76f1240548241436082b",
+    "sha256_local": "16d8041f402c3a3279f94653abb18fc3801f922036fb13829856dd2dbcb8aae5",
+    "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "zanibu-peak": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_%28edit%29.jpg/960px-Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_%28edit%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
