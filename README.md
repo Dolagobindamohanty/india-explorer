@@ -122,9 +122,11 @@ Commons, and other states use a mix of Commons and public web sources. Odisha's
 pages, and its Jagannath Temple state cover is recorded in
 `public/assets/states/sources.json`. Lakshadweep's 10 places are reverified from
 the Lakshadweep Administration and Incredible India attraction pages, and its
-coral-reef state cover is recorded in the same state source file.
-The 147 Odisha and 10 Lakshadweep places are marked `verified` from their exact
-official source pages (last checked 27 November 2026); the remaining 3,410
+coral-reef state cover is recorded in the same state source file. Tamil Nadu's
+120 places are reverified from their exact recorded source pages, mostly Tamil
+Nadu Tourism.
+The 147 Odisha, 10 Lakshadweep and 120 Tamil Nadu places are marked `verified`
+from exact source pages (last checked 27 November 2026); the remaining 3,290
 records stay `needs_review` and appear as source-linked editorial entries, not
 as independently verified. 23 festival occurrences have confirmed dates, while
 the rest of the annual dates remain unpopulated. Seasonal guidance and

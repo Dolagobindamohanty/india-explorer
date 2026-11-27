@@ -944,6 +944,25 @@ def test_lakshadweep_uses_only_verified_official_destination_records(client):
     assert_asset_exists('/assets/states/lakshadweep.jpg')
 
 
+def test_tamil_nadu_exact_provenance_audit_is_recorded(client):
+    places = client.get('/api/states/tamil-nadu').json()['places']
+    assert len(places) == 120
+    assert all(
+        p['verification_status'] == 'verified' and p['last_verified_at'] == '2026-11-27'
+        for p in places
+    )
+    sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    for place in places:
+        src = sources[place['slug']]
+        assert src['source_page'] == place['source_url'], place['slug']
+        assert src['download_url'].startswith('https://'), place['slug']
+        assert src['content_type'].startswith('image/'), place['slug']
+        assert src['verified_at'] == '2026-11-27', place['slug']
+        assert len(src['sha256_download']) == 64, place['slug']
+        assert len(src['sha256_local']) == 64, place['slug']
+        assert_asset_exists(place['image_url'])
+
+
 def test_dynamic_content_is_never_cached():
     config = json.loads((ASSETS.parent / 'vercel.json').read_text(encoding='utf-8'))
     dynamic = next(rule for rule in config['headers'] if rule['source'] == '/(.*)')
@@ -960,8 +979,8 @@ def test_dynamic_content_is_never_cached():
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
         'detailed_places': 3567,
-        'reviewed_places': 157,
-        'unreviewed_places': 3410,
+        'reviewed_places': 277,
+        'unreviewed_places': 3290,
         'confirmed_festival_dates': 23,
     }
 

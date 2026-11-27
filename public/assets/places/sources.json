@@ -207,9 +207,13 @@
   "agni-theertham-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/agni-theertham-beach-1656502937_91425150d5d4e1e8b260.webp",
     "file": "agni-theertham-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/agni-theertham-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/agni-theertham-beach",
+    "content_type": "image/webp",
+    "sha256_download": "26279147a4919f01e2bdf9fb07477cd3daccd36aa3b2ec72daa8cabe2c457cf4",
+    "sha256_local": "87309679a4aa19470dd25a6e68bea4a7fb80a974d9ef66381e3addb64c4a9656",
+    "verified_at": "2026-11-27"
   },
   "agnigarh": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/%E0%A6%A4%E0%A7%87%E0%A6%9C%E0%A6%AA%E0%A7%81%E0%A7%B0%E0%A7%B0_%E0%A6%85%E0%A6%97%E0%A7%8D%E0%A6%A8%E0%A6%BF%E0%A6%97%E0%A6%A1%E0%A6%BC_%2Cagnigarh.jpg/960px-%E0%A6%A4%E0%A7%87%E0%A6%9C%E0%A6%AA%E0%A7%81%E0%A7%B0%E0%A7%B0_%E0%A6%85%E0%A6%97%E0%A7%8D%E0%A6%A8%E0%A6%BF%E0%A6%97%E0%A6%A1%E0%A6%BC_%2Cagnigarh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -333,9 +337,13 @@
   "airavatesvara-temple": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/airavatesvara-temple-1654590752_541a0582f2c9f6d5530a.webp",
     "file": "airavatesvara-temple.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/airavatesvara-temple"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/airavatesvara-temple",
+    "content_type": "image/webp",
+    "sha256_download": "5d2274849b50fc390e766151e60e90f6c9bb98c4073c401f7f3c9717e8c8f16a",
+    "sha256_local": "652633afc7c2e69d94497b0022f9ebfaf90e131241ea4f9222282d50cc5bcc8e",
+    "verified_at": "2026-11-27"
   },
   "aizawl-city-view-thuampui": {
     "download_url": "https://mizoramtourism.com/post_images/62b85f3ff01fb_Aizawl%20City%20View.jpg",
@@ -465,9 +473,13 @@
   "alamparai-fort": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/alamparai-fort-1656321202_c2d979bf9da7929b5a9d.webp",
     "file": "alamparai-fort.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/alamparai-fort"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/alamparai-fort",
+    "content_type": "image/webp",
+    "sha256_download": "1bac5876ec356afbff4fa544ca2520c57472f8f8f06af37db87ae6b2d265758a",
+    "sha256_local": "9030a8e2ebec0a883f9ad2dfaee0c6d3816d3ab07a5809284091cb9a8abb7e9d",
+    "verified_at": "2026-11-27"
   },
   "alampur-jogulamba-temple": {
     "coordinate_note": "Wikipedia: Jogulamba Temple, Alampur, Telangana, India.",
@@ -578,9 +590,13 @@
   "amaravathi-reservoir": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/amaravathi-reservoir-1677126759_435adb13bd4bf34aac2a.webp",
     "file": "amaravathi-reservoir.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/amaravathi-reservoir"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/amaravathi-reservoir",
+    "content_type": "image/webp",
+    "sha256_download": "cfd3367915a84f7063fb8ba90e404beb80315b243da270471b2ebc93b0ac292f",
+    "sha256_local": "5c18875340392f3d3f42ba1145ad72ab92368f5bac42a2e8faf730f0bc0c40a9",
+    "verified_at": "2026-11-27"
   },
   "amaravati-mahachaitya": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_view_of_Mahachaitya_on_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -725,16 +741,24 @@
   "anaikatti": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/anaikatti-1680098054_15090b9f268cb558c96c.webp",
     "file": "anaikatti.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/anaikatti"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/anaikatti",
+    "content_type": "image/webp",
+    "sha256_download": "e50926c47c29363b6eb8574d453986b85a783146cb4eecf2574ce202b00f173c",
+    "sha256_local": "98a783955baf41e56c56f5d03546553fb53b8f917e879bcaf473df09bff4880d",
+    "verified_at": "2026-11-27"
   },
   "anamalai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/anamalai-1656336400_c1b24ab838d1e769d868.webp",
     "file": "anamalai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/anamalai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/anamalai",
+    "content_type": "image/webp",
+    "sha256_download": "d0f73d604a3694a30e52af32fbab335cd604317103ad3b80b79ae5745f25c4db",
+    "sha256_local": "a3495d81e887b6670f39195767b33242df54677b8bfa1c28a9fd3e494b6247ff",
+    "verified_at": "2026-11-27"
   },
   "anamudi-peak": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Anaimudi.jpg/960px-Anaimudi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1060,9 +1084,13 @@
   "ariyaman-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/ariyaman-beach-1680158646_5497f1990d7c8bca4bdb.webp",
     "file": "ariyaman-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/ariyaman-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/ariyaman-beach",
+    "content_type": "image/webp",
+    "sha256_download": "e467fd2cdd887be5b7f81df8cf3fa3a29c870bb359f47a06a01da2196413a1cd",
+    "sha256_local": "243421ef48ded0634286153516763b565a948747fe5ea71f041e608e9556bef6",
+    "verified_at": "2026-11-27"
   },
   "arki-palace": {
     "download_url": "https://himachaltourism.gov.in/wp-content/uploads/2018/01/Wall-paintings-at-Arki-Palace-min.jpg",
@@ -2351,9 +2379,13 @@
   "bear-shola-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/bear-shola-falls-1672902845_06f43f7929987f63c57d.webp",
     "file": "bear-shola-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/bear-shola-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/bear-shola-falls",
+    "content_type": "image/webp",
+    "sha256_download": "0f5c7caba7cff5e125702531478fda02eb968022a29469dc10dbd262e5916918",
+    "sha256_local": "1c1791767dfee713786e1008f9f1e9b3eeb75c930f1b668ac66ea4f4b62c594b",
+    "verified_at": "2026-11-27"
   },
   "bedi-lepak-waterfall": {
     "download_url": "https://cdn.s3waas.gov.in/s398d6f58ab0dafbb86b083a001561bb34/uploads/bfi_thumb/17604203121175-rrsf23p16jevynjsmmtf87vjbhj64f597cg1bxaarm.png",
@@ -2762,9 +2794,13 @@
   "bhavani-sagar-dam": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/bhavani-sagar-dam-1677301745_2d0612f1abfe00e0ef48.webp",
     "file": "bhavani-sagar-dam.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/bhavani-sagar-dam"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/bhavani-sagar-dam",
+    "content_type": "image/webp",
+    "sha256_download": "204c10b6dcf48ce4054fb5f4f6e1cad49344a2ac99d79c534ccee594261647dd",
+    "sha256_local": "1c9877af1e43f89bdf4928b7ba19916229197bd728605b8cb5e3d034a97f5b6e",
+    "verified_at": "2026-11-27"
   },
   "bhavishya-badri": {
     "coordinate_note": "Coordinate reference: Google Maps place Bhavishya Badri (Panch badri), Subhai, Uttarakhand 246483 (https://www.google.com/maps/place/?q=place_id:ChIJ0UEeY5R1pzkRPCzj23F1T9k).",
@@ -3471,9 +3507,13 @@
   "brihadeeswara-temple": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/brihadeeswara-temple-1654591433_5e18b8c7054859aab394.webp",
     "file": "brihadeeswara-temple.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/brihadeeswara-temple"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/brihadeeswara-temple",
+    "content_type": "image/webp",
+    "sha256_download": "fca9225f454f78aad4978bc49cc116a9d05d5a797e3e148c15e5c082d49ca7b4",
+    "sha256_local": "202f5f930fc5afd1c3dfb6fb169da58703470c8bcfdd42c9506ef552db905fd6",
+    "verified_at": "2026-11-27"
   },
   "brihaspati-kund-panna": {
     "coordinate_note": "Coordinates based on verifiable public references for Brihaspati Kund in Panna district; verify on arrival.",
@@ -3757,9 +3797,13 @@
   "catherine-waterfalls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/catherine-waterfalls-1656150064_608eb6f98e79a7077cfe.webp",
     "file": "catherine-waterfalls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/catherine-waterfalls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/catherine-waterfalls",
+    "content_type": "image/webp",
+    "sha256_download": "ae292bf55a91c7c9e51fcbde0caa1caed12b91e30e150e3a46d70a80a93a3778",
+    "sha256_local": "c4bfe8ce165884ba0f83d0fb6237029327b41c67c896bee496c109873fced27d",
+    "verified_at": "2026-11-27"
   },
   "cavers-delight": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/GMagh1643043875997.jpg/960px-GMagh1643043875997.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -4299,16 +4343,24 @@
   "chengalpet": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/chengalpet-1673074419_a553c3e26b55930d22ab.webp",
     "file": "chengalpet.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/chengalpet"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/chengalpet",
+    "content_type": "image/webp",
+    "sha256_download": "eae79f69f527c00d3a0f01d5eccaf13b50f48461d903b2a26958e5ffd8315270",
+    "sha256_local": "da7663795dbd15a4c5344945a5f585efdb4fa1d209d724d23928b22024441ce2",
+    "verified_at": "2026-11-27"
   },
   "chennai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/chennai-1654764398_76539011bf752b01585f.webp",
     "file": "chennai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/chennai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/chennai",
+    "content_type": "image/webp",
+    "sha256_download": "aef642161616d67b2aa157de8adb52bafd4112e16285ae1d01938b93cf774b6e",
+    "sha256_local": "907d461dff6f532f5e3bfb3783a728a085bbad33398034df473e7296f0fb32dc",
+    "verified_at": "2026-11-27"
   },
   "chenrezig-statue": {
     "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for the Chenrezig Statue; the combined statue-and-skywalk point was used only as a cross-check.",
@@ -4829,9 +4881,13 @@
   "coimbatore": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/coimbatore-1656092595_19e9fcebd774ab38d0a5.webp",
     "file": "coimbatore.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/coimbatore"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/coimbatore",
+    "content_type": "image/webp",
+    "sha256_download": "ff1738f016d0734f09bc74f29b803ebdf59389d9f6b48a8658a0476682b8e6d7",
+    "sha256_local": "d2f65ecb8859eb21bec3ba20e8b6ad3ba946801b3bd0506ef4756fc105379c05",
+    "verified_at": "2026-11-27"
   },
   "colaba-causeway": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Colaba_Causeway%2CMumbai_-_panoramio.jpg/960px-Colaba_Causeway%2CMumbai_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -4879,9 +4935,13 @@
   "coonoor": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/coonoor-1659609836_a7601459717f358c41bf.webp",
     "file": "coonoor.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/coonoor"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/coonoor",
+    "content_type": "image/webp",
+    "sha256_download": "928cbe7953c79ee4d90de2d6c3022a74fb7f4e85862ca1ad6db6cd9cbeebb9bc",
+    "sha256_local": "50134b7680ad7153d300770b27c566d35407f9e57ab2d4c2fd151b3c4cd98f5d",
+    "verified_at": "2026-11-27"
   },
   "coorg-coffee-country": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ripe%20Seeds%20Coffee%20Robusta%20Coorg%20Karnataka%20India%20Feb24%20D72%2025688.jpg",
@@ -4918,16 +4978,24 @@
   "coutrallam-waterfalls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/coutrallam-waterfalls-1656144334_5e3cdfa92613c5bf1699.webp",
     "file": "coutrallam-waterfalls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/coutrallam-waterfalls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/coutrallam-waterfalls",
+    "content_type": "image/webp",
+    "sha256_download": "d7a0685a909d29eab37c7f7a603622ba1d93d6b9bc6cca3fdc8bcf74286a740c",
+    "sha256_local": "ad1d00ba95dacd2c069e598ea513e8e211f6f64b9df8f58f6fd1b9de080bd0da",
+    "verified_at": "2026-11-27"
   },
   "covelong-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/covelong-beach-1656304323_797af7adebbd86958f9f.webp",
     "file": "covelong-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/covelong-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/covelong-beach",
+    "content_type": "image/webp",
+    "sha256_download": "663407ea2988cbb0be54d3129c817cc2362652c05e80c8236ea109ab00138759",
+    "sha256_local": "bc4aa390de687ccc363128de8f97e21791597f4547fa04fae83508af462c2e10",
+    "verified_at": "2026-11-27"
   },
   "csmt-mumbai": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Chhatrapati_Shivaji_Maharaj_Terminus_-_Mumbai_-_Maharashtra_-_IMG_0703.jpg/960px-Chhatrapati_Shivaji_Maharaj_Terminus_-_Mumbai_-_Maharashtra_-_IMG_0703.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -4942,9 +5010,13 @@
   "cuddalore": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/cuddalore-1673075322_007060c46155bfd24391.webp",
     "file": "cuddalore.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/cuddalore"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/cuddalore",
+    "content_type": "image/webp",
+    "sha256_download": "6bb06adb81c8e8556f230d30b1d2b14f0c7cc9773fc11284654d9538b518bd67",
+    "sha256_local": "366aef05fd68ad719d03016709db23fa6ef9d2636c1d26adaf7a3767b51a0f3a",
+    "verified_at": "2026-11-27"
   },
   "cuthbert-bay-wildlife-sanctuary": {
     "content_type": "image/jpeg",
@@ -5033,9 +5105,13 @@
   "dakshinachitra-chengalpettu": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dakshinachitra-chengalpettu-1677296988_56e16a10d1ffb1a9c0d3.webp",
     "file": "dakshinachitra-chengalpettu.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dakshinachitra-chengalpettu"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dakshinachitra-chengalpettu",
+    "content_type": "image/webp",
+    "sha256_download": "471b075d7362b4f9cab583cbc56b68fcca0771aefd903a1a3be1f7886965cb25",
+    "sha256_local": "c508b002618c960fe8aed5799ec181f1552fe4eb1d279dfddc5f881d183295db",
+    "verified_at": "2026-11-27"
   },
   "dakshineswar": {
     "coordinate_note": "Wikipedia: Dakshineswar, West Bengal, India.",
@@ -5743,9 +5819,13 @@
   "dharmapuri": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dharmapuri-1654194392_6e3e3cdfdd3337059dd5.webp",
     "file": "dharmapuri.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dharmapuri"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dharmapuri",
+    "content_type": "image/webp",
+    "sha256_download": "bcb985a0a668cee8c995e129015e68c106078f36a2da4f8091de44f06292ef76",
+    "sha256_local": "8af76e59a5d8361d5ae63a4bcd142c13a14d63a5ac786fda41db2cb42865ba28",
+    "verified_at": "2026-11-27"
   },
   "dharmasthala-manunatha-temple": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri%20Manjunatha%20Swamy%20Temple%2C%20Dharmasthala%2C%20Karnataka%2001.jpg",
@@ -6041,16 +6121,24 @@
   "dolmen-circle": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dolmen-circle-1681882425_ba6b2c2f6a90789e3cfe.webp",
     "file": "dolmen-circle.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dolmen-circle"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dolmen-circle",
+    "content_type": "image/webp",
+    "sha256_download": "867f3acd86859e471d076be68a75e3edf680ea3976d549b38127653492069079",
+    "sha256_local": "a3f778bf66f10f156eca7f0b26f85d3a9ced70486cd49dbe812e88ff5d20599a",
+    "verified_at": "2026-11-27"
   },
   "dolphins-nose": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dolphins-nose-1672902769_1609b9a6f1983788264c.webp",
     "file": "dolphins-nose.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dolphins-nose"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dolphins-nose",
+    "content_type": "image/webp",
+    "sha256_download": "21fefefd30d246a7472d09a0b94de92ce0716db4af6752bc56a2d0294c975fa8",
+    "sha256_local": "dcae4f3969441ece02dc0c0502e7e940605e264335a3e7e8ff79c50172eee319",
+    "verified_at": "2026-11-27"
   },
   "dolphins-nose-lighthouse": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Dolphin%27s_Nose_Lighthouse_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -6161,9 +6249,13 @@
   "dr-apj-abdul-kalam-memorial": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/dr-a-p-j-abdul-kalam-memorial-1656168085_21209b48884b76fb7cca.webp",
     "file": "dr-apj-abdul-kalam-memorial.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dr-apj-abdul-kalam-memorial"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/dr-apj-abdul-kalam-memorial",
+    "content_type": "image/webp",
+    "sha256_download": "e6ddeee5520e5ce5477be8f9f8d9a9cad73c416f41d1296e6e6b8b474a0f1da6",
+    "sha256_local": "8f9c7649757beb2ca713ac28a328d9f5fbaa1a1d1c5313a6c9a4f974766b35cf",
+    "verified_at": "2026-11-27"
   },
   "draksharamam-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/A_Devotee_Frieze_at_the_Bhimeswara_temple_in_Draksharamam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -6510,9 +6602,13 @@
   "elliots-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/elliots-beach-1656503428_2e88a74ef2335f8f99f7.webp",
     "file": "elliots-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/elliots-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/elliots-beach",
+    "content_type": "image/webp",
+    "sha256_download": "fa89b7d379bb86a243c00d97272216a514a4cf043ef7e7aa44917726d8dceed1",
+    "sha256_local": "1ced4312f8c1ba7e6a245302abd4dc38a56ae704ee26ff3ffcd8353cf9cdf2c2",
+    "verified_at": "2026-11-27"
   },
   "ellora-caves": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Ellora_Caves_33%28R%29_and_34%28L%29.jpg/960px-Ellora_Caves_33%28R%29_and_34%28L%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -6604,9 +6700,13 @@
   "fairy-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/fairy-falls-1672902343_2d57d6e02afc2d9e4e11.webp",
     "file": "fairy-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/fairy-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/fairy-falls",
+    "content_type": "image/webp",
+    "sha256_download": "bac9c8b2a0382210982c7b8a86d41d745ebf4c3aa5603873808f014fabc710c4",
+    "sha256_local": "4ec7a0ad98fc3a96ec5b4c6435931937259b395377e5af0bb632c24b079b92bc",
+    "verified_at": "2026-11-27"
   },
   "fakim-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/A_self_payment_vegetable_shop_at_Nagaland%2C_India.jpg/960px-A_self_payment_vegetable_shop_at_Nagaland%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -6791,9 +6891,13 @@
   "fort-st-george": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/fort-st-george-1657265031_ea246d91ed726710464c.webp",
     "file": "fort-st-george.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/fort-st-george"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/fort-st-george",
+    "content_type": "image/webp",
+    "sha256_download": "2f4d0541ad86fa7a993bf6eb03a4a3d24ec48eea50d08a8f7b11745cdd401950",
+    "sha256_local": "5bfebeb15300674608a884ff0d4e46ab08687ef3217659de6c75c3de9325e2ba",
+    "verified_at": "2026-11-27"
   },
   "fortress-of-islampur": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/banner01-3.jpg",
@@ -7059,9 +7163,13 @@
   "gandhi-memorial-museum": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/gandhi-memorial-museum-1656251863_6a06cb3cd71b7291dc30.webp",
     "file": "gandhi-memorial-museum.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gandhi-memorial-museum"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gandhi-memorial-museum",
+    "content_type": "image/webp",
+    "sha256_download": "452ba9750a30e22843f4296c23b151dbfa34c4a0dee873df98b7b0dc0cd931b0",
+    "sha256_local": "7b706999cb004692b0b463c676a336bdd9aa3c7dc2cf67c3d3cf6d414d38474e",
+    "verified_at": "2026-11-27"
   },
   "gandhi-museaum": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/july/Mahatma-Gandhi-Museum-Banner.jpg",
@@ -7143,9 +7251,13 @@
   "gangaikonda-cholapuram": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/gangaikonda-cholapuram-1653462626_d1ad072dfb78c46813de.webp",
     "file": "gangaikonda-cholapuram.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gangaikonda-cholapuram"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gangaikonda-cholapuram",
+    "content_type": "image/webp",
+    "sha256_download": "21f5436c6f2a6acf9b28e391eadfde9d11028346b689a26279f66b033a6c2a70",
+    "sha256_local": "7a27d2f7cce5541ed0e388adef3c250244501bc6f69897aa35d537bef80caf8c",
+    "verified_at": "2026-11-27"
   },
   "gangbal-lake": {
     "content_type": "image/png",
@@ -7546,9 +7658,13 @@
   "glenmorgen": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/glenmorgen-1680093249_ad637fa2b65764e76775.webp",
     "file": "glenmorgen.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/glenmorgen"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/glenmorgen",
+    "content_type": "image/webp",
+    "sha256_download": "75af4b499b39ae9fed5362d60a4647ba5d6cba6f99df194369a10a8f535e0e56",
+    "sha256_local": "a7cd7b54b0598dcdd834185ce9a34240666d5d56e7ffacdb1d9ab4c90f9060d0",
+    "verified_at": "2026-11-27"
   },
   "glory-peak": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Glory_Peak_Pfutsero.jpg/960px-Glory_Peak_Pfutsero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -7674,9 +7790,13 @@
   "golf-club": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/golf-club-1680094217_f9135dec1af487f9e32d.webp",
     "file": "golf-club.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/golf-club"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/golf-club",
+    "content_type": "image/webp",
+    "sha256_download": "56a9ff66c4ca0f441695fb4f39c39b7a7a991708caa7d96e0b05b2caed9a9a2c",
+    "sha256_local": "45c11d93d53d2a4c654aabdc31dd2b5e25d4a3f8f2b5a01045f625f7db063f10",
+    "verified_at": "2026-11-27"
   },
   "golghar-patna": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Golghar%2C_Patna%2C_Bihar.jpg/960px-Golghar%2C_Patna%2C_Bihar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -7823,9 +7943,13 @@
   "government-museum-chennai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/government-museum-chennai-1657702610_11454259b542847c9b21.webp",
     "file": "government-museum-chennai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/government-museum-chennai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/government-museum-chennai",
+    "content_type": "image/webp",
+    "sha256_download": "7d95db0f10554f414c2975c6171454429851cbdfb53601cb769f63581be03f28",
+    "sha256_local": "6e36041c3c0ab513199b3f9c283650c5e1f0672c57bf90ac622af2735e2d12f9",
+    "verified_at": "2026-11-27"
   },
   "govindaraja-swamy-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sri_Govinda_Raja_Swamy_Temple_in_Tirupati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -7888,9 +8012,13 @@
   "gudalur": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/gudalur-1657513580_2fc585cfd298d58ef9e7.webp",
     "file": "gudalur.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gudalur"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/gudalur",
+    "content_type": "image/webp",
+    "sha256_download": "eafcb162ada2ea41a77f6f76b99435d55e77dbf5e59674ddc1f2508e9e55895f",
+    "sha256_local": "c14ea207ba0571b84ca78d66f9e13d53fd60ba871e788242d4d751a731831353",
+    "verified_at": "2026-11-27"
   },
   "gudibande-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gudibande%20%2826069965140%29.jpg",
@@ -9325,9 +9453,13 @@
   "jain-circuit-ariattapatti": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/jain-circuit-ariattapatti-1678085640_b9d56685936f4027ca30.webp",
     "file": "jain-circuit-ariattapatti.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/jain-circuit-ariattapatti"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/jain-circuit-ariattapatti",
+    "content_type": "image/webp",
+    "sha256_download": "f6ed74355263732725fad665c070961ab2b45fad7d91934afee4130e5bc3d3df",
+    "sha256_local": "aa0b22606be765c39ae045bf39c2f363f7f3c9cee4d37bea9d5be29eb6b3f885",
+    "verified_at": "2026-11-27"
   },
   "jain-museum-madhuban": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20220414_140238.jpg",
@@ -9394,9 +9526,13 @@
   "jalagamparai-waterfalls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/jalagamparai-waterfalls-1677220467_f1f9921807c10c1f1cf8.webp",
     "file": "jalagamparai-waterfalls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/jalagamparai-waterfalls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/jalagamparai-waterfalls",
+    "content_type": "image/webp",
+    "sha256_download": "4c06f39430c0521c98f576fae5ebc7ffa73e970b64c3c04a8c79f18825e1e5e3",
+    "sha256_local": "724c1d1af9c5f5a2ae48003836eab3ca2cc3e9813f684ce77e4245a62e9b6d1b",
+    "verified_at": "2026-11-27"
   },
   "jalalgarh-fort": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Jalalgarh_fort_purnea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -10440,9 +10576,13 @@
   "kalugumalai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kalugumalai-1677240072_aa0ee7a4f55399abd641.webp",
     "file": "kalugumalai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kalugumalai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kalugumalai",
+    "content_type": "image/webp",
+    "sha256_download": "1bc4a272486c791c4b47c972aa3dbf4cf222dd9879c0b2a288c1267f6c974bec",
+    "sha256_local": "a6fd2cd0f34fec474eecf013b5ce12bacbd32b4f15ca8577a41e2936b700bbe9",
+    "verified_at": "2026-11-27"
   },
   "kalyana-venkateswara-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Kalyana_Venkateshwara_Swamy_Temple_And_Sri_Anjaneya_SwamyTemple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -10549,16 +10689,24 @@
   "kancheepuram": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kancheepuram-1656094320_3f77ec88eada40ee1f36.webp",
     "file": "kancheepuram.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kancheepuram"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kancheepuram",
+    "content_type": "image/webp",
+    "sha256_download": "372c4d38059ad6d597df060b91e46684a94611fa8cc65f9e240e3c196de0195a",
+    "sha256_local": "18dc61ed126ddf4d05a6c35b11f171431e631b3ca662c0a9dce8ffd7eb2a798a",
+    "verified_at": "2026-11-27"
   },
   "kanchi-kudil-kancheepuram": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kanchi-kudil-kancheepuram-1679916682_1aa2b2c11ca5c3c6cd87.webp",
     "file": "kanchi-kudil-kancheepuram.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kanchi-kudil-kancheepuram"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kanchi-kudil-kancheepuram",
+    "content_type": "image/webp",
+    "sha256_download": "aa3298b97e9f776a352bcfa4107500af098c4fb821df028d25dda2df30011b1f",
+    "sha256_local": "3bf908bbba65975884a912e3f693c123d927684b3ac60e467a5928004ef5eb60",
+    "verified_at": "2026-11-27"
   },
   "kandariya-mahadeva-temple-khajuraho": {
     "coordinate_note": "Approximate coordinates for Kandariya Mahadeva Temple in Khajuraho, Chhatarpur district.",
@@ -10744,23 +10892,35 @@
   "kanyakumari": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kanyakumari-1656091428_cf69d9a9dbec82018046.jpg",
     "file": "kanyakumari.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kanyakumari"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kanyakumari",
+    "content_type": "image/jpeg",
+    "sha256_download": "a55b00cef3bec66b121cc019722fdcd6812d63c9239b06e7be181367bfc777df",
+    "sha256_local": "365f03a9ab92ab9826e7214e2ae22191cde8a9ef0177750615316047f6a96535",
+    "verified_at": "2026-11-27"
   },
   "kanyakumari-wax-museum": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kanyakumari-wax-museum-1679916880_41b75ecd84edee5104e7.webp",
     "file": "kanyakumari-wax-museum.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kanyakumari-wax-museum"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kanyakumari-wax-museum",
+    "content_type": "image/webp",
+    "sha256_download": "ad9f6af7107a38a8b1c52e8ec75451254e6d694d0a46c2097e3f07e10c88c94f",
+    "sha256_local": "451d6d641da04b08909b6562b966a27d6bed0ca482feb2a23b2ff5d965f27913",
+    "verified_at": "2026-11-27"
   },
   "kapaleeshwarar-temple": {
     "download_url": "https://www.tamilnadutourism.com/uploads/attractions/banners/142e1a6a-6542-4acc-977d-f805252ee1ab.jpg",
     "file": "kapaleeshwarar-temple.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.com/attractions/temples/kapaleeshwarar-temple"
+    "source_page": "https://www.tamilnadutourism.com/attractions/temples/kapaleeshwarar-temple",
+    "content_type": "image/jpeg",
+    "sha256_download": "9b525c29276a2b1bde07365ef2285aa1dada710cf1caa89d56a87a30f0ac4b39",
+    "sha256_local": "ff2eb354b3cc5f0807142a5be8d4becf6ab4caee3c177733cd4515c0879046d9",
+    "verified_at": "2026-11-27"
   },
   "kapil-muni-ashram-gangasagar": {
     "coordinate_note": "Wikipedia: Gangasagar, West Bengal, India.",
@@ -10848,9 +11008,13 @@
   "karayar-dam": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/karayar-dam-1677221340_dc748c83a95b2cd4ae82.webp",
     "file": "karayar-dam.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/karayar-dam"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/karayar-dam",
+    "content_type": "image/webp",
+    "sha256_download": "dc6545cf4b8ebab112b06ff9a5cb28b93a0ecdb9eea4becde18ee1504f4143a7",
+    "sha256_local": "e8bd9414dd839017a800b11a887f9b968e951411c541c0c6905626e6ad28d79a",
+    "verified_at": "2026-11-27"
   },
   "kardola-weavers-village": {
     "content_type": "image/webp",
@@ -11056,9 +11220,13 @@
   "kattabomman-memorial-fort-panchalankurichi": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kattabomman-memorial-fort-panchalankurichi-1677248123_ef648fa46858ffd478d6.webp",
     "file": "kattabomman-memorial-fort-panchalankurichi.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kattabomman-memorial-fort-panchalankurichi"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kattabomman-memorial-fort-panchalankurichi",
+    "content_type": "image/webp",
+    "sha256_download": "8a97c3336881ad8956fa85f4e3376541957e6ed49b5307182e117b0eebf35a56",
+    "sha256_local": "377866426fc767e44389d99068fe20504a5d215f7ce6417fa1ae48785a20eb6b",
+    "verified_at": "2026-11-27"
   },
   "kau-tlabung-thenhlum": {
     "download_url": "https://mizoramtourism.com/post_images/62b89a4fa74c7_Kau%20Tlabung%20Thenhlum.jpg",
@@ -11940,16 +12108,24 @@
   "kodaikanal": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kodaikanal-1655279477_0cdce0d4e58596e4fb33.webp",
     "file": "kodaikanal.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kodaikanal"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kodaikanal",
+    "content_type": "image/webp",
+    "sha256_download": "1b7fef1d110bad1e4a55010734265c58430aa7ca461180f36a0c8208ec42b6e4",
+    "sha256_local": "7b76eb91ad3872505b99013f660fa7b06811aeb49ea02186aabf187cfffe6461",
+    "verified_at": "2026-11-27"
   },
   "kodaikanal-solar-observatory--museum": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kodaikanal-solar-observatory-museum-1680259791_9946f96261b9907f26a4.webp",
     "file": "kodaikanal-solar-observatory--museum.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kodaikanal-solar-observatory--museum"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kodaikanal-solar-observatory--museum",
+    "content_type": "image/webp",
+    "sha256_download": "3afeea574ea1331ee50709fc78bd0035370a23bc2d93c0b8b04528e553bfe298",
+    "sha256_local": "4dfb5ffd3a365e03e0558961be093d6c76a9a91c381d3c294c48fbba6a98b523",
+    "verified_at": "2026-11-27"
   },
   "kodanad-elephant-training-centre": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Abhayaranyam_Kaprikkad_IMG_20250618_115659338.jpg/960px-Abhayaranyam_Kaprikkad_IMG_20250618_115659338.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -11967,9 +12143,13 @@
   "kodiveri-dam": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kodiveri-dam-1677311412_4927a8b5e51d2b312e64.webp",
     "file": "kodiveri-dam.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kodiveri-dam"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kodiveri-dam",
+    "content_type": "image/webp",
+    "sha256_download": "764044e7b9b157aa6445c1909ff2986e198ee3fee60ec1344415c8dfe1f0d9d3",
+    "sha256_local": "55b0ce9a9d7c59c0081fb1a2003c5577327bbdd6a6c8cf48b320d0528460c47e",
+    "verified_at": "2026-11-27"
   },
   "koel-river-view-point": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20180514_161300.jpg",
@@ -12065,9 +12245,13 @@
   "kolli-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kolli-hills-1656181182_756ec5b879172b6a9eb2.webp",
     "file": "kolli-hills.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kolli-hills"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kolli-hills",
+    "content_type": "image/webp",
+    "sha256_download": "23f17b6c055ffc1131e877145db47a83650ae288a141c739cc0429d6c8957ec1",
+    "sha256_local": "8050604bb206e19354990918d3fc91ec48d228901651cf4656ca65e2970e0cd3",
+    "verified_at": "2026-11-27"
   },
   "kollur-mookambika": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kollur%20Mookambika%20Temple%2020080123.JPG",
@@ -12084,9 +12268,13 @@
   "kolukkumalai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kolukkumalai-1657895043_47aac0efce1351029324.webp",
     "file": "kolukkumalai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kolukkumalai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kolukkumalai",
+    "content_type": "image/webp",
+    "sha256_download": "0083d69b4f8eeab3ff64f817d0390f274c1431468d62b937945e7df31d324dd1",
+    "sha256_local": "6cf37a4251382baa7d2381f7f675485c5c6073858d44def05289dd4c0508e2b0",
+    "verified_at": "2026-11-27"
   },
   "komsing-bridge": {
     "download_url": "https://arunachaltourism.com/wp-content/uploads/2021/07/komsing-bridge.png",
@@ -12177,9 +12365,13 @@
   "korkai-thoothukudi": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/korkai-thoothukudi-1677239384_79e3edc50991f45515d3.webp",
     "file": "korkai-thoothukudi.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/korkai-thoothukudi"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/korkai-thoothukudi",
+    "content_type": "image/webp",
+    "sha256_download": "612b5515593a630940c3aacb03ab2cc57ae231a8e23357e126325e3f2ce734f2",
+    "sha256_local": "660ae8dd8510cd67a9caf1df22edfab586de4a3c9e9a24cbcc329c0b97ffec90",
+    "verified_at": "2026-11-27"
   },
   "kos-minar": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/kosminar_2.jpg",
@@ -12214,9 +12406,13 @@
   "kotagiri": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kotagiri-1656267681_e611938ad85e00d930cd.webp",
     "file": "kotagiri.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kotagiri"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kotagiri",
+    "content_type": "image/webp",
+    "sha256_download": "1f73a7810b046c41154ab6efb7cab9bfa576bf34441c398f9e85ddf3d59b5b30",
+    "sha256_local": "c7b1592d185c5204beabfcb306da10cf8fea28ea602ea0b088b77d0a07ac7747",
+    "verified_at": "2026-11-27"
   },
   "kotebira": {
     "creator": "Wikipedia/Wikimedia Commons contributors",
@@ -12347,9 +12543,13 @@
   "krishnagiri-dam": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/krishnagiri-dam-1677313247_6c1657208a17b9012078.webp",
     "file": "krishnagiri-dam.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/krishnagiri-dam"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/krishnagiri-dam",
+    "content_type": "image/webp",
+    "sha256_download": "07039344f2ddae30ea52a0ae73401e8d6efbe7ee0f6ddb32032772a916389544",
+    "sha256_local": "03d90a1fd68c3740cc7a7098fff56125c569c247417a6cbf069c444ef8b277f0",
+    "verified_at": "2026-11-27"
   },
   "krishnanagar-rajbari": {
     "coordinate_note": "Wikipedia: Krishnanagar, Nadia, West Bengal, India.",
@@ -12475,9 +12675,13 @@
   "kumbakarai-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kumbakarai-falls-theni-1656149565_2005d46d8a1b218932b0.webp",
     "file": "kumbakarai-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kumbakarai-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kumbakarai-falls",
+    "content_type": "image/webp",
+    "sha256_download": "11e8c883e40111624a7b753e416ab444a3255f7388c31f7e1df0e91cb320f727",
+    "sha256_local": "51f40ee13811a78f6e69dfbf6a8a7cf8108687173e65e02cbae8a5dd7c9723c1",
+    "verified_at": "2026-11-27"
   },
   "kumbhalgarh-fort": {
     "coordinate_note": "Wikipedia: Kumbhalgarh, Rajsamand, Rajasthan, India.",
@@ -12666,9 +12870,13 @@
   "kutladampatti-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/kutladampatti-falls-madurai-1659350646_4ff209f4d646dcf1843a.webp",
     "file": "kutladampatti-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kutladampatti-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/kutladampatti-falls",
+    "content_type": "image/webp",
+    "sha256_download": "2ecf19438ea71fa68a4ced721592aee32bc2ed4a6798c28e7c5daaf1f6c2c0cf",
+    "sha256_local": "8e3dd1d6e63aa934eb16bdd18c0c09347ec6e38a994b7ac717306b815a87004d",
+    "verified_at": "2026-11-27"
   },
   "kutru-forest-region": {
     "creator": "Gsrinivasarao4",
@@ -12799,9 +13007,13 @@
   "lake-boat-house": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/lake-boat-house-1678285508_713cedfecebea1c1e141.webp",
     "file": "lake-boat-house.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/lake-boat-house"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/lake-boat-house",
+    "content_type": "image/webp",
+    "sha256_download": "774a66a4093d4e4da8f33015c06528fa95052726ca60c655af0c4da2e14a545b",
+    "sha256_local": "8d8d512b57bb6ffec1357fa454d5d7b9e3cc290b844c0c71dd243b3646629a47",
+    "verified_at": "2026-11-27"
   },
   "lake-pichola": {
     "coordinate_note": "Wikipedia: Lake Pichola, Udaipur, Rajasthan, India.",
@@ -13185,9 +13397,13 @@
   "lighthouse-chennai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/lighthouse-chennai-1677298567_02780f5732fac8048d69.webp",
     "file": "lighthouse-chennai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/lighthouse-chennai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/lighthouse-chennai",
+    "content_type": "image/webp",
+    "sha256_download": "15d666d81c71507262b2e3ef519d73549cfa2e3db536f8190e62c6f144de0748",
+    "sha256_local": "9266538d1e301a96a433d3767c8542c281b7dbcd55912602816e7ed404431951",
+    "verified_at": "2026-11-27"
   },
   "limestone-cave-exploration": {
     "content_type": "image/png",
@@ -13764,9 +13980,13 @@
   "madurai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/madurai-1656092069_8a254ba1e14fabc45e09.webp",
     "file": "madurai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/madurai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/madurai",
+    "content_type": "image/webp",
+    "sha256_download": "fcd0e8ec04a416c2ea1eab2f4eca33611fe3ad859d93583e42dba67c6a075cd1",
+    "sha256_local": "9ed7218737dd8b602e8b703dc7ca0efe2ad1267eb663933d1fdf350e6bfc0e31",
+    "verified_at": "2026-11-27"
   },
   "madwa-mahal": {
     "download_url": "placeholder",
@@ -13806,16 +14026,24 @@
   "mahabalipuram": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mahabalipuram-1654870108_c538505993052d39e713.webp",
     "file": "mahabalipuram.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mahabalipuram"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mahabalipuram",
+    "content_type": "image/webp",
+    "sha256_download": "bbc165a96baf744a62ea39bd490377a0cd1696e50c7947824d75483d0efd94fc",
+    "sha256_local": "238829b44b83f279b9e7dd17160e088360d8df23d3006141a26c1a1252c03fc4",
+    "verified_at": "2026-11-27"
   },
   "mahabalipuram-lighthouse": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mahabalipuram-lighthouse-1675855640_45cb99c5b9e0188c4b9c.webp",
     "file": "mahabalipuram-lighthouse.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mahabalipuram-lighthouse"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mahabalipuram-lighthouse",
+    "content_type": "image/webp",
+    "sha256_download": "e8c5fc54af74250aaa0761315048cc6d5e9fba713fdd2efc3e4af17a162d7b6e",
+    "sha256_local": "318cdb21f5bed324ea2a05009c2692d18ddd1d41067609cbfa7f1fc1e2eccd32",
+    "verified_at": "2026-11-27"
   },
   "mahabat-khan-maqbara": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/june/Mahabat-Maqbara-.jpg",
@@ -14202,9 +14430,13 @@
   "mamallapuram-shore-temple": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mamallapuram-shore-temple-1653384258_d88d3d01bc1bbf48db9b.webp",
     "file": "mamallapuram-shore-temple.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mamallapuram-shore-temple"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mamallapuram-shore-temple",
+    "content_type": "image/webp",
+    "sha256_download": "afc30442e0470cd04dde72e27beb46269a7c14ffaf759d376cd57e3d402a05ef",
+    "sha256_local": "0885ac01ae0c9a43a8c6be9ca50a2057a741dd1ca695c1c7c4502ff888bd0081",
+    "verified_at": "2026-11-27"
   },
   "mamleshwar-temple-omkareshwar": {
     "coordinate_note": "Approximate coordinates for Mamleshwar Temple at Omkareshwar in Khandwa district.",
@@ -14219,9 +14451,13 @@
   "mammallapuram-tiger-cave": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mammallapuram-tiger-cave-1675854236_676368a0521925709f69.webp",
     "file": "mammallapuram-tiger-cave.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mammallapuram-tiger-cave"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mammallapuram-tiger-cave",
+    "content_type": "image/webp",
+    "sha256_download": "2e3c0bafc750014b2e307f0839557c92b2090b98c2d65ebf7e58db91ef1d2fa9",
+    "sha256_local": "e68b03690e22b2646c01536161bdca7b38149e07460de572a92e3d3fe877152b",
+    "verified_at": "2026-11-27"
   },
   "man-singh-palace-gwalior": {
     "coordinate_note": "Approximate coordinates for Man Singh Palace, Gwalior Fort in Gwalior district, Madhya Pradesh (district centroid used for map placement); verify on arrival.",
@@ -14458,9 +14694,13 @@
   "manimuthar-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/manimuthar-falls-1656145458_c14a65978e38a5a596b5.webp",
     "file": "manimuthar-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/manimuthar-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/manimuthar-falls",
+    "content_type": "image/webp",
+    "sha256_download": "89c6b5c3e372a20c8ded271a4c7d36e4ea51c89c1a6907831fdf90cf39e5633b",
+    "sha256_local": "6192e4f5e16a0085a4ace81184bc3bb5760ec4ab52bb6b8755dd61206749fa6f",
+    "verified_at": "2026-11-27"
   },
   "manipur-mountaineering-institute-lamdan": {
     "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Lamdan, Churachandpur, where the Mountaineering Institute is located; the institute is not mapped separately.",
@@ -14479,9 +14719,13 @@
   "manjalar-dam": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/manjalar-dam-1677246942_d36257d05cac93488c38.webp",
     "file": "manjalar-dam.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/manjalar-dam"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/manjalar-dam",
+    "content_type": "image/webp",
+    "sha256_download": "4fbfa6b4a63dfc8a13effb49576de74d698ec9308a9032f9b31db56a88306f92",
+    "sha256_local": "c01e3aac9f8c9e065c4dd8b661a6888c7e706afc10949a9f5eb09febcb58a04a",
+    "verified_at": "2026-11-27"
   },
   "manjarabad-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/In%20Manjarabad%20fort.jpg",
@@ -14511,9 +14755,13 @@
   "mannavanur-lake": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mannavanur-lake-1672911630_02b786e140e0e2cd084b.webp",
     "file": "mannavanur-lake.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mannavanur-lake"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/mannavanur-lake",
+    "content_type": "image/webp",
+    "sha256_download": "a3ac6709e5e11d68a98c51c1b528548cacbb5f83103e89b44d6d4df59ea3f824",
+    "sha256_local": "eef142fc84d85b75c73a69745a4c51673d4c7a5c608d21a99c29ce0561774695",
+    "verified_at": "2026-11-27"
   },
   "manpur-forest-landscapes": {
     "creator": "Sandiptiwa",
@@ -14620,9 +14868,13 @@
   "marina-beach": {
     "download_url": "https://www.tamilnadutourism.com/uploads/attractions/banners/3b8b2c1a-4794-4170-b522-49a8ec332d34.jpg",
     "file": "marina-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.com/attractions/beaches/marina-beach"
+    "source_page": "https://www.tamilnadutourism.com/attractions/beaches/marina-beach",
+    "content_type": "image/jpeg",
+    "sha256_download": "43b42c697d286ba1069851b6e851fa565ad93711e50fa172bf67c59a7c3dff3b",
+    "sha256_local": "9dbcd23ecc0858afdc469d97be74d1bdd5b9288eedb2fa656d97596b2af2c675",
+    "verified_at": "2026-11-27"
   },
   "marine-drive-kochi": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Ernakulam_-_Marine_Walk_Sunset.jpg/960px-Ernakulam_-_Marine_Walk_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -14706,9 +14958,13 @@
   "masinagudi": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/masinagudi-1657513731_6e94f6eac79e39c1b480.webp",
     "file": "masinagudi.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/masinagudi"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/masinagudi",
+    "content_type": "image/webp",
+    "sha256_download": "fadfd170477c8a71d3eafc403e97484f18a52589b17296d0d8b02d2fd4c79225",
+    "sha256_local": "e7a94c725d6aec6310ccae0c0ba3e1a778a5bebf50e4a9201f9c7acf0f0bd21d",
+    "verified_at": "2026-11-27"
   },
   "masroor-temple": {
     "download_url": "https://himachaltourism.gov.in/wp-content/uploads/2018/01/Masroor-Temple.jpg",
@@ -14985,9 +15241,13 @@
   "meenakshi-temple": {
     "download_url": "https://www.tamilnadutourism.com/uploads/attractions/banners/61de619f-6fba-46ed-afcd-9d0c8b91c8af.webp",
     "file": "meenakshi-temple.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.com/attractions/temples/meenakshi-amman-temple"
+    "source_page": "https://www.tamilnadutourism.com/attractions/temples/meenakshi-amman-temple",
+    "content_type": "image/webp",
+    "sha256_download": "77e71f00f82f717e663cebf25d4612f289d8f2033488bcf3a252e28986b72b12",
+    "sha256_local": "347ce2ddd21cb958e45c99d1de468b9e75bc95ec8acad20470d4a9938c370a13",
+    "verified_at": "2026-11-27"
   },
   "meenmutty-waterfalls-wayanad": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Meenmutty_Falls_Wayanad.JPG/960px-Meenmutty_Falls_Wayanad.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -15014,16 +15274,24 @@
   "megam-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/megam-falls-1656503811_bd0626113aadb1202323.webp",
     "file": "megam-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/megam-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/megam-falls",
+    "content_type": "image/webp",
+    "sha256_download": "f5a78dc21603e5a724b578c6963c432dae1782921e4f4eb663dcb6f2a952c19f",
+    "sha256_local": "fd58cdd9d6be0045d6d6a2f5729f9c46da27151ae3cd1fcb41f1bde2781bb297",
+    "verified_at": "2026-11-27"
   },
   "meghamalai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/meghamalai-1656587260_b20f2e0f1ecb56b88850.webp",
     "file": "meghamalai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/meghamalai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/meghamalai",
+    "content_type": "image/webp",
+    "sha256_download": "82fd7743dd118601c357026a532ae4d983ff030eb387a565d956598e43b751c6",
+    "sha256_local": "96977f9540c1e268de81089fdc7ac316afdfd6abcbc00fca130cbb2ea4b3e580",
+    "verified_at": "2026-11-27"
   },
   "mehrangarh-fort": {
     "coordinate_note": "Wikipedia: Mehrangarh, Jodhpur, Rajasthan, India.",
@@ -15224,9 +15492,13 @@
   "monkey-waterfalls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/monkey-waterfalls-1656150158_0ff48e1982b6f2ff7a3d.webp",
     "file": "monkey-waterfalls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/monkey-waterfalls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/monkey-waterfalls",
+    "content_type": "image/webp",
+    "sha256_download": "624646f1d3b7c1de9f83ccd804849755f3454c27c3bfc39c00c31da9ee9a8975",
+    "sha256_local": "308475293a10c23b027ade6b10d1ddbb79b6c2c5e11381fff90e079acb797bdb",
+    "verified_at": "2026-11-27"
   },
   "monoliths-lost-city-of-vangchhia": {
     "download_url": "https://mizoramtourism.com/post_images/626ba7a5d3a6e_Vangchhia%20Monoliths.jpg",
@@ -15723,16 +15995,24 @@
   "muthu-nagar-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/muthu-nagar-beach-1681881036_665ce2598fb2e76cb998.webp",
     "file": "muthu-nagar-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/muthu-nagar-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/muthu-nagar-beach",
+    "content_type": "image/webp",
+    "sha256_download": "859d489e3bfead7886e3a208fc46cf928529934c2599811458993e78299871c5",
+    "sha256_local": "85523d5d84772c83b390240bf9ccee64d23be0d1abc3896fa42836709cee3931",
+    "verified_at": "2026-11-27"
   },
   "muttukadu": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/muttukadu-1675852659_e72147ba03afc1cc94dc.webp",
     "file": "muttukadu.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/muttukadu"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/muttukadu",
+    "content_type": "image/webp",
+    "sha256_download": "f6200a1ae0203c9a7bb82e3a3db71c45281407a520946d63a5825d3710bd29de",
+    "sha256_local": "2631e67f30a2d3532feb0449b59bbfb99bb3bb1bd40beb28a219575e254c3aec",
+    "verified_at": "2026-11-27"
   },
   "mutua-museum": {
     "coordinate_note": "Coordinate reference: OpenStreetMap/Nominatim point for Andro village, Keirao Bitra, Imphal East, about 26 km from Imphal; the Mutua Museum is not mapped separately, and the four Andro sites share this village reference.",
@@ -15898,9 +16178,13 @@
   "nagore": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/nagore-1678087163_3b2eb0dfcda01e5e1d02.webp",
     "file": "nagore.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/nagore"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/nagore",
+    "content_type": "image/webp",
+    "sha256_download": "1ec4c72a649ca82cf51b7720fa1606ef458745701887e57df4a739037037230e",
+    "sha256_local": "9e247839c48ead305281a23e43bf01785f1111db78009422dc01263077472af7",
+    "verified_at": "2026-11-27"
   },
   "nagzira-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/NAGZIRA_WILDLIFE_SANCTUARY1.jpg/960px-NAGZIRA_WILDLIFE_SANCTUARY1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -16680,9 +16964,13 @@
   "nettukuppam-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/nettukuppam-beach-1657175894_3697f1a0a6619af23988.webp",
     "file": "nettukuppam-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/nettukuppam-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/nettukuppam-beach",
+    "content_type": "image/webp",
+    "sha256_download": "29bae4a95b61c7f14c84f032fd17146ddcaf78af5e179e795901dad27b09783b",
+    "sha256_local": "5c7878fbb4b07d1ef212d6704dee595c83c7acb229353d32f644625a270e4eb4",
+    "verified_at": "2026-11-27"
   },
   "new-palace-kolhapur": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Kolhapur_New_Palace_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -17051,9 +17339,13 @@
   "olaikuda-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/olaikuda-beach-1680157496_0a3c6c3430b4bfd0f3d8.webp",
     "file": "olaikuda-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/olaikuda-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/olaikuda-beach",
+    "content_type": "image/webp",
+    "sha256_download": "c66f5210cdc5418bef3c5bb551962bae838d60d629502ec8802ec3576f1d90f8",
+    "sha256_local": "042c1224f33d5ffb0facc049149bec0cbf865879932595570d359b299841d727",
+    "verified_at": "2026-11-27"
   },
   "old-badshahi-bridge": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/badshi_bridge_4-1.jpg",
@@ -17117,9 +17409,13 @@
   "ooty": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/ooty-1655457424_bca80f81e8391ebdaaca.webp",
     "file": "ooty.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/ooty"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/ooty",
+    "content_type": "image/webp",
+    "sha256_download": "9437ea91f54b76278afcade0f995b6fa734419e53db5aff96c91d9af11990ae6",
+    "sha256_local": "7a2fb518f8fc8d659ff9513271104930087f46e2e6dce9d65c93ee3aae9cadd1",
+    "verified_at": "2026-11-27"
   },
   "orang-national-park": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Bengal_Florican_%28Houbaropsis_bengalensis_bengalensis%29.jpg/960px-Bengal_Florican_%28Houbaropsis_bengalensis_bengalensis%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -17210,9 +17506,13 @@
   "pachamalai-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/pachamalai-hills-1677235108_7165e1344586d47257e7.webp",
     "file": "pachamalai-hills.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/pachamalai-hills"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/pachamalai-hills",
+    "content_type": "image/webp",
+    "sha256_download": "d67fee232c4a9caf09c0b8b382a202970990d2d69e1446c1393b67d5fca8ef81",
+    "sha256_local": "9d1152922d0a9f8eb8b8bbf3e4ab717e1626257f22041c1cea4f06fa3fb2fb8c",
+    "verified_at": "2026-11-27"
   },
   "padam-dungri-eco-tourism": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/-flora---fauna/padam-dungri-eco-tourism/Padam-Dungri-Eco-Tourism-Thumbnail.jpg",
@@ -17243,9 +17543,13 @@
   "padmanabhapuram-palace": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/padmanabhapuram-palace-1656141484_f6515d569a0b7f508740.webp",
     "file": "padmanabhapuram-palace.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/padmanabhapuram-palace"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/padmanabhapuram-palace",
+    "content_type": "image/webp",
+    "sha256_download": "78afc5593905e1fe64b843fcb9b127525a6e0a0263c2227691b26b1fceb30706",
+    "sha256_local": "a3bde8e8e6c234e81c82092cd03e3bae91a89d876969e053a315ea831011c04b",
+    "verified_at": "2026-11-27"
   },
   "padmavathi-ammavari-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Padmavathi_Ammavari_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -17403,9 +17707,13 @@
   "pambar-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/pambar-falls-1672910263_0f7f0b7af4b85cfebe65.jpg",
     "file": "pambar-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/pambar-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/pambar-falls",
+    "content_type": "image/jpeg",
+    "sha256_download": "729af9c2124651d79039c9ba9cf9896c58013429dc6edf30575e0c0f596844b7",
+    "sha256_local": "43873c1ff8f055036c504cdc72fd1e0bc36d34140e6328178ee92bee90b05442",
+    "verified_at": "2026-11-27"
   },
   "panagal-temples": {
     "coordinate_note": "Wikipedia: Panagal, Nalgonda district, Telangana, India.",
@@ -17610,9 +17918,13 @@
   "papanasam-agasthiyar-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/papanasam-agasthiyar-falls-1656145593_1c70b7a6f0f9c1945865.webp",
     "file": "papanasam-agasthiyar-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/papanasam-agasthiyar-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/papanasam-agasthiyar-falls",
+    "content_type": "image/webp",
+    "sha256_download": "73b496137f65b1d17a5270c9dfb23c1954953d790037a2cdd2121ce8eacbf35b",
+    "sha256_local": "b9f5facfc67552f29bd1af4d114164a1d7fee3ddc274c5adab3ac9a500f47f1e",
+    "verified_at": "2026-11-27"
   },
   "paradip-port-beach": {
     "content_type": "image/webp",
@@ -17737,9 +18049,13 @@
   "parsons-valley-reservoir": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/parsons-valley-reservoir-1678285041_85e957a82246c3f592ba.webp",
     "file": "parsons-valley-reservoir.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/parsons-valley-reservoir"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/parsons-valley-reservoir",
+    "content_type": "image/webp",
+    "sha256_download": "6376ea772897773cbae989c7032b080b6599ddb97de81f90018511e0aa527011",
+    "sha256_local": "9af117659f9e599b6156dc19045a6f82c73912110e202f7e20a91fce97438659",
+    "verified_at": "2026-11-27"
   },
   "partition-museum": {
     "coordinate_note": "Wikidata: Q30595186, Punjab, India.",
@@ -18437,16 +18753,24 @@
   "poombarai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/poombarai-1657515151_dd3dd2972e56e5be9112.webp",
     "file": "poombarai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/poombarai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/poombarai",
+    "content_type": "image/webp",
+    "sha256_download": "a6bf8f5e10d7bed7f1e0384ce1fc8f7652d24bd5f961b1f7a478b880481b5b53",
+    "sha256_local": "42be6fec6571a1f43d9a045b3a0a6376d9dec9c05f5049815ed0bad241b1a2e4",
+    "verified_at": "2026-11-27"
   },
   "poompuhar-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/poompuhar-beach-1657995241_e16565ab832e1ee0c8a7.webp",
     "file": "poompuhar-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/poompuhar-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/poompuhar-beach",
+    "content_type": "image/webp",
+    "sha256_download": "0c20f270ff648775abcb7c8614cf498b9b26816e7d4b7d314ba0af9186db3ad5",
+    "sha256_local": "2a36192e0204ddb61f6d39e9b46713dc5ae7ffccf00184b1138ab7d7ba9923b3",
+    "verified_at": "2026-11-27"
   },
   "poovar-island": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Boats_at_Poovar_Island.jpg/960px-Boats_at_Poovar_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -18609,9 +18933,13 @@
   "pulicat-lake": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/pulicat-lake-1656317886_f61f043c4a7ddf446926.webp",
     "file": "pulicat-lake.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/pulicat-lake"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/pulicat-lake",
+    "content_type": "image/webp",
+    "sha256_download": "d51218a78fdcc7106f0a5b28bc178be0a5684c3f4192a25ca024d753a558425e",
+    "sha256_local": "0b19bd188b33863d00966ae7b16ea93cb57cd7866ca0b42ac7c3e83d02e9e09f",
+    "verified_at": "2026-11-27"
   },
   "pulicat-lake-nelapattu": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Greater_flamingo_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -18928,9 +19256,13 @@
   "rail-museum-chennai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/rail-museum-chennai-1677299283_d803dded5b0c076c8e1d.webp",
     "file": "rail-museum-chennai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/rail-museum-chennai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/rail-museum-chennai",
+    "content_type": "image/webp",
+    "sha256_download": "df19901d935653972aee88bbe3022515b035ff060e398db10fdab3f185301ce8",
+    "sha256_local": "d4232b8547c530d3403c6259b4cae00cb16e6b87817fac5c8f3688602772270d",
+    "verified_at": "2026-11-27"
   },
   "raimona-national-park": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Close_wing_sweat_sucking_position_of_Parantica_melaneus_%28Cramer%2C_%281775%29%29_-_Chocolate_Tiger.jpg/960px-Close_wing_sweat_sucking_position_of_Parantica_melaneus_%28Cramer%2C_%281775%29%29_-_Chocolate_Tiger.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -19313,9 +19645,13 @@
   "rameswaram": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/rameswaram-1655457953_09de320de48b98dece1a.webp",
     "file": "rameswaram.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/rameswaram"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/rameswaram",
+    "content_type": "image/webp",
+    "sha256_download": "d63d245156d00deb3b47b06b4dcd4fed87eb5397ce8d469de6ea3957f2b93be9",
+    "sha256_local": "0020ea8967e81d1a129971e8b5cf6d74af3d58b5dc0c73fda93cc789a2f84941",
+    "verified_at": "2026-11-27"
   },
   "ramgarh-hills": {
     "creator": "Wikimedia Commons contributor",
@@ -19972,9 +20308,13 @@
   "rose-garden-kodaikanal": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/rose-garden-kodaikanal-1677311959_2fc1adf33e99c8045ca4.webp",
     "file": "rose-garden-kodaikanal.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/rose-garden-kodaikanal"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/rose-garden-kodaikanal",
+    "content_type": "image/webp",
+    "sha256_download": "d87c47fc26191a80823d9dddb0a740ae2ddf23b4e4a016f0468af9579d5364d1",
+    "sha256_local": "03cbdf24defc675e80c2779ac4273c63236ff3eb1062c22f3328c943a7246d05",
+    "verified_at": "2026-11-27"
   },
   "roshan-chirag-tomb": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/pinjore_pic-2.jpg",
@@ -20198,9 +20538,13 @@
   "sadras-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/sadras-beach-fort-1680158382_e90ce937fb435e8c8318.webp",
     "file": "sadras-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/sadras-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/sadras-beach",
+    "content_type": "image/webp",
+    "sha256_download": "7869501a6cb4e65495835d8da5de8c8de2265965b0e9e4279b2e58a231f1c703",
+    "sha256_local": "f66a14262872da4aba4cf4b04cefef23924fd51026242e13ef8094fbcd846ef3",
+    "verified_at": "2026-11-27"
   },
   "sadu-chiru-waterfall": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for the Sadu Chiru waterfall area near the Tiddim Road; official pages disagree on whether the site is in Senapati or Kangpokpi district.",
@@ -20320,16 +20664,24 @@
   "salem": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/salem-1656095465_79fa44b9bf2321cb91ca.webp",
     "file": "salem.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/salem"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/salem",
+    "content_type": "image/webp",
+    "sha256_download": "5afbfae867740ff9e21bbe4ef259771f502264a2bbb3feb77b8ae82dfbe2284a",
+    "sha256_local": "41befcf31567fb50f49cf73e7beec641b9f51112808807cccd16ecb6e6b7397e",
+    "verified_at": "2026-11-27"
   },
   "salim-ali-center-for-ornithology-and-natural-history": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/salim-ali-center-for-ornithology-and-natural-history-1681270640_8fe4c1158bbabf232861.webp",
     "file": "salim-ali-center-for-ornithology-and-natural-history.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/salim-ali-center-for-ornithology-and-natural-history"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/salim-ali-center-for-ornithology-and-natural-history",
+    "content_type": "image/webp",
+    "sha256_download": "6487f1e2ee1009d815aa4d1c6a352dff1d6a1bb7359f72e18157d769c4995e62",
+    "sha256_local": "3e5d116915fb5971566c945046b1420578b88309efb4bbdfd94400ba05873cf9",
+    "verified_at": "2026-11-27"
   },
   "salim-singh-ki-haveli": {
     "coordinate_note": "Wikipedia: Salim Singh Ki Haveli, Jaisalmer, Rajasthan, India.",
@@ -20398,9 +20750,13 @@
   "samanar-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/samanar-hills-1657266334_42dcf389833104ccc3fb.webp",
     "file": "samanar-hills.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/samanar-hills"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/samanar-hills",
+    "content_type": "image/webp",
+    "sha256_download": "9a3e8b6cfff107efa890da5b905958fadf87bb316a1ba24b2b6d4f2503418068",
+    "sha256_local": "b5a3892e6d652e0f1e78e552bc02647864c3b96e5be4e2d86d01eb0b32961726",
+    "verified_at": "2026-11-27"
   },
   "samdruptse-hill": {
     "coordinate_note": "Coordinate reference: OpenStreetMap natural=peak node for Samdruptse Hill; the generic Namchi town point was rejected.",
@@ -20538,9 +20894,13 @@
   "sanjeevi-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/sanjeevi-hills-1656234853_a55eac0b821081a35d2d.webp",
     "file": "sanjeevi-hills.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/sanjeevi-hills"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/sanjeevi-hills",
+    "content_type": "image/webp",
+    "sha256_download": "fd767bc440efa4b96568938959e86ebf8c3da42fafb557bfa642691c03db1eb7",
+    "sha256_local": "e951b4442818259aeea3719d581b23bcd9a5b3ec0d15ba290c54809843683678",
+    "verified_at": "2026-11-27"
   },
   "sankat-mochan-temple": {
     "creator": "Matt Zimmerman",
@@ -21340,9 +21700,13 @@
   "shembaganur-museum-of-natural-history": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/shembaganur-museum-of-natural-history-1680515431_a00a66133daf64140014.webp",
     "file": "shembaganur-museum-of-natural-history.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/shembaganur-museum-of-natural-history"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/shembaganur-museum-of-natural-history",
+    "content_type": "image/webp",
+    "sha256_download": "b0df91c288fe008d8fde06b6d5c81bf7595569c9ff3d9540eb13ba0af71cbd58",
+    "sha256_local": "351c4f9417b86b1556d6d1120a1f29cc1ce94636acb8d9031ba7fecafe768725",
+    "verified_at": "2026-11-27"
   },
   "sheorinarayan-sangam": {
     "creator": "Wikipedia/Wikimedia Commons contributors",
@@ -21817,9 +22181,13 @@
   "silent-valley-view": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/silent-valley-view-1678282213_989bd8b52f9f65fb8c4b.webp",
     "file": "silent-valley-view.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/silent-valley-view"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/silent-valley-view",
+    "content_type": "image/webp",
+    "sha256_download": "7541cc4150510520f4b16853fc3f4bbd0c6f153f3c19ebd08807b909b42cb0fe",
+    "sha256_local": "65290c7b655995ef9aebc9f706fd0d24c4d5971eaa2e348916ce279d9a4f8feb",
+    "verified_at": "2026-11-27"
   },
   "silghat": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/%E0%A6%B6%E0%A6%BF%E0%A6%B2%E0%A6%98%E0%A6%BE%E0%A6%9F%E0%A7%B0_%E0%A6%AA%E0%A7%B0%E0%A6%BE_%E0%A6%A6%E0%A7%83%E0%A6%B6%E0%A7%8D%E0%A6%AF%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B9%E0%A7%8B%E0%A7%B1%E0%A6%BE_%E0%A6%AC%E0%A7%8D%E0%A7%B0%E0%A6%B9%E0%A7%8D%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%A4%E0%A7%8D%E0%A7%B0.jpg/960px-%E0%A6%B6%E0%A6%BF%E0%A6%B2%E0%A6%98%E0%A6%BE%E0%A6%9F%E0%A7%B0_%E0%A6%AA%E0%A7%B0%E0%A6%BE_%E0%A6%A6%E0%A7%83%E0%A6%B6%E0%A7%8D%E0%A6%AF%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B9%E0%A7%8B%E0%A7%B1%E0%A6%BE_%E0%A6%AC%E0%A7%8D%E0%A7%B0%E0%A6%B9%E0%A7%8D%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%A4%E0%A7%8D%E0%A7%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -21854,16 +22222,24 @@
   "silver-beach-cuddalore": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/silver-beach-cuddalore-1677301057_d08badf0594f4d699deb.webp",
     "file": "silver-beach-cuddalore.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/silver-beach-cuddalore"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/silver-beach-cuddalore",
+    "content_type": "image/webp",
+    "sha256_download": "4447ff4aa0dceb5c959614d5d2be417bc48339903de6c6af1836c60ad083564b",
+    "sha256_local": "f0c2d54ddbe41d43aecd2f4958d7457cbdc5a69d90fb85881e4ce4e5a0dec65e",
+    "verified_at": "2026-11-27"
   },
   "silver-cascade-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/silver-cascade-falls-1672903831_5b1df13d0274818afc11.jpg",
     "file": "silver-cascade-falls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/silver-cascade-falls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/silver-cascade-falls",
+    "content_type": "image/jpeg",
+    "sha256_download": "53ee26fbce2567563b1b0c497ef57fcb3c72b5965aff85c1042d4f0760c28415",
+    "sha256_local": "b195fb481ec4ba7444c729858f4e5f26d01d1408be21ef8862a05010754bba2b",
+    "verified_at": "2026-11-27"
   },
   "simaria-ghat": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Simaria_ghat_new.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -22001,9 +22377,13 @@
   "sirumalai": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/sirumalai-1657012957_fedf8ff9a41be972a03f.webp",
     "file": "sirumalai.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/sirumalai"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/sirumalai",
+    "content_type": "image/webp",
+    "sha256_download": "acc9b99df0b1bdcb5269059145a40bcc9ed38796e6853ad7837b80d1a4d148c9",
+    "sha256_local": "70213434e95196f8f1c730d32dcf6654bd802b0f09025e5a55bd30e0075b8348",
+    "verified_at": "2026-11-27"
   },
   "sisodia-rani-garden": {
     "coordinate_note": "Wikipedia: Sisodia Rani Bagh, Jaipur, Rajasthan, India.",
@@ -22884,9 +23264,13 @@
   "suruli-falls-theni": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/suruli-falls-theni-1656149959_3f3cae5ac9c0665d201e.webp",
     "file": "suruli-falls-theni.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/suruli-falls-theni"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/suruli-falls-theni",
+    "content_type": "image/webp",
+    "sha256_download": "0936af73a8afe7317a50dfd43bcedfedf637ca5957904e2efe2449d34233cfb0",
+    "sha256_local": "b71f4920e498c85f5d56a60779e99d44c71087340885d47b46ca54081d10edc5",
+    "verified_at": "2026-11-27"
   },
   "suryapet": {
     "coordinate_note": "Wikipedia: Suryapet, Telangana, India.",
@@ -23402,9 +23786,13 @@
   "tea-museum--tea-factory-ooty": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tea-museum-tea-factory-ooty-1680160455_13931b804d83f6d83472.webp",
     "file": "tea-museum--tea-factory-ooty.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tea-museum--tea-factory-ooty"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tea-museum--tea-factory-ooty",
+    "content_type": "image/webp",
+    "sha256_download": "dadc3a238a787e240daee7b00453548884350f005eb30d0b586f0a2b159d8f19",
+    "sha256_local": "6e967e38c5a32ff0c18ff131c01d4df0a2ee53774a47ff14a704d36d3972e28a",
+    "verified_at": "2026-11-27"
   },
   "tehri-dam": {
     "coordinate_note": "Official tourism page coordinate was not usable for this site; this point is from Google Maps result for Tehri Dam, Tehri Garhwal (https://www.google.com/maps/search/?api=1&query=Tehri+Dam%2C+Tehri+Garhwal%2C+Uttarakhand).",
@@ -23494,9 +23882,13 @@
   "thalaiyar-waterfalls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/thalaiyar-waterfalls-1656154472_68a14c5f3b47a6019c4b.webp",
     "file": "thalaiyar-waterfalls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thalaiyar-waterfalls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thalaiyar-waterfalls",
+    "content_type": "image/webp",
+    "sha256_download": "a9a98392a8885f7f1f5a5809fb2b15b5bda42b6ba8a46350491453e97fdbfb6b",
+    "sha256_local": "ec1aab385ca12fd451adb46bb61243b9155fc50f6cbbd5daec64b0411d114703",
+    "verified_at": "2026-11-27"
   },
   "thana-bhawan": {
     "creator": "Anang M",
@@ -23548,9 +23940,13 @@
   "thanjavur": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/thanjavur-1656094786_a4f402f8195d654aea2e.webp",
     "file": "thanjavur.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thanjavur"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thanjavur",
+    "content_type": "image/webp",
+    "sha256_download": "54a352dfbc8dafe3541ec1a263dcecf7ad8a405a8e1b3178d2d654d859793cdd",
+    "sha256_local": "cb707a2dffe259d27682bf0ae0233cddc552716b78e212cac85ea27194145b6a",
+    "verified_at": "2026-11-27"
   },
   "tharon-cave": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Tharon village, about 27 km from Tamenglong town; the cave entrance is not mapped separately.",
@@ -23623,9 +24019,13 @@
   "the-cardamom-hills-kodaikanal": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/the-cardamom-hills-kodaikanal-1657516597_881b7105c4614958cca0.webp",
     "file": "the-cardamom-hills-kodaikanal.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/the-cardamom-hills-kodaikanal"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/the-cardamom-hills-kodaikanal",
+    "content_type": "image/webp",
+    "sha256_download": "cf6ccd0d83200e2d7a8249a3cfcf464e99e615efacd4dac429aec3cb46bf365e",
+    "sha256_local": "48c61ade7899b875d00a0d53a45554f7dbd678ddfb97d1da48c39a795948e3bb",
+    "verified_at": "2026-11-27"
   },
   "the-church-of-our-lady-of-piety": {
     "content_type": "image/jpeg",
@@ -23702,9 +24102,13 @@
   "the-nilgiri-mountain-railway": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/the-nilgiri-mountain-railway-1653904566_39d2e58ed7221faa8057.webp",
     "file": "the-nilgiri-mountain-railway.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/the-nilgiri-mountain-railway"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/the-nilgiri-mountain-railway",
+    "content_type": "image/webp",
+    "sha256_download": "e678dea944a9a7737250e0fc369821e4ac8868f105f2ef5bd053941cd7bce325",
+    "sha256_local": "f658bd4cf2780dea0e5865305cc83618c2685721732c16313e16a83c431f2397",
+    "verified_at": "2026-11-27"
   },
   "the-original-babri-masjid": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/dargah_pic2.jpg",
@@ -23714,9 +24118,13 @@
   "the-palamathi-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/the-palamathi-hills-1656159445_4c55cbebfa5611beb3b8.webp",
     "file": "the-palamathi-hills.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/the-palamathi-hills"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/the-palamathi-hills",
+    "content_type": "image/webp",
+    "sha256_download": "d75ddd70a31224b154012e84ae09437d4bc9287ce3835f66f551ef5965eadfc3",
+    "sha256_local": "1549671f63fedb10100f1da01b1b79c63feaa5225a9f431b56c046615974720a",
+    "verified_at": "2026-11-27"
   },
   "the-rajbari-bawali": {
     "coordinate_note": "Wikipedia: Bawali, West Bengal, India.",
@@ -23746,9 +24154,13 @@
   "thengapattinam-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/thengapattinam-beach-1656145481_6053044215b353dcb9b1.webp",
     "file": "thengapattinam-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thengapattinam-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thengapattinam-beach",
+    "content_type": "image/webp",
+    "sha256_download": "cddc30f75f87eed366fd8194b2a0395eb5b1968fcc6d3b6286f4d041e44fc316",
+    "sha256_local": "47368cf70f1dbe5316d321b4ae0505ac9e81ea5d6e7308e004d413c5b333255f",
+    "verified_at": "2026-11-27"
   },
   "thenmala-eco-tourism": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Advantage_Zone_%40_Thenmala_Eco_Tourism_-_panoramio.jpg/960px-Advantage_Zone_%40_Thenmala_Eco_Tourism_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -23809,9 +24221,13 @@
   "thirumalai-nayak-palace": {
     "download_url": "https://www.tamilnadutourism.com/uploads/attractions/banners/169c0cfb-2c1d-4608-a747-df7afcdae287.webp",
     "file": "thirumalai-nayak-palace.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.com/attractions/forts/thirumalai-nayakar-mahal"
+    "source_page": "https://www.tamilnadutourism.com/attractions/forts/thirumalai-nayakar-mahal",
+    "content_type": "image/webp",
+    "sha256_download": "0dcd82a9c690353ce34c717719cb4342f54f351a84599ca30bb3f6f50e158a4d",
+    "sha256_local": "263d3420ea942c261cf2dd31d75f29fb3566072c98994d8ab996634658cd2380",
+    "verified_at": "2026-11-27"
   },
   "thirumandhamkunnu-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Theyyam%402024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -23831,9 +24247,13 @@
   "thiruvanmiyur-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/thiruvanmiyur-beach-1656504132_f41b6605537f2931f14e.webp",
     "file": "thiruvanmiyur-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thiruvanmiyur-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/thiruvanmiyur-beach",
+    "content_type": "image/webp",
+    "sha256_download": "d4591656e00c22964b172df39aea5072411d0120d1d7472d44c273302a4cab10",
+    "sha256_local": "a2fc2efef891ff27f9e69ea188a541ddb8f77370f18a33ed21bc7b6f3a4c97b9",
+    "verified_at": "2026-11-27"
   },
   "thol-lake-sanctuary": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/bird-watching-sites/thol-lake-sanctuary/Thol-lake-Sanctuary-Thumbnail.jpg",
@@ -23956,9 +24376,13 @@
   "tiger-hill": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tiger-hill-1680516066_82fda1e9aff980889234.webp",
     "file": "tiger-hill.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tiger-hill"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tiger-hill",
+    "content_type": "image/webp",
+    "sha256_download": "48a08dd9939ab82e54e55e332d6d60948000742f7fd351ee0f429f88f9cb43f5",
+    "sha256_local": "7d884c741a6fdb7e754ce776d45b4ba27eecd04fc693db229a2520ad47708045",
+    "verified_at": "2026-11-27"
   },
   "tiger-hill-kargil": {
     "content_type": "image/jpeg",
@@ -24084,9 +24508,13 @@
   "tiruchirappalli-rockfort-temple": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tiruchirappalli-rockfort-temple-1656310214_e41c5f73a567e47b9dcb.webp",
     "file": "tiruchirappalli-rockfort-temple.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tiruchirappalli-rockfort-temple"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tiruchirappalli-rockfort-temple",
+    "content_type": "image/webp",
+    "sha256_download": "8284d74f180d9ff12ab9b6e11275a4e1dd0775291010fde2901c284911178c5c",
+    "sha256_local": "80293008d9911903c17e3808376bc5957ed35a7f1275c6f9f6f7ebd9cc21743c",
+    "verified_at": "2026-11-27"
   },
   "tirumala-venkateswara-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/A_View_of_Tirumala_Venkateswara_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -24245,9 +24673,13 @@
   "tranquebar": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/tranquebar-1678086444_b33c554309cf0e63b29b.webp",
     "file": "tranquebar.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tranquebar"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/tranquebar",
+    "content_type": "image/webp",
+    "sha256_download": "29386b7d72a95d9ef6c08b86aad739956b23918e54afcf18f93352593014ff93",
+    "sha256_local": "a66550a190f637a418be9291be96b25a60ef5df3521ce0426b178a65749deaf7",
+    "verified_at": "2026-11-27"
   },
   "tribal-art-and-craft-centres": {
     "creator": "Sushilsakhuja",
@@ -24883,9 +25315,13 @@
   "vaidehi-waterfalls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/vaidehi-waterfalls-1656154174_8efe7f371759b0ae858a.webp",
     "file": "vaidehi-waterfalls.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vaidehi-waterfalls"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vaidehi-waterfalls",
+    "content_type": "image/webp",
+    "sha256_download": "d1cebc576cdeeada63141cd0856474995e61b010a998e1ac6d742f49f003fa82",
+    "sha256_local": "0e9ed682f1431ded6e2dbbc57a00678dad2af4a083f775602908300de1f3ee78",
+    "verified_at": "2026-11-27"
   },
   "vaikom-mahadeva-temple": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/009262022_Vaikom_Mahadeva_temple_aerial_view%2C_Kottayam_Kerala_012.jpg/960px-009262022_Vaikom_Mahadeva_temple_aerial_view%2C_Kottayam_Kerala_012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -25067,9 +25503,13 @@
   "vattakottai-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/vattakottai-beach-1657867922_f7c9de132c70243b8f98.webp",
     "file": "vattakottai-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vattakottai-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vattakottai-beach",
+    "content_type": "image/webp",
+    "sha256_download": "24c0b9edd3ee102d49f2da67df98329956c7df921b8943a08449d5e772bd2929",
+    "sha256_local": "3f803b7785615aa0adc20a2a5bde42d8f9ad6f5d9556a2b79a9eaa7caa4c22d1",
+    "verified_at": "2026-11-27"
   },
   "vazhachal-waterfalls": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Athirappilly_Waterfalls_in_2010_January_-_View_from_Top_01.jpg/960px-Athirappilly_Waterfalls_in_2010_January_-_View_from_Top_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -25110,9 +25550,13 @@
   "veeranam-lake": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/veeranam-lake-1656183940_665e4e77152dbd7b968a.webp",
     "file": "veeranam-lake.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/veeranam-lake"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/veeranam-lake",
+    "content_type": "image/webp",
+    "sha256_download": "b83d85775f52374275a43d2d104ae6d5c8b354879c6e52b83aee22bdaf77a004",
+    "sha256_local": "89eecfc7d344e40ad072286d9818408b06110b45ff66ddbf332be32b7374632c",
+    "verified_at": "2026-11-27"
   },
   "veeranarayana-temple-gadag": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/12th%20century%20Veeranarayana%20temple%2C%20Gadag%2C%20Karnataka%20India%20-%2008.jpg",
@@ -25122,9 +25566,13 @@
   "velankanni": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/velankanni-1655213769_420095fbcc3cf18a2ffe.webp",
     "file": "velankanni.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/velankanni"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/velankanni",
+    "content_type": "image/webp",
+    "sha256_download": "82a29774337b0bf1d8f3408f843236f6a220ce6179ce98c4350f4a76d62e206d",
+    "sha256_local": "287b257797069626eb44f52814700207f1e08b7097226d16c15ff263753ca6bb",
+    "verified_at": "2026-11-27"
   },
   "velavadar-blackbuck-national-park": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/velavadar-blackbuck-national-park/Velavadar-Blackbuck-National-Park-Banner.jpg",
@@ -25135,9 +25583,13 @@
   "vellore-fort": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/vellore-fort-1656160538_62debb42d3702725aa57.webp",
     "file": "vellore-fort.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vellore-fort"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vellore-fort",
+    "content_type": "image/webp",
+    "sha256_download": "c0aa51599c8aef1d828e54c895fb47836f47b82631afc22dfb02b1ec72e3eb7b",
+    "sha256_local": "3ada78bb3701821c584ace2fbc2837c1cc7c4cb8d12d792a2451c1291f03736e",
+    "verified_at": "2026-11-27"
   },
   "vembanad-lake": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Thanneermukkom_Bund.JPG/960px-Thanneermukkom_Bund.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -25194,9 +25646,13 @@
   "vgp-golden-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/vgp-golden-beach-1657265111_607ab68302dabca3dd84.webp",
     "file": "vgp-golden-beach.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vgp-golden-beach"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vgp-golden-beach",
+    "content_type": "image/webp",
+    "sha256_download": "0419a21b0061d0683c94d5a42bd1a041ef1cf83e4ace4c9b585d1bc2d09e5e00",
+    "sha256_local": "438c53be70b8d694e605d520c266bec956188393b6cf9dcecf5b79d0ba2b2b92",
+    "verified_at": "2026-11-27"
   },
   "vibhuti-bhushan-house": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_175459.jpg",
@@ -25340,9 +25796,13 @@
   "villoondi-theertham": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/villoondi-theertham-1657264627_0eb7342b78c17790ce2e.webp",
     "file": "villoondi-theertham.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/villoondi-theertham"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/villoondi-theertham",
+    "content_type": "image/webp",
+    "sha256_download": "a794eb3cbaf99db9d478d07964f63f65943f9efc0f2dee99049cb0fd8726b608",
+    "sha256_local": "37c87d48fe8444f23db6135e9310437967140e199f2cfae851661bc35691a2ec",
+    "verified_at": "2026-11-27"
   },
   "vindhyachal": {
     "creator": "Ramshankaryadav",
@@ -25434,9 +25894,13 @@
   "vivekananda-house-and-museum": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/vivekananda-house-and-museum-1657264976_17ad4f8d674288169425.webp",
     "file": "vivekananda-house-and-museum.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vivekananda-house-and-museum"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/vivekananda-house-and-museum",
+    "content_type": "image/webp",
+    "sha256_download": "1d2e6a01b549a7c0db45aaa87e2adebb31a72b205c5386c81779581abf091688",
+    "sha256_local": "11f470a2c816d0cd3ff6863aed236b47355faa2b00aa6c9894098d925b42293a",
+    "verified_at": "2026-11-27"
   },
   "vivekananda-sarovar": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swami%20Vivekanada%27s%20Statue%20at%20Vivekanand%20Sarovar.jpg?width=800",
@@ -25628,9 +26092,13 @@
   "wax-museum": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/wax-museum-1672998059_27b74cc257ab11659334.webp",
     "file": "wax-museum.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/wax-museum"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/wax-museum",
+    "content_type": "image/webp",
+    "sha256_download": "0ff70d6565532d9e24ef1ac3f8274a4ee5d8842c458cc4cf8ba3dcb40e6c0c5a",
+    "sha256_local": "9579911449c3003833398dc21849818dd9efdc529b6bfc6605f5e99b08c17ff2",
+    "verified_at": "2026-11-27"
   },
   "wei-sawdong-falls": {
     "download_url": "",
@@ -25806,16 +26274,24 @@
   "yelagiri-hills": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/yelagiri-hills-1656160257_8e3fa43217b820f554dc.webp",
     "file": "yelagiri-hills.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/yelagiri-hills"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/yelagiri-hills",
+    "content_type": "image/webp",
+    "sha256_download": "7d729291cdc29f5a2b30de5246eab941416af38cbcae7cfc3f30f7df317a001c",
+    "sha256_local": "43ba91fdb2c0097a828f18924040278165d82c4b63a3667060944d153c656be5",
+    "verified_at": "2026-11-27"
   },
   "yelagiri-lake": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/yelagiri-lake-1656160050_1544bd77d6198ab55273.webp",
     "file": "yelagiri-lake.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/yelagiri-lake"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/yelagiri-lake",
+    "content_type": "image/webp",
+    "sha256_download": "9e776ea8bff4a1143924f668ae2f51846517c86dd1bb1d7c71c7a0b50c4f577f",
+    "sha256_local": "a7bd187fbda3acf80ab16b5beb475f11cd412a22adde58ae9daecafbb97e12d7",
+    "verified_at": "2026-11-27"
   },
   "yeoor-hills": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/A_local_kid_in_Yeoor_Hills_%2849315755903%29.jpg/960px-A_local_kid_in_Yeoor_Hills_%2849315755903%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -25825,9 +26301,13 @@
   "yercaud": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/yercaud-1656162076_58df3c22d9aa0410a913.webp",
     "file": "yercaud.jpg",
-    "note": "Official Tamil Nadu Tourism destination image; verified exact.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Tamil Nadu Tourism",
-    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/yercaud"
+    "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/yercaud",
+    "content_type": "image/webp",
+    "sha256_download": "36cb4aba6e93602675edd7a283d669001fd09a27240873760490248653ee7aa2",
+    "sha256_local": "4c8b28ec6b78a8f51d464eacaf7fa4d8e6efd44f5ffcedfd0e0e03986005078b",
+    "verified_at": "2026-11-27"
   },
   "yingkiong": {
     "download_url": "https://arunachaltourism.com/wp-content/uploads/2021/07/yingkiong.jpg",
