@@ -1,4 +1,22 @@
 {
+  "lakshadweep.jpg": {
+    "slug": "lakshadweep-state-cover",
+    "source_page": "https://www.incredibleindia.gov.in/en/lakshadweep",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/2-the-coral-reefs-kavaratti-lakshadweep-state-hero?qlt=82&ts=1726667597872",
+    "page_status": 200,
+    "image_status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 280035,
+    "download_sha256": "078eaf692c2f8f0238e2437aad2dcb71392e4982fddb45a08ce518bcdd1d16f2",
+    "local_sha256": "234cb72d5191bf62032b62e779f66c4e542b5bcdf0214ed5540fe1111c478f6d",
+    "image_size": [
+      1280,
+      720
+    ],
+    "file": "lakshadweep.jpg",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally."
+  },
   "odisha.jpg": {
     "slug": "odisha-state-cover",
     "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/sri-jagannath-temple",

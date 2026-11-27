@@ -195,9 +195,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Agam_Kuan_-_Patna_(1).jpg"
   },
   "agatti-island-lagoon": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agatti_Airstrip.jpg",
-    "file": "Agatti_Airstrip.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Agatti_Airstrip.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2018/03/2018031533.jpg",
+    "file": "agatti-island-lagoon.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Lakshadweep Administration, Government of India",
+    "sha256_download": "9537ba24068c16b46ef478572233e4ca6aef061ffc0b354931d6fd13c8c79bc0",
+    "sha256_local": "f03e4a3a190174d680033ff47209448d5228a3d78322932f4958061533b5e378",
+    "source_page": "https://lakshadweep.gov.in/tourist-place/agatti"
   },
   "agni-theertham-beach": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/agni-theertham-beach-1656502937_91425150d5d4e1e8b260.webp",
@@ -1946,9 +1951,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_Bangalore_Palace_and_Palace_Grounds_%282%29.jpg"
   },
   "bangaram-atoll": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg",
-    "file": "A_beach_side_resort_at_Kadmat_Island,_Lakshadweep.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:A_beach_side_resort_at_Kadmat_Island,_Lakshadweep.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2018/03/2018031560.jpg",
+    "file": "bangaram-atoll.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Lakshadweep Administration, Government of India",
+    "sha256_download": "afa7926b6ce3669e3b1cd21ec35b723620b99f07bfd5a6280c829874c425204e",
+    "sha256_local": "42b8d3da7d70eca91cc8fb4182854b566c61f5241342abda5a83b4ac932bec39",
+    "source_page": "https://lakshadweep.gov.in/tourist-place/bangaram"
   },
   "bangla-pui": {
     "download_url": "https://mizoramtourism.com/post_images/626bbcc1b265a_Bangla%20Pui.jpg",
@@ -10119,9 +10129,14 @@
     "source_page": "https://www.gujarattourism.com/central-zone/bharuch/kadia-dungar-caves.html"
   },
   "kadmat-island-diving": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg",
-    "file": "A_beach_side_resort_at_Kadmat_Island,_Lakshadweep.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:A_beach_side_resort_at_Kadmat_Island,_Lakshadweep.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2018/03/2018031566-1.jpg",
+    "file": "kadmat-island-diving.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Lakshadweep Administration, Government of India",
+    "sha256_download": "0e8324fee54cc2ad42246c277d15e9ab6871f7970f062100a5a92790662c166d",
+    "sha256_local": "dd3e33434c0c9260b00704f899fa9c99c3aed0f614ae64b2d4e577e22aca356f",
+    "source_page": "https://lakshadweep.gov.in/tourist-place/kadmath"
   },
   "kafni-glacier": {
     "coordinate_note": "Coordinate reference: Google Maps place Kafni Glacier, Uttarakhand 263633 (https://www.google.com/maps/place/?q=place_id:ChIJG03k2V8epzkRWWAxIPjqeBY).",
@@ -10401,6 +10416,16 @@
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/kalpana_chawla_3.jpg",
     "file": "kalpana_chawla_3.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/kalpana-chawla-memorial-planetarium/"
+  },
+  "kalpeni-island": {
+    "content_type": "image/jpeg",
+    "download_url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2018/03/2018031597.jpg",
+    "file": "kalpeni-island.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Lakshadweep Administration, Government of India",
+    "sha256_download": "88fc3fa19091f2050ba9e7061ed5b0c14a9316ea65071cdc32f77f9cfc2dd92f",
+    "sha256_local": "6c27b24c7dadd56fa7468b923c336c2e9db145ee4f149a01231add41dbb04536",
+    "source_page": "https://lakshadweep.gov.in/tourist-place/kalpeni"
   },
   "kalsi-ashokan-rock-edict": {
     "coordinate_note": "Coordinate reference: Google Maps place GR9X+57X Ashoka Rock Edict, Vikasnagar - Barkot Road, Kalsi, Jikala, Uttarakhand 248159 (https://www.google.com/maps/place/?q=place_id:ChIJgQ3fYwUyDzkRxY3jFVfPHzw).",
@@ -11056,9 +11081,24 @@
     "source_page": "https://www.uttarakhandtourism.gov.in/destination/kausani"
   },
   "kavaratti-island": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beach_at_Kavaratti%2C_Lakshadweep.jpg",
-    "file": "A_beach_at_Kavaratti,_Lakshadweep.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:A_beach_at_Kavaratti,_Lakshadweep.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2018/03/2018031577.jpg",
+    "file": "kavaratti-island.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Lakshadweep Administration, Government of India",
+    "sha256_download": "b333ab5c602b8b957d4e640c762e7eaef93df22277b060d8aa4cce6a631b88b7",
+    "sha256_local": "62699f71640bc3fd5b237c7b5e6aeeab8c83b06eb61e474f3c8229d558917469",
+    "source_page": "https://lakshadweep.gov.in/tourist-place/kavaratti"
+  },
+  "kavaratti-lighthouse": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/1-lighthouse-kavaratti-lakshwadeep-attr-hero?qlt=82&ts=1727011539505",
+    "file": "kavaratti-lighthouse.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "2eb27cc415193b8fb78625f459d5a74dd2b712b8a0bc97c7ce51ba2c8b03bea0",
+    "sha256_local": "6ed1bac76538c7fc8246b8fb3ca31a66e7a37c149aa2c7b96835b1f8319cdda6",
+    "source_page": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/kavaratti-lighthouse"
   },
   "kawal-tiger-reserve": {
     "coordinate_note": "Wikipedia: Kawal Wildlife Sanctuary, Telangana, India.",
@@ -15095,6 +15135,16 @@
     "sha256_download": "09b7e2370a0a6da2254d374673f45937c72a53a76d6eba4838aacc2a3f8c8100",
     "sha256_local": "38f66cf7c4e3d7b1ea3f344eb6e11d3bfd9ceffe9c8a0c990d21a7d3c012e531",
     "source_page": "https://odishatourism.gov.in/en/places/minajhola"
+  },
+  "minicoy-island": {
+    "content_type": "image/jpeg",
+    "download_url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2018/03/2018031513-1.jpg",
+    "file": "minicoy-island.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Lakshadweep Administration, Government of India",
+    "sha256_download": "483f2a6483e6df218fee6c1532bc859f6e5cdb6ff3cb5572752ee8b04b2deac2",
+    "sha256_local": "01ae998ad46b973e61507b55df14e7b2377814a77f81a2e8d4c04c1b057f2650",
+    "source_page": "https://lakshadweep.gov.in/tourist-place/minicoy"
   },
   "miran-sahib-tomb": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/miran_pic1-1.jpg",
@@ -22505,6 +22555,16 @@
     "file": "Starmonument_pic-2.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/star-monument-bhiwani/"
   },
+  "state-central-library": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/central-library-kavaratti-lakshwadeep-1-attr-hero?qlt=82&ts=1727011712089",
+    "file": "state-central-library.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "4a77334f40c9b4685bedaa9200c3297cd53ce95dd1876ca1cf494222450d6714",
+    "sha256_local": "18b109d025155dc538b15ca702fed35d447d6d9c920e980a02ca4755f6d055c7",
+    "source_page": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/state-central-library"
+  },
   "state-museum-ranchi": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20170411_163633.jpg",
     "file": "state-museum-ranchi.jpg",
@@ -23727,6 +23787,16 @@
     "sha256_local": "d68ef17011c3484922fc547d7db9dd673a808d8072bc0ab17f8936976e8365be",
     "source_page": "https://tourism.ladakh.gov.in/places/thiksey-monastery"
   },
+  "thinnakara-island": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/thinnakara-kavaratti-lakshwadeep-1-attr-hero?qlt=82&ts=1727011718265",
+    "file": "thinnakara-island.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "88358405557962be64674f73b507ab4d070ac8f7b7eea9d860ef69475dfec2ec",
+    "sha256_local": "b67988858a5b7f6dec698c70ed432189f648e423a95a12f4fe813ed3c91d63b9",
+    "source_page": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/thinnakara"
+  },
   "thirakheli-waterfall": {
     "creator": "Ms Sarah Welch",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dhanbo_Tila%2C_Dipadih_Chattisgarh_02.jpg?width=1280",
@@ -24572,6 +24642,16 @@
     "note": "Official Tripura Tourism image; the linked destination page and image URL were checked.",
     "provider": "Tripura Tourism Development Corporation Limited (Government of Tripura)",
     "source_page": "https://tripuratourism.gov.in/tour/1?type=destinations"
+  },
+  "ujra-mosque": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/ujra-mosque-kavaratti-lakshwadeep-1-attr-hero?qlt=82&ts=1727011652704",
+    "file": "ujra-mosque.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "d48fb779a9341853269a6250a7e536f95812c8983a8cee1e52fa6be1ff62e999",
+    "sha256_local": "12d010a9f09fdc7be44ae06c75c1096cdf38188c7276b583a2602913bdb7a119",
+    "source_page": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/ujra-mosque"
   },
   "ukhimath": {
     "coordinate_note": "Coordinate reference: Google Maps place Ukhimath, Uttarakhand 246469 (https://www.google.com/maps/place/?q=place_id:ChIJNfb09cUzCDkRWJ75U3Zmm8w).",

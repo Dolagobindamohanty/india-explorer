@@ -56,7 +56,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3561
+    assert len(all_places) == 3567
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -357,8 +357,12 @@ def test_full_destination_journey(client):
     }.issubset(dnh_slugs)
     assert {'naida-caves-diu', 'nagoa-beach-diu', 'jampore-beach-daman'}.isdisjoint(dnh_slugs)
     lakshadweep = client.get('/api/states/lakshadweep').json()
-    assert len(lakshadweep['places']) == 4
-    assert {p['slug'] for p in lakshadweep['places']} >= {'bangaram-atoll', 'agatti-island-lagoon', 'kavaratti-island', 'kadmat-island-diving'}
+    assert len(lakshadweep['places']) == 10
+    assert {p['slug'] for p in lakshadweep['places']} >= {
+        'bangaram-atoll', 'agatti-island-lagoon', 'kavaratti-island', 'kadmat-island-diving',
+        'kalpeni-island', 'minicoy-island', 'kavaratti-lighthouse', 'ujra-mosque',
+        'state-central-library', 'thinnakara-island',
+    }
     # Explicit UNESCO distinction test:
     # 1. Standalone World Heritage Site
     konark = client.get('/api/places/konark-sun-temple').json()
@@ -388,12 +392,12 @@ def test_filters_combine_and_heritage_links(client):
     assert client.get('/api/places?state=kerala&unesco=true').json() == []
     assert len(client.get('/api/places?month=7').json()) == 11
     assert len(client.get('/api/places?month=6').json()) == 89
-    assert len(client.get('/api/places?q=Kochi').json()) == 6
+    assert len(client.get('/api/places?q=Kochi').json()) == 7
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     percent = client.get('/api/places', params={'q': '%'}).json()
     assert percent and all('%' in (p['name'] + ' ' + p['description']) for p in percent)
     assert client.get('/api/places', params={'q': '_'}).json() == []
-    assert len(client.get('/api/places?q=Kochi').json()) == 6
+    assert len(client.get('/api/places?q=Kochi').json()) == 7
     assert client.get('/api/places', params={'q': "' OR 1=1 --"}).json() == []
     percent = client.get('/api/places', params={'q': '%'}).json()
     assert percent and all('%' in (p['name'] + ' ' + p['description']) for p in percent)
@@ -431,7 +435,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3561
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3567
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -537,7 +541,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3561}
+    assert response.json() == {'status': 'ok', 'places': 3567}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -654,7 +658,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3561}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3567}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -904,11 +908,38 @@ def test_odisha_uses_only_verified_official_destination_records(client):
     assert_asset_exists('/assets/states/odisha.jpg')
 
 
+def test_lakshadweep_uses_only_verified_official_destination_records(client):
+    places = client.get('/api/states/lakshadweep').json()['places']
+    assert len(places) == 10
+    sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    official_domains = ('lakshadweep.gov.in', 'incredibleindia.gov.in')
+    for place in places:
+        src = sources[place['slug']]
+        assert src['file'] == f"{place['slug']}.jpg"
+        assert any(domain in src['source_page'] for domain in official_domains), place['slug']
+        assert src['download_url'].startswith('https://'), place['slug']
+        assert src['content_type'].startswith('image/'), place['slug']
+        assert 'placeholder-attr-hero' not in src['download_url'], place['slug']
+        assert 'commons.wikimedia.org' not in src['source_page'], place['slug']
+        assert not any(
+            phrase in src['note'].lower()
+            for phrase in ('reference', 'lead image', 'best available', 'matched to the landmark', 'not available')
+        ), place['slug']
+        assert_asset_exists(place['image_url'])
+
+    state_sources = json.loads((ASSETS / 'assets' / 'states' / 'sources.json').read_text(encoding='utf-8'))
+    cover = state_sources['lakshadweep.jpg']
+    assert cover['source_page'] == 'https://www.incredibleindia.gov.in/en/lakshadweep'
+    assert 'coral-reefs-kavaratti' in cover['download_url']
+    assert cover['content_type'].startswith('image/')
+    assert_asset_exists('/assets/states/lakshadweep.jpg')
+
+
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3561,
+        'detailed_places': 3567,
         'reviewed_places': 0,
-        'unreviewed_places': 3561,
+        'unreviewed_places': 3567,
         'confirmed_festival_dates': 23,
     }
 
