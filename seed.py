@@ -212,7 +212,7 @@ def seed(db):
         (18, 'Meghalaya', 'meghalaya', 'state', 'Living root bridges, waterfalls, caves and highland villages.', 'https://www.meghalayatourism.in/', state_image('meghalaya')),
         (19, 'Mizoram', 'mizoram', 'state', 'Hills, bamboo craft, community traditions and scenic roads.', 'https://tourism.mizoram.gov.in/', state_image('mizoram')),
         (20, 'Nagaland', 'nagaland', 'state', 'Hill communities, craft traditions and seasonal cultural gatherings.', 'https://tourism.nagaland.gov.in/', state_image('nagaland')),
-        (21, 'Odisha', 'odisha', 'state', 'Land of temples, classical Odissi dance, tribal crafts, coastal wetlands and one of the world\'s largest annual pilgrimages at Puri.', 'https://odishatourism.gov.in/', state_image('odisha')),
+        (21, 'Odisha', 'odisha', 'state', 'Land of temples, classical Odissi dance, tribal crafts, coastal wetlands and one of the world\'s largest annual pilgrimages at Puri.', 'https://odishatourism.gov.in/en', state_image('odisha')),
         (22, 'Punjab', 'punjab', 'state', 'Living Sikh heritage, farms, food traditions and historic cities.', 'https://punjabtourism.punjab.gov.in/', state_image('punjab')),
         (23, 'Sikkim', 'sikkim', 'state', 'Nestled under the majestic shadow of Mount Kangchenjunga, Sikkim is India’s first fully organic state. A wonderland of ancient Tibetan Buddhist monasteries, sacred glacial lakes, rhododendron valleys, and vibrant Bhutia, Lepcha and Nepali traditions.', 'https://www.sikkimtourism.gov.in/', state_image('sikkim')),
         (24, 'Telangana', 'telangana', 'state', 'Deccan history, food, lakes and the layered city of Hyderabad.', 'https://tourism.telangana.gov.in/', state_image('telangana')),
