@@ -662,6 +662,17 @@ def seed(db):
                 )
                 for op in canonical_extra
             ])
+        # Carry editorial verification state from maintained datasets into the
+        # database so source-checked places no longer appear as unreviewed.
+        db.executemany('''UPDATE places SET verification_status=?, last_verified_at=?
+            WHERE slug=?''', [
+                (
+                    op.get('verification_status', 'needs_review'),
+                    op.get('last_verified_at'),
+                    op['slug'],
+                )
+                for op in canonical_extra
+            ])
 
     # Ramanagara district was officially renamed Bengaluru South on 23 May 2025
     # (headquarters remain at Ramanagara town). Remove any transient duplicate

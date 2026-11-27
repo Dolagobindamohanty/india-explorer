@@ -22,7 +22,9 @@
     "gallery_images": [],
     "alt_or_caption": "Bangaram hut on the coral island",
     "coordinate_source": "https://lakshadweep.gov.in/tourist-place/bangaram",
-    "id": 64401
+    "id": 64401,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "agatti-island-lagoon",
@@ -47,7 +49,9 @@
     "gallery_images": [],
     "alt_or_caption": "Boat on the shallow lagoon at Agatti Island",
     "coordinate_source": "https://lakshadweep.gov.in/tourist-place/agatti",
-    "id": 64402
+    "id": 64402,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "kavaratti-island",
@@ -72,7 +76,9 @@
     "gallery_images": [],
     "alt_or_caption": "Kavaratti Northern Beach",
     "coordinate_source": "https://lakshadweep.gov.in/tourist-place/kavaratti",
-    "id": 64403
+    "id": 64403,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "kadmat-island-diving",
@@ -97,7 +103,9 @@
     "gallery_images": [],
     "alt_or_caption": "Water sports on Kadmat Island",
     "coordinate_source": "https://lakshadweep.gov.in/tourist-place/kadmath",
-    "id": 64404
+    "id": 64404,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "kalpeni-island",
@@ -122,7 +130,9 @@
     "gallery_images": [],
     "alt_or_caption": "Kalpeni Island in Lakshadweep",
     "coordinate_source": "https://lakshadweep.gov.in/tourist-place/kalpeni",
-    "id": 64405
+    "id": 64405,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "minicoy-island",
@@ -147,7 +157,9 @@
     "gallery_images": [],
     "alt_or_caption": "Minicoy Beach in Lakshadweep",
     "coordinate_source": "https://lakshadweep.gov.in/tourist-place/minicoy",
-    "id": 64406
+    "id": 64406,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "kavaratti-lighthouse",
@@ -172,7 +184,9 @@
     "gallery_images": [],
     "alt_or_caption": "Kavaratti Lighthouse",
     "coordinate_source": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/kavaratti-lighthouse",
-    "id": 64407
+    "id": 64407,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "ujra-mosque",
@@ -197,7 +211,9 @@
     "gallery_images": [],
     "alt_or_caption": "Ujra Mosque in Kavaratti",
     "coordinate_source": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/ujra-mosque",
-    "id": 64408
+    "id": 64408,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "state-central-library",
@@ -222,7 +238,9 @@
     "gallery_images": [],
     "alt_or_caption": "State Central Library in Kavaratti",
     "coordinate_source": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/state-central-library",
-    "id": 64409
+    "id": 64409,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   },
   {
     "slug": "thinnakara-island",
@@ -247,6 +265,8 @@
     "gallery_images": [],
     "alt_or_caption": "Thinnakara Island beach",
     "coordinate_source": "https://www.incredibleindia.gov.in/en/lakshadweep/kavaratti/thinnakara",
-    "id": 64410
+    "id": 64410,
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-27"
   }
 ]

@@ -885,6 +885,10 @@ def test_puducherry_uses_only_verified_official_destination_records(client):
 def test_odisha_uses_only_verified_official_destination_records(client):
     places = client.get('/api/states/odisha').json()['places']
     assert len(places) == 147
+    assert all(
+        p['verification_status'] == 'verified' and p['last_verified_at'] == '2026-11-27'
+        for p in places
+    )
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
     official_domains = ('odishatourism.gov.in', 'incredibleindia.gov.in')
     for place in places:
@@ -912,6 +916,10 @@ def test_odisha_uses_only_verified_official_destination_records(client):
 def test_lakshadweep_uses_only_verified_official_destination_records(client):
     places = client.get('/api/states/lakshadweep').json()['places']
     assert len(places) == 10
+    assert all(
+        p['verification_status'] == 'verified' and p['last_verified_at'] == '2026-11-27'
+        for p in places
+    )
     sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
     official_domains = ('lakshadweep.gov.in', 'incredibleindia.gov.in')
     for place in places:
@@ -939,10 +947,25 @@ def test_lakshadweep_uses_only_verified_official_destination_records(client):
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
         'detailed_places': 3567,
-        'reviewed_places': 0,
-        'unreviewed_places': 3567,
+        'reviewed_places': 157,
+        'unreviewed_places': 3410,
         'confirmed_festival_dates': 23,
     }
+
+
+def test_place_pages_show_editorial_verification_state(client):
+    verified = client.get('/place/ananta-basudeva-temple').text
+    assert 'Official-source verified' in verified
+    assert 'Last checked: 2026-11-27' in verified
+    assert 'Not yet independently verified' not in verified
+
+    unreviewed = client.get('/place/alappuzha-beach').text
+    assert 'Source-linked editorial entry' in unreviewed
+    assert 'Not yet independently verified' not in unreviewed
+
+    app_js = (ASSETS / 'app.js').read_text(encoding='utf-8')
+    assert 'Not yet independently verified' not in app_js
+    assert 'Source-linked editorial entry' in app_js
 
 
 def test_audit_fixes_and_structured_data(client):

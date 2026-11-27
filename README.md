@@ -123,11 +123,13 @@ pages, and its Jagannath Temple state cover is recorded in
 `public/assets/states/sources.json`. Lakshadweep's 10 places are reverified from
 the Lakshadweep Administration and Incredible India attraction pages, and its
 coral-reef state cover is recorded in the same state source file.
-All place records are marked
-`needs_review`; 23 festival occurrences have confirmed dates, while the rest
-of the annual dates remain unpopulated. Seasonal guidance and coordinates are
-approximate. Fees and opening times are deliberately not invented. Add
-confirmed information with sources before publishing.
+The 147 Odisha and 10 Lakshadweep places are marked `verified` from their exact
+official source pages (last checked 27 November 2026); the remaining 3,410
+records stay `needs_review` and appear as source-linked editorial entries, not
+as independently verified. 23 festival occurrences have confirmed dates, while
+the rest of the annual dates remain unpopulated. Seasonal guidance and
+coordinates are approximate. Fees and opening times are deliberately not
+invented. Add confirmed information with sources before publishing.
 
 The website stores a destination-specific image URL for every place. All 3,567 canonical dataset place cards use locally stored photographs selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is optional; system-font fallbacks and coloured backgrounds remain usable offline.
 
