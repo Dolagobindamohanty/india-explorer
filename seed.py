@@ -47,7 +47,7 @@ STATE_COVER_IMAGES = {
     'andaman-and-nicobar-islands': '/assets/states/andaman-and-nicobar-islands.jpg',
     'chandigarh': '/assets/states/chandigarh.jpg',
     'dadra-and-nagar-haveli-and-daman-and-diu': '/assets/states/dadra-and-nagar-haveli-and-daman-and-diu.jpg',
-    'lakshadweep': '/assets/states/lakshadweep.jpg',
+    'lakshadweep': '/assets/states/lakshadweep.jpg?v=20261127',
     'puducherry': '/assets/states/puducherry.jpg',
 }
 

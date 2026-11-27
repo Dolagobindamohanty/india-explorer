@@ -16,7 +16,8 @@ ASSETS = Path(__file__).resolve().parents[1] / "public"
 def assert_asset_exists(image_url):
     """Every referenced place image must resolve to a real file on disk."""
     assert image_url.startswith("/assets/"), image_url
-    assert (ASSETS / image_url.lstrip("/")).exists(), f"missing asset file for {image_url}"
+    path = image_url.split('?', 1)[0].lstrip('/')
+    assert (ASSETS / path).exists(), f"missing asset file for {image_url}"
 
 
 @pytest.fixture
@@ -1023,14 +1024,14 @@ def test_every_place_image_resolves_to_a_real_file(client):
         if not url.startswith('/assets/places/'):
             problems.append(f"{place['slug']}: bad prefix {url}")
             continue
-        target = ASSETS / url.lstrip('/')
+        target = ASSETS / url.split('?', 1)[0].lstrip('/')
         if not target.exists():
             problems.append(f"{place['slug']}: missing {url}")
             continue
         if target.stat().st_size == 0:
             problems.append(f"{place['slug']}: empty asset {url}")
             continue
-        if url.endswith(('.jpg', '.png')) and target.stat().st_size < 3000:
+        if target.suffix.lower() in ('.jpg', '.png') and target.stat().st_size < 3000:
             problems.append(f"{place['slug']}: suspiciously small raster asset {url}")
     assert not problems, "image asset problems:\n" + "\n".join(problems[:25])
 

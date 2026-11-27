@@ -29,6 +29,11 @@ def normalize_text(value):
     return DASH_CORRUPTION.sub(lambda match: match.group().replace('\u2013', ''), value).strip()
 
 
+def asset_path(static_dir, url):
+    """Resolve an /assets/... URL to disk, ignoring cache-busting query strings."""
+    return static_dir / url.split('?', 1)[0].lstrip('/')
+
+
 def state_manifest_paths():
     return sorted(STATE_DATA_DIR.glob('*.json')) if STATE_DATA_DIR.exists() else []
 
@@ -122,13 +127,13 @@ def validate_state_dataset(dataset, static_dir=ROOT / 'public'):
             errors.append(f'{label}: coordinates are outside India')
         else:
             coordinates[(latitude, longitude)] += 1
-        image_path = static_dir / place['image_url'].lstrip('/')
+        image_path = asset_path(static_dir, place['image_url'])
         if not image_path.exists():
             errors.append(f'{label}: image asset does not exist: {place["image_url"]}')
         if slug not in image_sources:
             warnings.append(f'{label}: image attribution is missing')
         for g_img in place.get('gallery_images', []):
-            g_path = static_dir / g_img['image_url'].lstrip('/')
+            g_path = asset_path(static_dir, g_img['image_url'])
             if not g_path.exists():
                 errors.append(f'{label}: gallery image asset does not exist: {g_img["image_url"]}')
             g_key = g_img['image_url'].split('/')[-1].replace('.jpg', '')
@@ -198,7 +203,7 @@ def validate_database(db, static_dir=ROOT / 'public'):
         if not (INDIA_BOUNDS[0] <= place['latitude'] <= INDIA_BOUNDS[1] and INDIA_BOUNDS[2] <= place['longitude'] <= INDIA_BOUNDS[3]):
             errors.append(f'{label}: coordinates are outside India')
         coordinates[(place['latitude'], place['longitude'])] += 1
-        if not (static_dir / place['image_url'].lstrip('/')).exists():
+        if not asset_path(static_dir, place['image_url']).exists():
             errors.append(f'{label}: image asset does not exist')
         if label not in image_sources:
             warnings.append(f'{label}: image attribution is missing')
@@ -206,7 +211,7 @@ def validate_database(db, static_dir=ROOT / 'public'):
     warnings.extend(f'duplicated coordinates: {latitude}, {longitude}' for (latitude, longitude), count in coordinates.items() if count > 1)
     gallery_rows = db.execute('SELECT place_id, image_url FROM place_images').fetchall()
     for g in gallery_rows:
-        if not (static_dir / g['image_url'].lstrip('/')).exists():
+        if not asset_path(static_dir, g['image_url']).exists():
             errors.append(f"place {g['place_id']}: gallery image asset does not exist: {g['image_url']}")
     return errors, warnings
 
