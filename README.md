@@ -131,7 +131,7 @@ the rest of the annual dates remain unpopulated. Seasonal guidance and
 coordinates are approximate. Fees and opening times are deliberately not
 invented. Add confirmed information with sources before publishing.
 
-The website stores a destination-specific image URL for every place. All 3,567 canonical dataset place cards use locally stored photographs selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is optional; system-font fallbacks and coloured backgrounds remain usable offline.
+The website stores a destination-specific image URL for every place. All 3,567 canonical dataset place cards use locally stored photographs selected for the named destination and category. Region pages use iconic landmark cover photographs representing each state and union territory. Attribution/source records are in `public/assets/places/sources.json`; verify each file's current license and attribution requirements before a public commercial launch. Google Fonts is optional; system-font fallbacks and coloured backgrounds remain usable offline. Dynamic pages and APIs use `no-store` cache headers so count changes appear on the next request; only `/assets/` files are cached immutably and need a version query when replaced.
 
 ## APIs
 

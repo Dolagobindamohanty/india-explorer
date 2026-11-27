@@ -944,6 +944,19 @@ def test_lakshadweep_uses_only_verified_official_destination_records(client):
     assert_asset_exists('/assets/states/lakshadweep.jpg')
 
 
+def test_dynamic_content_is_never_cached():
+    config = json.loads((ASSETS.parent / 'vercel.json').read_text(encoding='utf-8'))
+    dynamic = next(rule for rule in config['headers'] if rule['source'] == '/(.*)')
+    headers = {h['key'].lower(): h['value'].lower() for h in dynamic['headers']}
+    assert 'no-store' in headers['cache-control']
+    assert 'must-revalidate' in headers['cache-control']
+    assert headers['pragma'] == 'no-cache'
+    assert headers['expires'] == '0'
+    assets = next(rule for rule in config['headers'] if rule['source'] == '/assets/(.*)')
+    asset_headers = {h['key'].lower(): h['value'].lower() for h in assets['headers']}
+    assert 'immutable' in asset_headers['cache-control']
+
+
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
         'detailed_places': 3567,
