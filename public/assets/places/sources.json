@@ -484,6 +484,16 @@
     "file": "960px-Alappuzha_Beach,_Kerala.JPG",
     "source_page": "https://commons.wikimedia.org/wiki/File:Alappuzha_Beach,_Kerala.JPG"
   },
+  "alarnatha-temple": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/alarnatha-temple-or-alvarnaatha-puri-odisha-1-attr-hero?qlt=82&ts=1726674737792",
+    "file": "alarnatha-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "eba05ce0986f04fd87c3d32cc759f03fbbc8c10b5d094c7a283719f2e942508a",
+    "sha256_local": "63439bced9f5473f2a8e62931341d142b059230ddd3400ae89a89b20b02fa5aa",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/alarnatha-temple"
+  },
   "albert-hall-museum": {
     "coordinate_note": "Wikipedia: Albert Hall Museum, Jaipur, Rajasthan, India.",
     "creator": "Ajit Kumar Majhi",
@@ -768,9 +778,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Anandpur_Sahib_(1)_02.jpg"
   },
   "ananta-basudeva-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-ananta-basudev-temple-card-1-",
-    "file": "east-od-ananta-basudev-temple-card-1-",
-    "source_page": "https://odishatourism.gov.in/en/w/ananta-basudeva-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Ananta-Basudev-Temple-banner+%281%29.webp/ca4bcbcc-4fc2-b205-bd9d-f9f974d13db7?version=1.0&t=1784107459092",
+    "file": "ananta-basudeva-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4872df184f9416da7908d3133d982d8d87a86c340d60746bad60f3d35db1f660",
+    "sha256_local": "046b43ac2b2f24a428d24df4e995d1dcf5dfe9d45d916a98b03b1562cea06ba3",
+    "source_page": "https://odishatourism.gov.in/en/places/ananta-basudeva-temple"
   },
   "anantha-padmanabha-swamy-temple": {
     "coordinate_note": "Wikipedia: Anantha Padmanabha Swamy Temple, Telangana, India.",
@@ -946,9 +961,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AEast_gopuram_at_Annavaram_Temple_02.jpg"
   },
   "ansupa-nature-camp-1": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-anshupa-lake-card",
-    "file": "east-od-anshupa-lake-card",
-    "source_page": "https://odishatourism.gov.in/en/w/ansupa-nature-camp-1"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Anshupa-Lake-banner+%281%29.webp/8d2e01c5-59a0-2e16-533a-8b4da5216e06?version=1.0&t=1775454221662",
+    "file": "ansupa-nature-camp-1.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "63982ebd91f47fb4f842cb620e8b765247d4cb7403a1e599f9c0cbf7ce1af282",
+    "sha256_local": "c60dfd7a76ac7a2e6b8cba264a00a8cb54d9af0ddf59d84d41b5d3371c5e2443",
+    "source_page": "https://odishatourism.gov.in/en/places/ansupa-nature-camp-1"
   },
   "antaragange-kolar": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antharagange.JPG",
@@ -1189,9 +1209,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:ASSAM_STATE_ZOO_CUM_BOTANICAL_GARDEN,_GUWAHATI!_01.jpg"
   },
   "astaranga-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-astaranga-beach-card",
-    "file": "east-od-astaranga-beach-card",
-    "source_page": "https://odishatourism.gov.in/en/w/astaranga-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Astaranga-Beach-banner.webp/c1776c00-1d96-f4e9-e987-17a5b5c077ce?version=1.0&t=1788758577319",
+    "file": "astaranga-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2778041d9337341f22993fb9807e9acc7ce56c8fb9a4f064163381750247051f",
+    "sha256_local": "2d8238940367f122a4ac42ebe2894c208f36e9363838140689d07fab0b085b0c",
+    "source_page": "https://odishatourism.gov.in/en/places/astaranga-beach"
   },
   "asthal-bohar": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/asthal_pic5.jpg",
@@ -1231,6 +1256,16 @@
     "note": "Wikimedia Commons file File:Ater-fort-bhind.webp for Ater Fort, Bhind (Bhind, Madhya Pradesh).",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Ater-fort-bhind.webp"
+  },
+  "atharnala-bridge": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/atharnala-stone-bridge-puri-odisha-1-attr-hero?qlt=82&ts=1726663682500",
+    "file": "atharnala-bridge.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "f178fbcd55d1e331669a1cf7ffe8838c21e267ba3c7976a8e2982260b3997913",
+    "sha256_local": "2c3fb6488cb9609c64b5e280f2ccfe09f45abc4bef65d80d40b9f6b74dd541a6",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/atharnala-bridge"
   },
   "athirappilly-waterfalls": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Athirappalli_Waterfalls%2C_Thrissur%2C_Kerala.jpg/960px-Athirappalli_Waterfalls%2C_Thrissur%2C_Kerala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1400,6 +1435,16 @@
     "file": "bab_I_faiz_gate_2.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/bab-i-faiz-gate/"
   },
+  "baba-akhandalamani-temple": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-Akhandalamani-Temple-banner.webp/947fa27d-285c-4edd-9661-a42bc29ed864?version=1.0&t=1795166621224",
+    "file": "baba-akhandalamani-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "d457db6cd22ca092dd1df2f984e4672bee499188f1139bd69efcad2c4ec0576e",
+    "sha256_local": "d13a70a9535dbca4a12ea5e270b1c67588e27a64043c6974c1d74ae3fce1dc06",
+    "source_page": "https://odishatourism.gov.in/en/places/baba-akhandalamani-temple"
+  },
   "baba-balak-nath-temple": {
     "download_url": "https://himachaltourism.gov.in/wp-content/uploads/2018/03/Baba-Balak-Nath-Temple-Deot-Sidh-Hamirpur-min.jpg",
     "file": "baba-balak-nath-temple.jpg",
@@ -1473,9 +1518,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Bada_Bagh_Jaisalmer.jpg"
   },
   "bada-ghagara-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-badaghagarawaterfall-card",
-    "file": "north-od-badaghagarawaterfall-card",
-    "source_page": "https://odishatourism.gov.in/en/w/bada-ghagara-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-BadaGhagaraWaterfall-banner.webp/128f0e18-d279-c82e-e70e-062ea7393591?version=1.0&t=1783933599315",
+    "file": "bada-ghagara-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "aeb34e6f79df5c3b88742543c7323144b33a4a6ac261cb967f4ac16b39af114c",
+    "sha256_local": "608112d85edbd95595a6b630b2788982c4a254a7bafac1978c14f7daee6a33e4",
+    "source_page": "https://odishatourism.gov.in/en/places/bada-ghagara-waterfall"
   },
   "bada-talab": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/sadhaura_pic1.jpg",
@@ -1774,6 +1824,26 @@
     "sha256_local": "7ee7fe966e23d4cd75b5da874c899d716a6bbe1e6bc973bf8a5d9d9156819d46",
     "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1"
   },
+  "balighai-beach": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/balighai-beach-puri-odisha-1-attr-hero?qlt=82&ts=1726674743727",
+    "file": "balighai-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "c0d18785a29b28cd4ad5ca64e74844d176edbead58bbd11a88e7f33f93f9b74c",
+    "sha256_local": "2187622da07be25d47cce3f61629768b99dd3078b48dd01d9be4db5f755c82a7",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/balighai-beach"
+  },
+  "balimela-dam": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/South-od-Balimela-Dam-Banner.webp/67b5a52d-6f82-0f08-5f59-f183681c150b?version=1.0&t=1795166623285",
+    "file": "balimela-dam.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "996fa953003260282f49e68b0430a3fd92662d067d97d2aa901928cab3dbe56a",
+    "sha256_local": "7c7e4cfe897823d1c02fb0be0eb9d0bb3312533b5ed6619bbd0af229127739e8",
+    "source_page": "https://odishatourism.gov.in/en/places/balimela-dam"
+  },
   "balirajgarh-fort": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Traditional_Indian_Painting_On_Body.jpg/960px-Traditional_Indian_Painting_On_Body.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Traditional_Indian_Painting_On_Body.jpg",
@@ -1989,9 +2059,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Bara,Punjab.jpg"
   },
   "bara-bakhra-caves": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-barabakhracaves-card",
-    "file": "west-od-barabakhracaves-card",
-    "source_page": "https://odishatourism.gov.in/en/w/bara-bakhra-caves"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-BaraBakhraCaves-banner.webp/70490e1f-5b8b-5c4b-9fa1-7891eef6a692?version=1.0&t=1783935017214",
+    "file": "bara-bakhra-caves.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4cf178eea3894d97a67af218f339914cf25e04c101684169e7f51cbf35213de1",
+    "sha256_local": "d211d877960131e128b4566b58961859c946eb23e1cc9004fb65858764249553",
+    "source_page": "https://odishatourism.gov.in/en/places/bara-bakhra-caves"
   },
   "bara-imambara": {
     "creator": "Muhammad Mahdi Karim",
@@ -2013,9 +2088,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Lomas_Rishi_Cave_at_Barabar_hills_of_Jehanabad_district_in_Bihar,_India_01.jpg"
   },
   "barabati-fort": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Barabati Fort, Cuttack.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/barabati-fort"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-barabati-fort-banner.webp/e385140c-7f9f-0c2b-26d1-bcb029f4fc8a?version=1.0&t=1784107458794",
+    "file": "barabati-fort.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "32446fbc17e8017091688853d8c00da166d147baf33833113f7ab5dc6f02f8c8",
+    "sha256_local": "bae69bf692f86d3a93e4e6324cb7a2fbdd2ad367bb888e332f95791f939fa15d",
+    "source_page": "https://odishatourism.gov.in/en/places/barabati-fort"
   },
   "baradari": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/suraj7_2017-Copy.jpg",
@@ -2073,9 +2153,14 @@
     "source_page": "https://www.wbtourism.gov.in/Cultural Tourism/details?template_id=1&id=640ed0333b5bd7cf7d0c1bd0"
   },
   "barehipani-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-barehipani-waterfall-card-1-",
-    "file": "north-od-barehipani-waterfall-card-1-",
-    "source_page": "https://odishatourism.gov.in/en/w/barehipani-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-Barehipani-Waterfall-banner.webp/239a4be1-718a-91d4-1ac4-8236e55d1624?version=1.0&t=1781270148283",
+    "file": "barehipani-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "846c71a82aea88b6c0d9e9ee44dabe865ab0e7933abc25a5c728dc3dc2350481",
+    "sha256_local": "e5723356f20665247806f4b8f2fd77f84ea57d26d87a169c0e376eab717375ac",
+    "source_page": "https://odishatourism.gov.in/en/places/barehipani-waterfall"
   },
   "bargi-dam": {
     "coordinate_note": "Approximate coordinates for Bargi Dam in Jabalpur district, Madhya Pradesh (district centroid used for map placement); verify on arrival.",
@@ -2704,9 +2789,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Jharkhand_village_walls_depicting_tribal_life_by_madhubani_morals.jpg"
   },
   "bhetnoi-blackbuck-habitat": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-bhetnoiblackbuck-card",
-    "file": "south-od-bhetnoiblackbuck-card",
-    "source_page": "https://odishatourism.gov.in/en/w/bhetnoi-blackbuck-habitat"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-BhetnoiBlackbuck-banner.webp/22315649-4e59-80b6-83aa-118e89788aea?version=1.0&t=1783934241417",
+    "file": "bhetnoi-blackbuck-habitat.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "567990afec79d2e930104bbc9cd5e088d6bd5bb5abeda33921ade513ecde863d",
+    "sha256_local": "e28351cbbcd1b5ab51e783a1ec8a4ae7ac48da0d021b9fe6fe9e30f5d0c26b2d",
+    "source_page": "https://odishatourism.gov.in/en/places/bhetnoi-blackbuck-habitat"
   },
   "bhilai-steel-plant": {
     "creator": "Vani1007",
@@ -2716,6 +2806,16 @@
     "note": "No freely licensed photograph inside the Bhilai Steel Plant could be verified. This shows the town of Bhilai in Durg district, where the plant stands.",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Bhilai%2C_Chhattisgarh.jpg"
+  },
+  "bhima-bhoi-samadhi-pitha": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Bhimabhoi-Samadhi-Pitha-Banner.webp/f3512991-7cfe-d920-d2fd-95bd2d1004a0?version=1.0&t=1795166624232",
+    "file": "bhima-bhoi-samadhi-pitha.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6b8d6cc7beb407ad5655ac131001c4efaf010e0a296ec7cedda4501ef9aed4e6",
+    "sha256_local": "f7a003d158c249379f4ba8573594d126be7646aa639fe955dad0310bf394fb33",
+    "source_page": "https://odishatourism.gov.in/en/places/bhima-bhoi-samadhi-pitha"
   },
   "bhima-devi-temple": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/bhima_devi05.jpg",
@@ -2745,14 +2845,24 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Cactus_plant_in_Munger_district.jpg"
   },
   "bhimkand-sleeping-vishnu": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-bhimkand-card",
-    "file": "east-od-bhimkand-card",
-    "source_page": "https://odishatourism.gov.in/en/w/bhimkand-sleeping-vishnu"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-bhimkand-banner.webp/28a7a44c-54b2-3528-73eb-9799d0f3660a?version=1.0&t=1776680756534",
+    "file": "bhimkand-sleeping-vishnu.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "f14a2b64abf364236207bbb77c4823f99a1eddff60c9bccbf50b6f560f49af3f",
+    "sha256_local": "22f7537c037cd865d6363a6dbef6ceb900d67f6eef06b4e0b48b01738e1e4150",
+    "source_page": "https://odishatourism.gov.in/en/places/bhimkand-sleeping-vishnu"
   },
   "bhimkund-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-bhimkund-card",
-    "file": "north-od-bhimkund-card",
-    "source_page": "https://odishatourism.gov.in/en/w/bhimkund-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-bhimkund-banner+%281%29.webp/908921e1-d35c-3785-e067-8ba463ab2c5f?version=1.0&t=1785571456724",
+    "file": "bhimkund-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e18f49b22ca135aaeaa0b7e0882471a109e339d4579c789141b0153303daa0d4",
+    "sha256_local": "9fa5e023dfdfa3990ab719f231237d3391475d5371c177889feeb89313ccee71",
+    "source_page": "https://odishatourism.gov.in/en/places/bhimkund-waterfall"
   },
   "bhimnagar-barrage": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Golden_Hour_on_the_Koshi_-_A_Fisherman%27s_Tale.jpg/960px-Golden_Hour_on_the_Koshi_-_A_Fisherman%27s_Tale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2800,9 +2910,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:KITLV_88127_-_Unknown_-_Pillar_includes_inscriptions_at_Bhitari_in_British_India_-_1897.tif"
   },
   "bhitarkanika-national-park": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Bhitarkanika National Park, Kendrapara.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/bhitarkanika-national-park"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-bhitarkanika-national-park-banner.webp/2626d4c1-66ac-45a6-c029-5cb49088d2ea?version=1.0&t=1783932069792",
+    "file": "bhitarkanika-national-park.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "938396092e6caa6cbf5dc2fc94fcaadb4c3fb9f3fe5bea67e83076d27bb81be0",
+    "sha256_local": "5e7c4cb103d87893f60c70c14e5b5778a4b1516329811e69a63a7ea91460db37",
+    "source_page": "https://odishatourism.gov.in/en/places/bhitarkanika-national-park"
   },
   "bhitaura-ghat": {
     "creator": "Official district website",
@@ -2968,6 +3083,26 @@
     "file": "960px-Bijni_Amguri.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Bijni_Amguri.jpg"
   },
+  "biju-patnaik-aeronautics-museum": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/1-sunabeda-aeronautical-museum-koraput-attr-hero?qlt=82&ts=1726663742811",
+    "file": "biju-patnaik-aeronautics-museum.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "5c047291619003b84994814ae4d81f6d3077a791ec42a2bd14ff1f8fea82dc61",
+    "sha256_local": "584d71bc12f1f6070ee123aef766d1aabcd3f57e02401fe611fdac13f748086c",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/koraput/biju-patnaik-aeronautics-museum"
+  },
+  "bikramkhol-cave-inscriptions": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-Bikramkhol-Cave-Inscriptions-Banner.webp/a9047e78-336b-7907-f650-2be3abd019fd?version=1.0&t=1795166624725",
+    "file": "bikramkhol-cave-inscriptions.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "8c4a61b01aaa8bcc89f11792d72fff113f19ee09ed15ca72d8f8e984160ae5f8",
+    "sha256_local": "d7912a69c1c39d2a0a0ee51ca0499e0c5955aae706788dd0706ac6a646876045",
+    "source_page": "https://odishatourism.gov.in/en/places/bikramkhol-cave-inscriptions"
+  },
   "bilaigarh-fort": {
     "creator": "Aksveer",
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Girivilas_Palace.jpg?width=1280",
@@ -3034,9 +3169,14 @@
     "source_page": "https://www.incredibleindia.gov.in/en/himachal-pradesh/kangra"
   },
   "biraja-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-biraja-temple-card-2",
-    "file": "east-od-biraja-temple-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/biraja-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Biraja-Temple-banner.webp/1d7402f4-7a75-bb55-704d-236ea5596269?version=1.0&t=1774614823604",
+    "file": "biraja-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e4a47136b41f98865adc8f218f3154229c6ea524a6cd4100e41a199074d13b59",
+    "sha256_local": "eba07ca758187a0da84e2754786ad978d6337ee6066150d64b5d55af94480f3d",
+    "source_page": "https://odishatourism.gov.in/en/places/biraja-temple"
   },
   "birbal-ka-chhatta": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/birbal_pic3.jpg",
@@ -3091,9 +3231,14 @@
     "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/71"
   },
   "birsa-munda-international-hockey-stadium": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-birsamundainternationalhockeystadium-card",
-    "file": "west-od-birsamundainternationalhockeystadium-card",
-    "source_page": "https://odishatourism.gov.in/en/w/birsa-munda-international-hockey-stadium"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-BirsaMundaInternationalHockeyStadium-banner.webp/f2940c42-3f50-3cc8-cd72-e6b8062f7998?version=1.0&t=1783935017027",
+    "file": "birsa-munda-international-hockey-stadium.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "9d0ced769612a5774b6ce920202b3301b7e6570af51088eebf47a3d82057f71e",
+    "sha256_local": "8397fc18d12c37d639ede440aef761bdb7e4b19358ec356cf5f9e87ffccb9a86",
+    "source_page": "https://odishatourism.gov.in/en/places/birsa-munda-international-hockey-stadium"
   },
   "birthi-falls": {
     "coordinate_note": "Coordinate reference: Google Maps result for Birthi Falls, Pithoragarh (https://www.google.com/maps/search/?api=1&query=Birthi+Falls%2C+Pithoragarh%2C+Uttarakhand).",
@@ -3772,9 +3917,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Chand_Baori_Abhaneri.jpg"
   },
   "chandaka-wildlife-sanctuary": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-chandakawildlifesanctuary-card",
-    "file": "east-od-chandakawildlifesanctuary-card",
-    "source_page": "https://odishatourism.gov.in/en/w/chandaka-wildlife-sanctuary"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-ChandakaWildlifeSanctuary-banner.webp/d3a543fd-a621-09f8-f14c-e5c96c98fbb4?version=1.0&t=1783932071599",
+    "file": "chandaka-wildlife-sanctuary.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "8b5d2f2d2746de4596871233255ae8d3b18b044daffde7ed353422c223828327",
+    "sha256_local": "612c2f6a1eae7e31d7d8185fedec78bd08c0c96e62c3b077f5f357316c457566",
+    "source_page": "https://odishatourism.gov.in/en/places/chandaka-wildlife-sanctuary"
   },
   "chandannagar": {
     "coordinate_note": "Wikipedia: Chandannagar, West Bengal, India.",
@@ -3785,6 +3935,16 @@
     "note": "Official West Bengal Tourism destination detail image for Chandannagar, embedded on the official page. Reuse terms should be verified before publication.",
     "provider": "West Bengal Tourism",
     "source_page": "https://www.wbtourism.gov.in/River and Cruise tourism/details?template_id=1&id=63fc94dccec836803000e18f"
+  },
+  "chandbali": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-Chandbali-banner.webp/bacc94dd-248a-218b-02e9-2e751c53da31?version=1.0&t=1795166622131",
+    "file": "chandbali.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "095ec025904a054c221166be034f552702e21ee2ac9f60f21dc2f449aab39087",
+    "sha256_local": "23a700631b58bc95b83dc0f0c0bc0cf24bf90b7ca93dcdb5e8330ad9d550ee21",
+    "source_page": "https://odishatourism.gov.in/en/places/chandbali"
   },
   "chanderi-fort": {
     "coordinate_note": "Approximate coordinates for Chanderi Fort in Chanderi, Ashoknagar district; verify on arrival.",
@@ -3836,9 +3996,14 @@
     "source_page": "https://tourism.jharkhand.gov.in/destinationDetails/114"
   },
   "chandipur-beach": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Chandipur Beach, Balasore.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/chandipur-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-chandipur-banner.webp/9290a567-d86d-d2ab-8a9c-de8add5a3de6?version=1.0&t=1786355411620",
+    "file": "chandipur-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2fcaa623b349a6a8a90de5fcb8838c06fb25c4f5c2a58dbb6aef420c6eba8785",
+    "sha256_local": "984a9835ff3d5962b4f7bd921b2174ec37ff8ed24c5a23f24a7560f4b5900c62",
+    "source_page": "https://odishatourism.gov.in/en/places/chandipur-beach"
   },
   "chandni-chowk-delhi": {
     "download_url": "https://delhitourism.gov.in/dt/images/Chandni_Chowk_Bazaars.jpg",
@@ -3867,9 +4032,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:The_Prime_Minister,_Shri_Narendra_Modi_visiting_Shaheed_Chandrashekar_Azad_Smarak,_in_Bhabra_village,_Alirajpur_district,_Madhya_Pradesh_(1).jpg"
   },
   "chandrabhaga-beach": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Chandrabhaga Beach, Konark, Puri.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/chandrabhaga-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/east-od-chandrabhaga-beach-banner.webp/79454677-9094-4045-1bae-44adc17b06dc?version=1.0&t=1781196894736",
+    "file": "chandrabhaga-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "b6bb677baff1a34586434352f4a71389fa3088567b713ea697a4a9373e72cfa8",
+    "sha256_local": "dbd49bc442a9b9279a224041fd21b79add13985a880e49c563794212e7af7cb9",
+    "source_page": "https://odishatourism.gov.in/en/places/chandrabhaga-beach"
   },
   "chandradhari-museum": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Sikh_Craft_kept_at_Chandradhari_Museum%2C_Darbhanga.jpg/960px-Sikh_Craft_kept_at_Chandradhari_Museum%2C_Darbhanga.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3981,6 +4151,16 @@
     "file": "960px-Little_Cormorant_in_Pobitora_Wildlife_Sanctuary.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Little_Cormorant_in_Pobitora_Wildlife_Sanctuary.jpg"
   },
+  "charisambhu-temple-gandharadi-twin-temples": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Charisambhu-Temple-Banner.webp/8ff09663-f8be-73bd-50dc-7ed33a2dd313?version=1.0&t=1795166625203",
+    "file": "charisambhu-temple-gandharadi-twin-temples.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a7676df8f73527d0ae284bb92c3cc7e8cb9acf5935d9f61bc4b0fa7de6434afe",
+    "sha256_local": "1ee3652ac0e9b040a58a69be53493516e49ce85ebb2dec59b36631490828e815",
+    "source_page": "https://odishatourism.gov.in/en/places/charisambhu-temple-gandharadi-twin-temples-"
+  },
   "charkhari": {
     "creator": "Govind 356",
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Charkhari_fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -4041,6 +4221,16 @@
     "provider": "Tripura Tourism Development Corporation Limited (Government of Tripura)",
     "source_page": "https://tripuratourism.gov.in/tour/10?type=destinations"
   },
+  "chaurasi": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/chaurasi-puri-odisha-1-attr-hero?qlt=82&ts=1726674740718",
+    "file": "chaurasi.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "c9b6700696f02327efde29d1306526c0d5d4fe9cfa0b40d0914c8d3e5e113156",
+    "sha256_local": "2078ed84f480d7260cae951da9bdf1fadb72683a07880fd5500ebc79a6e2eaff",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/chaurasi"
+  },
   "chausa-battlefield": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Golghar_-_Patna_%282%29.jpg/960px-Golghar_-_Patna_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Golghar_-_Patna_(2).jpg",
@@ -4057,14 +4247,24 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Chausath_Yogini_Temple_Mitawali_Morena_Madhya_Pradesh.jpg"
   },
   "chausathi-yogini-ranipur-jharial": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-ranipur-jharial-card",
-    "file": "west-od-ranipur-jharial-card",
-    "source_page": "https://odishatourism.gov.in/en/w/chausathi-yogini-ranipur-jharial"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-Ranipur-Jharial-banner.webp/083712e6-c10d-ed02-1929-e2c55128677c?version=1.0&t=1785236038312",
+    "file": "chausathi-yogini-ranipur-jharial.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "353e504beb65083d32ff12e5278f3512d715d1ebc503806d23b0502e709526a9",
+    "sha256_local": "f9f0e7611ffcb975356cca6d9f0dcf3641dda8eb79504f6d8e7aadce52a75278",
+    "source_page": "https://odishatourism.gov.in/en/places/chausathi-yogini-ranipur-jharial"
   },
   "chausathi-yogini-temple-hirapur": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-chausathi-yogini-temple-hirapur-card",
-    "file": "east-od-chausathi-yogini-temple-hirapur-card",
-    "source_page": "https://odishatourism.gov.in/en/w/chausathi-yogini-temple-hirapur"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Chausathi-Yogini-Temple-Hirapur-banner.webp/7acc6269-8ada-09cf-6777-00ae629012dd?version=1.0&t=1790847333360",
+    "file": "chausathi-yogini-temple-hirapur.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c1e93313c6ea18871ca2885f38ac795cdea5092c1c68ba27f6505cfccbd4ccfd",
+    "sha256_local": "03689a214c977635275f5fece665495fd0d6f9b9e93a474d94902f83e0b6a4de",
+    "source_page": "https://odishatourism.gov.in/en/places/chausathi-yogini-temple-hirapur"
   },
   "chavakkad-beach": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Chavakkad%2C_Kerala%2C_India_-_panoramio.jpg/960px-Chavakkad%2C_Kerala%2C_India_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -4227,9 +4427,14 @@
     "source_page": "https://delhitourism.gov.in/dt/delhi-for-kids.html"
   },
   "chilika-lake": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balugaon%20on%20Chilika%2C%20Odisha%2C%20India.jpg",
-    "file": "Balugaon on Chilika, Odisha, India.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Balugaon_on_Chilika,_Odisha,_India.jpg"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-chilika-lake-banner.webp/c680459c-f36d-78c5-c356-bb3764d48909?version=1.0&t=1774614830135",
+    "file": "chilika-lake.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "d6de25746ce86472fd2421c3865e3f24e25408227610ae67390f5b05b524ba64",
+    "sha256_local": "e27581194f875e9f250423515743d3f7e84c6afe35ec91535e0dbd583428f021",
+    "source_page": "https://odishatourism.gov.in/en/places/chilika-lake"
   },
   "chilkur-balaji-temple": {
     "coordinate_note": "Wikipedia: Chilkoor Balaji Temple, Telangana, India.",
@@ -4741,6 +4946,16 @@
     "sha256_local": "91b68eac8e006fd40052ab7136ced52f53e285f2386b106025907339aab5246c",
     "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3"
   },
+  "cuttack-chandi-temple": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/cuttack-chandi-temple-cuttack-odisha-chandi-temple1-attr-hero?qlt=82&ts=1726663557866",
+    "file": "cuttack-chandi-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "f7ffce51bf18224dafea50a5572327790a35a6084cb4937a6182c1cc09e68e7d",
+    "sha256_local": "5af0bc42901f35cb13a803ca898cf5d03b95d74690ca9be3a2268e2da40a4087",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/cuttack/cuttack-chandi-temple"
+  },
   "da-parbatia": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Dah_Parvatiya.jpg/960px-Dah_Parvatiya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Dah_Parvatiya.jpg",
@@ -5039,14 +5254,24 @@
     "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "daringbadi-coffee-garden": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-daringbadi-coffeegarden-card",
-    "file": "south-od-daringbadi-coffeegarden-card",
-    "source_page": "https://odishatourism.gov.in/en/w/daringbadi-coffee-garden"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Daringbadi%E2%80%93CoffeeGarden-banner.webp/8a4dcca4-a18e-ce31-63c2-621b18f5f241?version=1.0&t=1783934242237",
+    "file": "daringbadi-coffee-garden.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "1ed6697deb13d0b3bc52348a57d77cc1f56afb4ca04a53242c415cd58a7133d0",
+    "sha256_local": "0369b0dc1bc68face7f5a883a08c65c8ad352786d755ecddf7d1d20baecff562",
+    "source_page": "https://odishatourism.gov.in/en/places/daringbadi-coffee-garden"
   },
   "daringbadi-hill-station": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Daringbadi Hill Station, Kandhamal.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/daringbadi-hill-station"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Daringbadi-Hills-banner.webp/394fd8fc-85af-4da8-6558-1075d5422697?version=1.0&t=1785568562235",
+    "file": "daringbadi-hill-station.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "513466d54f51753e0ead9f33d03c748f5adc0be5f7a86c3357dec32c0810b4d1",
+    "sha256_local": "92c706bab1b6548397049a4a445a50ffd35ed8563d134786f258279eb767504e",
+    "source_page": "https://odishatourism.gov.in/en/places/daringbadi-hill-station"
   },
   "darjeeling": {
     "coordinate_note": "Wikipedia: Darjeeling, West Bengal, India.",
@@ -5137,9 +5362,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Dayara_Bugyal_3.jpg"
   },
   "debrigarh-wildlife-sanctuary": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-debrigarh-wildlife-sanctuary-card-1",
-    "file": "west-od-debrigarh-wildlife-sanctuary-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/debrigarh-wildlife-sanctuary"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-Debrigarh-Wildlife-Sanctuary-banner.webp/ea1a788a-e57f-b894-9409-1fc09a5fd98a?version=1.0&t=1781270990605",
+    "file": "debrigarh-wildlife-sanctuary.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "342a533ff944dc80113c3a8a904348e89ac59db5884cddaa575ea220bc5b0734",
+    "sha256_local": "324c860b24f23ea24819f1a5016a2772b072ce7d51b1d1df6fe32059e1f5f4ce",
+    "source_page": "https://odishatourism.gov.in/en/places/debrigarh-wildlife-sanctuary"
   },
   "deeg-palace": {
     "coordinate_note": "Wikipedia: Deeg Palace, Deeg, Rajasthan, India.",
@@ -5221,9 +5451,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Bihar_Museum_-_Patna_41.jpg"
   },
   "deomali-hills": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Deomali Hills, Koraput.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/deomali-hills"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Deomali-Hills-banner.webp/7e8fd6ff-f008-b854-1d70-791da3f824ce?version=1.0&t=1785568561999",
+    "file": "deomali-hills.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "8614ddb434a92bed0b0230a7ebeedc847456db5f35efbb5e6c431fdf7efbde87",
+    "sha256_local": "d3704ffd84acc93634befca632af27625e85f3c359857221a0a38897d7b52b4d",
+    "source_page": "https://odishatourism.gov.in/en/places/deomali-hills"
   },
   "deoparbat-ruins": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Ruins_of_Deoparbat%2C_Assam.jpg/960px-Ruins_of_Deoparbat%2C_Assam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -5378,9 +5613,14 @@
     "source_page": "https://dnhddtourism.in/daman/place-to-visit"
   },
   "devkund-waterfall": {
-    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Devkund%2C_Mayurbhanj._Odisha.jpg",
-    "file": "Devkund,_Mayurbhanj._Odisha.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Devkund,_Mayurbhanj._Odisha.jpg"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/north-od-Devkund-Waterfall-Mayurbhanj-banner.webp/8bc1ba73-77ab-104d-4367-9038c82ba710?version=1.0&t=1774614867012",
+    "file": "devkund-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c9ae9747c4aaebd786631da51d1769d3d8de05835616ca4452aa321accb514a8",
+    "sha256_local": "9c8d76007f76a459a50e6807a97acbb88ae727e351a0f4d74eeee33745a059a3",
+    "source_page": "https://odishatourism.gov.in/en/places/devkund-waterfall"
   },
   "devkund-waterfall-raigad": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Devkund%2C_Odisha.jpg/960px-Devkund%2C_Odisha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -5397,9 +5637,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Flora_of_Chaiturgarh_forest_hills_Korba_%2C_Chhattisgarh.jpg"
   },
   "dhabaleswar-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-dhabaleswar-temple-card-1-",
-    "file": "east-od-dhabaleswar-temple-card-1-",
-    "source_page": "https://odishatourism.gov.in/en/w/dhabaleswar-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Dhabaleswar-Temple-banner+%281%29.webp/f8bc443a-d74f-8d2c-3c8f-58e5b1b55a47?version=1.0&t=1785498192684",
+    "file": "dhabaleswar-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "99cad34e3c94c43d3be669317f196a66274f4173bd685dc1f89a2ae46bb41fa1",
+    "sha256_local": "dfccb43acdd95157717d33be0e721b14292f1839b2e0a412fc553eb43a526861",
+    "source_page": "https://odishatourism.gov.in/en/places/dhabaleswar-temple"
   },
   "dhamni-temple": {
     "creator": "Wikipedia/Wikimedia Commons contributors",
@@ -5513,9 +5758,14 @@
     "source_page": "https://haryanatourism.gov.in/places_of_interest/dharohar-museum/"
   },
   "dhauli-shanti-stupa": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Dhauli Shanti Stupa, Bhubaneswar, Odisha.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/dhauli-shanti-stupa-dhauli-hills"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-dhauli-shanti-shtupa-banner.webp/beb72400-52fb-31df-56eb-197f7af8db5c?version=1.0&t=1774614831919",
+    "file": "dhauli-shanti-stupa.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e52cfe6cf8e636c3699444fb38273ea08a9e08bb47b688d2984e0bf03589b486",
+    "sha256_local": "13b6697e3795f6ccbdca6a49e3be245b00aaae08baaa00a2c5e43e99a06b109e",
+    "source_page": "https://odishatourism.gov.in/en/places/dhauli-shanti-stupa-dhauli-hills"
   },
   "dhekiakhowa-bornamghar": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Dhekiakhowa_Bornamghar%2C_Jorhat%2C_Assam.jpg/960px-Dhekiakhowa_Bornamghar%2C_Jorhat%2C_Assam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -5523,9 +5773,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Dhekiakhowa_Bornamghar,_Jorhat,_Assam.jpg"
   },
   "dhenkanal-palace": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/dhenkanal-palace-card",
-    "file": "dhenkanal-palace-card",
-    "source_page": "https://odishatourism.gov.in/en/w/dhenkanal-palace"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42228/Dhenkanal-Palace-banner.webp/3fa0c564-fd89-da17-c2d0-e5bfd730fbaf?version=1.0&t=1784054664191",
+    "file": "dhenkanal-palace.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "be8bec7ccfb9e13a39eba403cd9d7f971c8264c44e8639a3c60574da5afb2bc1",
+    "sha256_local": "dbb7821bdb2f6b64a4a0ba699eb3157287a75f5cfab41c016fd7eb6816734209",
+    "source_page": "https://odishatourism.gov.in/en/places/dhenkanal-palace"
   },
   "dholavira": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/indus-valley-civilization-sites/dholavira/Dholavira-Banner.jpg",
@@ -6013,9 +6268,14 @@
     "source_page": "https://ecotourism.up.gov.in/zoo/dudhwaNationalpark?category=2&destinationId=102"
   },
   "duduma-waterfall": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Duduma Waterfall, Koraput.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/duduma-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/south-od-Duduma-Waterfall-Koraput-banner.webp/c6a79dcc-bf42-e082-469f-8e6f88c2e5e9?version=1.0&t=1781238298249",
+    "file": "duduma-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "08a94195018c2050c64c99b50b627f645039c87b5ef55f20d97f186fe91a09c7",
+    "sha256_local": "01ea63ad01d890c703d26ecdef8ec0c8bb10331678c601af40df26a7344ef187",
+    "source_page": "https://odishatourism.gov.in/en/places/duduma-waterfall"
   },
   "dugarwadi-waterfall": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Dugarwadi.jpg/960px-Dugarwadi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -6680,9 +6940,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AGajanur_dam.jpg"
   },
   "gajlaxmi-palace": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/gajlaxmi-palace-card",
-    "file": "gajlaxmi-palace-card",
-    "source_page": "https://odishatourism.gov.in/en/w/gajlaxmi-palace"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42228/Gajlaxmi-Palace-banner.webp/078a2cdb-303b-f656-8436-9134daaf962b?version=1.0&t=1784054664397",
+    "file": "gajlaxmi-palace.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "df828facc5fd011d2fe717d8ec6caa8dbfc64756d58c5817adbe3f16ecddf22a",
+    "sha256_local": "bcab6a856d40127dcfc2e40c50adfe6bece749dae9a2f12f3deee62c12d5a75f",
+    "source_page": "https://odishatourism.gov.in/en/places/gajlaxmi-palace"
   },
   "gajner-palace": {
     "coordinate_note": "Wikipedia: Gajner, Rajasthan, India.",
@@ -6726,9 +6991,14 @@
     "source_page": "https://www.gujarattourism.com/central-zone/kheda/galteshwar-temple.html"
   },
   "gandahati-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-gandahati-waterfall-card-1",
-    "file": "south-od-gandahati-waterfall-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/gandahati-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/south-od-Gandahati-Waterfall-banner.webp/30c9da1e-c70f-afca-18f8-5073b8db9025?version=1.0&t=1781270523753",
+    "file": "gandahati-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e827606b8f5c902e7e4198b318343a5dce2f1a68b2fcbef53f317a1004144972",
+    "sha256_local": "d0f28b4d5958f95ade5a2840844a17749d82dd0d9c23013a4fd3698df1f6a018",
+    "source_page": "https://odishatourism.gov.in/en/places/gandahati-waterfall"
   },
   "gandai-temples": {
     "creator": "Wikimedia Commons contributor",
@@ -7485,9 +7755,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Rup_sagar_deeg.jpg"
   },
   "gopalpur-sea-beach": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Gopalpur Sea Beach, Ganjam.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/gopalpur-sea-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Gopalpur-Beach-banner.webp/02a8b8aa-e59e-ed41-d16e-f64eb7491007?version=1.0&t=1785568561782",
+    "file": "gopalpur-sea-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6e365edbf347f5e61c55597426d759d9584156a68f378f1d31c1e5f7d871d7fc",
+    "sha256_local": "b5b570a943de981a5732728317d3ecb4b8d63ec9cf0edcab02da95596b101fb5",
+    "source_page": "https://odishatourism.gov.in/en/places/gopalpur-sea-beach"
   },
   "gopeshwar": {
     "coordinate_note": "Coordinate from the official Uttarakhand Tourism destination page https://www.uttarakhandtourism.gov.in/destination/gopeshwar.",
@@ -7612,6 +7887,16 @@
     "file": "Gudibande (26069965140).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AGudibande_%2826069965140%29.jpg"
   },
+  "guja-pahada-jemamal-pahara": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-Guja-Pahada-Banner.webp/7b1872ab-0d01-a685-052f-5fd7402c624d?version=1.0&t=1795166625641",
+    "file": "guja-pahada-jemamal-pahara.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2f52fff59cbe7360d4bff12117013382e9fccfc0108c74d47d7c2648f5795971",
+    "sha256_local": "1696934984837f4e5e4e77e3740311db011d38ff5738fe4842f51bf5c0bba6e8",
+    "source_page": "https://odishatourism.gov.in/en/places/guja-pahada-jemamal-pahara-"
+  },
   "gujarat-vidyapeeth": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/gandhi-circuit/gujarat-vidyapeeth/Gujarat-Vidyapeeth-1.jpg",
     "file": "gujarat-vidyapeeth.jpg",
@@ -7665,9 +7950,24 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Budhauli_Math.jpg"
   },
   "gundicha-ghagi-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-gundichaghagi-card",
-    "file": "north-od-gundichaghagi-card",
-    "source_page": "https://odishatourism.gov.in/en/w/gundicha-ghagi-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-gundichaghagi-banner.webp/12d40526-97fd-07ea-b19e-4d923e3a6da4?version=1.0&t=1785571456497",
+    "file": "gundicha-ghagi-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "466bfc9938db9ee00c81d07a31fd60e9e25668bb5d72ab713b0b6ab1a6232b33",
+    "sha256_local": "b7c7814cd60f4efcdabddf3a8241bf5e412f135e270f601f6c7e3c01d830d66c",
+    "source_page": "https://odishatourism.gov.in/en/places/gundicha-ghagi-waterfall"
+  },
+  "gundicha-temple": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/gundicha-temple-puri-odisha-1-attr-hero?qlt=82&ts=1726663778679",
+    "file": "gundicha-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "0960bab01c009e62f5fb95d481d5cc73851dac1774914a45c9b23fd28fbc552b",
+    "sha256_local": "d2547ce7a60d7ea69a0b994edbb0b7ed5fc3a58efbfeec8d95af23f688d43684",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/gundicha-temple"
   },
   "gupta-dham-cave": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/0012623_Turturiya_Matha_and_Dham%2C_Chhattisgarh_063.jpg/960px-0012623_Turturiya_Matha_and_Dham%2C_Chhattisgarh_063.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -7683,9 +7983,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Guptar_Ghat.jpg"
   },
   "gupteswar-cave": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Gupteswar Cave Temple, Koraput.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/gupteswar-cave-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Gupteswar-Cave-Temple-Koraput-banner.webp/bc053ff1-aa49-39f9-6f48-21e9a95c86e9?version=1.0&t=1786124090628",
+    "file": "gupteswar-cave.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "8a70a791c06c4796eedbd010b03485f33f4bf144378a89bb5952748bd777cca5",
+    "sha256_local": "e0e49cbfce5370a6b2c108b10d9fbe2d0d924f9c34aeeeb63ba5770a579e2121",
+    "source_page": "https://odishatourism.gov.in/en/places/gupteswar-cave-temple"
   },
   "guptsar-sahib": {
     "coordinate_note": "OpenStreetMap (Photon): Gurdwara Guptsar Sahib, Chhattiana, Sri Muktsar Sahib district, Punjab, India.",
@@ -7985,9 +8290,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Hanuman_Tok_temple_in_Sikkim_04.jpg"
   },
   "hanuman-vatika": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-hanumanvatika-card",
-    "file": "west-od-hanumanvatika-card",
-    "source_page": "https://odishatourism.gov.in/en/w/hanuman-vatika"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-HanumanVatika-banner.webp/08822280-cde6-17b2-5517-0a04def517e3?version=1.0&t=1783935016814",
+    "file": "hanuman-vatika.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "b3547fedebaa116ef799a7820e06016e81ed53035035c8e8944fdd3583668bf2",
+    "sha256_local": "4b9868be556284421b2cb47a4e58471c9a11a1f3d61710a5b4793c7c54b76443",
+    "source_page": "https://odishatourism.gov.in/en/places/hanuman-vatika"
   },
   "har-ki-pauri": {
     "coordinate_note": "Official tourism page coordinate was not usable for this site; this point is from Google Maps place Har Ki Pauri, Haridwar, Uttarakhand (https://www.google.com/maps/place/?q=place_id:ChIJQTWd8RlHCTkR47b9MveMQ4c).",
@@ -8031,9 +8341,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:HARIKE_Wetlands.jpg"
   },
   "harisankar-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-harishankar-temple-waterfall-card",
-    "file": "west-od-harishankar-temple-waterfall-card",
-    "source_page": "https://odishatourism.gov.in/en/w/harisankar-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/west-od-Harishankar-Temple-Waterfall-banner+%281%29.webp/65169ce7-41bf-69fe-bc52-90f98aa1c2d5?version=1.0&t=1775454232978",
+    "file": "harisankar-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "94670645251651874abef857fe932640446cf4d6c2de822a6368b18a0ea0f163",
+    "sha256_local": "f08e92e65080b50d2e20416fc4b462366636e6de55212b2479687374ba85b0a6",
+    "source_page": "https://odishatourism.gov.in/en/places/harisankar-temple"
   },
   "harishchandragad": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Harishchandra_Gad2_by_Bajirao_Nawale.jpg/960px-Harishchandra_Gad2_by_Bajirao_Nawale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -8375,9 +8690,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Hira_Mahal,_Nabha.jpg"
   },
   "hirakud-dam": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Hirakud Dam, Sambalpur.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/hirakud-dam"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-Hirakud-Dam-Sambalpur-banner.webp/2ac4562d-d9f3-9b4b-d71f-c8deffa846ad?version=1.0&t=1785570430210",
+    "file": "hirakud-dam.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "32716c204b02da6b7f1245ca9e9d2d6381873eb6b77d3fb4bb73ec1ab2554105",
+    "sha256_local": "f6256c4233313386556b2c3a12d14eed2c0617dfac99ccd549d55945e96a44d6",
+    "source_page": "https://odishatourism.gov.in/en/places/hirakud-dam"
   },
   "hirekolale-lake": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic%20view%20towards%20Hirekolale%20lake%20and%20Rameshwara%20lake%20from%20top%20of%20Mullayanagiri%20-%20panoramio.jpg",
@@ -9405,6 +9725,16 @@
     "file": "960px-Kadavumbhagam_Ernakulam_Kerala_Jewish_Synagogue_1b.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Kadavumbhagam_Ernakulam_Kerala_Jewish_Synagogue_1b.jpg"
   },
+  "jeypore-kings-palace": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/jeypore-kings-palace-koraput-odisha-1-attr-hero?qlt=82&ts=1726663698894",
+    "file": "jeypore-kings-palace.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "aabcc3c5cc5780988f29b9fafd102b152deb1d38a241a23b603d79d5704619bf",
+    "sha256_local": "2b17ebd32ae54f254182addba1f4e59f5ea36711865f2cd24bccbde71f56da0b",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/koraput/jeypore-kings-palace"
+  },
   "jhansi-fort": {
     "creator": "Official district website",
     "download_url": "https://cdn.s3waas.gov.in/s38efb100a295c0c690931222ff4467bb8/uploads/bfi_thumb/2018070519-rri0cl5etfa8evtmx7stfr17pfmvrdpewg0fz4boqq.jpg",
@@ -9464,6 +9794,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jobat_Project.jpg"
   },
+  "jobra-barrage": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/jobra-barrage-cuttack-odisha-jobra-barrage1-attr-hero?qlt=82&ts=1726674646012",
+    "file": "jobra-barrage.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "592e552e3ffe9d240d367b42f489f24e92c257ed7084e2e33eb3ccaad5b23482",
+    "sha256_local": "d3dc222e4897db6989446f6d4dbf606861c06b16eefd663dec4ef62b4828609c",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/cuttack/jobra-barrage"
+  },
   "jodeghat": {
     "coordinate_note": "Wikipedia: Jodeghat, Kumuram Bheem Asifabad, Telangana, India.",
     "creator": "Varaprasad Sidam",
@@ -9488,6 +9828,16 @@
     "note": "Wikimedia Commons file File:Joga fort and Narmada Ghat's.png for Joga Fort, Harda (Harda, Madhya Pradesh).",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Joga_fort_and_Narmada_Ghat%27s.png"
+  },
+  "jogeswar-temple-patora": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Jogeswar-Temple-Banner.webp/65a55daf-22dd-7a73-3ad4-6272901cc102?version=1.0&t=1795166626109",
+    "file": "jogeswar-temple-patora.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "859f1cd4cb2ba33cb76123c2e952bef232c36dbd94528caefa23a7f9145e9da4",
+    "sha256_local": "08453ddc70f7f31ed8a4d4ddb12a0be8db469d8be8de23577d74e0f001efa3eb",
+    "source_page": "https://odishatourism.gov.in/en/places/jogeswar-temple-patora"
   },
   "jogighopa": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Devotees_seen_at_the_Bagheswari_Temple1.jpg/960px-Devotees_seen_at_the_Bagheswari_Temple1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -9561,9 +9911,14 @@
     "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd96988ffe009a67043f44"
   },
   "joranda-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-joranda-waterfall-card-1",
-    "file": "north-od-joranda-waterfall-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/joranda-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-joranda-waterfall-banner.webp/9c06bbce-59db-93f0-e6a4-59ee84a89c5d?version=1.0&t=1788758870455",
+    "file": "joranda-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "30dbacc960f24c13b7beb19b61847f548810a3fe5942c866c1e04c5d1a587c07",
+    "sha256_local": "9426c67d4fe679a5045a5ec5a024271513c08662749c98e646bd283f287516f5",
+    "source_page": "https://odishatourism.gov.in/en/places/joranda-waterfall"
   },
   "jorasanko-thakurbari": {
     "coordinate_note": "Wikipedia: Jorasanko Thakur Bari, West Bengal, India.",
@@ -9814,6 +10169,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jashpur_sky_view_from_Jashpur_Nagar_Aug_2026.jpg"
   },
+  "kailash-rajbati-kailash-palace": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Kailash-rajbati-Banner.webp/30672219-a622-9447-0b23-600e611fb602?version=1.0&t=1795166626552",
+    "file": "kailash-rajbati-kailash-palace.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "d1780b5454d0dd0632426dbbc5b13b99159e34c8e783c4e727b6de37136dbe1b",
+    "sha256_local": "7cce413f33bac1c91c6ccc0d5030138ad0b80eeb9ff753a3568721f923a5c56d",
+    "source_page": "https://odishatourism.gov.in/en/places/kailash-rajbati-kilash-palace"
+  },
   "kaimur-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/150_crore_years_old_Fossils_of_Blue_green_algae%2C_in_Salkhan_%28Sonebhadra%2C_UP%29.jpg/960px-150_crore_years_old_Fossils_of_Blue_green_algae%2C_in_Salkhan_%28Sonebhadra%2C_UP%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-150_crore_years_old_Fossils_of_Blue_green_algae,_in_Salkhan_(Sonebhadra,_UP).jpg",
@@ -9879,9 +10244,14 @@
     "source_page": "https://www.gujarattourism.com/kutch-zone/kutch/kala-raksha.html"
   },
   "kalabhoomi-odisha-craft-museum": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-kalabhoomi-odisha-craft-museum-card-1",
-    "file": "east-od-kalabhoomi-odisha-craft-museum-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/kalabhoomi-odisha-craft-museum"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Kalabhoomi-Odisha-Craft-Museum-banner.webp/64c46bc9-47bc-667d-9290-d160c67014c2?version=1.0&t=1774614835109",
+    "file": "kalabhoomi-odisha-craft-museum.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2a4c6cace2ed1f99461a6728cdac04de3c001b4df01c4e12f882dad9f1e10ee9",
+    "sha256_local": "9432b26b33a0c399a4ee4bc480c79f14fffb6409b516d10fa295a3ed54f36dc1",
+    "source_page": "https://odishatourism.gov.in/en/places/kalabhoomi-odisha-craft-museum"
   },
   "kalachuri-temple-complex-amarkantak": {
     "coordinate_note": "Approximate coordinates for Kalachuri Temple Complex, Amarkantak in Anuppur district, Madhya Pradesh (district centroid used for map placement); verify on arrival.",
@@ -10228,9 +10598,14 @@
     "source_page": "https://www.incredibleindia.gov.in/en/himachal-pradesh/dharamshala"
   },
   "kanhakund-the-grand-canyon-of-odisha": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-kanhakund-waterfall",
-    "file": "north-od-kanhakund-waterfall",
-    "source_page": "https://odishatourism.gov.in/en/w/kanhakund-the-grand-canyon-of-odisha"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-kanhakund-banner.webp/67915897-de9d-f56e-348f-9d1a9586bcde?version=1.0&t=1781783671041",
+    "file": "kanhakund-the-grand-canyon-of-odisha.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a9958b074ccb4c06d22b7f6f28724d8f434dab9fdc1318d89cadbacc11baee35",
+    "sha256_local": "9e1785c2c39ef46477363c4e22ad06bde7f61a567bf4209c995a3e40726c02c4",
+    "source_page": "https://odishatourism.gov.in/en/places/kanhakund-the-grand-canyon-of-odisha"
   },
   "kanheri-caves": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Kanheri_Caves_Mumbai_Maharashtra_DSCF9805_%282%29.JPG/960px-Kanheri_Caves_Mumbai_Maharashtra_DSCF9805_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -10378,9 +10753,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AKkk.ipg.jpg"
   },
   "kapilash-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/reg-plc-kapilas-2",
-    "file": "reg-plc-kapilas-2",
-    "source_page": "https://odishatourism.gov.in/en/w/kapilash-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56042/central-od-Kapilash-Temple-banner.webp/c78fb015-461f-268e-cd9f-8e0f0b939f65?version=1.0&t=1785233289344",
+    "file": "kapilash-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e77da7e8fa14f79a350cda117a389609e1f58ceb9790c3ae78a2075c3dbf4648",
+    "sha256_local": "847b31d4ca6a3e1e55fa52036d89cb2c1b031bc65d55b455496ecf9e9cefb26b",
+    "source_page": "https://odishatourism.gov.in/en/places/kapilash-temple"
   },
   "kapileshwar-mahadev-temple": {
     "creator": "Wikipedia/Wikimedia Commons contributors",
@@ -10448,9 +10828,14 @@
     "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/karayar-dam"
   },
   "kardola-weavers-village": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-kardolaweaversvillage-card-1-",
-    "file": "west-od-kardolaweaversvillage-card-1-",
-    "source_page": "https://odishatourism.gov.in/en/w/kardola-weavers-village"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-KardolaWeaversVillage-banner.webp/099d522f-6199-ba78-1e3f-1976c2758ebc?version=1.0&t=1785570429910",
+    "file": "kardola-weavers-village.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "b6b75faf1745ae98ed8542a12cf8f70ed11392b3fed1a3d3eae646847ebf0471",
+    "sha256_local": "d094c4157d67cbae51856161f346ca18d28b02cf496e11e666cb8d4c173600be",
+    "source_page": "https://odishatourism.gov.in/en/places/kardola-weavers-village"
   },
   "kareng-ghar": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/KARENG_GHAR_SIVASAGAR_ASSAM.jpg/960px-KARENG_GHAR_SIVASAGAR_ASSAM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -10493,6 +10878,16 @@
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Karla_Caves%2CPune%2CMaharashtra_-_panoramio.jpg/960px-Karla_Caves%2CPune%2CMaharashtra_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Karla_Caves,Pune,Maharashtra_-_panoramio.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Karla_Caves,Pune,Maharashtra_-_panoramio.jpg"
+  },
+  "karlapat-wildlife-sanctuary": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/Karlapat-Wildlife-Sanctuary-Banner.webp/62db7909-6060-d8ab-a434-834102a116a7?version=1.0&t=1795166620291",
+    "file": "karlapat-wildlife-sanctuary.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "d90052b29c862179557d18a42f54bccd7da1296c4f1ba051495bf27cdebccb5e",
+    "sha256_local": "a301e55ddf076e714ca5cbb92477ec3f05760eae01027cca98e9ea8a57b3ec10",
+    "source_page": "https://odishatourism.gov.in/en/places/karlapat-wildlife-sanctuary"
   },
   "karna-tank": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/pinjore_pic-2.jpg",
@@ -10590,9 +10985,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Daily_life_of_Kashipur_with_patterned_clouds.jpg"
   },
   "kataka-silver-filigree-hub": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-kataka-silverfiligreehub-card",
-    "file": "east-od-kataka-silverfiligreehub-card",
-    "source_page": "https://odishatourism.gov.in/en/w/kataka-silver-filigree-hub"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Kataka%E2%80%93SilverFiligreeHub-banner.webp/0d57cf31-d8b0-94e2-e538-749c79a15a74?version=1.0&t=1783932071397",
+    "file": "kataka-silver-filigree-hub.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "845cbd0a0d76f912007d1801ee1f94c1d788717e73b7cc294ef71e44bc33c2ee",
+    "sha256_local": "cf20bc79d0f2bd0c9e9083d1e751cfcff1546562426512ff70c3e51ce866397b",
+    "source_page": "https://odishatourism.gov.in/en/places/kataka-silver-filigree-hub"
   },
   "katakhal-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Kamakhya_Temple%2C_Guwahati%2C_Assam.jpg/960px-Kamakhya_Temple%2C_Guwahati%2C_Assam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -10973,14 +11373,24 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Khanda_museum_Fatehgarh_Sahib.jpg"
   },
   "khandadhar-kendujhar": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-khandadhar-waterfall-keonjhar-card-3",
-    "file": "north-od-khandadhar-waterfall-keonjhar-card-3",
-    "source_page": "https://odishatourism.gov.in/en/w/khandadhar-kendujhar"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-Khandadhar-Kendujhar-banner.webp/e28819a5-7d75-e55a-b1ac-7a7aa791a5ab?version=1.0&t=1783933599061",
+    "file": "khandadhar-kendujhar.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "268a72e4f28c2dd0826ba1ca702c304ac1216041599d46bde81de91880ffa8d6",
+    "sha256_local": "e8aa703c8fcb5f817f3a9955a6308e570c382084b984ed856d061fc8c47024f0",
+    "source_page": "https://odishatourism.gov.in/en/places/khandadhar-kendujhar"
   },
   "khandadhar-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-khandahar-waterfall-sundergarh-card",
-    "file": "north-od-khandahar-waterfall-sundergarh-card",
-    "source_page": "https://odishatourism.gov.in/en/w/khandadhar-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56034/north-od-Khandahar-Waterfall-Sundergarh-card.webp/6546bb8f-9a04-9baa-dbef-3db30ad496be?version=1.0&t=1785318531380&download=true",
+    "file": "khandadhar-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "9c36fc141200407d32fbff38459dc8c279c0afb03053e939136bdf3f9aac26dd",
+    "sha256_local": "fffb7c55445f90c0ce835ff42f83e33f2cbdd012a936b5b12bbb842596adabd7",
+    "source_page": "https://odishatourism.gov.in/en/places/khandadhar-waterfall"
   },
   "khandala": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Khandala-4.JPG/960px-Khandala-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -11147,9 +11557,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Demoiselle_cranes_in_Khichan_near_Bikaner_(Rajasthan).jpg"
   },
   "khiching-temple-kichakeswari-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-kichakeswari-temple-khiching-card-1",
-    "file": "north-od-kichakeswari-temple-khiching-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/khiching-temple-kichakeswari-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-Kichakeswari-Temple-Khiching-banner.webp/b5f71a72-002c-625d-1830-ece8bec96aaa?version=1.0&t=1783932770976",
+    "file": "khiching-temple-kichakeswari-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "0d9070dfe261d910170b12268603ab9f840e866df6672a3dae54864f0fd21de6",
+    "sha256_local": "8dc3062b0273d628680f1f8aec4960563f157b019215d942663d25e6c3b5e13a",
+    "source_page": "https://odishatourism.gov.in/en/places/khiching-temple-kichakeswari-temple"
   },
   "khijadiya-bird-sanctuary": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/bird-watching-sites/khijadia-bird-sanctuary/Khijadia-Bird-Sanctuary-Thumbnail.jpg",
@@ -11344,14 +11759,24 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Kilbury_(50900843296).jpg"
   },
   "killa-aali-palace": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/aul-palace-card",
-    "file": "aul-palace-card",
-    "source_page": "https://odishatourism.gov.in/en/w/killa-aali-palace"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42228/Aul-palace-banner.webp/d7044120-f156-f66c-7606-1d7a27188cc3?version=1.0&t=1784054663981",
+    "file": "killa-aali-palace.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "46bfcbc2e6e324b5201e52bc1df0c0d6aa66173ca178e23ed9a637e3beb738c7",
+    "sha256_local": "87ae0927e1da1dc4746ba51885f89926de95b9872dce4ed8541e2129af750247",
+    "source_page": "https://odishatourism.gov.in/en/places/killa-aali-palace"
   },
   "killa-dalijoda": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/heritage-properties-kila-dalijoda-palace",
-    "file": "heritage-properties-kila-dalijoda-palace",
-    "source_page": "https://odishatourism.gov.in/en/w/killa-dalijoda"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42228/Kila-Dalijoda-Palace-banner.webp/265ab9b2-8e79-11d4-a541-67d3aba350ee?version=1.0&t=1784054664639",
+    "file": "killa-dalijoda.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4643bd8c67b30c747961b4ea020406fdfcf4bd4d9b7f7b81c78137bc8df4cd0f",
+    "sha256_local": "957bfca43b5356d75a6448749a75b4e812fe75f48efaf48b1f5dfc402dd6110e",
+    "source_page": "https://odishatourism.gov.in/en/places/killa-dalijoda"
   },
   "kingdom-of-dreams": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/hotel_rajhans_surajkund.jpg",
@@ -11532,6 +11957,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Koilsagar_Dam_Devarakadra_Mahabubnagar_Telangana_India.jpg"
   },
+  "koilighugar-waterfall": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/Koilighugar-Banner.webp/c6139831-3cfe-4651-c3e0-bd36620a1f7b?version=1.0&t=1795166620780",
+    "file": "koilighugar-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "df1b175cc64c14d70b0daea199902a07c4d6e981a4baea968f2e73b9167b8eba",
+    "sha256_local": "bb64fbb1da04ecff1b5b961c92d4ee866e36661984c37786a9ff9e092621d283",
+    "source_page": "https://odishatourism.gov.in/en/places/koilighugar-waterfall"
+  },
   "kokernag-springs": {
     "content_type": "image/png",
     "download_url": "https://jandktourism.jk.gov.in/destination/Kashmir/KOKERNAG.png",
@@ -11543,9 +11978,14 @@
     "source_page": "https://jandktourism.jk.gov.in/Destinations.html"
   },
   "kolab-dam": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-kolabdam-card",
-    "file": "south-od-kolabdam-card",
-    "source_page": "https://odishatourism.gov.in/en/w/kolab-dam"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-KolabDam-banner.webp/c73fa4f9-7d2b-fd35-d8a2-f31ed68907c7?version=1.0&t=1783932838867",
+    "file": "kolab-dam.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a2f40bd7c267f0812ed967810c33c4d8ac572174745df34614772198670adb2d",
+    "sha256_local": "6e5e16c7d6049ebba6765943c8577e914f1a813f54e53ae7ea9e26603a6bbb86",
+    "source_page": "https://odishatourism.gov.in/en/places/kolab-dam"
   },
   "kolanupaka-temple": {
     "coordinate_note": "Wikipedia: Kolanupaka, Telangana, India.",
@@ -11633,9 +12073,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Mallanna_Swamy_temple,_Komuravelli_Telangana_-_01.jpg"
   },
   "konark-sun-temple": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Konarka%20Temple.jpg",
-    "file": "Konarka Temple.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Konarka_Temple.jpg"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-konark-sun-temple-banner.webp/a5eb4f89-b7b7-7831-f460-0ca5c6b7e2d5?version=1.0&t=1774614836713",
+    "file": "konark-sun-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "07e48b37f08a110d13388fe2f6a7abc3738fb209464b15c251cb2ded985d50e6",
+    "sha256_local": "9c6cef9bb0e5deb4f81d9f3cc9abfd020d7f603cc8a1b9d375028b986ad5782e",
+    "source_page": "https://odishatourism.gov.in/en/places/konark-sun-temple"
   },
   "konaseema-backwaters": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Abandoned_boat_on_riverbank_near_Ayodhyalanka%2C_Konaseema%2C_Andhra_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -11958,9 +12403,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Kuldhara_11.jpg"
   },
   "kuldiha-wildlife-sanctuary": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-kuldiha-wildlife-card",
-    "file": "east-od-kuldiha-wildlife-card",
-    "source_page": "https://odishatourism.gov.in/en/w/kuldiha-wildlife-sanctuary"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Kuldiha-Wildlife-banner.webp/ade05643-1f99-3800-4b20-f2760bad6027?version=1.0&t=1788758577595",
+    "file": "kuldiha-wildlife-sanctuary.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "ebeba99a0ecf72a86db246dacd1734dd2a92fa673e09d6ed3f8869743ff76dbc",
+    "sha256_local": "92e20f2b1b1a0b320f880902b8c617b8901616dd077a27656d1350e9c1bd47e4",
+    "source_page": "https://odishatourism.gov.in/en/places/kuldiha-wildlife-sanctuary"
   },
   "kumarakom-bird-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/A_view_of_Vembanattu_lake_from_a_house_boat%2CKumarakom%2CAlleppy%2CKerala%2CIndia_-_panoramio.jpg/960px-A_view_of_Vembanattu_lake_from_a_house_boat%2CKumarakom%2CAlleppy%2CKerala%2CIndia_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -12282,9 +12732,14 @@
     "source_page": "https://mizoramtourism.com/top-destination/55"
   },
   "ladu-baba-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-laddubaba-card-1",
-    "file": "east-od-laddubaba-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/ladu-baba-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-laddubaba-banner.webp/664ea4d0-de57-d7d5-92cd-d917301ba634?version=1.0&t=1785498192438",
+    "file": "ladu-baba-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "b4caaed3d7bf9f4fff8ad35bf246679d2e431062c29d6441581b40daca0303f4",
+    "sha256_local": "54353543c90b3e282c6c4fc58f5a7f0c43286412e1943ec17aa2372a59f19f65",
+    "source_page": "https://odishatourism.gov.in/en/places/ladu-baba-temple"
   },
   "laila-majnu-ki-mazar": {
     "coordinate_note": "Wikipedia: Anupgarh, Rajasthan, India.",
@@ -12416,9 +12871,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Laling_Fort,_Dhule,_Maharashtra,_India.jpg"
   },
   "lalitagiri-buddhist-complex": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-lalitgiri-buddhist-complex-card",
-    "file": "east-od-lalitgiri-buddhist-complex-card",
-    "source_page": "https://odishatourism.gov.in/en/w/lalitagiri-buddhist-complex"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-lalitgiri-buddhist-complex-banner.webp/6d83e01d-b105-93c4-ee7c-68ce0a094dae?version=1.0&t=1785318271458",
+    "file": "lalitagiri-buddhist-complex.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4ed006d9e1e8edb8bdb92b8503e235d8fe5966bb562676575183c9c3edf7d29b",
+    "sha256_local": "0506b0b5422d495f6fa2272e45876f1a2b1f2585a90b3cc932643f6adb85c3b1",
+    "source_page": "https://odishatourism.gov.in/en/places/lalitagiri-buddhist-complex"
   },
   "lamayuru-monastery": {
     "content_type": "image/jpeg",
@@ -12461,6 +12921,16 @@
     "note": "Wikimedia Commons file File:Lanji Fort. Balaghat, Madhya Pradesh 32.jpg for Lanji Fort, Balaghat (Balaghat, Madhya Pradesh).",
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Lanji_Fort._Balaghat,_Madhya_Pradesh_32.jpg"
+  },
+  "lankeswari-temple": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Lankeswari-Temple-Banner.webp/923a02a8-6a19-af54-d109-bdabc8727e28?version=1.0&t=1795166626994",
+    "file": "lankeswari-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "927837913f60d198f796d2c7a488bd76f97f94bcfc3b0934d628b4e273bb8999",
+    "sha256_local": "06abb988feb073a835bd59630fa34bc9e62b6c4d5e1df67b2cb46f00120378a9",
+    "source_page": "https://odishatourism.gov.in/en/places/lankeswari-temple"
   },
   "lansdowne": {
     "coordinate_note": "Official tourism page coordinate was not usable for this site; this point is from Google Maps place Lansdowne, Uttarakhand (https://www.google.com/maps/place/?q=place_id:ChIJiSkS5bmCCTkRARXWqyxTmCc).",
@@ -12580,9 +13050,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Antique_furniture_Le_Corbusier_centre_Chandigarh_06.jpg"
   },
   "leaning-temple-of-huma": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-huma-temple-card-2",
-    "file": "west-od-huma-temple-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/leaning-temple-of-huma"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-Huma-Temple-banner.webp/f432b5d1-8b2c-659d-a9e3-9931b4e8ce9c?version=1.0&t=1784108510827",
+    "file": "leaning-temple-of-huma.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "918397f1a9e3f86662e5d573ba6e272af60dec851e796241d1479518c7119df0",
+    "sha256_local": "7be60ee39be4e5c53182065b6eccf68291c632ed260ce62b14aeb65b253de5d7",
+    "source_page": "https://odishatourism.gov.in/en/places/leaning-temple-of-huma"
   },
   "leh-palace": {
     "content_type": "image/jpeg",
@@ -12685,9 +13160,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3"
   },
   "lingaraj-temple": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lingaraj%20Temple%20%2C%20Bhubaneswar.jpg",
-    "file": "Lingaraj Temple , Bhubaneswar.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Lingaraj_Temple_,_Bhubaneswar.jpg"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-lingaraj-temple-banner.webp/63bf8432-e6f2-8357-547e-6ffb9c3b2f2d?version=1.0&t=1783932071796",
+    "file": "lingaraj-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "0f7149fc0c6c7525858a217a3fbe1130e3fb4fcf9a6ecefaf65005aa7575c917",
+    "sha256_local": "9936e49822c8a880bdbacc3cee0b7d3f6104e250edbcc75749300b9f490bff43",
+    "source_page": "https://odishatourism.gov.in/en/places/lingaraj-temple"
   },
   "lingdum-monastery": {
     "coordinate_note": "Coordinate reference: OpenStreetMap place-of-worship node for Lingdum Monastery; Wikipedia has no usable coordinate for the monastery.",
@@ -12810,6 +13290,16 @@
     "file": "lokayatan-folk-museum.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/central-zone/ahmedabad/lokayatan-folk-museum-.html"
+  },
+  "loknath-temple": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/loknath-temple-puri-odisha-1-attr-hero?qlt=82&ts=1726674731200",
+    "file": "loknath-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "6be0334fe60f52438961c0a8f8d10934c69074107997a34ba8e0a448109f2829",
+    "sha256_local": "5f7f0861736b326be6cb2b0ed9668cae5fbf043d252a626b57ae41cb9f25cf51",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/loknath-temple"
   },
   "loktak-lake": {
     "coordinate_note": "Coordinate reference: OpenStreetMap/Photon centroid for Loktak Lake; the lake covers a wide area and the state page gives no single visitor point.",
@@ -13037,14 +13527,29 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Maa_Bagalamukhi_Temple,_Nalkheda.jpg"
   },
   "maa-balakumari-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-maabalakumaritemple-card",
-    "file": "south-od-maabalakumaritemple-card",
-    "source_page": "https://odishatourism.gov.in/en/w/maa-balakumari-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-MaaBalakumariTemple-banner.webp/6d46db6c-ed88-070b-a863-4599e78dda91?version=1.0&t=1783934241764",
+    "file": "maa-balakumari-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "9b5a06fa0949001c9d5587f2b7fbd9a720d565637bc249d5999b4c9f66f179df",
+    "sha256_local": "68650b033c4b615c97b822f29b7e5d2289af78087e1dfcbc3893b88069391b88",
+    "source_page": "https://odishatourism.gov.in/en/places/maa-balakumari-temple"
   },
   "maa-bamleshwari-temple": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maa%20Bamleshwari%20Temple.jpg?width=800",
     "file": "Maa Bamleshwari Temple.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File%3AMaa_Bamleshwari_Temple.jpg"
+  },
+  "maa-bhadrakali-temple": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-Bhadrakali-Temple-banner.webp/0766388f-b1e1-cb78-fa82-0e152b0753e1?version=1.0&t=1795166621686",
+    "file": "maa-bhadrakali-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "228558e37548f788f700d61a74ea610557ce3fd26abaacf995624d8ad85faaaf",
+    "sha256_local": "467b4bad7b767d2a5376a1123d7f4a69aa70db1eb79136e3eb51e46ee98792f5",
+    "source_page": "https://odishatourism.gov.in/en/places/maa-bhadrakali-temple"
   },
   "maa-chamunda-temple-tekri-dewas": {
     "coordinate_note": "Approximate coordinates for Tekri/Maa Chamunda Temple in Dewas district; verify on arrival.",
@@ -13057,19 +13562,39 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Maa_Chamunda_Mata_Temple,_Tekri_Dewas.jpg"
   },
   "maa-kalijai-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-maa-kalijai-temple-card-1",
-    "file": "east-od-maa-kalijai-temple-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/maa-kalijai-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/east-od-maa-kalijai-temple-banner.webp/932d2bf0-6a93-1e67-40a9-2a9c312d90d7?version=1.0&t=1781196894507",
+    "file": "maa-kalijai-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6d05b489c6eee205d0f5864aee3ee6f479b6fd7c2e6108bf9c01f0f53151cf7e",
+    "sha256_local": "7e94632965f05f81b9735eecc22f93874fc3009e8767b248a3f6389f1c83cfef",
+    "source_page": "https://odishatourism.gov.in/en/places/maa-kalijai-temple"
   },
   "maa-katyayani-temple": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Golghar_-_Patna_%285%29.jpg/960px-Golghar_-_Patna_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "960px-Golghar_-_Patna_(5).jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Golghar_-_Patna_(5).jpg"
   },
+  "maa-metakani-temple": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Metakani-Temple-Banner.webp/dab3996c-0c3e-6de2-2068-ac5b88554946?version=1.0&t=1795166627872",
+    "file": "maa-metakani-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "750ac2d6bee38ea08d35c78a4d4189abc81036f8b2f5d8b6428df1af9c41f84b",
+    "sha256_local": "450b9fbdfed6dceb7b437ddd86f9bc5c353c3ea0394d3ddd254c98204d4216b4",
+    "source_page": "https://odishatourism.gov.in/en/places/maa-metakani-temple"
+  },
   "maa-samaleswari-temple": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Maa Samaleswari Temple, Sambalpur.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/maa-samaleswari-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-Samaleswari-Temple-banner.webp/e03d3a04-d1b9-1808-7685-7f1a7fcc08bb?version=1.0&t=1781271086360",
+    "file": "maa-samaleswari-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6471c025d4a15d195da914dfc4313be28b6caf8c0424469a11a9bdbf27581695",
+    "sha256_local": "b69816b53e131336adc229a297856dd9546adaf15c4c356a89358ef18c9cdbcf",
+    "source_page": "https://odishatourism.gov.in/en/places/maa-samaleswari-temple"
   },
   "maa-sharda-devi-temple-maihar": {
     "coordinate_note": "Approximate coordinates for Maa Sharda Devi Temple in Maihar district.",
@@ -13082,9 +13607,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Maa_Sharda_Temple,_Maihar.jpg"
   },
   "maa-tarini-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-maa-tarini-temple-ghatgaon-card-1",
-    "file": "north-od-maa-tarini-temple-ghatgaon-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/maa-tarini-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/north-od-Maa-Tarini-Temple-Ghatgaon-banner.webp/15682d62-8c5b-2d9d-e2a1-f3157c08a67f?version=1.0&t=1774614872227",
+    "file": "maa-tarini-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "9c49c941d50d6da7a55c897ba74a807840fdf684f5c84d8b90fcf50107627b27",
+    "sha256_local": "553c3bc1cc5689a2c635c30d5650db16bc3436faa37f1d7ef5efb465f57134e8",
+    "source_page": "https://odishatourism.gov.in/en/places/maa-tarini-temple"
   },
   "maasic": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Keirao Bitra, Imphal East, where the MAASI complex at Keirao is located; the institute is not mapped separately.",
@@ -13382,9 +13912,14 @@
     "source_page": "https://www.meghalayatourism.in/explore/destinations/"
   },
   "mahendragiri-hills": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-mahendragiri-hills-gajapati-card-2",
-    "file": "south-od-mahendragiri-hills-gajapati-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/mahendragiri-hills"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Mahendragiri-Hills-Gajapati-banner.webp/0733a073-8ae2-7d95-6843-476f6b33b497?version=1.0&t=1785568561532",
+    "file": "mahendragiri-hills.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a3bbb035bf7972ebec1f0b1d0885c8b0fcac7a96c9684c8ad7fe824cfd3002c8",
+    "sha256_local": "ee0f37c2d1851795cde743fa184b8770127149446049dd828c191440f6630216",
+    "source_page": "https://odishatourism.gov.in/en/places/mahendragiri-hills"
   },
   "maheshpur-archaeological-remains": {
     "creator": "Government of Chhattisgarh — District Surguja",
@@ -13405,9 +13940,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Mahi_Bajaj_Sagar_Dam,_Banswara.jpg"
   },
   "mahimagadi-joranda": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/reg-plc-mahimagadi",
-    "file": "reg-plc-mahimagadi",
-    "source_page": "https://odishatourism.gov.in/en/w/mahimagadi-joranda"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56042/central-od-mahimagadi-banner.webp/3aa08725-22df-c4e9-4a19-6e074e97196a?version=1.0&t=1783936916629",
+    "file": "mahimagadi-joranda.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "670ce362ec30e8a712e8ba204f483a7f5b3b40e806c1cbd58d8a98604e09ae78",
+    "sha256_local": "286ee618fd48c259ba1e71831aeb1eee8ab08e7beab37fdb4383496806202ce6",
+    "source_page": "https://odishatourism.gov.in/en/places/mahimagadi-joranda"
   },
   "mahmudabad-fort": {
     "creator": "राजा महमुदाबाद का क़िला",
@@ -13741,9 +14281,14 @@
     "source_page": "https://www.wbtourism.gov.in/Coastal/details?template_id=1&id=638f91549e20437bfb0ce146"
   },
   "mandasaru-valley": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-mandasaru-card-2",
-    "file": "south-od-mandasaru-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/mandasaru-valley"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/south-od-mandasaru-banner.webp/62dfa6f1-e688-719d-011b-bdc1d5045d44?version=1.0&t=1781594470393",
+    "file": "mandasaru-valley.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "0ad49e512f8a5a7b362fe916f94f66b95f0eafe696d15716f53441f339d64352",
+    "sha256_local": "7144c18c3d053719f776a8e6daf3630e43d1ee32b3471e3eee327bdfda54e1ea",
+    "source_page": "https://odishatourism.gov.in/en/places/mandasaru-valley"
   },
   "mandawa-fort": {
     "coordinate_note": "Wikipedia: Mandawa, Jhunjhunu district, Rajasthan, India.",
@@ -13798,9 +14343,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3ANarasimha_temple_Andhra_Pradesh_India_2012.jpg"
   },
   "mangalajodi": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/reg-plc-mangalajodi-card-1",
-    "file": "reg-plc-mangalajodi-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/mangalajodi"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/reg-plc-mangalajodi-banner.webp/a8474440-84be-c74c-34e8-437326dda953?version=1.0&t=1785568934468",
+    "file": "mangalajodi.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "ef9b6b17d83decb1e3a2b586ea18be8ba64b36aab61f53d1bc79fba2a8e64dc1",
+    "sha256_local": "90efc0e1697ca781f8e0a9c6d7f05f2e3c85523dca3f66be81626d467ce49f37",
+    "source_page": "https://odishatourism.gov.in/en/places/mangalajodi"
   },
   "mangaldai": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/The_Deputy_Commissioner%2C_Darrang_District%2C_Shri_Ashok_Kumar_Barman_addressing_at_the_inauguration_of_the_Rural_Media_Workshop_for_Information_Dissemination_in_Rural_Areas_%E2%80%93_Vartalap%2C_organised_by_the_Press_Information_Bureau.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -13839,9 +14389,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Shri-Mangesh-Temple,Goa.JPG"
   },
   "maniabandha-handloom-village": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-maniabandha-card",
-    "file": "east-od-maniabandha-card",
-    "source_page": "https://odishatourism.gov.in/en/w/maniabandha-handloom-village"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-maniabandha+weavers-Village-banner.webp/d83b209e-c0b5-e717-d992-058ca185a1fa?version=1.0&t=1785823074068",
+    "file": "maniabandha-handloom-village.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "f95a1bcb94b3eec9b3ab018b11ead544da1d5fb800fe5f8dae043692785c601f",
+    "sha256_local": "2149ad3309eb05ebf935fbfca5fed6516c68f24e3846b06572e557cf330a95cb",
+    "source_page": "https://odishatourism.gov.in/en/places/maniabandha-handloom-village"
   },
   "maniharan-tunnel": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/ISS009-E-11734_-_View_of_India.jpg/960px-ISS009-E-11734_-_View_of_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -14044,6 +14599,16 @@
     "file": "marine-national-park.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/saurashtra/jamnagar/marine-national-park.html"
+  },
+  "marjakud-island": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Marjakud-Island-Banner.webp/967bcdb9-fc9e-7f73-14fc-05f52b0d7ac5?version=1.0&t=1795166627414",
+    "file": "marjakud-island.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "1c2446907798b3652c43479c95322873a11a3a87ea2541f0fefa190fbea27fa0",
+    "sha256_local": "6efa383d88ade1e750013a95553b2c7f04ee34f84be34d93489ec428f061bf7b",
+    "source_page": "https://odishatourism.gov.in/en/places/marjakud-island"
   },
   "marjing-polo-complex": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Marjing/Heingang, where the polo complex and Ibudhou Marjing shrine are located; the state page gives no map coordinates.",
@@ -14487,9 +15052,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
   },
   "midhubandha-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-midubanda-waterfall-card",
-    "file": "south-od-midubanda-waterfall-card",
-    "source_page": "https://odishatourism.gov.in/en/w/midhubandha-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/south-od-Midubanda-waterfall-banner.webp/57bd49d3-7c97-700e-0c87-e93186c5eca3?version=1.0&t=1781270753003",
+    "file": "midhubandha-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "5e8d77220e14d40216b7a327607096ec97191a053c540c9bed16451830ed1cf3",
+    "sha256_local": "12e83193bdd720d02857707866fdcdb8bbdf98f14cb52c3964bc8376c63c8de1",
+    "source_page": "https://odishatourism.gov.in/en/places/midhubandha-waterfall"
   },
   "mihmyntdu": {
     "download_url": "",
@@ -14517,9 +15087,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Phantom_Orchid,_Mimi,_Nagaland.jpg"
   },
   "minajhola": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-plc-minajhola-card",
-    "file": "south-od-plc-minajhola-card",
-    "source_page": "https://odishatourism.gov.in/en/w/minajhola"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/south-od-plc-minajhola-banner.webp/e402dc24-588a-5ef9-d337-f4e758e84f79?version=1.0&t=1775997046676",
+    "file": "minajhola.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "09b7e2370a0a6da2254d374673f45937c72a53a76d6eba4838aacc2a3f8c8100",
+    "sha256_local": "38f66cf7c4e3d7b1ea3f344eb6e11d3bfd9ceffe9c8a0c990d21a7d3c012e531",
+    "source_page": "https://odishatourism.gov.in/en/places/minajhola"
   },
   "miran-sahib-tomb": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/miran_pic1-1.jpg",
@@ -14835,6 +15410,16 @@
     "provider": "Delhi Tourism and Transportation Development Corporation (Government of NCT of Delhi)",
     "source_page": "https://delhitourism.gov.in/dt/unexplored-delhi.html"
   },
+  "mugi-point-malkangiri": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/South-od-Motu-Point-Banner.webp/eab4c68d-23bf-535e-e5fe-ade8f0ea33ef?version=1.0&t=1795166623758",
+    "file": "mugi-point-malkangiri.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e0eec53a7e0252cc9a24bd29c25aec533b0491e0c6821796c8c2c88280b17b65",
+    "sha256_local": "894fa1908578746b04a0037d68145aee9b9d61eddf505b022c7e066a6e6dad16",
+    "source_page": "https://odishatourism.gov.in/en/places/mugi-point-malkangiri"
+  },
   "mukkha-falls": {
     "creator": "Government of Uttar Pradesh tourism department",
     "download_url": "https://upecoboard.up.gov.in/dest-images/dest_MukkhaFalls.jpg",
@@ -14875,9 +15460,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Mukteshwar_Mahadev_Temple.jpg"
   },
   "mukteswara-temple": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Mukteswara Temple, Bhubaneswar.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/mukteswara-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Mukteswar-Temple-banner.webp/a9417481-d0a1-8ea5-b67c-49206c502bbe?version=1.0&t=1774614840055",
+    "file": "mukteswara-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "0df03d69d67b9aa0e4be779de3f28ebcb279ef9356a6462be7a40e21546fa912",
+    "sha256_local": "7e957d648d5673e74da77ebbb629f12ecfd8447246b81ac748aca4aedff0065f",
+    "source_page": "https://odishatourism.gov.in/en/places/mukteswara-temple"
   },
   "muktsar-sahib": {
     "coordinate_note": "Wikipedia: Sri Muktsar Sahib, Punjab, India.",
@@ -15031,14 +15621,24 @@
     "source_page": "https://haryanatourism.gov.in/places_of_interest/museocamera/"
   },
   "museum-of-justice": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-museum-of-justice-card-1-",
-    "file": "east-od-museum-of-justice-card-1-",
-    "source_page": "https://odishatourism.gov.in/en/w/museum-of-justice"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Museum-of-justice-banner.webp/ea5ac136-ca09-dcfd-4886-a4ff6c4f5a78?version=1.0&t=1783932071185",
+    "file": "museum-of-justice.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "1af15da982fb6311f3b5a244e33d2ec086ec79570a1b42318fa10f4fdc6fd78d",
+    "sha256_local": "5ebf54fd7df81302556c5473aa36908a051ff7441cd2c0a57729cdac3785a9c7",
+    "source_page": "https://odishatourism.gov.in/en/places/museum-of-justice"
   },
   "museum-of-tribal-arts-artifacts": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-tribal-museum-card-2",
-    "file": "east-od-tribal-museum-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/museum-of-tribal-arts-artifacts"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Tribal-Museum-banner.webp/5c472b9c-02bd-d320-deac-86f634ada1d3?version=1.0&t=1783932070543",
+    "file": "museum-of-tribal-arts-artifacts.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "10925c17dd2855dab674683610be2111bb0a8bae50a3322df2a8d7b44e854baa",
+    "sha256_local": "41602afc44763b99ca1583f7e3f4e7b99f0d842dba5ea2db78563004993ed53f",
+    "source_page": "https://odishatourism.gov.in/en/places/museum-of-tribal-arts-artifacts"
   },
   "mushkoh-valley": {
     "content_type": "image/jpeg",
@@ -15510,9 +16110,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Lauria_Nandangarh_lion.jpg"
   },
   "nandankanan-zoological-park": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Nandankanan Zoological Park, Bhubaneswar.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/nandankanan-zoological-park"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Nandankanan-Zoological-Park-banner.webp/b2a572d3-9d5b-df5e-639f-a57a929bf947?version=1.0&t=1785571198199",
+    "file": "nandankanan-zoological-park.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "9519aadaab72264926983d1efb84ab7fcdc227db26aabbd4122e3d73f30b2dcb",
+    "sha256_local": "142f5c909ef94a7a7bf30dff8b5a26b4f7aa00b7006c6fce294bfa5579c496a0",
+    "source_page": "https://odishatourism.gov.in/en/places/nandankanan-zoological-park"
   },
   "nandanvan-jungle-safari": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nandan%20Van%20Zoo%20and%20Safari%20Naya%20Raipur.png?width=800",
@@ -15873,9 +16478,14 @@
     "source_page": "https://delhitourism.gov.in/dt/biodiversity_parks.html"
   },
   "neelamadhaba-temple-kantilo": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/reg-plc-ladukeswarnilaadhab-2",
-    "file": "reg-plc-ladukeswarnilaadhab-2",
-    "source_page": "https://odishatourism.gov.in/en/w/neelamadhaba-temple-kantilo"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56042/central-Neelamadhaba-Temple-banner.webp/93a0b0fa-7d33-638f-7585-c66efe73ddce?version=1.0&t=1785233289744",
+    "file": "neelamadhaba-temple-kantilo.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6added32c748faef8a10c85631e1f31e1b8f41dbdbc19d4a236d19bf3dbd9a10",
+    "sha256_local": "a6061541e1f6534748b3f15602cdd1f775d625c437f8fab0b2ca012000215268",
+    "source_page": "https://odishatourism.gov.in/en/places/neelamadhaba-temple-kantilo"
   },
   "neelkanth-mahadev-temple": {
     "coordinate_note": "Coordinate reference: Google Maps place Shri Neelkanth Mahadev temple, Rishikesh, Uttarakhand 249304 (https://www.google.com/maps/place/?q=place_id:ChIJuc7MjTQUCTkRl1VQmnFMLxw).",
@@ -15975,9 +16585,14 @@
     "source_page": "https://www.wbtourism.gov.in/Wildlife/details?template_id=1&id=63d8043fe4bbd858c20633c0"
   },
   "netaji-birth-place-museum-oriya-bazaar-kataka": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-netajibirthplacemuseum-banner-card",
-    "file": "east-od-netajibirthplacemuseum-banner-card",
-    "source_page": "https://odishatourism.gov.in/en/w/netaji-birth-place-museum-oriya-bazaar-kataka"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-NetajiBirthPlaceMuseum-banner+%281%29.webp/18fc39fa-b878-c321-6479-8acde83b1206?version=1.0&t=1784107458425",
+    "file": "netaji-birth-place-museum-oriya-bazaar-kataka.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "81fc91ffb0a4045b7b2c2c0ae3b5860daf75bb842d4ac26543856a8b1e291920",
+    "sha256_local": "c292978dfacafd0114b7c12c59b7f3fd0b73226126c840d8492fe1e4ecc63a37",
+    "source_page": "https://odishatourism.gov.in/en/places/netaji-birth-place-museum-oriya-bazaar-kataka"
   },
   "netaji-flag-hoisting-memorial": {
     "content_type": "image/jpeg",
@@ -16063,9 +16678,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Forest_clearing_for_jhum_cultivation_in_Nagaland,_India.jpg"
   },
   "niladri-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-niladribeach-card",
-    "file": "east-od-niladribeach-card",
-    "source_page": "https://odishatourism.gov.in/en/w/niladri-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-NiladriBeach-banner.webp/c609904f-a8b2-0eac-ebfa-3f49091af30b?version=1.0&t=1783932070730",
+    "file": "niladri-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "3207db509262c717e1c44d3e2cc1e7627588c4c9c71cf518561f736a6b03f2fc",
+    "sha256_local": "c74569ec0ce864b6571be5ccc10ecab42ec9fc1aadd6263899c20cce64f3d412",
+    "source_page": "https://odishatourism.gov.in/en/places/niladri-beach"
   },
   "nilambag-palace": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/nilambag-palace/Nilambag-palace-Thumbnail.jpg",
@@ -16251,9 +16871,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Centre_Point_Zunheboto_(cropped).jpg"
   },
   "nrusinghanath-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-reg-plc-nrusinghanath-temple-card-1-",
-    "file": "west-od-reg-plc-nrusinghanath-temple-card-1-",
-    "source_page": "https://odishatourism.gov.in/en/w/nrusinghanath-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-reg-plc-Nrusinghanath-Temple-banner.webp/7628f316-d0e6-bd63-cfcc-17b1a8ad218a?version=1.0&t=1783935015972",
+    "file": "nrusinghanath-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "f8dae15bca592b6cd135ebd190c5af3b6fa5b26df432d6fd7ad488a0f43194d2",
+    "sha256_local": "2094d86e75d64b0f0825f95b100f357af486ffc3c109b9c1b2a8a036b9310d50",
+    "source_page": "https://odishatourism.gov.in/en/places/nrusinghanath-temple"
   },
   "nubra-rockart": {
     "content_type": "image/jpeg",
@@ -16329,19 +16954,34 @@
     "source_page": "https://haryanatourism.gov.in/places_of_interest/obelisk-commemorated-to-the-third-battle-of-panipat/"
   },
   "odi-art-museum": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-odia-museum-card",
-    "file": "east-od-odia-museum-card",
-    "source_page": "https://odishatourism.gov.in/en/w/odi-art-museum"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-odia-Museum-banner.webp/da606404-1064-f9b6-4826-c4e9f6b43dd9?version=1.0&t=1785498192169",
+    "file": "odi-art-museum.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "3792365dca07d62d41a6838b10bad7b5da8e79daa519691c2d06c3ec066e7976",
+    "sha256_local": "b340ca5af3cd1fe1a9a061fdcb0561c91ee8ec4e5e718d0cd441e5b7afb95e8d",
+    "source_page": "https://odishatourism.gov.in/en/places/odi-art-museum"
   },
   "odisha-state-maritime-museum": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-odisha-state-maritime-museum-card",
-    "file": "east-od-odisha-state-maritime-museum-card",
-    "source_page": "https://odishatourism.gov.in/en/w/odisha-state-maritime-museum"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Odisha-State-Maritime-Museum-banner+%281%29.webp/efc5a4a2-2b94-c515-4c4c-77291025a775?version=1.0&t=1775454225614",
+    "file": "odisha-state-maritime-museum.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "bc61c70a286b3d7f74f9c46046a13b591262d5f8f968004f0241b437f38b56e7",
+    "sha256_local": "de03ba79744dfae3a9abe0cc041697bb367d42490f0b64c2029a0ba093fb2921",
+    "source_page": "https://odishatourism.gov.in/en/places/odisha-state-maritime-museum"
   },
   "odisha-state-musuem": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-odisha-state-museum-card-2",
-    "file": "east-od-odisha-state-museum-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/odisha-state-musuem"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/east-od-Odisha-State-Museum-banner.webp/13a9f641-a44c-7c2d-8087-d5e77e9342f9?version=1.0&t=1781196894301",
+    "file": "odisha-state-musuem.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2ba1a93ec65bf8c0cc611e10dd34b70bc9da47731b266ad9250413631bc9a114",
+    "sha256_local": "88876e6d27a45c56bfc5b1f31bf72c468169c04d43cc446bbd6557855ddcf963",
+    "source_page": "https://odishatourism.gov.in/en/places/odisha-state-musuem"
   },
   "okha-madhi-beach": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/march/april/images/okhamadhi-beach3.jpeg",
@@ -16531,9 +17171,14 @@
     "source_page": "https://www.gujarattourism.com/south-zone/tapi/padam-dungri-eco-tourism.html"
   },
   "padma-sambhava-maha-vihara": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Padma Sambhava Maha Vihara Monastery, Jirango, Gajapati.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/padma-sambhava-maha-vihara-monastery-jirango"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/south-od-Jirang-Monastery-Gajapati-banner.webp/7d87d294-9105-951d-3653-bbf635952834?version=1.0&t=1781270669120",
+    "file": "padma-sambhava-maha-vihara.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "789bd75d6cbadcf03e1cd7ba833706e35ebd9120e817e645bc8a9190fd9a14a5",
+    "sha256_local": "d8366a6cbfa06a3b3603f079f3d45e316ff41b60d09feb423c47f81f01eba6f6",
+    "source_page": "https://odishatourism.gov.in/en/places/padma-sambhava-maha-vihara-monastery-jirango"
   },
   "padmakshi-temple": {
     "coordinate_note": "Wikipedia: Padmakshi Temple, Telangana, India.",
@@ -16669,6 +17314,16 @@
     "file": "960px-Palaruvi_Waterfalls,_thenmala_-_panoramio.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Palaruvi_Waterfalls,_thenmala_-_panoramio.jpg"
   },
+  "palihar-dam-paljhar-dam": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Palihar-Dam-Banner.webp/8c00e18c-7401-d1b2-7b3c-089d579aaa04?version=1.0&t=1795166628304",
+    "file": "palihar-dam-paljhar-dam.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c11669e4afa5dd3ca3ca9f6996cc742f940d281927e0f845945831a25826f992",
+    "sha256_local": "8c2642fcd1eaab1a3fda4e80fbe806b66dfd4c040e2729f9b45e29c038650a4a",
+    "source_page": "https://odishatourism.gov.in/en/places/palihar-dam-paljhar-dam-"
+  },
   "palitana-shatrunjaya-hill": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/religious-sites/palitana-and-shatrunjaya-hill/Palitana-And-Shatrunjaya-Hill-Banner.jpg",
     "file": "palitana-shatrunjaya-hill.jpg",
@@ -16755,9 +17410,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Lesser_Coucal_at_Panchalimedu_19.jpg"
   },
   "panchalingeswar-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-panchalingeswar-card",
-    "file": "east-od-panchalingeswar-card",
-    "source_page": "https://odishatourism.gov.in/en/w/panchalingeswar-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-panchalingeswar-banner.webp/459003f5-7185-3186-c196-b1c5c432445f?version=1.0&t=1787808697028",
+    "file": "panchalingeswar-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "38f651730b7cbfc64ad97ead75cb7f59b6a152484d12c8a6dff6626ec7017a76",
+    "sha256_local": "0ae64729477fc88979a4c1eb727eede5fd7e88f6ab875d6c5d92b86bd2835827",
+    "source_page": "https://odishatourism.gov.in/en/places/panchalingeswar-temple"
   },
   "panchasara-parshwanath-jain-derasar": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/religious-sites/panchasara-parshwanath-jain-derasar/Panchasara-Parshwanath-Jain-Derasar-Thumbnail.jpg",
@@ -16887,6 +17547,16 @@
     "file": "museum_pic5.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/panipat-museum/"
   },
+  "papakhya-ghat": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Papakhya-Ghat-Banner.webp/fafb7ba9-c48b-a43a-6638-677be611801c?version=1.0&t=1795166628766",
+    "file": "papakhya-ghat.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "b0c556b2a06ca1cf235232f016bb6dd5afd28cd780562d6438ea82416362be40",
+    "sha256_local": "570c9d09b2579f0246f724cc8b9254d4e0072acd212972f848556937de27bb7f",
+    "source_page": "https://odishatourism.gov.in/en/places/papakhya-ghat"
+  },
   "papanasam-agasthiyar-falls": {
     "download_url": "https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/papanasam-agasthiyar-falls-1656145593_1c70b7a6f0f9c1945865.webp",
     "file": "papanasam-agasthiyar-falls.jpg",
@@ -16895,9 +17565,14 @@
     "source_page": "https://www.tamilnadutourism.tn.gov.in/destinations/papanasam-agasthiyar-falls"
   },
   "paradip-port-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-reg-plc-paradip-port-beach-card-2",
-    "file": "east-od-reg-plc-paradip-port-beach-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/paradip-port-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-reg-plc-Paradip-Port-Beach-banner.webp/b0280cf8-ad8c-4648-0225-a79ec99c1c1b?version=1.0&t=1788758578106",
+    "file": "paradip-port-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "921e8c0373d3d82afc37783c80d7a7f1b6dacd8798ca0beefc5712aef62b1c14",
+    "sha256_local": "6f381cc295754f2eaee972411e9299aa316bddcba3dcb4a8047434739d7a55cc",
+    "source_page": "https://odishatourism.gov.in/en/places/paradip-port-beach"
   },
   "paradise-beach-pondicherry": {
     "content_type": "image/jpeg",
@@ -16943,9 +17618,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Parassini.jpg"
   },
   "parasurameswar-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-parasurameswar-card-2",
-    "file": "east-od-parasurameswar-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/parasurameswar-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Parasurameswar-banner.webp/039a35e1-ca33-566f-b2cb-7d197eb3198d?version=1.0&t=1776680379164",
+    "file": "parasurameswar-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "7b0ba455dcb71eae337312f4762b09d732ae1c50ce9abeff89c6f3d10c54dc2d",
+    "sha256_local": "103bf3ad559f8c2d1948483fd9a365be7407fa439b7a1e90292fe66a10ea922f",
+    "source_page": "https://odishatourism.gov.in/en/places/parasurameswar-temple"
   },
   "parbhani-city": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/MaharashtraParbhani.png/960px-MaharashtraParbhani.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -17096,6 +17776,36 @@
     "provider": "commons-nearcoord",
     "source_page": "https://commons.wikimedia.org/wiki/File%3A12th_century_Pataleshvara_Temple%2C_Malhar_Chhattisgarh_India_-_1.jpg"
   },
+  "pataleswar-temple-budhikomna": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Pataleswar-Temple-Banner.webp/b513a9d2-ba94-3d41-d608-a1ae38a1ef3a?version=1.0&t=1795166629227",
+    "file": "pataleswar-temple-budhikomna.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "367f264186e284cb324303f56a0f9d86dc66cc678e013c2b7da0e3d435bdad3c",
+    "sha256_local": "ded2f8943a40305c339f994f310c71173d3624342711f1ef89ac1b9430fcc92f",
+    "source_page": "https://odishatourism.gov.in/en/places/pataleswar-temple-budhikomna"
+  },
+  "patalganga": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Patalganga-Banner.webp/1055f7e0-32c3-b0f9-fa7e-52e918ba35b8?version=1.0&t=1795166629671",
+    "file": "patalganga.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "1a70d4597e12247bdd09648ea51d77bbdd8a1c1f5a6644e5d6370aabc3944c6f",
+    "sha256_local": "459a9d7413b38d0624faf3485428803f436a28ab6bc49b3d7fa72cd6d6be0cc6",
+    "source_page": "https://odishatourism.gov.in/en/places/patalganga"
+  },
+  "patali-srikhetra-kotsamlei": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Patali-Srikhetra-Banner.webp/81d97b6e-1522-3663-16a1-ed0256a15abb?version=1.0&t=1795166630126",
+    "file": "patali-srikhetra-kotsamlei.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a97ae563553cec3b99d7211b156164ec305207cb82c3b5e3dc1c06d139443b4f",
+    "sha256_local": "ddada4137d72ce6b31e259e3285824e28d800dce4a729f56fe63c318d9823b98",
+    "source_page": "https://odishatourism.gov.in/en/places/patali-srikhetra-kotsamlei"
+  },
   "patalkot-valley-chhindwara": {
     "coordinate_note": "Approximate coordinates for Patalkot Valley area in Chhindwara district; verify on arrival.",
     "creator": "Kaushlendrapathe",
@@ -17126,6 +17836,16 @@
     "file": "patan-patola-heritage-museum.jpg",
     "note": "Image sourced from Gujarat Tourism (gujarattourism.com) destination page.",
     "source_page": "https://www.gujarattourism.com/north-zone/patan/patan-patola-heritage-museum.html"
+  },
+  "pathani-samanta-planetarium": {
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/pathani-samanta-planetarium-bhubaneshwar-odisha-3-attr-hero?qlt=82&ts=1742176485142",
+    "file": "pathani-samanta-planetarium.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "7bf2fced7309367e052d2cc5856e934c34c1b53f61a0e32f7501a30aa773b65b",
+    "sha256_local": "dd6cf041212d10f94e5df62835c26c07e49172a57a4461e8b03abf33be125848",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/bhubaneswar/pathani-samanta-planetarium"
   },
   "pathar-masjid": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/pathar_masjid_3.jpg",
@@ -17320,9 +18040,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Tiriya_gate_seoni_pench_Tiger_reserve.png"
   },
   "pentha-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-pentha-beach-card",
-    "file": "south-od-pentha-beach-card",
-    "source_page": "https://odishatourism.gov.in/en/w/pentha-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/south-od-pentha-beach-banner.webp/370229fc-9a70-0031-75b3-4ef57a330397?version=1.0&t=1781270797530",
+    "file": "pentha-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "55a537a3420dc0525a81b1bb94ba8f16433781578b62f1061d98fd85d050c458",
+    "sha256_local": "2c3f8ab3caf24276284c771ea7cb26d917d62e2fc7fc63a6fa6ff7a0d9c8f874",
+    "source_page": "https://odishatourism.gov.in/en/places/pentha-beach"
   },
   "periyar-wildlife-sanctuary": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Deers_grazing_in_National_Park_Periyar_-_Kerala_01.jpg/960px-Deers_grazing_in_National_Park_Periyar_-_Kerala_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -17410,6 +18135,16 @@
     "provider": "Wikimedia Commons",
     "source_page": "https://commons.wikimedia.org/wiki/File:Dantewda_C.G.494449.jpg"
   },
+  "phulijharan-waterfall": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-Phulijharan-Banner.webp/d0e019c8-7788-aee8-5843-53dcb8a1558f?version=1.0&t=1795166630585",
+    "file": "phulijharan-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c09491e80226291474951e4fe7390d86b8a779872989bd74b0576163f7894d14",
+    "sha256_local": "a8fcd29286748fdda69a27eda7e4d39da2a2d88444cd96ffe38a90104a59e6a7",
+    "source_page": "https://odishatourism.gov.in/en/places/phulijharan-waterfall"
+  },
   "phunhnawma-lung-lungpuitlang": {
     "download_url": "https://mizoramtourism.com/post_images/62b8966a0ea60_Phunhnawma%20Lung.jpg",
     "file": "62b8966a0ea60_Phunhnawma Lung.jpg",
@@ -17492,9 +18227,14 @@
     "source_page": "https://mizoramtourism.com/top-destination/72"
   },
   "pipili": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Pipili Applique Craft, Puri.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/pipili"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/east-od-pipili--banner.webp/5d3d8d85-5a37-384c-0bd1-389622ad3e4f?version=1.0&t=1781196893859",
+    "file": "pipili.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "01e2fc8a85f6edf65a9930ef4b450f013bfb95cde07b3f1c3bb46da04ddb205f",
+    "sha256_local": "805af750ae76646ed96bf97560edddcad33d527f09c8b36a058eaddecbd04b41",
+    "source_page": "https://odishatourism.gov.in/en/places/pipili"
   },
   "piprahwa": {
     "creator": "Santosh Kumar Madhukar",
@@ -17709,6 +18449,16 @@
     "file": "prachi_shiva_temple_3.jpg",
     "source_page": "https://haryanatourism.gov.in/places_of_interest/prachin-shiva-temple/"
   },
+  "pradhanpat-waterfall": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/West-od-Pradhanpat-Waterfall-Banner.webp/e77bc7ed-a503-c82e-0155-c32c728f4ccd?version=1.0&t=1795166631062",
+    "file": "pradhanpat-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4d7ee40e872eb2dc92ce85d05a9cb58fbeeeb9018145b7b793d489267965b5f3",
+    "sha256_local": "bf340ef76094921ad23179b8bf73bf5b9fee45bda03bb9f8b368732127a52c1f",
+    "source_page": "https://odishatourism.gov.in/en/places/pradhanpat-waterfall"
+  },
   "prag-mahal": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/prag-mahal/Prag-Mahal-Banner.jpg",
     "file": "prag-mahal.jpg",
@@ -17856,19 +18606,34 @@
     "source_page": "https://tripuratourism.gov.in/tour/34?type=destinations"
   },
   "puri-blue-flag-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-puri-blue-flag-beach-card-1",
-    "file": "east-od-puri-blue-flag-beach-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/puri-blue-flag-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-puri-blue-flag-beach-banner.webp/b882510c-2286-ee6b-6e88-f53d53e89157?version=1.0&t=1785498191909",
+    "file": "puri-blue-flag-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "7002333af78ed1d22bb2eadb2622258f57718ab1f5d1ec7930ffa3b74a5ec316",
+    "sha256_local": "5ab17291f5c5f22c65ba4be349b371b45ef262413d37c32801d4f3dea03f8d19",
+    "source_page": "https://odishatourism.gov.in/en/places/puri-blue-flag-beach"
   },
   "puri-golden-beach": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Puri Blue Flag Golden Beach, Odisha.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/puri-blue-flag-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-sea-beach-puri-banner.webp/d4c8ff01-96fa-f8e9-b683-29ebeeb359fe?version=1.0&t=1783932068866",
+    "file": "puri-golden-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "3513b94fb85434a318242de1727f4f2ae356554d5b28410af561a7970398feb4",
+    "sha256_local": "e8ddc205d28b88f9e75da5cea58a012c974f58c84a1838464ebdd0dedb7b6c55",
+    "source_page": "https://odishatourism.gov.in/en/places/puri-beach-golden-beach"
   },
   "puri-jagannath-temple": {
-    "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri%20Jagannath%20temple.jpg",
-    "file": "Shri Jagannath temple.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File:Shri_Jagannath_temple.jpg"
+    "content_type": "image/jpeg",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/sri-jagannath-temple-puri-odisha-1-attr-hero?qlt=82&ts=1726663747217",
+    "file": "puri-jagannath-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "sha256_download": "b352e93a6ca11d457eed2ece1358bd0d4bbbdab6f1d7e796ef1e77ff9e382232",
+    "sha256_local": "e8142a29198dc68a77670a4ffccbf1fb686be5ba8ec26352feb1dcb832245db8",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/sri-jagannath-temple"
   },
   "purkhauti-muktangan": {
     "creator": "VishuN",
@@ -18054,9 +18819,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AShri_Raghavendra_Math_04.jpg"
   },
   "raghunath-jew-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-raghunath-jew-card",
-    "file": "east-od-raghunath-jew-card",
-    "source_page": "https://odishatourism.gov.in/en/w/raghunath-jew-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Raghunath-jew-banner.webp/e85f4c81-1ad4-c541-12e6-b4c36b0864a5?version=1.0&t=1788758577862",
+    "file": "raghunath-jew-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4088d83422534974f179e740192e393334aa9b233027d781626454eeca3bf8ea",
+    "sha256_local": "91d9a357f1c713425f5d8e5019c068d93d667244da311ac759e18c84c53eaf20",
+    "source_page": "https://odishatourism.gov.in/en/places/raghunath-jew-temple"
   },
   "raghunath-temple": {
     "content_type": "image/jpeg",
@@ -18076,9 +18846,14 @@
     "source_page": "https://www.incredibleindia.gov.in/en/himachal-pradesh/kullu"
   },
   "raghurajpur-craft-village": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Raghurajpur Heritage Craft Village, Puri.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/raghurajpur-craft-village"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/east-od-raghurajpur-heritage-village-banner.webp/74139ba7-5dc5-1429-89fe-f40c2bafa45f?version=1.0&t=1781196893374",
+    "file": "raghurajpur-craft-village.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e27541005bfc4ec7346210bd1eb3ed010d716c44f6a412cbd5ef6f7fc3ee3950",
+    "sha256_local": "adc9c2ad345a80827933d74dbb30e6732bd9171eaff8ec96aa4e57444c895a23",
+    "source_page": "https://odishatourism.gov.in/en/places/raghurajpur-craft-village"
   },
   "raichur-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flooded%20paddy%20field%20Raichur%20Karnataka%20India%20monsoon%20irrigation%20July%202025.jpg",
@@ -18219,9 +18994,14 @@
     "source_page": "https://tourism.telangana.gov.in/destinations/rajanna-sircilla"
   },
   "rajarani-temple": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Rajarani Temple, Bhubaneswar.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/rajarani-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-Rajarani-Temple-banner.webp/7de3da6c-d336-634f-6fe7-ccb96ab7ba61?version=1.0&t=1774614851529",
+    "file": "rajarani-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "dfc1c4d7618d10cd94eb3794941cf4468221f248d2a64bb72da3ff935d4faf12",
+    "sha256_local": "be660c2ba3a8a5c19a6a34c43c5f7373b07b8b0938602e793d185b758622a2af",
+    "source_page": "https://odishatourism.gov.in/en/places/rajarani-temple"
   },
   "rajas-seat": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/View%20from%20Raja%20seat%20coorg.jpg",
@@ -18314,6 +19094,16 @@
     "provider": "commons-district",
     "source_page": "https://commons.wikimedia.org/wiki/File%3ANorthern_Pintail_pair_Surajpur_Wetlands.jpg"
   },
+  "rakta-tirtha-eram": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-Rakta-Tirtha-Eram-banner.webp/fac4580e-332b-0376-75c4-423f779321f7?version=1.0&t=1795166622703",
+    "file": "rakta-tirtha-eram.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6ae0672ffd25df41152adc962775c4f0a9f14f36d5657f71baaf6b01cce24549",
+    "sha256_local": "1151b40e13be2c373079c9eef09bf37d792089d019c82c6141f68030fd20693a",
+    "source_page": "https://odishatourism.gov.in/en/places/rakta-tirtha-eram"
+  },
   "raliang": {
     "download_url": "",
     "file": "Official Meghalaya Tourism regional image reused for Raliang",
@@ -18356,9 +19146,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Ram_Mandir,_Ayodhya.png"
   },
   "ram-mandir-fatehgarh": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-rammandirfatehgarh-card",
-    "file": "east-od-rammandirfatehgarh-card",
-    "source_page": "https://odishatourism.gov.in/en/w/ram-mandir-fatehgarh"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-RamMandirFatehgarh-banner.webp/f0305ac2-6855-8d11-c8c9-75fdec7ff094?version=1.0&t=1783932070313",
+    "file": "ram-mandir-fatehgarh.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "d11188089a381da374cef1d4ad4fb8465b870ba7adf92577540ab35046b70840",
+    "sha256_local": "4210dfe9e4d5ae86b8363fcb8ada1f41790800fe075b3c57eb74d1b639a18d2b",
+    "source_page": "https://odishatourism.gov.in/en/places/ram-mandir-fatehgarh"
   },
   "ram-tirath": {
     "coordinate_note": "Wikidata: Q16892565, Punjab, India.",
@@ -18371,9 +19166,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Ramtirath.jpg"
   },
   "ramachandi-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-ramachandi-beach-card",
-    "file": "east-od-ramachandi-beach-card",
-    "source_page": "https://odishatourism.gov.in/en/w/ramachandi-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/east-od-ramachandi-beach-banner.webp/f39ced16-b28a-c5cd-c6e0-f228502f765c?version=1.0&t=1781269895306",
+    "file": "ramachandi-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c46c5d64a766de7cac255cd569e16e95926cf2d754987baf684f9852536d0a88",
+    "sha256_local": "d1f8e1683ff0bc97e5cdc4a81411e39dce3442b13ea1ff0b2dcdd67c0dbbd913",
+    "source_page": "https://odishatourism.gov.in/en/places/ramachandi-beach"
   },
   "ramadevara-betta": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangalore%20Ramadevara%20Betta%20India%20Ramgiri%20Hills%20%2848186335666%29.jpg",
@@ -18442,9 +19242,14 @@
     "source_page": "https://economictimes.indiatimes.com/news/india/ancient-ram-temple-reopened-in-chhattisgarh-21-years-after-it-was-shut-by-naxals/articleshow/109170200.cms"
   },
   "rambha-palace": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-rambha-palace-card",
-    "file": "south-od-rambha-palace-card",
-    "source_page": "https://odishatourism.gov.in/en/w/rambha-palace"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Rambha-Palace-banner.webp/bdc8ccd7-82e6-b9c4-7604-ecc10dbd9107?version=1.0&t=1788758915081",
+    "file": "rambha-palace.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "d1bf3caa02dd20195b9123b2dcdd65b6f00a53d03f45b4bf5f1c1df1ca07805c",
+    "sha256_local": "938d230b3086015293824141ba9a441b4fa98fd96fa5beb381962466b9ead89f",
+    "source_page": "https://odishatourism.gov.in/en/places/rambha-palace"
   },
   "ramdaha-waterfall": {
     "creator": "Umesh Ratre",
@@ -18832,9 +19637,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Ratnadurg_Fort_Ratnagiri_Maharashtra_-_panoramio.jpg"
   },
   "ratnagiri-monastery": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Ratnagiri Buddhist Monastery, Jajpur.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/ratnagiri-monastery"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Ratnagiri-Monastery-banner.webp/c95ee6f6-153b-d365-ac0b-5942077a880a?version=1.0&t=1785231914173",
+    "file": "ratnagiri-monastery.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "17b0117df279d021ff276c37052d3020105adab5d5a6c5a172ec2ccfe3bf4d5f",
+    "sha256_local": "1b81f2bf9ff0fba8b339e69cd91386231afe93baa3cade9b25c85873f8f73c14",
+    "source_page": "https://odishatourism.gov.in/en/places/ratnagiri-monastery"
   },
   "ravangla": {
     "coordinate_note": "Coordinate reference: Wikipedia point for Ravangla; the official district page gives the hill-station setting but no map coordinate.",
@@ -18877,9 +19687,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
   },
   "regional-museum-of-natural-history": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-regional-museum-of-natural-history-card",
-    "file": "east-od-regional-museum-of-natural-history-card",
-    "source_page": "https://odishatourism.gov.in/en/w/regional-museum-of-natural-history"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Regional-Museum-of-Natural-History-banner.webp/cfdcad3b-af1b-1e58-984c-1f2900506192?version=1.0&t=1784108333911",
+    "file": "regional-museum-of-natural-history.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c548ec740516fb1d500c5011173b869d66e1754cecd9087344ad7ee6b70d6f05",
+    "sha256_local": "9544d0a92e429e5d82c5138d85225f1b1278fca18a271f2a2b6f2513ae9abbe7",
+    "source_page": "https://odishatourism.gov.in/en/places/regional-museum-of-natural-history"
   },
   "reiek-hills": {
     "download_url": "https://mizoramtourism.com/post_images/62b863291e665_Reiek%20Hills.jpg",
@@ -19254,9 +20069,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
   },
   "sabara-srikshetra-jagannath-temple-koraput": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-sabara-srikshetra-card",
-    "file": "south-od-sabara-srikshetra-card",
-    "source_page": "https://odishatourism.gov.in/en/w/sabara-srikshetra-jagannath-temple-koraput"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-Sabara-Srikshetra-banner.webp/70c699f8-7d0b-d4c4-1300-e83181401edf?version=1.0&t=1786124090362",
+    "file": "sabara-srikshetra-jagannath-temple-koraput.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a3a4d0a92a42e6473564b907f678c970243298490428b9710157027ec7533afc",
+    "sha256_local": "f5f5c678b309f0c815ef3ee70c40de0a2035c1ba01e9f4d56e316c5ab444a156",
+    "source_page": "https://odishatourism.gov.in/en/places/sabara-srikshetra-jagannath-temple-koraput"
   },
   "sabarimala-temple": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Sabarimala_4.jpg/960px-Sabarimala_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -19296,9 +20116,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1"
   },
   "sadeibarani-dhokra-handicraft-village": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/central-od-dokra-craft-village-card",
-    "file": "central-od-dokra-craft-village-card",
-    "source_page": "https://odishatourism.gov.in/en/w/sadeibarani-dhokra-handicraft-village"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56042/central-od-dokra-craft-village-banner.webp/050bca00-784a-1ff3-cf01-9993c29c0704?version=1.0&t=1785823161290",
+    "file": "sadeibarani-dhokra-handicraft-village.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2c7e0c003f91a3b02fd1d1f9889faf419794a19a27d46588b9494456a834ac2a",
+    "sha256_local": "95bb5e3f423bed0eb5a6486b0ae71c6db0b3e811ae444c973513ea7b719f298b",
+    "source_page": "https://odishatourism.gov.in/en/places/sadeibarani-dhokra-handicraft-village"
   },
   "sadhana-forest-puducherry": {
     "content_type": "image/jpeg",
@@ -19342,9 +20167,14 @@
     "source_page": "https://delhitourism.gov.in/dt/explore-the-city.html"
   },
   "sahasra-shivalinga-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-sahashra-sibalinga-card",
-    "file": "south-od-sahashra-sibalinga-card",
-    "source_page": "https://odishatourism.gov.in/en/w/sahasra-shivalinga-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-sahashra-sibalinga-banner.webp/71cabe72-69cc-ba02-7c1a-3cf6ce3d7197?version=1.0&t=1785568561191",
+    "file": "sahasra-shivalinga-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "2013a1acd376290ecba4b6dda4ca7a0351d9dd7120634e30d1ff40d1d2884e52",
+    "sha256_local": "bf7342953819a5b9cf37900d1db435664e074fe61952d9ed2539a34ef5cc691b",
+    "source_page": "https://odishatourism.gov.in/en/places/sahasra-shivalinga-temple"
   },
   "sahastradhara": {
     "coordinate_note": "Coordinate reference: Google Maps place Sahastradhara, Timilimansingh, Uttarakhand 248013 (https://www.google.com/maps/place/?q=place_id:ChIJlyGkYDfYCDkRxogOODUfJfU).",
@@ -19548,9 +20378,14 @@
     "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1"
   },
   "sanaghagara-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-sanaghagara-waterfall-keonjhar-card-1",
-    "file": "north-od-sanaghagara-waterfall-keonjhar-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/sanaghagara-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/north-od-Sanaghagara-Waterfall-Keonjhar-banner.webp/55fec564-d92e-2c62-1210-77f118a4d54a?version=1.0&t=1781237922769",
+    "file": "sanaghagara-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4485dcfd7e7d75f7fb024255ced69ab7fd5c896d93534a15ff1d1b489db61bb8",
+    "sha256_local": "689ceb59f14111db8d83ec68531da7dd6f821fa13a842f6144fb86bfe798a4e7",
+    "source_page": "https://odishatourism.gov.in/en/places/sanaghagara-waterfall"
   },
   "sanaiya-waterfalls": {
     "download_url": "https://tripuratourism.gov.in/images/tour/1661773484/35.jpg",
@@ -19872,9 +20707,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:A_view_of_the_Public_Information_Campaign_on_Bharat_Nirman,_organized_by_Press_Information_Bureau,_Guwahati_at_Mokokchung_Nagaland_on_March_26,_2008_(1).jpg"
   },
   "satapada-chilika": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/reg-plc-satapada-chilika-card-1",
-    "file": "reg-plc-satapada-chilika-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/satapada-chilika"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/reg-plc-satapada-chilika-banner.webp/275e0658-e63a-f587-2e20-5db30b1a9908?version=1.0&t=1781270353399",
+    "file": "satapada-chilika.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "4ac4f696a8c949df08fa26d090ad97f477492fcb6c31b304b4a8dd192b9a9ece",
+    "sha256_local": "dbd832e2b0682a2cb97ee371bb9542262e788436b5383874c5f75c295c13286f",
+    "source_page": "https://odishatourism.gov.in/en/places/satapada-chilika"
   },
   "sathodi-falls": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sathodi%20Falls-Yellapur%20Sirsi.jpg",
@@ -19887,9 +20727,14 @@
     "source_page": "https://haryanatourism.gov.in/places_of_interest/sati-ka-talab/"
   },
   "satkosia-gorge": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Satkosia Gorge Sanctuary, Nayagarh.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/satkosia-gorge-tiger-reserve"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-satkosiaGorge%26TigerReserve-banner.webp/06db0658-365f-6245-c3da-a942d56c8bf8?version=1.0&t=1781238714062",
+    "file": "satkosia-gorge.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "bd21810f95e51c40563dd59ce4aa634062ad9ac1ac497b48e493a49567278621",
+    "sha256_local": "84beda0c577f903513aec07c0f449313839862e6a955cd222b9fda958442026b",
+    "source_page": "https://odishatourism.gov.in/en/places/satkosia-gorge-tiger-reserve"
   },
   "satmaliya-deer-park": {
     "content_type": "image/jpeg",
@@ -20981,9 +21826,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3ASimhachalam_Temple_Frontview.jpg"
   },
   "similipal-national-park": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Similipal National Park, Mayurbhanj.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/similipal-national-park"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-Similipal-National-Park-banner.webp/b84fa730-74c2-658e-e3a5-51278212f006?version=1.0&t=1790787496802",
+    "file": "similipal-national-park.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "a874f2cba3ddc08ced1e04cdda45cf18d181950802e09153e48f94f0840160bb",
+    "sha256_local": "c891bd80f6ce0383220ff3180c252ec0ad1087651887aa6f610ecee5035d4949",
+    "source_page": "https://odishatourism.gov.in/en/places/similipal-national-park"
   },
   "simsang-river": {
     "download_url": "",
@@ -21164,9 +22014,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:A_road_in_Moradabad.jpg"
   },
   "sitabinji-fresco-painting": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-sitabinji-card",
-    "file": "north-od-sitabinji-card",
-    "source_page": "https://odishatourism.gov.in/en/w/sitabinji-fresco-painting"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-sitabinji-banner.webp/c0105ef9-9dd1-73cb-f4d7-519ef7bfbc06?version=1.0&t=1787634020307",
+    "file": "sitabinji-fresco-painting.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "6bd3749d87b882305779b86330f6da9aab7d7421ed31c04c7dfbc00cf8eab14e",
+    "sha256_local": "06b7f61c00c5252b94351f3966aec5ec10687f4c897e8f78a0e8ef7b47fb21b9",
+    "source_page": "https://odishatourism.gov.in/en/places/sitabinji-fresco-painting"
   },
   "sitajakhala": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Baby_Indian_Rhino_at_Pobitora_Wildlife_Sanctuary.jpg/960px-Baby_Indian_Rhino_at_Pobitora_Wildlife_Sanctuary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -21174,9 +22029,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Baby_Indian_Rhino_at_Pobitora_Wildlife_Sanctuary.jpg"
   },
   "sitakund-waterfall": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/north-od-sitakundwaterfall-card",
-    "file": "north-od-sitakundwaterfall-card",
-    "source_page": "https://odishatourism.gov.in/en/w/sitakund-waterfall"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56026/north-od-SitakundWaterfall-banner.webp/32b9fa0c-d28d-47c1-1fcd-78052fd579eb?version=1.0&t=1783933598782",
+    "file": "sitakund-waterfall.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "58cc98fa8c94e2b68a332d9c612b289a000ad1f21806876d809e5b33414d70c0",
+    "sha256_local": "7215c742366f3d01e44817d3f2293ef2c9438492e0ac3e674fc9ff5073a9a153",
+    "source_page": "https://odishatourism.gov.in/en/places/sitakund-waterfall"
   },
   "sitapur-beach": {
     "content_type": "image/jpeg",
@@ -21323,9 +22183,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Jain_temples_Sonagiri_Madhya_Pradesh.jpg"
   },
   "sonapur-blue-flag-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-sonapur-beach-card-1",
-    "file": "south-od-sonapur-beach-card-1",
-    "source_page": "https://odishatourism.gov.in/en/w/sonapur-blue-flag-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56028/south-od-sonapur-beach-banner.webp/c9e369a1-f6ba-d6e1-f28d-48edd8130ba3?version=1.0&t=1785824570332",
+    "file": "sonapur-blue-flag-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "0168909208840294518f790bd071363ddcd5655e45206e003a245ce05f8584c5",
+    "sha256_local": "2510196d67eb011da038fb6f9317355b48ca7b6e582e65dfb4df77d753931bf2",
+    "source_page": "https://odishatourism.gov.in/en/places/sonapur-blue-flag-beach"
   },
   "sonbachhar-waterfall": {
     "creator": "Wikipedia/Wikimedia Commons contributors",
@@ -22158,9 +23023,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File%3AManasa_Teertham_Waterfalls_Near_Talakona.jpg"
   },
   "talasari-beach": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-talasari-beach-card-2",
-    "file": "east-od-talasari-beach-card-2",
-    "source_page": "https://odishatourism.gov.in/en/w/talasari-beach"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-talasari-beach-banner.webp/c7f89b19-1fa0-3505-1c3b-2116d60baa83?version=1.0&t=1786081122423",
+    "file": "talasari-beach.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "0320b16ebe45731263240c308cdc26a23e4b4b5fc1cac734d1f8e64d3594c9f8",
+    "sha256_local": "159b97646fe13f10e22a9fa200e69207c694e84f3e3cbf2922499c5ff6fde751",
+    "source_page": "https://odishatourism.gov.in/en/places/talasari-beach"
   },
   "talatal-ghar": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Doors_in_Talatal_Ghar%2C_Sivasagar%2C_Assam.jpg/960px-Doors_in_Talatal_Ghar%2C_Sivasagar%2C_Assam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -22206,9 +23076,14 @@
     "source_page": "https://division-surguja.cg.gov.in/places-centres/tamor-pingla/"
   },
   "tampara-lake": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/south-od-tampara-lake-card",
-    "file": "south-od-tampara-lake-card",
-    "source_page": "https://odishatourism.gov.in/en/w/tampara-lake"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/south-od-Tampara-Lake-banner.webp/9f63fc59-acc3-3bcd-1509-65b68c60f7cd?version=1.0&t=1774614891937",
+    "file": "tampara-lake.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "fb310c34736fe60da0fa16133a04cbb5624671ab05b52728127976a27e56f838",
+    "sha256_local": "0c0b137325087e64e8b26a74da8098d2dfe5e98104cd4d0774e63e9d840cec63",
+    "source_page": "https://odishatourism.gov.in/en/places/tampara-lake"
   },
   "tamulpur-town": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Assam_Districts.as.jpg/960px-Assam_Districts.as.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -22294,9 +23169,14 @@
     "source_page": "https://www.incredibleindia.gov.in/en/himachal-pradesh/shimla"
   },
   "tara-tarini-temple": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Tara Tarini Temple, Ganjam.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/tara-tarini-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/south-od-Taratarini-Temple-banner.webp/45e0cf3c-ed3c-5f81-78d3-f879b1374b73?version=1.0&t=1774614893741",
+    "file": "tara-tarini-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "c7ee3b980482c5f2bebaefbc43dcaf0881c2e668676be2827f37561a7ae3f3b2",
+    "sha256_local": "a542825a3b235e25710a694b8f2851a4d5eb1a5566c13e8b55e8406048eceeec",
+    "source_page": "https://odishatourism.gov.in/en/places/tara-tarini-temple"
   },
   "taragarh-fort-ajmer": {
     "coordinate_note": "Wikipedia: Taragarh Fort, Ajmer, Rajasthan, India.",
@@ -22665,9 +23545,14 @@
     "source_page": "https://www.wbtourism.gov.in/Heritage Tourism/details?template_id=1&id=63fd9d368ffe009a67043f5c"
   },
   "the-belgadia-palace-2": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/the-belgadia-palace-card",
-    "file": "the-belgadia-palace-card",
-    "source_page": "https://odishatourism.gov.in/en/w/the-belgadia-palace-2"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42228/The-Belgadia-Palace-banner.webp/92bb2635-a29f-f26c-8e3d-4eb01a10ddc6?version=1.0&t=1784054664858",
+    "file": "the-belgadia-palace-2.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "1e7a85a80100dca9e8b77491408624fdc725677a710a379bb169e5dc03c49d17",
+    "sha256_local": "61bda33f6bd71ad17f93ba9934eef37bcbb126c8eb2143ef896d5db796b12b25",
+    "source_page": "https://odishatourism.gov.in/en/places/the-belgadia-palace-2"
   },
   "the-belvedre-golf-and-country-club": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/golf-tourism/the-belvedre-golf-and-country-club-ahmedabad/The-Belvedre-Golf-and-Country-Club-Ahmedabad-Thumbnail.jpg",
@@ -22926,6 +23811,16 @@
     "file": "960px-Brahminy_Kite_at_Thrissur_Zoo.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Brahminy_Kite_at_Thrissur_Zoo.jpg"
   },
+  "thuamul-rampur": {
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/42296/west-od-Thuamul-Rampur-banner.webp/414a84cd-d66e-fbc0-2362-c45456931f72?version=1.0&t=1795166631531",
+    "file": "thuamul-rampur.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "094861ea6124576154e62d46a379efc94e170bd98d39a651b8b32e51e13e2282",
+    "sha256_local": "1a7ff72a903ae70f393c9e0e1b209aae040d5091cf096d6e7b2a5bfecf77e73e",
+    "source_page": "https://odishatourism.gov.in/en/places/thuamul-rampur"
+  },
   "thupten-gatseling-monastery": {
     "download_url": "https://cdn.s3waas.gov.in/s38e296a067a37563370ded05f5a3bf3ec/uploads/2018/04/2018041980.jpg",
     "file": "thupten-gatseling-monastery.jpg",
@@ -23024,9 +23919,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Tijara_Jain_temple.jpg"
   },
   "tikarpada-wildlife-sanctuary": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/central-od-tikarapada-card",
-    "file": "central-od-tikarapada-card",
-    "source_page": "https://odishatourism.gov.in/en/w/tikarpada-wildlife-sanctuary"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56042/central-od-Tikarapada-banner.webp/fe1f214b-de81-9d38-df66-e90309a573ea?version=1.0&t=1785570873376",
+    "file": "tikarpada-wildlife-sanctuary.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "bf6eb0a351e53fb7eadca2b97e09367ba1c24ce0a7689f8f9a12a7359583304d",
+    "sha256_local": "6417b3deb5ca389ea8bafd3abcf25ac2b1ee9f321135af26cdc05efa896ea955",
+    "source_page": "https://odishatourism.gov.in/en/places/tikarpada-wildlife-sanctuary"
   },
   "tilaiya-dam": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160203_173013.jpg",
@@ -23613,14 +24513,24 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Udayagiri_cave_vidisha_Madhya_Pradesh2.jpg"
   },
   "udayagiri-khandagiri-caves": {
-    "download_url": "https://odishatourism.gov.in/",
-    "file": "Udayagiri and Khandagiri Caves, Bhubaneswar.jpg",
-    "source_page": "https://odishatourism.gov.in/en/w/udayagiri-khandagiri-caves"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/41970/east-od-udayagiri-khandagiri-caves-banner.webp/fe22df70-d028-161c-d2ed-306535eaf9bf?version=1.0&t=1774614863581",
+    "file": "udayagiri-khandagiri-caves.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "e8aea823db5d908ed551cafacb36358a3b721c7541374e8e18d6a2097b21e1ee",
+    "sha256_local": "5be3165211e9f9f0af2e0161aa80627da81c29e5d0817eac7ec24310ae855b64",
+    "source_page": "https://odishatourism.gov.in/en/places/udayagiri-khandagiri-caves"
   },
   "udayagiri-monastery": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/east-od-udayagiri-monastery-card",
-    "file": "east-od-udayagiri-monastery-card",
-    "source_page": "https://odishatourism.gov.in/en/w/udayagiri-monastery"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56024/east-od-Udayagiri-Monastery-banner.webp/d2c5cd16-1c60-ffd6-b967-96a5c1b2ab3e?version=1.0&t=1785231913848",
+    "file": "udayagiri-monastery.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "fa8dc1113b77bdfd4cb4ef8969e7db52ad249a247e7d4f2c19671a3f49c6a71c",
+    "sha256_local": "c4e1072ada3310199c546e6ce7801d16c0fb2ab8dc8f38defd9d8231f0c9190a",
+    "source_page": "https://odishatourism.gov.in/en/places/udayagiri-monastery"
   },
   "udgir-fort": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Indien2012_1241_Kandhar_Fort.jpg/960px-Indien2012_1241_Kandhar_Fort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -24087,9 +24997,14 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Athirappilly_Waterfalls_in_2010_January_-_View_from_Top_01.jpg"
   },
   "ved-vyas-temple": {
-    "download_url": "https://odishatourism.gov.in/documents/d/guest/west-od-vedvyastemple-card",
-    "file": "west-od-vedvyastemple-card",
-    "source_page": "https://odishatourism.gov.in/en/w/ved-vyas-temple"
+    "content_type": "image/webp",
+    "download_url": "https://odishatourism.gov.in/documents/35730/56038/west-od-VedVyasTemple-banner.webp/5ddfe7cd-cba5-eafb-43dd-30a304bad677?version=1.0&t=1783935016417",
+    "file": "ved-vyas-temple.jpg",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally.",
+    "provider": "Odisha Tourism, Government of Odisha",
+    "sha256_download": "26837cffe0bb2fafc1e82341c4dac820c40d45e3b396e4c42615f47c09e689c5",
+    "sha256_local": "e447307df3ba367ca28aacb5cff10beb15a4c9e2b71692c79540bbf920ce7ed5",
+    "source_page": "https://odishatourism.gov.in/en/places/ved-vyas-temple"
   },
   "veechar-cultural-and-heritage-museum-for-utensils": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/museums/veechar-cultural-and-heritage-museum-for-utensils/Veechar-Cultural-and-heritage-Museum-for-Utensils-Thumbnail.jpg",

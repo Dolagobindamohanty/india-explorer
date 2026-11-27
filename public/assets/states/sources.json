@@ -1,0 +1,20 @@
+{
+  "odisha.jpg": {
+    "slug": "odisha-state-cover",
+    "source_page": "https://www.incredibleindia.gov.in/en/odisha/puri/sri-jagannath-temple",
+    "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/sri-jagannath-temple-puri-odisha-1-attr-hero?qlt=82&ts=1726663747217",
+    "page_status": 200,
+    "image_status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 134440,
+    "download_sha256": "b352e93a6ca11d457eed2ece1358bd0d4bbbdab6f1d7e796ef1e77ff9e382232",
+    "local_sha256": "1fe583c6d3d7ee5c42ca0971819c8c388cb6fc4ce7abc5e20eb71f328d086c14",
+    "image_size": [
+      1280,
+      720
+    ],
+    "file": "odisha.jpg",
+    "provider": "Ministry of Tourism, Government of India (Incredible India)",
+    "note": "Official attraction record verified November 2026; fees, timings and access are checked locally."
+  }
+}

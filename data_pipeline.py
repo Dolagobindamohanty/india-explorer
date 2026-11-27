@@ -47,7 +47,7 @@ def dataset_version_bytes():
                     paths.append(resolved_path)
         except Exception:
             pass
-    # Keep fallback for legacy odisha file if not in manifests
+    # Include the Odisha places file even when no manifest references it.
     legacy_odisha = DATA_DIR / 'odisha-places.json'
     if legacy_odisha.exists() and legacy_odisha not in paths:
         paths.append(legacy_odisha)

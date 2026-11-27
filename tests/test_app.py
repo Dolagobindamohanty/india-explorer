@@ -56,7 +56,7 @@ def test_full_destination_journey(client):
     assert place['last_verified_at'] is None
     assert place['image_url'] == '/assets/places/alappuzha-beach.jpg'
     all_places = client.get('/api/places').json()
-    assert len(all_places) == 3525
+    assert len(all_places) == 3561
     assert all(item['image_url'].startswith('/assets/places/') for item in all_places)
     place_images = [item['image_url'] for item in all_places]
     assert len(place_images) == len(set(place_images))
@@ -64,11 +64,11 @@ def test_full_destination_journey(client):
         'vidhana-soudha', 'lalbagh-botanical-garden', 'cubbon-park', 'bangalore-palace',
         'bannerghatta-biological-park', 'iskcon-temple-bengaluru',
     }
-    assert len(client.get('/api/districts/puri').json()['places']) == 12
-    assert len(client.get('/api/districts/khordha').json()['places']) == 17
+    assert len(client.get('/api/districts/puri').json()['places']) == 17
+    assert len(client.get('/api/districts/khordha').json()['places']) == 19
     odisha = client.get('/api/states/odisha').json()
     assert len(odisha['districts']) == 30
-    assert len(odisha['places']) == 111
+    assert len(odisha['places']) == 147
     ap = client.get('/api/states/andhra-pradesh').json()
     assert len(ap['districts']) == 28
     assert len(ap['places']) == 69
@@ -431,7 +431,7 @@ def test_seed_is_persistent_and_idempotent(tmp_path):
     create_app(path)
     create_app(path)
     with sqlite3.connect(path) as db:
-        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3525
+        assert db.execute('SELECT COUNT(*) FROM places').fetchone()[0] == 3561
         assert db.execute('PRAGMA foreign_key_check').fetchall() == []
         db.execute('PRAGMA foreign_keys=ON')
         with pytest.raises(sqlite3.IntegrityError):
@@ -537,7 +537,7 @@ def test_vercel_database_path_is_versioned(monkeypatch):
     monkeypatch.setenv('VERCEL', '1')
     app = create_app()
     response = TestClient(app).get('/healthz')
-    assert response.json() == {'status': 'ok', 'places': 3525}
+    assert response.json() == {'status': 'ok', 'places': 3561}
 
 
 def test_rendering_repairs_legacy_odisha_dash_corruption(tmp_path):
@@ -618,7 +618,7 @@ def test_canonical_data_and_seeded_catalogue_validate(tmp_path):
     assert report['errors'] == []
     state_slugs = {s['slug']: s for s in report['states']}
     assert 'odisha' in state_slugs
-    assert state_slugs['odisha']['place_count'] == 83
+    assert state_slugs['odisha']['place_count'] == 147
     assert 'andhra-pradesh' in state_slugs
     assert state_slugs['andhra-pradesh']['place_count'] == 69
 
@@ -654,7 +654,7 @@ def test_website_and_health(client):
     assert client.get('/assets/states/odisha.jpg').status_code == 200
     assert client.get('/assets/states/haryana.jpg').status_code == 200
     assert client.get('/assets/states/uttar-pradesh.jpg').status_code == 200
-    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3525}
+    assert client.get('/healthz').json() == {'status': 'ok', 'places': 3561}
     assert distance({'latitude': 0, 'longitude': 0}, {'latitude': 0, 'longitude': 0}) == 0
 
 
@@ -877,11 +877,38 @@ def test_puducherry_uses_only_verified_official_destination_records(client):
     assert sources['white-town-pondicherry']['download_url'].startswith('https://s7ap1.scene7.com/is/image/incredibleindia/')
 
 
+def test_odisha_uses_only_verified_official_destination_records(client):
+    places = client.get('/api/states/odisha').json()['places']
+    assert len(places) == 147
+    sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    official_domains = ('odishatourism.gov.in', 'incredibleindia.gov.in')
+    for place in places:
+        src = sources[place['slug']]
+        assert src['file'] == f"{place['slug']}.jpg"
+        assert any(domain in src['source_page'] for domain in official_domains), place['slug']
+        assert src['download_url'].startswith('https://'), place['slug']
+        assert src['content_type'].startswith('image/'), place['slug']
+        assert 'placeholder-attr-hero' not in src['download_url'], place['slug']
+        assert 'commons.wikimedia.org' not in src['source_page'], place['slug']
+        assert not any(
+            phrase in src['note'].lower()
+            for phrase in ('reference', 'lead image', 'best available', 'matched to the landmark', 'not available')
+        ), place['slug']
+        assert_asset_exists(place['image_url'])
+
+    state_sources = json.loads((ASSETS / 'assets' / 'states' / 'sources.json').read_text(encoding='utf-8'))
+    cover = state_sources['odisha.jpg']
+    assert 'sri-jagannath-temple' in cover['source_page']
+    assert 'jagannath' in cover['download_url']
+    assert cover['content_type'].startswith('image/')
+    assert_asset_exists('/assets/states/odisha.jpg')
+
+
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
-        'detailed_places': 3525,
+        'detailed_places': 3561,
         'reviewed_places': 0,
-        'unreviewed_places': 3525,
+        'unreviewed_places': 3561,
         'confirmed_festival_dates': 23,
     }
 
