@@ -124,11 +124,15 @@ pages, and its Jagannath Temple state cover is recorded in
 the Lakshadweep Administration and Incredible India attraction pages, and its
 coral-reef state cover is recorded in the same state source file. Tamil Nadu's
 120 places are reverified from their exact recorded source pages, mostly Tamil
-Nadu Tourism.
-The 147 Odisha, 10 Lakshadweep and 120 Tamil Nadu places are marked `verified`
-from exact source pages (last checked 27 November 2026); the remaining 3,290
-records stay `needs_review` and appear as source-linked editorial entries, not
-as independently verified. 23 festival occurrences have confirmed dates, while
+Nadu Tourism. A further 53 Andaman and Nicobar Islands places passed the same
+exact-provenance audit; 7 did not pass and remain unreviewed.
+The 147 Odisha, 10 Lakshadweep, 120 Tamil Nadu and 53 Andaman and Nicobar
+Islands places are marked `verified` from exact source pages (last checked 27
+November 2026); the remaining 3,237 records stay `needs_review` and appear as
+source-linked editorial entries, not as independently verified. Review results
+are persisted in `data/verified-places.json`, which is included in the
+deployment data-version hash so redeploys cannot serve a stale review snapshot.
+23 festival occurrences have confirmed dates, while
 the rest of the annual dates remain unpopulated. Seasonal guidance and
 coordinates are approximate. Fees and opening times are deliberately not
 invented. Add confirmed information with sources before publishing.

@@ -52,11 +52,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1756138397_walk.PNG",
     "file": "aberdeen-heritage-walk.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "5dfee30f88c5c41639da88c88ea58ed4e1a7f557003d5db7f578d22bb80a46a5",
     "sha256_local": "136dc540083bd8f228bc80a38341d7ff646613caad257170b793efabb527afac",
-    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "abhishek-pushkarini": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Ablution_bath%2C_Vaishali.jpg/960px-Ablution_bath%2C_Vaishali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -668,11 +669,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1756185377_Screenshot_2025_08_26_104117.png",
     "file": "amkunj-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "d87ffe8c4108ce703deafd33043127ecc3db62b7f064b95acef22e03851c8151",
     "sha256_local": "a6bf8d49137730301b9ad6fa7b826a78f56e0b8a18235eb1e2b5dc02d05c7856",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "amlarem": {
     "download_url": "",
@@ -1008,11 +1010,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/anthropological1.png",
     "file": "anthropological-museum.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "ee860519aa80220106b38884742d951fbf7fa2abc32262e17fa50cff6e4c30d2",
     "sha256_local": "224344fb5aae8a19cbe2986ae494676ec5fa787a4e83b79361d811b118d19c9e",
-    "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "arakkal-museum": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Arakkal_palace_at_Kannur%2C_Kerala_state.jpg/960px-Arakkal_palace_at_Kannur%2C_Kerala_state.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1405,11 +1408,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1756183425_Screenshot_2025_08_26_100401.png",
     "file": "austin-creek-limestone-formation.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "0ddb62b4b154feec57fb600cf7c7bc17aeb57ff68cbc2419fbdddfd6a86c56c0",
     "sha256_local": "793b4f7b1c8a0be30a3c8915cb012946665d615a28a1436f9b92170e813d0171",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "auto-world-vintage-car-museum": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/museums/auto-world-vintage-car-museum/Auto-World-Vintage-Car-Museum-Thumbnail.jpg",
@@ -1436,11 +1440,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/avis-island-rangat-andaman-nicobar-islands-1-attr-nearby?qlt=82&ts=1742180291683&wid=1200",
     "file": "avis-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Ministry of Tourism, Government of India (Incredible India)",
     "sha256_download": "8053c051aba8b311839d60dc589978d51b66444d62221f1231b42768f0a85f39",
     "sha256_local": "20803ba8ef4341004feb77a7d4924f6b24b579830b2a130bbbeda27597bd967a",
-    "source_page": "https://www.incredibleindia.gov.in/en/andaman-and-nicobar-islands/mayabunder/avis-island"
+    "source_page": "https://www.incredibleindia.gov.in/en/andaman-and-nicobar-islands/mayabunder/avis-island",
+    "verified_at": "2026-11-27"
   },
   "awagarh-fort": {
     "creator": "Official district website",
@@ -1851,11 +1856,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1756136891_badivedi1.PNG",
     "file": "balidan-vedi.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "4fdaee07be4cf86f1403f2ccac8d3b22c84ac19f65aba778178c0466877369f9",
     "sha256_local": "7ee7fe966e23d4cd75b5da874c899d716a6bbe1e6bc973bf8a5d9d9156819d46",
-    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "balighai-beach": {
     "content_type": "image/jpeg",
@@ -1912,11 +1918,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1775562425_bulendra.png",
     "file": "baludera-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "dd7361e2fc6589097e3a785ab38856df936f52a3447d9c0cdca78a8a2f0e186c",
     "sha256_local": "9126c4e9f3007961b426a6c15ed037a499582f509c37247a6ab53cbce698675d",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "bamuni-hills": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Apsara_statue_at_Bamuni_hill_ruins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2168,11 +2175,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1776751565_bartanga.jpg",
     "file": "baratang-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "83f448558ed8cfbd291baaeb80a245d5018f0bc6466fe458d9d467ea86f01f2c",
     "sha256_local": "c10ce609d908609e02798237c5d840c60351aa63b09cffab74df7c2db36d37b7",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=2",
+    "verified_at": "2026-11-27"
   },
   "barda-wildlife-sanctuary": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/barda-hills-wildlife-sanctuary-/Barda-Hills-Wildlife-Sanctuary-Thumbnail.jpg",
@@ -2258,11 +2266,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/barren-island-port-blair-andaman-and-nicobar-islands-1-attr-nearby?qlt=82&ts=1742156127333&wid=1200",
     "file": "barren-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Ministry of Tourism, Government of India (Incredible India)",
     "sha256_download": "b9f821b678a006976cf36f06d74725b5875ff17a807be8c035ba998974286fcd",
     "sha256_local": "fb5400e08dac06734b31a0a5a9f41e666e6db10c478d710cb045115088f65791",
-    "source_page": "https://www.incredibleindia.gov.in/en/andaman-and-nicobar-islands/sri-vijaya-puram/barren-island"
+    "source_page": "https://www.incredibleindia.gov.in/en/andaman-and-nicobar-islands/sri-vijaya-puram/barren-island",
+    "verified_at": "2026-11-27"
   },
   "barsey-rhododendron-sanctuary": {
     "coordinate_note": "Coordinate reference: OpenStreetMap nature-reserve node for Barsey Rhododendron Wildlife Sanctuary; the Wikipedia Varsey point is coarse.",
@@ -2758,11 +2767,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1772777088_bharatpur_beach.jpg",
     "file": "bharatpur-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "249159efa6963b09e2129afa450811d986850e983fac5b96d399451266c7369e",
     "sha256_local": "8f680e229172fb8c150c38d59f29469909313b9f95efe47afc4eb81699da6900",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "bhatinda-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_125909.jpg",
@@ -3667,11 +3677,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/Buttler%20Bay%20Beach%20Hutbay.JPG",
     "file": "butler-bay-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "58b226f0dd11e5b0233510ecc041d96d76562fdba1966fc43481259ede7e616c",
     "sha256_local": "fc62bb6b298e339392e2327ccbfc31ae9064aab9cc5b2766bb570b26f8bf7608",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=4"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=4",
+    "verified_at": "2026-11-27"
   },
   "butterfly-garden": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/butterfly-garden/Butterfly-Garden-Banner.jpg",
@@ -3737,21 +3748,23 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1756051313_cMBELBAT.jpg",
     "file": "campbell-bay.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "0ef36e31da512b8a37be65e21efc490c5196e61f30556b491595a3a69a261884",
     "sha256_local": "cf08ce738c47f9f1cdf0cfe99fcc1b456f54af228adc7dfb5dd28e583c5ce163",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=3",
+    "verified_at": "2026-11-27"
   },
   "campbell-bay-national-park": {
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1772173986_combell_national_park.jpg",
     "file": "campbell-bay-national-park.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "80329b863a837f1c6216e6b110257a72a005d3c94aa4a1b389575430bf087ba5",
     "sha256_local": "790b639f4df9c71ba26eaaf5544d513a5ec6172a455874df3db77ea0fe7a8fe7",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "cantonment-church-tower": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/cantonement_church_tower_1.jpg",
@@ -3820,21 +3833,23 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1756084563_12151200.JPG",
     "file": "cellular-jail.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "a9b3250725841b44fc4257080881832e970b38f40b2f16166df0c21a46e34db3",
     "sha256_local": "8ea882b49ced9d68d257c6932966518227621ed54227ed3fb2aef35dfdde7b93",
-    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "cellular-jail-museum": {
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1756114259_Screenshot_2025_08_25_145711.png",
     "file": "cellular-jail-museum.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "68c004dd04cedefe73ea621b4a7aa0b57335466a592ad173470ffbf89e87162b",
     "sha256_local": "e5f069fd465f227c2a74a7675d6cf4d2192c29394a4ce49bfb733adeb33454b2",
-    "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "ch-devi-lal-herbal-nature-park": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/herbal_park_5.jpg",
@@ -4262,11 +4277,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1756134358_chattam2.PNG",
     "file": "chatham-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "a4b6713ed26de694d1794cd9fdc7fef99c4bc3ec6f8b613eeef6b750dd2d532b",
     "sha256_local": "1d8e8f8ee80ba44db818c7f2f5f86b1e9f9c4a30c519fc7169321dfc7a5e90e0",
-    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "chaturdash-devta-temple": {
     "download_url": "https://tripuratourism.gov.in/images/tour/1661760260/6048697.jpeg",
@@ -4460,11 +4476,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1776860565_CHIDIYA_TAPU_BEACH.jpg",
     "file": "chidiya-tapu.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "5564eb2ed23599f5c35e8854707d294421ddcecb1ccbdcfca049e6bb7ec96eac",
     "sha256_local": "85df020b49742c3fd371751e9bc6fa81fef5b2ec1311dc1e9a5f353287178feb",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "chikhaldara": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Bhimkund%2C_Chikhaldara%2C_Amravati%2C_Maharashtra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -4806,11 +4823,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1772170779_cinque_island.jpg",
     "file": "cinque-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "9924725b40355098d847a8ce3dac7c0679f4ccff975eef1c104e64ae0f1fb598",
     "sha256_local": "7d90bd8dccd015471fba6d5286ccd14a1fbf737178da3cda533cf367f5897000",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "citadel": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/june/Citadel-sat-kaman-banner.jpg",
@@ -4952,11 +4970,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1771403167_1756098522_unnamed__2_.jpg",
     "file": "corbyns-cove-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "058577fcf5db7cfa11848497669689af26f93a7eeba5f54cfcf0dac5f564a5f9",
     "sha256_local": "f7822668bbe286bfce851a1726d56b03672707f6653f25d4031c645cb4506b90",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "coringa-wildlife-sanctuary": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Coringa_Reserve_Forest_Park_Mangrove_Forest_53.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -5022,11 +5041,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1775028430_cuthbert_bay_beach.jpg",
     "file": "cuthbert-bay-wildlife-sanctuary.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "737e58c93cd18b7fae60fb51be63e3ea8e001867d1408f35db48bf66cb407c29",
     "sha256_local": "91b68eac8e006fd40052ab7136ced52f53e285f2386b106025907339aab5246c",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "cuttack-chandi-temple": {
     "content_type": "image/jpeg",
@@ -5760,11 +5780,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1756182252_Screenshot_2025_08_26_094918.png",
     "file": "dhani-nallah-mangrove-walkway.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "dc7ff3e9b606ef793ef56925ac32d9e29db7b3bb817e44723c37ee36cbcb3110",
     "sha256_local": "29ca23be272cb4e4acbb99bd3e7fbdea98c23bdd36e42df465fff7cd4cd8a307",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "dhankar-monastery": {
     "download_url": "https://s7ap1.scene7.com/is/image/incredibleindia/dhankar-spiti-valley-himachal-pradesh-1-attr-nearby?qlt=82&ts=1751441593118",
@@ -5949,11 +5970,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1776861851_DIGLIPUR.jpg",
     "file": "diglipur.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "44727538b1bd5aceea9df4db77712f3bdcd7a074889dddacf1d1c40bf747daf5",
     "sha256_local": "b70ae11fcfac174e34990345291f5800692c9e46172554a60ea8c8420d3912ea",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "dilli-haat-ina-delhi": {
     "download_url": "https://delhitourism.gov.in/dt/images/Dilli_Haat_INA.jpg",
@@ -6568,11 +6590,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/elephant.jpg",
     "file": "elephant-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "295111602ec9c13bbe39cf1b5c654525cae43842985d32ae274b65fd1b4ecd1d",
     "sha256_local": "eed992eba08782b11acfe9e0f97d1245eff510c3e02b65596494dd4c2d9ae74f",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "elephant-falls": {
     "download_url": "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=90,fit=scale-down/explore/destinations/interest/majestic-waterfalls-banner.webp",
@@ -6800,11 +6823,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1756139409_flat1.PNG",
     "file": "flat-bay.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "c2388d06767d29f91d7dc2845092ea937e8e000bca1a72a12f9b0a48fb1ae193",
     "sha256_local": "f58251044f1c936db95fd612b423819531a35b3cf5544a31b23bdc39b66564b8",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "flo-gallery": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/weekend-get-aways/flo-gallery/Flo-Gallery-Thumbnail.jpg",
@@ -6837,11 +6861,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1756115298_Screenshot_2025_08_25_151348.png",
     "file": "forest-museum.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "ef6b5044881f9f80dc7bd7ad7b353ea27561435f466d3b8f7ae6cfaf0d44611b",
     "sha256_local": "fbc57a6ef59098d1ca9a9419bc72d00502761e620b806a3da85cb416a98a09f3",
-    "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/museum.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "forest-research-institute-fri": {
     "coordinate_note": "Coordinate from the official Uttarakhand Tourism destination page https://www.uttarakhandtourism.gov.in/destination/the-fri-museum.",
@@ -7082,11 +7107,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1756184157_Screenshot_2025_08_26_101725.png",
     "file": "galathea-national-park.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "4e045c5c0c5835ea97c8b54c66585d0cb1fb19ccd50a7120f3bbdc8dfa7f884a",
     "sha256_local": "073e68a39059fccb9bb82e43538466ef577ba75a41d4a2d18ba12108487fb8b9",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "galtaji-temple": {
     "coordinate_note": "Wikipedia: Galtaji, Jaipur, Rajasthan, India.",
@@ -7972,11 +7998,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1756050828_greatnicobar1.jpg",
     "file": "great-nicobar-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "62e955dd9b87891272539056091703be4bb2ea216bcb83a7275ad289b47b8f10",
     "sha256_local": "abd2bc081596be245d7253faad45a14ef9f29cfe4d77509a5af510fde38b75cd",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=3",
+    "verified_at": "2026-11-27"
   },
   "great-rann-of-kutch": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/weekend-get-aways/great-rann-of-kutch/Great-Rann-Of-Kutch-Banner.jpg",
@@ -10034,11 +10061,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1774613943_jollybuoy.jpg",
     "file": "jolly-buoy-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "b721295295bc4d6227c5e4fb055aab0b74f9310bcce69fc00cb200f4eaeb1dc3",
     "sha256_local": "7d46eb74f5b4518b19d8c3a55d11f7753054fa2bd3b4e5e6ac4c00dd80c02690",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1",
+    "verified_at": "2026-11-27"
   },
   "jonha-falls": {
     "download_url": "https://tourism.jharkhand.gov.in/cms/Application/uploadDocuments/location/1140X320/location20160229_121800.jpg",
@@ -10436,11 +10464,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1771495247_kala_patthar.jpg",
     "file": "kalapathar-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "9b53a5791745acfc31fdc2337099dc7216f68563da92474d4eaea4f807109dfa",
     "sha256_local": "b2c47cf294c976c240313ed4356953e667944e0f5df22b2115fca25d23253f51",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "kalesar-forest-reserve": {
     "download_url": "https://haryanatourism.gov.in/wp-content/uploads/2024/07/kalesar_forest_2.jpg",
@@ -13090,11 +13119,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1776067303_lalaji_bay_andaman_tourism_entry_fee_timings_holidays_reviews_header.jpg",
     "file": "lalaji-bay-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "654c3b058e1f26c47173ec9ab6e2199793a7a8398f1582b632db5a90dcfcfd2d",
     "sha256_local": "8f5268587de33872e835de92503d7793a67f12a8360bb5546341fcf75bc92ef5",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "lalbagh-botanical-garden": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalbagh%20Botanical%20Garden%20in%20Bangalore%202024.jpg",
@@ -13270,11 +13300,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1770873679_Lalaji_Bay__17__copy.jpg",
     "file": "laxmanpur-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "110541a2b888d874346a1cdb43a96459740c9ee227d00503af6df85799208996",
     "sha256_local": "01b9c662f17d29d6ae6b64223ec22de220cda546de677af5e0d19ce9d07eb044",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "laxmi-narayan-temple": {
     "download_url": "https://tripuratourism.gov.in/images/tour/1708061436/9160588.jpg",
@@ -13409,11 +13440,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1772710032_limestone.png",
     "file": "limestone-cave-exploration.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "05fc47acbfa9a7fa5252db5f35db429e0db8d6075b18fc8bf81e0c4d9a5bcc04",
     "sha256_local": "46c9125b33667849a5383b6b9e89ced1629b27c848cec1efd6ba6ae6f859f0a3",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "lingaraj-temple": {
     "content_type": "image/webp",
@@ -14158,11 +14190,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1772432504_mahtma_gadhi__national_park_wandoor.jpg",
     "file": "mahatma-gandhi-marine-national-park.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "c153e11f85ad9f9487c833b591e1fe8cdf8277a8a5df9e6c86bce164f2cd5dca",
     "sha256_local": "05bb75465be49c051974ed60b5dd057404b6e57c69913f8886d58e630401ca3f",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "mahatma-gandhi-statue-puducherry": {
     "content_type": "image/jpeg",
@@ -14653,11 +14686,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1775458452_mangroves_in_andaman_island.jpg",
     "file": "mangrove-forests.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "8232d19f7b113f4f1ab1e2e61a8ad1397b4a13c37399dee5c01b355fd285172d",
     "sha256_local": "986588d8cd612169b5872f6e2f624f3615be8b2e947c12de4cde7e7746b08bfb",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=4"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=4",
+    "verified_at": "2026-11-27"
   },
   "mangueshi-temple": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri-Mangesh-Temple%2CGoa.JPG",
@@ -15353,11 +15387,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1756186527_Screenshot_2025_08_26_105816.png",
     "file": "merk-bay-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "8487d7d4bdc1d49ba16d9d7c3cea4d2ec7a7c439257b56b6ba83c3a9a0c51624",
     "sha256_local": "1678feb6a77d0a3da5bbb2a88137ddb0c0fcb021c808f6c7afc68ef8ffa17dfa",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "midhubandha-waterfall": {
     "content_type": "image/webp",
@@ -15625,11 +15660,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1775111690_mount_manipur.png",
     "file": "mount-manipur.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "ad6d4965adda5aae29c52ca41eecbb7aaf0dae2ba7d841a1b365970ba6b8f16d",
     "sha256_local": "9314336968275be2e17014e9dcf446ea57d205ef362a7c005eb3e11feb1781e5",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=3",
+    "verified_at": "2026-11-27"
   },
   "mount-mawma-ecological-park-chakhei": {
     "creator": "Major Anthony Gilchrist Mccall",
@@ -15709,11 +15745,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/Mud%20Valcano.jpg",
     "file": "mud-volcano.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "a7335b326aa50821c7ae6bf04a49cb288c5d543d62674b2c70ffee5ca6d3fdea",
     "sha256_local": "a7d32fa27341b9fefe0241fe0dc251dc98efe74277922f28788e091bec0371a5",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "mudgal-fort": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mudgal%20fort%201.jpg",
@@ -17186,21 +17223,23 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1756117977_Screenshot_2025_08_25_155555.png",
     "file": "north-bay-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "b586fce760e5aed559dbe11793f8f877bb71bfcf0c55c47a1a31af6c1c49863a",
     "sha256_local": "d725b40feeb9ae43b7882007f27f92281b66d26b67f4ebd10a11e9b0b92c36cf",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1",
+    "verified_at": "2026-11-27"
   },
   "north-bay-lighthouse": {
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1772433188_northbay_lighthouse.jpeg",
     "file": "north-bay-lighthouse.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "2d0f7aaed47e6a17ecc0ff199e6acc67686f0f70bd9bbf514d3f0f45f9f0b029",
     "sha256_local": "1cec4605cd092e4310fd60174e968d7ff218df16ad54d0d2b459e8368b1bc7a2",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "north-east-zone-cultural-centre": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Centre_Point_Zunheboto_%28cropped%29.jpg/960px-Centre_Point_Zunheboto_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -19175,11 +19214,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1770739923_1755843278_Radha_Nagar__8_.jpg",
     "file": "radhanagar-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "b24c9671ccafe209e33c333c579792bc88adf4b171094b701926f0b37c7eb335",
     "sha256_local": "69a558309b0ee3d66a5d1fd8f88773cd0f2347639e29bda5a949e7e5698ab025",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "raghavendra-swamy-matha-mantralayam": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Shri_Raghavendra_Math_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -20066,11 +20106,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1774614902_redskin_island.jpeg",
     "file": "red-skin-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "c291b6cc14d560115a7069b5354f7bc42c33284443b5b12e28bb7801786dea6e",
     "sha256_local": "a2b05605a9117bafcde174975832dc2429063e8183bd53449220d34c18ec8de1",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1",
+    "verified_at": "2026-11-27"
   },
   "regional-museum-of-natural-history": {
     "content_type": "image/webp",
@@ -20325,11 +20366,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1773904402_ross_smith.jpeg",
     "file": "ross-and-smith-islands.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "fc936fae1374bd99b1e12f7b324dc67416ded3846f757e2dfe0a243a88b85c0e",
     "sha256_local": "c96d03569e9df221b2b57dce2b2f94cebaef6ba73b6c8e4e75ee01a12d82e778",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=2",
+    "verified_at": "2026-11-27"
   },
   "rottary-doll-museum": {
     "download_url": "https://www.gujarattourism.com/content/dam/gujrattourism/images/june/Rottary-doll-Museum-banner.jpg",
@@ -20452,11 +20494,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1772885528_rutland.jpg",
     "file": "rutland-island-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "4a5a1f4f9a2bd567d7d18977108e10947e7e48049d22020b35115ac14af113cb",
     "sha256_local": "b39ac82f2ad22f77e4bd6cc508b91f8e94f1e0dc2f26b60e21fd9880dcf7cc7a",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "sabara-srikshetra-jagannath-temple-koraput": {
     "content_type": "image/webp",
@@ -21422,11 +21465,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/shaheed_dweep.jpeg",
     "file": "shaheed-dweep.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "ae5572327e91cd4fac11bd63592f7136c14f24abdbea3aa2d62cb30ec2b08d76",
     "sha256_local": "1cef022dc2edd77f59224587404afce87d61a9a3b10b712caabdfa3e0d57c3b8",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1",
+    "verified_at": "2026-11-27"
   },
   "shaheed-minar": {
     "coordinate_note": "Coordinate reference: OpenStreetMap point for Shaheed Minar at Bir Tikendrajit Park, Imphal; the state page gives no map coordinates.",
@@ -22472,11 +22516,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1771321735_sitapur_beach.jpg",
     "file": "sitapur-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "35c3c976f0953eb59c26d185c63582fefca58017edd7c36c1b0197ff80d1e1dc",
     "sha256_local": "2fa249eedd536ce4de7e9451185946413112ca549c7301a0d84daf1187b82905",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "sivadol": {
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Sivadol%2C_Sivasagar%2C_Assam%2C_India.jpg/960px-Sivadol%2C_Sivasagar%2C_Assam%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -22670,11 +22715,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1775221972_south.png",
     "file": "south-button-island-national-park.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "870e02394175ed0866d7079c57e70dc2f0853586dd6d5f35528a2d97a583eaa2",
     "sha256_local": "acb31f0f76e9d91d0ada3beb9ee8b8d2ce262445cc1d9c4fdd3df324da2cbb8d",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=4"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=4",
+    "verified_at": "2026-11-27"
   },
   "south-vanlaiphai": {
     "download_url": "https://mizoramtourism.com/post_images/62b899283e9bb_South%20VLP%20TL.jpg",
@@ -22770,11 +22816,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/cellular_jail.jpeg",
     "file": "sri-vijaya-puram.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "ba243d2e6448e40973a98b6e3cc1eabf19a14221cf90844d1b691b8a5da232b5",
     "sha256_local": "129d4538e3d9101f60fff468b3b2d7b4347f772019f4485d64c9706f7b42f2ef",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1",
+    "verified_at": "2026-11-27"
   },
   "srikalahasti-temple": {
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Srikalahasti_gopuram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -23329,11 +23376,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/islands/1774613300_swarjdeep_.jpg",
     "file": "swaraj-dweep.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "1ee1b2a4f36fbc9aefbf07eed0f8eab55d9418508c66dddee7a4b6fd67e168c3",
     "sha256_local": "802b37ebd8a4866d598cd1e197257b58eb5de264b63bcd5469c77ed482a24921",
-    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/isalands.php?data=gOGWQfni69xslNGzJFp0aj1BPSgxGLhXyulTGwXJYpLNi4EzCPkeWZw7&page=1",
+    "verified_at": "2026-11-27"
   },
   "syndai-cave": {
     "download_url": "",
@@ -25734,11 +25782,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1771309103_vijaynagar1.jpg",
     "file": "vijaynagar-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "9683c23b830d5e1edc36419b116928040e76fd2317017e563c0a6c15f1ba915e",
     "sha256_local": "ff0d6bcd1ea83ad87ce4ad60e06b75771bebfd259fa3693f4599cc8499762e3a",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "vijaypur": {
     "coordinate_note": "Coordinate reference: Google Maps place Bijaypur, Uttarakhand (https://www.google.com/maps/place/?q=place_id:ChIJC0T-mnQypzkRoZrXvc6Cv1I).",
@@ -25816,11 +25865,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/heritage/1775282192_viper_island.png",
     "file": "viper-island.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "17301a8c51e4197a683f7ffb21db56df163ea129fef6f248d1b5e3d7def97b1b",
     "sha256_local": "7bf83d55215a79eba34fbec2ee506ba22a4e3e8b1f7e962a8505b30d4ddad6db",
-    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=2"
+    "source_page": "https://tourism.andamannicobar.gov.in/heritage.php?page=2",
+    "verified_at": "2026-11-27"
   },
   "virasat-e-khalsa": {
     "coordinate_note": "Wikipedia: Virasat-e-Khalsa, Punjab, India.",
@@ -26009,11 +26059,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/beaches/1756099029_Wandoor_beach.jpg",
     "file": "wandoor-beach.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "3a49815506b60b52bb126b0093c8a68b7a1b87c15b2d7d1baa8049a1f87cfd70",
     "sha256_local": "bd0cba55bf00974deaa36e2e40341245e009f4c9dc73d4f8ee3806bcbea08eb8",
-    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/island_Beaches.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "war-memorial-chandigarh": {
     "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_memorial_for_war_veterans_including_Capt._Vikram_Batra_at_DAV_College%2C_Chandigarh%2C_India_%282015%29.jpg",
@@ -26119,11 +26170,12 @@
     "content_type": "image/jpeg",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/Waterfall.JPG",
     "file": "white-surf-waterfall.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "1929907ca44863929c68ca542cf9e80d75269468d69c69fb01e7583f7796bc09",
     "sha256_local": "6f7a3cc586c83d7d4b969835ba0014f1e8bfdbb322122a61970a2401e0e6c219",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=5"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=5",
+    "verified_at": "2026-11-27"
   },
   "white-town-pondicherry": {
     "content_type": "image/jpeg",
@@ -26178,11 +26230,12 @@
     "content_type": "image/png",
     "download_url": "https://tourism.andamannicobar.gov.in/userpages/admin/uploads/nature/1756139918_myo2.PNG",
     "file": "wright-myo-creek.jpg",
-    "note": "Official government tourism source page and image URL were checked; fees, timings and access are checked locally.",
+    "note": "Exact provenance verified 2026-11-27; source page and image checked.",
     "provider": "Directorate of Tourism, Andaman and Nicobar Administration",
     "sha256_download": "9c088405276d2e493639cdd9bfd6ec87f531e985a173c717322382c8465e4fcb",
     "sha256_local": "33faf29c77d4d4f4fcfee990cb098317f128967d5cbeaa93693500b1ee4f3984",
-    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1"
+    "source_page": "https://tourism.andamannicobar.gov.in/nature_adventure.php?page=1",
+    "verified_at": "2026-11-27"
   },
   "wular-lake": {
     "content_type": "image/jpeg",

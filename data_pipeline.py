@@ -56,6 +56,11 @@ def dataset_version_bytes():
     legacy_odisha = DATA_DIR / 'odisha-places.json'
     if legacy_odisha.exists() and legacy_odisha not in paths:
         paths.append(legacy_odisha)
+    # Verification overlays must also change the /tmp database version, otherwise
+    # a redeploy would keep serving the previous reviewed/unreviewed snapshot.
+    verified_overlay = DATA_DIR / 'verified-places.json'
+    if verified_overlay.exists() and verified_overlay not in paths:
+        paths.append(verified_overlay)
     return b''.join(path.read_bytes() for path in paths if path.exists())
 
 

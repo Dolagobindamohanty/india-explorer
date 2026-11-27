@@ -674,6 +674,27 @@ def seed(db):
                 for op in canonical_extra
             ])
 
+    # Exact-provenance reviews are recorded in one overlay so they survive a
+    # database rebuild even for places that still come from the legacy tuples.
+    verified_overlay_path = ROOT / 'data' / 'verified-places.json'
+    if verified_overlay_path.exists():
+        verified_overlay = json.loads(verified_overlay_path.read_text(encoding='utf-8'))
+        for slug, meta in verified_overlay.items():
+            if meta.get('verification_status') != 'verified' or not meta.get('last_verified_at'):
+                continue
+            if meta.get('source_url'):
+                db.execute(
+                    '''UPDATE places SET verification_status='verified',
+                        last_verified_at=?, source_url=? WHERE slug=?''',
+                    (meta['last_verified_at'], meta['source_url'], slug),
+                )
+            else:
+                db.execute(
+                    '''UPDATE places SET verification_status='verified',
+                        last_verified_at=? WHERE slug=?''',
+                    (meta['last_verified_at'], slug),
+                )
+
     # Ramanagara district was officially renamed Bengaluru South on 23 May 2025
     # (headquarters remain at Ramanagara town). Remove any transient duplicate
     # "Ramanagara" district row so the snapshot holds the 31 current districts.

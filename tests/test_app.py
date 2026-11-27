@@ -8,7 +8,12 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app import create_app, distance
-from data_pipeline import import_report, validate_all_state_data, validate_database
+from data_pipeline import (
+    dataset_version_bytes,
+    import_report,
+    validate_all_state_data,
+    validate_database,
+)
 
 ASSETS = Path(__file__).resolve().parents[1] / "public"
 
@@ -963,6 +968,40 @@ def test_tamil_nadu_exact_provenance_audit_is_recorded(client):
         assert_asset_exists(place['image_url'])
 
 
+def test_andaman_exact_provenance_subset_is_recorded(client):
+    places = client.get('/api/states/andaman-and-nicobar-islands').json()['places']
+    assert len(places) == 60
+    reviewed = [p for p in places if p['verification_status'] == 'verified']
+    assert len(reviewed) == 53
+    by_slug = {p['slug']: p for p in places}
+    assert by_slug['little-andaman-island']['verification_status'] == 'needs_review'
+
+    sample = by_slug['austin-creek-limestone-formation']
+    assert sample['verification_status'] == 'verified'
+    assert sample['last_verified_at'] == '2026-11-27'
+    sources = json.loads((ASSETS / 'assets' / 'places' / 'sources.json').read_text(encoding='utf-8'))
+    src = sources[sample['slug']]
+    assert sample['source_url'] == src['source_page']
+    assert src['download_url'].startswith('https://')
+    assert src['content_type'].startswith('image/')
+    assert src['verified_at'] == '2026-11-27'
+    assert len(src['sha256_download']) == 64
+    assert len(src['sha256_local']) == 64
+    assert_asset_exists(sample['image_url'])
+
+
+def test_verification_overlay_changes_deployment_database_version():
+    overlay = ASSETS.parent / 'data' / 'verified-places.json'
+    assert overlay.exists()
+    entries = json.loads(overlay.read_text(encoding='utf-8'))
+    assert entries, 'expected at least one source-verified place'
+    for slug, meta in entries.items():
+        assert meta['verification_status'] == 'verified', slug
+        assert meta['last_verified_at'], slug
+        assert meta['source_url'].startswith('https://'), slug
+    assert overlay.read_bytes() in dataset_version_bytes()
+
+
 def test_dynamic_content_is_never_cached():
     config = json.loads((ASSETS.parent / 'vercel.json').read_text(encoding='utf-8'))
     dynamic = next(rule for rule in config['headers'] if rule['source'] == '/(.*)')
@@ -979,8 +1018,8 @@ def test_dynamic_content_is_never_cached():
 def test_editorial_status(client):
     assert client.get('/api/editorial-status').json() == {
         'detailed_places': 3567,
-        'reviewed_places': 277,
-        'unreviewed_places': 3290,
+        'reviewed_places': 330,
+        'unreviewed_places': 3237,
         'confirmed_festival_dates': 23,
     }
 
