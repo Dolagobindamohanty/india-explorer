@@ -695,6 +695,23 @@ def seed(db):
                     (meta['last_verified_at'], slug),
                 )
 
+    # Source-checked stay options. Only entries with an exact source page and
+    # verification date are surfaced; everything else stays blank on purpose.
+    accommodation_path = ROOT / 'data' / 'accommodation.json'
+    if accommodation_path.exists():
+        accommodation = json.loads(accommodation_path.read_text(encoding='utf-8'))
+        for slug, meta in accommodation.items():
+            notes = (meta.get('notes') or '').strip()
+            source_url = (meta.get('source_url') or '').strip()
+            verified_at = (meta.get('verified_at') or '').strip()
+            if not notes or not source_url.startswith('https://') or not verified_at:
+                continue
+            db.execute(
+                '''UPDATE places SET accommodation_notes=?, accommodation_source_url=?,
+                    accommodation_verified_at=? WHERE slug=?''',
+                (notes, source_url, verified_at, slug),
+            )
+
     # Ramanagara district was officially renamed Bengaluru South on 23 May 2025
     # (headquarters remain at Ramanagara town). Remove any transient duplicate
     # "Ramanagara" district row so the snapshot holds the 31 current districts.

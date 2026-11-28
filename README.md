@@ -20,16 +20,23 @@ application. Keep the terminal open; Ctrl+C stops the server.
 ## Deploy to Vercel
 
 The project includes `api/index.py` and `vercel.json` for a FastAPI serverless
-deployment. The included SQLite database is intentionally read-only editorial
-demo storage: Vercel's filesystem is temporary, so it must not be used for
-accounts, CMS changes, saved itineraries, or any other durable user data.
+deployment. Vercel's filesystem is temporary, so the bundled SQLite database is
+rebuilt from versioned seed inputs on each new deployment. Browser-local
+favorites, profile details and itineraries remain private to the visitor's
+device.
 
-For a production system with mutations, provision a hosted PostgreSQL database
-and migrate the schema and seed data before enabling write features. Store its
-connection string as the Vercel `DATABASE_URL` environment variable and run
-migrations from CI or an administrative job, not during a serverless request.
-This MVP deliberately has no authenticated writes, so browser-local favorites
-remain private to the visitor's device.
+Correction submissions are the one server-side write endpoint. Without a
+webhook they live only in the current serverless instance and are honestly
+labelled as non-durable in the response. For durable review, set
+`CORRECTIONS_WEBHOOK_URL` to an authenticated intake endpoint (for example a
+GitHub Action or issue form) and `CORRECTIONS_ADMIN_TOKEN` to protect
+`GET /api/corrections`. Do not put either secret in the repository.
+
+For a full production system with authenticated editing, provision a hosted
+PostgreSQL database and migrate the schema and seed data before enabling write
+features. Store its connection string as the Vercel `DATABASE_URL` environment
+variable and run migrations from CI or an administrative job, not during a
+serverless request.
 
 Install and authenticate the Vercel CLI from Command Prompt:
 
@@ -75,13 +82,16 @@ FastAPI deployment, so no CORS configuration is needed.
 - A personalised home row that follows the interests on the traveler profile.
 - Day-by-day trip planner with editable start times and day notes, printable itinerary, WhatsApp sharing and a shareable `plan` link that preserves the chosen days and times: `/saved?places=slug1,slug2&plan=...`.
 - `FAQPage` structured data on the festival calendar and About page, explaining recurring dates and straight-line estimates.
+- Live current weather and a three-day forecast on each place page, fetched server-side from Open-Meteo, cached for ten minutes, and kept separate from typical best-season guidance.
+- Source-checked stay notes on the seven official Odisha Tourism pages that explicitly confirm on-site accommodation; no live availability, prices or invented listings are shown.
+- A "Suggest a correction" form on each place page with field validation, honeypot/rate limiting, optional webhook forwarding and a token-protected moderation queue.
 - FastAPI, persistent SQLite database, plain HTML/CSS/JavaScript frontend.
 
 ## Database
 
 `schema.sql` defines the relational schema. `seed.py` supplies the editorial
-pilot. The app creates `data/explorer.sqlite3` at first startup and seeds it
-only if the regions table is empty. Restarts preserve data. If the seed data
+pilot. The app creates `data/explorer.sqlite3` at first startup, inserts any
+missing records and reapplies the provenance overlays. Restarts preserve data. If the seed data
 changes, delete that local file and restart to rebuild it from the current
 source data; Vercel uses a versioned `/tmp` database path automatically, so
 deployments never inherit an older database. Each API request uses short-lived
@@ -92,7 +102,8 @@ regions (state or union territory)
   └─ districts
        └─ places ── heritage_sites (official UNESCO property)
             ├─ place_months
-            └─ place_tags ── tags
+            ├─ place_tags ── tags
+            └─ place_corrections (moderation queue)
 districts ── festival_districts ── festivals
                                   ├─ festival_months
                                   └─ festival_occurrences
@@ -132,7 +143,9 @@ The 147 Odisha, 10 Lakshadweep, 120 Tamil Nadu and 53 Andaman and Nicobar
 Islands places are marked `verified` from exact source pages (last checked 27
 November 2026); the remaining 3,237 records stay `needs_review` and appear as
 source-linked editorial entries, not as independently verified. Review results
-are persisted in `data/verified-places.json`, which is included in the
+are persisted in `data/verified-places.json`. Source-checked stay notes live in
+`data/accommodation.json`; only pages whose official source explicitly
+confirms a stay option receive those notes. Both overlays are included in the
 deployment data-version hash so redeploys cannot serve a stale review snapshot.
 23 festival occurrences have confirmed dates, while
 the rest of the annual dates remain unpopulated. Seasonal guidance and
@@ -147,9 +160,12 @@ The website stores a destination-specific image URL for every place. All 3,567 c
 - `GET /api/union-territories`
 - `GET /api/districts?region=karnataka` or `?kind=ut`, `/api/districts/{slug}`
 - `GET /api/food` — compact district food-note records for instant search
+- `GET /api/weather?lat=20.0&lon=85.0` — India-only Open-Meteo snapshot and three-day forecast
 - `GET /api/places?q=&state=&district=&month=&category=&accessibility=&unesco=true`
 - `GET /api/places/{slug}`
 - `GET /api/festivals?month=8&district=alappuzha`
+- `POST /api/corrections` — validated correction intake; JSON body with `place_slug`, `field`, `value`, optional `reason`, `source_url` and empty `website`
+- `GET /api/corrections?status=pending` — moderation queue; requires `CORRECTIONS_ADMIN_TOKEN` as an `X-Admin-Token` header (query `token` also accepted for manual checks)
 - `GET /healthz`; interactive API docs at `/docs`
 - `GET /sitemap.xml` and `/robots.txt` for crawlable server-rendered pages
 
@@ -175,8 +191,9 @@ python -m compileall -q app.py seed.py tests scripts
 
 Tests cover navigation data, composable filters, festival date honesty, Event and
 FAQ structured data, food-note search data, accessibility defaults, straight-line
-wording, invalid inputs, missing records, persistent seeding and foreign-key
-constraints.
+wording, source-checked stay notes, weather validation and caching, correction
+intake and moderation, invalid inputs, missing records, persistent seeding and
+foreign-key constraints.
 
 ## Scope
 
@@ -185,7 +202,8 @@ server-rendered pages with canonical URLs and a sitemap, and JavaScript enhances
 navigation without replacing that content. The traveler profile is a
 convenience layer over `localStorage`, not an account: there is no server-side
 user record, and clearing browser data removes it. Content editing is currently through SQL
-and seed data; an authenticated editorial interface, full India coverage,
-accounts, road routing and live accommodation availability are future work. SQLite is appropriate for this
+and seed data plus the reviewed correction intake; an authenticated editorial
+interface, full India coverage, accounts, road routing, live room availability
+and prices are future work. SQLite is appropriate for this
 local read-heavy pilot; PostgreSQL migration can follow when deployment and
 editorial concurrency require it.

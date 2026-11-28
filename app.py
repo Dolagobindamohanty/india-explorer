@@ -7,9 +7,14 @@ import math
 import os
 from pathlib import Path
 import re
+import secrets
 import sqlite3
+import time
+import urllib.parse
+import urllib.request
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
+from fastapi.responses import JSONResponse
 from fastapi.exception_handlers import http_exception_handler as default_http_exception_handler
 from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
@@ -75,6 +80,42 @@ def repair_display_text(items, fields):
     return items
 
 
+CORRECTION_FIELDS = (
+    'description', 'how_to_reach', 'practical_notes', 'entry_fee',
+    'address', 'accessibility_notes', 'accommodation_notes',
+)
+
+WEATHER_CODES = {
+    0: 'Clear sky', 1: 'Mainly clear', 2: 'Partly cloudy', 3: 'Overcast',
+    45: 'Fog', 48: 'Depositing rime fog', 51: 'Light drizzle', 53: 'Moderate drizzle',
+    55: 'Dense drizzle', 56: 'Light freezing drizzle', 57: 'Dense freezing drizzle',
+    61: 'Slight rain', 63: 'Moderate rain', 65: 'Heavy rain',
+    66: 'Light freezing rain', 67: 'Heavy freezing rain',
+    71: 'Slight snowfall', 73: 'Moderate snowfall', 75: 'Heavy snowfall', 77: 'Snow grains',
+    80: 'Slight rain showers', 81: 'Moderate rain showers', 82: 'Violent rain showers',
+    85: 'Slight snow showers', 86: 'Heavy snow showers',
+    95: 'Thunderstorm', 96: 'Thunderstorm with slight hail', 99: 'Thunderstorm with heavy hail',
+}
+
+
+def weather_condition(code):
+    return WEATHER_CODES.get(code, 'Conditions unavailable')
+
+
+def correction_form_html(slug):
+    labels = {
+        'description': 'Description', 'how_to_reach': 'How to reach',
+        'practical_notes': 'Practical notes', 'entry_fee': 'Entry fee',
+        'address': 'Address', 'accessibility_notes': 'Accessibility notes',
+        'accommodation_notes': 'Accommodation notes',
+    }
+    options = ''.join(
+        f'<option value="{escape(field)}">{escape(label)}</option>'
+        for field, label in labels.items()
+    )
+    return f'''<details class="correction-panel"><summary>Suggest a correction</summary><form id="correction-form" data-slug="{escape(slug, quote=True)}"><p class="notice">Submit a specific change with a source link. Edits are reviewed before publication; nothing here changes the page instantly.</p><label>Field<select name="field" required>{options}</select></label><label>Suggested text<textarea name="value" rows="3" maxlength="2000" required></textarea></label><label>Why this is wrong (optional)<textarea name="reason" rows="2" maxlength="500"></textarea></label><label>Source URL (optional)<input type="url" name="source_url" maxlength="500" placeholder="https://..."></label><div class="correction-honeypot" aria-hidden="true"><label>Leave this blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><button class="button" type="submit">Submit correction</button><p class="correction-status" role="status" aria-live="polite"></p></form></details>'''
+
+
 def create_app(database_path=None):
     # Vercel preserves /tmp for warm instances across deployments. Version the
     # temporary database from its seed inputs so corrected source data cannot
@@ -91,6 +132,7 @@ def create_app(database_path=None):
     )
     path = Path(database_path or os.getenv('INDIA_EXPLORER_DB_PATH', default_path))
     path.parent.mkdir(parents=True, exist_ok=True)
+    weather_cache = {}
 
     @contextmanager
     def connection():
@@ -119,6 +161,12 @@ def create_app(database_path=None):
             db.execute("ALTER TABLE places ADD COLUMN accessibility_status TEXT NOT NULL DEFAULT 'unknown'")
         if 'accessibility_notes' not in place_columns:
             db.execute("ALTER TABLE places ADD COLUMN accessibility_notes TEXT NOT NULL DEFAULT ''")
+        if 'accommodation_notes' not in place_columns:
+            db.execute("ALTER TABLE places ADD COLUMN accommodation_notes TEXT NOT NULL DEFAULT ''")
+        if 'accommodation_source_url' not in place_columns:
+            db.execute("ALTER TABLE places ADD COLUMN accommodation_source_url TEXT NOT NULL DEFAULT ''")
+        if 'accommodation_verified_at' not in place_columns:
+            db.execute("ALTER TABLE places ADD COLUMN accommodation_verified_at TEXT")
         db.execute('''CREATE TABLE IF NOT EXISTS place_images (
             id INTEGER PRIMARY KEY,
             place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE CASCADE,
@@ -263,6 +311,154 @@ def create_app(database_path=None):
             ORDER BY r.name, d.name''')
         repair_display_text(results, ('district', 'food_notes', 'state'))
         return results
+
+    @app.get('/api/weather')
+    def weather(lat: float = Query(..., ge=-90, le=90), lon: float = Query(..., ge=-180, le=180)):
+        """Short-lived live weather snapshot from Open-Meteo, never a best-season claim."""
+        if not (6.0 <= lat <= 36.0 and 68.0 <= lon <= 98.0):
+            raise HTTPException(422, 'Coordinates must be within India.')
+        key = (round(lat, 2), round(lon, 2))
+        cached = weather_cache.get(key)
+        if cached and time.time() - cached['cached_at'] < 600:
+            return cached['payload']
+        params = urllib.parse.urlencode({
+            'latitude': key[0], 'longitude': key[1],
+            'current': 'temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m',
+            'daily': 'weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max',
+            'timezone': 'Asia/Kolkata', 'forecast_days': 4,
+        })
+        request = urllib.request.Request(
+            'https://api.open-meteo.com/v1/forecast?' + params,
+            headers={'User-Agent': 'IndiaExplorer/1.0 (+https://traveling-ketch.vercel.app)'},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=8) as response:
+                raw = json.load(response)
+        except Exception as exc:
+            raise HTTPException(502, 'Weather service is unavailable right now.') from exc
+        current = raw.get('current') or {}
+        if current.get('temperature_2m') is None:
+            raise HTTPException(502, 'Weather service returned no current conditions.')
+        daily = raw.get('daily') or {}
+        forecast = []
+        for index, day in enumerate(daily.get('time') or []):
+            if index >= 3:
+                break
+            forecast.append({
+                'date': day,
+                'condition': weather_condition((daily.get('weather_code') or [None] * 4)[index]),
+                'max_c': (daily.get('temperature_2m_max') or [None] * 4)[index],
+                'min_c': (daily.get('temperature_2m_min') or [None] * 4)[index],
+                'rain_chance': (daily.get('precipitation_probability_max') or [None] * 4)[index],
+            })
+        payload = {
+            'temperature_c': current.get('temperature_2m'),
+            'humidity_percent': current.get('relative_humidity_2m'),
+            'precipitation_mm': current.get('precipitation'),
+            'wind_kmh': current.get('wind_speed_10m'),
+            'condition': weather_condition(current.get('weather_code')),
+            'observed_at': current.get('time'),
+            'timezone': raw.get('timezone'),
+            'forecast': forecast,
+            'is_live': True,
+            'attribution': 'Weather data by Open-Meteo.com',
+            'attribution_url': 'https://open-meteo.com/',
+            'fetched_at': datetime.now(timezone.utc).isoformat(),
+        }
+        weather_cache[key] = {'cached_at': time.time(), 'payload': payload}
+        return payload
+
+    @app.post('/api/corrections')
+    async def submit_correction(request: Request):
+        try:
+            body = await request.json()
+        except Exception as exc:
+            raise HTTPException(400, 'A JSON body is required.') from exc
+        if not isinstance(body, dict):
+            raise HTTPException(400, 'A JSON object is required.')
+        if str(body.get('website') or '').strip():
+            raise HTTPException(400, 'Bot submission rejected.')
+        slug = str(body.get('place_slug') or '').strip()
+        field = str(body.get('field') or '').strip()
+        value = str(body.get('suggested_value') or body.get('value') or '').strip()
+        reason = str(body.get('reason') or '').strip()[:500]
+        source_url = str(body.get('source_url') or '').strip()[:500]
+        if not re.fullmatch(r'[a-z0-9-]+', slug):
+            raise HTTPException(422, 'Invalid place slug.')
+        if field not in CORRECTION_FIELDS:
+            raise HTTPException(422, 'That field cannot be corrected here.')
+        if not (5 <= len(value) <= 2000):
+            raise HTTPException(422, 'Suggested text must be between 5 and 2000 characters.')
+        if source_url and not source_url.startswith(('http://', 'https://')):
+            raise HTTPException(422, 'Source URL must start with http:// or https://.')
+
+        created_at = datetime.now(timezone.utc).isoformat()
+        with connection() as db:
+            if not db.execute('SELECT 1 FROM places WHERE slug=?', (slug,)).fetchone():
+                raise HTTPException(404, 'This destination is not in the directory.')
+            cutoff = datetime.fromtimestamp(time.time() - 60, timezone.utc).isoformat()
+            recent_count = db.execute(
+                'SELECT COUNT(*) FROM place_corrections WHERE created_at > ?', (cutoff,)
+            ).fetchone()[0]
+            if recent_count >= 10:
+                raise HTTPException(429, 'Too many corrections submitted recently. Try again shortly.')
+            with db:
+                cursor = db.execute(
+                    '''INSERT INTO place_corrections
+                        (place_slug, field, suggested_value, reason, source_url, status, created_at)
+                        VALUES (?,?,?,?,?,'pending',?)''',
+                    (slug, field, value, reason, source_url, created_at),
+                )
+            correction_id = cursor.lastrowid
+
+        durable = False
+        webhook = os.getenv('CORRECTIONS_WEBHOOK_URL', '').strip()
+        if webhook:
+            forwarded = json.dumps({
+                'id': correction_id, 'place_slug': slug, 'field': field,
+                'suggested_value': value, 'reason': reason, 'source_url': source_url,
+                'created_at': created_at,
+            }).encode('utf-8')
+            webhook_request = urllib.request.Request(
+                webhook, data=forwarded, method='POST',
+                headers={'Content-Type': 'application/json',
+                         'User-Agent': 'IndiaExplorer/1.0 (+https://traveling-ketch.vercel.app)'},
+            )
+            try:
+                with urllib.request.urlopen(webhook_request, timeout=8) as response:
+                    if response.status >= 400:
+                        raise OSError(f'webhook returned {response.status}')
+            except Exception as exc:
+                with connection() as db:
+                    with db:
+                        db.execute('DELETE FROM place_corrections WHERE id=?', (correction_id,))
+                raise HTTPException(502, 'Correction could not be forwarded for review.') from exc
+            with connection() as db:
+                with db:
+                    db.execute("UPDATE place_corrections SET status='forwarded' WHERE id=?", (correction_id,))
+            durable = True
+
+        message = (
+            'Sent for editorial review.'
+            if durable else
+            'Recorded on this server instance. Configure a moderation webhook for durable review storage.'
+        )
+        return JSONResponse(status_code=201, content={
+            'id': correction_id, 'status': 'forwarded' if durable else 'pending',
+            'durable': durable, 'message': message,
+        })
+
+    @app.get('/api/corrections')
+    def review_corrections(request: Request, token: str = Query(''), status: str = Query('pending')):
+        admin_token = os.getenv('CORRECTIONS_ADMIN_TOKEN', '')
+        supplied_token = request.headers.get('x-admin-token') or token
+        if not admin_token or not secrets.compare_digest(supplied_token, admin_token):
+            raise HTTPException(403, 'Moderation access is not configured or the token is invalid.')
+        if status not in ('pending', 'forwarded', 'accepted', 'rejected', 'all'):
+            raise HTTPException(422, 'Invalid status filter.')
+        if status == 'all':
+            return rows('SELECT * FROM place_corrections ORDER BY created_at DESC LIMIT 500')
+        return rows('SELECT * FROM place_corrections WHERE status=? ORDER BY created_at DESC LIMIT 500', (status,))
 
     @app.get('/api/districts/{slug}')
     def district(slug: str):
@@ -497,7 +693,7 @@ def create_app(database_path=None):
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:image" content="{escape(SITE_URL + og_image, quote=True)}"><meta property="og:url" content="{escape(canonical_url, quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{robots_meta}{json_ld_html}
-<title>{escape(page_title)}</title><meta name="theme-color" content="#a7d3c9"><link rel="stylesheet" href="/style.css?v=20261128-phase-one"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
+<title>{escape(page_title)}</title><meta name="theme-color" content="#a7d3c9"><link rel="stylesheet" href="/style.css?v=20261128-phase-two-three"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><div class="nav-left"><button class="profile-toggle" id="profile-toggle" type="button" aria-label="Open traveler profile" aria-expanded="false" aria-controls="profile-drawer"><span class="profile-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span></button><a class="brand" href="/" aria-label="India Explorer home"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGrad)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGrad" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a></div><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><button type="button" class="nav-search-link" id="spotlight-btn" aria-label="Search destinations">⌕ <span>Search</span> <kbd class="kbd-hint">⌘K</kbd></button><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><a href="/about">About</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
 <div class="profile-scrim" id="profile-scrim" hidden></div>
@@ -516,7 +712,7 @@ def create_app(database_path=None):
 <div class="profile-actions"><button class="profile-action" id="profile-theme" type="button">☾ Switch to dark mode</button><button class="profile-action profile-reset" id="profile-reset" type="button">Reset local data</button></div>
 <p class="profile-footnote">No account needed. Your name, favorites and history stay in this browser only.</p>
 </aside>
-<main id="app" tabindex="-1">{content}</main><div id="spotlight-overlay" class="spotlight-overlay" aria-hidden="true" style="display:none;"><div class="spotlight-modal" role="dialog" aria-modal="true" aria-label="Spotlight search"><div class="spotlight-input-wrap"><span class="spotlight-icon">⌕</span><input type="text" id="spotlight-input" placeholder="Type a destination, district, state, festival or dish... (Esc to close)" autocomplete="off" spellcheck="false"><button type="button" id="spotlight-close" class="spotlight-close-btn" aria-label="Close search">✕</button></div><div class="spotlight-tags-strip"><span>Trending:</span><button type="button" class="spotlight-tag" data-q="Taj Mahal">Taj Mahal</button><button type="button" class="spotlight-tag" data-q="Chandigarh">Chandigarh</button><button type="button" class="spotlight-tag" data-q="Puri">Puri</button><button type="button" class="spotlight-tag" data-q="Goa">Goa</button><button type="button" class="spotlight-tag" data-q="Spiti">Spiti</button><button type="button" class="spotlight-tag" data-q="Sikkim">Sikkim</button></div><div id="spotlight-results" class="spotlight-results"><div class="spotlight-hint">Instant live search across all {counts['places']} destinations, {counts['districts']} districts, {counts['states'] + counts['union_territories']} regions, foods & trails across India...</div></div></div></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button><footer><div class="footer-inner"><div><a class="brand" href="/"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGradF)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGradF" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><p>Find a place to visit. Find a place to belong.</p></div><nav class="footer-links" aria-label="Footer"><a href="/explore">Explore</a><a href="/area">States & UTs</a><a href="/circuits">Travel trails</a><a href="/festivals">Festivals</a><a href="/saved">Favorites</a><a href="/about">About</a></nav><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js?v=20261128-phase-one"></script></body></html>'''
+<main id="app" tabindex="-1">{content}</main><div id="spotlight-overlay" class="spotlight-overlay" aria-hidden="true" style="display:none;"><div class="spotlight-modal" role="dialog" aria-modal="true" aria-label="Spotlight search"><div class="spotlight-input-wrap"><span class="spotlight-icon">⌕</span><input type="text" id="spotlight-input" placeholder="Type a destination, district, state, festival or dish... (Esc to close)" autocomplete="off" spellcheck="false"><button type="button" id="spotlight-close" class="spotlight-close-btn" aria-label="Close search">✕</button></div><div class="spotlight-tags-strip"><span>Trending:</span><button type="button" class="spotlight-tag" data-q="Taj Mahal">Taj Mahal</button><button type="button" class="spotlight-tag" data-q="Chandigarh">Chandigarh</button><button type="button" class="spotlight-tag" data-q="Puri">Puri</button><button type="button" class="spotlight-tag" data-q="Goa">Goa</button><button type="button" class="spotlight-tag" data-q="Spiti">Spiti</button><button type="button" class="spotlight-tag" data-q="Sikkim">Sikkim</button></div><div id="spotlight-results" class="spotlight-results"><div class="spotlight-hint">Instant live search across all {counts['places']} destinations, {counts['districts']} districts, {counts['states'] + counts['union_territories']} regions, foods & trails across India...</div></div></div></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button><footer><div class="footer-inner"><div><a class="brand" href="/"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGradF)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGradF" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><p>Find a place to visit. Find a place to belong.</p></div><nav class="footer-links" aria-label="Footer"><a href="/explore">Explore</a><a href="/area">States & UTs</a><a href="/circuits">Travel trails</a><a href="/festivals">Festivals</a><a href="/saved">Favorites</a><a href="/about">About</a></nav><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js?v=20261128-phase-two-three"></script></body></html>'''
 
     def server_place_card(item):
         image_url = escape(item.get('image_url') or fallback_image(item.get('state_slug')), quote=True)
@@ -833,6 +1029,22 @@ def create_app(database_path=None):
         accessibility_note = escape(result.get('accessibility_notes') or '')
         accessibility_box = f'''<div class="aside-box"><h3>Accessibility</h3><p><strong>{accessibility_label}</strong></p><p>{accessibility_note or 'Confirm step-free access, ramps and facilities with the official source before travelling.'}</p></div>'''
 
+        accommodation_notes = escape(result.get('accommodation_notes') or '')
+        accommodation_box = ''
+        if accommodation_notes:
+            stay_source = result.get('accommodation_source_url') or ''
+            source_link = (
+                f'<a class="source" href="{escape(stay_source, quote=True)}" target="_blank" rel="noopener noreferrer">Stay details on the official page ↗</a>'
+                if stay_source.startswith('https://') else ''
+            )
+            checked = (
+                f' Source checked: {escape(result["accommodation_verified_at"])}.'
+                if result.get('accommodation_verified_at') else ''
+            )
+            accommodation_box = f'''<div class="aside-box accommodation-box"><h3>Stay information</h3><p>{accommodation_notes}</p><p class="meta">Only details confirmed on the official destination page.{checked}</p>{source_link}</div>'''
+
+        weather_box = f'''<div class="aside-box weather-box" id="weather-box" data-lat="{escape(str(result['latitude']), quote=True)}" data-lon="{escape(str(result['longitude']), quote=True)}"><h3>Live weather</h3><p class="weather-loading">Checking current conditions…</p><p class="meta">Current conditions and a short forecast only; typical best months are listed separately.</p></div>'''
+
         header_html = f'''<header class="place-header"><div class="place-header-top"><span class="place-badge-pill">{escape(result['category'].title())}</span><span class="place-region-text"><a href="/state/{escape(result['state_slug'])}">{escape(result['state'])}</a> · <a href="/district/{escape(result['district_slug'])}">{escape(result['district'])}</a></span></div><h1 class="place-page-title">{escape(result['name'])}</h1><div class="place-meta-bar">{addr_pill}{fee_pill}{season_pill}<button class="save" data-save="{escape(result['slug'])}">♡ Save</button></div></header>'''
 
         gallery_images = result.get('images', [])
@@ -848,7 +1060,7 @@ def create_app(database_path=None):
             fallback_img = image_url
             gallery_html = f'''<section class="place-gallery place-gallery-single" aria-label="Photo of {escape(result['name'])}"><a class="place-gallery-main" href="{fallback_img}" target="_blank" rel="noopener noreferrer"><img src="{fallback_img}" alt="{escape(result['name'])} destination photo" loading="eager"></a></section>'''
 
-        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">{verification_note}. Confirm access, fees and opening hours with the official source before you travel.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div>{accessibility_box}<div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
+        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">{verification_note}. Confirm access, fees and opening hours with the official source before you travel.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a>{correction_form_html(slug)}</div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div>{accessibility_box}{accommodation_box}{weather_box}<div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         place_schema = {
             "@context": "https://schema.org",
             "@type": "TouristAttraction",

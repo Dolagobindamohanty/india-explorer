@@ -61,6 +61,10 @@ def dataset_version_bytes():
     verified_overlay = DATA_DIR / 'verified-places.json'
     if verified_overlay.exists() and verified_overlay not in paths:
         paths.append(verified_overlay)
+    # Source-checked stay options follow the same version rule as review state.
+    accommodation_overlay = DATA_DIR / 'accommodation.json'
+    if accommodation_overlay.exists() and accommodation_overlay not in paths:
+        paths.append(accommodation_overlay)
     return b''.join(path.read_bytes() for path in paths if path.exists())
 
 

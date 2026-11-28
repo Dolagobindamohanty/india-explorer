@@ -311,6 +311,68 @@ async function api(path) {
   return response.json();
 }
 
+function correctionFormHtml(slug) {
+  const fields = [
+    ['description', 'Description'], ['how_to_reach', 'How to reach'],
+    ['practical_notes', 'Practical notes'], ['entry_fee', 'Entry fee'],
+    ['address', 'Address'], ['accessibility_notes', 'Accessibility notes'],
+    ['accommodation_notes', 'Accommodation notes'],
+  ];
+  const options = fields.map(([value, label]) => `<option value="${esc(value)}">${esc(label)}</option>`).join('');
+  return `<details class="correction-panel"><summary>Suggest a correction</summary><form id="correction-form" data-slug="${esc(slug)}"><p class="notice">Submit a specific change with a source link. Edits are reviewed before publication; nothing here changes the page instantly.</p><label>Field<select name="field" required>${options}</select></label><label>Suggested text<textarea name="value" rows="3" maxlength="2000" required></textarea></label><label>Why this is wrong (optional)<textarea name="reason" rows="2" maxlength="500"></textarea></label><label>Source URL (optional)<input type="url" name="source_url" maxlength="500" placeholder="https://..."></label><div class="correction-honeypot" aria-hidden="true"><label>Leave this blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><button class="button" type="submit">Submit correction</button><p class="correction-status" role="status" aria-live="polite"></p></form></details>`;
+}
+
+async function loadPlaceWeather(box) {
+  if (box.dataset.loaded) return;
+  box.dataset.loaded = '1';
+  const loading = box.querySelector('.weather-loading');
+  if (loading) loading.textContent = 'Checking current conditions…';
+  try {
+    const weather = await api(`weather?lat=${encodeURIComponent(box.dataset.lat)}&lon=${encodeURIComponent(box.dataset.lon)}`);
+    box.innerHTML = '<h3>Live weather</h3>';
+    const current = document.createElement('p');
+    current.className = 'weather-current';
+    current.textContent = `${weather.condition} · ${weather.temperature_c}°C`;
+    box.appendChild(current);
+    const details = document.createElement('p');
+    details.className = 'meta';
+    details.textContent = [
+      weather.humidity_percent === null || weather.humidity_percent === undefined ? null : `${weather.humidity_percent}% humidity`,
+      weather.wind_kmh === null || weather.wind_kmh === undefined ? null : `${weather.wind_kmh} km/h wind`,
+    ].filter(Boolean).join(' · ');
+    if (details.textContent) box.appendChild(details);
+    if (Array.isArray(weather.forecast) && weather.forecast.length) {
+      const list = document.createElement('ul');
+      list.className = 'weather-forecast';
+      weather.forecast.forEach(day => {
+        const item = document.createElement('li');
+        const rain = day.rain_chance === null || day.rain_chance === undefined ? '' : ` · ${day.rain_chance}% rain chance`;
+        item.textContent = `${day.date}: ${day.condition}, ${day.min_c}–${day.max_c}°C${rain}`;
+        list.appendChild(item);
+      });
+      box.appendChild(list);
+    }
+    const attribution = document.createElement('p');
+    attribution.className = 'meta weather-attribution';
+    attribution.append('Forecast estimates; verify official warnings before travel. ');
+    const link = document.createElement('a');
+    link.className = 'source';
+    link.href = weather.attribution_url || 'https://open-meteo.com/';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = weather.attribution || 'Weather data by Open-Meteo.com';
+    attribution.appendChild(link);
+    box.appendChild(attribution);
+  } catch (error) {
+    box.innerHTML = '<h3>Live weather</h3><p class="weather-unavailable">Live conditions are unavailable right now. Typical best months and official travel advice remain above.</p>';
+  }
+}
+
+function initPlaceEnhancements() {
+  const box = document.getElementById('weather-box');
+  if (box) loadPlaceWeather(box);
+}
+
 const HERO_SLIDES = [
   { img: '/assets/places/puri-jagannath-temple.jpg', sub: 'Puri, Odisha', title: 'Shree Jagannath Temple', href: '/place/puri-jagannath-temple', stateHref: '/state/odisha' },
   { img: '/assets/places/mysuru-palace.jpg', sub: 'Mysuru, Karnataka', title: 'Mysuru Palace', href: '/place/mysuru-palace', stateHref: '/state/karnataka' },
@@ -511,6 +573,8 @@ async function placePage(slug) {
   const accessibilityStatus = p.accessibility_status || 'unknown';
   const accessibilityLabel = accessibilityLabels[accessibilityStatus] || 'Not yet documented';
   const accessibilityBox = `<div class="aside-box"><h3>Accessibility</h3><p><strong>${esc(accessibilityLabel)}</strong></p><p>${esc(p.accessibility_notes || 'Confirm step-free access, ramps and facilities with the official source before travelling.')}</p></div>`;
+  const accommodationBox = p.accommodation_notes ? `<div class="aside-box accommodation-box"><h3>Stay information</h3><p>${esc(p.accommodation_notes)}</p><p class="meta">Only details confirmed on the official destination page.${p.accommodation_verified_at ? ` Source checked: ${esc(p.accommodation_verified_at)}.` : ''}</p>${p.accommodation_source_url && p.accommodation_source_url.startsWith('https://') ? `<a class="source" href="${esc(p.accommodation_source_url)}" target="_blank" rel="noopener noreferrer">Stay details on the official page ↗</a>` : ''}</div>` : '';
+  const weatherBox = `<div class="aside-box weather-box" id="weather-box" data-lat="${esc(p.latitude)}" data-lon="${esc(p.longitude)}"><h3>Live weather</h3><p class="weather-loading">Checking current conditions…</p><p class="meta">Current conditions and a short forecast only; typical best months are listed separately.</p></div>`;
   const imgUrl = p.image_url || fallbackImage(p.state_slug);
   const feePill = p.entry_fee ? `<span class="place-meta-item">🎟 <strong>${esc(p.entry_fee)}</strong></span>` : '';
   const addrPill = `<span class="place-meta-item">📍 ${esc(p.address || p.district + ', ' + p.state)}</span>`;
@@ -529,7 +593,7 @@ async function placePage(slug) {
     const mainImg = galleryImages[0];
     gallery = `<section class="place-gallery place-gallery-single" aria-label="Photo of ${esc(p.name)}"><a class="place-gallery-main" href="${esc(mainImg.image_url)}" target="_blank" rel="noopener noreferrer"><img src="${esc(mainImg.image_url)}" alt="${esc(mainImg.alt_text)}" loading="eager"></a></section>`;
   }
-  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}${placeHeader}${gallery}<div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.verification_status === 'verified' && p.last_verified_at ? 'Official-source verified · Last checked: '+esc(p.last_verified_at) : 'Source-linked editorial entry'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div>${accessibilityBox}<div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
+  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}${placeHeader}${gallery}<div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.verification_status === 'verified' && p.last_verified_at ? 'Official-source verified · Last checked: '+esc(p.last_verified_at) : 'Source-linked editorial entry'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a>${correctionFormHtml(p.slug)}</div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div>${accessibilityBox}${accommodationBox}${weatherBox}<div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
 }
 async function explorePage(query) {
   const params = new URLSearchParams(query || '');
@@ -1400,6 +1464,7 @@ async function route() {
     root.innerHTML = html;
     if (!type) { initHeroSlideshow(); renderPersonalisedRow(); }
     if (type === 'saved') { renderProfile(); initSavedMap(); wireSavedBackup(); initTripPlanner(); }
+    if (type === 'place') initPlaceEnhancements();
     if (type === 'explore') initExploreMap();
     if (type === 'area') initAreaFilter();
     if (type === 'state' || type === 'district') initCategoryFilterStrip();
@@ -1618,6 +1683,37 @@ if (spotlightInput) {
 
 function submitSearch(form) { const params = new URLSearchParams(); for (const [key, value] of new FormData(form)) if (value) params.set(key, value); location.hash = '/explore' + (params.toString() ? `?${params}` : ''); }
 document.addEventListener('submit', event => { if (event.target.id === 'filters' || event.target.id === 'home-search' || event.target.id === 'nav-search') { event.preventDefault(); submitSearch(event.target); } });
+
+document.addEventListener('submit', async event => {
+  const form = event.target;
+  if (!(form instanceof HTMLFormElement) || form.id !== 'correction-form') return;
+  event.preventDefault();
+  const status = form.querySelector('.correction-status');
+  const body = new FormData(form);
+  const payload = {
+    place_slug: form.dataset.slug,
+    field: String(body.get('field') || ''),
+    value: String(body.get('value') || '').trim(),
+    reason: String(body.get('reason') || '').trim(),
+    source_url: String(body.get('source_url') || '').trim(),
+    website: String(body.get('website') || ''),
+  };
+  if (status) status.textContent = 'Sending for review…';
+  try {
+    const response = await fetch('/api/corrections', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(result.detail || 'We could not submit that correction. Please try again.');
+    if (status) status.textContent = result.message || 'Thanks — sent for editorial review.';
+    form.reset();
+  } catch (error) {
+    if (status) status.textContent = error.message;
+  }
+});
+
 root.addEventListener('click', event => {
   const sharedSave = event.target.closest('#save-shared');
   if (sharedSave) {
@@ -1773,6 +1869,7 @@ initHeroSlideshow();
 initExploreMap();
 initAreaFilter();
 initCategoryFilterStrip();
+initPlaceEnhancements();
 function initScrollChrome() {
   const navEl = document.querySelector('.nav');
   const backToTop = document.getElementById('back-to-top');

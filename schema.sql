@@ -48,6 +48,9 @@ CREATE TABLE IF NOT EXISTS places (
     accessibility_status TEXT NOT NULL DEFAULT 'unknown'
         CHECK(accessibility_status IN ('unknown', 'accessible', 'partial', 'not_accessible')),
     accessibility_notes TEXT NOT NULL DEFAULT '',
+    accommodation_notes TEXT NOT NULL DEFAULT '',
+    accommodation_source_url TEXT NOT NULL DEFAULT '',
+    accommodation_verified_at TEXT,
     CHECK(verification_status != 'verified' OR last_verified_at IS NOT NULL)
 );
 CREATE TABLE IF NOT EXISTS place_months (
@@ -125,3 +128,20 @@ CREATE INDEX IF NOT EXISTS idx_district_region ON districts(region_id);
 CREATE INDEX IF NOT EXISTS idx_place_district ON places(district_id);
 CREATE INDEX IF NOT EXISTS idx_place_images_place ON place_images(place_id, sort_order);
 CREATE INDEX IF NOT EXISTS idx_month_places ON place_months(month);
+
+CREATE TABLE IF NOT EXISTS place_corrections (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    place_slug TEXT NOT NULL REFERENCES places(slug),
+    field TEXT NOT NULL CHECK(field IN (
+        'description', 'how_to_reach', 'practical_notes', 'entry_fee',
+        'address', 'accessibility_notes', 'accommodation_notes'
+    )),
+    suggested_value TEXT NOT NULL,
+    reason TEXT NOT NULL DEFAULT '',
+    source_url TEXT NOT NULL DEFAULT '',
+    status TEXT NOT NULL DEFAULT 'pending'
+        CHECK(status IN ('pending', 'accepted', 'rejected', 'forwarded')),
+    created_at TEXT NOT NULL,
+    reviewed_at TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_corrections_status ON place_corrections(status, created_at);

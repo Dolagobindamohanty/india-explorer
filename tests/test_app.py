@@ -1,3 +1,4 @@
+import io
 import json
 import sqlite3
 import re
@@ -7,6 +8,7 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
+import app as app_module
 from app import create_app, distance
 from data_pipeline import (
     dataset_version_bytes,
@@ -1235,3 +1237,175 @@ def test_food_and_structured_data_features(client):
     assert "api('food')" in script
     assert 'trip-day-meta' in script
     assert '📏 ~${dist} km straight-line' in script
+
+
+def test_weather_endpoint_uses_open_meteo_and_is_cached(client, monkeypatch):
+    """Live weather is source-attributed, India-only and short-lived."""
+    calls = []
+    upstream = {
+        'timezone': 'Asia/Kolkata',
+        'current': {
+            'time': '2026-11-28T20:15', 'temperature_2m': 29.4,
+            'relative_humidity_2m': 61, 'precipitation': 0.0,
+            'weather_code': 2, 'wind_speed_10m': 9.2,
+        },
+        'daily': {
+            'time': ['2026-11-28', '2026-11-29', '2026-11-30', '2026-12-01'],
+            'weather_code': [2, 61, 0, 3],
+            'temperature_2m_max': [31.0, 29.0, 30.0, 28.0],
+            'temperature_2m_min': [22.0, 21.0, 22.0, 20.0],
+            'precipitation_probability_max': [10, 70, 5, 20],
+        },
+    }
+
+    def fake_urlopen(request, timeout):
+        calls.append((request.full_url, timeout))
+        return io.BytesIO(json.dumps(upstream).encode('utf-8'))
+
+    monkeypatch.setattr(app_module.urllib.request, 'urlopen', fake_urlopen)
+    response = client.get('/api/weather', params={'lat': 20.46, 'lon': 85.88})
+    assert response.status_code == 200
+    data = response.json()
+    assert data['condition'] == 'Partly cloudy'
+    assert data['temperature_c'] == 29.4
+    assert data['is_live'] is True
+    assert data['attribution'] == 'Weather data by Open-Meteo.com'
+    assert len(data['forecast']) == 3
+    assert data['forecast'][1]['condition'] == 'Slight rain'
+    assert 'api.open-meteo.com' in calls[0][0]
+    assert 'latitude=20.46' in calls[0][0]
+
+    assert client.get('/api/weather', params={'lat': 20.46, 'lon': 85.88}).json() == data
+    assert len(calls) == 1
+    assert client.get('/api/weather', params={'lat': 0, 'lon': 85}).status_code == 422
+    detail = client.get('/place/taj-mahal').text
+    assert 'id="weather-box"' in detail
+    assert 'Live weather' in detail
+    assert 'typical best months are listed separately' in detail
+
+
+def test_source_checked_stay_notes_are_only_shown_where_confirmed(client):
+    """Stay notes come from exact official pages; unconfirmed pages stay blank."""
+    dhenkanal = client.get('/api/places/dhenkanal-palace').json()
+    assert dhenkanal['accommodation_notes'].startswith('Can Stay & Visit By Prior Booking')
+    assert dhenkanal['accommodation_source_url'] == (
+        'https://odishatourism.gov.in/en/places/dhenkanal-palace'
+    )
+    assert dhenkanal['accommodation_verified_at'] == '2026-11-01'
+
+    detail = client.get('/place/dhenkanal-palace').text
+    assert 'Stay information' in detail
+    assert 'Stay details on the official page' in detail
+    assert 'Odisha Tourism' not in detail or dhenkanal['accommodation_source_url'] in detail
+
+    unconfirmed = client.get('/api/places/taj-mahal').json()
+    assert unconfirmed['accommodation_notes'] == ''
+    assert unconfirmed['accommodation_source_url'] == ''
+    assert 'Stay information' not in client.get('/place/taj-mahal').text
+
+    script = (ASSETS / 'app.js').read_text(encoding='utf-8')
+    assert 'initPlaceEnhancements' in script
+    assert 'accommodationBox' in script
+    assert 'loadPlaceWeather' in script
+
+
+def test_accommodation_overlay_has_exact_official_provenance(client):
+    overlay_path = Path(__file__).resolve().parents[1] / 'data' / 'accommodation.json'
+    overlay = json.loads(overlay_path.read_text(encoding='utf-8'))
+    assert len(overlay) == 7
+    for slug, meta in overlay.items():
+        assert meta['notes'].strip(), slug
+        assert meta['source_url'] == f'https://odishatourism.gov.in/en/places/{slug}', slug
+        assert re.fullmatch(r'\d{4}-\d{2}-\d{2}', meta['verified_at']), slug
+        assert client.get(f'/api/places/{slug}').status_code == 200, slug
+
+
+def test_correction_intake_and_moderation_queue(client, monkeypatch):
+    """Corrections are validated, rate-limited and readable only with a token."""
+    monkeypatch.delenv('CORRECTIONS_WEBHOOK_URL', raising=False)
+    monkeypatch.setenv('CORRECTIONS_ADMIN_TOKEN', 'moderation-secret')
+    sample = client.get('/api/places?limit=1').json()[0]
+
+    response = client.post('/api/corrections', json={
+        'place_slug': sample['slug'],
+        'field': 'practical_notes',
+        'value': 'Confirm opening hours with the official tourism office.',
+        'reason': 'Older guidance was too vague.',
+        'source_url': 'https://example.com/correction',
+        'website': '',
+    })
+    assert response.status_code == 201
+    data = response.json()
+    assert data['status'] == 'pending'
+    assert data['durable'] is False
+    assert 'server instance' in data['message']
+
+    assert client.get('/api/corrections').status_code == 403
+    assert client.get('/api/corrections', headers={'X-Admin-Token': 'moderation-secret'}).status_code == 200
+    queue = client.get('/api/corrections', params={'token': 'moderation-secret'}).json()
+    assert len(queue) == 1
+    assert queue[0]['place_slug'] == sample['slug']
+    assert queue[0]['status'] == 'pending'
+    assert client.get(
+        '/api/corrections', params={'token': 'moderation-secret', 'status': 'unknown'}
+    ).status_code == 422
+
+    assert client.post('/api/corrections', json={
+        'place_slug': sample['slug'], 'field': 'practical_notes', 'value': 'x',
+    }).status_code == 422
+    assert client.post('/api/corrections', json={
+        'place_slug': sample['slug'], 'field': 'secret_notes', 'value': 'A detailed correction',
+    }).status_code == 422
+    assert client.post('/api/corrections', json={
+        'place_slug': sample['slug'], 'field': 'practical_notes',
+        'value': 'A detailed correction', 'website': 'bot',
+    }).status_code == 400
+    assert client.post('/api/corrections', json={
+        'place_slug': 'missing-place', 'field': 'practical_notes',
+        'value': 'A detailed correction',
+    }).status_code == 404
+
+    detail = client.get(f"/place/{sample['slug']}").text
+    assert 'Suggest a correction' in detail
+    assert 'id="correction-form"' in detail
+    script = (ASSETS / 'app.js').read_text(encoding='utf-8')
+    assert "'/api/corrections'" in script
+
+
+def test_correction_webhook_marks_submissions_forwarded(client, monkeypatch):
+    """A configured webhook makes the moderation queue durable."""
+    monkeypatch.setenv('CORRECTIONS_WEBHOOK_URL', 'https://example.com/review-hook')
+    monkeypatch.setenv('CORRECTIONS_ADMIN_TOKEN', 'moderation-secret')
+    received = []
+
+    class HookResponse:
+        status = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+    def fake_urlopen(request, timeout):
+        received.append(request.data)
+        return HookResponse()
+
+    monkeypatch.setattr(app_module.urllib.request, 'urlopen', fake_urlopen)
+    response = client.post('/api/corrections', json={
+        'place_slug': 'taj-mahal',
+        'field': 'practical_notes',
+        'value': 'Confirm the current entry rules before travelling.',
+    })
+    assert response.status_code == 201
+    assert response.json()['durable'] is True
+    assert response.json()['status'] == 'forwarded'
+    assert len(received) == 1
+    assert json.loads(received[0])['place_slug'] == 'taj-mahal'
+
+    queue = client.get(
+        '/api/corrections',
+        params={'token': 'moderation-secret', 'status': 'forwarded'},
+    ).json()
+    assert len(queue) == 1
+    assert queue[0]['status'] == 'forwarded'

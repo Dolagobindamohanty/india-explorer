@@ -3446,3 +3446,121 @@ body[data-theme="dark"] .trip-stop-time { color: var(--orange); }
 .trip-leg { font-size: 11px; color: var(--muted); padding: 2px 0 4px 54px; }
 .trip-day-empty { color: var(--muted); font-size: 13px; text-align: center; padding: 16px 8px; }
 @media (max-width: 640px) { .trip-planner-board { grid-template-columns: 1fr; } }
+
+/* Source-checked stays, live weather and correction intake */
+.accommodation-box {
+  border-left: 4px solid var(--orange);
+}
+
+.weather-box {
+  border-left: 4px solid var(--green);
+}
+
+.weather-current {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 4px 0 6px;
+}
+
+.weather-forecast {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.weather-forecast li {
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  line-height: 1.45;
+}
+
+.weather-unavailable {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.weather-attribution {
+  margin-top: 8px;
+}
+
+.correction-panel {
+  margin: 22px 0 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.correction-panel summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--green);
+}
+
+body[data-theme="dark"] .correction-panel summary {
+  color: var(--orange);
+}
+
+.correction-panel form {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.correction-panel label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.correction-panel select,
+.correction-panel textarea,
+.correction-panel input[type="url"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+.correction-panel textarea {
+  resize: vertical;
+}
+
+.correction-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.correction-status {
+  margin: 0;
+  font-size: 13px;
+  color: var(--green);
+}
+
+body[data-theme="dark"] .correction-status {
+  color: var(--orange);
+}
+
+@media print {
+  .correction-panel,
+  .weather-box {
+    display: none !important;
+  }
+}
