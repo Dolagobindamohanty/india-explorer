@@ -1193,3 +1193,45 @@ def test_state_photo_policies(client):
         assert 'vector' not in src['file'].lower(), f"{place['slug']} still labelled artwork"
     assert len(vector_slugs) <= 8, f"too many places still without a photo: {sorted(vector_slugs)}"
     assert len(photo_slugs) >= 170, f"expected near-complete photographic coverage, got {len(photo_slugs)}"
+
+
+def test_phase_one_place_features(client):
+    """Accessibility fields are explicit, exposed through APIs, and shown on pages."""
+    sample = client.get('/api/places?limit=1').json()[0]
+    place = client.get(f"/api/places/{sample['slug']}").json()
+    assert place['accessibility_status'] == 'unknown'
+    assert place['accessibility_notes'] == ''
+
+    unknown = client.get('/api/places?accessibility=unknown&limit=5').json()
+    assert unknown and all(p['accessibility_status'] == 'unknown' for p in unknown)
+
+    detail = client.get(f"/place/{sample['slug']}").text
+    assert 'Accessibility' in detail
+    assert 'Not yet documented' in detail
+
+    saved = client.get('/saved').text
+    assert 'straight-line distance estimates' in saved
+    assert 'calculate road distances' not in saved
+
+
+def test_food_and_structured_data_features(client):
+    """Food notes are searchable and dated festivals emit source-backed Event markup."""
+    food = client.get('/api/food').json()
+    assert food
+    assert all({'district', 'slug', 'food_notes', 'state', 'state_slug'} <= item.keys() for item in food)
+    assert all(item['food_notes'].strip() for item in food)
+
+    festivals = client.get('/festivals?month=12').text
+    assert '"@type": "Event"' in festivals
+    assert '"startDate": "2026-' in festivals
+    assert '"@type": "FAQPage"' in festivals
+
+    about = client.get('/about').text
+    assert '"@type": "FAQPage"' in about
+    assert 'straight-line distance' in about
+
+    script = (ASSETS / 'app.js').read_text(encoding='utf-8')
+    assert 'Local food' in script
+    assert "api('food')" in script
+    assert 'trip-day-meta' in script
+    assert '📏 ~${dist} km straight-line' in script

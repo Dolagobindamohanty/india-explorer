@@ -45,6 +45,9 @@ CREATE TABLE IF NOT EXISTS places (
     verification_status TEXT NOT NULL DEFAULT 'needs_review'
         CHECK(verification_status IN ('needs_review', 'verified')),
     last_verified_at TEXT,
+    accessibility_status TEXT NOT NULL DEFAULT 'unknown'
+        CHECK(accessibility_status IN ('unknown', 'accessible', 'partial', 'not_accessible')),
+    accessibility_notes TEXT NOT NULL DEFAULT '',
     CHECK(verification_status != 'verified' OR last_verified_at IS NOT NULL)
 );
 CREATE TABLE IF NOT EXISTS place_months (

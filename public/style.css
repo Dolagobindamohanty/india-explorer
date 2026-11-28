@@ -818,6 +818,19 @@ body[data-theme="dark"] .art .fee-badge {
   border-color: rgba(245, 217, 154, 0.35);
 }
 
+.art .accessibility-badge {
+  position: absolute;
+  top: 44px;
+  left: 10px;
+  right: auto;
+  bottom: auto;
+  background: rgba(18, 30, 25, 0.88);
+  color: #b9e6d0;
+  border: 1px solid rgba(185, 230, 208, 0.4);
+  font-size: 11px;
+  z-index: 3;
+}
+
 .badge {
   display: inline-block;
   padding: 4px 8px;
@@ -2407,6 +2420,8 @@ body[data-theme="dark"] .day-badge {
   flex-shrink: 0;
 }
 
+.stop-time { display: inline-block; margin-bottom: 6px; font-size: 12px; font-weight: 700; color: var(--green); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+.day-note { margin: 10px 18px 0; font-size: 13px; font-style: italic; color: var(--muted); }
 .leg-distance {
   display: inline-block;
   margin-top: 6px;
@@ -3406,6 +3421,12 @@ body[data-theme="dark"] .shared-banner {
 body[data-theme="dark"] .trip-day-head { color: #16221e; }
 .trip-day-head .trip-day-remove { background: transparent; border: 0; color: inherit; cursor: pointer; font-size: 16px; line-height: 1; padding: 0 4px; opacity: 0.85; }
 .trip-day-head .trip-day-remove:hover { opacity: 1; }
+.trip-day-meta { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.trip-day-meta label { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.trip-day-meta input { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); font: inherit; font-size: 12px; padding: 5px 7px; max-width: 100%; }
+.trip-day-meta input[type="text"] { flex: 1 1 110px; min-width: 0; }
+.trip-stop-time { align-self: flex-start; margin-left: 54px; font-size: 11px; font-weight: 700; color: var(--green); }
+body[data-theme="dark"] .trip-stop-time { color: var(--orange); }
 .trip-day-body { padding: 10px; display: flex; flex-direction: column; gap: 8px; flex: 1; min-height: 80px; }
 .trip-day-body.drag-over { background: rgba(212, 106, 59, 0.08); outline: 2px dashed var(--orange); outline-offset: -4px; border-radius: 0 0 8px 8px; }
 .trip-stop { display: flex; gap: 10px; align-items: center; padding: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: grab; user-select: none; }

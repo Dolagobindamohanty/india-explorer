@@ -80,7 +80,8 @@ def create_app(database_path=None):
     # temporary database from its seed inputs so corrected source data cannot
     # coexist with a stale database created by an older deployment.
     data_version = hashlib.sha256(
-        (ROOT / 'seed.py').read_bytes()
+        (ROOT / 'schema.sql').read_bytes()
+        + (ROOT / 'seed.py').read_bytes()
         + dataset_version_bytes()
     ).hexdigest()[:12]
     default_path = (
@@ -114,6 +115,10 @@ def create_app(database_path=None):
             db.execute("ALTER TABLE places ADD COLUMN entry_fee TEXT NOT NULL DEFAULT ''")
         if 'address' not in place_columns:
             db.execute("ALTER TABLE places ADD COLUMN address TEXT NOT NULL DEFAULT ''")
+        if 'accessibility_status' not in place_columns:
+            db.execute("ALTER TABLE places ADD COLUMN accessibility_status TEXT NOT NULL DEFAULT 'unknown'")
+        if 'accessibility_notes' not in place_columns:
+            db.execute("ALTER TABLE places ADD COLUMN accessibility_notes TEXT NOT NULL DEFAULT ''")
         db.execute('''CREATE TABLE IF NOT EXISTS place_images (
             id INTEGER PRIMARY KEY,
             place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE CASCADE,
@@ -248,6 +253,17 @@ def create_app(database_path=None):
         return rows('''SELECT d.*, r.name AS state, r.slug AS state_slug, r.kind AS region_kind
             FROM districts d JOIN regions r ON r.id=d.region_id WHERE ''' + ' AND '.join(clauses) + ' ORDER BY r.name, d.name', params)
 
+    @app.get('/api/food')
+    def food_notes():
+        """Searchable local-food notes, one compact record per district."""
+        results = rows('''SELECT d.name AS district, d.slug, d.food_notes,
+                r.name AS state, r.slug AS state_slug
+            FROM districts d JOIN regions r ON r.id=d.region_id
+            WHERE d.food_notes IS NOT NULL AND TRIM(d.food_notes) != ''
+            ORDER BY r.name, d.name''')
+        repair_display_text(results, ('district', 'food_notes', 'state'))
+        return results
+
     @app.get('/api/districts/{slug}')
     def district(slug: str):
         result = one('''SELECT d.*, r.name AS state, r.slug AS state_slug
@@ -259,7 +275,7 @@ def create_app(database_path=None):
         result['festivals'] = festivals(month=None, district=slug)
         return result
 
-    def query_places(q='', state='', district='', month=None, category='', unesco=False, limit=None, offset=0):
+    def query_places(q='', state='', district='', month=None, category='', unesco=False, limit=None, offset=0, accessibility=''):
         clauses, params = ['1=1'], []
         if q.strip():
             search = q.strip().replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_')
@@ -275,6 +291,9 @@ def create_app(database_path=None):
             params.append(month)
         if unesco:
             clauses.append('p.heritage_id IS NOT NULL')
+        if accessibility in ('unknown', 'accessible', 'partial', 'not_accessible'):
+            clauses.append('p.accessibility_status=?')
+            params.append(accessibility)
         sql = place_select + ' WHERE ' + ' AND '.join(clauses) + ' ORDER BY p.name'
         if limit is not None:
             sql += ' LIMIT ? OFFSET ?'
@@ -306,9 +325,10 @@ def create_app(database_path=None):
     @app.get('/api/places')
     def places(q: str = Query('', max_length=120), state: str = '', district: str = '',
                month: int | None = Depends(_month_param), category: str = '', unesco: bool = False,
-               limit: int | None = Query(None, ge=1, le=5000), offset: int = Query(0, ge=0)):
+               limit: int | None = Query(None, ge=1, le=5000), offset: int = Query(0, ge=0),
+               accessibility: str = ''):
         return query_places(q=q, state=state, district=district, month=month, category=category,
-                            unesco=unesco, limit=limit, offset=offset)
+                            unesco=unesco, limit=limit, offset=offset, accessibility=accessibility)
 
     @app.get('/api/places/{slug}')
     def place(slug: str):
@@ -477,7 +497,7 @@ def create_app(database_path=None):
         return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{escape(description, quote=True)}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:image" content="{escape(SITE_URL + og_image, quote=True)}"><meta property="og:url" content="{escape(canonical_url, quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{escape(canonical_url, quote=True)}">{robots_meta}{json_ld_html}
-<title>{escape(page_title)}</title><meta name="theme-color" content="#a7d3c9"><link rel="stylesheet" href="/style.css?v=20261113-day-planner"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
+<title>{escape(page_title)}</title><meta name="theme-color" content="#a7d3c9"><link rel="stylesheet" href="/style.css?v=20261128-phase-one"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body data-app="india-explorer" data-server-rendered="true"><header class="nav"><div class="nav-left"><button class="profile-toggle" id="profile-toggle" type="button" aria-label="Open traveler profile" aria-expanded="false" aria-controls="profile-drawer"><span class="profile-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span></button><a class="brand" href="/" aria-label="India Explorer home"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGrad)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGrad" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a></div><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/explore">Explore</a><a href="/area">States</a><a href="/circuits">Travel trails</a><a href="/festivals">Festival calendar</a><button type="button" class="nav-search-link" id="spotlight-btn" aria-label="Search destinations">⌕ <span>Search</span> <kbd class="kbd-hint">⌘K</kbd></button><a href="/saved">♡ Favorites <span id="saved-count">0</span></a><a href="/about">About</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀ <span>Light</span></button></nav></header>
 <div class="profile-scrim" id="profile-scrim" hidden></div>
@@ -496,7 +516,7 @@ def create_app(database_path=None):
 <div class="profile-actions"><button class="profile-action" id="profile-theme" type="button">☾ Switch to dark mode</button><button class="profile-action profile-reset" id="profile-reset" type="button">Reset local data</button></div>
 <p class="profile-footnote">No account needed. Your name, favorites and history stay in this browser only.</p>
 </aside>
-<main id="app" tabindex="-1">{content}</main><div id="spotlight-overlay" class="spotlight-overlay" aria-hidden="true" style="display:none;"><div class="spotlight-modal" role="dialog" aria-modal="true" aria-label="Spotlight search"><div class="spotlight-input-wrap"><span class="spotlight-icon">⌕</span><input type="text" id="spotlight-input" placeholder="Type a destination, district, state, festival or dish... (Esc to close)" autocomplete="off" spellcheck="false"><button type="button" id="spotlight-close" class="spotlight-close-btn" aria-label="Close search">✕</button></div><div class="spotlight-tags-strip"><span>Trending:</span><button type="button" class="spotlight-tag" data-q="Taj Mahal">Taj Mahal</button><button type="button" class="spotlight-tag" data-q="Chandigarh">Chandigarh</button><button type="button" class="spotlight-tag" data-q="Puri">Puri</button><button type="button" class="spotlight-tag" data-q="Goa">Goa</button><button type="button" class="spotlight-tag" data-q="Spiti">Spiti</button><button type="button" class="spotlight-tag" data-q="Sikkim">Sikkim</button></div><div id="spotlight-results" class="spotlight-results"><div class="spotlight-hint">Instant live search across all {counts['places']} destinations, {counts['districts']} districts, {counts['states'] + counts['union_territories']} regions, foods & trails across India...</div></div></div></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button><footer><div class="footer-inner"><div><a class="brand" href="/"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGradF)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGradF" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><p>Find a place to visit. Find a place to belong.</p></div><nav class="footer-links" aria-label="Footer"><a href="/explore">Explore</a><a href="/area">States & UTs</a><a href="/circuits">Travel trails</a><a href="/festivals">Festivals</a><a href="/saved">Favorites</a><a href="/about">About</a></nav><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js?v=20261113-day-planner"></script></body></html>'''
+<main id="app" tabindex="-1">{content}</main><div id="spotlight-overlay" class="spotlight-overlay" aria-hidden="true" style="display:none;"><div class="spotlight-modal" role="dialog" aria-modal="true" aria-label="Spotlight search"><div class="spotlight-input-wrap"><span class="spotlight-icon">⌕</span><input type="text" id="spotlight-input" placeholder="Type a destination, district, state, festival or dish... (Esc to close)" autocomplete="off" spellcheck="false"><button type="button" id="spotlight-close" class="spotlight-close-btn" aria-label="Close search">✕</button></div><div class="spotlight-tags-strip"><span>Trending:</span><button type="button" class="spotlight-tag" data-q="Taj Mahal">Taj Mahal</button><button type="button" class="spotlight-tag" data-q="Chandigarh">Chandigarh</button><button type="button" class="spotlight-tag" data-q="Puri">Puri</button><button type="button" class="spotlight-tag" data-q="Goa">Goa</button><button type="button" class="spotlight-tag" data-q="Spiti">Spiti</button><button type="button" class="spotlight-tag" data-q="Sikkim">Sikkim</button></div><div id="spotlight-results" class="spotlight-results"><div class="spotlight-hint">Instant live search across all {counts['places']} destinations, {counts['districts']} districts, {counts['states'] + counts['union_territories']} regions, foods & trails across India...</div></div></div></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button><footer><div class="footer-inner"><div><a class="brand" href="/"><svg class="brand-emblem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.06"/><path d="M16 3L18.2 12.8L28 15L18.2 17.2L16 27L13.8 17.2L4 15L13.8 12.8L16 3Z" fill="url(#brandGradF)"/><circle cx="16" cy="16" r="3" fill="var(--surface)"/><circle cx="16" cy="16" r="1.6" fill="var(--orange)"/><defs><linearGradient id="brandGradF" x1="4" y1="3" x2="28" y2="27" gradientUnits="userSpaceOnUse"><stop stop-color="#f09a73"/><stop offset="0.5" stop-color="#a84524"/><stop offset="1" stop-color="#1e4536"/></linearGradient></defs></svg><span class="brand-text">India<span class="brand-highlight">Explorer</span></span></a><p>Find a place to visit. Find a place to belong.</p></div><nav class="footer-links" aria-label="Footer"><a href="/explore">Explore</a><a href="/area">States & UTs</a><a href="/circuits">Travel trails</a><a href="/festivals">Festivals</a><a href="/saved">Favorites</a><a href="/about">About</a></nav><small>{counts['states']} states · {counts['union_territories']} union territories · {counts['districts']} district entries · {counts['places']} detailed places<br>Editorial sample: verify schedules and practical details with official sources.</small></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js?v=20261128-phase-one"></script></body></html>'''
 
     def server_place_card(item):
         image_url = escape(item.get('image_url') or fallback_image(item.get('state_slug')), quote=True)
@@ -802,6 +822,17 @@ def create_app(database_path=None):
         else:
             verification_note = 'Source-linked editorial entry'
 
+        accessibility_labels = {
+            'accessible': 'Wheelchair accessible',
+            'partial': 'Partial / assisted access',
+            'not_accessible': 'Not wheelchair accessible',
+            'unknown': 'Not yet documented',
+        }
+        accessibility_status = result.get('accessibility_status') or 'unknown'
+        accessibility_label = accessibility_labels.get(accessibility_status, 'Not yet documented')
+        accessibility_note = escape(result.get('accessibility_notes') or '')
+        accessibility_box = f'''<div class="aside-box"><h3>Accessibility</h3><p><strong>{accessibility_label}</strong></p><p>{accessibility_note or 'Confirm step-free access, ramps and facilities with the official source before travelling.'}</p></div>'''
+
         header_html = f'''<header class="place-header"><div class="place-header-top"><span class="place-badge-pill">{escape(result['category'].title())}</span><span class="place-region-text"><a href="/state/{escape(result['state_slug'])}">{escape(result['state'])}</a> · <a href="/district/{escape(result['district_slug'])}">{escape(result['district'])}</a></span></div><h1 class="place-page-title">{escape(result['name'])}</h1><div class="place-meta-bar">{addr_pill}{fee_pill}{season_pill}<button class="save" data-save="{escape(result['slug'])}">♡ Save</button></div></header>'''
 
         gallery_images = result.get('images', [])
@@ -817,7 +848,7 @@ def create_app(database_path=None):
             fallback_img = image_url
             gallery_html = f'''<section class="place-gallery place-gallery-single" aria-label="Photo of {escape(result['name'])}"><a class="place-gallery-main" href="{fallback_img}" target="_blank" rel="noopener noreferrer"><img src="{fallback_img}" alt="{escape(result['name'])} destination photo" loading="eager"></a></section>'''
 
-        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">{verification_note}. Confirm access, fees and opening hours with the official source before you travel.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
+        content = f'''{breadcrumb_html(result['name'], 'Destinations', '/explore')}{header_html}{gallery_html}<div class="detail"><div><p class="lead">{escape(result['description'])}</p>{unesco_badge}<h3>How to reach</h3><p>{escape(result['how_to_reach'])}</p><h3>Before you go & practical notes</h3><p>{escape(result['practical_notes'])}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> {escape(tip)}</div><p class="notice">{verification_note}. Confirm access, fees and opening hours with the official source before you travel.</p><a class="source" href="{escape(result['source_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>{fee_box}{addr_box}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>{escape(months_text)}</strong></p>{season_bar_html}<div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div>{accessibility_box}<div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat={result['latitude']}&mlon={result['longitude']}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p><button class="save" data-save="{escape(result['slug'])}">♡ Save to Favorites</button></div></aside></div><section class="section"><h2>A little further along</h2>{server_cards(result['nearby'])}</section>'''
         place_schema = {
             "@context": "https://schema.org",
             "@type": "TouristAttraction",
@@ -842,6 +873,8 @@ def create_app(database_path=None):
                 term in result['entry_fee'].lower()
                 for term in ('free', 'no entry fee', 'nil')
             )
+        if accessibility_status in ('accessible', 'partial', 'not_accessible'):
+            place_schema['accessibilityFeature'] = accessibility_label
         breadcrumb_schema = {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
@@ -980,6 +1013,72 @@ def create_app(database_path=None):
         }
         return page_document(c['name'], content, c['description'], canonical_path=f'/circuit/{slug}', json_ld=[trip_schema, breadcrumb_schema], og_image=c.get('cover_image_url') or '/assets/state-cover.svg')
 
+    def festival_schema(festival_items, month):
+        """Event markup only for dated, source-backed festival occurrences."""
+        repair_display_text(festival_items, ('name', 'description'))
+        graph = []
+        for festival in festival_items:
+            for occurrence in (festival.get('occurrences') or []):
+                starts_on = occurrence.get('starts_on') or ''
+                if month and starts_on[5:7] != f'{month:02d}':
+                    continue
+                if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', starts_on):
+                    continue
+                event = {
+                    '@type': 'Event',
+                    'name': festival['name'],
+                    'description': festival.get('description') or '',
+                    'startDate': starts_on,
+                    'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+                    'eventStatus': 'https://schema.org/EventScheduled',
+                }
+                ends_on = occurrence.get('ends_on') or ''
+                if re.fullmatch(r'\d{4}-\d{2}-\d{2}', ends_on) and ends_on >= starts_on:
+                    event['endDate'] = ends_on
+                if occurrence.get('source_url'):
+                    event['sameAs'] = occurrence['source_url']
+                districts = festival.get('districts') or []
+                if districts:
+                    place = districts[0]
+                    event['location'] = {
+                        '@type': 'Place',
+                        'name': place.get('name') or '',
+                        'address': {
+                            '@type': 'PostalAddress',
+                            'addressLocality': place.get('name') or '',
+                            'addressRegion': place.get('state') or '',
+                            'addressCountry': 'IN',
+                        },
+                    }
+                event['url'] = f"{SITE_URL}/festivals?month={int(starts_on[5:7])}"
+                graph.append(event)
+                if len(graph) >= 12:
+                    break
+            if len(graph) >= 12:
+                break
+        graph.append({
+            '@type': 'FAQPage',
+            'mainEntity': [
+                {
+                    '@type': 'Question',
+                    'name': 'Are festival dates exact?',
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Festival months show recurring seasonal windows. Only dated entries with an official tourism source are marked as such; confirm exact dates, venues and schedules with that source before travelling.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    'name': 'How can I plan a trip around a festival?',
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Choose a month, open a district from a festival card, then save places to build a day-by-day route. The planner shows straight-line distance estimates and editable start times; check official transport and entry rules separately.',
+                    },
+                },
+            ],
+        })
+        return {'@context': 'https://schema.org', '@graph': graph}
+
     @app.get('/festivals', response_class=HTMLResponse)
     def rendered_festivals(month: int | None = Query(None, ge=1, le=12)):
         result = festivals(month=month)
@@ -1005,7 +1104,7 @@ def create_app(database_path=None):
         notice = '<p class="notice">Festival months represent recurring seasonal windows. Always verify exact dates, venues and schedules with official state tourism authorities.</p>'
         content = f'''{breadcrumb_html('Festival calendar')}<p class="eyebrow">{eyebrow}</p><h1>{heading}</h1><p class="lead">{lead}</p>{tabs}{notice}<p><strong>{len(result)}</strong> celebrations found across India</p>{cards_html}'''
         festival_description = f'Festivals and celebrations typically observed in {month_name} across India.' if month else 'Browse Indian festivals month by month, with district context and official tourism references.'
-        return page_document(title, content, festival_description, canonical_path=f'/festivals{f"?month={month}" if month else ""}', og_image='/assets/states/odisha.jpg')
+        return page_document(title, content, festival_description, canonical_path=f'/festivals{f"?month={month}" if month else ""}', json_ld=festival_schema(result, month), og_image='/assets/states/odisha.jpg')
 
     @app.get('/month/{value}')
     def rendered_month(value: int):
@@ -1016,7 +1115,7 @@ def create_app(database_path=None):
 
     @app.get('/saved', response_class=HTMLResponse)
     def rendered_saved():
-        content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.</p><div id="saved-itinerary-builder"></div><div id="saved-cards-container"><a class="button" href="/explore">Explore destinations</a></div>'''
+        content = f'''{breadcrumb_html('Saved places')}<p class="eyebrow">Trip planning & favorites</p><h1>Your saved collection.</h1><p class="lead">Save destinations across India as you explore. Turn your collection into a day-by-day travel itinerary, see straight-line distance estimates, and share directly to WhatsApp.</p><div id="saved-itinerary-builder"></div><div id="saved-cards-container"><a class="button" href="/explore">Explore destinations</a></div>'''
         return page_document('Saved places', content, 'Save and revisit destinations while planning your trip across India.', canonical_path='/saved', noindex=True)
 
     @app.get('/area', response_class=HTMLResponse)
@@ -1040,7 +1139,29 @@ def create_app(database_path=None):
     @app.get('/about', response_class=HTMLResponse)
     def rendered_about():
         content = f'''{breadcrumb_html('About')}<p class="eyebrow">Built for curious travellers</p><h1>Travel deeper,<br>one district at a time.</h1><p class="lead">India Explorer helps you move beyond a checklist of famous landmarks. Find the local context, heritage, celebrations and practical starting points that make a destination memorable.</p><div class="about-grid"><div><h3>Explore with context</h3><p>Browse India’s states and union territories, then follow the directory into districts and detailed places.</p></div><div><h3>Save your ideas</h3><p>Favorites and recently viewed places stay on this device, so planning feels personal without an account.</p></div><div><h3>Travel responsibly</h3><p>Tourism details and festival dates can change. Use the linked official sources to confirm plans before you go.</p></div></div>'''
-        return page_document('About India Explorer', content, 'India Explorer is an editorial travel-discovery directory for India’s states, districts, festivals and landmarks.', canonical_path='/about', og_image='/assets/states/odisha.jpg')
+        about_schema = {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            'mainEntity': [
+                {
+                    '@type': 'Question',
+                    'name': 'Where does India Explorer get its information?',
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Each place links to editorial or official source pages. Verified entries are checked against an exact source page and download URL; all other entries remain source-linked editorial records and should be confirmed before travel.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    'name': 'Are route distances road distances?',
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'No. The planner reports straight-line distance estimates between saved stops. Road distance and travel time vary with routes and conditions; confirm them with a routing service or local transport authority.',
+                    },
+                },
+            ],
+        }
+        return page_document('About India Explorer', content, 'India Explorer is an editorial travel-discovery directory for India’s states, districts, festivals and landmarks.', canonical_path='/about', json_ld=about_schema, og_image='/assets/states/odisha.jpg')
 
     # Captured once per process so sitemap lastmod is stable rather than changing
     # on every request.

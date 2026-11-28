@@ -65,14 +65,16 @@ FastAPI deployment, so no CORS configuration is needed.
 - Server-rendered HTML routes for the homepage, destinations, states, districts, places, festival months and saved-place guidance; JavaScript adds navigation, theme and save interactions without replacing server-rendered route content.
 - Home with **Explore** and region directory entry points.
 - 28 state pages and 8 union-territory pages, a district directory with 792 districts, and 3,567 detailed place pages.
-- Month-based festival calendar and seasonal place recommendations.
-- Search and combinable state, month, category and UNESCO filters.
+- Month-based festival calendar and seasonal place recommendations, with source-backed `Event` markup only for dated occurrences.
+- Search and combinable state, month, category, accessibility and UNESCO filters. Spotlight search (Ctrl/⌘+K or `/`) also finds district food notes.
 - District food notes, access guidance, official reference links and map links.
-- Nearby destinations using straight-line coordinates (not road journey time).
+- Accessibility status on each place defaults to `unknown` (“Not yet documented”) and is shown as a card badge only when a status has been documented. No wheelchair claims are invented.
+- Nearby destinations and itinerary legs use straight-line coordinates (not road distance or journey time).
 - Browser-local saved places, empty states and missing-page handling.
 - A collapsible traveler profile drawer (name, avatar, interests, saved places, recent history, collections and theme) stored only in the browser.
 - A personalised home row that follows the interests on the traveler profile.
-- Shareable saved collections: `/saved?places=slug1,slug2&name=...` opens a read-only shared route that can be saved to the current device.
+- Day-by-day trip planner with editable start times and day notes, printable itinerary, WhatsApp sharing and a shareable `plan` link that preserves the chosen days and times: `/saved?places=slug1,slug2&plan=...`.
+- `FAQPage` structured data on the festival calendar and About page, explaining recurring dates and straight-line estimates.
 - FastAPI, persistent SQLite database, plain HTML/CSS/JavaScript frontend.
 
 ## Database
@@ -144,7 +146,8 @@ The website stores a destination-specific image URL for every place. All 3,567 c
 - `GET /api/states`, `/api/states/{slug}`
 - `GET /api/union-territories`
 - `GET /api/districts?region=karnataka` or `?kind=ut`, `/api/districts/{slug}`
-- `GET /api/places?q=&state=&district=&month=&category=&unesco=true`
+- `GET /api/food` — compact district food-note records for instant search
+- `GET /api/places?q=&state=&district=&month=&category=&accessibility=&unesco=true`
 - `GET /api/places/{slug}`
 - `GET /api/festivals?month=8&district=alappuzha`
 - `GET /healthz`; interactive API docs at `/docs`
@@ -170,8 +173,10 @@ python -m pytest -q
 python -m compileall -q app.py seed.py tests scripts
 ```
 
-Tests cover navigation data, composable filters, festival date honesty, invalid
-inputs, missing records, persistent seeding and foreign-key constraints.
+Tests cover navigation data, composable filters, festival date honesty, Event and
+FAQ structured data, food-note search data, accessibility defaults, straight-line
+wording, invalid inputs, missing records, persistent seeding and foreign-key
+constraints.
 
 ## Scope
 
@@ -181,6 +186,6 @@ navigation without replacing that content. The traveler profile is a
 convenience layer over `localStorage`, not an account: there is no server-side
 user record, and clearing browser data removes it. Content editing is currently through SQL
 and seed data; an authenticated editorial interface, full India coverage,
-accounts and itinerary routing are future work. SQLite is appropriate for this
+accounts, road routing and live accommodation availability are future work. SQLite is appropriate for this
 local read-heavy pilot; PostgreSQL migration can follow when deployment and
 editorial concurrency require it.

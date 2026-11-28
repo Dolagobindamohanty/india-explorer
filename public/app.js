@@ -265,6 +265,10 @@ function placeCard(p) {
   const timing = p.best_months.length ? `Best in ${p.best_months.map(shortMonth).join(' · ')}` : '';
   const feeText = p.entry_fee ? `🎟 ${esc(p.entry_fee)}` : 'Fee not available';
   const feeBadge = `<span class="badge fee-badge">${feeText}</span>`;
+  const accessibilityLabels = { accessible: '♿ Accessible', partial: '♿ Partial access', not_accessible: '♿ Not accessible' };
+  const accessibilityBadge = accessibilityLabels[p.accessibility_status]
+    ? `<span class="badge accessibility-badge">${accessibilityLabels[p.accessibility_status]}</span>`
+    : '';
   let locationDisplay = '';
   if (p.address) {
     locationDisplay = `📍 ${esc(p.address)}`;
@@ -273,7 +277,7 @@ function placeCard(p) {
   } else if (p.district && p.state) {
     locationDisplay = `📍 ${esc(p.district)} · ${esc(p.state)}`;
   }
-  return `<article class="card place-card" data-category="${esc(p.category)}"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><span class="badge">${esc(badge)}</span>${feeBadge}</a><div class="card-body"><div class="meta">${locationDisplay}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${timing}</span>${saveButton(p)}</div></div></article>`;
+  return `<article class="card place-card" data-category="${esc(p.category)}"><a href="/place/${esc(p.slug)}" class="art" aria-label="Explore ${esc(p.name)}"><img loading="lazy" src="${esc(placeArtwork)}" alt="${esc(p.name)} destination photo" onerror="this.onerror=null;this.src='/assets/places/${esc(p.slug)}.jpg'"><span class="badge">${esc(badge)}</span>${feeBadge}${accessibilityBadge}</a><div class="card-body"><div class="meta">${locationDisplay}</div><h3><a href="/place/${esc(p.slug)}">${esc(p.name)}</a></h3><p>${esc(p.description)}</p><div class="card-bottom"><span>${timing}</span>${saveButton(p)}</div></div></article>`;
 }
 function regionCard(r, kind) {
   const initials = r.name.split(/\s+/).map(word => word[0]).slice(0, 2).join('');
@@ -503,6 +507,10 @@ async function placePage(slug) {
 
   const feeBox = p.entry_fee ? `<div class="aside-box"><h3>Official Entry Fee</h3><p class="entry-fee-highlight">🎟 <strong>${esc(p.entry_fee)}</strong></p></div>` : '';
   const addrBox = p.address ? `<div class="aside-box"><h3>Location / Address</h3><p>📍 ${esc(p.address)}</p></div>` : '';
+  const accessibilityLabels = { accessible: 'Wheelchair accessible', partial: 'Partial / assisted access', not_accessible: 'Not wheelchair accessible', unknown: 'Not yet documented' };
+  const accessibilityStatus = p.accessibility_status || 'unknown';
+  const accessibilityLabel = accessibilityLabels[accessibilityStatus] || 'Not yet documented';
+  const accessibilityBox = `<div class="aside-box"><h3>Accessibility</h3><p><strong>${esc(accessibilityLabel)}</strong></p><p>${esc(p.accessibility_notes || 'Confirm step-free access, ramps and facilities with the official source before travelling.')}</p></div>`;
   const imgUrl = p.image_url || fallbackImage(p.state_slug);
   const feePill = p.entry_fee ? `<span class="place-meta-item">🎟 <strong>${esc(p.entry_fee)}</strong></span>` : '';
   const addrPill = `<span class="place-meta-item">📍 ${esc(p.address || p.district + ', ' + p.state)}</span>`;
@@ -521,7 +529,7 @@ async function placePage(slug) {
     const mainImg = galleryImages[0];
     gallery = `<section class="place-gallery place-gallery-single" aria-label="Photo of ${esc(p.name)}"><a class="place-gallery-main" href="${esc(mainImg.image_url)}" target="_blank" rel="noopener noreferrer"><img src="${esc(mainImg.image_url)}" alt="${esc(mainImg.alt_text)}" loading="eager"></a></section>`;
   }
-  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}${placeHeader}${gallery}<div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.verification_status === 'verified' && p.last_verified_at ? 'Official-source verified · Last checked: '+esc(p.last_verified_at) : 'Source-linked editorial entry'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div><div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
+  return `${breadcrumb([[p.state,'/state/'+p.state_slug],[p.district,'/district/'+p.district_slug],[p.name]])}${placeHeader}${gallery}<div class="detail"><div><p class="lead">${esc(p.description)}</p>${unescoBox}<h3>How to reach</h3><p>${esc(p.how_to_reach)}</p><h3>Before you go & practical notes</h3><p>${esc(p.practical_notes)}</p><div class="travel-tip-card"><strong>💡 Traveler’s Protocol:</strong> ${esc(tip)}</div><p class="notice">Pilot editorial entry · ${p.verification_status === 'verified' && p.last_verified_at ? 'Official-source verified · Last checked: '+esc(p.last_verified_at) : 'Source-linked editorial entry'}. Confirm access, fees and opening hours with the official source.</p><a class="source" href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Official reference ↗</a></div><aside>${feeBox}${addrBox}<div class="aside-box"><h3>Best time to visit</h3><p>Typical peak months: <strong>${p.best_months.map(n => months[n-1]).join(', ')}</strong></p><div class="season-pill-strip">${monthPills}</div><div class="season-legend"><span class="legend-dot best"></span> Peak Season <span class="legend-dot off"></span> Low/Monsoon</div></div>${accessibilityBox}<div class="aside-box"><h3>Coordinates</h3><p><a class="source" href="https://www.openstreetmap.org/?mlat=${p.latitude}&mlon=${p.longitude}#map=14/${p.latitude}/${p.longitude}" target="_blank" rel="noopener noreferrer">Open on OpenStreetMap ↗</a></p>${saveButton(p)}</div></aside></div><section class="section"><h2>A little further along</h2><p>Nearby places sorted by straight-line distance, not road travel time.</p>${cards(p.nearby)}</section>`;
 }
 async function explorePage(query) {
   const params = new URLSearchParams(query || '');
@@ -536,7 +544,7 @@ async function explorePage(query) {
     district: p.district,
     state: p.state
   })));
-  return `${breadcrumb([['Destinations']])}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p><form id="filters" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" aria-label="Search places" value="${esc(params.get('q') || '')}"></div><select name="state" aria-label="State"><option value="">All states and UTs</option>${states.map(s => `<option value="${esc(s.slug)}" ${params.get('state') === s.slug ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select><select name="month" aria-label="Best travel month"><option value="">Any month</option>${months.map((m,i) => `<option value="${i+1}" ${params.get('month') === String(i+1) ? 'selected' : ''}>${m}</option>`).join('')}</select><select name="category" aria-label="Interest"><option value="">Any interest</option>${categories.map(([value,, label]) => `<option value="${value}" ${params.get('category') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><label class="check"><input type="checkbox" name="unesco" value="true" ${params.get('unesco') === 'true' ? 'checked' : ''}> UNESCO only</label><button class="button">Find places</button></form><div class="explore-toolbar"><p><strong>${places.length}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="${esc(placesJson)}"></div></div><div id="explore-grid-container">${cards(places)}</div>`;
+  return `${breadcrumb([['Destinations']])}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p><form id="filters" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" aria-label="Search places" value="${esc(params.get('q') || '')}"></div><select name="state" aria-label="State"><option value="">All states and UTs</option>${states.map(s => `<option value="${esc(s.slug)}" ${params.get('state') === s.slug ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select><select name="month" aria-label="Best travel month"><option value="">Any month</option>${months.map((m,i) => `<option value="${i+1}" ${params.get('month') === String(i+1) ? 'selected' : ''}>${m}</option>`).join('')}</select><select name="category" aria-label="Interest"><option value="">Any interest</option>${categories.map(([value,, label]) => `<option value="${value}" ${params.get('category') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><select name="accessibility" aria-label="Accessibility"><option value="">Any accessibility</option>${[['unknown', 'Not yet documented'], ['accessible', 'Wheelchair accessible'], ['partial', 'Partial / assisted access'], ['not_accessible', 'Not wheelchair accessible']].map(([value, label]) => `<option value="${value}" ${params.get('accessibility') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><label class="check"><input type="checkbox" name="unesco" value="true" ${params.get('unesco') === 'true' ? 'checked' : ''}> UNESCO only</label><button class="button">Find places</button></form><div class="explore-toolbar"><p><strong>${places.length}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="${esc(placesJson)}"></div></div><div id="explore-grid-container">${cards(places)}</div>`;
 }
 
 async function circuitsPage() {
@@ -606,70 +614,159 @@ function haversineKm(lat1, lon1, lat2, lon2) {
   return Math.round(R * c);
 }
 
-function generateItineraryHtml(userPlaces, shareUrl = `${location.origin}/saved`) {
-  const remaining = [...userPlaces];
+function readTripPlan(savedKey) {
+  try {
+    const trip = JSON.parse(localStorage.getItem('india-locally-trip') || 'null');
+    if (!trip || trip.savedKey !== savedKey || !Array.isArray(trip.days)) {
+      return { savedKey, days: [], meta: [] };
+    }
+    return {
+      savedKey,
+      days: trip.days.filter(day => Array.isArray(day)),
+      meta: Array.isArray(trip.meta) ? trip.meta : [],
+    };
+  } catch {
+    return { savedKey, days: [], meta: [] };
+  }
+}
+
+function parseSharedPlan(query) {
+  const params = new URLSearchParams(query || '');
+  try {
+    const parsed = JSON.parse(params.get('plan') || '{}');
+    const days = Array.isArray(parsed.days) ? parsed.days : [];
+    const meta = Array.isArray(parsed.meta) ? parsed.meta : [];
+    return {
+      days: days
+        .filter(day => Array.isArray(day))
+        .map(day => day.filter(slug => typeof slug === 'string' && /^[a-z0-9-]+$/.test(slug)).slice(0, 12))
+        .filter(day => day.length)
+        .slice(0, 30),
+      meta: meta.slice(0, 30),
+    };
+  } catch {
+    return { days: [], meta: [] };
+  }
+}
+
+function serializeTripPlan(trip) {
+  const days = (trip.days || [])
+    .filter(day => Array.isArray(day) && day.length)
+    .map(day => day.slice(0, 12))
+    .slice(0, 30);
+  if (!days.length) return '';
+  return encodeURIComponent(JSON.stringify({ days, meta: (trip.meta || []).slice(0, 30) }));
+}
+
+function planSlugList(plan) {
+  return [...new Set((plan.days || []).flat())];
+}
+
+function planDays(places, plan) {
+  const bySlug = new Map(places.map(p => [p.slug, p]));
+  const days = (plan.days || [])
+    .map(day => day.map(slug => bySlug.get(slug)).filter(Boolean))
+    .filter(day => day.length);
+  const used = new Set(days.flat().map(p => p.slug));
+  const leftovers = places.filter(p => !used.has(p.slug));
+  if (days.length) {
+    if (leftovers.length) {
+      if (!days.length) days.push([]);
+      days[days.length - 1].push(...leftovers);
+    }
+    return days;
+  }
+  const remaining = [...places];
+  if (!remaining.length) return [];
   const ordered = [remaining.shift()];
-  while (remaining.length > 0) {
+  while (remaining.length) {
     const current = ordered[ordered.length - 1];
     let nearestIdx = 0;
     let nearestDist = Infinity;
     remaining.forEach((p, idx) => {
       const d = haversineKm(current.latitude, current.longitude, p.latitude, p.longitude);
-      if (d < nearestDist) {
-        nearestDist = d;
-        nearestIdx = idx;
-      }
+      if (d < nearestDist) { nearestDist = d; nearestIdx = idx; }
     });
     ordered.push(remaining.splice(nearestIdx, 1)[0]);
   }
+  const autoDays = [];
+  for (let i = 0; i < ordered.length; i += 2) autoDays.push(ordered.slice(i, i + 2));
+  return autoDays;
+}
 
-  const days = [];
-  for (let i = 0; i < ordered.length; i += 2) {
-    days.push(ordered.slice(i, i + 2));
-  }
+function dayStartValue(meta, dayIndex) {
+  const value = meta && meta[dayIndex] && meta[dayIndex].start;
+  return /^\d{2}:\d{2}$/.test(value || '') ? value : '09:00';
+}
 
-  let shareText = `*My India Travel Itinerary*\nGenerated with India Explorer (${shareUrl})\n\n`;
+function addMinutes(hhmm, minutes) {
+  const [hours, mins] = hhmm.split(':').map(Number);
+  const total = hours * 60 + mins + minutes;
+  return `${String(Math.floor(total / 60) % 24).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`;
+}
+
+function stopTime(meta, dayIndex, stopIndex) {
+  return addMinutes(dayStartValue(meta, dayIndex), stopIndex * 90);
+}
+
+function itineraryShareText(days, meta, shareUrl) {
+  let text = `*My India Travel Itinerary*\nGenerated with India Explorer (${shareUrl})\n\n`;
   days.forEach((dayPlaces, dayIdx) => {
-    shareText += `*Day ${dayIdx + 1}:*\n`;
-    dayPlaces.forEach(p => {
-      shareText += `• ${p.name} (${p.district}, ${p.state})\n`;
+    text += `*Day ${dayIdx + 1} · from ${dayStartValue(meta, dayIdx)}*\n`;
+    dayPlaces.forEach((p, idx) => {
+      text += `• ${stopTime(meta, dayIdx, idx)} ${p.name} (${p.district}, ${p.state})\n`;
     });
-    shareText += `\n`;
+    const note = meta && meta[dayIdx] && meta[dayIdx].note;
+    if (note) text += `  Note: ${note}\n`;
+    text += '\n';
   });
-  const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+  return text;
+}
+
+function whatsappHref(text) {
+  return `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+}
+
+function generateItineraryHtml(userPlaces, shareUrl = `${location.origin}/saved`, plan = { days: [], meta: [] }) {
+  const days = planDays(userPlaces, plan);
+  const shareText = itineraryShareText(days, plan.meta, shareUrl);
+  const waUrl = whatsappHref(shareText);
+  const totalStops = days.reduce((sum, day) => sum + day.length, 0);
 
   return `
     <div class="itinerary-card">
       <div class="itinerary-header">
         <div>
-          <span class="eyebrow">Smart Route Planner</span>
+          <span class="eyebrow">Route planner</span>
           <h2>Your Custom ${days.length}-Day Route</h2>
-          <p>${ordered.length} destinations sequenced by geographical proximity.</p>
+          <p>${totalStops} destinations · estimated times assume 90 minutes per stop and straight-line distances only.</p>
         </div>
         <div class="itinerary-actions">
-          <a class="button" href="${waUrl}" target="_blank" rel="noopener noreferrer">💬 Share to WhatsApp</a>
+          <a class="button" id="itinerary-wa" href="${waUrl}" target="_blank" rel="noopener noreferrer">💬 Share to WhatsApp</a>
           <button class="button secondary" type="button" onclick="window.print()">🖨 Print / PDF</button>
         </div>
       </div>
       <div class="itinerary-days">
         ${days.map((dayPlaces, dIdx) => `
           <div class="itinerary-day-block">
-            <div class="day-badge">Day ${dIdx + 1}</div>
+            <div class="day-badge">Day ${dIdx + 1} · from ${esc(dayStartValue(plan.meta, dIdx))}</div>
+            ${(plan.meta && plan.meta[dIdx] && plan.meta[dIdx].note) ? `<p class="day-note">${esc(plan.meta[dIdx].note)}</p>` : ''}
             <div class="day-places">
               ${dayPlaces.map((p, pIdx) => {
                 let distNote = '';
                 if (pIdx > 0) {
                   const prev = dayPlaces[pIdx - 1];
                   const dist = haversineKm(prev.latitude, prev.longitude, p.latitude, p.longitude);
-                  distNote = `<span class="leg-distance">🚗 ~${dist} km from previous stop</span>`;
+                  distNote = `<span class="leg-distance">📏 ~${dist} km straight-line from previous stop</span>`;
                 }
                 return `
                   <div class="itinerary-stop">
-                    <img src="${p.image_url || fallbackImage(p.state_slug)}" alt="${p.name}" class="stop-thumb">
+                    <img src="${esc(p.image_url || fallbackImage(p.state_slug))}" alt="${esc(p.name)}" class="stop-thumb">
                     <div>
-                      <strong><a href="/place/${p.slug}">${p.name} ↗</a></strong>
-                      <div class="meta">${p.district} · ${p.state} · ${p.category}</div>
-                      <p>${p.description}</p>
+                      <span class="stop-time">${esc(stopTime(plan.meta, dIdx, pIdx))}</span>
+                      <strong><a href="/place/${esc(p.slug)}">${esc(p.name)} ↗</a></strong>
+                      <div class="meta">${esc(p.district)} · ${esc(p.state)} · ${esc(p.category)}</div>
+                      <p>${esc(p.description)}</p>
                       ${distNote}
                     </div>
                   </div>
@@ -714,7 +811,10 @@ function sharedPlaceSlugs(query) {
 }
 async function savedPage(query) {
   const params = new URLSearchParams(query || '');
-  const sharedSlugs = sharedPlaceSlugs(query);
+  const savedKey = [...saved].sort().join(',');
+  const sharedPlan = parseSharedPlan(query);
+  const planSlugs = planSlugList(sharedPlan);
+  const sharedSlugs = planSlugs.length ? planSlugs : sharedPlaceSlugs(query);
   const allPlaces = await loadPlaces();
   const bySlug = new Map(allPlaces.map(place => [place.slug, place]));
   const sharedPlaces = sharedSlugs.map(slug => bySlug.get(slug)).filter(Boolean);
@@ -722,17 +822,21 @@ async function savedPage(query) {
   const sharedName = (params.get('name') || '').trim().slice(0, 40);
   const ownPlaces = allPlaces.filter(place => saved.has(place.slug));
   const userPlaces = isShared ? sharedPlaces : ownPlaces;
+  const ownPlan = readTripPlan(savedKey);
+  const activePlan = isShared ? sharedPlan : ownPlan;
+  const sharedPlanParam = serializeTripPlan(sharedPlan);
+  const ownPlanParam = serializeTripPlan(ownPlan);
   const shareUrl = isShared
-    ? `${location.origin}/saved?places=${sharedSlugs.map(encodeURIComponent).join(',')}${sharedName ? `&name=${encodeURIComponent(sharedName)}` : ''}`
-    : `${location.origin}/saved?places=${ownPlaces.map(place => encodeURIComponent(place.slug)).join(',')}`;
-  const itineraryHtml = userPlaces.length >= 2 ? generateItineraryHtml(userPlaces, shareUrl) : '';
+    ? `${location.origin}/saved?places=${sharedSlugs.map(encodeURIComponent).join(',')}${sharedName ? `&name=${encodeURIComponent(sharedName)}` : ''}${sharedPlanParam ? `&plan=${sharedPlanParam}` : ''}`
+    : `${location.origin}/saved?places=${ownPlaces.map(place => encodeURIComponent(place.slug)).join(',')}${ownPlanParam ? `&plan=${ownPlanParam}` : ''}`;
+  const itineraryHtml = userPlaces.length >= 2 ? generateItineraryHtml(userPlaces, shareUrl, activePlan) : '';
   const banner = isShared
     ? `<div class="shared-banner"><div><p class="eyebrow">Shared itinerary</p><h2>${esc(sharedName || 'A shared India route')}</h2><p>${sharedPlaces.length} destination${sharedPlaces.length === 1 ? '' : 's'} shared with you. Save a copy to keep them in your own collection on this device.</p></div><button class="button" type="button" id="save-shared" data-shared="${esc(sharedSlugs.join(','))}">Save ${sharedPlaces.length === 1 ? 'this place' : `these ${sharedPlaces.length} places`}</button></div>`
     : '';
   const heading = isShared ? `${esc(sharedName || 'A shared India route')}.` : 'Your saved collection.';
   const lead = isShared
     ? 'This route came from another traveler’s link. Save it here to keep planning, or open any stop to explore it in full.'
-    : 'Save destinations across India as you explore. Turn your collection into a day-by-day smart travel itinerary, calculate road distances, and share directly to WhatsApp.';
+    : 'Save destinations across India as you explore. Turn your collection into a day-by-day travel itinerary, see straight-line distance estimates, and share directly to WhatsApp.';
   const shareButton = (!isShared && ownPlaces.length >= 2)
     ? `<button class="button secondary" type="button" id="copy-saved-link" data-share-url="${esc(shareUrl)}">🔗 Copy shareable link</button>`
     : '';
@@ -960,12 +1064,7 @@ function initTripPlanner() {
   if (!poolBody || !board) return;
 
   const savedKey = [...saved].sort().join(',');
-  let trip = null;
-  try { trip = JSON.parse(localStorage.getItem('india-locally-trip') || 'null'); } catch { trip = null; }
-  if (!trip || trip.savedKey !== savedKey) {
-    trip = { savedKey, days: [] };
-  }
-  if (!Array.isArray(trip.days)) trip.days = [];
+  const trip = readTripPlan(savedKey);
   // ensure at least one day if there are saved places
   if (saved.size > 0 && trip.days.length === 0) trip.days.push([]);
 
@@ -996,16 +1095,49 @@ function initTripPlanner() {
     board.innerHTML = trip.days.map((day, di) => `
       <div class="trip-day" data-day="${di}">
         <div class="trip-day-head">Day ${di + 1}<button class="trip-day-remove" type="button" data-remove-day="${di}" aria-label="Remove day">×</button></div>
+        <div class="trip-day-meta">
+          <label>Start <input type="time" data-day-start="${di}" value="${esc(dayStartValue(trip.meta, di))}" aria-label="Day ${di + 1} start time"></label>
+          <label>Note <input type="text" maxlength="120" data-day-note="${di}" value="${esc((trip.meta[di] && trip.meta[di].note) || '')}" placeholder="e.g. market morning" aria-label="Day ${di + 1} note"></label>
+        </div>
         <div class="trip-day-body" data-day="${di}">
           ${day.length ? day.map((slug, si) => {
             const p = placeOf(slug);
             const prev = si > 0 ? placeOf(day[si-1]) : null;
-            const leg = (prev && p) ? `<div class="trip-leg">🚗 ~${haversineKm(prev.latitude, prev.longitude, p.latitude, p.longitude)} km from previous</div>` : '';
-            return stopHtml(slug, di) + leg;
+            const leg = (prev && p) ? `<div class="trip-leg">📏 ~${haversineKm(prev.latitude, prev.longitude, p.latitude, p.longitude)} km straight-line from previous</div>` : '';
+            return stopHtml(slug, di) + `<span class="trip-stop-time">${esc(stopTime(trip.meta, di, si))}</span>` + leg;
           }).join('') : '<div class="trip-day-empty">Drop places here</div>'}
         </div>
       </div>`).join('');
     wireDrag();
+    wireDayMeta();
+  }
+
+  function refreshItinerary() {
+    const builder = document.getElementById('saved-itinerary-builder');
+    const userPlaces = allPlaces.filter(p => saved.has(p.slug));
+    if (!builder || userPlaces.length < 2) return;
+    const planParam = serializeTripPlan(trip);
+    const shareUrl = `${location.origin}/saved?places=${userPlaces.map(p => encodeURIComponent(p.slug)).join(',')}${planParam ? `&plan=${planParam}` : ''}`;
+    builder.innerHTML = generateItineraryHtml(userPlaces, shareUrl, trip);
+    const copyLink = document.getElementById('copy-saved-link');
+    if (copyLink) copyLink.dataset.shareUrl = shareUrl;
+  }
+
+  function wireDayMeta() {
+    root.querySelectorAll('[data-day-start], [data-day-note]').forEach(input => {
+      input.onchange = () => {
+        const di = Number(input.dataset.dayStart ?? input.dataset.dayNote);
+        if (!trip.meta[di]) trip.meta[di] = {};
+        if (input.dataset.dayStart !== undefined) {
+          trip.meta[di].start = /^\d{2}:\d{2}$/.test(input.value) ? input.value : '09:00';
+        } else {
+          trip.meta[di].note = input.value.trim().slice(0, 120);
+        }
+        persist();
+        render();
+        refreshItinerary();
+      };
+    });
   }
 
   function stopHtml(slug, dayIdx) {
@@ -1040,6 +1172,7 @@ function initTripPlanner() {
         });
         persist();
         render();
+        refreshItinerary();
       };
     });
     // day remove
@@ -1051,6 +1184,7 @@ function initTripPlanner() {
         trip.days.splice(di, 1);
         persist();
         render();
+        refreshItinerary();
       };
     });
     // drop targets
@@ -1079,11 +1213,12 @@ function initTripPlanner() {
         // remove empty trailing days? keep
         persist();
         render();
+        refreshItinerary();
       });
     });
   }
 
-  if (addDayBtn) addDayBtn.onclick = () => { trip.days.push([]); persist(); render(); };
+  if (addDayBtn) addDayBtn.onclick = () => { trip.days.push([]); persist(); render(); refreshItinerary(); };
   if (autoBtn) autoBtn.onclick = () => {
     // auto-plan: nearest-neighbor across all saved, 2 per day
     const ordered = [];
@@ -1109,12 +1244,15 @@ function initTripPlanner() {
     trip.days = days.length ? days : [[]];
     persist();
     render();
+    refreshItinerary();
   };
   if (clearBtn) clearBtn.onclick = () => {
     if (!confirm('Clear the day plan? Saved places stay in your favorites.')) return;
     trip.days = [];
+    trip.meta = [];
     persist();
     render();
+    refreshItinerary();
   };
 
   render();
@@ -1276,18 +1414,21 @@ async function route() {
 let cachedPlaces = null;
 let cachedStates = null;
 let cachedFestivals = null;
+let cachedFood = null;
 
 async function loadSpotlightData() {
-  if (cachedPlaces) return;
+  if (cachedPlaces && cachedFood) return;
   try {
-    const [p, s, f] = await Promise.all([
+    const [p, s, f, food] = await Promise.all([
       api('places'),
       api('states'),
-      api('festivals')
+      api('festivals'),
+      api('food')
     ]);
     cachedPlaces = p;
     cachedStates = s;
     cachedFestivals = f;
+    cachedFood = food;
   } catch (err) {
     console.error('Failed to preload spotlight data', err);
   }
@@ -1326,7 +1467,8 @@ function renderSpotlightResults(query) {
 
   if (!q) {
     const totalPlaces = (cachedPlaces && cachedPlaces.length) ? cachedPlaces.length : 227;
-    container.innerHTML = `<div class="spotlight-hint">Type to instantly search across ${totalPlaces} destinations, 807 districts, 36 regions, and festivals...</div>`;
+    const totalFood = (cachedFood && cachedFood.length) ? cachedFood.length : '';
+    container.innerHTML = `<div class="spotlight-hint">Type to instantly search across ${totalPlaces} destinations, ${totalFood ? `${totalFood} local-food notes, ` : ''}regions, and festivals...</div>`;
     return;
   }
 
@@ -1346,6 +1488,12 @@ function renderSpotlightResults(query) {
     f.name.toLowerCase().includes(q) ||
     f.description.toLowerCase().includes(q)
   ).slice(0, 4);
+
+  const matchedFood = (cachedFood || []).filter(item =>
+    item.district.toLowerCase().includes(q) ||
+    item.state.toLowerCase().includes(q) ||
+    item.food_notes.toLowerCase().includes(q)
+  ).slice(0, 5);
 
   let html = '';
 
@@ -1391,8 +1539,29 @@ function renderSpotlightResults(query) {
     `).join('');
   }
 
+  if (matchedFood.length > 0) {
+    html += `<div class="spotlight-group-title">Local food (${matchedFood.length})</div>`;
+    html += matchedFood.map(item => {
+      const note = item.food_notes || '';
+      const idx = note.toLowerCase().indexOf(q);
+      const snippet = idx >= 0
+        ? `${idx > 24 ? '…' : ''}${note.slice(Math.max(0, idx - 24), idx + q.length + 70)}${idx + q.length + 70 < note.length ? '…' : ''}`
+        : note.slice(0, 94);
+      return `
+        <a href="/district/${esc(item.slug)}" class="spotlight-item" onclick="closeSpotlight()">
+          <div class="spotlight-avatar">🍲</div>
+          <div class="spotlight-info">
+            <div class="spotlight-name">${esc(item.district)} <span class="spotlight-cat-tag">${esc(item.state)}</span></div>
+            <div class="spotlight-sub">${esc(snippet)}</div>
+          </div>
+          <span class="spotlight-arrow">↗</span>
+        </a>
+      `;
+    }).join('');
+  }
+
   if (!html) {
-    container.innerHTML = `<div class="spotlight-no-results">No destinations, states, or festivals found matching "<strong>${esc(query)}</strong>". Try searching for "Taj Mahal", "Chandigarh", "Puri", or "Monastery".</div>`;
+    container.innerHTML = `<div class="spotlight-no-results">No destinations, states, festivals, or local-food notes found matching "<strong>${esc(query)}</strong>". Try searching for "Taj Mahal", "Chandigarh", "Puri", or "dosa".</div>`;
   } else {
     container.innerHTML = html;
   }
@@ -1461,6 +1630,16 @@ root.addEventListener('click', event => {
       });
     });
     try { localStorage.setItem('india-locally-saved', JSON.stringify([...saved])); } catch { /* optional enhancement */ }
+    const sharedPlan = parseSharedPlan(location.search.replace(/^\?/, '') || location.hash.split('?')[1] || '');
+    if (sharedPlan.days.length) {
+      try {
+        localStorage.setItem('india-locally-trip', JSON.stringify({
+          savedKey: [...saved].sort().join(','),
+          days: sharedPlan.days,
+          meta: sharedPlan.meta,
+        }));
+      } catch { /* optional enhancement */ }
+    }
     updateCount();
     renderProfile();
     sharedSave.textContent = 'Saved to your collection ✓';
