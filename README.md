@@ -123,8 +123,9 @@ Serial UNESCO properties can include multiple attractions through `heritage_site
 
 ## Data and assets
 
-This is an expanding editorial pilot, covering 3,567 destinations, 297
-traditional celebrations and festivals, and 792 district directory entries
+This is an expanding editorial pilot, covering 3,567 destinations, 295
+traditional celebrations and festivals (after removing one duplicate and one
+mis-sourced entry), and 792 district directory entries
 across all 28 states and 8 union territories. Provenance for the place images
 is recorded in `public/assets/places/sources.json`; Andaman and Nicobar Islands,
 Arunachal Pradesh, Dadra and Nagar Haveli and Daman and Diu, Delhi, Himachal

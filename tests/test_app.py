@@ -808,13 +808,18 @@ def test_nagaland_festival_calendar(client):
         if any(d['state_slug'] == 'haryana' for d in f['districts'])
     ]
     assert len(haryana_festivals) == 21
+    assert any(d['slug'] == 'yamunanagar'
+               for d in festivals['Chhath Puja (Haryana)']['districts'])
+    assert {d['slug'] for d in festivals['Siang Rush']['districts']} >= {'east-siang', 'siang'}
+    assert any(d['slug'] == 'west-garo-hills'
+               for d in festivals['Wangala']['districts'])
     assert 'Surajkund International Crafts Mela' in festivals
     assert 'Kurukshetra Mahotsav and Gita Jayanti' in festivals
     bihar_festivals = [
         f for f in festivals.values()
         if any(d['state_slug'] == 'bihar' for d in f['districts'])
     ]
-    assert len(bihar_festivals) == 11
+    assert len(bihar_festivals) == 10
     assert 'Chhath Puja (Bihar)' in festivals
     assert 'Mahabodhi Temple' not in festivals
     assam_festivals = [
@@ -1082,8 +1087,17 @@ def test_audit_fixes_and_structured_data(client):
     trails = client.get('/circuits').text
     assert 'og:image' in trails
 
-    char_dham = client.get('/circuit/sacred-char-dham-shakti-peethas').text
+    char_dham = client.get('/circuit/char-dham').text
     assert '10–12 Days · Allow a flight and recovery day between regions' in char_dham
+    assert '<h1 class="region-title">Char Dham</h1>' in char_dham
+    assert 'not the Chota Char Dham yatra in Uttarakhand' in char_dham
+    assert 'Yamunotri → Gangotri → Kedarnath → Badrinath' in char_dham
+    assert 'Sacred Char Dham & Shakti Peethas' not in char_dham
+    assert client.get('/circuit/sacred-char-dham-shakti-peethas',
+                      follow_redirects=False).status_code == 308
+    trails = client.get('/api/circuits').json()
+    assert trails[0]['slug'] == 'char-dham'
+    assert trails[0]['name'] == 'Char Dham'
 
     circuit = client.get('/circuit/golden-triangle').text
     assert 'Suggested Transport' in circuit
@@ -1104,7 +1118,12 @@ def test_audit_fixes_and_structured_data(client):
     all_festivals = client.get('/api/festivals').json()
     festival_names = [f['name'] for f in all_festivals]
     assert len(festival_names) == len(set(festival_names)), 'Duplicate festival names in API'
-    assert len(all_festivals) == 297
+    assert len(all_festivals) == 295
+    descriptions = [f['description'] for f in all_festivals]
+    assert len(descriptions) == len(set(descriptions)), 'Duplicate festival descriptions in API'
+    assert all(f['districts'] for f in all_festivals), 'Festival without a district mapping'
+    assert 'Chatth Puja (Bihar)' not in festival_names
+    assert 'Kumbh Mela' not in festival_names
     karnataka = client.get('/').text
     assert 'href="/state/karnataka"' in karnataka
 

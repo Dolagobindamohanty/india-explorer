@@ -628,7 +628,9 @@ def create_app(database_path=None):
 
     @app.get('/api/circuits')
     def api_circuits():
-        circuits_list = rows('SELECT * FROM circuits ORDER BY id')
+        circuits_list = rows(
+            "SELECT * FROM circuits ORDER BY (slug='char-dham') DESC, id"
+        )
         if not circuits_list:
             return circuits_list
         stops = circuit_stops([c['id'] for c in circuits_list])
@@ -638,6 +640,8 @@ def create_app(database_path=None):
 
     @app.get('/api/circuits/{slug}')
     def api_circuit(slug: str):
+        if slug == 'sacred-char-dham-shakti-peethas':
+            slug = 'char-dham'
         c = one('SELECT * FROM circuits WHERE slug=?', (slug,))
         c['stops'] = circuit_stops([c['id']]).get(c['id'], [])
         return c
@@ -1115,6 +1119,8 @@ def create_app(database_path=None):
 
     @app.get('/circuit/{slug}', response_class=HTMLResponse)
     def rendered_circuit(slug: str):
+        if slug == 'sacred-char-dham-shakti-peethas':
+            return RedirectResponse('/circuit/char-dham', status_code=308)
         c = api_circuit(slug)
         cover = escape(c.get('cover_image_url') or '/assets/state-cover.svg', quote=True)
         stops_html = []
@@ -1164,7 +1170,7 @@ def create_app(database_path=None):
                 'budget': '₹28,000–₹50,000 per person (homestays, oxygen canister & mountain fuel)',
                 'pace': '7–9 Days · Gradual mountain pass ascents',
             },
-            'sacred-char-dham-shakti-peethas': {
+            'char-dham': {
                 'transport': 'Domestic inter-state flights combined with local temple taxis',
                 'budget': '₹30,000–₹55,000 per person (pan-India pilgrimage flights & dharamshalas)',
                 'pace': '10–12 Days · Allow a flight and recovery day between regions',

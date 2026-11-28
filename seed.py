@@ -998,7 +998,6 @@ def seed(db):
         (57, 'Hassanamba Festival', 'An annual temple festival in Hassan, known for the limited opening of the Hassanamba shrine and major local gatherings.', 'varies_annually', 'https://karnatakatourism.org/en/', [('karnataka', 'hassan')], [10, 11]),
         (58, 'Kambala', 'A traditional coastal buffalo-race season held at venues across Dakshina Kannada and Udupi, with schedules set locally each year.', 'varies_annually', 'https://karnatakatourism.org/en/', [('karnataka', 'dakshina-kannada'), ('karnataka', 'udupi')], [11, 12, 1, 2]),
         (59, 'Karaga', 'An auspicious religious festival in Dakshina Kannada celebrating goddess Padmavati, featuring ceremonial lamp processions through villages.', 'varies_annually', 'https://karnatakatourism.org/en/', [('karnataka', 'dakshina-kannada')], [3]),
-        (60, 'Kumbh Mela', 'The great pilgrimage festival at river confluence sites, held at sacred sites near Belagavi and Mysuru, with sacred bathing and charity.', 'varies_annually', 'https://northeastvisit.com/', [('karnataka', 'belagavi'), ('karnataka', 'mysuru')], [4]),
         (61, 'Kite Festival', 'Annual sky celebrations in Mysuru with traditional kite designs including classical patterns and monsoon themes.', 'fixed', 'https://karnatakatourism.org/en/', [('karnataka', 'mysuru')], [1]),
         (62, 'Bengaluru Ganesh Chaturthi', 'The beloved festival welcoming Lord Ganesha with home shrines and ornate public pandals across Bengaluru.', 'fixed', 'https://karnatakatourism.org/en/', [('karnataka', 'bengaluru-urban')], [3, 4]),
         (63, 'Yakshaagana', 'Traditional theatre performances featuring mythological tales through vibrant costumes and dramatic storytelling, mainly in Udupi.', 'varies_annually', 'https://karnatakatourism.org/en/', [('karnataka', 'udupi')], [5, 6]),
@@ -1090,7 +1089,6 @@ def seed(db):
         (149, 'Pitru Paksha Mela', 'Ancestral offerings (pind daan) performed at Gaya during Pitru Paksha.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'gaya')], [9, 10]),
         (150, 'Bihar Diwas', 'Statehood day on 22 March, marked by cultural programmes across Bihar.', 'fixed', 'https://tourism.bihar.gov.in/', [('bihar', 'patna')], [3]),
         (151, 'Madhushravani', 'Mithila festival in the Shravan month with rituals, fasting and folk traditions.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'madhubani'), ('bihar', 'darbhanga')], [7, 8]),
-        (152, 'Chatth Puja (Bihar)', 'Major festival dedicated to the Sun God, with fasting, riverbank offerings and folk songs across Bihar.', 'varies_annually', 'https://tourism.bihar.gov.in/', [('bihar', 'patna'), ('bihar', 'gaya')], [10, 11]),
         (153, 'Diwali (National)', 'Festival of Lights celebrated across India with lamps, sweets and fireworks.', 'varies_annually', 'https://www.incredibleindia.org/', [('maharashtra', 'mumbai'), ('uttar-pradesh', 'varanasi')], [10, 11]),
         (154, 'Navratri & Garba', 'Nine nights of Goddess Durga with garba and dandiya dances, especially in Gujarat and Maharashtra.', 'varies_annually', 'https://www.gujarattourism.com/', [('gujarat', 'ahmedabad'), ('maharashtra', 'mumbai')], [9, 10]),
         (155, 'Hampi Utsav', 'Cultural festival at the UNESCO World Heritage Site of Hampi, with music, dance and heritage events.', 'varies_annually', 'https://karnatakatourism.org/', [('karnataka', 'vijayanagara')], [11]),
@@ -1229,10 +1227,27 @@ def seed(db):
     ]
 
     def resolve_district_id(region_slug, district_slug):
-        row = db.execute('''SELECT d.id FROM districts d
+        # Prefer exact matches so a generic district such as "Siang" is not
+        # swallowed by "East Siang", and "West Garo Hills" does not resolve to
+        # "South West Garo Hills". Underscore aliases come from older imports.
+        aliases = {
+            ('haryana', 'yamuna_nagar'): 'yamunanagar',
+        }
+        target = aliases.get((region_slug, district_slug), district_slug)
+        base = '''SELECT d.id FROM districts d
             JOIN regions r ON r.id=d.region_id
-            WHERE r.slug=? AND (d.slug=? OR d.slug LIKE ? OR d.name LIKE ?)''',
-            (region_slug, district_slug, f'%{district_slug}%', f'%{district_slug}%')).fetchone()
+            WHERE r.slug=?'''
+        for candidate in (target, target.replace('_', '-')):
+            row = db.execute(base + ' AND d.slug=?', (region_slug, candidate)).fetchone()
+            if row:
+                return row[0]
+        row = db.execute(base + ' AND lower(d.name)=lower(?)',
+                         (region_slug, target.replace('-', ' '))).fetchone()
+        if row:
+            return row[0]
+        row = db.execute(base + ''' AND (d.slug LIKE ? OR d.name LIKE ?)
+            ORDER BY length(d.slug), d.slug''',
+            (region_slug, f'%{target}%', f'%{target}%')).fetchone()
         return row[0] if row else None
 
     db.executemany('INSERT OR IGNORE INTO festivals (id,name,description,date_type,source_url) VALUES (?,?,?,?,?)',
@@ -1240,11 +1255,13 @@ def seed(db):
     db.executemany('''UPDATE festivals SET name=?, description=?, date_type=?, source_url=?
                       WHERE id=?''',
                    [(f[1], f[2], f[3], f[4], f[0]) for f in festivals_data])
-    # Consolidate the superseded duplicate Mysuru Dasara record from an earlier Karnataka import.
-    db.execute("DELETE FROM festival_districts WHERE festival_id=56")
-    db.execute("DELETE FROM festival_months WHERE festival_id=56")
-    db.execute("DELETE FROM festival_occurrences WHERE festival_id=56")
-    db.execute("DELETE FROM festivals WHERE id=56")
+    # Remove superseded records from earlier imports: a duplicate Mysuru Dasara,
+    # a mis-sourced Karnataka "Kumbh Mela" entry, and a misspelled Chhath Puja.
+    for retired_id in (56, 60, 152):
+        db.execute("DELETE FROM festival_districts WHERE festival_id=?", (retired_id,))
+        db.execute("DELETE FROM festival_months WHERE festival_id=?", (retired_id,))
+        db.execute("DELETE FROM festival_occurrences WHERE festival_id=?", (retired_id,))
+        db.execute("DELETE FROM festivals WHERE id=?", (retired_id,))
 
     # Month and district tables are rebuilt from the authoritative tuples so
     # revised festival windows and locations also apply to existing databases.
@@ -1376,13 +1393,13 @@ def seed(db):
           ('chandratal-lake', 4, 'Spiti: High-altitude crescent glacial lake at 4,250 m; strictly summer 4x4 access only'),
           ('rohtang-pass', 5, 'Pir Panjal: Cross the 3,978 m pass into Solang Valley (NGT vehicle permit required)'),
           ('hidimba-devi-temple', 6, 'Manali: 1553 AD pagoda-style wooden temple inside deodar cedar forests')]),
-        (9, 'sacred-char-dham-shakti-peethas', 'Sacred Char Dham & Shakti Peethas', 'Puri, Matabari, Namchi & Madurai: Pan-India Pilgrimage',
-         'A monumental cross-country pilgrimage uniting sacred quarters of India: the oceanfront Char Dham sanctum of Lord Jagannath at Puri, the 500-year-old Matabari Shakti Peetha in Tripura, the colossal Shiva of Siddhesvara Dhaam in Sikkim, and the towering sculpted gopurams of Meenakshi Temple in Tamil Nadu.',
+        (9, 'char-dham', 'Char Dham', 'Puri, Matabari, Namchi & Madurai: A Curated Comparison',
+         'This curated route compares one of the four pan-Indian Char Dham shrines — Lord Jagannath at Puri — with major Shakti temples at Matabari and Madurai and the modern Char Dham replica complex at Solophok. It is not the Chota Char Dham yatra in Uttarakhand; that separate Himalayan circuit follows Yamunotri → Gangotri → Kedarnath → Badrinath and is not included here.',
          '10–12 Days', 'October to March', '/assets/places/puri-jagannath-temple.jpg',
-         [('puri-jagannath-temple', 1, 'Ancient Char Dham pilgrimage temple on the Bay of Bengal in Odisha'),
-          ('tripura-sundari-temple', 2, 'Holy 1501 AD Shakti Peetha beside sacred Kalyan Sagar lake in Tripura'),
-          ('solophok-char-dham', 3, '108-foot Lord Shiva statue and Char Dham shrines in Namchi, Sikkim'),
-          ('meenakshi-temple', 4, 'Monumental Dravidian gopuram complex and hall of thousand pillars in Madurai, Tamil Nadu')]),
+         [('puri-jagannath-temple', 1, 'Pan-Indian Char Dham shrine of Lord Jagannath on the Bay of Bengal in Odisha'),
+          ('tripura-sundari-temple', 2, 'Shakti Peetha tradition at Matabari beside sacred Kalyan Sagar lake in Tripura'),
+          ('solophok-char-dham', 3, 'Modern replica complex with a 108-foot Shiva statue and four Char Dham replicas in Namchi, Sikkim'),
+          ('meenakshi-temple', 4, 'Major Shakti temple with Dravidian gopurams and a thousand-pillar hall in Madurai, Tamil Nadu')]),
         (10, 'paradise-kashmir-trail', 'Paradise Valley & Mountain Peaks of Kashmir', 'Srinagar to Gulmarg, Pahalgam & Katra',
          'Experience the eternal beauty of Jammu and Kashmir: houseboats and Mughal gardens on Dal Lake, alpine meadows and gondola ascents at Gulmarg, ancient Sun Temple ruins at Martand, and the sacred mountain shrine of Mata Vaishno Devi.',
          '6–7 Days', 'April to October & December to February for skiing', '/assets/places/dal-lake.jpg',
@@ -1487,8 +1504,13 @@ def seed(db):
           ('chitrakote-waterfall', 6, 'Bastar: Wide horseshoe falls on the Indravati, most voluminous after the monsoon; road access from Jagdalpur')]),
     ]
 
+    # Rename the older long trail slug in place so existing links keep working.
+    db.execute("UPDATE circuits SET slug='char-dham' WHERE slug='sacred-char-dham-shakti-peethas'")
     db.executemany('INSERT OR IGNORE INTO circuits (id,slug,name,tagline,description,duration,best_season,cover_image_url) VALUES (?,?,?,?,?,?,?,?)',
                    [(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7]) for c in circuits_data])
+    db.executemany('''UPDATE circuits SET slug=?, name=?, tagline=?, description=?,
+                       duration=?, best_season=?, cover_image_url=? WHERE id=?''',
+                   [(c[1], c[2], c[3], c[4], c[5], c[6], c[7], c[0]) for c in circuits_data])
 
     place_ids = {row[0]: row[1] for row in db.execute('SELECT slug, id FROM places')}
     circuit_place_rows = []
