@@ -709,11 +709,19 @@ def test_server_rendered_routes_are_crawlable(client):
     circuits_page = client.get('/circuits').text
     assert 'Curated travel trails' in circuits_page
     assert 'The Golden Triangle' in circuits_page
+    assert 'data-picture-slideshow="true"' in circuits_page
+    assert 'data-href="/place/qutub-minar"' in circuits_page
+    assert 'data-href="/place/taj-mahal"' in circuits_page
     gt_page = client.get('/circuit/golden-triangle').text
     assert 'Stop 1' in gt_page
     assert 'Qutb Minar' in gt_page
     assert 'Taj Mahal' in gt_page
     assert 'Amber Fort' in gt_page
+    assert gt_page.count('data-picture-slide="true"') == 6
+    assert gt_page.count('data-picture-slide-dot="true"') == 36
+    for stop_slug in ('qutub-minar', 'humayuns-tomb', 'red-fort-delhi',
+                      'taj-mahal', 'amber-fort', 'jantar-mantar'):
+        assert f'data-href="/place/{stop_slug}"' in gt_page
     kashmir_page = client.get('/circuit/paradise-kashmir-trail').text
     assert 'Dal Lake' in kashmir_page
     assert 'Gulmarg' in kashmir_page
@@ -729,6 +737,17 @@ def test_server_rendered_routes_are_crawlable(client):
     odisha_trail = client.get('/circuit/tribal-odisha-waterfalls').text
     assert 'Deomali' in odisha_trail
     assert 'Duduma' in odisha_trail
+
+
+def test_trail_slideshows_are_wired_for_client_routes():
+    app_js = (ASSETS / 'app.js').read_text(encoding='utf-8')
+    assert 'function circuitSlides(c)' in app_js
+    assert 'function initPictureSlideshows' in app_js
+    assert 'stopPictureSlideshows(root)' in app_js
+    assert 'initPictureSlideshows(root)' in app_js
+    css = (ASSETS / 'style.css').read_text(encoding='utf-8')
+    assert '.circuit-art .hero-art-place-link' in css
+    assert '.circuit-visual .hero-art-place-link' in css
 
 
 def test_traveler_profile_shell_is_present_on_every_page(client):

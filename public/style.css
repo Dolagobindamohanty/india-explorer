@@ -543,6 +543,11 @@ body[data-theme="dark"] .hero-art {
   background: rgba(255, 255, 255, 0.85);
 }
 
+.hero-dot:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
 .hero-search {
   display: flex;
   align-items: center;
@@ -2082,6 +2087,20 @@ body[data-theme="dark"] .prerender-links a {
     height: 155px;
   }
 
+  .circuit-art .hero-art-place-link {
+    font-size: 14px;
+  }
+
+  .circuit-visual .hero-art-caption {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .circuit-visual .hero-art-place-link {
+    font-size: 26px;
+  }
+
   h2 {
     font-size: 29px;
   }
@@ -2090,6 +2109,74 @@ body[data-theme="dark"] .prerender-links a {
 /* Travel Circuits & Trails */
 .circuit-card .art {
   height: 170px;
+}
+
+.circuit-art {
+  background: #193328;
+}
+
+.circuit-art .hero-slide {
+  background-position: center;
+}
+
+.circuit-art .hero-art-caption {
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  gap: 1px;
+}
+
+.circuit-art .hero-art-state-link {
+  font-size: 9px;
+  letter-spacing: 1.3px;
+}
+
+.circuit-art .hero-art-place-link {
+  font-size: 16px;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+
+.circuit-art .hero-dots {
+  margin-top: 6px;
+  gap: 5px;
+}
+
+.circuit-art .hero-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.circuit-art .hero-dot.active {
+  width: 16px;
+}
+
+.circuit-visual .hero-art-caption {
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+}
+
+.circuit-visual .hero-art-state-link {
+  font-size: 12px;
+}
+
+.circuit-visual .hero-art-place-link {
+  font-size: 34px;
+}
+
+.circuit-visual .region-visual-caption {
+  top: 16px;
+  bottom: auto;
+  z-index: 4;
+}
+
+.circuit-visual a.hero-art-state-link,
+.circuit-visual a.hero-art-place-link {
+  position: static;
+  width: fit-content;
+  height: auto;
+  overflow: visible;
 }
 
 .circuit-route-preview {

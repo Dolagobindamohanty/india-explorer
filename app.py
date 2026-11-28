@@ -773,6 +773,52 @@ def create_app(database_path=None):
     def fallback_image(state):
         return STATE_COVER_IMAGES.get(state) or (f'/assets/states/{state}.jpg' if state else '/assets/state-cover.svg')
 
+    def picture_slideshow_html(slides, class_name, label, badge='', element_id=''):
+        """Server-rendered twin of public/app.js pictureSlideshowHtml()."""
+        def dots_html(active_index):
+            return ''.join(
+                f'<button type="button" class="hero-dot {"active" if j == active_index else ""}" data-slide-index="{j}" data-picture-slide-dot="true" aria-label="Show slide {j + 1}: {escape(slide[2], quote=True)}"></button>'
+                for j, slide in enumerate(slides)
+            )
+        slides_html = ''.join(
+            f'''<div class="hero-slide {'active' if i == 0 else ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('{escape(img, quote=True)}')" data-href="{escape(href, quote=True)}" data-picture-slide="true" aria-hidden="{'false' if i == 0 else 'true'}"><div class="hero-art-caption"><a class="hero-art-state-link" href="{escape(state_href, quote=True)}">{escape(sub)}</a><a class="hero-art-place-link" href="{escape(href, quote=True)}">{escape(title)}</a><div class="hero-dots" aria-label="Slideshow navigation">{dots_html(i)}</div></div></div>'''
+            for i, (img, sub, title, href, state_href) in enumerate(slides)
+        )
+        id_attr = f' id="{escape(element_id, quote=True)}"' if element_id else ''
+        return f'''<div{id_attr} class="{escape(class_name, quote=True)}" data-picture-slideshow="true" role="region" aria-label="{escape(label, quote=True)}"><div class="hero-slides">{slides_html}</div>{badge}</div>'''
+
+    def server_circuit_slides(c):
+        stops = c.get('stops') or []
+        if not stops:
+            return [(c.get('cover_image_url') or '/assets/state-cover.svg', 'India', c['name'], f"/circuit/{c['slug']}", '/circuits')]
+        return [
+            (
+                s.get('image_url') or fallback_image(s.get('state_slug')),
+                f"{s['district']}, {s['state']}",
+                s['name'],
+                f"/place/{s['slug']}",
+                f"/state/{s['state_slug']}" if s.get('state_slug') else '/area',
+            )
+            for s in stops
+        ]
+
+    def server_hero_slideshow():
+        slides = [
+            ('/assets/places/puri-jagannath-temple.jpg', 'Puri, Odisha', 'Shree Jagannath Temple', '/place/puri-jagannath-temple', '/state/odisha'),
+            ('/assets/places/mysuru-palace.jpg', 'Mysuru, Karnataka', 'Mysuru Palace', '/place/mysuru-palace', '/state/karnataka'),
+            ('/assets/places/hampi-group-of-monuments.jpg', 'Vijayanagara, Karnataka', 'Hampi Group of Monuments', '/place/hampi-group-of-monuments', '/state/karnataka'),
+            ('/assets/places/badami-cave-temples.jpg', 'Bagalkote, Karnataka', 'Badami Cave Temples', '/place/badami-cave-temples', '/state/karnataka'),
+            ('/assets/places/gokarna-and-om-beach.jpg', 'Uttara Kannada, Karnataka', 'Gokarna & Om Beach', '/place/gokarna-and-om-beach', '/state/karnataka'),
+            ('/assets/places/bandipur-tiger-reserve.jpg', 'Chamarajanagar, Karnataka', 'Bandipur Tiger Reserve', '/place/bandipur-tiger-reserve', '/state/karnataka'),
+            ('/assets/places/ananta-basudeva-temple.jpg', 'Bhubaneswar, Odisha', 'Ananta Basudeva Temple', '/place/ananta-basudeva-temple', '/state/odisha'),
+            ('/assets/places/barehipani-waterfall.jpg', 'Mayurbhanj, Odisha', 'Barehipani Waterfall', '/place/barehipani-waterfall', '/state/odisha'),
+            ('/assets/places/mangalajodi.jpg', 'Khordha, Odisha', 'Mangalajodi', '/place/mangalajodi', '/state/odisha'),
+            ('/assets/places/maa-kalijai-temple.jpg', 'Khordha, Odisha', 'Maa Kalijai Temple', '/place/maa-kalijai-temple', '/state/odisha'),
+            ('/assets/places/satapada-chilika.jpg', 'Puri, Odisha', 'Satapada (Chilika)', '/place/satapada-chilika', '/state/odisha'),
+            ('/assets/places/udayagiri-monastery.jpg', 'Jajpur, Odisha', 'Udayagiri Monastery', '/place/udayagiri-monastery', '/state/odisha'),
+        ]
+        return picture_slideshow_html(slides, 'hero-art', 'Featured destinations slideshow', element_id='hero-slideshow')
+
     def server_region_link(region):
         cover = escape(region.get('cover_image_url') or fallback_image(region.get('slug')), quote=True)
         kind = escape(region['kind'].replace('_', ' ').title())
@@ -818,12 +864,13 @@ def create_app(database_path=None):
         return f'''<article class="card festival-card"><div class="card-body"><div class="meta" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">{locations_html}{kind_badge}</div><h3>{escape(item['name'])}</h3><p>{escape(item['description'])}</p><div class="card-bottom"><span>{date_info}</span>{source_link}</div></div></article>'''
 
     def server_circuit_card(c):
-        cover = escape(c.get('cover_image_url') or '/assets/state-cover.svg', quote=True)
         stops_count = len(c.get('stops', []))
         stops_preview = ' → '.join(escape(s['name']) for s in c.get('stops', [])[:3])
         if stops_count > 3:
             stops_preview += f' and {stops_count - 3} more'
-        return f'''<article class="card circuit-card"><a href="/circuit/{escape(c['slug'])}" class="art"><img src="{cover}" alt="{escape(c['name'])} trail photo" loading="lazy"><span class="badge">🧭 {escape(c['duration'])}</span></a><div class="card-body"><div class="meta">Trail · {stops_count} curated stops · {escape(c['best_season'])}</div><h3><a href="/circuit/{escape(c['slug'])}">{escape(c['name'])} <span class="arrow">↗</span></a></h3><p>{escape(c['description'])}</p><div class="circuit-route-preview"><strong>Stops:</strong> {stops_preview}</div><div class="card-bottom"><span>🗓 Best: {escape(c['best_season'])}</span><a class="button secondary compact" href="/circuit/{escape(c['slug'])}">Explore trail ↗</a></div></div></article>'''
+        badge = f'<a class="badge" href="/circuit/{escape(c["slug"], quote=True)}">🧭 {escape(c["duration"])}</a>'
+        art = picture_slideshow_html(server_circuit_slides(c), 'art circuit-art', f'{c["name"]} trail photo slideshow', badge=badge)
+        return f'''<article class="card circuit-card">{art}<div class="card-body"><div class="meta">Trail · {stops_count} curated stops · {escape(c['best_season'])}</div><h3><a href="/circuit/{escape(c['slug'])}">{escape(c['name'])} <span class="arrow">↗</span></a></h3><p>{escape(c['description'])}</p><div class="circuit-route-preview"><strong>Stops:</strong> {stops_preview}</div><div class="card-bottom"><span>🗓 Best: {escape(c['best_season'])}</span><a class="button secondary compact" href="/circuit/{escape(c['slug'])}">Explore trail ↗</a></div></div></article>'''
 
     def month_tabs_html(active_month=None):
         tabs = [f'<a href="/festivals" class="month-tab {"active" if active_month is None else ""}">All Months</a>']
@@ -846,31 +893,9 @@ def create_app(database_path=None):
         featured = enrich_places(rows(place_select + ' ORDER BY (p.heritage_id IS NOT NULL) DESC, p.id LIMIT 6'))
         featured_states = [r for r in regions if r['slug'] in ('odisha', 'goa', 'himachal-pradesh', 'arunachal-pradesh', 'karnataka', 'rajasthan')][:6]
         state_cards = ''.join(server_region_link(r) for r in featured_states)
-        hero_slides_data = [
-            ('/assets/places/puri-jagannath-temple.jpg', 'Puri, Odisha', 'Shree Jagannath Temple', '/place/puri-jagannath-temple', '/state/odisha'),
-            ('/assets/places/mysuru-palace.jpg', 'Mysuru, Karnataka', 'Mysuru Palace', '/place/mysuru-palace', '/state/karnataka'),
-            ('/assets/places/hampi-group-of-monuments.jpg', 'Vijayanagara, Karnataka', 'Hampi Group of Monuments', '/place/hampi-group-of-monuments', '/state/karnataka'),
-            ('/assets/places/badami-cave-temples.jpg', 'Bagalkote, Karnataka', 'Badami Cave Temples', '/place/badami-cave-temples', '/state/karnataka'),
-            ('/assets/places/gokarna-and-om-beach.jpg', 'Uttara Kannada, Karnataka', 'Gokarna & Om Beach', '/place/gokarna-and-om-beach', '/state/karnataka'),
-            ('/assets/places/bandipur-tiger-reserve.jpg', 'Chamarajanagar, Karnataka', 'Bandipur Tiger Reserve', '/place/bandipur-tiger-reserve', '/state/karnataka'),
-            ('/assets/places/ananta-basudeva-temple.jpg', 'Bhubaneswar, Odisha', 'Ananta Basudeva Temple', '/place/ananta-basudeva-temple', '/state/odisha'),
-            ('/assets/places/barehipani-waterfall.jpg', 'Mayurbhanj, Odisha', 'Barehipani Waterfall', '/place/barehipani-waterfall', '/state/odisha'),
-            ('/assets/places/mangalajodi.jpg', 'Khordha, Odisha', 'Mangalajodi', '/place/mangalajodi', '/state/odisha'),
-            ('/assets/places/maa-kalijai-temple.jpg', 'Khordha, Odisha', 'Maa Kalijai Temple', '/place/maa-kalijai-temple', '/state/odisha'),
-            ('/assets/places/satapada-chilika.jpg', 'Puri, Odisha', 'Satapada (Chilika)', '/place/satapada-chilika', '/state/odisha'),
-            ('/assets/places/udayagiri-monastery.jpg', 'Jajpur, Odisha', 'Udayagiri Monastery', '/place/udayagiri-monastery', '/state/odisha'),
-        ]
-        # Mirror static/app.js heroSlidesHtml(): every slide carries its own
-        # caption links and dot strip, so a photo and its labels always
-        # transition together — both before and after client hydration.
-        def slide_dots_html(active_index):
-            return ''.join(f'<button type="button" class="hero-dot {"active" if j == active_index else ""}" data-slide-index="{j}" aria-label="Show slide {j + 1}: {escape(slide[2])}"></button>' for j, slide in enumerate(hero_slides_data))
-        slides_html = ''.join(
-            f'''<div class="hero-slide {'active' if i == 0 else ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('{img}')" data-href="{escape(href, quote=True)}" aria-hidden="{'false' if i == 0 else 'true'}"><div class="hero-art-caption"><a class="hero-art-state-link" href="{escape(state_href, quote=True)}">{escape(sub)}</a><a class="hero-art-place-link" href="{escape(href, quote=True)}">{escape(title)}</a><div class="hero-dots" aria-label="Slideshow navigation">{slide_dots_html(i)}</div></div></div>'''
-            for i, (img, sub, title, href, state_href) in enumerate(hero_slides_data)
-        )
+        hero_slideshow = server_hero_slideshow()
 
-        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div><div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">{slides_html}</div></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section personalised-section" id="personalised-section" hidden><div class="section-head"><div><p class="eyebrow">Based on your traveler profile</p><h2 id="personalised-heading">Picked for your interests</h2></div><a href="/explore">View all ↗</a></div><div class="cards" id="personalised-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section recent-section" id="recent-places-section" hidden><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Recently viewed destinations</h2></div></div><div class="cards" id="recent-places-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
+        content = f'''<section class="hero hero-search-first"><div class="hero-copy"><p class="eyebrow">Your next Indian story starts here</p><h1>Explore <span>India.</span></h1><p class="hero-lead">Discover states, cities, monuments and culture—one curious search at a time.</p><form method="get" action="/explore" class="hero-search"><span>⌕</span><input name="q" placeholder="Search destinations, states or districts…"><button>Search</button></form></div>{hero_slideshow}</section><section class="section"><div class="section-head"><div><p class="eyebrow">Start with a feeling</p><h2>What are you looking for?</h2></div></div><div class="category-chips"><a class="category-chip" href="/explore?category=heritage">🏛 Heritage</a><a class="category-chip" href="/explore?category=beach">🏖 Beaches</a><a class="category-chip" href="/explore?category=nature">🌿 Nature</a><a class="category-chip" href="/explore?category=spiritual">🙏 Spiritual</a><a class="category-chip" href="/explore?category=culture">🎨 Culture</a></div></section><section class="section personalised-section" id="personalised-section" hidden><div class="section-head"><div><p class="eyebrow">Based on your traveler profile</p><h2 id="personalised-heading">Picked for your interests</h2></div><a href="/explore">View all ↗</a></div><div class="cards" id="personalised-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">A curated starting point</p><h2>Featured destinations</h2></div><a href="/explore">View all ↗</a></div>{server_cards(featured)}</section><section class="section recent-section" id="recent-places-section" hidden><div class="section-head"><div><p class="eyebrow">Pick up where you left off</p><h2>Recently viewed destinations</h2></div></div><div class="cards" id="recent-places-cards"></div></section><section class="section"><div class="section-head"><div><p class="eyebrow">Explore by region</p><h2>Featured States</h2><p>A glimpse into India’s diverse states. Explore them district by district.</p></div><a class="button secondary" href="/area">View all 28 States & 8 UTs ↗</a></div><div class="cards">{state_cards}</div><div style="margin-top:28px;text-align:center;"><a class="button" href="/area">Explore All 28 States & 8 Union Territories ↗</a></div></section>'''
         website_schema = {
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -1122,12 +1147,12 @@ def create_app(database_path=None):
         if slug == 'sacred-char-dham-shakti-peethas':
             return RedirectResponse('/circuit/char-dham', status_code=308)
         c = api_circuit(slug)
-        cover = escape(c.get('cover_image_url') or '/assets/state-cover.svg', quote=True)
         stops_html = []
         for s in c['stops']:
             stops_html.append(f'''<div class="timeline-stop"><div class="stop-badge">Stop {s['stop_order']}</div><div class="stop-content"><h3><a href="/place/{escape(s['slug'])}">{escape(s['name'])} ↗</a></h3><div class="meta">{escape(s['district'])} · {escape(s['state'])} · {escape(s['category'].title())}</div><p>{escape(s['description'])}</p><div class="stop-note">💡 <strong>Trail note:</strong> {escape(s['notes'])}</div></div></div>''')
         header_html = f'''<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">Curated Trail · {escape(c['duration'])}</span></div><h1 class="region-title">{escape(c['name'])}</h1><p class="region-lead">{escape(c['tagline'])}</p><div class="region-meta-bar"><span class="region-meta-item">🗓 Best season: <strong>{escape(c['best_season'])}</strong></span><span class="region-meta-item">🧭 <strong>{len(c['stops'])}</strong> curated stops</span><span class="region-meta-item">⏱ <strong>{escape(c['duration'])}</strong></span></div></header>'''
-        visual_html = f'''<div class="region-visual"><img src="{cover}" alt="{escape(c['name'])} trail cover" loading="eager"><span class="region-visual-caption">📍 {escape(c['name'])}</span></div>'''
+        visual_badge = f'<span class="region-visual-caption">📍 {escape(c["name"])} · {len(c["stops"])} stops</span>'
+        visual_html = picture_slideshow_html(server_circuit_slides(c), 'region-visual circuit-visual', f'{c["name"]} trail photo slideshow', badge=visual_badge)
 
         trail_logistics = {
             'golden-triangle': {

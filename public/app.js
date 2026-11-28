@@ -388,56 +388,85 @@ const HERO_SLIDES = [
   { img: '/assets/places/udayagiri-monastery.jpg', sub: 'Jajpur, Odisha', title: 'Udayagiri Monastery', href: '/place/udayagiri-monastery', stateHref: '/state/odisha' },
 ];
 
-function heroSlidesHtml() {
-  const slidesHtml = HERO_SLIDES.map((s, i) => `<div class="hero-slide ${i === 0 ? 'active' : ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('${s.img}')" data-href="${esc(s.href)}" aria-hidden="${i === 0 ? 'false' : 'true'}"><div class="hero-art-caption"><a class="hero-art-state-link" href="${esc(s.stateHref)}">${esc(s.sub)}</a><a class="hero-art-place-link" href="${esc(s.href)}">${esc(s.title)}</a><div class="hero-dots" aria-label="Slideshow navigation">${HERO_SLIDES.map((slide, index) => `<button type="button" class="hero-dot ${i === index ? 'active' : ''}" data-slide-index="${index}" aria-label="Show slide ${index + 1}: ${esc(slide.title)}"></button>`).join('')}</div></div></div>`).join('');
-  return `<div class="hero-art" id="hero-slideshow" role="region" aria-label="Featured destinations slideshow"><div class="hero-slides">${slidesHtml}</div></div>`;
+function pictureSlideshowHtml(slides, options = {}) {
+  const { id = '', className = 'hero-art', label = 'Picture slideshow', badge = '' } = options;
+  const safeSlides = slides.length ? slides : [{ img: '/assets/state-cover.svg', sub: 'India', title: 'India', href: '/explore', stateHref: '/area' }];
+  const idAttr = id ? ` id="${esc(id)}"` : '';
+  const slidesHtml = safeSlides.map((s, i) => `<div class="hero-slide ${i === 0 ? 'active' : ''}" style="background-image:linear-gradient(180deg,rgba(20,38,32,0.15) 0%,rgba(20,38,32,0.85) 100%),url('${esc(s.img)}')" data-href="${esc(s.href)}" data-picture-slide="true" aria-hidden="${i === 0 ? 'false' : 'true'}"><div class="hero-art-caption"><a class="hero-art-state-link" href="${esc(s.stateHref)}">${esc(s.sub)}</a><a class="hero-art-place-link" href="${esc(s.href)}">${esc(s.title)}</a><div class="hero-dots" aria-label="Slideshow navigation">${safeSlides.map((slide, index) => `<button type="button" class="hero-dot ${i === index ? 'active' : ''}" data-slide-index="${index}" data-picture-slide-dot="true" aria-label="Show slide ${index + 1}: ${esc(slide.title)}"></button>`).join('')}</div></div></div>`).join('');
+  return `<div${idAttr} class="${esc(className)}" data-picture-slideshow="true" role="region" aria-label="${esc(label)}"><div class="hero-slides">${slidesHtml}</div>${badge}</div>`;
 }
 
-function initHeroSlideshow() {
-  const container = document.querySelector('#hero-slideshow');
-  if (!container) return;
-  const slides = container.querySelectorAll('.hero-slide');
-  if (slides.length <= 1) return;
-  const dots = container.querySelectorAll('.hero-dot');
-  let current = 0;
-  let timer = null;
+function heroSlidesHtml() {
+  return pictureSlideshowHtml(HERO_SLIDES, { id: 'hero-slideshow', label: 'Featured destinations slideshow' });
+}
 
-  function update(index) {
-    current = index;
-    slides.forEach((s, i) => s.classList.toggle('active', i === current));
-    slides.forEach((s, i) => s.setAttribute('aria-hidden', i === current ? 'false' : 'true'));
-    dots.forEach(dot => dot.classList.toggle('active', Number(dot.dataset.slideIndex) === current));
-  }
+const pictureSlideshowTimers = new WeakMap();
 
-  function next() {
-    update((current + 1) % slides.length);
-  }
-
-  function startTimer() {
+function stopPictureSlideshows(scope = document) {
+  scope.querySelectorAll('[data-picture-slideshow="true"]').forEach(container => {
+    const timer = pictureSlideshowTimers.get(container);
     if (timer) clearInterval(timer);
-    timer = setInterval(next, 3600);
-  }
+    pictureSlideshowTimers.delete(container);
+    delete container.dataset.slideshowReady;
+  });
+}
 
-  dots.forEach(dot => {
-    dot.addEventListener('click', e => {
-      e.preventDefault();
-      const idx = Number(dot.dataset.slideIndex);
-      if (!isNaN(idx)) {
-        update(idx);
-        startTimer();
-      }
+function initPictureSlideshows(scope = document) {
+  scope.querySelectorAll('[data-picture-slideshow="true"]').forEach(container => {
+    if (container.dataset.slideshowReady === 'true') return;
+    const slides = Array.from(container.querySelectorAll('[data-picture-slide="true"]'));
+    if (slides.length <= 1) return;
+    const dots = Array.from(container.querySelectorAll('[data-picture-slide-dot="true"]'));
+    let current = 0;
+    let timer = null;
+
+    function update(index) {
+      current = index;
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === current);
+        s.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+      dots.forEach(dot => {
+        const isActive = Number(dot.dataset.slideIndex) === current;
+        dot.classList.toggle('active', isActive);
+        if (isActive) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+    }
+
+    function next() {
+      update((current + 1) % slides.length);
+    }
+
+    function startTimer() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(next, 3600);
+      pictureSlideshowTimers.set(container, timer);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', e => {
+        e.preventDefault();
+        const idx = Number(dot.dataset.slideIndex);
+        if (!isNaN(idx)) {
+          update(idx);
+          startTimer();
+        }
+      });
     });
-  });
 
-  // Keep the image click target independent from the caption links and dots.
-  container.addEventListener('click', event => {
-    if (event.target.closest('.hero-art-caption')) return;
-    location.href = slides[current].dataset.href;
-  });
+    // Keep the image click target independent from the caption links, dots and trail badge.
+    container.addEventListener('click', event => {
+      if (event.target.closest('.hero-art-caption, a, button')) return;
+      const href = slides[current].dataset.href;
+      if (href) location.href = href;
+    });
 
-  container.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); });
-  container.addEventListener('mouseleave', () => startTimer());
-  startTimer();
+    container.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); });
+    container.addEventListener('mouseleave', () => startTimer());
+    container.dataset.slideshowReady = 'true';
+    startTimer();
+  });
 }
 
 async function home() {
@@ -611,14 +640,33 @@ async function explorePage(query) {
   return `${breadcrumb([['Destinations']])}<p class="eyebrow">Follow your curiosity</p><h1>Find your kind of place.</h1><p>Browse our directory by season, state and interest.</p><form id="filters" class="filters"><div class="filter-search"><span>⌕</span><input name="q" placeholder="Search places or districts" aria-label="Search places" value="${esc(params.get('q') || '')}"></div><select name="state" aria-label="State"><option value="">All states and UTs</option>${states.map(s => `<option value="${esc(s.slug)}" ${params.get('state') === s.slug ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select><select name="month" aria-label="Best travel month"><option value="">Any month</option>${months.map((m,i) => `<option value="${i+1}" ${params.get('month') === String(i+1) ? 'selected' : ''}>${m}</option>`).join('')}</select><select name="category" aria-label="Interest"><option value="">Any interest</option>${categories.map(([value,, label]) => `<option value="${value}" ${params.get('category') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><select name="accessibility" aria-label="Accessibility"><option value="">Any accessibility</option>${[['unknown', 'Not yet documented'], ['accessible', 'Wheelchair accessible'], ['partial', 'Partial / assisted access'], ['not_accessible', 'Not wheelchair accessible']].map(([value, label]) => `<option value="${value}" ${params.get('accessibility') === value ? 'selected' : ''}>${label}</option>`).join('')}</select><label class="check"><input type="checkbox" name="unesco" value="true" ${params.get('unesco') === 'true' ? 'checked' : ''}> UNESCO only</label><button class="button">Find places</button></form><div class="explore-toolbar"><p><strong>${places.length}</strong> detailed places found</p><div class="view-toggles"><button type="button" class="view-toggle active" id="view-grid-btn">⊞ Grid View</button><button type="button" class="view-toggle" id="view-map-btn">🗺 Interactive Map</button></div></div><div id="explore-map-container" class="explore-map-wrap" style="display:none;"><div id="explore-leaflet-map" class="explore-leaflet-map" data-places="${esc(placesJson)}"></div></div><div id="explore-grid-container">${cards(places)}</div>`;
 }
 
+function circuitSlides(c) {
+  const stops = Array.isArray(c.stops) ? c.stops : [];
+  if (!stops.length) {
+    return [{ img: c.cover_image_url || '/assets/state-cover.svg', sub: 'India', title: c.name, href: `/circuit/${c.slug}`, stateHref: '/circuits' }];
+  }
+  return stops.map(s => ({
+    img: s.image_url || fallbackImage(s.state_slug),
+    sub: `${s.district}, ${s.state}`,
+    title: s.name,
+    href: `/place/${s.slug}`,
+    stateHref: s.state_slug ? `/state/${s.state_slug}` : '/area',
+  }));
+}
+
+function circuitSlideshowHtml(c, className, badge = '') {
+  return pictureSlideshowHtml(circuitSlides(c), {
+    className,
+    label: `${c.name} trail photo slideshow`,
+    badge,
+  });
+}
+
 async function circuitsPage() {
   const circuits = await api('circuits');
   return `${breadcrumb([['Curated travel circuits']])}<p class="eyebrow">Themed journeys</p><h1>Curated travel trails.</h1><p class="lead">Follow hand-crafted routes connecting iconic landmarks, sacred heritage, clifftop sea bastions, and high Himalayan valleys across India.</p><div class="cards two">${circuits.map(c => `
     <article class="card circuit-card">
-      <a href="/circuit/${esc(c.slug)}" class="art">
-        <img src="${esc(c.cover_image_url)}" alt="${esc(c.name)} trail photo" loading="lazy">
-        <span class="badge">🧭 ${esc(c.duration)}</span>
-      </a>
+      ${circuitSlideshowHtml(c, 'art circuit-art', `<a class="badge" href="/circuit/${esc(c.slug)}">🧭 ${esc(c.duration)}</a>`)}
       <div class="card-body">
         <div class="meta">Trail · ${c.stops.length} curated stops · ${esc(c.best_season)}</div>
         <h3><a href="/circuit/${esc(c.slug)}">${esc(c.name)} <span class="arrow">↗</span></a></h3>
@@ -635,9 +683,8 @@ async function circuitsPage() {
 
 async function circuitPage(slug) {
   const c = await api('circuits/' + encodeURIComponent(slug));
-  const cover = esc(c.cover_image_url || '/assets/state-cover.svg');
   const headerHtml = `<header class="region-header"><div class="region-header-top"><span class="region-badge-pill">Curated Trail · ${esc(c.duration)}</span></div><h1 class="region-title">${esc(c.name)}</h1><p class="region-lead">${esc(c.tagline)}</p><div class="region-meta-bar"><span class="region-meta-item">🗓 Best season: <strong>${esc(c.best_season)}</strong></span><span class="region-meta-item">🧭 <strong>${c.stops.length}</strong> curated stops</span><span class="region-meta-item">⏱ <strong>${esc(c.duration)}</strong></span></div></header>`;
-  const visualHtml = `<div class="region-visual"><img src="${cover}" alt="${esc(c.name)} trail cover" loading="eager"><span class="region-visual-caption">📍 ${esc(c.name)}</span></div>`;
+  const visualHtml = circuitSlideshowHtml(c, 'region-visual circuit-visual', `<span class="region-visual-caption">📍 ${esc(c.name)} · ${c.stops.length} stops</span>`);
   return `${breadcrumb([['Travel trails', '/circuits'], [c.name]])}${headerHtml}${visualHtml}
     <div class="circuit-detail-header">
       <div class="circuit-meta-pill"><strong>Duration:</strong> ${esc(c.duration)}</div>
@@ -1441,6 +1488,7 @@ async function route() {
   const rawRoute = location.hash.slice(1) || (location.pathname + location.search) || '/';
   const [path, query] = rawRoute.split('?');
   const [, type, slug] = path.split('/');
+  stopPictureSlideshows(root);
   root.innerHTML = `<section class="loading-shell" aria-live="polite"><div class="skeleton skeleton-kicker"></div><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-copy"></div>${skeletonCards(3)}<p class="loading-message">Connecting to the travel database…</p></section>`;
   try {
     let html;
@@ -1462,7 +1510,8 @@ async function route() {
     else throw new Error('That page does not exist.');
     if (version !== routeVersion) return;
     root.innerHTML = html;
-    if (!type) { initHeroSlideshow(); renderPersonalisedRow(); }
+    initPictureSlideshows(root);
+    if (!type) renderPersonalisedRow();
     if (type === 'saved') { renderProfile(); initSavedMap(); wireSavedBackup(); initTripPlanner(); }
     if (type === 'place') initPlaceEnhancements();
     if (type === 'explore') initExploreMap();
@@ -1865,7 +1914,7 @@ if (profileToggle) {
 document.body.dataset.theme = localStorage.getItem('india-locally-theme') || 'light';
 updateThemeButtons();
 updateCount();
-initHeroSlideshow();
+initPictureSlideshows();
 initExploreMap();
 initAreaFilter();
 initCategoryFilterStrip();
@@ -1895,6 +1944,7 @@ async function hydrateSavedPage() {
   try {
     const html = await savedPage(location.search.replace(/^\?/, ''));
     if (version !== routeVersion) return;
+    stopPictureSlideshows(root);
     root.innerHTML = html;
     renderProfile();
     initSavedMap();
